@@ -13,7 +13,7 @@ def get_url_file_name(path):
     return os.path.join(path, "info.json")
 
 
-def get_faiss_name(path):
+def get_faiss_name(path, file_name):
     return os.path.join(path, "faiss")
 
 
@@ -35,8 +35,8 @@ def comnbine_db_path(ori_db_path, label):
     return os.path.abspath(os.path.join(ori_db_path, label, f"faiss{label}"))
 
 
-def obtain_db_path(ori_db_path, product, file_name):
-    dir_path = os.path.abspath(os.path.join(ori_db_path, product, file_name))
+def obtain_db_path(ori_db_path, product):
+    dir_path = os.path.abspath(os.path.join(ori_db_path, product))
     return dir_path, os.path.join(dir_path, f"faiss")
 
 
@@ -61,3 +61,7 @@ def combine_final_source(source, final_source):
     if not final_source:
         return get_source_item(source)
     return f"{final_source}*******{get_source_item(source)}"
+
+
+def get_file_list(file_path):
+    return os.listdir(file_path)
