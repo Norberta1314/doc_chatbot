@@ -18,7 +18,7 @@ headers_to_split_on = []
 for i in range(1, 9):
     headers_to_split_on.append(('#' * i, f"Header {i}"))
 markdown_header_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
-common_text_splitter = SpacyTextSplitter(pipline="zh_core_web_sm", chunk_size=500, chunk_overlap=100)
+common_text_splitter = SpacyTextSplitter(pipeline="zh_core_web_sm", chunk_size=500, chunk_overlap=100)
 
 
 class VersionBase:
@@ -92,14 +92,13 @@ class InitVectorDb:
         new_meta_file = read_json(init_meta_path)
         for meta_info in new_meta_file:
             file_path_name = meta_info["file_name"]
-            file_path_list = get_file_list(file_path_name)
+            file_path_list = get_file_list(os.path.join(self.init_dir, file_path_name))
             for file_path in file_path_list:
                 if file_path.endswith(".md"):
                     self.init_vector_normal(meta_info, total_dir, file_path)
 
     def init_vector_normal(self, meta_info, total_dir, file_path):
         cached_sace_path = set()
-        need_file_path = ""
         product = meta_info["product"]
 
         init_file_path_origin, _ = obtain_db_path(self.init_dir, product)
@@ -113,9 +112,9 @@ class InitVectorDb:
 
     def obtain_init_path(self, init_file_path_origin, meta_info):
         init_file_path, _ = obtain_db_path(self.init_dir, meta_info["product"])
-        if os.path.exists(init_file_path):
-            shutil.rmtree(init_file_path)
-        shutil.copytree(init_file_path_origin, init_file_path)
+        # if os.path.exists(init_file_path):
+        #     shutil.rmtree(init_file_path)
+        # shutil.copytree(init_file_path_origin, init_file_path)
         return init_file_path
 
     def init_vector_start(self, init_dir_path, product, file_name):
