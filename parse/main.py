@@ -10,7 +10,7 @@ import chardet
 
 from parse.html2md import html_to_markdown, parse_title
 
-doc_name = "director"
+doc_name = "umac"
 director_split = [
     ["rcp", "技术入门", "5GC信令图解"],
     ["rcp", "技术入门", "5GC综合解决方案"],
@@ -185,8 +185,8 @@ def parse():
 
         os.mkdir(md_parent_path)
     for child in root:
-        if child.attrib['name'] != '参考':
-            continue
+        # if child.attrib['name'] != '参考':
+        #     continue
         level_list = [doc_name, child.attrib['name']]
         result = digui_director(child, 0, level_list)
         print(level_list)

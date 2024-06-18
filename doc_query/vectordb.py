@@ -1,6 +1,6 @@
 from abc import abstractmethod, ABC
 
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 from doc_query.common.config_utils import config_util
 from doc_query.vector_tool.init_db import init_vector_map
@@ -21,8 +21,7 @@ class VectordbInitStartegy:
 
 
 if __name__ == '__main__':
-    embeddings = HuggingFaceEmbeddings(model_name=config_util.get_common('model_name'),
-                                       model_kwargs={'divice': 'cpu'})
+    embeddings = HuggingFaceEmbeddings(model_name=config_util.get_common('model_name'))
 
     # embeddings = ""
     VectordbInitStartegy().execute()
