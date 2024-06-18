@@ -53,7 +53,7 @@ def merged_vector_db(need_merged_path, origin_db_path, embeddings):
         shutil.copytree(need_merged_path, origin_db_path)
 
 
-def merge_vector_db_main(origin_db_path, need_merged_db_path, embeddings):
+def merge_vector_db_main(origin_db_path, need_merged_db_path):
     backup_vector_db(origin_db_path)
 
     need_merged_product_list = get_file_list(need_merged_db_path)
