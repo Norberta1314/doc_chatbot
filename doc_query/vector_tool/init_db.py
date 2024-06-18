@@ -10,7 +10,8 @@ from langchain_community.document_loaders import TextLoader
 from langchain_community.vectorstores import FAISS
 from langchain_text_splitters import MarkdownHeaderTextSplitter, SpacyTextSplitter
 
-from doc_query.common.utils import read_json, get_file_list, obtain_db_path, get_faiss_name, get_vector_index_name
+from doc_query.common.utils import read_json, get_file_list, obtain_db_path, get_faiss_name, get_vector_index_name, \
+    get_logger
 
 headers_to_split_on = []
 for i in range(1, 9):
@@ -18,6 +19,7 @@ for i in range(1, 9):
 markdown_header_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
 common_text_splitter = SpacyTextSplitter(pipeline="zh_core_web_sm", chunk_size=500, chunk_overlap=100)
 
+logger = get_logger()
 
 class VersionBase:
     def __init__(self, embedding):
@@ -35,9 +37,12 @@ class VersionBase:
         self.file_path = file_path
 
     def init_vector_db(self, save_path, file_name):
+        logger.info("begin splite")
         self.splitter()
+        logger.info("end split")
         self.vector = FAISS.from_documents(self.doc_list, self.embeddings)
-        self.vector.save_local(get_faiss_name(save_path, file_name),
+        logger.info("end from documents")
+        self.vector.save_local(get_faiss_name(save_path, file_name[:-3]),
                                get_vector_index_name())
 
     def splitter(self):
@@ -81,9 +86,9 @@ class VersionBase:
 
 
 class InitVectorDb:
-    def __init__(self, embedding, init_dir):
+    def __init__(self, embedding, doc_dir):
         self.embedding = embedding
-        self.doc_file_dir = init_dir
+        self.doc_file_dir = doc_dir
 
     def init_vector_map(self, init_meta_path, total_dir):
         os.makedirs(total_dir, exist_ok=True)
@@ -96,14 +101,15 @@ class InitVectorDb:
                     self.init_vector_normal(product_name, total_dir, file_name)
 
     def init_vector_normal(self, product_name, total_dir, file_name):
-
+        logger.info(f"begin init {product_name}, {file_name}")
         save_path, _ = obtain_db_path(total_dir, product_name)
         version_base = VersionBase(self.embedding)
         version_base.set_info(product_name, file_name)
         version_base.add_doc(os.path.join(self.doc_file_dir, product_name, file_name))
         version_base.init_vector_db(save_path, file_name)
+        logger.info(f"end init {product_name}, {file_name}")
 
 
-def init_vector_map(init_dir, init_meta_path, total_dir, embeddings):
-    init_object = InitVectorDb(embeddings, init_dir)
+def init_vector_map(doc_dir, init_meta_path, total_dir, embeddings):
+    init_object = InitVectorDb(embeddings, doc_dir)
     init_object.init_vector_map(init_meta_path, total_dir)

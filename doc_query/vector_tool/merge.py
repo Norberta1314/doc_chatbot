@@ -3,13 +3,14 @@
 
 # @Time    : 2024/6/18
 # @Author  : lyytaw
-import logging
 import os.path
 import shutil
 
 from langchain_community.vectorstores import FAISS
 
-from doc_query.common.utils import get_file_list, get_vector_index_name
+from doc_query.common.utils import get_file_list, get_vector_index_name, get_logger
+
+logger = get_logger()
 
 
 def backup_vector_db(vector_db):
@@ -19,7 +20,7 @@ def backup_vector_db(vector_db):
 
 def merged_vector_db(need_merged_path, origin_db_path, embeddings):
     need_merged_db = FAISS.load_local(need_merged_path, embeddings, index_name=get_vector_index_name())
-    logging.info("there are %s ids need to be merged", str(len(need_merged_db.index_to_docstore_id)))
+    logger.info("there are %s ids need to be merged", str(len(need_merged_db.index_to_docstore_id)))
     if os.path.exists(origin_db_path):
         origin_db = FAISS.load_local(origin_db_path, embeddings, index_name=get_vector_index_name())
         origin_db.merge_from(need_merged_db)
