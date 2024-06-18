@@ -175,8 +175,9 @@ def digui_director(node, level, level_list):
                 result += html_to_markdown(html, cur_level, os.path.dirname(log_path))
 
     if level_list in markdown_split_map:
-        with open(get_write_path(level_list), "w", encoding='utf-8') as f:
-            f.write(result)
+        if result != "":
+            with open(get_write_path(level_list), "w", encoding='utf-8') as f:
+                f.write(result)
         return ""
     else:
         return result
@@ -194,8 +195,9 @@ def parse():
         level_list = [doc_name, child.attrib['name']]
         result = digui_director(child, 0, level_list)
         print(level_list)
-        with open(get_write_path(level_list), "w", encoding='utf-8') as f:
-            f.write(result)
+        if result != "":
+            with open(get_write_path(level_list), "w", encoding='utf-8') as f:
+                f.write(result)
 
 
 if __name__ == '__main__':

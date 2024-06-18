@@ -29,8 +29,8 @@ class VectordbInitStartegy:
 
 class VectordbMergeStartegy:
     def execute(self):
-        origin_db = get_path("vector")
-        need_merge_db = get_path("train")
+        origin_db = get_path("vector_db")
+        need_merge_db = get_path("total_doc")
         merge_vector_db_main(need_merge_db, origin_db, embeddings)
 
 

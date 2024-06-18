@@ -41,6 +41,9 @@ class VersionBase:
         print("begin splite")
         self.splitter()
         print("end split")
+        if len(self.doc_list) == 0:
+            print("doc list is 0, return")
+            return
         self.vector = FAISS.from_documents(self.doc_list, self.embeddings)
         print("end from documents")
         self.vector.save_local(get_faiss_name(save_path, file_name[:-3]),
@@ -97,15 +100,17 @@ class InitVectorDb:
         for product_name in new_meta_file:
 
             file_path_list = get_file_list(os.path.join(self.doc_file_dir, product_name))
-            for file_name in file_path_list:
+            file_path_list_length = len(file_path_list)
+            for index, file_name in enumerate(file_path_list):
+                print(f"begin init {product_name}, {file_name}, {index}/{file_path_list_length}")
                 if file_name.endswith(".md"):
                     self.init_vector_normal(product_name, total_dir, file_name)
 
     def init_vector_normal(self, product_name, total_dir, file_name):
-        print(f"begin init {product_name}, {file_name}")
         save_path, _ = obtain_db_path(total_dir, product_name)
-        if os.path.exists(os.path.join(save_path, file_name)):
+        if os.path.exists(os.path.join(save_path, file_name[:-3])):
             print(f"exist,contine {file_name} ")
+            return
         version_base = VersionBase(self.embedding)
         version_base.set_info(product_name, file_name)
         version_base.add_doc(os.path.join(self.doc_file_dir, product_name, file_name))
