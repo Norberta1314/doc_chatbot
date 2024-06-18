@@ -9,12 +9,12 @@ import os.path
 import stat
 
 
-def get_url_file_name(path):
+def     get_url_file_name(path):
     return os.path.join(path, "info.json")
 
 
-def get_faiss_name(path, file_name):
-    return os.path.join(path, "faiss")
+def get_faiss_name(path, product):
+    return os.path.abspath(path + os.sep + product + os.sep + "faiss")
 
 
 def read_json(path):
