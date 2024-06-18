@@ -10,7 +10,7 @@ import chardet
 
 from parse.html2md import html_to_markdown, parse_title
 
-doc_name = "umac"
+doc_name = "director"
 director_split = [
     ["rcp", "技术入门", "5GC信令图解"],
     ["rcp", "技术入门", "5GC综合解决方案"],

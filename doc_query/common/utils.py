@@ -9,7 +9,7 @@ import os.path
 import stat
 
 
-def     get_url_file_name(path):
+def get_url_file_name(path):
     return os.path.join(path, "info.json")
 
 
