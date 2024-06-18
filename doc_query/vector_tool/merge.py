@@ -29,7 +29,8 @@ def merge_faiss(origin, need):
 
 def backup_vector_db(vector_db):
     backup_file = vector_db + "_backup"
-    shutil.rmtree(backup_file)
+    if os.path.exists(backup_file):
+        shutil.rmtree(backup_file)
     shutil.copytree(vector_db, backup_file)
 
 
@@ -57,11 +58,11 @@ def merge_vector_db_main(origin_db_path, need_merged_db_path, embeddings):
     for product in need_merged_product_list:
         product_path = os.path.join(need_merged_db_path, product)
 
-        origin_product_db_path = os.path.join(origin_db_path, product)
+        origin_product_db_path = os.path.join(origin_db_path, product, "faiss")
         print(f"origin db path {origin_product_db_path}")
 
         for file_name in get_file_list(product_path):
-            need_merged_product = os.path.join(product_path, file_name)
+            need_merged_product = os.path.join(product_path, file_name, "faiss")
 
             if os.path.exists(origin_product_db_path):
                 merged_vector_db(need_merged_product, origin_product_db_path, embeddings)
