@@ -37,11 +37,11 @@ class VersionBase:
         self.file_path = file_path
 
     def init_vector_db(self, save_path, file_name):
-        logger.info("begin splite")
+        print("begin splite")
         self.splitter()
-        logger.info("end split")
+        print("end split")
         self.vector = FAISS.from_documents(self.doc_list, self.embeddings)
-        logger.info("end from documents")
+        print("end from documents")
         self.vector.save_local(get_faiss_name(save_path, file_name[:-3]),
                                get_vector_index_name())
 
@@ -101,13 +101,13 @@ class InitVectorDb:
                     self.init_vector_normal(product_name, total_dir, file_name)
 
     def init_vector_normal(self, product_name, total_dir, file_name):
-        logger.info(f"begin init {product_name}, {file_name}")
+        print(f"begin init {product_name}, {file_name}")
         save_path, _ = obtain_db_path(total_dir, product_name)
         version_base = VersionBase(self.embedding)
         version_base.set_info(product_name, file_name)
         version_base.add_doc(os.path.join(self.doc_file_dir, product_name, file_name))
         version_base.init_vector_db(save_path, file_name)
-        logger.info(f"end init {product_name}, {file_name}")
+        print(f"end init {product_name}, {file_name}")
 
 
 def init_vector_map(doc_dir, init_meta_path, total_dir, embeddings):
