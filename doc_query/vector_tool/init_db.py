@@ -21,6 +21,7 @@ common_text_splitter = SpacyTextSplitter(pipeline="zh_core_web_sm", chunk_size=5
 
 logger = get_logger()
 
+
 class VersionBase:
     def __init__(self, embedding):
         self.file_name = None
@@ -103,6 +104,8 @@ class InitVectorDb:
     def init_vector_normal(self, product_name, total_dir, file_name):
         print(f"begin init {product_name}, {file_name}")
         save_path, _ = obtain_db_path(total_dir, product_name)
+        if os.path.exists(os.path.join(save_path, file_name)):
+            print(f"exist,contine {file_name} ")
         version_base = VersionBase(self.embedding)
         version_base.set_info(product_name, file_name)
         version_base.add_doc(os.path.join(self.doc_file_dir, product_name, file_name))
