@@ -57,15 +57,17 @@ def merge_vector_db_main(origin_db_path, need_merged_db_path, embeddings):
 
     for product in need_merged_product_list:
         product_path = os.path.join(need_merged_db_path, product)
-
+        origin_parent_path = os.path.join(origin_db_path, product)
         origin_product_db_path = os.path.join(origin_db_path, product, "faiss")
         print(f"origin db path {origin_product_db_path}")
 
         for file_name in get_file_list(product_path):
             need_merged_product = os.path.join(product_path, file_name, "faiss")
 
-            if os.path.exists(origin_product_db_path):
+            if os.path.exists(origin_parent_path):
+                print("merge")
                 merged_vector_db(need_merged_product, origin_product_db_path, embeddings)
             else:
-                os.makedirs(origin_product_db_path, exist_ok=True)
+                print(f"copy, {origin_parent_path}, {need_merged_product}, {origin_product_db_path}")
+                os.makedirs(origin_parent_path, exist_ok=True)
                 shutil.copytree(need_merged_product, origin_product_db_path)
