@@ -7,12 +7,15 @@ import os.path
 import shutil
 
 import numpy as np
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.vectorstores.faiss import dependable_faiss_import
 
+from doc_query.common.config_utils import config_util
 from doc_query.common.utils import get_file_list, get_vector_index_name, get_logger
 
 logger = get_logger()
+embeddings = HuggingFaceEmbeddings(model_name=config_util.get_common('model_name'), model_kwargs={'divice': 'cpu'})
 
 
 def merge_faiss(origin, need):
@@ -37,14 +40,14 @@ def backup_vector_db(vector_db):
 def merged_vector_db(need_merged_path, origin_db_path, embeddings):
     print(f"merged, need merged path:{need_merged_path}, origin: {origin_db_path}")
     need_merged_db = FAISS.load_local(need_merged_path, embeddings, index_name=get_vector_index_name(),
-                                      allow_dangerous_deserialization=True)
+                                    )
     logger.info("there are %s ids need to be merged", str(len(need_merged_db.index_to_docstore_id)))
     if os.path.exists(origin_db_path):
         origin_db = FAISS.load_local(origin_db_path, embeddings, index_name=get_vector_index_name(),
-                                     allow_dangerous_deserialization=True
+
                                      )
-        merge_faiss(origin_db_path, need_merged_db)
-        # origin_db.merge_from(need_merged_db)
+        # merge_faiss(origin_db_path, need_merged_db)
+        origin_db.merge_from(need_merged_db)
         origin_db.save_local(origin_db_path, get_vector_index_name())
     else:
         shutil.copytree(need_merged_path, origin_db_path)

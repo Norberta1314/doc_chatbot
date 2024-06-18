@@ -31,7 +31,7 @@ class VectordbMergeStartegy:
     def execute(self):
         origin_db = get_path("vector_db")
         need_merge_db = get_path("total_doc")
-        merge_vector_db_main(origin_db, need_merge_db, embeddings)
+        merge_vector_db_main(origin_db, need_merge_db)
 
 
 if __name__ == '__main__':
