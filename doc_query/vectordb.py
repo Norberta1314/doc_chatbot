@@ -10,7 +10,7 @@ from doc_query.vector_tool.merge import merge_vector_db_main
 
 
 def get_path(pp):
-    return os.path.join("/Users/lyy/apos/parse", pp)
+    return os.path.join("/mnt/workspace/doc_chatbot", pp)
 
 
 class VectorBase(ABC):

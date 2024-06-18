@@ -91,17 +91,17 @@ class InitVectorDb:
         for product_name in new_meta_file:
 
             file_path_list = get_file_list(os.path.join(self.doc_file_dir, product_name))
-            for file_path in file_path_list:
-                if file_path.endswith(".md"):
-                    self.init_vector_normal(product_name, total_dir, file_path)
+            for file_name in file_path_list:
+                if file_name.endswith(".md"):
+                    self.init_vector_normal(product_name, total_dir, file_name)
 
-    def init_vector_normal(self, product_name, total_dir, file_path):
+    def init_vector_normal(self, product_name, total_dir, file_name):
 
         save_path, _ = obtain_db_path(total_dir, product_name)
         version_base = VersionBase(self.embedding)
-        version_base.set_info(product_name, file_path)
-        version_base.add_doc(os.path.join(self.doc_file_dir, file_path))
-        version_base.init_vector_db(save_path, file_path)
+        version_base.set_info(product_name, file_name)
+        version_base.add_doc(os.path.join(self.doc_file_dir, product_name, file_name))
+        version_base.init_vector_db(save_path, file_name)
 
 
 def init_vector_map(init_dir, init_meta_path, total_dir, embeddings):
