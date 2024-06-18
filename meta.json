@@ -1,18 +1,6 @@
 [
-  {
-    "file_name": "director",
-    "product": "director"
-  },
-  {
-    "file_name": "emsplus",
-    "product": "emsplus"
-  },
-  {
-    "file_name": "rcp",
-    "product": "rcp"
-  },
-  {
-    "file_name": "umac",
-    "product": "umac"
-  }
+  "director",
+  "emsplus",
+  "rcp",
+  "umac"
 ]

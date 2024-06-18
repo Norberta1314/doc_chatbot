@@ -14,7 +14,7 @@ def get_url_file_name(path):
 
 
 def get_faiss_name(path, product):
-    return os.path.abspath(path + os.sep + product + os.sep + "faiss")
+    return os.path.abspath(os.path.join(path, product, "faiss"))
 
 
 def read_json(path):
@@ -65,3 +65,6 @@ def combine_final_source(source, final_source):
 
 def get_file_list(file_path):
     return os.listdir(file_path)
+
+def get_vector_index_name():
+    return "large.index"

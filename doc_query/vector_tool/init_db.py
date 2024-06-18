@@ -3,16 +3,14 @@
 
 # @Time    : 2024/6/17
 # @Author  : lyytaw
-import logging
 import os
 import re
-import shutil
 
 from langchain_community.document_loaders import TextLoader
 from langchain_community.vectorstores import FAISS
 from langchain_text_splitters import MarkdownHeaderTextSplitter, SpacyTextSplitter
 
-from doc_query.common.utils import read_json, get_file_list, obtain_db_path, get_faiss_name
+from doc_query.common.utils import read_json, get_file_list, obtain_db_path, get_faiss_name, get_vector_index_name
 
 headers_to_split_on = []
 for i in range(1, 9):
@@ -36,11 +34,11 @@ class VersionBase:
         self.loader = loader
         self.file_path = file_path
 
-    def init_vector_db(self, init_dir_path):
+    def init_vector_db(self, save_path, file_name):
         self.splitter()
-        index_name = "large.index"
         self.vector = FAISS.from_documents(self.doc_list, self.embeddings)
-        self.vector.save_local(get_faiss_name(init_dir_path, self.file_path), index_name)
+        self.vector.save_local(get_faiss_name(save_path, file_name),
+                               get_vector_index_name())
 
     def splitter(self):
         file_name = os.path.splitext(self.file_path)
@@ -85,43 +83,25 @@ class VersionBase:
 class InitVectorDb:
     def __init__(self, embedding, init_dir):
         self.embedding = embedding
-        self.init_dir = init_dir
+        self.doc_file_dir = init_dir
 
     def init_vector_map(self, init_meta_path, total_dir):
         os.makedirs(total_dir, exist_ok=True)
         new_meta_file = read_json(init_meta_path)
-        for meta_info in new_meta_file:
-            file_path_name = meta_info["file_name"]
-            file_path_list = get_file_list(os.path.join(self.init_dir, file_path_name))
+        for product_name in new_meta_file:
+
+            file_path_list = get_file_list(os.path.join(self.doc_file_dir, product_name))
             for file_path in file_path_list:
                 if file_path.endswith(".md"):
-                    self.init_vector_normal(meta_info, total_dir, file_path)
+                    self.init_vector_normal(product_name, total_dir, file_path)
 
-    def init_vector_normal(self, meta_info, total_dir, file_path):
-        cached_sace_path = set()
-        product = meta_info["product"]
+    def init_vector_normal(self, product_name, total_dir, file_path):
 
-        init_file_path_origin, _ = obtain_db_path(self.init_dir, product)
-        save_path, _ = obtain_db_path(total_dir, product)
-        cached_sace_path.add(save_path)
-
-        init_dir_path = self.obtain_init_path(init_file_path_origin, meta_info)
-        if not os.listdir(init_dir_path):
-            logging.error("Can't init %s", init_dir_path)
-        self.init_vector_start(init_dir_path, product, file_path)
-
-    def obtain_init_path(self, init_file_path_origin, meta_info):
-        init_file_path, _ = obtain_db_path(self.init_dir, meta_info["product"])
-        # if os.path.exists(init_file_path):
-        #     shutil.rmtree(init_file_path)
-        # shutil.copytree(init_file_path_origin, init_file_path)
-        return init_file_path
-
-    def init_vector_start(self, init_dir_path, product, file_name):
+        save_path, _ = obtain_db_path(total_dir, product_name)
         version_base = VersionBase(self.embedding)
-        version_base.set_info(product, file_name)
-        version_base.add_doc(os.path.join(init_dir_path, file_name))
-        version_base.init_vector_db(init_dir_path)
+        version_base.set_info(product_name, file_path)
+        version_base.add_doc(os.path.join(self.doc_file_dir, file_path))
+        version_base.init_vector_db(save_path, file_path)
 
 
 def init_vector_map(init_dir, init_meta_path, total_dir, embeddings):

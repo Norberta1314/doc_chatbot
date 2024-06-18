@@ -10,7 +10,11 @@ import chardet
 
 from parse.html2md import html_to_markdown, parse_title
 
-doc_name = "director"
+# doc_name = "director"
+# doc_name = "rcp"
+doc_name="emsplus"
+# doc_name = "umac"
+
 director_split = [
     ["rcp", "技术入门", "5GC信令图解"],
     ["rcp", "技术入门", "5GC综合解决方案"],
@@ -139,6 +143,7 @@ def get_write_path(level_list):
     else:
         return os.path.join("/Users/lyy/apos/parse/doc", doc_name)
 
+
 def digui_director(node, level, level_list):
     result = ""
     cur_level = level
@@ -182,7 +187,6 @@ def parse():
     root = tree.getroot()
     md_parent_path = get_write_path([])
     if not os.path.exists(md_parent_path):
-
         os.mkdir(md_parent_path)
     for child in root:
         # if child.attrib['name'] != '参考':
