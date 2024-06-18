@@ -13,3 +13,5 @@ class ConfigUtil:
 
     def get_common(self, name):
         return self.config.get("common", name)
+
+config_util = ConfigUtil()

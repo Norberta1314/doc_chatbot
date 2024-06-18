@@ -10,7 +10,7 @@ import chardet
 
 from parse.html2md import html_to_markdown, parse_title
 
-doc_name = "umac"
+doc_name = "director"
 director_split = [
     ["rcp", "技术入门", "5GC信令图解"],
     ["rcp", "技术入门", "5GC综合解决方案"],
@@ -131,6 +131,14 @@ def get_parent_path(path):
     return os.path.join(f"/Users/lyy/apos/aiops2024-challenge-dataset/{doc_name}", path.replace("\\", "/"))
 
 
+def get_write_path(level_list):
+    if level_list:
+        copy_level_list = level_list[1:]
+
+        return os.path.join("/Users/lyy/apos/parse/doc", doc_name, "-".join(copy_level_list) + ".md")
+    else:
+        return os.path.join("/Users/lyy/apos/parse/doc", doc_name)
+
 def digui_director(node, level, level_list):
     result = ""
     cur_level = level
@@ -162,7 +170,7 @@ def digui_director(node, level, level_list):
                 result += html_to_markdown(html, cur_level, os.path.dirname(log_path))
 
     if level_list in markdown_split_map:
-        with open(f"{'-'.join(level_list)}.md", "w", encoding='utf-8') as f:
+        with open(get_write_path(level_list), "w", encoding='utf-8') as f:
             f.write(result)
         return ""
     else:
@@ -172,13 +180,17 @@ def digui_director(node, level, level_list):
 def parse():
     tree = ET.parse(get_parent_path("nodetree.xml"))
     root = tree.getroot()
+    md_parent_path = get_write_path([])
+    if not os.path.exists(md_parent_path):
+
+        os.mkdir(md_parent_path)
     for child in root:
         if child.attrib['name'] != '参考':
             continue
         level_list = [doc_name, child.attrib['name']]
         result = digui_director(child, 0, level_list)
         print(level_list)
-        with open(f"{'-'.join(level_list)}.md", "w", encoding='utf-8') as f:
+        with open(get_write_path(level_list), "w", encoding='utf-8') as f:
             f.write(result)
 
 
