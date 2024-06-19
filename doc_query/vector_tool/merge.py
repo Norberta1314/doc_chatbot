@@ -7,15 +7,12 @@ import os.path
 import shutil
 
 import numpy as np
-from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.vectorstores.faiss import dependable_faiss_import
 
-from doc_query.common.config_utils import config_util
 from doc_query.common.utils import get_file_list, get_vector_index_name, get_logger
 
 logger = get_logger()
-embeddings = HuggingFaceEmbeddings(model_name=config_util.get_common('model_name'), model_kwargs={'divice': 'cpu'})
 
 
 def merge_faiss(origin, need):
@@ -53,7 +50,7 @@ def merged_vector_db(need_merged_path, origin_db_path, embeddings):
         shutil.copytree(need_merged_path, origin_db_path)
 
 
-def merge_vector_db_main(origin_db_path, need_merged_db_path):
+def merge_vector_db_main(origin_db_path, need_merged_db_path, embeddings):
     backup_vector_db(origin_db_path)
 
     need_merged_product_list = get_file_list(need_merged_db_path)
