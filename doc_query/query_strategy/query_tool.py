@@ -1,7 +1,7 @@
 from doc_query.query_strategy.qa import init_qa_map, qa_map
 
 
-DEFAULT_PRODUCT = "All Product"
+DEFAULT_PRODUCT = "all"
 
 
 def init_query_map(embeddings, reranker):
@@ -13,7 +13,7 @@ def get_vector(query):
         find_product = vector.product_match(query)
         if find_product:
             return vector
-    return qa_map.get("All Product")
+    return qa_map.get("all")
 
 
 def get_query(query):
@@ -21,9 +21,9 @@ def get_query(query):
     result = vector.query(query)
     documents = []
     for item in result.get("source_documents", []):
-        name = vector.get_source(item[0].metadata)
-        text = item[0].page_content
-        documents.append({"text": text, "name": name, "page": item[0].metadata.get("page")})
+        name = vector.get_source(item.metadata)
+        text = item.page_content
+        documents.append({"text": text, "name": name, "page": item.metadata.get("page")})
     result["result"] = result['reuslt'].replace("<unused1>", "")
     return result
 

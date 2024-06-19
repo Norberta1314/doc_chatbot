@@ -23,7 +23,7 @@ def main():
     init_query_map(embedding, reranker)
 
     # queries = read_jsonl("question.jsonl")
-    queries = read_jsonl("/Users/candy/doc_chatbot_1/question.jsonl")
+    queries = read_jsonl("question.jsonl")
 
     # 生成答案
     print("Start generating answers...")

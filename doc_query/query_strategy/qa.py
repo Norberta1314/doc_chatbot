@@ -22,18 +22,20 @@ SUMMARIZE_TEMPLATE = PromptTemplate(input_variables=["context", "question"], tem
 
 client = ZhipuAI(api_key=config_util.get_common("GLM_KEY"))
 
+
 class Qa:
     def __init__(self, db_path, embeddings, reranker, product):
         index_name = "large.index"
         self.embeddings = embeddings
         self.reranker = reranker
         self.product = product
-        self.url_map = read_json(get_url_file_name(db_path))
         self.vector: VectorStore = FAISS.load_local(get_faiss_name(db_path, product), embeddings, index_name=index_name)
         self.index_to_docstore_id = self.vector.index_to_docstore_id
         self.vector_index_convert = dict(zip(self.vector.index_to_docstore_id, self.vector.index_to_docstore_id.keys()))
-        self.retriever = ContextualCompressionRetriever(base_compressor=reranker, base_retriever=self.vector.as_retriever(
-            search_type="similarity", search_kwargs={"k": 20, "score_threshold": 0.8}))
+        self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
+                                                        base_retriever=self.vector.as_retriever(
+                                                            search_type="similarity",
+                                                            search_kwargs={"k": 20, "score_threshold": 0.8}))
 
     @staticmethod
     def check_no_answer(answer):
@@ -63,11 +65,8 @@ class Qa:
 
     def get_source(self, metadata):
         source = metadata.get("source")
-        for key in self.url_map:
-            if key.lower() in source.lower() or source in key:
-                return key
-        source = source.split("\\")[-1].split(".")[0]
-        return source
+
+        return source[31:]
 
     def obtain_contexts_from_vectordb(self, query):
         def obatin_context_anx(doc_id):
@@ -89,7 +88,7 @@ class Qa:
         obtained_contexts = {}
         for doc_id in sorted(contexts):
             content = self.vector.docstore.search(self.index_to_docstore_id[doc_id])
-            file_name, _ = self.get_source(content.metadata)
+            file_name = self.get_source(content.metadata)
             if not obtained_contexts.get(file_name):
                 obtained_contexts[file_name] = f"{content.page_content}。\n"
             else:
@@ -104,7 +103,7 @@ class Qa:
             return "没有找到相关的背景材料", search_results
         context = ""
         for result in search_results:
-            file_name, _ = self.get_source(result.metadata)
+            file_name = self.get_source(result.metadata)
             context = f"{context}背景材料《{file_name}》：{result.page_content}。\n"
         context = context.strip("\n ")
         # 需要组装template
@@ -137,7 +136,7 @@ class Qa:
             return "没有找到相关的背景材料", search_results
         context = ""
         for result in search_results:
-            file_name, _ = self.get_source(result.metadata)
+            file_name = self.get_source(result.metadata)
             context = f"{context}背景材料《{file_name}》：{result.page_content}。\n"
         context = context.strip("\n ")
         # 需要组装template
@@ -154,7 +153,6 @@ class Qa:
 
     def third_query(self, query):
         return
-
 
     def query(self, query):
         first_result, search_results = self.first_query(query)
@@ -173,6 +171,7 @@ class Qa:
 
 qa_map = {}
 
+
 def init_qa_map(embeddings, reranker):
     vector_total_path = os.path.abspath(config_util.get_common("vectordb"))
     if not os.path.exists(vector_total_path):
@@ -182,5 +181,3 @@ def init_qa_map(embeddings, reranker):
         # product_list = os.path.join(vector_total_path, product)
         qa = Qa(vector_total_path, embeddings, reranker, product)
         qa_map[product] = qa
-
-
