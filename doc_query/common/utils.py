@@ -7,6 +7,9 @@ import json
 import logging
 import os.path
 import stat
+from typing import Iterable
+
+import jsonlines
 
 
 def get_url_file_name(path):
@@ -14,7 +17,7 @@ def get_url_file_name(path):
 
 
 def get_faiss_name(path, product):
-    return os.path.abspath(os.path.join(path, product, "faiss"))
+    return os.path.abspath(path + os.sep + product + os.sep + "faiss")
 
 
 def read_json(path):
@@ -66,5 +69,28 @@ def combine_final_source(source, final_source):
 def get_file_list(file_path):
     return os.listdir(file_path)
 
-def get_vector_index_name():
-    return "large.index"
+
+def read_jsonl(path):
+    content = []
+    with jsonlines.open(path, "r") as json_file:
+        for obj in json_file.iter(type=dict, skip_invalid=True):
+            content.append(obj)
+    return content
+
+
+def save_answers(
+    queries: Iterable, results: Iterable, path: str = "data/answers.jsonl"
+):
+    answers = []
+    for query, result in zip(queries, results):
+        answers.append(
+            {"id": query["id"], "query": query["query"], "answer": result}
+        )
+
+    # use jsonlines to save the answers
+    def write_jsonl(path, content):
+        with jsonlines.open(path, "w") as json_file:
+            json_file.write_all(content)
+
+    # 保存答案到 data/answers.jsonl
+    write_jsonl(path, answers)
