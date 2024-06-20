@@ -94,7 +94,7 @@ class Qa:
                 new_doc_id = doc_id + i
                 if new_doc_id >= 0 and new_doc_id < len(self.index_to_docstore_id):
                     new_content = self.vector.docstore.search(self.index_to_docstore_id[new_doc_id])
-                    new_meta = new_content.metadata
+                    new_meta = new_content[0].metadata
                     if self.check_meta(meta_data, new_meta):
                         contexts.add(new_doc_id)
 
@@ -108,11 +108,11 @@ class Qa:
         obtained_contexts = {}
         for doc_id in sorted(contexts):
             content = self.vector.docstore.search(self.index_to_docstore_id[doc_id])
-            file_name = self.get_source(content.metadata)
+            file_name = self.get_source(content[0].metadata)
             if not obtained_contexts.get(file_name):
-                obtained_contexts[file_name] = f"{content.page_content}。\n"
+                obtained_contexts[file_name] = f"{content[0].page_content}。\n"
             else:
-                obtained_contexts[file_name] = f"{obtained_contexts[file_name]}{content.page_content}。\n"
+                obtained_contexts[file_name] = f"{obtained_contexts[file_name]}{content[0].page_content}。\n"
 
         contents = self.combine_contexts(obtained_contexts)
         return contents.strip("\n "), search_results
@@ -134,18 +134,23 @@ class Qa:
         return response.choices[0].message.content, search_results
 
     def combine_source_documents(self, search_results):
-        context_dict = {}
+        context_idx_dict = {}
         for result in search_results:
-            title_value = self.get_title(result[1].metadata)
-            if context_dict.get(title_value):
-                context_dict[title_value] = f"{context_dict[title_value]}{result[0].page_content}"
+            file_name = self.get_source(result[0].metadata)
+            title_value = self.get_title(result[0].metadata)
+            file_title = f"材料《{file_name}》{title_value}"
+            if context_idx_dict.get(file_title):
+                context_idx_dict[file_title].add(self.vector_index_convert[result[1]])
             else:
-                context_dict[title_value] = f"{result[0].page_content}。\n"
+                context_idx_dict[file_title] = {self.vector_index_convert[result[1]]}
+
         context = ""
-        i = 1
-        for title, content in context_dict.items():
-            context = f"{context}知识{i}：{title}{content}。\n"
-            i += 1
+        for title, content_idx in context_idx_dict.items():
+            context = f"{title}\n"
+            for i, doc_id in enumerate(sorted(content_idx)):
+                content = self.vector.docstore.search(self.index_to_docstore_id[doc_id])[0].page_content
+                context = f"{context}片段{i+1}：{content}。\n"
+
         context = re.sub("[，。 ；：,.:;]+。", "。", context)
         context = context.strip("\n ")
         return context
@@ -169,8 +174,6 @@ class Qa:
         context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
-        # result = llm.acomplete(ask_prompt)
-        # return result, result_by_llm, search_results
         response = client.chat.completions.create(
             model="glm-4",  # Fill in the model name to be called
             messages=[
@@ -190,17 +193,16 @@ class Qa:
         )
         result_by_llm = response.choices[0].message.content
 
-        rewrite_prompt = """
-        以下为背景知识：
-        ---------
-        {context}
-        ---------
-        请结合背景知识并按照改写的要求，改写下列问题：
-        ---------
-        {question}
-        ---------
-        改写的要求：改写后的问题能够更好地从知识库中检索到相关内容。
-        回答的要求：请直接返回你改写后的问题，不要复述上下文信息
+        rewrite_prompt = """以下为背景知识：
+---------
+{context}
+---------
+请结合背景知识并按照改写的要求，改写下列问题：
+---------
+{question}
+---------
+改写的要求：改写后的问题能够更好地从知识库中检索到相关内容。
+回答的要求：请直接返回你改写后的问题，不要复述原问题和上下文信息。
         """
         rewrite_template = PromptTemplate(input_variables=["context", "question"], template=rewrite_prompt)
         rewrite_template = rewrite_template.format(question=query, context=result_by_llm)
@@ -216,18 +218,18 @@ class Qa:
         if not search_results_by_llm and not search_results_by_rewrite:
             return "没有找到相关的背景材料", result_by_llm, search_results_by_rewrite
 
-        search_results_ids = []
+        search_results_ids = set()
         for result in search_results_by_llm:
-            search_results_ids.append(self.vector_index_convert(result[1]))
+            search_results_ids.add(result[1])
         for result in search_results_by_rewrite:
-            search_results_ids.append(self.vector_index_convert(result[1]))
-
-        # 这需要个重排机制
-
+            search_results_ids.add(result[1])
 
         search_results = []
-        for i, idx in enumerate(sorted(search_results_ids)):
-            search_results.append(self.vector.docstore.search(self.index_to_docstore_id[idx]))
+        for vec_indx in search_results_ids:
+            search_results.append(self.vector.docstore.search(vec_indx))
+        # 这需要个重排机制
+        if len(search_results_ids) > 6:
+            search_results = self.reranker.compress_documnets(search_results, query)
 
         context = self.combine_source_documents(search_results)
         # 需要组装template
