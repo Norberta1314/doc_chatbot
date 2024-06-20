@@ -170,7 +170,7 @@ class Qa:
         # context, search_results = self.obtain_contexts_from_vectordb(new_query)
         search_results = self.retriever.get_relevant_documents(new_query)
         if not search_results:
-            return "没有找到相关的背景材料", search_results
+            return "没有找到相关的背景材料", result_by_llm, search_results
         context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
