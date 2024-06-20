@@ -9,7 +9,7 @@ from langchain_core.vectorstores import VectorStore
 from zhipuai import ZhipuAI
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name
+from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name, get_source_name
 
 ZH_TEMPLATE = """上下文信息如下：
 ---------
@@ -63,10 +63,6 @@ class Qa:
             return True
         return False
 
-    def get_source(self, metadata):
-        source = metadata.get("source")
-        return source[31:]
-
     def get_title(self, metadata):
         title_mark = ""
         for key,value in metadata.items():
@@ -108,7 +104,7 @@ class Qa:
         obtained_contexts = {}
         for doc_id in sorted(contexts):
             content = self.vector.docstore.search(self.index_to_docstore_id[doc_id])
-            file_name = self.get_source(content[0].metadata)
+            file_name = get_source_name(content[0].metadata)
             if not obtained_contexts.get(file_name):
                 obtained_contexts[file_name] = f"{content[0].page_content}。\n"
             else:
@@ -136,7 +132,7 @@ class Qa:
     def combine_source_documents(self, search_results):
         context_idx_dict = {}
         for result in search_results:
-            file_name = self.get_source(result[0].metadata)
+            file_name = get_source_name(result[0].metadata)
             title_value = self.get_title(result[0].metadata)
             file_title = f"材料《{file_name}》{title_value}"
             if context_idx_dict.get(file_title):
