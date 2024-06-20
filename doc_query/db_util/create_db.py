@@ -5,7 +5,7 @@
 # @Author  : lyytaw
 import os.path
 
-from flask_sqlalchemy import SQLALchemy
+from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -16,12 +16,12 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://vectordb.sqlite'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECERT_KEY'] = "major"
-db = SQLALchemy(app)
+db = SQLAlchemy(app)
 
 
 class VectorTable(db.model):
     __tablename__ = "VECTORTABLE"
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(256), primary_key=True)
     product = db.Column(db.String(256))
     source = db.Column(db.String(256))
     title = db.Column(db.String(2048))
@@ -33,14 +33,14 @@ def create():
 
 
 def add_data(id, product, source, title):
-    with app.app_context:
+    with app.app_context():
         qs = VectorTable(id=id, product=product, source=source, title=title)
-        qs.session.add(qs)
-        qs.session.commit()
+        db.session.add(qs)
+        db.session.commit()
         return qs.id
 
 
-def init_date():
+def init_data():
     embeddings = HuggingFaceEmbeddings(model_name="bge-m3", model_kwargs={'device': 'cpu'})
     file_path = "vectordb"
     product_list = get_file_list(file_path)
