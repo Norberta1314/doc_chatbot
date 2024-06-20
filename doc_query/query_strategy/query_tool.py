@@ -21,8 +21,8 @@ def get_query(query):
     result = vector.query(query)
     documents = []
     for item in result.get("source_documents", []):
-        name = vector.get_source(item.metadata)
-        text = item.page_content
+        name = vector.get_source(item[0].metadata)
+        text = item[0].page_content
         documents.append({"text": text, "name": name, "page": item.metadata.get("page")})
     result["result"] = result['result'].replace("<unused1>", "")
     return result
