@@ -1,4 +1,5 @@
 pip install -r requirements.txt
+pip install langchain==0.1.0
 python -m spacy download zh_core_web_sm
 pip install faiss-gpu
 cd doc_query
