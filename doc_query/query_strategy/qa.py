@@ -125,8 +125,6 @@ class Qa:
         context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
-        # result = llm.acomplete(ask_prompt)
-        # return result, search_results
         response = client.chat.completions.create(
             model="glm-4",  # Fill in the model name to be called
             messages=[
@@ -248,10 +246,13 @@ class Qa:
             second_result, result_by_llm, search_results = self.second_query(query)
             logging.info(f"second answer: {second_result}")
             answer = {"query": query, "result": second_result, "source_documents": search_results}
-            if not search_results:
+            if not search_results or self.check_no_answer(second_result):
                 # 进行第三次检索
-                logging.info(f"前两次答案为空，所以采用llm自身的答案: {result_by_llm}")
-                answer["result"] = result_by_llm
+                third_result, result_by_llm, search_results = self.third_query(query, search_results)
+                answer['result'] = third_result
+                if self.check_no_answer(second_result) or not search_results:
+                    logging.info(f"前两次答案为空，所以采用llm自身的答案: {result_by_llm}")
+                    answer["result"] = result_by_llm
             return answer
         return {"query": query, "result": first_result, "source_documents": search_results}
 
