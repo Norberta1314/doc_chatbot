@@ -94,3 +94,6 @@ def save_answers(
 
     # 保存答案到 data/answers.jsonl
     write_jsonl(path, answers)
+
+def get_vector_index_name():
+    return "large.index"
