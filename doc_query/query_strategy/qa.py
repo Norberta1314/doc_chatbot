@@ -9,14 +9,14 @@ from langchain_core.vectorstores import VectorStore
 from zhipuai import ZhipuAI
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name
+from doc_query.common.utils import get_faiss_name
 
 ZH_TEMPLATE = """上下文信息如下：
 ---------
 {context}
 ---------
 请你基于上下文信息而不是自己的知识，回答问题：```{question}```
-回答的要求：1.可以分点作答；2.如果上下文信息中没有相关知识去回答问题，可以回答不确定，不要复述上下文信息。
+回答的要求：1.可以分点作答；2.如果上下文信息中没有相关知识去回答问题，请直接回答不知道，不要复述上下文信息。
 """
 SUMMARIZE_TEMPLATE = PromptTemplate(input_variables=["context", "question"], template=ZH_TEMPLATE)
 
@@ -31,7 +31,7 @@ class Qa:
         self.product = product
         self.vector: VectorStore = FAISS.load_local(get_faiss_name(db_path, product), embeddings, index_name=index_name)
         self.index_to_docstore_id = self.vector.index_to_docstore_id
-        self.vector_index_convert = dict(zip(self.vector.index_to_docstore_id, self.vector.index_to_docstore_id.keys()))
+        self.vector_index_convert = dict(zip(self.vector.index_to_docstore_id.values(), self.vector.index_to_docstore_id.keys()))
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
                                                         base_retriever=self.vector.as_retriever(
                                                             search_type="similarity",
@@ -148,7 +148,7 @@ class Qa:
         for title, content_idx in context_idx_dict.items():
             context = f"{title}\n"
             for i, doc_id in enumerate(sorted(content_idx)):
-                content = self.vector.docstore.search(self.index_to_docstore_id[doc_id])[0].page_content
+                content = self.vector.docstore.search(self.index_to_docstore_id[doc_id]).page_content
                 context = f"{context}片段{i+1}：{content}。\n"
 
         context = re.sub("[，。 ；：,.:;]+。", "。", context)
@@ -226,10 +226,10 @@ class Qa:
 
         search_results = []
         for vec_indx in search_results_ids:
-            search_results.append(self.vector.docstore.search(vec_indx))
+            search_results.append((self.vector.docstore.search(vec_indx), vec_indx))
         # 这需要个重排机制
         if len(search_results_ids) > 6:
-            search_results = self.reranker.compress_documnets(search_results, query)
+            search_results = self.reranker.compress_documents(search_results, query)
 
         context = self.combine_source_documents(search_results)
         # 需要组装template
@@ -253,7 +253,7 @@ class Qa:
                 # 进行第三次检索
                 third_result, result_by_llm, search_results = self.third_query(query, search_results)
                 answer['result'] = third_result
-                if self.check_no_answer(second_result) or not search_results:
+                if not search_results:
                     logging.info(f"前两次答案为空，所以采用llm自身的答案: {result_by_llm}")
                     answer["result"] = result_by_llm
             return answer
