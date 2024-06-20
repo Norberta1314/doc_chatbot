@@ -216,16 +216,17 @@ class Qa:
         if not search_results_by_llm and not search_results_by_rewrite:
             return "没有找到相关的背景材料", result_by_llm, search_results_by_rewrite
 
-        search_results_ids = set()
+        search_results_ids = []
         for result in search_results_by_llm:
-            search_results_ids.add(self.vector_index_convert(result[1]))
+            search_results_ids.append(self.vector_index_convert(result[1]))
         for result in search_results_by_rewrite:
-            search_results_ids.add(self.vector_index_convert(result[1]))
+            search_results_ids.append(self.vector_index_convert(result[1]))
+
+        # 这需要个重排机制
+
 
         search_results = []
         for i, idx in enumerate(sorted(search_results_ids)):
-            if i > 5:
-                break
             search_results.append(self.vector.docstore.search(self.index_to_docstore_id[idx]))
 
         context = self.combine_source_documents(search_results)
