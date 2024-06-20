@@ -1,8 +1,7 @@
  DIAMETER协议配置 
 
 
-[](None)# 背景知识 
-
+[](None)背景知识 :
 
 
  
@@ -39,8 +38,7 @@ Diameter节点可以从一个源端口上初始化连接，该端口可以不是
 
 
 
-[](None)# 功能描述 
-
+[](None)功能描述 :
 
 该功能模块用于配置Diameter协议栈相关数据，包含以下内容： 
 
@@ -92,8 +90,7 @@ Diameter本协议运行在TCP或SCTP传输协议上。
 # DIAMETER协议基本配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 Diameter协议是用于认证、授权、计费的协议，主要应用于IP多媒体子系统、演进的分组核心网等系统。 
 
@@ -103,8 +100,7 @@ Diameter对等端是指一个Diameter节点，该节点和另一个特定的Diam
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 该配置提供了本网元的Diameter协议正常建链需要的产品名称、厂商、心跳检测时长，Diameter的最大连接数和最大路由数，消息重发间隔。 
 
@@ -122,8 +118,7 @@ Diameter对等端是指一个Diameter节点，该节点和另一个特定的Diam
 ## SET DIM GLOBAL 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改Diameter协议基本配置。 
 
@@ -133,8 +128,7 @@ Diameter对等端是指一个Diameter节点，该节点和另一个特定的Diam
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 
  
@@ -150,8 +144,7 @@ Diameter协议基本配置全局唯一。
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -168,8 +161,7 @@ BUSYCYCLE|忙检测周期(秒)|参数可选性:任选参数；参数类型:整�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -187,8 +179,7 @@ HINT|命令提示信息|参数可选性:任选参数；参数类型:枚举。参
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改Diameter协议基本配置：产品名称为A，运营商标识为1，心跳检测时长（秒）5；支持的最大连接数为64，支持的最大路由数为256。 
 
@@ -200,8 +191,7 @@ SET DIM GLOBAL:PRODUCTNAME="A",VENDORID=1,TC=5,MAXCONN=64,MAXROUTE=256;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -215,8 +205,7 @@ SET DIM GLOBAL:PRODUCTNAME="A",VENDORID=1,TC=5,MAXCONN=64,MAXROUTE=256;
 ## SHOW DIM GLOBAL 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询Diameter协议基本配置。 
 
@@ -226,16 +215,14 @@ SET DIM GLOBAL:PRODUCTNAME="A",VENDORID=1,TC=5,MAXCONN=64,MAXROUTE=256;
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 不需要输入参数，默认查询所有配置。 
 
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -252,8 +239,7 @@ BUSYCYCLE|忙检测周期(秒)|参数可选性:任选参数；参数类型:整�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询Diameter协议基本配置。 
 
@@ -279,8 +265,7 @@ SHOW DIM GLOBAL;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -294,16 +279,14 @@ SHOW DIM GLOBAL;
 # DIAMETER链路闭塞配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 当网元因升级或者容灾倒换不提供服务时，可以通过此命令一键闭塞所有的Diameter链路。当本网元重新恢复提供服务时，可以通过此命令一键解闭塞所有的Diameter链路。 
 
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 该配置用于控制本网元是否允许建立Diameter链路。 
 
@@ -324,8 +307,7 @@ SHOW DIM GLOBAL;
 ## SET DIAMLINKBLOCK 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改Diameter链路闭塞状态。 
 
@@ -338,25 +320,11 @@ SHOW DIM GLOBAL;
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无
 
 
-[](None)### 输入参数说明 
-
-
-[](None)标识|名称|类型|说明
----|---|---|---
-BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于设置Diameter链路状态。数据来源：与对端协商规划。配置原则：闭塞：表示设置Diameter链路状态为闭塞状态。解闭塞：表示设置Diameter链路状态为解闭塞状态。
-
-
-
-
-
-
-[](None)### 输出参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -367,8 +335,18 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 命令举例 
+[](None)输出参数说明 :
 
+[](None)标识|名称|类型|说明
+---|---|---|---
+BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于设置Diameter链路状态。数据来源：与对端协商规划。配置原则：闭塞：表示设置Diameter链路状态为闭塞状态。解闭塞：表示设置Diameter链路状态为解闭塞状态。
+
+
+
+
+
+
+[](None)命令举例 :
 
 闭塞Diameter链路。 
 
@@ -384,21 +362,18 @@ SET DIAMLINKBLOCK:BLOCKFLAG="BLOCKED";
 ## SHOW DIAMLINKBLOCK 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询Diameter链路闭塞状态。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -409,8 +384,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询Diameter链路闭塞状态。 
 
@@ -426,8 +400,7 @@ SHOW DIAMLINKBLOCK;
 # DIAMETER链路配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 Diameter链路运行于SCTP偶联上。Diameter客户端、代理和服务器必须都支持SCTP偶联。 
 
@@ -437,8 +410,7 @@ Diameter对等端是指一个Diameter节点，该节点和另一个特定的Diam
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 Diameter链路配置通过本端主机名称、本端域名、对端主机名称、对端域名、承载协议类型、SCTP承载链路创建一条Diameter链路，并设置该Diameter链路的心跳检测参数。 
 
@@ -459,8 +431,7 @@ Diameter链路配置通过本端主机名称、本端域名、对端主机名称
 ## ADD DIM RCPLINK 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于增加Diameter链路。 
 
@@ -473,8 +444,7 @@ Diameter链路配置通过本端主机名称、本端域名、对端主机名称
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 配置Diameter链路之前，如果该Diameter链路配置的承载协议类型为SCTP，需要先使用[ADD SCTP](..html#.xml)命令配置SCTP承载链路。
 
@@ -496,8 +466,7 @@ Diameter链路配置通过本端主机名称、本端域名、对端主机名称
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -522,8 +491,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -548,8 +516,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加Diameter链路：增加RCP与PGW之间的链路，链路号为1，本端主机名称为X.B.C，本端域名为B.C，对端主机名称为Y.B.C，对端域名为B.C，邻接局类型为PCEF，SCTP承载节点ID为1，承载协议类型为SCTP，链路名称为A。 
 
@@ -561,8 +528,7 @@ ADD DIM RCPLINK:LINKNO=1,LOCALHOSTNAME="X.B.C",LOCALREALM="B.C",DSTHOSTNAME="Y.B
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -588,8 +554,7 @@ ADD DIM RCPLINK:LINKNO=1,LOCALHOSTNAME="X.B.C",LOCALREALM="B.C",DSTHOSTNAME="Y.B
 ## SET DIM RCPLINK 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改Diameter链路。 
 
@@ -602,8 +567,7 @@ ADD DIM RCPLINK:LINKNO=1,LOCALHOSTNAME="X.B.C",LOCALREALM="B.C",DSTHOSTNAME="Y.B
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 修改偶联配置前需要确定修改后的目的实体数据同步（比如IP地址）已经完成，否则会导致在该条链路上的所有消息都失败。 
 
@@ -616,8 +580,7 @@ ADD DIM RCPLINK:LINKNO=1,LOCALHOSTNAME="X.B.C",LOCALREALM="B.C",DSTHOSTNAME="Y.B
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -641,8 +604,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -666,8 +628,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改Diameter链路：链路号为1，本端主机名称为X.B.C，本端域名为B.C，对端主机名称为Y.B.C，对端域名为B.C，SCTP承载节点ID为1，承载协议类型为SCTP，链路名称为A。 
 
@@ -679,8 +640,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -706,8 +666,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 ## DEL DIM RCPLINK 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于删除Diameter链路。 
 
@@ -720,8 +679,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 删除链路配置前需要先确定不再需要该条链路，否则会导致在该条链路上的所有消息都失败。 
 
@@ -731,8 +689,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -743,8 +700,7 @@ LINKNO|链路号|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除Diameter链路：链路号为1。 
 
@@ -756,8 +712,7 @@ DEL DIM RCPLINK:LINKNO=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -783,8 +738,7 @@ DEL DIM RCPLINK:LINKNO=1;
 ## SHOW DIM RCPLINK 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询Diameter链路。 
 
@@ -794,16 +748,14 @@ DEL DIM RCPLINK:LINKNO=1;
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 不输入参数默认查询所有配置。输入链路号和链路名称，则查询指定条件的链路配置。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -815,8 +767,7 @@ END|结束链路号|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -841,8 +792,7 @@ BLOCKFLAG|人工闭塞标识|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询Diameter链路：链路号为1。 
 
@@ -892,8 +842,7 @@ SHOW DIM RCPLINK:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -919,8 +868,7 @@ SHOW DIM RCPLINK:BEGIN=1,END=1;
 # DIAMETER链路一般能力配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 Diameter对等端是指一个Diameter节点。Diameter本端和Diameter对等端之间可以直接进行传输连接。 
 
@@ -933,8 +881,7 @@ Diameter一般能力是指CER（Capabilities-Exchange-Req，能力交换请求�
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 Diameter建链时需要使用Diameter链路一般能力配置填写发送给Diameter对等端的CER（Capabilities-Exchange-Req，能力交换请求）/CEA（Capabilities-Exchange-Answer，能力交换应答）消息。 
 
@@ -976,16 +923,14 @@ Acct-Application-Id（计费应用）。
 ## ADD DIM LINKCOMMON 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于增加Diameter链路一般能力配置。当RCP网元需要Diameter静态建链时，使用该命令配置本端支持的一般能力。命令执行成功后，RCP可使用所配置的Diameter链路一般能力，在Diameter静态建链时进行能力交换。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 
  
@@ -1002,8 +947,7 @@ RCP系统默认为ADD DIM RCPLINK配置的每条Diameter链路配置Diameter链�
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1054,8 +998,7 @@ ACCTAPP10|计费应用ID10|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1106,8 +1049,7 @@ ACCTAPP10|计费应用ID10|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加Diameter链路一般能力，链路号为1，支持厂商ID为10415。 
 
@@ -1119,8 +1061,7 @@ ADD DIM LINKCOMMON:LINKNO=1,VENDOR1=10415;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1146,24 +1087,21 @@ ADD DIM LINKCOMMON:LINKNO=1,VENDOR1=10415;
 ## SET DIM LINKCOMMON 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改Diameter链路一般能力配置。当需要重新配置Diameter链路的支持厂商ID、支持认证应用、支持安全、支持计费应用时，使用该命令。命令执行成功后，RCP系统将使用修改后的配置重新发起该Diameter链路的建链。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 链路建立成功后，一般情况下不能修改Diameter链路的一般能力配置，否则会影响RCP网元和对端建立的Diameter链路状态。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1214,8 +1152,7 @@ ACCTAPP10|计费应用ID10|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1266,8 +1203,7 @@ ACCTAPP10|计费应用ID10|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改Diameter链路一般能力，链路号为1，支持厂商ID为10415。 
 
@@ -1279,8 +1215,7 @@ SET DIM LINKCOMMON:LINKNO=1,VENDOR1=10415;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1306,24 +1241,21 @@ SET DIM LINKCOMMON:LINKNO=1,VENDOR1=10415;
 ## DEL DIM LINKCOMMON 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于删除Diameter链路一般能力配置。当RCP网元不支持该Diameter链路配置的厂商ID、认证应用、安全或计费应用一般能力时，使用该命令进行删除。命令执行成功后，RCP系统将默认为该Diameter链路的一般能力配置的所有参数值均为0。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 链路建立成功后，一般情况下不能删除Diameter链路的一般能力配置，否则会影响RCP网元和对端建立的Diameter链路状态。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1334,8 +1266,7 @@ LINKNO|链路号|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除Diameter链路一般能力，链路号1。 
 
@@ -1347,8 +1278,7 @@ DEL DIM LINKCOMMON:LINKNO=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1374,8 +1304,7 @@ DEL DIM LINKCOMMON:LINKNO=1;
 ## SHOW DIM LINKCOMMON 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询Diameter链路一般能力配置。 
 
@@ -1385,16 +1314,14 @@ DEL DIM LINKCOMMON:LINKNO=1;
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 不输入参数默认查询所有配置。输入起始链路编号和结束链路编号，查询指定编号范围内的所有配置。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1406,8 +1333,7 @@ END|结束链路号|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1458,8 +1384,7 @@ ACCTAPP10|计费应用ID10|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询Diameter链路一般能力，链路号为1。 
 
@@ -1486,8 +1411,7 @@ SHOW DIM LINKCOMMON:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1513,8 +1437,7 @@ SHOW DIM LINKCOMMON:BEGIN=1,END=1;
 # DIAMETER链路特殊能力配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 Diameter对等端是指一个Diameter节点，Diameter本端和Diameter对等端之间可以直接进行传输连接。 
 
@@ -1530,8 +1453,7 @@ CER（Capabilities-Exchange-Req，能力交换请求）/CEA（Capabilities-Excha
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 该配置提供了本网元的Diameter静态建链需要的特殊能力。 
 
@@ -1555,16 +1477,14 @@ CER（Capabilities-Exchange-Req，能力交换请求）/CEA（Capabilities-Excha
 ## ADD DIM LINKSPECIFIC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于增加Diameter链路特殊能力配置。当RCP网元需要Diameter静态建链时，使用该命令配置本端支持的特殊能力。配置成功后，RCP可使用所配置的Diameter链路特殊能力在Diameter静态建链时进行能力交换。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 
  
@@ -1581,8 +1501,7 @@ RCP系统默认为ADD DIM RCPLINK配置的每条Diameter链路配置Diameter链�
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1606,8 +1525,7 @@ ACCTAPP|支持计费应用编号|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1631,8 +1549,7 @@ ACCTAPP|支持计费应用编号|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 创建链路号为1，特殊能力索引号为1，厂商ID为10415，鉴权应用ID为16777238的链路特殊能力。 
 
@@ -1644,8 +1561,7 @@ ADD DIM LINKSPECIFIC:LINKNO=1,SPINDEX=1,VENDOR1=10415,AUTHAPP=16777238;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1671,24 +1587,21 @@ ADD DIM LINKSPECIFIC:LINKNO=1,SPINDEX=1,VENDOR1=10415,AUTHAPP=16777238;
 ## SET DIM LINKSPECIFIC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改Diameter链路特殊能力配置。当需要重新配置Diameter链路的厂商ID、支持鉴权应用编号、支持计费应用编号时，使用该命令。命令执行成功后，RCP系统将使用修改后的配置重新发起该Diameter链路的建链。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 链路建立成功后，一般情况下不能修改Diameter链路的特殊能力配置，否则会影响RCP网元和对端建立的Diameter链路状态。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1712,8 +1625,7 @@ ACCTAPP|支持计费应用编号|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1737,8 +1649,7 @@ ACCTAPP|支持计费应用编号|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改链路号为1，特殊能力索引号为1，厂商ID为10415，鉴权应用ID为16777238链路特殊能力。 
 
@@ -1750,8 +1661,7 @@ SET DIM LINKSPECIFIC:LINKNO=1,SPINDEX=1,VENDOR1=10415,AUTHAPP=16777238;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1777,24 +1687,21 @@ SET DIM LINKSPECIFIC:LINKNO=1,SPINDEX=1,VENDOR1=10415,AUTHAPP=16777238;
 ## DEL DIM LINKSPECIFIC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于删除Diameter链路特殊能力配置。当RCP网元不支持该Diameter链路配置的厂商ID、认证应用、安全或计费应用特殊能力时，使用该命令进行删除。命令执行成功后，RCP系统将默认为该Diameter链路的该条特殊能力的所有参数值均为0。删除后会影响RCP和对端网元建立的Diameter链路。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 链路建立成功后，一般情况下不能删除Diameter链路的特殊能力配置，否则会影响RCP网元和对端建立的Diameter链路状态。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1806,8 +1713,7 @@ SPINDEX|特殊能力索引|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除链路号为1，特殊能力索引号为1的特殊能力。 
 
@@ -1819,8 +1725,7 @@ DEL DIM LINKSPECIFIC:LINKNO=1,SPINDEX=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1846,8 +1751,7 @@ DEL DIM LINKSPECIFIC:LINKNO=1,SPINDEX=1;
 ## SHOW DIM LINKSPECIFIC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询Diameter链路特殊能力配置。 
 
@@ -1857,16 +1761,14 @@ DEL DIM LINKSPECIFIC:LINKNO=1,SPINDEX=1;
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 不输入参数默认查询所有配置。输入链路号和特殊能力索引，查询指定链路号和特殊能力索引的配置。仅输入链路号，查询该链路号的所有Diameter链路特殊能力配置。仅输入特殊能力索引，查询该特殊能力索引的所有Diameter链路特殊能力配置。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1878,8 +1780,7 @@ SPINDEX|特殊能力索引|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -1903,8 +1804,7 @@ ACCTAPP|支持计费应用编号|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询链路号为1，特殊能力索引号为1的特殊能力命令。 
 
@@ -1928,8 +1828,7 @@ ACCTAPP|支持计费应用编号|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -1955,8 +1854,7 @@ ACCTAPP|支持计费应用编号|参数可选性:任选参数；参数类型:整
 # DIAMETER 路由配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 DIAMETER协议是用于认证、授权、计费的协议，主要应用于IP多媒体子系统、演进的分组核心网等系统。 
 
@@ -1966,8 +1864,7 @@ DIAMETER对等端是指一个DIAMETER节点，该节点和另一个特定的DIAM
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 DIAMETER路由功能是对本网元发送的DIAMETER消息或者从上一跳对等端接收到的DIAMETER消息进行分析，决定按以下哪种方式处理该消息： 
 
@@ -1995,16 +1892,14 @@ DIAMETER路由配置用于配置一条DIAMETER路由。当本端DIAMETER模块�
 ## ADD DIM ROUTE 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于增加DIAMETER路由。当本网元需要发送DIAMETER消息或者从上一跳对等端接收到DIAMETER消息时，执行该命令增加新的DIAMETER路由。配置成功后，按照配置要求，本端DIAMETER模块进行路由分析，决定本地动作及下一跳选路。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 支持应用、目的URI、本地动作、链路号、路由优先级为一条链路的五元组。这五项完全相同的路由只能配置一条。 
 
@@ -2023,8 +1918,7 @@ DIAMETER路由配置用于配置一条DIAMETER路由。当本端DIAMETER模块�
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2050,8 +1944,7 @@ WEIGHT|权重|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2077,8 +1970,7 @@ WEIGHT|权重|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加DIAMETER路由：路由编号为1，本地动作为中继处理（RELAY），链路号为1，路由优先级为高（HIGH），支持应用为Gx，目的URI为rcp.zte.com.cn，路由组编号为1，动态对等端主机名为1，权重为1。 
 
@@ -2090,8 +1982,7 @@ ADD DIM ROUTE:ROUTENO=1,LOCALPROCESSID="RELAY",MASTERLINKNO=1,ROUTEPRIORITY="HIG
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2117,24 +2008,21 @@ ADD DIM ROUTE:ROUTENO=1,LOCALPROCESSID="RELAY",MASTERLINKNO=1,ROUTEPRIORITY="HIG
 ## SET DIM ROUTE 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改DIAMETER路由。当本网元需要发送DIAMETER消息或者从上一跳对等端接收到DIAMETER消息，需要修改已有的DIAMETER路由时，使用该命令。修改路由后，可能会影响原有RCP网元的DIAMETER消息发送。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 一般情况下，不能修改DIAMETER路由配置，否则会影响RCP发送的DIAMETER消息或从上一跳对等端接收到的DIAMETER消息的发送。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2160,8 +2048,7 @@ WEIGHT|权重|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2187,8 +2074,7 @@ WEIGHT|权重|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改DIAMETER路由：路由编号为1，主用链路为1，支持应用为Gx，目的URI为：rcp.zte.com.cn，路由组编号为1，对端主机名为1，权重为1。 
 
@@ -2200,8 +2086,7 @@ SET DIM ROUTE:ROUTENO=1,MASTERLINKNO=1,ROUTEPRIORITY="HIGH",ROUTEAPPID="Gx",DEST
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2227,24 +2112,21 @@ SET DIM ROUTE:ROUTENO=1,MASTERLINKNO=1,ROUTEPRIORITY="HIGH",ROUTEAPPID="Gx",DEST
 ## DEL DIM ROUTE 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于删除DIAMETER路由。当不再使用该DIAMETER路由时，使用该命令。删除路由后，有可能造成无法发送DIAMETER消息。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 一般情况下，不能删除DIAMETER路由配置，否则会使RCP网元发送的DIAMETER消息或从上一跳对等端接收到的DIAMETER消息无法发送。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2255,8 +2137,7 @@ ROUTENO|路由编号|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除DIAMETER路由：路由编号为1。 
 
@@ -2268,8 +2149,7 @@ DEL DIM ROUTE:ROUTENO=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2295,16 +2175,14 @@ DEL DIM ROUTE:ROUTENO=1;
 ## SHOW DIM ROUTE 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询DIAMETER路由。通过该命令，可以获取路由编号、本地动作、支持的应用、路由优先级等信息。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 
  
@@ -2320,8 +2198,7 @@ DEL DIM ROUTE:ROUTENO=1;
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2333,8 +2210,7 @@ END|结束路由编号|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2360,8 +2236,7 @@ WEIGHT|权重|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询DIAMETER路由编号为1。 
 
@@ -2389,8 +2264,7 @@ SHOW DIM ROUTE:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2416,8 +2290,7 @@ SHOW DIM ROUTE:BEGIN=1,END=1;
 # DIAMETER 路由条件配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 路由条件配置是DIAMETER路由配置（[增加DIAMETER路由](../mml/1437230.html)命令）的附加条件。通过配置附加条件，以满足仅通过现有DIAMETER路由配置无法选路的情况。
 
@@ -2437,8 +2310,7 @@ DIAMETER路由是指对本网元发送的DIAMETER消息或者从上一跳对等�
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 该功能用于配置DIAMETER路由条件。当本网元使用现有DIAMETER路由配置来选路，但无法满足要求时，需要配置并关联此处配置的DIAMETER路由条件配置。 
 
@@ -2459,16 +2331,14 @@ DIAMETER路由是指对本网元发送的DIAMETER消息或者从上一跳对等�
 ## ADD DIM ROUTECOND 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于增加DIAMETER路由条件。当本网元使用现有DIAMETER路由配置来选路，但无法满足要求时，可以使用该命令增加新的DIAMETER路由条件。配置成功后，在DIAMETER路由配置（[增加DIAMETER路由](1437230.html)命令）的附加条件中可以关联该DIAMETER路由条件，作为本网元选择DIAMETER路由的条件之一。
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 目前，DIAMETER路由条件配置只支持条件类型为源主机名（LOCAL）的配置。当DIAMETER路由配置（[增加DIAMETER路由](1437230.html)命令）的附加条件为多个时，系统一旦成功获取一个源主机名，便不再匹配其他的附加条件。
 
@@ -2478,8 +2348,7 @@ DIAMETER路由是指对本网元发送的DIAMETER消息或者从上一跳对等�
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2494,8 +2363,7 @@ CONDITION|条件值|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2510,8 +2378,7 @@ CONDITION|条件值|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加DIAMETER路由条件：条件编号为1，条件名称为1，条件值为"rcp.zte.com.cn",匹配类型为LMFR。 
 
@@ -2523,8 +2390,7 @@ ADD DIM ROUTECOND:CONDNO=1,CONDNAME="1",CONDOPTYPE="LMFR",CONDITION="rcp.zte.com
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2550,24 +2416,21 @@ ADD DIM ROUTECOND:CONDNO=1,CONDNAME="1",CONDOPTYPE="LMFR",CONDITION="rcp.zte.com
 ## SET DIM ROUTECOND 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改DIAMETER路由条件。当本网元使用现有DIAMETER路由配置来选路，但无法满足要求时，需要使用该命令修改已有DIAMETER路由条件配置，作为本网元选择DIAMETER路由的条件之一。修改路由条件后，可能会影响原有RCP的DIAMETER消息的发送。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 一般情况下，不能修改DIAMETER路由条件配置，否则会影响RCP发送的DIAMETER消息或从上一跳对等端接收到的DIAMETER消息的发送。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2582,8 +2445,7 @@ CONDITION|条件值|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2598,8 +2460,7 @@ CONDITION|条件值|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改DIAMETER路由条件：条件编号为1，条件名称为1，条件值为"rcp.zte.com.cn"，匹配类型为LMFR。 
 
@@ -2611,8 +2472,7 @@ SET DIM ROUTECOND:CONDNO=1,CONDNAME="1",CONDOPTYPE="LMFR",CONDITION="rcp.zte.com
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2638,24 +2498,21 @@ SET DIM ROUTECOND:CONDNO=1,CONDNAME="1",CONDOPTYPE="LMFR",CONDITION="rcp.zte.com
 ## DEL DIM ROUTECOND 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于删除DIAMETER路由条件。当不需要使用该附加条件作为路由配置的分析条件，使用该命令。删除后，可能影响原路由的分析结果。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 一般情况下，不能删除DIAMETER路由条件配置，否则会使RCP网元发送的DIAMETER消息或从上一跳对等端接收到的DIAMETER消息无法发送。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2666,8 +2523,7 @@ CONDNO|条件编号|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除DIAMETER路由条件：条件编号为1。 
 
@@ -2679,8 +2535,7 @@ DEL DIM ROUTECOND:CONDNO=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2706,16 +2561,14 @@ DEL DIM ROUTECOND:CONDNO=1;
 ## SHOW DIM ROUTECOND 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询DIAMETER路由条件。当需要查询已有的DIAMETER路由条件配置时，使用该命令。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 查询DIAMETER路由条件。 
 
@@ -2735,8 +2588,7 @@ DEL DIM ROUTECOND:CONDNO=1;
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2748,8 +2600,7 @@ END|结束条件编号|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2764,8 +2615,7 @@ CONDITION|条件值|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询DIAMETER路由条件编号为1。 
 
@@ -2792,8 +2642,7 @@ SHOW DIM ROUTECOND:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -2819,8 +2668,7 @@ SHOW DIM ROUTECOND:BEGIN=1,END=1;
 # DIAMETER路由组属性配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 DIAMETER路由是指对本网元发送的DIAMETER消息或者从上一跳对等端接收到的DIAMETER消息进行分析，决定按以下哪种方式处理该消息。 
 
@@ -2840,8 +2688,7 @@ DIAMETER路由组属性配置指定了同一路由组中各个DIAMETER路由之�
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 该功能用于配置DIAMETER路由组属性。当属于同一个路由组的DIAMETER路由之间以负荷分担或者主备模式方式进行处理时，各个DIAMETER路由需要关联一个DIAMETER路由组属性配置，表示该DIAMETER路由属于该DIAMETER路由组，并由该路由组属性配置指定路由间具体的处理模式。 
 
@@ -2859,8 +2706,7 @@ DIAMETER路由组属性配置指定了同一路由组中各个DIAMETER路由之�
 ## ADD DIM ROUTEGRPPTY 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于增加DIAMETER路由组属性。当需要以负荷分担或主备模式来使用一组路由时，使用该命令，为这组路由配置属性。 
 
@@ -2870,8 +2716,7 @@ DIAMETER路由组属性配置指定了同一路由组中各个DIAMETER路由之�
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 在DIAMETER路由配置[增加DIAMETER路由](1437230.html)的“路由组编号”中关联该配置，该配置才会生效，表示该路由归属于路由组。
 
@@ -2881,8 +2726,7 @@ DIAMETER路由组属性配置指定了同一路由组中各个DIAMETER路由之�
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2895,8 +2739,7 @@ GROUPPTY|路由组属性|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2909,8 +2752,7 @@ GROUPPTY|路由组属性|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加DIAMETER路由组属性：路由组编号为1，路由组名称为1，组属性为"BACKUP"。 
 
@@ -2926,8 +2768,7 @@ ADD DIM ROUTEGRPPTY:GROUPNO=1,GROUPNAME="1",GROUPPTY="BACKUP";
 ## SET DIM ROUTEGRPPTY 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改DIAMETER路由组属性。当RCP需要修改已有的DIAMETER路由组属性时，使用该命令。 
 
@@ -2937,16 +2778,14 @@ ADD DIM ROUTEGRPPTY:GROUPNO=1,GROUPNAME="1",GROUPPTY="BACKUP";
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 修改路由组属性时，先执行[查询DIAMETER路由](1437233.html)命令查询关联到本条路由组编号的所有路由,根据情况需要决定是否需要修改，如果需要将路由组属性从主备模式却换为负荷分担，请查看路由配置中的权重（Weight）设置是否合适，如果需要从负荷分担切换为主备模式，请查看路由配置中路由主用标识（Master Route）设置是否合适，之后再进行路由组属性的切换，会影响本端DIAMETER模块路由分析结果，从而影响RCP消息的发送。
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2959,8 +2798,7 @@ GROUPPTY|路由组属性|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -2973,8 +2811,7 @@ GROUPPTY|路由组属性|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改DIAMETER路由组属性：路由组编号为1，路由组名称为1，组属性为"BACKUP"。 
 
@@ -2990,8 +2827,7 @@ SET DIM ROUTEGRPPTY:GROUPNO=1,GROUPNAME="1",GROUPPTY="BACKUP";
 ## DEL DIM ROUTEGRPPTY 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于删除DIAMETER路由组属性。当该路由组编号关联的DIAMETER路由不需要使用该组属性进行路由分析时，使用该命令删除路由组属性。 
 
@@ -3001,16 +2837,14 @@ SET DIM ROUTEGRPPTY:GROUPNO=1,GROUPNAME="1",GROUPPTY="BACKUP";
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 删除路由组信息时，先执行[查询DIAMETER路由](1437233.html)命令查看“路由组编号”参数中是否关联本条路由组编号信息。若存在关联，则需要修改路由项关联到其它路由组，或者删除关联到该路由组的无效路由项。
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3021,8 +2855,7 @@ GROUPNO|路由组编号|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除DIAMETER路由组属性：路由组编号为1。 
 
@@ -3038,16 +2871,14 @@ DEL DIM ROUTEGRPPTY:GROUPNO=1;
 ## SHOW DIM ROUTEGRPPTY 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询DIAMETER路由组属性。当需要了解当前配置的DIAMETER路由组属性时，使用该命令。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 
  
@@ -3061,8 +2892,7 @@ DEL DIM ROUTEGRPPTY:GROUPNO=1;
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3074,8 +2904,7 @@ END|结束路由组编号|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3088,8 +2917,7 @@ GROUPPTY|路由组属性|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询DIAMETER路由组属性。 
 
@@ -3120,16 +2948,14 @@ SHOW DIM ROUTEGRPPTY:BEGIN=1,END=1;
 # DIAMETER AVP码父节点配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 DIAMETER AVP码父节点配置包括：新增、修改、删除及查询DIAMETER AVP码父节点配置的相关命令及配置参数说明。 
 
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 DIM信令可编辑的使用场景往往是后验型使用场景，即两个网元的设备厂商在进行DIM信令交互时，发现交互信令不符合规范或双方理解不一致才会启用编辑功能。启用DIM信令可编辑功能时，试验码流已产生，为了避免后续类似处理流程失败，可考虑通过对特定消息内容进行DIM信令可编辑。 
 
@@ -3150,18 +2976,15 @@ DIM信令可编辑是指在外场对接时由于双方对DIM相关协议理解�
 ## ADD DIM FATHERAVP 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于增加DIAMETER AVP码父节点。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3177,8 +3000,7 @@ VENDORIDMATCHFLAG|厂商标识匹配标志|参数可选性:任选参数；参数
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3194,8 +3016,7 @@ VENDORIDMATCHFLAG|厂商标识匹配标志|参数可选性:任选参数；参数
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加一个父节点编号为1、AVP码为630的父节点配置的命令：
 ADD DIM FATHERAVP:ID=1,DIMAVPCODE=630,VENDORID=10415,NEXTLAYERNUM=1,VENDORIDMATCHFLAG="NEED"; 
@@ -3205,8 +3026,7 @@ ADD DIM FATHERAVP:ID=1,DIMAVPCODE=630,VENDORID=10415,NEXTLAYERNUM=1,VENDORIDMATC
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3232,35 +3052,15 @@ ADD DIM FATHERAVP:ID=1,DIMAVPCODE=630,VENDORID=10415,NEXTLAYERNUM=1,VENDORIDMATC
 ## SET DIM FATHERAVP 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于修改DIAMETER AVP码父节点。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
-
-[](None)标识|名称|类型|说明
----|---|---|---
-ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~4294967295。|DIAMETER AVP码父节点的编号，必须唯一。
-AVPLAYERNO|AVP所在层号|参数可选性:任选参数；参数类型:整数；参数范围为:1~4。|AVP所在层号, 该AVP在消息中的层数。
-DIMAVPCODE|AVP码|参数可选性:任选参数；参数类型:整数；参数范围为:1~4294967295。|AVP码，协议规定的AVP码。
-VENDORID|AVP厂商标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~4294967295。|AVP厂商编号，协议规定或自定义厂商编号。
-NEXTLAYERNUM|与下一层设定AVP层差|参数可选性:任选参数；参数类型:整数；参数范围为:1~4。|与下一层设定AVP层差。
-VENDORIDMATCHFLAG|厂商标识匹配标志|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|厂商编号匹配标志，包括：需要匹配，不需要匹配。
-
-
-
-
-
-
-[](None)### 输出参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3276,8 +3076,23 @@ VENDORIDMATCHFLAG|厂商标识匹配标志|参数可选性:任选参数；参数
 
 
 
-[](None)### 命令举例 
+[](None)输出参数说明 :
 
+[](None)标识|名称|类型|说明
+---|---|---|---
+ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~4294967295。|DIAMETER AVP码父节点的编号，必须唯一。
+AVPLAYERNO|AVP所在层号|参数可选性:任选参数；参数类型:整数；参数范围为:1~4。|AVP所在层号, 该AVP在消息中的层数。
+DIMAVPCODE|AVP码|参数可选性:任选参数；参数类型:整数；参数范围为:1~4294967295。|AVP码，协议规定的AVP码。
+VENDORID|AVP厂商标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~4294967295。|AVP厂商编号，协议规定或自定义厂商编号。
+NEXTLAYERNUM|与下一层设定AVP层差|参数可选性:任选参数；参数类型:整数；参数范围为:1~4。|与下一层设定AVP层差。
+VENDORIDMATCHFLAG|厂商标识匹配标志|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|厂商编号匹配标志，包括：需要匹配，不需要匹配。
+
+
+
+
+
+
+[](None)命令举例 :
 
 修改父节点编号为1、厂商标识修改为“不需要匹配”的命令：
 SET DIM FATHERAVP:ID=1,VENDORIDMATCHFLAG="NONEED"; 
@@ -3287,8 +3102,7 @@ SET DIM FATHERAVP:ID=1,VENDORIDMATCHFLAG="NONEED";
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3314,18 +3128,15 @@ SET DIM FATHERAVP:ID=1,VENDORIDMATCHFLAG="NONEED";
 ## DEL DIM FATHERAVP 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于删除DIAMETER AVP码父节点。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3336,8 +3147,7 @@ ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除父节点编号为1的父节点配置的命令：
 DEL DIM FATHERAVP:ID=1; 
@@ -3347,8 +3157,7 @@ DEL DIM FATHERAVP:ID=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3374,18 +3183,15 @@ DEL DIM FATHERAVP:ID=1;
 ## SHOW DIM FATHERAVP 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于查询DIAMETER AVP码父节点。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3397,8 +3203,7 @@ END|结束编号|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3414,8 +3219,7 @@ VENDORIDMATCHFLAG|厂商标识匹配标志|参数可选性:任选参数；参数
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 显示父节点编号为1的配置信息的命令：
 SHOW DIM FATHERAVP:BEGIN=1,END=1; 
@@ -3425,8 +3229,7 @@ SHOW DIM FATHERAVP:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3452,16 +3255,14 @@ SHOW DIM FATHERAVP:BEGIN=1,END=1;
 # DIAMETER AVP码匹配方法配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 DIAMETER AVP码匹配方法配置包括：新增、修改、删除及查询DIAMETER AVP码匹配方法配置的相关命令及配置参数说明。 
 
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 DIM信令可编辑的使用场景往往是后验型使用场景，即两个网元的设备厂商在进行DIM信令交互时，发现交互信令不符合规范或双方理解不一致才会启用编辑功能。启用DIM信令可编辑功能时，试验码流已产生，为了避免后续类似处理流程失败，可考虑通过对特定消息内容进行DIM信令可编辑。 
 
@@ -3482,18 +3283,15 @@ DIM信令可编辑是指在外场对接时由于双方对DIM相关协议理解�
 ## ADD DIM AVPCODEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于增加DIAMETER AVP码匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3513,8 +3311,7 @@ FATHERAVPID4|父AVP编号4|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3534,8 +3331,7 @@ FATHERAVPID4|父AVP编号4|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加一个AVP码匹配方法编号为1、AVP码为628的匹配方法的命令：
 ADD DIM AVPCODEMATCH:ID=1,AVPCODE=628,VENDORIDFLG="NEED",VENDORID=10415,FATHERAVPID1=1; 
@@ -3545,8 +3341,7 @@ ADD DIM AVPCODEMATCH:ID=1,AVPCODE=628,VENDORIDFLG="NEED",VENDORID=10415,FATHERAV
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3572,18 +3367,15 @@ ADD DIM AVPCODEMATCH:ID=1,AVPCODE=628,VENDORIDFLG="NEED",VENDORID=10415,FATHERAV
 ## SET DIM AVPCODEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于修改DIAMETER AVP码匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3603,8 +3395,7 @@ FATHERAVPID4|父AVP编号4|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3624,8 +3415,7 @@ FATHERAVPID4|父AVP编号4|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改AVP码匹配方法编号为1、厂商标识为“不需要匹配”的命令：
 SET DIM AVPCODEMATCH:ID=1,VENDORIDFLG="NONEED"; 
@@ -3635,8 +3425,7 @@ SET DIM AVPCODEMATCH:ID=1,VENDORIDFLG="NONEED";
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3662,18 +3451,15 @@ SET DIM AVPCODEMATCH:ID=1,VENDORIDFLG="NONEED";
 ## DEL DIM AVPCODEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于删除DIAMETER AVP码匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3684,8 +3470,7 @@ ID|匹配方法编号|参数可选性:必选参数；参数类型:整数；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除AVP码匹配方法编号为1的匹配方法的命令：
 DEL DIM AVPCODEMATCH:ID=1; 
@@ -3695,8 +3480,7 @@ DEL DIM AVPCODEMATCH:ID=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3722,18 +3506,15 @@ DEL DIM AVPCODEMATCH:ID=1;
 ## SHOW DIM AVPCODEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于查询DIAMETER AVP码匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3745,8 +3526,7 @@ END|结束匹配方法编号|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3766,8 +3546,7 @@ FATHERAVPID4|父AVP编号4|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询AVP码匹配方法编号为1的配置信息的命令：
 SHOW DIM AVPCODEMATCH:BEGIN=1,END=1; 
@@ -3777,8 +3556,7 @@ SHOW DIM AVPCODEMATCH:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3804,16 +3582,14 @@ SHOW DIM AVPCODEMATCH:BEGIN=1,END=1;
 # DIAMETER AVP值特征码流匹配方法配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 DIAMETER AVP值特征码流匹配方法配置包括：新增、修改、删除及查询DIAMETER AVP值特征码流匹配方法配置的相关命令及配置参数说明。 
 
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 DIM信令可编辑的使用场景往往是后验型使用场景，即两个网元的设备厂商在进行DIM信令交互时，发现交互信令不符合规范或双方理解不一致才会启用编辑功能。启用DIM信令可编辑功能时，试验码流已产生，为了避免后续类似处理流程失败，可考虑通过对特定消息内容进行DIM信令可编辑。 
 
@@ -3834,18 +3610,15 @@ DIM信令可编辑是指在外场对接时由于双方对DIM相关协议理解�
 ## ADD DIM AVPVALUEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于增加DIAMETER AVP值特征码流匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3858,8 +3631,7 @@ AVPCODE|码流|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3872,8 +3644,7 @@ AVPCODE|码流|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加一个AVP值特征码流匹配方法编号为1、匹配码流为输入的匹配方法的命令：
 ADD DIM AVPVALUEMATCH:ID=1,AVPCODE="00000022"; 
@@ -3883,8 +3654,7 @@ ADD DIM AVPVALUEMATCH:ID=1,AVPCODE="00000022";
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3910,18 +3680,15 @@ ADD DIM AVPVALUEMATCH:ID=1,AVPCODE="00000022";
 ## SET DIM AVPVALUEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于修改DIAMETER AVP值特征码流匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3934,8 +3701,7 @@ AVPCODE|码流|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -3948,8 +3714,7 @@ AVPCODE|码流|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改AVP值特征码流匹配方法编号为1、匹配类型为“模糊匹配”的命令：
 SET DIM AVPVALUEMATCH:ID=1,MATCHTYPE="BM"; 
@@ -3959,8 +3724,7 @@ SET DIM AVPVALUEMATCH:ID=1,MATCHTYPE="BM";
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -3986,18 +3750,15 @@ SET DIM AVPVALUEMATCH:ID=1,MATCHTYPE="BM";
 ## DEL DIM AVPVALUEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于删除DIAMETER AVP值特征码流匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4008,8 +3769,7 @@ ID|匹配方法编号|参数可选性:必选参数；参数类型:整数；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除AVP值特征码流匹配方法编号为1的匹配方法的命令：
 DEL DIM AVPVALUEMATCH:ID=1; 
@@ -4019,8 +3779,7 @@ DEL DIM AVPVALUEMATCH:ID=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4046,18 +3805,15 @@ DEL DIM AVPVALUEMATCH:ID=1;
 ## SHOW DIM AVPVALUEMATCH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于查询DIAMETER AVP值特征码流匹配方法。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4069,8 +3825,7 @@ END|结束匹配方法编号|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4083,8 +3838,7 @@ AVPCODE|码流|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询AVP值特征码流匹配方法编号为1的配置信息的命令：
 SHOW DIM AVPVALUEMATCH:BEGIN=1,END=1; 
@@ -4094,8 +3848,7 @@ SHOW DIM AVPVALUEMATCH:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4121,13 +3874,11 @@ SHOW DIM AVPVALUEMATCH:BEGIN=1,END=1;
 # DIAMETER信令可编辑动作配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 DIM信令可编辑的使用场景往往是后验型使用场景，即两个网元的设备厂商在进行DIM信令交互时，发现交互信令不符合规范或双方理解不一致才会启用编辑功能。启用DIM信令可编辑功能时，试验码流已产生，为了避免后续类似处理流程失败，可考虑通过对特定消息内容进行DIM信令可编辑。
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 DIM信令可编辑是指在外场对接时由于双方对DIM相关协议理解不一致时，能够在不重新制作版本前提下，通过修改信令码流，达到双方都能处理得目的，从而能顺利进行对接测试。DIM信令可编辑功能针对DIM消息码流AVP部分进行编辑，能够增加可选AVP、修改AVP值、删除可选AVP。
 
 
@@ -4151,18 +3902,15 @@ DIM信令可编辑是指在外场对接时由于双方对DIM相关协议理解�
 ## ADD DIM EDITACT 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于增加DIAMETER信令可编辑动作。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4187,8 +3935,7 @@ AVPINFO|AVP替换码流|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4213,8 +3960,7 @@ AVPINFO|AVP替换码流|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加一个编辑动作编号为1，匹配动作为修改AVP值的匹配方法的命令：
 ADD DIM EDITACT:NO=1,OPWAY="MODAVPVALUE",CMDCODE=316,METHODTYPE1="ACP",METHOD1=1,METHODTYPE2="AVRM",METHOD2=1,AVPINFO="000001c8"; 
@@ -4224,8 +3970,7 @@ ADD DIM EDITACT:NO=1,OPWAY="MODAVPVALUE",CMDCODE=316,METHODTYPE1="ACP",METHOD1=1
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4251,18 +3996,15 @@ ADD DIM EDITACT:NO=1,OPWAY="MODAVPVALUE",CMDCODE=316,METHODTYPE1="ACP",METHOD1=1
 ## SET DIM EDITACT 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于修改DIAMETER信令可编辑动作。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4287,8 +4029,7 @@ AVPINFO|AVP替换码流|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4313,8 +4054,7 @@ AVPINFO|AVP替换码流|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改编辑动作编号为1、方向为入向的命令：
 SET DIM EDITACT:NO=1,DIRECTION="IN"; 
@@ -4324,8 +4064,7 @@ SET DIM EDITACT:NO=1,DIRECTION="IN";
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4351,18 +4090,15 @@ SET DIM EDITACT:NO=1,DIRECTION="IN";
 ## DEL DIM EDITACT 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于删除DIAMETER信令可编辑动作。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4373,8 +4109,7 @@ NO|动作编号|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除编辑动作编号为1的匹配方法的命令：
 DEL DIM EDITACT:NO=1; 
@@ -4384,8 +4119,7 @@ DEL DIM EDITACT:NO=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4411,18 +4145,15 @@ DEL DIM EDITACT:NO=1;
 ## SHOW DIM EDITACT 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于查询DIAMETER信令可编辑动作。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4434,8 +4165,7 @@ END|结束动作编号|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4460,8 +4190,7 @@ AVPINFO|AVP替换码流|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询编辑动作编号为1的配置信息的命令：
 SHOW DIM EDITACT:BEGIN=1,END=1; 
@@ -4471,8 +4200,7 @@ SHOW DIM EDITACT:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4498,16 +4226,14 @@ SHOW DIM EDITACT:BEGIN=1,END=1;
 # DIAMETER信令可编辑策略配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 DIAMETER信令可编辑动作配置包括：新增、修改、删除及查询DIAMETER信令可编辑动作配置的相关命令及配置参数说明。 
 
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 DIM信令可编辑的使用场景往往是后验型使用场景，即两个网元的设备厂商在进行DIM信令交互时，发现交互信令不符合规范或双方理解不一致才会启用编辑功能。启用DIM信令可编辑功能时，试验码流已产生，为了避免后续类似处理流程失败，可考虑通过对特定消息内容进行DIM信令可编辑。 
 
@@ -4528,18 +4254,15 @@ DIM信令可编辑是指在外场对接时由于双方对DIM相关协议理解�
 ## ADD DIM EDITPLC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于增加DIAMETER信令可编辑策略。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4563,8 +4286,7 @@ ACTNO10|动作编号10|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4588,8 +4310,7 @@ ACTNO10|动作编号10|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 增加一个编辑策略编号为1，到PCRF局向的策略编辑的命令：
 ADD DIM EDITPLC:NO=1,APPID="RX",URI="pcrf.zte.com.cn",SWTICH="ON",ACTNO1=1; 
@@ -4599,8 +4320,7 @@ ADD DIM EDITPLC:NO=1,APPID="RX",URI="pcrf.zte.com.cn",SWTICH="ON",ACTNO1=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4626,18 +4346,15 @@ ADD DIM EDITPLC:NO=1,APPID="RX",URI="pcrf.zte.com.cn",SWTICH="ON",ACTNO1=1;
 ## SET DIM EDITPLC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于修改DIAMETER信令可编辑策略。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4659,8 +4376,7 @@ ACTNO10|动作编号10|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4684,8 +4400,7 @@ ACTNO10|动作编号10|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改编辑策略编号为1、策略开关为关闭的命令：
 SET DIM EDITPLC:NO=1,SWTICH="OFF"; 
@@ -4695,8 +4410,7 @@ SET DIM EDITPLC:NO=1,SWTICH="OFF";
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4722,18 +4436,15 @@ SET DIM EDITPLC:NO=1,SWTICH="OFF";
 ## DEL DIM EDITPLC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于删除DIAMETER信令可编辑策略。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4744,8 +4455,7 @@ NO|策略编号|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 删除编辑策略编号为1的匹配方法的命令：
 DEL DIM EDITPLC:NO=1; 
@@ -4755,8 +4465,7 @@ DEL DIM EDITPLC:NO=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4782,18 +4491,15 @@ DEL DIM EDITPLC:NO=1;
 ## SHOW DIM EDITPLC 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 该命令用于查询DIAMETER信令可编辑策略。
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 无。
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4806,8 +4512,7 @@ APPID|应用ID|参数可选性:任选参数；参数类型:枚举。参见枚举
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4831,8 +4536,7 @@ ACTNO10|动作编号10|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 显示编辑策略编号为1的配置信息的命令：
 SHOW DIM EDITPLC:BEGIN=1,END=1; 
@@ -4842,8 +4546,7 @@ SHOW DIM EDITPLC:BEGIN=1,END=1;
 
 
 
-[](None)### 相关命令 
-
+[](None)相关命令 :
 
 
 
@@ -4869,16 +4572,14 @@ SHOW DIM EDITPLC:BEGIN=1,END=1;
 # DIAMETER告警门限配置 
 
 
-[](None)## 背景知识 
-
+[](None)背景知识 :
 
 RCP网元的重要功能之一是实现与邻接网元的Diameter消息交互。各项资源（路由、链路和承载）配置与Diameter的消息链路配置相关；数据区保障Diameter消息能够有序的收发。当出现数据区和各项资源（路由、链路和承载）占用率过大时，上报告警有助于及时发现问题并解决问题。不同系统对数据区和各项资源（路由、链路和承载）的各级使用率告警阈值设置的需求不同。 
 
 
 
 
-[](None)## 功能描述 
-
+[](None)功能描述 :
 
 Diameter告警门限配置用于提供一种告警上报和告警恢复机制： 
 
@@ -4905,24 +4606,21 @@ Diameter告警门限配置用于提供一种告警上报和告警恢复机制：
 ## SET DIMTHRESH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于修改Diameter告警门限配置。在部署RCP网元的时候可以综合系统容量和性能要求执行该命令，设定数据区和各项资源（路由、链路和承载）的各级使用率告警阈值。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 无。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4938,8 +4636,7 @@ DTH|告警恢复门限（%）|参数可选性:任选参数；参数类型:整数
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -4955,8 +4652,7 @@ DTH|告警恢复门限（%）|参数可选性:任选参数；参数类型:整数
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 修改Diameter告警门限配置：负荷类型为“数据区”，1级告警门限为“90”： 
 
@@ -4972,24 +4668,21 @@ SET DIMTHRESH:LOADTYPE="DATA",OTH1=90
 ## SHOW DIMTHRESH 
 
 
-[](None)### 命令功能 
-
+[](None)命令功能 :
 
 该命令用于查询Diameter告警门限配置，可查询数据区和各项资源（路由、链路和承载）的各级使用率告警阈值配置。 
 
 
 
 
-[](None)### 注意事项 
-
+[](None)注意事项 :
 
 无。 
 
 
 
 
-[](None)### 输入参数说明 
-
+[](None)输入参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -5000,8 +4693,7 @@ LOADTYPE|负荷类型|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)### 输出参数说明 
-
+[](None)输出参数说明 :
 
 [](None)标识|名称|类型|说明
 ---|---|---|---
@@ -5017,8 +4709,7 @@ DTH|告警恢复门限（%）|参数可选性:任选参数；参数类型:整数
 
 
 
-[](None)### 命令举例 
-
+[](None)命令举例 :
 
 查询Diameter告警门限的命令： 
 

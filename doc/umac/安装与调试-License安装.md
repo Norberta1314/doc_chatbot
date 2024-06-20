@@ -1,13 +1,11 @@
 # License功能描述 
 摘要描述应用场景客户收益系统影响应用限制遵循标准特性能力O&M相关 
-## 描述 
-定义
+描述 定义
 License是指有特定期限和条件的一个协定，赋予受著作权法保护的计算机软件使用许可。ZXUN uMAC网元的License是通过文件来控制的。 
 一个uMAC设备只有一个激活的License。使用软件生成序列号的方式，让License和序列号绑定，保证一个License不能在其他局点复用。  
 背景知识
 ZXUN uMAC的License文件是一个加密的文件，该文件不可篡改，激活后生效，可以选择是否与设备绑定，或者是否有到期时间。 
-## 应用场景 
-功能开关控制和系统容量限制场景： 
+应用场景 功能开关控制和系统容量限制场景： 
 限制功能开启License可以控制某些功能启用或者不启用，如NSA DCNR限制功能，可以通过License设置为启用或不启用。 
 限制系统容量通过License可以限制系统的容量，如最大接入用户数。通常硬件成本为一次支付，后期需要增加功能时，只需要支付License的费用，而不必再重新购买新的硬件。在ZXUN uMAC的CPU资源充足的情况下，可通过扩大License的最大接入用户数来满足运营商的扩容需求。 
 License激活流程，适应于以下场景： 
@@ -15,22 +13,17 @@ License激活流程，适应于以下场景：
 升级激活License：适用于已经激活过License，后续有功能项增加或者扩容时，需要重新激活License。 
 License使用情况查询适应于以下场景： 
 用户执行查询命令，查询到所有被管网元的基础资源信息。 
-## 客户收益 
-收益者|收益描述
+客户收益 收益者|收益描述
 ---|---
 运营商|通过购买License获取新的功能，无需更换硬件，节约成本。通过购买License扩大容量，无需更换硬件，节约成本。通过查询命令直接获取License使用情况，简化用户运维。
-## 系统影响 
-License不开启的功能，相应功能不能使用。 
+系统影响 License不开启的功能，相应功能不能使用。 
 超过License设置容纳的最大接入用户量时，系统会拒绝用户接入。 
 若加载序列号不匹配的License，系统会在运行过程中发现并上报序列号不匹配告警，3天后系统将自动恢复成默认License，此时会影响系统的性能统计和告警功能。 
-## 应用限制 
-License文件不可篡改，经人篡改则在系统上不能激活。 
+应用限制 License文件不可篡改，经人篡改则在系统上不能激活。 
 License可以限制系统功能，如果License失效，与License控制功能相关的一些系统配置命令会失效，系统会按照当前的配置继续运行，确保系统不瘫局。但由于功能不能修改、该设备属于不可维护状态。 
 License可以限制系统容量，接入量达到License的最大限制值之后，系统会拒绝用户接入，此时需要联系中兴通讯技术支持更换License，对系统进行扩容。 
-## 遵循标准 
-本特性采用中兴通讯股份有限公司内部的接口和协议，不涉及标准协议。 
-## 特性能力 
-ZXUN
+遵循标准 本特性采用中兴通讯股份有限公司内部的接口和协议，不涉及标准协议。 
+特性能力 ZXUN
 uMAC各网元对应的License控制项并不相同，现场需要根据对应网元来开启相关的License控制项，并可以通过查询命令获取各控制项的百分比使用情况。 
 ZXUN uMAC涉及的License控制项参见下表： 
 ID|控制项名称|取值|简要说明|相关特导|是否要重启生效
@@ -226,8 +219,7 @@ uMAC_SGSN_7129|SGSN支持Gb口Rerouting|开/关|网络共享时，对于不支�
  说明： 
 uMAC产品包含MME、SGSN、AMF三个服务，外场根据网元部署包含的服务种类选择和申请对应License。 
 随着新功能的启用，License项会增加或修改。 
-## O&M相关 
-命令
+O&M相关 命令
 与License相关的命令参见[表1](#T_201512301723953__%E6%96%B0%E5%A2%9E%E9%85%8D%E7%BD%AE%E9%A1%B9-24E0BB59)。
 命令|功能
 ---|---
@@ -293,8 +285,7 @@ SHOW LICPOLICY|查询License的即将过期通知提前天数。
 该特性不涉及话单与计费。 
 # License功能配置 
 摘要配置特性常见问题处理 
-## 配置特性 
-配置说明
+配置特性 配置说明
 通过激活支持ZXUN uMAC相关网元或功能的License文件，从而实现支持ZXUN uMAC的功能。 
 ZXUN-uMAC License控制功能用于对设备的逻辑类型、功能、容量进行控制，需根据合同规定的功能、容量如实申请License文件。 
  说明： 
@@ -361,8 +352,7 @@ EM上操作激活的配置实例
 执行[SHOW LICENSE](../../OAM\zh-CN\mml\1417902.html)命令，查询License控制项，检查返回结果中的信息与实际申请的是否一致。
  说明： 
 显示结果仅为示例，具体情况取决于实际环境中的License文件。 
-## 常见问题处理 
-License文件中的序列号与环境不匹配
+常见问题处理 License文件中的序列号与环境不匹配
 故障现象
 发布License时，提示“序列号不合法”。  
 故障原因
@@ -393,9 +383,7 @@ License文件中的序列号和当前环境中的不匹配。
 图9  许可证回滚
 []images/%E8%AE%B8%E5%8F%AF%E8%AF%81%E5%9B%9E%E6%BB%9A.png)
 单击回滚按钮，在弹出的对话框单击确定按钮，完成回滚操作。
- 缩略语 
- 缩略语 
-# CBC 
+缩略语 缩略语 # CBC 
 Cell broadcast center小区广播短消息中心
 # CS 
 Circuit Switched电路交换
@@ -423,8 +411,7 @@ Minimization of Drive Tests最小化路测
 Network Identity and Time Zone网络标志和时区
 # NSA 
 Non-Standalone5G非独立组网
-# OMU 
-Operation & Management Unit操作管理单元
+OMU Operation & Management Unit操作管理单元
 # PCO 
 Protocol Configuration Option协议配置选项
 # PSM 
@@ -433,12 +420,10 @@ Power Saving Mode节电模式
 Public Warning System公共预警系统
 # RFSP 
 RAT/Frequency Selection Priority无线/频率选择优先级
-# SC 
-Service Component服务组件
+SC Service Component服务组件
 # SEPP 
 Security Edge Protection Proxy安全边缘保护代理
-# SFTP 
-Secure File Transfer Protocol安全文件传输协议
+SFTP Secure File Transfer Protocol安全文件传输协议
 # SIPTO 
 Selected IP Traffic Offload选定的IP流量分流 
 # SRVCC 

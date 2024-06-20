@@ -1,10 +1,8 @@
 # License申请操作指南 
 ## 申请License 
 TECS_Director_License_Application_Operation_Guide 
-### 摘要 
-本节介绍申请TECS Director License的操作步骤，申请过程包括：访问申请网址、填写申请信息、提交申请、下载License。
-### 步骤 
-进入申请License页面
+摘要 :本节介绍申请TECS Director License的操作步骤，申请过程包括：访问申请网址、填写申请信息、提交申请、下载License。
+步骤 :进入申请License页面
 在浏览器的地址输入栏中输入License申请网址（http://csc.zte.com.cn/CSC/UILoader/Index_Internal.aspx），打开CSC客户支持中心页面。
  说明： 
 浏览器推荐使用IE11及以上版本，Google
@@ -63,17 +61,13 @@ CMS-DirV8.22.20.06版本之后，TECS Director支持多License申请模板，包
 图6  申请信息页面
 []images/snap387-.png)
 单击License文件名，将License.LCS文件下载到指定位置。
-### 相关任务 
-License申请失败的处理： 
+相关任务 :License申请失败的处理： 
 如果收到CSC系统License文件制作失败的邮件，修改申请内容后重新提交申请，参见步骤[4](1602298756694.html#z58ea7ef2d2494fcaa9d829eef010f211__9fd3c2de-e07c-493c-8201-19ff65da82b8)~步骤[8](1602298756694.html#z58ea7ef2d2494fcaa9d829eef010f211__27f4479b-28d0-4db4-8793-41c43c9305eb)。
 ## 导入License 
-### 摘要 
-在Licence申请成功并下载License文件后，将License文件导入到TECS Director系统中。
-### 相关信息 
-TECS Director的License证书以.lcs结尾，不区分TECS Director版本。
+摘要 :在Licence申请成功并下载License文件后，将License文件导入到TECS Director系统中。
+相关信息 :TECS Director的License证书以.lcs结尾，不区分TECS Director版本。
 TECS Director版本和导入的License证书需要配套使用。
-### 步骤 
-登录云管统一平台后，单击导航菜单，选择系统管理→系统设置→License文件
+步骤 :登录云管统一平台后，单击导航菜单，选择系统管理→系统设置→License文件
 ，打开License文件页面，如[图1](1602656212348.html#zd0418e09682846ce98ee73f618109c8c__f9ea8fc5-b60c-4eb5-8ce9-68c3e5b5a3f6)所示。
 图1  License文件页面
 []images/snap388.png)

@@ -1,14 +1,12 @@
 # CAR配置命令 
-## interface 
-
+interface :
 
 interface (CAR配置模式) 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 进入QoS接口配置模式。 
 
@@ -17,8 +15,7 @@ interface (CAR配置模式)
 
 
 
-### 命令模式 
-
+命令模式 :
 
  CAR配置模式  
 
@@ -27,8 +24,7 @@ interface (CAR配置模式)
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -37,8 +33,7 @@ interface (CAR配置模式)
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -52,8 +47,7 @@ interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -68,18 +62,7 @@ interface
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -88,8 +71,16 @@ interface
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 进入QoS接口配置模式：ZXROSNG(config)#qosZXROSNG(config-qos)#interface gei-0/9/0/11ZXROSNG(config-qos-if-gei-0/9/0/11)#进入QoS接口配置模式：ZXROSNG(config)#qosZXROSNG(config-qos)#interface gei-0/9/0/11ZXROSNG(config-qos-if-gei-0/9/0/11)#
 
@@ -97,8 +88,7 @@ interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 qos 
 
@@ -113,8 +103,7 @@ qos
 
 
 
-### 命令功能 
-
+命令功能 :
 
 进入QoS配置模式。 
 
@@ -123,8 +112,7 @@ qos
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -133,8 +121,7 @@ qos
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -143,8 +130,7 @@ qos
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -157,8 +143,7 @@ qos
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -169,18 +154,7 @@ qos
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -189,8 +163,16 @@ qos
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 从配置模式进入QoS配置模式：ZXROSNG(config)#qosZXROSNG(config-qos)#
 
@@ -198,8 +180,7 @@ qos
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -214,8 +195,7 @@ rate-limit
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上配置流限速策略。 
 
@@ -224,8 +204,7 @@ rate-limit
 
 
 
-### 命令模式 
-
+命令模式 :
 
  CAR接口配置模式  
 
@@ -234,8 +213,7 @@ rate-limit
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -244,8 +222,7 @@ rate-limit
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 rate-limit 
@@ -405,8 +382,7 @@ no rate-limit
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -516,8 +492,7 @@ statistical-share|流分类标识
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -526,8 +501,7 @@ statistical-share|流分类标识
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.    同一接口方向下，CAR SET与HQoS互斥。2.    inner-802.1p、outer-802.1p、inner-vlan和outer-vlan只能配置在子接口下。
 
@@ -535,8 +509,7 @@ statistical-share|流分类标识
 
 
 
-### 范例 
-
+范例 :
 
 配置接口gei-0/9/0/11的CAR SET：ZXROSNG(config)#qosZXROSNG(config-qos)#interface gei-0/9/0/11ZXROSNG(config-qos-if-gei-0/9/0/11)#rate-limit input dscp 3 cir 66 cbs 20000 pir 88 pbs 30000 conform-action transmit exceed-action transmit violate-action dropZXROSNG(config-qos-if)#no rate-limit input dscp 3配置接口gei-0/9/0/11的CAR SET：ZXROSNG(config)#qosZXROSNG(config-qos)#interface gei-0/9/0/11ZXROSNG(config-qos-if-gei-0/9/0/11)#rate-limit input dscp 3 cir 66 cbs 20000 pir 88 pbs 30000 conform-action transmit exceed-action transmit violate-action dropZXROSNG(config-qos-if)#no rate-limit input dscp 3
 
@@ -544,8 +517,7 @@ statistical-share|流分类标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -560,8 +532,7 @@ rate-limit
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上配置流限速策略。 
 
@@ -570,8 +541,7 @@ rate-limit
 
 
 
-### 命令模式 
-
+命令模式 :
 
  CAR接口配置模式  
 
@@ -580,8 +550,7 @@ rate-limit
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -590,8 +559,7 @@ rate-limit
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 rate-limit 
@@ -760,8 +728,7 @@ no rate-limit
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -880,8 +847,7 @@ statistical-share|流分类标识
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -890,8 +856,7 @@ statistical-share|流分类标识
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.    同一接口方向下，CAR SET与HQoS互斥。2.    inner-802.1p、outer-802.1p、inner-vlan和outer-vlan只能配置在子接口下。
 
@@ -899,8 +864,7 @@ statistical-share|流分类标识
 
 
 
-### 范例 
-
+范例 :
 
 配置接口gei-0/9/0/11的CAR SET：ZXROSNG(config)#qosZXROSNG(config-qos)#interface gei-0/9/0/11ZXROSNG(config-qos-if-gei-0/9/0/11)#rate-limit input dscp 3 cir 66 cbs 20000 pir 88 pbs 30000 conform-action transmit exceed-action transmit violate-action dropZXROSNG(config-qos-if)#no rate-limit input dscp 3配置接口gei-0/9/0/11的CAR SET：ZXROSNG(config)#qosZXROSNG(config-qos)#interface gei-0/9/0/11ZXROSNG(config-qos-if-gei-0/9/0/11)#rate-limit input dscp 3 cir 66 cbs 20000 pir 88 pbs 30000 conform-action transmit exceed-action transmit violate-action dropZXROSNG(config-qos-if)#no rate-limit input dscp 3
 
@@ -908,8 +872,7 @@ statistical-share|流分类标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -925,8 +888,7 @@ statistical-share|流分类标识
 
 
 
-### 命令功能 
-
+命令功能 :
 
 802.1p与PHB之间的映射 
 
@@ -935,8 +897,7 @@ statistical-share|流分类标识
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -945,8 +906,7 @@ statistical-share|流分类标识
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -955,8 +915,7 @@ statistical-share|流分类标识
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 8021p 
@@ -979,8 +938,7 @@ no 8021p
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -999,8 +957,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1009,8 +966,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 8021p配置入方向802.1p用户优先级到本地服务级别的映射。 
 
@@ -1019,8 +975,7 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
-
+范例 :
 
 # 配置802.1p 值为2 的上行VLAN 报文对应的服务等级为AF1，并将报文标记为绿色。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#8021p 2 mapped to phb af1 green
 
@@ -1029,8 +984,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -1045,8 +999,7 @@ bandwidth
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的最小可用带宽。 
 
@@ -1055,8 +1008,7 @@ bandwidth
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -1065,8 +1017,7 @@ bandwidth
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1075,8 +1026,7 @@ bandwidth
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1094,8 +1044,7 @@ no bandwidth
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1111,8 +1060,7 @@ percent|最小带宽的百分比
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1121,8 +1069,7 @@ percent|最小带宽的百分比
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略映射配置模式下，bandwidth 与priority-level互斥（配置在class-default上的priority-level除外）。2. 同一策略类配置下，bandwidth 与priority-llq、priority-level互斥。3. 同一策略映射配置模式下，所有策略类的带宽之和不能超过100。
 
@@ -1130,8 +1077,7 @@ percent|最小带宽的百分比
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy1、匹配zte2最小可用带宽的60：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2ZXROSNG(config-pmap-c)#bandwidth percent 60
 
@@ -1139,8 +1085,7 @@ percent|最小带宽的百分比
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -1155,8 +1100,7 @@ bandwidth
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的最小可用带宽。 
 
@@ -1165,8 +1109,7 @@ bandwidth
 
 
 
-### 命令模式 
-
+命令模式 :
 
  PHB-QoS策略类模式  
 
@@ -1175,8 +1118,7 @@ bandwidth
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1185,8 +1127,7 @@ bandwidth
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1204,8 +1145,7 @@ no bandwidth
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1221,8 +1161,7 @@ percent|最小带宽的百分比
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1231,8 +1170,7 @@ percent|最小带宽的百分比
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略映射配置模式下，bandwidth 与priority-level互斥（配置在class-default上的priority-level除外）。2. 同一策略类配置下，bandwidth 与priority-llq、priority-level互斥。3. 同一策略映射配置模式下，所有策略类的带宽之和不能超过100。
 
@@ -1240,8 +1178,7 @@ percent|最小带宽的百分比
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy1、匹配zte2最小可用带宽的60：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2ZXROSNG(config-pmap-c)#bandwidth percent 60
 
@@ -1249,8 +1186,7 @@ percent|最小带宽的百分比
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -1265,8 +1201,7 @@ bandwidth
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的最小可用带宽。 
 
@@ -1275,8 +1210,7 @@ bandwidth
 
 
 
-### 命令模式 
-
+命令模式 :
 
  子接口Qos策略类模式  
 
@@ -1285,8 +1219,7 @@ bandwidth
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1295,8 +1228,7 @@ bandwidth
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1314,8 +1246,7 @@ no bandwidth
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1331,8 +1262,7 @@ percent|最小带宽的百分比
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1341,8 +1271,7 @@ percent|最小带宽的百分比
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略映射配置模式下，bandwidth 与priority-level互斥（配置在class-default上的priority-level除外）。2. 同一策略类配置下，bandwidth 与priority-llq、priority-level互斥。3. 同一策略映射配置模式下，所有策略类的带宽之和不能超过100。
 
@@ -1350,8 +1279,7 @@ percent|最小带宽的百分比
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy1、匹配zte2最小可用带宽的60：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2ZXROSNG(config-pmap-c)#bandwidth percent 60
 
@@ -1359,8 +1287,7 @@ percent|最小带宽的百分比
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -1375,8 +1302,7 @@ bandwidth-remaining
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的剩余带宽 
 
@@ -1385,8 +1311,7 @@ bandwidth-remaining
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -1395,8 +1320,7 @@ bandwidth-remaining
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1405,8 +1329,7 @@ bandwidth-remaining
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1424,8 +1347,7 @@ no bandwidth-remaining
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1441,8 +1363,7 @@ percent|标识配置剩余带宽
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1451,8 +1372,7 @@ percent|标识配置剩余带宽
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1．    在同一策略映射配置模式下，剩余带宽之和不能超过100.2．    在同一策略类配置模式下，剩余带宽与带宽相冲突.
 
@@ -1460,8 +1380,7 @@ percent|标识配置剩余带宽
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy1、匹配流zte2最小可用剩余带宽的60：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2ZXROSNG(config-pmap-c)#bandwidth-remaining percent 60
 
@@ -1469,8 +1388,7 @@ percent|标识配置剩余带宽
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map [<policy-map-name>]bandwidth percent<percentage>
 
@@ -1485,8 +1403,7 @@ class
 
 
 
-### 命令功能 
-
+命令功能 :
 
 关联类映射并进入策略类配置模式。 
 
@@ -1495,8 +1412,7 @@ class
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略映射配置模式  
 
@@ -1505,8 +1421,7 @@ class
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1515,8 +1430,7 @@ class
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 class 
@@ -1534,8 +1448,7 @@ no class
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1551,8 +1464,7 @@ class-default|默认关联类
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1561,8 +1473,7 @@ class-default|默认关联类
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. <class-name>需要先使用class-map命令配置。2. 在<class-name>的类映射配置模式下，至少需要利用match显式匹配一个匹配项。
 
@@ -1570,8 +1481,7 @@ class-default|默认关联类
 
 
 
-### 范例 
-
+范例 :
 
 策略映射policy1关联类映射名称为zte2，并进入策略映射类配置模式：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2 ZXROSNG(config-pmap-c)#
 
@@ -1579,8 +1489,7 @@ class-default|默认关联类
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -1595,8 +1504,7 @@ class
 
 
 
-### 命令功能 
-
+命令功能 :
 
 关联类映射并进入策略类配置模式。 
 
@@ -1605,8 +1513,7 @@ class
 
 
 
-### 命令模式 
-
+命令模式 :
 
  策略类映射CAR模板配置模式  
 
@@ -1615,8 +1522,7 @@ class
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1625,8 +1531,7 @@ class
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 class 
@@ -1644,8 +1549,7 @@ no class
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1661,8 +1565,7 @@ class-default|默认关联类
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1671,8 +1574,7 @@ class-default|默认关联类
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. <class-name>需要先使用class-map命令配置。2. 在<class-name>的类映射配置模式下，至少需要利用match显式匹配一个匹配项。
 
@@ -1680,8 +1582,7 @@ class-default|默认关联类
 
 
 
-### 范例 
-
+范例 :
 
 策略映射policy1关联类映射名称为zte2，并进入策略映射类配置模式：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2 ZXROSNG(config-pmap-c)#
 
@@ -1689,8 +1590,7 @@ class-default|默认关联类
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -1705,8 +1605,7 @@ class
 
 
 
-### 命令功能 
-
+命令功能 :
 
 关联类映射并进入策略类配置模式。 
 
@@ -1715,8 +1614,7 @@ class
 
 
 
-### 命令模式 
-
+命令模式 :
 
  PHB-QoS策略模式  
 
@@ -1725,8 +1623,7 @@ class
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1735,8 +1632,7 @@ class
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 class 
@@ -1754,8 +1650,7 @@ no class
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1771,8 +1666,7 @@ class-default|默认关联类
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1781,8 +1675,7 @@ class-default|默认关联类
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. <class-name>需要先使用class-map命令配置。2. 在<class-name>的类映射配置模式下，至少需要利用match显式匹配一个匹配项。
 
@@ -1790,8 +1683,7 @@ class-default|默认关联类
 
 
 
-### 范例 
-
+范例 :
 
 策略映射policy1关联类映射名称为zte2，并进入策略映射类配置模式：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2 ZXROSNG(config-pmap-c)#
 
@@ -1799,8 +1691,7 @@ class-default|默认关联类
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -1815,8 +1706,7 @@ class
 
 
 
-### 命令功能 
-
+命令功能 :
 
 关联类映射并进入策略类配置模式。 
 
@@ -1825,8 +1715,7 @@ class
 
 
 
-### 命令模式 
-
+命令模式 :
 
  子接口Qos策略模式  
 
@@ -1835,8 +1724,7 @@ class
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1845,8 +1733,7 @@ class
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 class 
@@ -1864,8 +1751,7 @@ no class
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1881,8 +1767,7 @@ class-default|默认关联类
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1891,8 +1776,7 @@ class-default|默认关联类
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. <class-name>需要先使用class-map命令配置。2. 在<class-name>的类映射配置模式下，至少需要利用match显式匹配一个匹配项。
 
@@ -1900,8 +1784,7 @@ class-default|默认关联类
 
 
 
-### 范例 
-
+范例 :
 
 策略映射policy1关联类映射名称为zte2，并进入策略映射类配置模式：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#class zte2 ZXROSNG(config-pmap-c)#
 
@@ -1909,8 +1792,7 @@ class-default|默认关联类
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -1925,8 +1807,7 @@ class-map
 
 
 
-### 命令功能 
-
+命令功能 :
 
 创建class-map名字并进入类映射配置模式。 
 
@@ -1935,8 +1816,7 @@ class-map
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -1945,8 +1825,7 @@ class-map
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1955,8 +1834,7 @@ class-map
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 class-map 
@@ -1982,8 +1860,7 @@ no class-map
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2006,8 +1883,7 @@ switch-fabric-based|基于交换QoS的流分类标识
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -2016,8 +1892,7 @@ switch-fabric-based|基于交换QoS的流分类标识
 
 
 
-### 使用说明 
-
+使用说明 :
 
  1. 不能对class-default的类映射名进行配置操作。2. 若class-map已在某个policy-map中关联，则不能再对该已关联的class-map操作。3. 若选择match-all，必须匹配指定class-map的所有match项才能生效；若选择match-any，则匹配指定class-map的任一match项即可生效。
 
@@ -2025,8 +1900,7 @@ switch-fabric-based|基于交换QoS的流分类标识
 
 
 
-### 范例 
-
+范例 :
 
 创建名称为zte的类映射：ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#
 
@@ -2034,24 +1908,21 @@ switch-fabric-based|基于交换QoS的流分类标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show class-map 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置class-map文本描述 
 
@@ -2060,8 +1931,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  交换QoS流分类模式  
 
@@ -2070,8 +1940,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2080,8 +1949,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2098,8 +1966,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2114,8 +1981,7 @@ no description
 
 
 
-### 缺省 
-
+缺省 :
 
  无 
 
@@ -2124,8 +1990,7 @@ no description
 
 
 
-### 使用说明 
-
+使用说明 :
 
 无 
 
@@ -2134,8 +1999,7 @@ no description
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config-cmap)#description ztedescription 
 
@@ -2144,24 +2008,21 @@ ZXROSNG(config-cmap)#description ztedescription
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置class-map文本描述 
 
@@ -2170,8 +2031,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  子接口Qos流分类模式  
 
@@ -2180,8 +2040,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2190,8 +2049,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2208,8 +2066,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2224,8 +2081,7 @@ no description
 
 
 
-### 缺省 
-
+缺省 :
 
  无 
 
@@ -2234,8 +2090,7 @@ no description
 
 
 
-### 使用说明 
-
+使用说明 :
 
 无 
 
@@ -2244,8 +2099,7 @@ no description
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config-cmap)#description ztedescription 
 
@@ -2254,24 +2108,21 @@ ZXROSNG(config-cmap)#description ztedescription
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置class-map文本描述 
 
@@ -2280,8 +2131,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  PHB-QoS流分类模式  
 
@@ -2290,8 +2140,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2300,8 +2149,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2318,8 +2166,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2334,8 +2181,7 @@ no description
 
 
 
-### 缺省 
-
+缺省 :
 
  无 
 
@@ -2344,8 +2190,7 @@ no description
 
 
 
-### 使用说明 
-
+使用说明 :
 
 无 
 
@@ -2354,8 +2199,7 @@ no description
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config-cmap)#description ztedescription 
 
@@ -2364,24 +2208,21 @@ ZXROSNG(config-cmap)#description ztedescription
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置class-map文本描述 
 
@@ -2390,8 +2231,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -2400,8 +2240,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2410,8 +2249,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2428,8 +2266,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2444,18 +2281,7 @@ no description
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -2464,8 +2290,16 @@ no description
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config-cmap)#description ztedescription 
 
@@ -2474,8 +2308,7 @@ ZXROSNG(config-cmap)#description ztedescription
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -2490,8 +2323,7 @@ diffserv domain
 
 
 
-### 命令功能 
-
+命令功能 :
 
 创建Diffserv域，并进入DS域配置模式。 
 
@@ -2500,8 +2332,7 @@ diffserv domain
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -2510,8 +2341,7 @@ diffserv domain
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2520,8 +2350,7 @@ diffserv domain
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 diffserv domain 
@@ -2537,8 +2366,7 @@ no diffserv domain
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2553,8 +2381,7 @@ no diffserv domain
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -2563,8 +2390,7 @@ no diffserv domain
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 系统缺省<default>的DS域映射策略表，不支持用户修改。2. 系统最多支持8个用户自定义DS域映射策略表。
 
@@ -2573,8 +2399,7 @@ no diffserv domain
 
 
 
-### 范例 
-
+范例 :
 
 定义一个DS 域d1。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#
 
@@ -2583,8 +2408,7 @@ no diffserv domain
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -2599,8 +2423,7 @@ ipv4-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 IPv4 ACL与PHB之间的映射 
 
@@ -2609,8 +2432,7 @@ IPv4 ACL与PHB之间的映射
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -2619,8 +2441,7 @@ IPv4 ACL与PHB之间的映射
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2629,8 +2450,7 @@ IPv4 ACL与PHB之间的映射
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv4-access-list 
@@ -2653,8 +2473,7 @@ no ipv4-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2673,8 +2492,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -2683,8 +2501,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 用到的IPv4 ACL，可以是用户未事先配置的2. IPv4 ACL在应用的情况下，也允许用户删除3. ipv4-access-list配置入方向匹配ACL的流量到本地服务级别的映射。
 
@@ -2693,8 +2510,7 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
-
+范例 :
 
 #将ipv4-access-list为acl1的报文映射为服务等级AF1，并将报文的颜色设置为红色。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#ipv4-access-list acl1 mapped to phb af1 red
 
@@ -2703,8 +2519,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -2719,8 +2534,7 @@ ipv4-dscp
 
 
 
-### 命令功能 
-
+命令功能 :
 
 IPv4 DSCP与PHB之间的映射 
 
@@ -2729,8 +2543,7 @@ IPv4 DSCP与PHB之间的映射
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -2739,8 +2552,7 @@ IPv4 DSCP与PHB之间的映射
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2749,8 +2561,7 @@ IPv4 DSCP与PHB之间的映射
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv4-dscp 
@@ -2773,8 +2584,7 @@ no ipv4-dscp
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2793,8 +2603,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -2803,8 +2612,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 ipv4-dscp配置入方向IPv4 DSCP用户优先级到本地服务级别的映射。 
 
@@ -2813,8 +2621,7 @@ ipv4-dscp配置入方向IPv4 DSCP用户优先级到本地服务级别的映射�
 
 
 
-### 范例 
-
+范例 :
 
 #将DSCP 值为1的报文映射为服务等级AF1，并将报文的颜色设置为绿色 ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#ipv4-dscp 1 mapped to phb af1 yellow
 
@@ -2823,8 +2630,7 @@ ipv4-dscp配置入方向IPv4 DSCP用户优先级到本地服务级别的映射�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -2839,8 +2645,7 @@ ipv4-mixed-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 IPv4混合 ACL与PHB之间的映射 
 
@@ -2849,8 +2654,7 @@ IPv4混合 ACL与PHB之间的映射
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -2859,8 +2663,7 @@ IPv4混合 ACL与PHB之间的映射
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2869,8 +2672,7 @@ IPv4混合 ACL与PHB之间的映射
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv4-mixed-access-list 
@@ -2893,8 +2695,7 @@ no ipv4-mixed-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2913,8 +2714,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -2923,8 +2723,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 用到的IPv4混合 ACL，可以是用户未事先配置的2. IPv4混合 ACL在应用的情况下，也允许用户删除3. ipv4-mixed-access-list配置入方向匹配ACL的流量到本地服务级别的映射。
 
@@ -2933,8 +2732,7 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
-
+范例 :
 
 # 将ipv4-mixed-access-list为acl1的报文映射为服务等级AF1，并将报文的颜色设置为红色.ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#ipv4-mixed-access-list acl1 mapped to phb af1 red
 
@@ -2943,8 +2741,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -2959,8 +2756,7 @@ ipv6-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 IPv6 ACL与PHB之间的映射 
 
@@ -2969,8 +2765,7 @@ IPv6 ACL与PHB之间的映射
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -2979,8 +2774,7 @@ IPv6 ACL与PHB之间的映射
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2989,8 +2783,7 @@ IPv6 ACL与PHB之间的映射
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv6-access-list 
@@ -3013,8 +2806,7 @@ no ipv6-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3033,8 +2825,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -3043,8 +2834,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 用到的IPv6 ACL，可以是用户未事先配置的2. IPv6 ACL在应用的情况下，也允许用户删除3. ipv6-access-list配置入方向匹配ACL的流量到本地服务级别的映射。
 
@@ -3053,8 +2843,7 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
-
+范例 :
 
 #将ipv6-access-list为acl1的报文映射为服务等级AF1，并将报文的颜色设置为红色。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#ipv6-access-list acl1 mapped to phb af1 red
 
@@ -3063,8 +2852,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -3079,8 +2867,7 @@ ipv6-dscp
 
 
 
-### 命令功能 
-
+命令功能 :
 
 IPv6 DSCP与PHB之间的映射 
 
@@ -3089,8 +2876,7 @@ IPv6 DSCP与PHB之间的映射
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -3099,8 +2885,7 @@ IPv6 DSCP与PHB之间的映射
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3109,8 +2894,7 @@ IPv6 DSCP与PHB之间的映射
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv6-dscp 
@@ -3133,8 +2917,7 @@ no ipv6-dscp
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3153,8 +2936,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -3163,8 +2945,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 ipv6-dscp配置入方向IPv6 DSCP用户优先级到本地服务级别的映射。 
 
@@ -3173,8 +2954,7 @@ ipv6-dscp配置入方向IPv6 DSCP用户优先级到本地服务级别的映射�
 
 
 
-### 范例 
-
+范例 :
 
 #将DSCP 值为1的报文映射为服务等级AF1，并将报文的颜色设置为绿色 ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#ipv6-dscp 1 mapped to phb af1 yellow
 
@@ -3183,8 +2963,7 @@ ipv6-dscp配置入方向IPv6 DSCP用户优先级到本地服务级别的映射�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -3199,8 +2978,7 @@ ipv6-mixed-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 IPv6混合 ACL与PHB之间的映射 
 
@@ -3209,8 +2987,7 @@ IPv6混合 ACL与PHB之间的映射
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -3219,8 +2996,7 @@ IPv6混合 ACL与PHB之间的映射
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3229,8 +3005,7 @@ IPv6混合 ACL与PHB之间的映射
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv6-mixed-access-list 
@@ -3253,8 +3028,7 @@ no ipv6-mixed-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3273,8 +3047,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -3283,8 +3056,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 用到的IPv6混合 ACL，可以是用户未事先配置的2. IPv6混合 ACL在应用的情况下，也允许用户删除3. ipv6-mixed-access-list配置入方向匹配ACL的流量到本地服务级别的映射。
 
@@ -3293,8 +3065,7 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
-
+范例 :
 
 # 将ipv6-mixed-access-list为acl1的报文映射为服务等级AF1，并将报文的颜色设置为红色.ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#ipv6-mixed-access-list acl1 mapped to phb af1 red
 
@@ -3303,8 +3074,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -3319,8 +3089,7 @@ link-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 二层 ACL与PHB之间的映射 
 
@@ -3329,8 +3098,7 @@ link-access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -3339,8 +3107,7 @@ link-access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3349,8 +3116,7 @@ link-access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 link-access-list 
@@ -3373,8 +3139,7 @@ no link-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3393,8 +3158,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -3403,8 +3167,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 用到的link ACL，可以是用户未事先配置的2. link ACL在应用的情况下，也允许用户删除3. link-access-list配置入方向匹配ACL的流量到本地服务级别的映射。
 
@@ -3413,8 +3176,7 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
-
+范例 :
 
  #将link-access-list为acl1的报文映射为服务等级AF1，并将报文的颜色设置为红色.ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#link-access-list acl1 mapped to phb af1 red
 
@@ -3423,8 +3185,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -3439,8 +3200,7 @@ match child
 
 
 
-### 命令功能 
-
+命令功能 :
 
 匹配子层的流分类规则 
 
@@ -3449,8 +3209,7 @@ match child
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -3459,8 +3218,7 @@ match child
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3469,8 +3227,7 @@ match child
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3486,8 +3243,7 @@ no match child
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -3498,8 +3254,7 @@ no match child
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -3508,8 +3263,7 @@ no match child
 
 
 
-### 使用说明 
-
+使用说明 :
 
 一个流分类下只能配置一条match child，并且与其它匹配类型互斥 
 
@@ -3518,8 +3272,7 @@ no match child
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte match-allZXROSNG(config-flowspec-based-class)# match child
 
@@ -3528,8 +3281,7 @@ ZXROSNG(config)#class-map zte match-allZXROSNG(config-flowspec-based-class)# mat
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -3544,8 +3296,7 @@ match dscp range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IP DSCP值来建立class-map数据流 
 
@@ -3554,8 +3305,7 @@ match dscp range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -3564,8 +3314,7 @@ match dscp range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3574,8 +3323,7 @@ match dscp range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3593,8 +3341,7 @@ no match dscp range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3610,18 +3357,7 @@ not|逻辑取反
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3630,8 +3366,16 @@ not|逻辑取反
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match dscp range 2-6,10-15
 
@@ -3639,8 +3383,7 @@ ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match dscp range 2-6
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -3655,8 +3398,7 @@ match dscp reserved-words
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据DSCP的预留关键字来建立class-map数据流 
 
@@ -3665,8 +3407,7 @@ match dscp reserved-words
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -3675,8 +3416,7 @@ match dscp reserved-words
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3685,8 +3425,7 @@ match dscp reserved-words
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match dscp reserved-words 
@@ -3702,8 +3441,7 @@ no match dscp reserved-words
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3718,18 +3456,7 @@ no match dscp reserved-words
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3738,8 +3465,16 @@ no match dscp reserved-words
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match dscp reserved-words default
 
@@ -3747,8 +3482,7 @@ ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match dscp reserved-
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -3763,8 +3497,7 @@ match in-8021p
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据内层802.1p值来建立流分类规则 
 
@@ -3773,8 +3506,7 @@ match in-8021p
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -3783,8 +3515,7 @@ match in-8021p
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3793,8 +3524,7 @@ match in-8021p
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3811,8 +3541,7 @@ no match in-8021p
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3827,18 +3556,7 @@ no match in-8021p
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3847,8 +3565,16 @@ no match in-8021p
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte6 match-allZXROSNG(config-cmap)#match in-8021p 0,1-3,5
 
@@ -3856,8 +3582,7 @@ ZXROSNG(config)#class-map zte6 match-allZXROSNG(config-cmap)#match in-8021p 0,1-
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -3872,8 +3597,7 @@ match in-vlan
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据内层VLAN值来建立流分类规则 
 
@@ -3882,8 +3606,7 @@ match in-vlan
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -3892,8 +3615,7 @@ match in-vlan
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3902,8 +3624,7 @@ match in-vlan
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3920,8 +3641,7 @@ no match in-vlan
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3936,18 +3656,7 @@ no match in-vlan
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3956,8 +3665,16 @@ no match in-vlan
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match in-vlan 1-20,40-50,100,200-250
 
@@ -3965,8 +3682,7 @@ ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match in-vlan 1-20,
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -3981,8 +3697,7 @@ match ipv4 dscp range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IPv4 DSCP值来建立class-map数据流 
 
@@ -3991,8 +3706,7 @@ match ipv4 dscp range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4001,8 +3715,7 @@ match ipv4 dscp range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4011,8 +3724,7 @@ match ipv4 dscp range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4030,8 +3742,7 @@ no match ipv4 dscp range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4047,18 +3758,7 @@ not|逻辑取反
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4067,8 +3767,16 @@ not|逻辑取反
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv4 dscp range 2-6,10-15
 
@@ -4076,8 +3784,7 @@ ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv4 dscp rang
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4092,8 +3799,7 @@ match ipv4 dscp reserved-words
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IPv4 DSCP的预留关键字来建立class-map数据流 
 
@@ -4102,8 +3808,7 @@ match ipv4 dscp reserved-words
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4112,8 +3817,7 @@ match ipv4 dscp reserved-words
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4122,8 +3826,7 @@ match ipv4 dscp reserved-words
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv4 dscp reserved-words 
@@ -4139,8 +3842,7 @@ no match ipv4 dscp reserved-words
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4155,18 +3857,7 @@ no match ipv4 dscp reserved-words
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4175,8 +3866,16 @@ no match ipv4 dscp reserved-words
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv4 dscp reserved-words default
 
@@ -4184,8 +3883,7 @@ ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv4 dscp rese
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4200,8 +3898,7 @@ match ipv4 precedence
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IPv4 Precedence值来建立流分类规则
 
@@ -4209,8 +3906,7 @@ match ipv4 precedence
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4219,8 +3915,7 @@ match ipv4 precedence
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4229,8 +3924,7 @@ match ipv4 precedence
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv4 precedence 
@@ -4247,8 +3941,7 @@ no match ipv4 precedence
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4264,17 +3957,7 @@ not|逻辑取反
 
 
 
-### 缺省 
-
-
-无
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无
 
@@ -4282,8 +3965,15 @@ not|逻辑取反
 
 
 
-### 范例 
+使用说明 :
 
+无
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte2 match-allZXROSNG(config-cmap)#match ipv4 precedence 0-2,4,6-7
 
@@ -4291,8 +3981,7 @@ ZXROSNG(config)#class-map zte2 match-allZXROSNG(config-cmap)#match ipv4 preceden
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4307,8 +3996,7 @@ match ipv4-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IPv4类型的ACL规则来建立class-map数据流 
 
@@ -4317,8 +4005,7 @@ match ipv4-access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4327,8 +4014,7 @@ match ipv4-access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4337,8 +4023,7 @@ match ipv4-access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv4-access-list 
@@ -4354,8 +4039,7 @@ no match ipv4-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4370,8 +4054,7 @@ no match ipv4-access-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -4380,8 +4063,7 @@ no match ipv4-access-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在同一类映射下，最多可配置64个不同的ACL名称 
 
@@ -4390,8 +4072,7 @@ no match ipv4-access-list
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match ipv4-access-list ztezxr10
 
@@ -4399,8 +4080,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match ipv4-access-
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4415,8 +4095,7 @@ match ipv6 dscp range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IPv6 DSCP值来建立class-map数据流 
 
@@ -4425,8 +4104,7 @@ match ipv6 dscp range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4435,8 +4113,7 @@ match ipv6 dscp range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4445,8 +4122,7 @@ match ipv6 dscp range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4464,8 +4140,7 @@ no match ipv6 dscp range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4481,18 +4156,7 @@ not|逻辑取反
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4501,8 +4165,16 @@ not|逻辑取反
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv6 dscp range 2-6,10-15
 
@@ -4510,8 +4182,7 @@ ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv6 dscp rang
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4526,8 +4197,7 @@ match ipv6 dscp reserved-words
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IPv6 DSCP的预留关键字来建立class-map数据流 
 
@@ -4536,8 +4206,7 @@ match ipv6 dscp reserved-words
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4546,8 +4215,7 @@ match ipv6 dscp reserved-words
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4556,8 +4224,7 @@ match ipv6 dscp reserved-words
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 dscp reserved-words 
@@ -4573,8 +4240,7 @@ no match ipv6 dscp reserved-words
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4589,18 +4255,7 @@ no match ipv6 dscp reserved-words
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4609,8 +4264,16 @@ no match ipv6 dscp reserved-words
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv6 dscp reserved-words default
 
@@ -4618,8 +4281,7 @@ ZXROSNG(config)#class-map zte match-allZXROSNG(config-cmap)#match ipv6 dscp rese
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4634,8 +4296,7 @@ match ipv6 precedence
 
 
 
-### 命令功能 
-
+命令功能 :
 
 匹配IPv6的优先级字段 
 
@@ -4644,8 +4305,7 @@ match ipv6 precedence
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4654,8 +4314,7 @@ match ipv6 precedence
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4664,8 +4323,7 @@ match ipv6 precedence
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4683,8 +4341,7 @@ no match ipv6 precedence
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4700,8 +4357,7 @@ not|逻辑取反
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -4710,8 +4366,7 @@ not|逻辑取反
 
 
 
-### 使用说明 
-
+使用说明 :
 
 一个class map实例中仅支持一条该命令，最多可配置一段值或区间。 
 
@@ -4720,8 +4375,7 @@ not|逻辑取反
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zteZXROSNG(config-flowspec-based-class)# match ipv6 precedence 0,3-4,6,7
 
@@ -4730,8 +4384,7 @@ ZXROSNG(config)#class-map zteZXROSNG(config-flowspec-based-class)# match ipv6 pr
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4746,8 +4399,7 @@ match ipv6-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IPv6类型的ACL规则来建立class-map数据流 
 
@@ -4756,8 +4408,7 @@ match ipv6-access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4766,8 +4417,7 @@ match ipv6-access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4776,8 +4426,7 @@ match ipv6-access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6-access-list 
@@ -4793,8 +4442,7 @@ no match ipv6-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4809,8 +4457,7 @@ no match ipv6-access-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -4819,8 +4466,7 @@ no match ipv6-access-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在同一类映射下，最多可配置64个不同的ACL名称 
 
@@ -4829,8 +4475,7 @@ no match ipv6-access-list
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match ipv6-access-list ztezxr10
 
@@ -4838,8 +4483,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match ipv6-access-
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4854,8 +4498,7 @@ match link-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据LINK类型的ACL规则来建立class-map数据流 
 
@@ -4864,8 +4507,7 @@ match link-access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4874,8 +4516,7 @@ match link-access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4884,8 +4525,7 @@ match link-access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match link-access-list 
@@ -4901,8 +4541,7 @@ no match link-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4917,8 +4556,7 @@ no match link-access-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -4927,8 +4565,7 @@ no match link-access-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在同一类映射下，最多可配置64个不同的ACL名称 
 
@@ -4937,8 +4574,7 @@ no match link-access-list
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match link-access-list ztezxr10
 
@@ -4946,8 +4582,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match link-access-
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -4962,8 +4597,7 @@ match mac-address
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据MAC地址值来建立class-map数据流 
 
@@ -4972,8 +4606,7 @@ match mac-address
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -4982,8 +4615,7 @@ match mac-address
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4992,8 +4624,7 @@ match mac-address
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5010,8 +4641,7 @@ no match mac-address
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5026,18 +4656,7 @@ no match mac-address
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5046,8 +4665,16 @@ no match mac-address
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)#match mac-address 1111.1230.4567
 
@@ -5055,8 +4682,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)#match mac-address 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5071,8 +4697,7 @@ match mpls-exp
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据MPLS-EXP规则来建立class-map数据流 
 
@@ -5081,8 +4706,7 @@ match mpls-exp
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5091,8 +4715,7 @@ match mpls-exp
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5101,8 +4724,7 @@ match mpls-exp
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5119,8 +4741,7 @@ no match mpls-exp
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5135,8 +4756,7 @@ no match mpls-exp
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -5145,8 +4765,7 @@ no match mpls-exp
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在同一类映射下，最多可配置64个不同的ACL名称 
 
@@ -5155,8 +4774,7 @@ no match mpls-exp
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match mpls-exp 1
 
@@ -5164,8 +4782,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match mpls-exp 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5180,8 +4797,7 @@ match multi-cast
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据多播规则来建立class-map数据流 
 
@@ -5190,8 +4806,7 @@ match multi-cast
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5200,8 +4815,7 @@ match multi-cast
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5210,8 +4824,7 @@ match multi-cast
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5227,8 +4840,7 @@ no match multi-cast
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -5239,18 +4851,7 @@ no match multi-cast
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5259,8 +4860,16 @@ no match multi-cast
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match multi-cast
 
@@ -5268,8 +4877,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match multi-cast
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5284,8 +4892,7 @@ match out-8021p
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据外层8021P规则来建立class-map数据流 
 
@@ -5294,8 +4901,7 @@ match out-8021p
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5304,8 +4910,7 @@ match out-8021p
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5314,8 +4919,7 @@ match out-8021p
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5332,8 +4936,7 @@ no match out-8021p
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5348,18 +4951,7 @@ no match out-8021p
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5368,8 +4960,16 @@ no match out-8021p
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte7 match-allZXROSNG(config-cmap)#match out-8021p 1,4-5,7
 
@@ -5377,8 +4977,7 @@ ZXROSNG(config)#class-map zte7 match-allZXROSNG(config-cmap)#match out-8021p 1,4
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5393,8 +4992,7 @@ match out-vlan
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据外层VLAN规则来建立class-map数据流 
 
@@ -5403,8 +5001,7 @@ match out-vlan
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5413,8 +5010,7 @@ match out-vlan
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5423,8 +5019,7 @@ match out-vlan
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5441,8 +5036,7 @@ no match out-vlan
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5457,18 +5051,7 @@ no match out-vlan
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5477,8 +5060,16 @@ no match out-vlan
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte5 match-allZXROSNG(config-cmap)#match out-vlan 1-20,40-50,100,200-250
 
@@ -5486,8 +5077,7 @@ ZXROSNG(config)#class-map zte5 match-allZXROSNG(config-cmap)#match out-vlan 1-20
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5502,8 +5092,7 @@ match precedence
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据IP优先级规则来建立class-map数据流 
 
@@ -5512,8 +5101,7 @@ match precedence
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5522,8 +5110,7 @@ match precedence
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5532,8 +5119,7 @@ match precedence
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5551,8 +5137,7 @@ no match precedence
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5568,18 +5153,7 @@ not|逻辑取反
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5588,8 +5162,16 @@ not|逻辑取反
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte2 match-allZXROSNG(config-cmap)#match precedence 0-2,4,6-7
 
@@ -5597,8 +5179,7 @@ ZXROSNG(config)#class-map zte2 match-allZXROSNG(config-cmap)#match precedence 0-
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5613,8 +5194,7 @@ match qos-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据qos group ID规则来建立class-map数据流 
 
@@ -5623,8 +5203,7 @@ match qos-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5633,8 +5212,7 @@ match qos-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5643,8 +5221,7 @@ match qos-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5661,8 +5238,7 @@ no match qos-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5677,8 +5253,7 @@ no match qos-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -5687,8 +5262,7 @@ no match qos-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在同一类映射下，最多可配置64个不同的ACL名称 
 
@@ -5697,8 +5271,7 @@ no match qos-group
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match qos-group 1
 
@@ -5706,8 +5279,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match qos-group 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5722,8 +5294,7 @@ match service-class
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据服务等级规则来建立class-map数据流 
 
@@ -5732,8 +5303,7 @@ match service-class
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5742,8 +5312,7 @@ match service-class
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5752,8 +5321,7 @@ match service-class
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5770,8 +5338,7 @@ no match service-class
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5786,18 +5353,7 @@ no match service-class
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5806,8 +5362,16 @@ no match service-class
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte11 match-allZXROSNG(config-cmap)#match service-class EF
 
@@ -5815,8 +5379,7 @@ ZXROSNG(config)#class-map zte11 match-allZXROSNG(config-cmap)#match service-clas
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5831,8 +5394,7 @@ match uni-cast
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据单播规则来建立class-map数据流 
 
@@ -5841,8 +5403,7 @@ match uni-cast
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5851,8 +5412,7 @@ match uni-cast
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5861,8 +5421,7 @@ match uni-cast
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5878,8 +5437,7 @@ no match uni-cast
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -5890,18 +5448,7 @@ no match uni-cast
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5910,8 +5457,16 @@ no match uni-cast
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match uni-cast
 
@@ -5919,8 +5474,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match uni-cast
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -5935,8 +5489,7 @@ match vpls
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据VPLS的名称来建立class-map数据流 
 
@@ -5945,8 +5498,7 @@ match vpls
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -5955,8 +5507,7 @@ match vpls
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5965,8 +5516,7 @@ match vpls
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5983,8 +5533,7 @@ no match vpls
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5999,18 +5548,7 @@ no match vpls
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6019,8 +5557,16 @@ no match vpls
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match vpls aaa
 
@@ -6028,8 +5574,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match vpls aaa
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -6044,8 +5589,7 @@ match vpws
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据VPWS的名称来建立class-map数据流 
 
@@ -6054,8 +5598,7 @@ match vpws
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -6064,8 +5607,7 @@ match vpws
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6074,8 +5616,7 @@ match vpws
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -6092,8 +5633,7 @@ no match vpws
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6108,18 +5648,7 @@ no match vpws
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6128,8 +5657,16 @@ no match vpws
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match vpws aaa
 
@@ -6137,8 +5674,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match vpws aaa
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -6153,8 +5689,7 @@ match vrf-name
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据VRF的名称来建立class-map数据流 
 
@@ -6163,8 +5698,7 @@ match vrf-name
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS类映射配置模式  
 
@@ -6173,8 +5707,7 @@ match vrf-name
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6183,8 +5716,7 @@ match vrf-name
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -6201,8 +5733,7 @@ no match vrf-name
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6217,18 +5748,7 @@ no match vrf-name
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6237,8 +5757,16 @@ no match vrf-name
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match vrf aaa
 
@@ -6246,8 +5774,7 @@ ZXROSNG(config)#class-map zte8 match-allZXROSNG(config-cmap)# match vrf aaa
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -6262,8 +5789,7 @@ match
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据配置的参数来建立class-map数据流。 
 
@@ -6272,8 +5798,7 @@ match
 
 
 
-### 命令模式 
-
+命令模式 :
 
  PHB-QoS流分类模式  
 
@@ -6282,8 +5807,7 @@ match
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6292,8 +5816,7 @@ match
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -6312,8 +5835,7 @@ no match
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6329,18 +5851,7 @@ service-class|服务等级
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6349,8 +5860,16 @@ service-class|服务等级
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 建立匹配规则为PHB的class-map数据流zte11：ZXROSNG(config)#class-map zte11 match-allZXROSNG(config-cmap)#match service-class EF
 
@@ -6359,8 +5878,7 @@ service-class|服务等级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show class-map 
 
@@ -6375,8 +5893,7 @@ match
 
 
 
-### 命令功能 
-
+命令功能 :
 
 根据配置的参数来建立class-map数据流。 
 
@@ -6385,8 +5902,7 @@ match
 
 
 
-### 命令模式 
-
+命令模式 :
 
  子接口Qos流分类模式  
 
@@ -6395,8 +5911,7 @@ match
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6405,8 +5920,7 @@ match
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match 
@@ -6425,8 +5939,7 @@ no match
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6443,8 +5956,7 @@ localport|本接口
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -6453,8 +5965,7 @@ localport|本接口
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.在同一类映射下，match localport与其它所有匹配规则冲突。 
 
@@ -6463,8 +5974,7 @@ localport|本接口
 
 
 
-### 范例 
-
+范例 :
 
 建立class-map数据流zte10：ZXROSNG(config)#class-map zte10 match-allZXROSNG(config-cmap)#match localport
 
@@ -6473,8 +5983,7 @@ localport|本接口
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show class-map 
 
@@ -6489,8 +5998,7 @@ mpls-exp
 
 
 
-### 命令功能 
-
+命令功能 :
 
 MPLS EXP与PHB之间的映射 
 
@@ -6499,8 +6007,7 @@ MPLS EXP与PHB之间的映射
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -6509,8 +6016,7 @@ MPLS EXP与PHB之间的映射
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6519,8 +6025,7 @@ MPLS EXP与PHB之间的映射
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 mpls-exp 
@@ -6543,8 +6048,7 @@ no mpls-exp
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6563,8 +6067,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -6573,8 +6076,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 mpls-exp配置入方向MPLS EXP用户优先级到本地服务级别的映射。 
 
@@ -6583,8 +6085,7 @@ mpls-exp配置入方向MPLS EXP用户优先级到本地服务级别的映射。
 
 
 
-### 范例 
-
+范例 :
 
 #将mpls-exp 值为1的报文映射为服务等级AF1，并将报文的颜色设置为红色 ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#mpls-exp 1 mapped to phb af1 red
 
@@ -6593,8 +6094,7 @@ mpls-exp配置入方向MPLS EXP用户优先级到本地服务级别的映射。
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -6609,8 +6109,7 @@ phb
 
 
 
-### 命令功能 
-
+命令功能 :
 
 phb映射为vlan 802.1p的命令、映射为ipv4 dscp的命令、映射为ipv6 dscp的命令、映射为mpls exp的命令 
 
@@ -6619,8 +6118,7 @@ phb映射为vlan 802.1p的命令、映射为ipv4 dscp的命令、映射为ipv6 d
 
 
 
-### 命令模式 
-
+命令模式 :
 
  DS域模式  
 
@@ -6629,8 +6127,7 @@ phb映射为vlan 802.1p的命令、映射为ipv4 dscp的命令、映射为ipv6 d
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6639,8 +6136,7 @@ phb映射为vlan 802.1p的命令、映射为ipv4 dscp的命令、映射为ipv6 d
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 phb 
@@ -6678,8 +6174,7 @@ no phb
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6705,8 +6200,7 @@ ipv6-dscp|映射为ipv6 dscp的命令
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -6715,8 +6209,7 @@ ipv6-dscp|映射为ipv6 dscp的命令
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. phb mapped to 8021p配置出方向phb映射到8021p的流量。2. phb mapped to ipv4-dscp配置出方向phb匹配ipv4 dscp的流量。3. phb mapped to ipv6-dscp配置出方向phb匹配ipv6 dscp的流量。4. phb mapped to 8021p配置出方向phb匹配mpls-exp的流量。
 
@@ -6725,8 +6218,7 @@ ipv6-dscp|映射为ipv6 dscp的命令
 
 
 
-### 范例 
-
+范例 :
 
 # 将服务等级为AF1，标识为绿色的报文映射到8021p值为1的下行报文。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#phb af1 green mapped to 8021p 1
 # 将服务等级为AF1，标识为绿色的报文映射到dscp值为1的下行报文。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#phb af1 green mapped to ipv4-dscp 1# 将服务等级为AF1，标识为绿色的报文映射到ipv6 dscp值为1的下行报文。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#phb af1 green mapped to ipv6-dscp 1# 将服务等级为AF1，标识为绿色的报文映射到mpls-exp值为1的下行报文。ZXROSNG#con terZXROSNG(config)#diffserv domain d1ZXROSNG(config-d1)#phb af1 green mapped to 8021p 1
@@ -6736,8 +6228,7 @@ ipv6-dscp|映射为ipv6 dscp的命令
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -6752,8 +6243,7 @@ police
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的流量监管。 
 
@@ -6762,8 +6252,7 @@ police
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -6772,8 +6261,7 @@ police
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6782,8 +6270,7 @@ police
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -6858,8 +6345,7 @@ no police
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6925,18 +6411,7 @@ drop|对符合指定速率超出PBS值的数据包，丢弃数据包
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6945,8 +6420,16 @@ drop|对符合指定速率超出PBS值的数据包，丢弃数据包
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置策略映射为policy3、匹配流分类zte4的流量监管：ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#police cir 1024 cbs 512 pir 2048 pbs 1024
 
@@ -6955,8 +6438,7 @@ drop|对符合指定速率超出PBS值的数据包，丢弃数据包
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -6971,8 +6453,7 @@ police
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的流量监管。
 
@@ -6980,8 +6461,7 @@ police
 
 
 
-### 命令模式 
-
+命令模式 :
 
  策略类CAR模板配置模式  
 
@@ -6990,8 +6470,7 @@ police
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7000,8 +6479,7 @@ police
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 police 
@@ -7081,8 +6559,7 @@ no police
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7154,18 +6631,7 @@ drop|对符合指定速率小于CIR值的数据包，丢弃数据包
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7174,8 +6640,16 @@ drop|对符合指定速率小于CIR值的数据包，丢弃数据包
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置策略映射为policy3、匹配流分类zte4的流量监管：ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#police cir 1024 cbs 512 pir 2048 pbs 1024
 
@@ -7183,8 +6657,7 @@ drop|对符合指定速率小于CIR值的数据包，丢弃数据包
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map
 
@@ -7198,8 +6671,7 @@ police
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的流量监管。
 
@@ -7207,8 +6679,7 @@ police
 
 
 
-### 命令模式 
-
+命令模式 :
 
  PHB-QoS策略类模式  
 
@@ -7217,8 +6688,7 @@ police
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7227,8 +6697,7 @@ police
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 police 
@@ -7263,8 +6732,7 @@ no police
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7294,18 +6762,7 @@ gb|单位，Gigabyte
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7314,8 +6771,16 @@ gb|单位，Gigabyte
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置策略映射为policy3、匹配流分类zte4的流量监管：ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#police cir 1024 cbs 512 pir 2048 pbs 1024
 
@@ -7323,8 +6788,7 @@ gb|单位，Gigabyte
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map
 
@@ -7338,8 +6802,7 @@ police
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的流量监管。
 
@@ -7347,8 +6810,7 @@ police
 
 
 
-### 命令模式 
-
+命令模式 :
 
  子接口Qos策略类模式  
 
@@ -7357,8 +6819,7 @@ police
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7367,8 +6828,7 @@ police
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 police 
@@ -7403,8 +6863,7 @@ no police
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7434,18 +6893,7 @@ gb|单位，Gigabyte
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7454,8 +6902,16 @@ gb|单位，Gigabyte
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置策略映射为policy3、匹配流分类zte4的流量监管：ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#police cir 1024 cbs 512 pir 2048 pbs 1024
 
@@ -7463,8 +6919,7 @@ gb|单位，Gigabyte
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map
 
@@ -7478,8 +6933,7 @@ policy-map
 
 
 
-### 命令功能 
-
+命令功能 :
 
 创建policy-map名字并进入策略映射配置模式。 
 
@@ -7488,8 +6942,7 @@ policy-map
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -7498,8 +6951,7 @@ policy-map
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7508,8 +6960,7 @@ policy-map
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 policy-map 
@@ -7530,8 +6981,7 @@ no policy-map
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7551,8 +7001,7 @@ switch-fabric-based|基于交换QoS的流策略类标识
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -7561,8 +7010,7 @@ switch-fabric-based|基于交换QoS的流策略类标识
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 若policy-map配置了可选参数car-action-type，则不能更新为不带car-action-type的policy-map，反之亦然。2. 若policy-map不配置可选参数car-action-type，则：(1)若某个policy-map已在另一个policy-map中被层级化，不能再对该被层级化的policy-map操作。(2) 若policy-map已在某个接口上HQoS绑定，不能再对该被绑定的policy-map操作。(3) 若policy-map已在交换网上HQoS绑定，不能再对该被绑定的policy-map操作。3. 若policy-map配置了可选参数car-action-type，则：(1) 只支持限速的策略行为，且必须配置限速的动作。(2) 不能被嵌套到其他policy-map中。(3) 如果被接口或交换网上HQoS绑定，支持更新。但被引用不允许删除。4. 引用的class-map的类型必须与policy-map的相同。比如：phb-based类型的policy-map引用的class-map的类型必须是phb-based。
 
@@ -7571,8 +7019,7 @@ switch-fabric-based|基于交换QoS的流策略类标识
 
 
 
-### 范例 
-
+范例 :
 
 创建名称为policy1的策略映射并进入名称为policy1的策略映射配置模式：ZXROSNG(config)#policy-map policy1ZXROSNG(config-pmap)#
 
@@ -7580,8 +7027,7 @@ switch-fabric-based|基于交换QoS的流策略类标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -7596,8 +7042,7 @@ priority-level
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的PQ优先。 
 
@@ -7606,8 +7051,7 @@ priority-level
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -7616,8 +7060,7 @@ priority-level
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7626,8 +7069,7 @@ priority-level
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7644,8 +7086,7 @@ no priority-level
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7660,8 +7101,7 @@ no priority-level
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -7670,8 +7110,7 @@ no priority-level
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略类配置模式下，priority-level与bandwidth、priority-llq互斥。2. 同一策略映射配置模式下，priority-level与bandwidth互斥。但有如下例外：在非class-default下配置了bandwidth，则在class-default下可以配置priority-level。3. 同一策略映射配置模式下，priority-level与priority-llq互斥，但有如下例外：在非class-default下配置了priority-llq，则在class-default下可以配置priority-level，且<pq-level>为2或3或4。
 
@@ -7679,8 +7118,7 @@ no priority-level
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy3、匹配外层VLAN值为300的流分类zte4的PQ优先级为2：ZXROSNG(config)# class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 300ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#priority-level 2
 
@@ -7688,8 +7126,7 @@ no priority-level
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -7704,8 +7141,7 @@ priority-level
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的PQ优先。 
 
@@ -7714,8 +7150,7 @@ priority-level
 
 
 
-### 命令模式 
-
+命令模式 :
 
  PHB-QoS策略类模式  
 
@@ -7724,8 +7159,7 @@ priority-level
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7734,8 +7168,7 @@ priority-level
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7752,8 +7185,7 @@ no priority-level
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7768,8 +7200,7 @@ no priority-level
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -7778,8 +7209,7 @@ no priority-level
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略类配置模式下，priority-level与bandwidth、priority-llq互斥。2. 同一策略映射配置模式下，priority-level与bandwidth互斥。但有如下例外：在非class-default下配置了bandwidth，则在class-default下可以配置priority-level。3. 同一策略映射配置模式下，priority-level与priority-llq互斥，但有如下例外：在非class-default下配置了priority-llq，则在class-default下可以配置priority-level，且<pq-level>为2或3或4。
 
@@ -7787,8 +7217,7 @@ no priority-level
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy3、匹配外层VLAN值为300的流分类zte4的PQ优先级为2：ZXROSNG(config)# class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 300ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#priority-level 2
 
@@ -7796,8 +7225,7 @@ no priority-level
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -7812,8 +7240,7 @@ priority-level
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的PQ优先。 
 
@@ -7822,8 +7249,7 @@ priority-level
 
 
 
-### 命令模式 
-
+命令模式 :
 
  子接口Qos策略类模式  
 
@@ -7832,8 +7258,7 @@ priority-level
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7842,8 +7267,7 @@ priority-level
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7860,8 +7284,7 @@ no priority-level
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7876,8 +7299,7 @@ no priority-level
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -7886,8 +7308,7 @@ no priority-level
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略类配置模式下，priority-level与bandwidth、priority-llq互斥。2. 同一策略映射配置模式下，priority-level与bandwidth互斥。但有如下例外：在非class-default下配置了bandwidth，则在class-default下可以配置priority-level。3. 同一策略映射配置模式下，priority-level与priority-llq互斥，但有如下例外：在非class-default下配置了priority-llq，则在class-default下可以配置priority-level，且<pq-level>为2或3或4。
 
@@ -7895,8 +7316,7 @@ no priority-level
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy3、匹配外层VLAN值为300的流分类zte4的PQ优先级为2：ZXROSNG(config)# class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 300ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#priority-level 2
 
@@ -7904,8 +7324,7 @@ no priority-level
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -7920,8 +7339,7 @@ priority-llq
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的LLQ优先。 
 
@@ -7930,8 +7348,7 @@ priority-llq
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -7940,8 +7357,7 @@ priority-llq
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7950,8 +7366,7 @@ priority-llq
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7967,8 +7382,7 @@ no priority-llq
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -7979,8 +7393,7 @@ no priority-llq
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -7989,8 +7402,7 @@ no priority-llq
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略类配置模式下，priority-llq与bandwidth、priority-level互斥2. 同一策略映射配置模式下，priority-llq与priority-level互斥，但有如下例外：在class-default下配置了priority-level，且<pq-level>为2或3或4，同时在非class-default下配置priority-llq。
 
@@ -7998,8 +7410,7 @@ no priority-llq
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy2、匹配外层VLAN值为200的流分类zte9为LLQ优先：ZXROSNG(config)# class-map zte9 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy2ZXROSNG(config-pmap)#class zte9ZXROSNG(config-pmap-c)#priority-llq
 
@@ -8007,8 +7418,7 @@ no priority-llq
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map  
 
@@ -8023,8 +7433,7 @@ priority-llq
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的LLQ优先。 
 
@@ -8033,8 +7442,7 @@ priority-llq
 
 
 
-### 命令模式 
-
+命令模式 :
 
  PHB-QoS策略类模式  
 
@@ -8043,8 +7451,7 @@ priority-llq
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8053,8 +7460,7 @@ priority-llq
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8070,8 +7476,7 @@ no priority-llq
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -8082,8 +7487,7 @@ no priority-llq
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8092,8 +7496,7 @@ no priority-llq
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略类配置模式下，priority-llq与bandwidth、priority-level互斥2. 同一策略映射配置模式下，priority-llq与priority-level互斥，但有如下例外：在class-default下配置了priority-level，且<pq-level>为2或3或4，同时在非class-default下配置priority-llq。
 
@@ -8101,8 +7504,7 @@ no priority-llq
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy2、匹配外层VLAN值为200的流分类zte9为LLQ优先：ZXROSNG(config)# class-map zte9 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy2ZXROSNG(config-pmap)#class zte9ZXROSNG(config-pmap-c)#priority-llq
 
@@ -8110,8 +7512,7 @@ no priority-llq
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map  
 
@@ -8126,8 +7527,7 @@ priority-llq
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的LLQ优先。 
 
@@ -8136,8 +7536,7 @@ priority-llq
 
 
 
-### 命令模式 
-
+命令模式 :
 
  子接口Qos策略类模式  
 
@@ -8146,8 +7545,7 @@ priority-llq
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8156,8 +7554,7 @@ priority-llq
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8173,8 +7570,7 @@ no priority-llq
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -8185,8 +7581,7 @@ no priority-llq
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8195,8 +7590,7 @@ no priority-llq
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 同一策略类配置模式下，priority-llq与bandwidth、priority-level互斥2. 同一策略映射配置模式下，priority-llq与priority-level互斥，但有如下例外：在class-default下配置了priority-level，且<pq-level>为2或3或4，同时在非class-default下配置priority-llq。
 
@@ -8204,8 +7598,7 @@ no priority-llq
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy2、匹配外层VLAN值为200的流分类zte9为LLQ优先：ZXROSNG(config)# class-map zte9 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy2ZXROSNG(config-pmap)#class zte9ZXROSNG(config-pmap-c)#priority-llq
 
@@ -8213,8 +7606,7 @@ no priority-llq
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map  
 
@@ -8229,8 +7621,7 @@ qos diffserv-domain
 
 
 
-### 命令功能 
-
+命令功能 :
 
 应用Diffserv域 
 
@@ -8239,8 +7630,7 @@ qos diffserv-domain
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8249,8 +7639,7 @@ qos diffserv-domain
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8259,8 +7648,7 @@ qos diffserv-domain
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos diffserv-domain 
@@ -8280,8 +7668,7 @@ no qos diffserv-domain
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8297,8 +7684,7 @@ no qos diffserv-domain
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8307,8 +7693,7 @@ no qos diffserv-domain
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 应用的DS域映射表必须是用户事先创建的2. 在应用的DS域映射表中，用户如果没有配置映射关系，那么按照系统缺省<default>映射表生效
 
@@ -8317,8 +7702,7 @@ no qos diffserv-domain
 
 
 
-### 范例 
-
+范例 :
 
 # 在GE 接口上绑定DS 域。ZXROSNG# con terZXROSNG(config)# qos diffserv-domain interface smartgroup1 apply ds-name
 
@@ -8327,8 +7711,7 @@ no qos diffserv-domain
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show diffserv-domainshow running-config
 
@@ -8343,8 +7726,7 @@ qos priority interface <mid> trust
 
 
 
-### 命令功能 
-
+命令功能 :
 
 接口优先级信任 
 
@@ -8353,8 +7735,7 @@ qos priority interface <mid> trust
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8363,8 +7744,7 @@ qos priority interface <mid> trust
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8373,8 +7753,7 @@ qos priority interface <mid> trust
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8397,8 +7776,7 @@ no qos priority interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8416,18 +7794,7 @@ mpls-exp|接口信任exp
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -8436,8 +7803,16 @@ mpls-exp|接口信任exp
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#qos priority interface gei-0/1/0/1 trust 8021p 
 
@@ -8446,8 +7821,7 @@ ZXROSNG(config)#qos priority interface gei-0/1/0/1 trust 8021p
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -8462,8 +7836,7 @@ qos schedule interface
 
 
 
-### 命令功能 
-
+命令功能 :
 
 隧道接口应用phb-based类型的策略 
 
@@ -8472,8 +7845,7 @@ qos schedule interface
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8482,8 +7854,7 @@ qos schedule interface
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8492,8 +7863,7 @@ qos schedule interface
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos schedule interface 
@@ -8515,8 +7885,7 @@ no qos schedule interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8536,8 +7905,7 @@ priority-level|pq优先队列标识
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8546,8 +7914,7 @@ priority-level|pq优先队列标识
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 隧道接口只能应用phb-based类型的策略。 
 
@@ -8556,8 +7923,7 @@ priority-level|pq优先队列标识
 
 
 
-### 范例 
-
+范例 :
 
 [M6000\M6000-S]: 在隧道接口gei-0/0/0/1上配置基于 phb-based类型的策略pmap：ZXROSNG(config)#class-map zteZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map pmap phb-basedZXROSNG(config- phb -based-policy)# class zteZXROSNG(config- phb -based-policy-class)# set 8021p 2ZXROSNG(config- phb -based-policy-class)# exitZXROSNG(config- phb -based-policy)#exitZXROSNG(config)# qos schedule interface gei-0/0/0/1 priority-level 3 service-policy pmap
 
@@ -8566,8 +7932,7 @@ priority-level|pq优先队列标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -8582,8 +7947,7 @@ qos schedule pw
 
 
 
-### 命令功能 
-
+命令功能 :
 
 隧道PW上应用phb-based类型的策略。 
 
@@ -8592,8 +7956,7 @@ qos schedule pw
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8602,8 +7965,7 @@ qos schedule pw
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8612,8 +7974,7 @@ qos schedule pw
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos schedule pw 
@@ -8635,8 +7996,7 @@ no qos schedule pw
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8656,8 +8016,7 @@ priority-level|pq优先队列标识
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8666,8 +8025,7 @@ priority-level|pq优先队列标识
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 隧道PW上只能应用phb-based类型的策略。 
 
@@ -8676,8 +8034,7 @@ priority-level|pq优先队列标识
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zteZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map pmap phb-basedZXROSNG(config- phb -based-policy)# class zteZXROSNG(config- phb -based-policy-class)# set 8021p 2ZXROSNG(config- phb -based-policy-class)# exitZXROSNG(config- phb -based-policy)#exitZXROSNG(config)# qos schedule interface gei-0/0/0/1 priority-level 3 service-policy pmap
 
@@ -8686,8 +8043,7 @@ ZXROSNG(config)#class-map zteZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(conf
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -8702,8 +8058,7 @@ qos-statistics clear
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在指定接口上清除QoS流统计数据 
 
@@ -8712,8 +8067,7 @@ qos-statistics clear
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8722,8 +8076,7 @@ qos-statistics clear
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8732,8 +8085,7 @@ qos-statistics clear
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8749,8 +8101,7 @@ qos-statistics clear
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8767,18 +8118,7 @@ output|接口方向，出向
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -8787,8 +8127,16 @@ output|接口方向，出向
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 创建名称为zte的类映射：ZXROSNG(config)# qos-statistics clear gei-0/1/0/1 inputZXROSNG(config)#
 
@@ -8797,8 +8145,7 @@ output|接口方向，出向
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -8813,8 +8160,7 @@ qos-statistics switch
 
 
 
-### 命令功能 
-
+命令功能 :
 
 流统计功能开关 
 
@@ -8823,8 +8169,7 @@ qos-statistics switch
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8833,8 +8178,7 @@ qos-statistics switch
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8843,8 +8187,7 @@ qos-statistics switch
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8862,8 +8205,7 @@ qos-statistics switch
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8882,8 +8224,7 @@ output|出方向
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8892,8 +8233,7 @@ output|出方向
 
 
 
-### 使用说明 
-
+使用说明 :
 
 流统计功能默认是关闭的 
 
@@ -8902,8 +8242,7 @@ output|出方向
 
 
 
-### 范例 
-
+范例 :
 
 配置接口gei-0/9/0/11的流统计打开功能：ZXROSNG(config)#qos-statistics gei-0/9/0/11 output enable
 
@@ -8912,8 +8251,7 @@ output|出方向
 
 
 
-### 相关命令 
-
+相关命令 :
 
 service-policy <interface-name> { input | output } <policy-map-name> [{ overwrite | append }][statistical-share] qos schedule pw <pw-name> 
 
@@ -8928,8 +8266,7 @@ queue-limit
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置队列深度 
 
@@ -8938,8 +8275,7 @@ queue-limit
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -8948,8 +8284,7 @@ queue-limit
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8958,8 +8293,7 @@ queue-limit
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8982,8 +8316,7 @@ no queue-limit
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9004,8 +8337,7 @@ no queue-limit
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -9014,8 +8346,7 @@ no queue-limit
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在同一策略映射类下，queue-limit与WRED相冲突。queue-limit只能配置在叶子节点上。 
 
@@ -9024,8 +8355,7 @@ no queue-limit
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte15 match-allZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy9ZXROSNG(config-pmap)#class zte15ZXROSNG(config-pmap-c)#queue-limit 2000
 
@@ -9034,8 +8364,7 @@ ZXROSNG(config)#class-map zte15 match-allZXROSNG(config-cmap)#match out-vlan 800
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map [<policy-map-name>] 
 
@@ -9050,8 +8379,7 @@ random-detect
 
 
 
-### 命令功能 
-
+命令功能 :
 
 开启/关闭WRED功能，配置平均队列长度、基于IP Precedence的WRED参数。 
 
@@ -9060,8 +8388,7 @@ random-detect
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -9070,8 +8397,7 @@ random-detect
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9080,8 +8406,7 @@ random-detect
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 random-detect 
@@ -9124,8 +8449,7 @@ no random-detect
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9159,8 +8483,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -9169,8 +8492,7 @@ red|本地最高丢弃优先级
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 只有开启WRED功能，即配置random-detect enable，且在有基于IP Precedence的WRED参数时，WRED才生效；当关闭WRED功能，即配置no random-detect enable，基于IP Precedence的WRED参数都不生效（添加还是删除可在show policy-map中查看是否存在random-detect enable动作）。2. 配置的<min-threshold>必须小于<max-threshold>。3. 默认的weight值为8。4. random-detect只能配置在策略的叶子结点，即在同一策略映射类下，random-detect 与service-policy相冲突。
 
@@ -9178,8 +8500,7 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy9、匹配外层VLAN值为800的流分类zte15，其动作指定使能WRED，平均队列长度默认，且基于IP Precedence值为1的丢弃下限为3000KB，丢弃上限为5000KB，丢弃概率为60；基于IP Precedence值为3的丢弃下限为6000KB，丢弃上限为9000KB，丢弃概率为50：ZXROSNG(config)# class-map zte15 match-allZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy9ZXROSNG(config-pmap)#class zte15ZXROSNG(config-pmap-c)#random-detect enableZXROSNG(config-pmap-c)#random-detect precedence 1 3000 5000 60ZXROSNG(config-pmap-c)#random-detect precedence 3 6000 9000 50
 
@@ -9187,8 +8508,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -9203,8 +8523,7 @@ service-policy
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的层次化策略。 
 
@@ -9213,8 +8532,7 @@ service-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -9223,8 +8541,7 @@ service-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9233,8 +8550,7 @@ service-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9251,8 +8567,7 @@ no service-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9267,8 +8582,7 @@ no service-policy
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -9277,8 +8591,7 @@ no service-policy
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在同一策略映射类下，service-policy与set 8021p、set dscp、set precedence、set mpls-exp、random-detect相冲突。 
 
@@ -9287,8 +8600,7 @@ no service-policy
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy9、匹配外层VLAN值为800的流分类zte15层次化policy3：ZXROSNG(config)#class-map zte15 match-allZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy9ZXROSNG(config-pmap)#class zte15ZXROSNG(config-pmap-c)#service-policy policy3
 
@@ -9296,8 +8608,7 @@ no service-policy
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map  
 
@@ -9312,8 +8623,7 @@ service-policy
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上绑定HQoS策略。 
 
@@ -9322,8 +8632,7 @@ service-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9332,8 +8641,7 @@ service-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9342,8 +8650,7 @@ service-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 service-policy 
@@ -9367,8 +8674,7 @@ no service-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9388,8 +8694,7 @@ statistical-share|流分解标识
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -9398,8 +8703,7 @@ statistical-share|流分解标识
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. 先要利用policy-map配置HQoS策略名。2. HQoS绑定和car-set接口限速在同一接口的同一方向下互斥。3. 可选参数 overwrite | append 用于配置链路级的HQoS策略时选择。选择 append 时，绑定的policy-map只能是一层，并且只能match全局端口号(配置的class不允许超过已经配置的子接口范围，可以小于但不能大于，配置的动作可以是限速、WFQ或者PQ等)。选择 overwrite时，该链路接口上的HQoS规则以此policy-map为准，且不能在其子接口上配置HQoS策略，否则提示错误信息。如果要重新配置基于子接口的策略，需要显式删除该覆盖型的链路接口HQoS配置。
 
@@ -9407,8 +8711,7 @@ statistical-share|流分解标识
 
 
 
-### 范例 
-
+范例 :
 
 配置接口gei-0/9/0/11的HQoS策略policy8：ZXROSNG(config)#class-map zte15ZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy8ZXROSNG(config-pmap)#class zte15ZXROSNG(config-pmap-c)#set 8021p 2ZXROSNG(config-pmap-c)#exitZXROSNG(config-pmap)#exitZXROSNG(config)#service-policy gei-0/9/0/11 output policy8
 
@@ -9416,8 +8719,7 @@ statistical-share|流分解标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -9432,8 +8734,7 @@ set
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类使用指定值标记报文的802.1p字段。 
 
@@ -9442,8 +8743,7 @@ set
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -9452,8 +8752,7 @@ set
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9462,8 +8761,7 @@ set
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set 
@@ -9516,8 +8814,7 @@ no set
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9565,8 +8862,7 @@ multi-mpls-exp|多标签EXP
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -9575,8 +8871,7 @@ multi-mpls-exp|多标签EXP
 
 
 
-### 使用说明 
-
+使用说明 :
 
 set 8021p只能配置在策略的叶子结点，即在同一策略映射类下，set 8021p与service-policy相冲突。 
 
@@ -9585,8 +8880,7 @@ set 8021p只能配置在策略的叶子结点，即在同一策略映射类下�
 
 
 
-### 范例 
-
+范例 :
 
 配置策略映射为policy3、匹配外层VLAN值为600的流分类zte4的802.1p字段值为2：ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 600ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#set 8021p 2
 
@@ -9594,8 +8888,7 @@ set 8021p只能配置在策略的叶子结点，即在同一策略映射类下�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map 
 
@@ -9610,8 +8903,7 @@ shape
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置策略类的流量整形。 
 
@@ -9620,8 +8912,7 @@ shape
 
 
 
-### 命令模式 
-
+命令模式 :
 
  QoS策略类配置模式  
 
@@ -9630,8 +8921,7 @@ shape
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9640,8 +8930,7 @@ shape
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9666,8 +8955,7 @@ no shape
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9687,18 +8975,7 @@ average|平均值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -9707,8 +8984,16 @@ average|平均值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 200ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy3ZXROSNG(config-pmap)#class zte4ZXROSNG(config-pmap-c)#shape peak 2000 bc 3000 be 4000
 
@@ -9717,8 +9002,7 @@ ZXROSNG(config)#class-map zte4 match-allZXROSNG(config-cmap)#match out-vlan 200Z
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map [<policy-map-name>]show running-config
 
@@ -9733,8 +9017,7 @@ show class-map
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示H-QoS的所有流分类及其匹配项，或者指定名称的流分类及其匹配项。 
 
@@ -9743,8 +9026,7 @@ show class-map
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -9753,8 +9035,7 @@ show class-map
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9763,8 +9044,7 @@ show class-map
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9778,8 +9058,7 @@ show class-map
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9794,18 +9073,7 @@ show class-map
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -9814,8 +9082,16 @@ show class-map
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示配置的所有流分类：ZXROSNG(config)#show class-map class-map zte match-all         match dscp 2-6,10-15        class-map zte2 match-all        match precedence 0-2,4,6-7    match multi-cast            class-map zte3 match-all        match mpls-exp 1,3-5,7      class-map zte4 match-all        match in-vlan 1-20,40-50,100,200-250class-map zte5 match-all        match out-vlan 1-20,40-50,100,200-250class-map zte6 match-all        match in-8021p 0-3,5        class-map zte7 match-all        match out-8021p 1,4-5,7     class-map zte8 match-all        match qos-group 30            match vrf-name vrf1           match uni-cast                match mac-address 1111.1230.4567  match ipv4-access-list ztezxr10class-map zte9 match-all  match multi-cast  match ipv6-access-list chlw  class-map zte10 match-all  match interface gei-0/9/0/11     class-map zte11 match-all       match child           
 
@@ -9823,8 +9099,7 @@ show class-map
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -9839,8 +9114,7 @@ show diffserv domain
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示DS域以及DS域下的简单流分类映射关系。 
 
@@ -9849,8 +9123,7 @@ show diffserv domain
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -9859,8 +9132,7 @@ show diffserv domain
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9869,8 +9141,7 @@ show diffserv domain
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9884,8 +9155,7 @@ show diffserv domain
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9900,8 +9170,7 @@ show diffserv domain
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -9910,8 +9179,7 @@ show diffserv domain
 
 
 
-### 使用说明 
-
+使用说明 :
 
 默认DS域的映射关系不能显示。 
 
@@ -9920,8 +9188,7 @@ show diffserv domain
 
 
 
-### 范例 
-
+范例 :
 
 # 显示DS域的配置信息。ZXROSNG(config)#show diffserv domaindiffserv domain ds18021p-inbound 0 phb be green8021p-inbound 1 phb af1 green8021p-inbound 2 phb af2 green8021p-inbound 3 phb af3 green8021p-inbound 4 phb af4 green8021p-inbound 5 phb ef green8021p-inbound 6 phb cs6 green<省略>
 
@@ -9930,8 +9197,7 @@ show diffserv domain
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show running-config 
 
@@ -9946,8 +9212,7 @@ show policy-map
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示H-QoS的所有策略映射以及策略类和相关的动作，或者显示指定策略映射名称的策略类和相关的动作，或者显示指定策略类的动作。 
 
@@ -9956,8 +9221,7 @@ show policy-map
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -9966,8 +9230,7 @@ show policy-map
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9976,8 +9239,7 @@ show policy-map
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9993,8 +9255,7 @@ show policy-map
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10010,18 +9271,7 @@ show policy-map
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10030,8 +9280,16 @@ show policy-map
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示H-QoS的策略映射policy1：ZXROSNG#show policy-map policy1policy-map policy1              class class-default             bandwidth percent 10
 
@@ -10039,8 +9297,7 @@ show policy-map
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -10055,8 +9312,7 @@ show qos diffserv-domain
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口上配置的优先级信任配置。 
 
@@ -10065,8 +9321,7 @@ show qos diffserv-domain
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10075,8 +9330,7 @@ show qos diffserv-domain
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10085,8 +9339,7 @@ show qos diffserv-domain
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10103,8 +9356,7 @@ show qos diffserv-domain
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10120,18 +9372,7 @@ show qos diffserv-domain
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10140,8 +9381,16 @@ show qos diffserv-domain
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 # 显示DS 域的配置信息。ZXROSNG(config)# show qos diffserv-domain interface gei-0/1/0/1.1
 
@@ -10150,8 +9399,7 @@ show qos diffserv-domain
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show running-config 
 
@@ -10166,8 +9414,7 @@ show qos priority
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口上信任优先级 
 
@@ -10176,8 +9423,7 @@ show qos priority
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10186,8 +9432,7 @@ show qos priority
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10196,8 +9441,7 @@ show qos priority
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10212,8 +9456,7 @@ show qos priority
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10228,18 +9471,7 @@ show qos priority
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10248,8 +9480,16 @@ show qos priority
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 sho qos priority interface gei-0/1/0/1 
 
@@ -10258,8 +9498,7 @@ sho qos priority interface gei-0/1/0/1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -10274,8 +9513,7 @@ show qos schedule
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示隧道或者是伪线上的配置。 
 
@@ -10284,8 +9522,7 @@ show qos schedule
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10294,8 +9531,7 @@ show qos schedule
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10304,8 +9540,7 @@ show qos schedule
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10324,8 +9559,7 @@ show qos schedule
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10345,18 +9579,7 @@ all|接口上所有Tunnel
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10365,8 +9588,16 @@ all|接口上所有Tunnel
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 #显示隧道上或者是伪线上的配置。ZXROSNG(config)# qos schedule pw pw-name1 pq 3 service-policy pmapnameZXROSNG(config)# qos schedule pw pw-name2 pq 3ZXROSNG(config)# qos schedule interface tunnel-name1  pq 3 service-policy pmapnameZXROSNG(config)# qos schedule interface tunnel-name2 pq 3ZXROSNG(config)# show qos schedule pw pw-name1qos schedule pw pw-name1 pq 3 service-policy pmapnameZXROSNG(config)# show qos schedule pw allqos schedule pw pw-name1 pq 3 service-policy pmapnameqos schedule pw pw-name2 pq 3ZXROSNG(config)#show qos schedule interface tunnel-name1qos schedule interface tunnel-name1  pq 3 service-policy pmapnameZXROSNG(config)# show qos schedule interface allqos schedule interface tunnel-name1  pq 3 service-policy pmapnameqos schedule interface tunnel-name2 pq 3ZXROSNG(config)#
 
@@ -10375,8 +9606,7 @@ all|接口上所有Tunnel
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show running-config 
 
@@ -10391,8 +9621,7 @@ show qos-queue
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示指定线卡的队列数资源 
 
@@ -10401,8 +9630,7 @@ show qos-queue
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10411,8 +9639,7 @@ show qos-queue
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10421,8 +9648,7 @@ show qos-queue
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10436,8 +9662,7 @@ show qos-queue
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10452,18 +9677,7 @@ show qos-queue
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10472,8 +9686,16 @@ show qos-queue
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#show qos-queue PFU-0/1 total resource : 51200        used  resource : 25600       
 
@@ -10482,8 +9704,7 @@ ZXROSNG(config)#show qos-queue PFU-0/1 total resource : 51200        used  
 
 
 
-### 相关命令 
-
+相关命令 :
 
 service-policy 
 
@@ -10498,8 +9719,7 @@ show qos-statistics interface
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口的HQoS策略的流量统计结果。 
 
@@ -10508,8 +9728,7 @@ show qos-statistics interface
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10518,8 +9737,7 @@ show qos-statistics interface
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10528,8 +9746,7 @@ show qos-statistics interface
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10545,8 +9762,7 @@ show qos-statistics interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10563,18 +9779,7 @@ output|接口出方向
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10583,8 +9788,16 @@ output|接口出方向
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示接口的HQoS策略下流量统计：ZXROSNG(config)#show qos-statistics interface gei-0/1/0/1 inputInterface gei-0/1/0/1 current service-policy configuration:  service-policy input : 1  total flow : 1456 packets, 186368 bytes  transmit   : 910 packets, 116480 bytes, 100 pps, 102400 bps  total drop : 546 packets, 69888 bytes,  60 pps, 61440 bps  tail drop  : 364 packets, 46592 bytes  wred drop  : 182 packets, 23296 bytes  car drop   : 273 packets, 34944 bytes  urpf drop  : 182 packets, 23296 bytes  filter drop: 91 packets, 11648 bytes    class-map : 1      total flow : 1456 packets, 186368 bytes      transmit   : 910 packets, 116480 bytes, 100 pps, 102400 bps      total drop : 546 packets, 69888 bytes, 60 pps, 61440 bps      tail drop  : 364 packets, 46592 bytes      wred drop  : 182 packets, 23296 bytes      car drop   : 273 packets, 34944 bytes      urpf drop  : 182 packets, 23296 bytes      filter drop: 91 packets, 11648 bytes
 
@@ -10593,8 +9806,7 @@ output|接口出方向
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -10609,8 +9821,7 @@ show service-policy
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口的HQoS策略。 
 
@@ -10619,8 +9830,7 @@ show service-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10629,8 +9839,7 @@ show service-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10639,8 +9848,7 @@ show service-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10654,8 +9862,7 @@ show service-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10670,18 +9877,7 @@ show service-policy
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10690,8 +9886,16 @@ show service-policy
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示接口的HQoS策略：ZXROSNG(config)#show service-policyservice-policy gei-0/9/0/11 output policy8
 
@@ -10699,8 +9903,7 @@ show service-policy
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -10715,8 +9918,7 @@ show switch-fabric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示交换网的HQoS策略绑定。 
 
@@ -10725,8 +9927,7 @@ show switch-fabric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10735,8 +9936,7 @@ show switch-fabric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10745,8 +9945,7 @@ show switch-fabric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10759,8 +9958,7 @@ show switch-fabric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -10771,18 +9969,7 @@ show switch-fabric
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10791,8 +9978,16 @@ show switch-fabric
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示交换网的HQoS策略绑定：ZXROSNG(config)#show switch-fabricswitch-fabric service-policy policy8
 
@@ -10800,8 +9995,7 @@ show switch-fabric
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -10816,8 +10010,7 @@ show traffic-shape
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口上配置的DS域。 
 
@@ -10826,8 +10019,7 @@ show traffic-shape
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -10836,8 +10028,7 @@ show traffic-shape
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10846,8 +10037,7 @@ show traffic-shape
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10861,8 +10051,7 @@ show traffic-shape
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10877,18 +10066,7 @@ show traffic-shape
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10897,8 +10075,16 @@ show traffic-shape
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 # 显示DS 域的配置信息。ZXROSNG(config)# show qos priority interface gei-0/1/0/1.1
 
@@ -10907,8 +10093,7 @@ show traffic-shape
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show running-config 
 
@@ -10923,8 +10108,7 @@ switch-fabric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在交换网上绑定HQoS策略 
 
@@ -10933,8 +10117,7 @@ switch-fabric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -10943,8 +10126,7 @@ switch-fabric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10953,8 +10135,7 @@ switch-fabric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 switch-fabric 
@@ -11004,8 +10185,7 @@ no switch-fabric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11033,8 +10213,7 @@ multi-cast|组播，值为2
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11043,8 +10222,7 @@ multi-cast|组播，值为2
 
 
 
-### 使用说明 
-
+使用说明 :
 
 先要利用policy-map配置HQoS策略名 
 
@@ -11053,8 +10231,7 @@ multi-cast|组播，值为2
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#class-map zte15 match-allZXROSNG(config-cmap)#match out-vlan 800ZXROSNG(config-cmap)#exitZXROSNG(config)#policy-map policy8ZXROSNG(config-pmap)#class zte15 ZXROSNG(config-pmap-c)#set 8021p 2ZXROSNG(config-pmap-c)#exitZXROSNG(config-pmap)#exitZXROSNG(config)#switch-fabric service-policy policy8
 
@@ -11063,8 +10240,7 @@ ZXROSNG(config)#class-map zte15 match-allZXROSNG(config-cmap)#match out-vlan 800
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show policy-map [<policy-map-name>] 
 
@@ -11079,8 +10255,7 @@ traffic-shape
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置端口流整形 
 
@@ -11089,8 +10264,7 @@ traffic-shape
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -11099,8 +10273,7 @@ traffic-shape
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11109,8 +10282,7 @@ traffic-shape
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 traffic-shape 
@@ -11132,8 +10304,7 @@ no traffic-shape
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11152,18 +10323,7 @@ no traffic-shape
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -11172,8 +10332,16 @@ no traffic-shape
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#traffic-shape gei-0/1/0/1 rate 100 200 300ZXROSNG(config)#show traffic-shape traffic-shape gei-0/1/0/1 100 200 300ZXROSNG(config)#traffic-shape gei-0/1/0/1 rate 200ZXROSNG(config)#show traffic-shape traffic-shape gei-0/1/0/1 200
 
@@ -11181,8 +10349,7 @@ ZXROSNG(config)#traffic-shape gei-0/1/0/1 rate 100 200 300ZXROSNG(config)#show t
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show traffic-shape ＜interface-name＞ 
 
@@ -11190,16 +10357,14 @@ show traffic-shape ＜interface-name＞
 
 
 # QPPB配置命令 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -11208,8 +10373,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -11218,8 +10382,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11228,8 +10391,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -11255,8 +10417,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11276,18 +10437,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -11296,8 +10446,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)# qos-policy destination qos-id gei-0/9/0/11开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)# qos-policy destination qos-id gei-0/9/0/11
 
@@ -11306,24 +10464,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -11332,8 +10487,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太接口模式  
 
@@ -11342,8 +10496,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11352,8 +10505,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -11377,8 +10529,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11397,18 +10548,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -11417,8 +10557,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -11426,24 +10574,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -11452,8 +10597,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  posgroup接口模式  
 
@@ -11462,8 +10606,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11472,8 +10615,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -11497,8 +10639,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11517,18 +10658,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -11537,8 +10667,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -11546,24 +10684,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -11572,8 +10707,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  pos子接口模式  
 
@@ -11582,8 +10716,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11592,8 +10725,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -11617,8 +10749,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11637,18 +10768,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -11657,8 +10777,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -11666,24 +10794,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -11692,8 +10817,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  通道化cpos_e1接口模式  
 
@@ -11702,8 +10826,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11712,8 +10835,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -11737,8 +10859,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11757,18 +10878,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -11777,8 +10887,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -11786,24 +10904,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -11812,8 +10927,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  千兆以太接口模式  
 
@@ -11822,8 +10936,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11832,8 +10945,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -11857,8 +10969,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11877,18 +10988,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -11897,8 +10997,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -11906,24 +11014,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -11932,8 +11037,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  pos接口模式  
 
@@ -11942,8 +11046,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11952,8 +11055,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -11977,8 +11079,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11997,18 +11098,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12017,8 +11107,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -12026,24 +11124,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -12052,8 +11147,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  multilink接口模式  
 
@@ -12062,8 +11156,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12072,8 +11165,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -12097,8 +11189,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12117,18 +11208,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12137,8 +11217,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -12146,24 +11234,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -12172,8 +11257,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  通道化ce1接口模式  
 
@@ -12182,8 +11266,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12192,8 +11275,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -12217,8 +11299,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12237,18 +11318,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12257,8 +11327,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -12266,24 +11344,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -12292,8 +11367,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  smartgroup子接口模式  
 
@@ -12302,8 +11376,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12312,8 +11385,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -12337,8 +11409,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12357,18 +11428,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12377,8 +11437,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -12386,24 +11454,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -12412,8 +11477,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太子接口模式  
 
@@ -12422,8 +11486,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12432,8 +11495,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -12457,8 +11519,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12477,18 +11538,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12497,8 +11547,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -12506,24 +11564,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -12532,8 +11587,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  smartgroup接口模式  
 
@@ -12542,8 +11596,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12552,8 +11605,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -12577,8 +11629,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12597,18 +11648,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12617,8 +11657,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -12626,24 +11674,21 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
 
 
 
-## qos-policy 
-
+qos-policy :
 
 qos-policy 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上开启接口QPPB功能。 
 
@@ -12652,8 +11697,7 @@ qos-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  10G以太接口模式  
 
@@ -12662,8 +11706,7 @@ qos-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12672,8 +11715,7 @@ qos-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-policy 
@@ -12697,8 +11739,7 @@ no qos-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12717,18 +11758,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12737,8 +11767,16 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id开启接口gei-0/9/0/11的QPPB功能ZXROSNG(config)#interface gei-0/9/0/11ZXROSNG(config-if)# qos-policy destination qos-id
 
@@ -12746,8 +11784,7 @@ qos-id|表示查路由取qos-id的值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qppb-groups 
 
@@ -12762,8 +11799,7 @@ show qppb-groups
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示QPPB配置信息。 
 
@@ -12772,8 +11808,7 @@ show qppb-groups
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -12782,8 +11817,7 @@ show qppb-groups
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12792,8 +11826,7 @@ show qppb-groups
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -12814,8 +11847,7 @@ show qppb-groups
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12837,18 +11869,7 @@ by-interface|根据接口名显示QPPB配置
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12857,8 +11878,16 @@ by-interface|根据接口名显示QPPB配置
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#show qppb-groups Direction         Option            Interface name-----------------------------------------------------------------source            ip-precedence     gei-0/1/0/1source            qos-id            gei-0/1/0/1ZXROSNG(config)#show qppb-groups Direction         Option            Interface name-----------------------------------------------------------------source            ip-precedence     gei-0/1/0/1source            qos-id            gei-0/1/0/1
 
@@ -12866,8 +11895,7 @@ ZXROSNG(config)#show qppb-groups Direction         Option            I
 
 
 
-### 相关命令 
-
+相关命令 :
 
 qos-policy 
 
@@ -12883,8 +11911,7 @@ mls-qos-mode
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置接口的优先级继承模式。 
 
@@ -12893,8 +11920,7 @@ mls-qos-mode
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -12903,8 +11929,7 @@ mls-qos-mode
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12913,8 +11938,7 @@ mls-qos-mode
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 mls-qos-mode 
@@ -12941,8 +11965,7 @@ no mls-qos-mode
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12968,18 +11991,7 @@ red|本地最高丢弃优先级
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -12988,8 +12000,16 @@ red|本地最高丢弃优先级
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置接口gei-0/9/0/11的优先级继承模式为pipe：ZXROSNG(config)#mls-qos-mode gei-0/9/0/11 pipe
 
@@ -12998,8 +12018,7 @@ red|本地最高丢弃优先级
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show mls-qos-mode 
 
@@ -13014,8 +12033,7 @@ qos-dot1p
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置接口的802.1p继承。 
 
@@ -13024,8 +12042,7 @@ qos-dot1p
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -13034,8 +12051,7 @@ qos-dot1p
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13044,8 +12060,7 @@ qos-dot1p
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 qos-dot1p 
@@ -13065,8 +12080,7 @@ no qos-dot1p
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13083,8 +12097,7 @@ cvlan-in|从入方向的内层VLAN继承802.1p值
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -13093,8 +12106,7 @@ cvlan-in|从入方向的内层VLAN继承802.1p值
 
 
 
-### 使用说明 
-
+使用说明 :
 
 只有子接口才能配置802.1p继承。 
 
@@ -13103,8 +12115,7 @@ cvlan-in|从入方向的内层VLAN继承802.1p值
 
 
 
-### 范例 
-
+范例 :
 
 配置接口gei-0/9/0/11.1的802.1p继承：ZXROSNG(config)#qos-dot1p gei-0/9/0/11.1
 
@@ -13113,8 +12124,7 @@ cvlan-in|从入方向的内层VLAN继承802.1p值
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show qos-dot1p 
 
@@ -13129,8 +12139,7 @@ show mls-qos-mode
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口的优先级继承模式。 
 
@@ -13139,8 +12148,7 @@ show mls-qos-mode
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -13149,8 +12157,7 @@ show mls-qos-mode
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13159,8 +12166,7 @@ show mls-qos-mode
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -13174,8 +12180,7 @@ show mls-qos-mode
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13190,18 +12195,7 @@ show mls-qos-mode
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -13210,8 +12204,16 @@ show mls-qos-mode
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示配置的配置接口的优先级继承：ZXROSNG(config)#show mls-qos-modemls-qos-mode gei-0/9/0/11 pipe
 
@@ -13219,8 +12221,7 @@ show mls-qos-mode
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -13235,8 +12236,7 @@ show qos-dot1p
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口的802.1p继承。 
 
@@ -13245,8 +12245,7 @@ show qos-dot1p
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -13255,8 +12254,7 @@ show qos-dot1p
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13265,8 +12263,7 @@ show qos-dot1p
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -13280,8 +12277,7 @@ show qos-dot1p
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13296,18 +12292,7 @@ show qos-dot1p
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -13316,8 +12301,16 @@ show qos-dot1p
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示配置的配置接口的802.1p继承：ZXROSNG(config)#show qos-dot1pqos-dot1p gei-0/9/0/11.1 
 
@@ -13325,8 +12318,7 @@ show qos-dot1p
 
 
 
-### 相关命令 
-
+相关命令 :
 
 qos-dot1p 
 
@@ -13341,8 +12333,7 @@ show ttl-qos-mode
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示接口的TTL复制属性模式。 
 
@@ -13351,8 +12342,7 @@ show ttl-qos-mode
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -13361,8 +12351,7 @@ show ttl-qos-mode
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13371,8 +12360,7 @@ show ttl-qos-mode
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -13387,8 +12375,7 @@ show ttl-qos-mode
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13404,18 +12391,7 @@ global|全局
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -13424,8 +12400,16 @@ global|全局
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示配置的配置接口的优先级继承：ZXROSNG(config)#show ttl-qos-modettl-qos-mode gei-0/1/0/1 pipe
 
@@ -13433,8 +12417,7 @@ global|全局
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ttl-qos-mode 
 
@@ -13449,8 +12432,7 @@ ttl-qos-mode
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置接口的TTL复制属性。 
 
@@ -13459,8 +12441,7 @@ ttl-qos-mode
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -13469,8 +12450,7 @@ ttl-qos-mode
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13479,8 +12459,7 @@ ttl-qos-mode
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ttl-qos-mode 
@@ -13498,8 +12477,7 @@ no ttl-qos-mode
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13516,18 +12494,7 @@ pipe|pipe继承模式
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -13536,8 +12503,16 @@ pipe|pipe继承模式
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置接口gei-0/1/0/1的TTL继承：ZXROSNG(config)#ttl-qos-mode gei-0/1/0/1 pipe配置接口gei-0/1/0/1的TTL继承：ZXROSNG(config)#ttl-qos-mode gei-0/1/0/1 pipe
 
@@ -13546,8 +12521,7 @@ pipe|pipe继承模式
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ttl-qos-mode 
 
