@@ -38,7 +38,7 @@ def main():
         result = get_query(question)
         answer = result["result"]
         answers.append(answer)
-        specific_results.loc[count] = [question, answer, json.dumps(result['source_documents'])]
+        specific_results.loc[count] = [question, answer, str(result['source_documents'])]
         count += 1
         break
 

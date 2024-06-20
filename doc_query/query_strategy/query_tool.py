@@ -24,7 +24,7 @@ def get_query(query):
     for item in result.get("source_documents", []):
         name = get_source_name(item[0].metadata)
         text = item[0].page_content
-        documents.append({"text": text, "name": name, "page": item.metadata.get("page")})
+        documents.append({"text": text, "name": name, "page": item[0].metadata.get("page")})
     result["result"] = result['result'].replace("<unused1>", "")
     return result
 
