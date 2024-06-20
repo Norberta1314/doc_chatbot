@@ -65,8 +65,28 @@ class Qa:
 
     def get_source(self, metadata):
         source = metadata.get("source")
-
         return source[31:]
+
+    def get_title(self, metadata):
+        title_mark = ""
+        for key,value in metadata.items():
+            if key == "Header 1":
+                title_mark = f"{title_mark}{value}"
+            elif key == "Header 2":
+                title_mark = f"{title_mark}{value}"
+            elif key == "Header 3":
+                title_mark = f"{title_mark}{value}"
+            elif key == "Header 4":
+                title_mark = f"{title_mark}{value}"
+            elif key == "Header 5":
+                title_mark = f"{title_mark}{value}"
+            elif key == "Header 6":
+                title_mark = f"{title_mark}{value}"
+            elif key == "Header 7":
+                title_mark = f"{title_mark}{value}"
+            elif key == "Header 8":
+                title_mark = f"{title_mark}{value}"
+        return title_mark
 
     def obtain_contexts_from_vectordb(self, query):
         def obatin_context_anx(doc_id):
@@ -101,11 +121,8 @@ class Qa:
         search_results = self.retriever.get_relevant_documents(query)
         if not search_results:
             return "没有找到相关的背景材料", search_results
-        context = ""
-        for result in search_results:
-            file_name = self.get_source(result.metadata)
-            context = f"{context}背景材料《{file_name}》：{result.page_content}。\n"
-        context = context.strip("\n ")
+
+        context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
         # result = llm.acomplete(ask_prompt)
@@ -117,6 +134,23 @@ class Qa:
             ],
         )
         return response.choices[0].message.content, search_results
+
+    def combine_source_documents(self, search_results):
+        context_dict = {}
+        for result in search_results:
+            title_value = self.get_title(result[1].metadata)
+            if context_dict.get(title_value):
+                context_dict[title_value] = f"{context_dict[title_value]}{result[0].page_content}"
+            else:
+                context_dict[title_value] = f"{result[0].page_content}。\n"
+        context = ""
+        i = 1
+        for title, content in context_dict.items():
+            context = f"{context}知识{i}：{title}{content}。\n"
+            i += 1
+        context = re.sub("[，。 ；：,.:;]+。", "。", context)
+        context = context.strip("\n ")
+        return context
 
     def second_query(self, query):
         ask_template = f"请用一段话回答问题：{query}"
@@ -134,11 +168,7 @@ class Qa:
         search_results = self.retriever.get_relevant_documents(new_query)
         if not search_results:
             return "没有找到相关的背景材料", search_results
-        context = ""
-        for result in search_results:
-            file_name = self.get_source(result.metadata)
-            context = f"{context}背景材料《{file_name}》：{result.page_content}。\n"
-        context = context.strip("\n ")
+        context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
         # result = llm.acomplete(ask_prompt)
@@ -151,8 +181,65 @@ class Qa:
         )
         return response.choices[0].message.content, result_by_llm, search_results
 
-    def third_query(self, query):
-        return
+    def third_query(self, query, search_results_by_llm):
+        ask_template = f"请回答问题：{query}"
+        # result_by_llm = llm.acomplete(ask_template)
+        response = client.chat.completions.create(
+            model="glm-4",  # Fill in the model name to be called
+            messages=[
+                {"role": "user", "content": ask_template}
+            ],
+        )
+        result_by_llm = response.choices[0].message.content
+
+        rewrite_prompt = """
+        以下为背景知识：
+        ---------
+        {context}
+        ---------
+        请结合背景知识并按照改写的要求，改写下列问题：
+        ---------
+        {question}
+        ---------
+        改写的要求：改写后的问题能够更好地从知识库中检索到相关内容。
+        回答的要求：请直接返回你改写后的问题，不要复述上下文信息
+        """
+        rewrite_template = PromptTemplate(input_variables=["context", "question"], template=rewrite_prompt)
+        rewrite_template = rewrite_template.format(question=query, context=result_by_llm)
+        response = client.chat.completions.create(
+            model="glm-4",  # Fill in the model name to be called
+            messages=[
+                {"role": "user", "content": rewrite_template}
+            ],
+        )
+        new_question = response.choices[0].message.content
+        logging.info(f"改写后的问题: {new_question}")
+        search_results_by_rewrite = self.retriever.get_relevant_documents(new_question)
+        if not search_results_by_llm and not search_results_by_rewrite:
+            return "没有找到相关的背景材料", result_by_llm, search_results_by_rewrite
+
+        search_results_ids = set()
+        for result in search_results_by_llm:
+            search_results_ids.add(self.vector_index_convert(result[1]))
+        for result in search_results_by_rewrite:
+            search_results_ids.add(self.vector_index_convert(result[1]))
+
+        search_results = []
+        for i, idx in enumerate(sorted(search_results_ids)):
+            if i > 5:
+                break
+            search_results.append(self.vector.docstore.search(self.index_to_docstore_id[idx]))
+
+        context = self.combine_source_documents(search_results)
+        # 需要组装template
+        ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
+        response = client.chat.completions.create(
+            model="glm-4",  # Fill in the model name to be called
+            messages=[
+                {"role": "user", "content": ask_prompt}
+            ],
+        )
+        return response.choices[0].message.content, result_by_llm, search_results
 
     def query(self, query):
         first_result, search_results = self.first_query(query)
