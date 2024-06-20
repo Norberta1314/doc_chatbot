@@ -9734,9 +9734,7 @@ SHOW OFFICESENDIPBELONG:PEERIP="1.1.1.1";
 ` 
 
 
-# 动态管理 
-# 动态管理 
-
+动态管理 动态管理 
 
 [](None)背景知识 
 
@@ -12233,9 +12231,7 @@ DELETE SBIRESOURCEINFO:RESOURCETYPE="SUBCOLLECTION",INDEX="1,abcd-1234",LOGICNO=
 ` 
 
 
-# 操作维护 
-# 操作维护 
-
+操作维护 操作维护 
 
 [](None)背景知识 
 
@@ -12260,9 +12256,7 @@ DELETE SBIRESOURCEINFO:RESOURCETYPE="SUBCOLLECTION",INDEX="1,abcd-1234",LOGICNO=
 
 
 
-## 系统调测 
-## 系统调测 
-
+系统调测 系统调测 
 
 [](None)背景知识 
 
@@ -12287,9 +12281,7 @@ DELETE SBIRESOURCEINFO:RESOURCETYPE="SUBCOLLECTION",INDEX="1,abcd-1234",LOGICNO=
 
 
 
-### 调测信息收集 
-### 调测信息收集 
-
+调测信息收集 调测信息收集 
 
 [](None)背景知识 
 

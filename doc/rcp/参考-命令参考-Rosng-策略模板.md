@@ -7,8 +7,7 @@ aaa-accounting-template
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置计费模板。 
 
@@ -17,8 +16,7 @@ aaa-accounting-template
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -27,8 +25,7 @@ aaa-accounting-template
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -37,8 +34,7 @@ aaa-accounting-template
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 aaa-accounting-template 
@@ -54,8 +50,7 @@ no aaa-accounting-template
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -70,8 +65,7 @@ no aaa-accounting-template
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -80,8 +74,7 @@ no aaa-accounting-template
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置计费模板。 
 
@@ -90,8 +83,7 @@ no aaa-accounting-template
 
 
 
-### 范例 
-
+范例 :
 
 配置计费模板1，进入AAA计费模式：ZXROSNG(config)#aaa-accounting-template 1ZXROSNG(config-aaa-acct-template)#查看计费模板信息：ZXROSNG(config-aaa-acct-template)#show running-config aaa !<AAA>aaa-accounting-template 1$!</AAA>ZXROSNG(config-aaa-acct-template)#show aaa-accounting-template acct-template:1
 
@@ -100,8 +92,7 @@ no aaa-accounting-template
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-accounting-template 
 
@@ -116,8 +107,7 @@ aaa-accounting-type
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置计费类型。 
 
@@ -126,8 +116,7 @@ aaa-accounting-type
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA计费模板模式  
 
@@ -136,8 +125,7 @@ aaa-accounting-type
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -146,8 +134,7 @@ aaa-accounting-type
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -165,8 +152,7 @@ aaa-accounting-type
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -185,8 +171,7 @@ radius-tacacs|RADIUS计费超时后转TACACS计费
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -195,8 +180,7 @@ radius-tacacs|RADIUS计费超时后转TACACS计费
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置计费类型。 
 
@@ -205,8 +189,7 @@ radius-tacacs|RADIUS计费超时后转TACACS计费
 
 
 
-### 范例 
-
+范例 :
 
 在计费模板1下，配置radius计费方法:ZXROSNG(config)#aaa-accounting-template 1ZXROSNG(config-aaa-acct-template)#aaa-accounting-type radius
 
@@ -214,8 +197,7 @@ radius-tacacs|RADIUS计费超时后转TACACS计费
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-accounting-template 
 
@@ -230,8 +212,7 @@ aaa-authentication-template
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置认证模板。 
 
@@ -240,8 +221,7 @@ aaa-authentication-template
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -250,8 +230,7 @@ aaa-authentication-template
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -260,8 +239,7 @@ aaa-authentication-template
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 aaa-authentication-template 
@@ -277,8 +255,7 @@ no aaa-authentication-template
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -293,8 +270,7 @@ no aaa-authentication-template
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -303,8 +279,7 @@ no aaa-authentication-template
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置认证模板。 
 
@@ -313,8 +288,7 @@ no aaa-authentication-template
 
 
 
-### 范例 
-
+范例 :
 
 1. 配置认证模板1，进入AAA认证模式下：ZXROSNG(config)#aaa-authentication-template 1ZXROSNG(config-aaa-authen-template)#2. 查看AAA配置信息：ZXROSNG(config-aaa-authen-template)#show running-config aaa !<AAA>aaa-authentication-template 1$!</AAA>ZXROSNG(config-aaa-authen-template)#show aaa-authentication-template authen-template:1
 
@@ -323,8 +297,7 @@ no aaa-authentication-template
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authentication-template 
 
@@ -339,8 +312,7 @@ aaa-authentication-type
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置认证类型
 
@@ -348,8 +320,7 @@ aaa-authentication-type
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA认证模板模式  
 
@@ -358,8 +329,7 @@ aaa-authentication-type
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -368,8 +338,7 @@ aaa-authentication-type
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 aaa-authentication-type 
@@ -393,8 +362,7 @@ aaa-authentication-type
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -421,8 +389,7 @@ radius-tacacs|先RADIUS认证，超时后转TACACS认证
 
 
 
-### 缺省 
-
+缺省 :
 
 无。 
 
@@ -431,8 +398,7 @@ radius-tacacs|先RADIUS认证，超时后转TACACS认证
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置认证类型 
 
@@ -441,8 +407,7 @@ radius-tacacs|先RADIUS认证，超时后转TACACS认证
 
 
 
-### 范例 
-
+范例 :
 
 配在AAA认证模式下，配置RADIUS认证方式：ZXROSNG(config)#aaa-authentication-template 1ZXROSNG(config-aaa-authen-template)#aaa-authentication-type radius
 
@@ -450,8 +415,7 @@ radius-tacacs|先RADIUS认证，超时后转TACACS认证
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authentication-template
 
@@ -465,8 +429,7 @@ aaa-authorization-template
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置授权模板。 
 
@@ -475,8 +438,7 @@ aaa-authorization-template
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -485,8 +447,7 @@ aaa-authorization-template
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -495,8 +456,7 @@ aaa-authorization-template
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 aaa-authorization-template 
@@ -512,8 +472,7 @@ no aaa-authorization-template
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -528,8 +487,7 @@ no aaa-authorization-template
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -538,8 +496,7 @@ no aaa-authorization-template
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置授权模板。 
 
@@ -548,8 +505,7 @@ no aaa-authorization-template
 
 
 
-### 范例 
-
+范例 :
 
 配置授权模板1， 进入AAA授权模式下：ZXROSNG(config)#aaa-authorization-template 1ZXROSNG(config-aaa-author-template)#查看授权模板：ZXROSNG(config-aaa-author-template)#show running-config aaa !<AAA>aaa-authorization-template 1$!</AAA>ZXROSNG(config-aaa-author-template)#show aaa-authorization-template 1author-template:1
 
@@ -558,8 +514,7 @@ no aaa-authorization-template
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authorization-template 
 
@@ -574,8 +529,7 @@ aaa-authorization-type
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置授权类型。 
 
@@ -584,8 +538,7 @@ aaa-authorization-type
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA授权模板模式  
 
@@ -594,8 +547,7 @@ aaa-authorization-type
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -604,8 +556,7 @@ aaa-authorization-type
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -628,8 +579,7 @@ aaa-authorization-type
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -653,8 +603,7 @@ radius-tacacs|RADIUS授权超时后转RADIUS授权
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -663,8 +612,7 @@ radius-tacacs|RADIUS授权超时后转RADIUS授权
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置授权类型。 
 
@@ -673,8 +621,7 @@ radius-tacacs|RADIUS授权超时后转RADIUS授权
 
 
 
-### 范例 
-
+范例 :
 
 在AAA授权模式下，配置mix-tacacs方式：ZXROSNG(config)#aaa-authorization-template 1ZXROSNG(config-aaa-author-template)#aaa-authorization-type tacacs-local
 
@@ -682,8 +629,7 @@ radius-tacacs|RADIUS授权超时后转RADIUS授权
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authorization-template 
 
@@ -698,8 +644,7 @@ accounting-radius-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置RADIUS计费组。 
 
@@ -708,8 +653,7 @@ accounting-radius-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA计费模板模式  
 
@@ -718,8 +662,7 @@ accounting-radius-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -728,8 +671,7 @@ accounting-radius-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -751,8 +693,7 @@ no accounting-radius-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -768,8 +709,7 @@ no accounting-radius-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -778,8 +718,7 @@ no accounting-radius-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 计费模板下，绑定RADIUS计费组，RADIUS计费组必须先配置。 
 
@@ -788,8 +727,7 @@ no accounting-radius-group
 
 
 
-### 范例 
-
+范例 :
 
 在AAA计费模式下，配置RADIUS计费组：ZXROSNG(config)#aaa-accounting-template 1ZXROSNG(config-aaa-acct-template)#aaa-accounting-type radiusZXROSNG(config-aaa-acct-template)#accounting-radius-group first 1
 
@@ -798,8 +736,7 @@ no accounting-radius-group
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-accounting-template 
 
@@ -814,8 +751,7 @@ accounting-tacacs-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置TACACS计费组。 
 
@@ -824,8 +760,7 @@ accounting-tacacs-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA计费模板模式  
 
@@ -834,8 +769,7 @@ accounting-tacacs-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -844,8 +778,7 @@ accounting-tacacs-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -862,8 +795,7 @@ no accounting-tacacs-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -878,8 +810,7 @@ no accounting-tacacs-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -888,8 +819,7 @@ no accounting-tacacs-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 计费模板下，绑定TACACS计费组，TACACS计费组必须先配置。 
 
@@ -898,8 +828,7 @@ no accounting-tacacs-group
 
 
 
-### 范例 
-
+范例 :
 
 在AAA计费模式下，配置TACACS计费组zte：ZXROSNG(config)#aaa-accounting-template 1ZXROSNG(config-aaa-acct-template)# accounting-tacacs-group zte
 
@@ -907,8 +836,7 @@ no accounting-tacacs-group
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-accounting-template 
 
@@ -923,8 +851,7 @@ authentication-diameter-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置DIAMETER认证组。 
 
@@ -933,8 +860,7 @@ authentication-diameter-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA认证模板模式  
 
@@ -943,8 +869,7 @@ authentication-diameter-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -953,8 +878,7 @@ authentication-diameter-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -971,8 +895,7 @@ no authentication-diameter-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -987,8 +910,7 @@ no authentication-diameter-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -997,8 +919,7 @@ no authentication-diameter-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 认证模板下，绑定DIAMETER认证组，DIAMETER认证组必须先配置。 
 
@@ -1007,8 +928,7 @@ no authentication-diameter-group
 
 
 
-### 范例 
-
+范例 :
 
 在AAA认证模板下，配置DIAMETER认证组 1:ZXROSNG(config)#aaa-authentication-template 1ZXROSNG(config-aaa-authen-template)#aaa-authentication-type diameterZXROSNG(config-aaa-authen-template)#authentication-diameter-group 1ZXROSNG(config-aaa-authen-template)#
 
@@ -1016,8 +936,7 @@ no authentication-diameter-group
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authentication-template 
 
@@ -1032,8 +951,7 @@ authentication-radius-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置RADIUS认证组。 
 
@@ -1042,8 +960,7 @@ authentication-radius-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA认证模板模式  
 
@@ -1052,8 +969,7 @@ authentication-radius-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1062,8 +978,7 @@ authentication-radius-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1080,8 +995,7 @@ no authentication-radius-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1096,8 +1010,7 @@ no authentication-radius-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1106,8 +1019,7 @@ no authentication-radius-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 认证模板下，绑定RADIUS认证组，RADIUS认证组必须先配置。 
 
@@ -1116,8 +1028,7 @@ no authentication-radius-group
 
 
 
-### 范例 
-
+范例 :
 
 在AAA认证模板下，配置RADIUS 认证组 1:ZXROSNG(config)#aaa-authentication-template 1ZXROSNG(config-aaa-authen-template)#aaa-authentication-type radiusZXROSNG(config-aaa-authen-template)#authentication-radius-group 1ZXROSNG(config-aaa-authen-template)#
 
@@ -1126,8 +1037,7 @@ no authentication-radius-group
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authentication-template 
 
@@ -1142,8 +1052,7 @@ authentication-tacacs-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置TACACS认证组。 
 
@@ -1152,8 +1061,7 @@ authentication-tacacs-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA认证模板模式  
 
@@ -1162,8 +1070,7 @@ authentication-tacacs-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1172,8 +1079,7 @@ authentication-tacacs-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1190,8 +1096,7 @@ no authentication-tacacs-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1206,8 +1111,7 @@ no authentication-tacacs-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1216,8 +1120,7 @@ no authentication-tacacs-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 认证模板下，绑定TACACS认证组，TACACS组必须先配置。 
 
@@ -1226,8 +1129,7 @@ no authentication-tacacs-group
 
 
 
-### 范例 
-
+范例 :
 
 在AAA认证模板下，配置TACACS组 zte：ZXROSNG(config)#aaa-authentication-template 1ZXROSNG(config-aaa-authen-template)#aaa-authentication-type tacacsZXROSNG(config-aaa-authen-template)#authentication-tacacs-group zteZXROSNG(config-aaa-authen-template)#
 
@@ -1235,8 +1137,7 @@ no authentication-tacacs-group
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authentication-template 
 
@@ -1251,8 +1152,7 @@ authorization-radius-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置授权的radius组号 
 
@@ -1261,8 +1161,7 @@ authorization-radius-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA授权模板模式  
 
@@ -1271,8 +1170,7 @@ authorization-radius-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1281,8 +1179,7 @@ authorization-radius-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1299,8 +1196,7 @@ no authorization-radius-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1315,8 +1211,7 @@ no authorization-radius-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无。 
 
@@ -1325,8 +1220,7 @@ no authorization-radius-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 RADIUS组名长度为1-31个字符。该命令只在aaa-authorization-template模式下配置以下命令时生效：aaa-authorization-type radius。另外，该命令参数为radius组名，该组名必须事先在以下命令中配置：radius authentication-group <group-name>。
 
@@ -1335,8 +1229,7 @@ RADIUS组名长度为1-31个字符。该命令只在aaa-authorization-template�
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#radius authentication-group zteZXROSNG(config-authgrp-zte)#exitZXROSNG(config)#aaa-authorization-template 2010ZXROSNG(config-aaa-author-template)#authorization-radius-group zteZXROSNG(config-aaa-author-template)#ZXROSNG(config)#radius authentication-group zte
 
@@ -1344,8 +1237,7 @@ ZXROSNG(config)#radius authentication-group zteZXROSNG(config-authgrp-zte)#exitZ
 
 
 
-### 相关命令 
-
+相关命令 :
 
 aaa-authorization-typeradius authentication-group 
 
@@ -1360,8 +1252,7 @@ authorization-tacacs-group
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置TACACS授权组。 
 
@@ -1370,8 +1261,7 @@ authorization-tacacs-group
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA授权模板模式  
 
@@ -1380,8 +1270,7 @@ authorization-tacacs-group
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1390,8 +1279,7 @@ authorization-tacacs-group
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1408,8 +1296,7 @@ no authorization-tacacs-group
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1424,8 +1311,7 @@ no authorization-tacacs-group
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1434,8 +1320,7 @@ no authorization-tacacs-group
 
 
 
-### 使用说明 
-
+使用说明 :
 
 授权模板下，绑定TACACS授权组，TACACS 组必须先配置。 
 
@@ -1444,8 +1329,7 @@ no authorization-tacacs-group
 
 
 
-### 范例 
-
+范例 :
 
 在AAA授权模式下，配置TACACS 授权组zte：ZXROSNG(config)#aaa-authorization-template 1ZXROSNG(config-aaa-author-template)#authorization-tacacs-group zte
 
@@ -1453,24 +1337,21 @@ no authorization-tacacs-group
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authorization-template 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置认证模板的描述信息。 
 
@@ -1479,8 +1360,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA认证模板模式  
 
@@ -1489,8 +1369,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1499,8 +1378,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1517,8 +1395,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1533,8 +1410,7 @@ no description
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1543,8 +1419,7 @@ no description
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置认证模板描述信息。 
 
@@ -1553,8 +1428,7 @@ no description
 
 
 
-### 范例 
-
+范例 :
 
 AAA认证模式下，配置描述信息：ZXROSNG(config)#aaa-authentication-template 1ZXROSNG(config-aaa-authen-template)#description aaa-authen-descript 
 
@@ -1562,24 +1436,21 @@ AAA认证模式下，配置描述信息：ZXROSNG(config)#aaa-authentication-tem
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authentication-template 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置授权模板的描述信息。 
 
@@ -1588,8 +1459,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA授权模板模式  
 
@@ -1598,8 +1468,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1608,8 +1477,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1626,8 +1494,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1642,8 +1509,7 @@ no description
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1652,8 +1518,7 @@ no description
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置授权模板描述信息。 
 
@@ -1662,8 +1527,7 @@ no description
 
 
 
-### 范例 
-
+范例 :
 
 AAA授权模式下，配置描述信息：ZXROSNG(config)#aaa-authorization-template 1ZXROSNG(config-aaa-author-template)#description aaa-author-descript
 
@@ -1671,24 +1535,21 @@ AAA授权模式下，配置描述信息：ZXROSNG(config)#aaa-authorization-temp
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-authorization-template 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置计费模板的描述信息。 
 
@@ -1697,8 +1558,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  AAA计费模板模式  
 
@@ -1707,8 +1567,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1717,8 +1576,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1735,8 +1593,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1751,8 +1608,7 @@ no description
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1761,8 +1617,7 @@ no description
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置计费模板描述信息。 
 
@@ -1771,8 +1626,7 @@ no description
 
 
 
-### 范例 
-
+范例 :
 
 AAA计费模式下，配置描述信息：ZXROSNG(config)#aaa-accounting-template 1ZXROSNG(config-aaa-acct-template)#description aaa-accounting-descript
 
@@ -1780,8 +1634,7 @@ AAA计费模式下，配置描述信息：ZXROSNG(config)#aaa-accounting-templat
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show aaa-accounting-template 
 
@@ -1796,8 +1649,7 @@ show aaa-accounting-template
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示计费模板配置信息。 
 
@@ -1806,8 +1658,7 @@ show aaa-accounting-template
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -1816,8 +1667,7 @@ show aaa-accounting-template
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1826,8 +1676,7 @@ show aaa-accounting-template
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1841,8 +1690,7 @@ show aaa-accounting-template
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1857,8 +1705,7 @@ show aaa-accounting-template
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1867,8 +1714,7 @@ show aaa-accounting-template
 
 
 
-### 使用说明 
-
+使用说明 :
 
 查看计费模板配置信息。 
 
@@ -1877,8 +1723,7 @@ show aaa-accounting-template
 
 
 
-### 范例 
-
+范例 :
 
 在配置模式下，查看计费模板1：ZXROSNG(config)#aaa-accounting-template 1ZXROSNG(config-aaa-acct-template)#aaa-accounting-type radiusZXROSNG(config-aaa-acct-template)#accounting-radius-group first 1ZXROSNG(config)#show aaa-accounting-template 1acct-template:1acct-type:radiusfirst-radius-group:1
 
@@ -1886,8 +1731,7 @@ show aaa-accounting-template
 
 
 
-### 相关命令 
-
+相关命令 :
 
 aaa-accounting-template 
 
@@ -1902,8 +1746,7 @@ show aaa-authentication-template
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示认证模板配置信息。 
 
@@ -1912,8 +1755,7 @@ show aaa-authentication-template
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -1922,8 +1764,7 @@ show aaa-authentication-template
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -1932,8 +1773,7 @@ show aaa-authentication-template
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -1947,8 +1787,7 @@ show aaa-authentication-template
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -1963,8 +1802,7 @@ show aaa-authentication-template
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -1973,8 +1811,7 @@ show aaa-authentication-template
 
 
 
-### 使用说明 
-
+使用说明 :
 
 查看认证模板配置信息。 
 
@@ -1983,8 +1820,7 @@ show aaa-authentication-template
 
 
 
-### 范例 
-
+范例 :
 
 查看所有认证模板：ZXROSNG(config-aaa-authen-template)#show aaa-authentication-template authen-template:2001authen-type:localauthen-template:2002authen-type:tacacsauthen-tacacs-group:t1authen-template:2128authen-type:radiusauthen-radius-group:1authen-template:1
 
@@ -1993,8 +1829,7 @@ show aaa-authentication-template
 
 
 
-### 相关命令 
-
+相关命令 :
 
 aaa-authentication-template 
 
@@ -2009,8 +1844,7 @@ show aaa-authorization-template
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示授权模板配置信息。 
 
@@ -2019,8 +1853,7 @@ show aaa-authorization-template
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -2029,8 +1862,7 @@ show aaa-authorization-template
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2039,8 +1871,7 @@ show aaa-authorization-template
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2054,8 +1885,7 @@ show aaa-authorization-template
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2070,8 +1900,7 @@ show aaa-authorization-template
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -2080,8 +1909,7 @@ show aaa-authorization-template
 
 
 
-### 使用说明 
-
+使用说明 :
 
 查看授权模板配置信息。 
 
@@ -2090,8 +1918,7 @@ show aaa-authorization-template
 
 
 
-### 范例 
-
+范例 :
 
 在配置模式下，查看授权模板1：ZXROSNG(config)#aaa-authorization-template 1ZXROSNG(config-aaa-author-template)#aaa-authorization-type tacacsZXROSNG(config-aaa-author-template)#authorization-tacacs-group zteZXROSNG(config)# show aaa-authorization-template 1author-template:1author-type:tacacsauthor-tacacs-group:zte
 
@@ -2099,8 +1926,7 @@ show aaa-authorization-template
 
 
 
-### 相关命令 
-
+相关命令 :
 
 aaa-authorization-template 
 
@@ -2116,8 +1942,7 @@ ipv6-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于全局配置模式下，用于创建一个IPv6 ACL(访问控制列表)并进入此IPv6 ACL的配置模式。    如果此IPv6 ACL已经存在，直接进入IPv6 ACL配置模式。    如果此IPv6 ACL不存在，表示新建一个IPv6 ACL，并进入IPv6 ACL配置模式。进入IPv6 ACL配置模式后，主要可配置以下内容：    配置IPv6 ACL规则。在IPv6 ACL配置模式下，可使用rule命令配置IPv6 ACL规则。用于控制网络流量，哪些特征的流程可以通过，哪些特征的流量不可以通过。从而达到控制访问的目的。    调整规则的顺序。在IPv6 ACL配置模式下，可使用move命令修改规则的ID，从而达到调整列表中规则顺序的目的。IPv6 ACL列表中的规则是按照规则ID从小到大的顺寻排量生效的。    清空该ACL下的所有规则在IPv6 ACL配置模式下，可使用no rule all命令删除当前ACL列表下的所有规则。在网络中现在的流量越来越大，所以必须对流量进行控制和管理。ACL主要作用就是对网络中的流量进行控制，哪些允许通过哪些拒绝通过；对网络中的流量进行分类，方便对流量进行管理。
 
@@ -2126,8 +1951,7 @@ ipv6-access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -2136,8 +1960,7 @@ ipv6-access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2146,8 +1969,7 @@ ipv6-access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv6-access-list 
@@ -2163,8 +1985,7 @@ no ipv6-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2179,8 +2000,7 @@ no ipv6-access-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -2189,8 +2009,7 @@ no ipv6-access-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 当创建了一个IPv6 ACL后，还需要使用rule命令配置IPv6 ACL规则，这样才是一个有效的IPv6 ACL访问控制列表。最多可以配置4000个IPv6 ACL访问控制列表。
 
@@ -2199,8 +2018,7 @@ no ipv6-access-list
 
 
 
-### 范例 
-
+范例 :
 
 用ipv6-access-list命令进入myacl的配置模式，并配置规则：ZXROSNG(config)#ipv6-access-list myaclZXROSNG(config-ipv6-acl)#rule deny tcp any anyZXROSNG(config-ipv6-acl)#show ipv6-access-listsipv6-access-list myacl 1/1 (showed/total)   10 deny tcp any anyZXROSNG(config-ipv6-acl)#exitZXROSNG(config)#no ipv6-access-list myacl
 
@@ -2209,8 +2027,7 @@ no ipv6-access-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-lists 
 
@@ -2225,8 +2042,7 @@ move
 
 
 
-### 命令功能 
-
+命令功能 :
 
 调整改变ACL列表中规则的编号顺序。 
 
@@ -2235,8 +2051,7 @@ move
 
 
 
-### 命令模式 
-
+命令模式 :
 
  IPv6-ACL模式  
 
@@ -2245,8 +2060,7 @@ move
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2255,8 +2069,7 @@ move
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2271,8 +2084,7 @@ move
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2288,18 +2100,7 @@ move
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -2308,8 +2109,16 @@ move
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#ipv6-access-list myaclZXROSNG(config-ipv6-acl)#rule 1 deny tcp 1::2/12 any ZXROSNG(config-ipv6-acl)#rule 2 deny udp 2::3/12 anyZXROSNG(config-ipv6-acl)#move 1 3查看命令配置结果：ZXROSNG(config-ipv6-acl)#sho ipv6-access-lists name myaclipv6-access-list myacl 2/2 (showed/total)   2 deny udp 2::3/12 any   3 deny tcp 1::2/12 anyZXROSNG(config-ipv6-acl)#
 
@@ -2317,8 +2126,7 @@ ZXROSNG(config)#ipv6-access-list myaclZXROSNG(config-ipv6-acl)#rule 1 deny tcp 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-lists 
 
@@ -2333,8 +2141,7 @@ resequence-access-list ipv6
 
 
 
-### 命令功能 
-
+命令功能 :
 
 对指定ACL列表的规则进行重新编号。 
 
@@ -2343,8 +2150,7 @@ resequence-access-list ipv6
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -2353,8 +2159,7 @@ resequence-access-list ipv6
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2363,8 +2168,7 @@ resequence-access-list ipv6
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2380,8 +2184,7 @@ resequence-access-list ipv6
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2398,8 +2201,7 @@ resequence-access-list ipv6
 
 
 
-### 缺省 
-
+缺省 :
 
 <base-rule-id>默认为10。<increment>默认为10。
 
@@ -2407,8 +2209,7 @@ resequence-access-list ipv6
 
 
 
-### 使用说明 
-
+使用说明 :
 
 89交换机项目不支持该命令。该命令是对已经存在的ACL列表中的所有规则的ID进行重新编号，规则原来的顺序保持不变，命令最后两个参数都是可选的，不设置的话默认值都是10。
 
@@ -2416,8 +2217,7 @@ resequence-access-list ipv6
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#ipv6-access-list myaclZXROSNG(config-ipv6-acl)#rule 1 deny tcp 1::2:0/12 any ZXROSNG(config-ipv6-acl)#rule 2 deny udp 1::2:0/12 any                      ZXROSNG(config-ipv6-acl)#rule 3 deny ipv6 1::2:0/12 any                          ZXROSNG(config-ipv6-acl)#exitZXROSNG(config)#resequence-access-list ipv6 myacl 10 10查看结果配置信息：ZXROSNG(config)#show ipv6-access-lists name myaclipv6-access-list myacl 3/3 (showed/total)   10 deny tcp 1::2:0/12 any   20 deny udp 1::2:0/12 any   30 deny ipv6 1::2:0/12 any
 
@@ -2425,8 +2225,7 @@ ZXROSNG(config)#ipv6-access-list myaclZXROSNG(config-ipv6-acl)#rule 1 deny tcp 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-lists 
 
@@ -2441,8 +2240,7 @@ rule
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置/删除IPv6 ACL的规则。 
 
@@ -2451,8 +2249,7 @@ rule
 
 
 
-### 命令模式 
-
+命令模式 :
 
  IPv6-ACL模式  
 
@@ -2461,8 +2258,7 @@ rule
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2471,8 +2267,7 @@ rule
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 rule 
@@ -2595,8 +2390,7 @@ no rule
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2707,18 +2501,7 @@ esp|加密选项头
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -2727,8 +2510,16 @@ esp|加密选项头
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置一条TCP规则,当源地址在1::2/12子网范围内，源端口在1000–2000范围内，dscp为6的IPv6建链TCP报文匹配，动作为permit：ZXROSNG(config-ipv6-acl)#rule permit tcp 1::2/12 range 1000-2000 any established dscp 6
 
@@ -2737,8 +2528,7 @@ esp|加密选项头
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-lists 
 
@@ -2753,8 +2543,7 @@ show ipv6-access-lists
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示配置的IPv6 ACL规则信息。 
 
@@ -2763,8 +2552,7 @@ show ipv6-access-lists
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -2773,8 +2561,7 @@ show ipv6-access-lists
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2783,8 +2570,7 @@ show ipv6-access-lists
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2812,8 +2598,7 @@ show ipv6-access-lists
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2838,18 +2623,7 @@ brief|显示ACL的简要信息
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -2858,8 +2632,16 @@ brief|显示ACL的简要信息
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config-ipv6-acl)#show ipv6-access-listsipv6-access-list myacl                                           4/4 (showed/total)  10 deny tcp 12::12/12 any   11 permit tcp 12::13/13 any  range 1000-2000   15 permit tcp 12::14/14 any  20 deny tcp 12::15/15 any
 
@@ -2867,8 +2649,7 @@ ZXROSNG(config-ipv6-acl)#show ipv6-access-listsipv6-access-list myacl       �
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ipv6-access-list 
 
@@ -2884,8 +2665,7 @@ ipv4-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv4 ACL到接口出方向。 
 
@@ -2894,8 +2674,7 @@ ipv4-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  smartgroup接口模式  
 
@@ -2904,8 +2683,7 @@ ipv4-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -2914,8 +2692,7 @@ ipv4-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -2932,8 +2709,7 @@ no ipv4-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -2948,18 +2724,7 @@ no ipv4-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -2968,8 +2733,16 @@ no ipv4-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定IPv4 ACL MyACL 到smartgroup1的出方向:ZXROSNG(config)#interface smartgroup1ZXROSNG(config-if-smartgroup1)#ipv4-access-group egress MyACL显示配置结果：ZXROSNG(config-if-smartgroup1)#show ipv4-access-groups===============================================================================Interface name:smartgroup1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress      MyACLZXROSNG(config-if-smartgroup1)#删除gei-0/1/0/1出方向的ACL:ZXROSNG(config-if-smartgroup1)#no ipv4-access-group egress
 
@@ -2977,8 +2750,7 @@ no ipv4-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -2993,8 +2765,7 @@ ipv4-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -3003,8 +2774,7 @@ ipv4-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  10G以太接口模式,pos子接口模式,pos接口模式,smartgroup子接口模式,以太接口模式,千兆以太接口模式  
 
@@ -3013,8 +2783,7 @@ ipv4-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 千兆以太接口模式:15,以太接口模式:15,pos接口模式:15,smartgroup子接口模式:15,10G以太接口模式:15,pos子接口模式:15 
 
@@ -3023,8 +2792,7 @@ ipv4-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3041,8 +2809,7 @@ no ipv4-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3057,18 +2824,7 @@ no ipv4-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3077,8 +2833,16 @@ no ipv4-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config)#ipv4-access-group interface gei-0/1/0/1 egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv4-access-groups by-interface gei-0/1/0/1===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       myacl
 
@@ -3087,8 +2851,7 @@ no ipv4-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3103,8 +2866,7 @@ ipv4-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -3113,8 +2875,7 @@ ipv4-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  multilink接口模式,posgroup接口模式,supervlan接口模式  
 
@@ -3123,8 +2884,7 @@ ipv4-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15 
 
@@ -3133,8 +2893,7 @@ multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3151,8 +2910,7 @@ no ipv4-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3167,18 +2925,7 @@ no ipv4-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3187,8 +2934,16 @@ no ipv4-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config)#ipv4-access-group interface gei-0/1/0/1 egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv4-access-groups by-interface gei-0/1/0/1===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       myacl
 
@@ -3197,8 +2952,7 @@ no ipv4-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3213,8 +2967,7 @@ ipv4-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -3223,8 +2976,7 @@ ipv4-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  dsl接口模式,serial接口模式,ulei子接口模式,ulei接口模式,通道化ce1接口模式,通道化cpos_e1接口模式  
 
@@ -3233,8 +2985,7 @@ ipv4-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 通道化ce1接口模式:15,ulei接口模式:15,通道化cpos_e1接口模式:15,ulei子接口模式:15,dsl接口模式:15,serial接口模式:15 
 
@@ -3243,8 +2994,7 @@ ipv4-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3261,8 +3011,7 @@ no ipv4-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3277,18 +3026,7 @@ no ipv4-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3297,8 +3035,16 @@ no ipv4-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config)#ipv4-access-group interface gei-0/1/0/1 egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv4-access-groups by-interface gei-0/1/0/1===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       myacl
 
@@ -3307,8 +3053,7 @@ no ipv4-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3323,8 +3068,7 @@ ipv4-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv4 ACL到接口出方向。 
 
@@ -3333,8 +3077,7 @@ ipv4-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  qx子接口模式,qx接口模式  
 
@@ -3343,8 +3086,7 @@ ipv4-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 qx接口模式:15,qx子接口模式:15 
 
@@ -3353,8 +3095,7 @@ qx接口模式:15,qx子接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3371,8 +3112,7 @@ no ipv4-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3387,18 +3127,7 @@ no ipv4-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3407,8 +3136,16 @@ no ipv4-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定IPv4 ACL MyACL 到gei-0/1/0/1的出方向:ZXROSNG(config)#interface gei-0/1/0/1ZXROSNG(config-if-gei-0/1/0/1)#ipv4-access-group egress MyACL显示配置结果：ZXROSNG(config-if-gei-0/1/0/1)#show ipv4-access-groups===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       MyACLZXROSNG(config-if-gei-0/1/0/1)#删除gei-0/1/0/1出方向的ACL:ZXROSNG(config-if-gei-0/1/0/1)#no ipv4-access-group egress
 
@@ -3417,8 +3154,7 @@ no ipv4-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3433,8 +3169,7 @@ ipv4-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv4 ACL到接口出方向。 
 
@@ -3443,8 +3178,7 @@ ipv4-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太子接口模式  
 
@@ -3453,8 +3187,7 @@ ipv4-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -3463,8 +3196,7 @@ ipv4-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3481,8 +3213,7 @@ no ipv4-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3497,18 +3228,7 @@ no ipv4-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3517,8 +3237,16 @@ no ipv4-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定IPv4 ACL MyACL 到gei-0/1/0/1的出方向:ZXROSNG(config)#interface gei-0/1/0/1ZXROSNG(config-if-gei-0/1/0/1)#ipv4-access-group egress MyACL显示配置结果：ZXROSNG(config-if-gei-0/1/0/1)#show ipv4-access-groups===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       MyACLZXROSNG(config-if-gei-0/1/0/1)#删除gei-0/1/0/1出方向的ACL:ZXROSNG(config-if-gei-0/1/0/1)#no ipv4-access-group egress
 
@@ -3526,8 +3254,7 @@ no ipv4-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3542,8 +3269,7 @@ ipv4-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -3552,8 +3278,7 @@ ipv4-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  10G以太接口模式,pos子接口模式,pos接口模式,smartgroup子接口模式,smartgroup接口模式,以太接口模式,千兆以太接口模式  
 
@@ -3562,8 +3287,7 @@ ipv4-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 千兆以太接口模式:15,以太接口模式:15,smartgroup子接口模式:15,pos接口模式:15,smartgroup接口模式:15,10G以太接口模式:15,pos子接口模式:15 
 
@@ -3572,8 +3296,7 @@ ipv4-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3590,8 +3313,7 @@ no ipv4-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3606,18 +3328,7 @@ no ipv4-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3626,8 +3337,16 @@ no ipv4-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv4-access-group ingress myacl 查看配置结果信息：ZXROSNG(config)#show ipv4-access-groups by-interface gei-0/1/0/1===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress       myacl
 
@@ -3636,8 +3355,7 @@ no ipv4-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3652,8 +3370,7 @@ ipv4-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -3662,8 +3379,7 @@ ipv4-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  multilink接口模式,posgroup接口模式,supervlan接口模式  
 
@@ -3672,8 +3388,7 @@ ipv4-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15 
 
@@ -3682,8 +3397,7 @@ multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3700,8 +3414,7 @@ no ipv4-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3716,18 +3429,7 @@ no ipv4-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3736,8 +3438,16 @@ no ipv4-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv4-access-group ingress myacl 查看配置结果信息：ZXROSNG(config)#show ipv4-access-groups by-interface gei-0/1/0/1===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress       myacl
 
@@ -3746,8 +3456,7 @@ no ipv4-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3762,8 +3471,7 @@ ipv4-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -3772,8 +3480,7 @@ ipv4-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  dsl接口模式,serial接口模式,ulei子接口模式,ulei接口模式,通道化ce1接口模式,通道化cpos_e1接口模式  
 
@@ -3782,8 +3489,7 @@ ipv4-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 通道化ce1接口模式:15,ulei接口模式:15,通道化cpos_e1接口模式:15,ulei子接口模式:15,dsl接口模式:15,serial接口模式:15 
 
@@ -3792,8 +3498,7 @@ ipv4-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3810,8 +3515,7 @@ no ipv4-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3826,18 +3530,7 @@ no ipv4-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3846,8 +3539,16 @@ no ipv4-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv4-access-group ingress myacl 查看配置结果信息：ZXROSNG(config)#show ipv4-access-groups by-interface gei-0/1/0/1===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress       myacl
 
@@ -3856,8 +3557,7 @@ no ipv4-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3872,8 +3572,7 @@ ipv4-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv4 ACL到接口入方向。 
 
@@ -3882,8 +3581,7 @@ ipv4-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  qx子接口模式,qx接口模式  
 
@@ -3892,8 +3590,7 @@ ipv4-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 qx接口模式:15,qx子接口模式:15 
 
@@ -3902,8 +3599,7 @@ qx接口模式:15,qx子接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -3920,8 +3616,7 @@ no ipv4-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -3936,18 +3631,7 @@ no ipv4-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -3956,8 +3640,16 @@ no ipv4-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定IPv4 ACL MyACL 到gei-0/1/0/1的入方向:ZXROSNG(config)#interface gei-0/1/0/1ZXROSNG(config-if-gei-0/1/0/1)#ipv4-access-group ingress MyACL显示配置结果：ZXROSNG(config-if-gei-0/1/0/1)#show ipv4-access-groups ===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress       MyACLZXROSNG(config-if-gei-0/1/0/1)#删除gei-0/1/0/1入方向的ACL:ZXROSNG(config-if-gei-0/1/0/1)#no ipv4-access-group ingress
 
@@ -3966,8 +3658,7 @@ no ipv4-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -3982,8 +3673,7 @@ ipv4-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv4 ACL到接口入方向。 
 
@@ -3992,8 +3682,7 @@ ipv4-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太子接口模式  
 
@@ -4002,8 +3691,7 @@ ipv4-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4012,8 +3700,7 @@ ipv4-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4030,8 +3717,7 @@ no ipv4-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4046,18 +3732,7 @@ no ipv4-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4066,8 +3741,16 @@ no ipv4-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定IPv4 ACL MyACL 到gei-0/1/0/1的入方向:ZXROSNG(config)#interface gei-0/1/0/1ZXROSNG(config-if-gei-0/1/0/1)#ipv4-access-group ingress MyACL显示配置结果：ZXROSNG(config-if-gei-0/1/0/1)#show ipv4-access-groups===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress       MyACLZXROSNG(config-if-gei-0/1/0/1)#删除gei-0/1/0/1入方向的ACL:ZXROSNG(config-if-gei-0/1/0/1)#no ipv4-access-group ingress
 
@@ -4075,8 +3758,7 @@ no ipv4-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -4091,8 +3773,7 @@ ipv4-access-group interface <mid> egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv4 ACL到接口出方向。 
 
@@ -4101,8 +3782,7 @@ ipv4-access-group interface <mid> egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -4111,8 +3791,7 @@ ipv4-access-group interface <mid> egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4121,8 +3800,7 @@ ipv4-access-group interface <mid> egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4143,8 +3821,7 @@ no ipv4-access-group interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4160,8 +3837,7 @@ no ipv4-access-group interface
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -4170,8 +3846,7 @@ no ipv4-access-group interface
 
 
 
-### 使用说明 
-
+使用说明 :
 
 绑定接口时，接口必须存在，可以绑定不存在的ACL。解绑定接口时，接口必须存在。
 
@@ -4180,8 +3855,7 @@ no ipv4-access-group interface
 
 
 
-### 范例 
-
+范例 :
 
 绑定IPv4 ACL MyACL 到gei-0/1/0/1的出方向:ipv4-access-group interface gei-0/1/0/1 egress MyACL显示配置结果：ZXROSNG(config)#show ipv4-access-groups===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress      MyACLZXROSNG(config)#删除gei-0/1/0/1出方向的ACL:ZXROSNG(config)#no ipv4-access-group interface gei-0/1/0/1 egress
 
@@ -4189,8 +3863,7 @@ no ipv4-access-group interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -4205,8 +3878,7 @@ ipv4-access-group interface <mid> ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv4 ACL到接口入方向。 
 
@@ -4215,8 +3887,7 @@ ipv4-access-group interface <mid> ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -4225,8 +3896,7 @@ ipv4-access-group interface <mid> ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4235,8 +3905,7 @@ ipv4-access-group interface <mid> ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4257,8 +3926,7 @@ no ipv4-access-group interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4274,8 +3942,7 @@ no ipv4-access-group interface
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -4284,8 +3951,7 @@ no ipv4-access-group interface
 
 
 
-### 使用说明 
-
+使用说明 :
 
 绑定接口时，接口必须存在，可以绑定不存在的ACL。解绑定接口时，接口必须存在。
 
@@ -4294,8 +3960,7 @@ no ipv4-access-group interface
 
 
 
-### 范例 
-
+范例 :
 
 绑定IPv4 ACL MyACL 到gei-0/1/0/1的入方向:ipv4-access-group interface gei-0/1/0/1 ingress MyACL显示配置结果：ZXROSNG(config)#show ipv4-access-groups===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress      MyACL删除gei-0/1/0/1入方向的ACL:ZXROSNG(config)#no ipv4-access-group interface gei-0/1/0/1 ingress
 
@@ -4304,8 +3969,7 @@ no ipv4-access-group interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4-access-groups 
 
@@ -4320,8 +3984,7 @@ ipv4-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于全局配置模式下，用于创建一个IPv4 ACL(访问控制列表)并进入此IPv4 ACL的配置模式。    如果此IPv4 ACL已经存在，直接进入IPv4 ACL配置模式。    如果此IPv4 ACL不存在，表示新建一个IPv4 ACL，并进入IPv4 ACL配置模式。进入IPv4 ACL配置模式后，主要可配置以下内容：    配置IPv4 ACL规则。在IPv4 ACL配置模式下，可使用rule命令配置IPv4 ACL规则。用于控制网络流量，哪些特征的流程可以通过，哪些特征的流量不可以通过。从而达到控制访问的目的。    调整规则的顺序。在IPv4 ACL配置模式下，可使用move命令修改规则的ID，从而达到调整列表中规则顺序的目的。IPv4 ACL列表中的规则是按照规则ID从小到大的顺寻排量生效的。    清空该ACL下的所有规则在IPv4 ACL配置模式下，可使用no rule all命令删除当前ACL列表下的所有规则。在网络中现在的流量越来越大，所以必须对流量进行控制和管理。ACL主要作用就是对网络中的流量进行控制，哪些允许通过哪些拒绝通过；对网络中的流量进行分类，方便对流量进行管理。
 
@@ -4330,8 +3993,7 @@ ipv4-access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -4340,8 +4002,7 @@ ipv4-access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4350,8 +4011,7 @@ ipv4-access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv4-access-list 
@@ -4367,8 +4027,7 @@ no ipv4-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4383,8 +4042,7 @@ no ipv4-access-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -4393,8 +4051,7 @@ no ipv4-access-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 当创建了一个IPv4 ACL后，还需要使用rule命令配置IPv4 ACL规则，这样才是一个有效的IPv4 ACL访问控制列表。最多可以配置4000个IPv4 ACL访问控制列表。
 
@@ -4402,8 +4059,7 @@ no ipv4-access-list
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#ipv4-access-list myaclZXROSNG(config-ipv4-acl)#rule deny any ZXROSNG(config-ipv4-acl)#exZXROSNG(config)#no ipv4-access-list myacl
 
@@ -4411,8 +4067,7 @@ ZXROSNG(config)#ipv4-access-list myaclZXROSNG(config-ipv4-acl)#rule deny any ZXR
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4–access-lists 
 
@@ -4427,8 +4082,7 @@ ipv6-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -4437,8 +4091,7 @@ ipv6-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  10G以太接口模式,pos接口模式,smartgroup接口模式,以太接口模式,千兆以太接口模式  
 
@@ -4447,8 +4100,7 @@ ipv6-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 以太接口模式:15,千兆以太接口模式:15,pos接口模式:15,10G以太接口模式:15,smartgroup接口模式:15 
 
@@ -4457,8 +4109,7 @@ ipv6-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4475,8 +4126,7 @@ no ipv6-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4491,18 +4141,7 @@ no ipv6-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4511,8 +4150,16 @@ no ipv6-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1Interface name|vlan   Direction ACL name                        Default action------------------------------------------------------------------------------- gei-0/1/0/1 Egress myacl 
 
@@ -4520,8 +4167,7 @@ no ipv6-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -4536,8 +4182,7 @@ ipv6-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -4546,8 +4191,7 @@ ipv6-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  multilink接口模式,posgroup接口模式,supervlan接口模式  
 
@@ -4556,8 +4200,7 @@ ipv6-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15 
 
@@ -4566,8 +4209,7 @@ multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4584,8 +4226,7 @@ no ipv6-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4600,18 +4241,7 @@ no ipv6-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4620,8 +4250,16 @@ no ipv6-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Egress myacl 
 
@@ -4629,8 +4267,7 @@ no ipv6-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -4645,8 +4282,7 @@ ipv6-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -4655,8 +4291,7 @@ ipv6-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  smartgroup子接口模式  
 
@@ -4665,8 +4300,7 @@ ipv6-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -4675,8 +4309,7 @@ ipv6-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4693,8 +4326,7 @@ no ipv6-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4709,18 +4341,7 @@ no ipv6-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4729,8 +4350,16 @@ no ipv6-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1 Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Egress myacl 
 
@@ -4738,8 +4367,7 @@ no ipv6-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -4754,8 +4382,7 @@ ipv6-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -4764,8 +4391,7 @@ ipv6-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  dsl接口模式,serial接口模式,ulei子接口模式,ulei接口模式,通道化ce1接口模式,通道化cpos_e1接口模式  
 
@@ -4774,8 +4400,7 @@ ipv6-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 通道化ce1接口模式:15,ulei接口模式:15,通道化cpos_e1接口模式:15,ulei子接口模式:15,dsl接口模式:15,serial接口模式:15 
 
@@ -4784,8 +4409,7 @@ ipv6-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4802,8 +4426,7 @@ no ipv6-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4818,18 +4441,7 @@ no ipv6-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4838,8 +4450,16 @@ no ipv6-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Egress myacl 
 
@@ -4847,8 +4467,7 @@ no ipv6-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -4863,8 +4482,7 @@ ipv6-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv6 ACL到接口出方向。 
 
@@ -4873,8 +4491,7 @@ ipv6-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  qx子接口模式,qx接口模式  
 
@@ -4883,8 +4500,7 @@ ipv6-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 qx接口模式:15,qx子接口模式:15 
 
@@ -4893,8 +4509,7 @@ qx接口模式:15,qx子接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -4911,8 +4526,7 @@ no ipv6-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -4927,18 +4541,7 @@ no ipv6-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -4947,8 +4550,16 @@ no ipv6-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定IPv6 ACL MyACL 到gei-0/1/0/1的出方向:ZXROSNG(config)#interface gei-0/1/0/1ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group egress MyACL显示配置结果：ZXROSNG(config-if-gei-0/1/0/1)#show ipv6-access-groups Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Egress MyACLZXROSNG(config-if-gei-0/1/0/1)#删除gei-0/1/0/1出方向的ACL:ZXROSNG(config-if-gei-0/1/0/1)#no ipv6-access-group egressZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1
 
@@ -4957,8 +4568,7 @@ no ipv6-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -4973,8 +4583,7 @@ ipv6-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -4983,8 +4592,7 @@ ipv6-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太子接口模式  
 
@@ -4993,8 +4601,7 @@ ipv6-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5003,8 +4610,7 @@ ipv6-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5021,8 +4627,7 @@ no ipv6-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5037,18 +4642,7 @@ no ipv6-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5057,8 +4651,16 @@ no ipv6-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group egress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Egress myacl 
 
@@ -5066,8 +4668,7 @@ no ipv6-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -5082,8 +4683,7 @@ ipv6-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -5092,8 +4692,7 @@ ipv6-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  10G以太接口模式,pos接口模式,smartgroup子接口模式,smartgroup接口模式,以太接口模式,千兆以太接口模式  
 
@@ -5102,8 +4701,7 @@ ipv6-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 以太接口模式:15,千兆以太接口模式:15,smartgroup子接口模式:15,pos接口模式:15,10G以太接口模式:15,smartgroup接口模式:15 
 
@@ -5112,8 +4710,7 @@ ipv6-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5130,8 +4727,7 @@ no ipv6-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5146,18 +4742,7 @@ no ipv6-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5166,8 +4751,16 @@ no ipv6-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group ingress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1 Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Ingress myacl 
 
@@ -5175,8 +4768,7 @@ no ipv6-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups
 
@@ -5190,8 +4782,7 @@ ipv6-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -5200,8 +4791,7 @@ ipv6-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  multilink接口模式,posgroup接口模式,supervlan接口模式  
 
@@ -5210,8 +4800,7 @@ ipv6-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15 
 
@@ -5220,8 +4809,7 @@ multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5238,8 +4826,7 @@ no ipv6-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5254,18 +4841,7 @@ no ipv6-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5274,8 +4850,16 @@ no ipv6-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group ingress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1 Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Ingress myacl 
 
@@ -5283,8 +4867,7 @@ no ipv6-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups
 
@@ -5298,8 +4881,7 @@ ipv6-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -5308,8 +4890,7 @@ ipv6-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  dsl接口模式,serial接口模式,ulei子接口模式,ulei接口模式,通道化ce1接口模式,通道化cpos_e1接口模式  
 
@@ -5318,8 +4899,7 @@ ipv6-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 通道化ce1接口模式:15,ulei接口模式:15,通道化cpos_e1接口模式:15,ulei子接口模式:15,dsl接口模式:15,serial接口模式:15 
 
@@ -5328,8 +4908,7 @@ ipv6-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5346,8 +4925,7 @@ no ipv6-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5362,18 +4940,7 @@ no ipv6-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5382,8 +4949,16 @@ no ipv6-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group ingress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1 Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Ingress myacl 
 
@@ -5391,8 +4966,7 @@ no ipv6-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups
 
@@ -5406,8 +4980,7 @@ ipv6-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv6 ACL到接口入方向。 
 
@@ -5416,8 +4989,7 @@ ipv6-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  qx子接口模式,qx接口模式  
 
@@ -5426,8 +4998,7 @@ ipv6-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 qx接口模式:15,qx子接口模式:15 
 
@@ -5436,8 +5007,7 @@ qx接口模式:15,qx子接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5454,8 +5024,7 @@ no ipv6-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5470,18 +5039,7 @@ no ipv6-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5490,8 +5048,16 @@ no ipv6-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定IPv6 ACL MyACL 到gei-0/1/0/1的入方向:ZXROSNG(config)#interface gei-0/1/0/1ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group ingress MyACL显示配置结果：ZXROSNG(config-if-gei-0/1/0/1)#show ipv6-access-groups Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1                       Ingress    MyACLZXROSNG(config-if-gei-0/1/0/1)#删除gei-0/1/0/1入方向的ACL:ZXROSNG(config-if-gei-0/1/0/1)#no ipv6-access-group ingress
 
@@ -5500,8 +5066,7 @@ no ipv6-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -5516,8 +5081,7 @@ ipv6-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口。 
 
@@ -5526,8 +5090,7 @@ ipv6-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太子接口模式  
 
@@ -5536,8 +5099,7 @@ ipv6-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5546,8 +5108,7 @@ ipv6-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5564,8 +5125,7 @@ no ipv6-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5580,18 +5140,7 @@ no ipv6-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -5600,8 +5149,16 @@ no ipv6-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1：ZXROSNG(config-if-gei-0/1/0/1)#ipv6-access-group ingress myacl 查看配置结果信息：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Ingress myacl 
 
@@ -5609,8 +5166,7 @@ no ipv6-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups
 
@@ -5624,8 +5180,7 @@ ipv6-access-group interface <mid> egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv6 ACL到接口出方向。 
 
@@ -5634,8 +5189,7 @@ ipv6-access-group interface <mid> egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -5644,8 +5198,7 @@ ipv6-access-group interface <mid> egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5654,8 +5207,7 @@ ipv6-access-group interface <mid> egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5676,8 +5228,7 @@ no ipv6-access-group interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5693,8 +5244,7 @@ no ipv6-access-group interface
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -5703,8 +5253,7 @@ no ipv6-access-group interface
 
 
 
-### 使用说明 
-
+使用说明 :
 
 绑定接口时，接口必须存在，可以绑定不存在的ACL。解绑定接口时，接口必须存在。
 
@@ -5713,8 +5262,7 @@ no ipv6-access-group interface
 
 
 
-### 范例 
-
+范例 :
 
 绑定IPv6 ACL MyACL 到gei-0/1/0/1的出方向:ipv6-access-group interface gei-0/1/0/1 egress MyACL显示配置结果：ZXROSNG(config)#show ipv6-access-groups Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1                       Egress     MyACLZXROSNG(config)#删除gei-0/1/0/1出方向的ACL:ZXROSNG(config)#no ipv6-access-group interface gei-0/1/0/1 egress
 
@@ -5723,8 +5271,7 @@ no ipv6-access-group interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -5739,8 +5286,7 @@ ipv6-access-group interface <mid> ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定IPv6 ACL到接口入方向。 
 
@@ -5749,8 +5295,7 @@ ipv6-access-group interface <mid> ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -5759,8 +5304,7 @@ ipv6-access-group interface <mid> ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5769,8 +5313,7 @@ ipv6-access-group interface <mid> ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -5791,8 +5334,7 @@ no ipv6-access-group interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5808,8 +5350,7 @@ no ipv6-access-group interface
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -5818,8 +5359,7 @@ no ipv6-access-group interface
 
 
 
-### 使用说明 
-
+使用说明 :
 
 绑定接口时，接口必须存在，可以绑定不存在的ACL。解绑定接口时，接口必须存在。
 
@@ -5828,8 +5368,7 @@ no ipv6-access-group interface
 
 
 
-### 范例 
-
+范例 :
 
 绑定IPv6 ACL MyACL 到gei-0/1/0/1的入方向:ipv6-access-group interface gei-0/1/0/1 ingress MyACL显示配置结果：ZXROSNG(config)#show ipv6-access-groupsInterface name|vlan   Direction ACL name                        Default action------------------------------------------------------------------------------- gei-0/1/0/1                       Ingress    MyACLZXROSNG(config)#删除gei-0/1/0/1入方向的ACL:ZXROSNG(config)#no ipv6-access-group interface gei-0/1/0/1 ingress
 
@@ -5838,8 +5377,7 @@ no ipv6-access-group interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6-access-groups 
 
@@ -5854,8 +5392,7 @@ move
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于IPv4 ACL配置模式下，用于修改IPv4 ACL规则的ID。 
 
@@ -5863,8 +5400,7 @@ move
 
 
 
-### 命令模式 
-
+命令模式 :
 
  IPv4-ACL模式  
 
@@ -5873,8 +5409,7 @@ move
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5883,8 +5418,7 @@ move
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 move 
@@ -5897,8 +5431,7 @@ move
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -5914,8 +5447,7 @@ move
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -5924,8 +5456,7 @@ move
 
 
 
-### 使用说明 
-
+使用说明 :
 
 ACL列表按照规则ID从小到大排序，修改ID会调整规则在列表中的顺序。该命令必须在自动提交模式下执行，不能在手动提交模式下执行。
 
@@ -5934,8 +5465,7 @@ ACL列表按照规则ID从小到大排序，修改ID会调整规则在列表中�
 
 
 
-### 范例 
-
+范例 :
 
 配置2条ACL规则，rule-id分别为1和2，如果想把规则1调整成规则3，则需要调用move命令：ZXROSNG(config)#ipv4-access-list myaclZXROSNG(config-ipv4-acl)#rule 1 deny tcp 192.168.0.10 0.0.0.0 any ZXROSNG(config-ipv4-acl)#rule 2 deny tcp 192.168.0.100 0.0.0.0 anyZXROSNG(config-ipv4-acl)#move 1 3查看命令配置结果：ZXROSNG(config-ipv4-acl)#show ipv4-access-lists name  myaclipv4-access-list myacl2/2 (showed/total)2 deny tcp 192.168.0.100 0.0.0.0 any3 deny tcp 192.168.0.10 0.0.0.0 any
 
@@ -5943,8 +5473,7 @@ ACL列表按照规则ID从小到大排序，修改ID会调整规则在列表中�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4–access-lists 
 
@@ -5959,8 +5488,7 @@ resequence-access-list ipv4
 
 
 
-### 命令功能 
-
+命令功能 :
 
 对指定ACL表的规则进行重新编号，但不改变规则的顺序。当一个ACL中的规则频繁的被调整后，列表中的规则ID会比较杂乱，给维护带来不便。此时，可以使用该命令，从新对ACL列表中的规则ID进行排列，使规则ID成为一个等差数列。
 
@@ -5969,8 +5497,7 @@ resequence-access-list ipv4
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -5979,8 +5506,7 @@ resequence-access-list ipv4
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -5989,8 +5515,7 @@ resequence-access-list ipv4
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 resequence-access-list ipv4 
@@ -6004,8 +5529,7 @@ resequence-access-list ipv4
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6022,8 +5546,7 @@ resequence-access-list ipv4
 
 
 
-### 缺省 
-
+缺省 :
 
 <base-rule-id>默认为10。<increment>默认为10。
 
@@ -6032,8 +5555,7 @@ resequence-access-list ipv4
 
 
 
-### 使用说明 
-
+使用说明 :
 
 该命令是对已经存在的ACL列表中的所有规则的ID进行重新编号，规则原来的顺序保持不变，不影响规则生效。命令最后两个参数都是可选的，不设置的话默认值都是10。
 
@@ -6041,8 +5563,7 @@ resequence-access-list ipv4
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#ipv4-access-list myaclZXROSNG(config-ipv4-acl)#rule 1 deny tcp 192.168.0.10 0.0.0.0 any ZXROSNG(config-ipv4-acl)#rule 2 deny tcp 192.168.0.100 0.0.0.0 any ZXROSNG(config-ipv4-acl)#rule 3 permit tcp 192.168.0.10 0.0.0.0 anyZXROSNG(config-ipv4-acl)#exitZXROSNG(config)# resequence-access-list ipv4 myacl 10 10查看结果配置信息：ZXROSNG(config)#show ipv4-access-lists name  myaclipv4-access-list myacl3/3 (showed/total)  10 deny tcp 192.168.0.10 0.0.0.0 any  20 deny tcp 192.168.0.100 0.0.0.0 any  30 permit tcp 192.168.0.10 0.0.0.0 any 
 
@@ -6050,8 +5571,7 @@ ZXROSNG(config)#ipv4-access-list myaclZXROSNG(config-ipv4-acl)#rule 1 deny tcp 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4–access-lists 
 
@@ -6066,8 +5586,7 @@ rule
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置IPv4 ACL的规则。 
 
@@ -6076,8 +5595,7 @@ rule
 
 
 
-### 命令模式 
-
+命令模式 :
 
  IPv4-ACL模式  
 
@@ -6086,8 +5604,7 @@ rule
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6096,8 +5613,7 @@ rule
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 rule 
@@ -6244,8 +5760,7 @@ no rule
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6382,18 +5897,7 @@ all|删除指定ACL下的所有规则
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6402,8 +5906,16 @@ all|删除指定ACL下的所有规则
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置一条TCP规则,当源地址在192.168.0.0 255.255.255.0子网范围内，源端口在1000–2000范围内，优先级为6的IPv4建链TCP报文匹配，动作为permit：ZXROSNG(config-ipv4-acl)#rule permit tcp 192.168.0.0 0.0.0.255 range 1000-2000 any established precedence 6
 
@@ -6412,8 +5924,7 @@ all|删除指定ACL下的所有规则
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4–access-lists 
 
@@ -6428,8 +5939,7 @@ rule
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置IPv4 ACL的规则。 
 
@@ -6438,8 +5948,7 @@ rule
 
 
 
-### 命令模式 
-
+命令模式 :
 
  IPv4-ACL模式  
 
@@ -6448,8 +5957,7 @@ rule
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6458,8 +5966,7 @@ rule
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 rule 
@@ -6599,8 +6106,7 @@ no rule
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6727,18 +6233,7 @@ log|统计标记，配置该标记后会统计命中该条目的次数。
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6747,8 +6242,16 @@ log|统计标记，配置该标记后会统计命中该条目的次数。
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置一条TCP规则,当源地址在192.168.0.0 255.255.255.0子网范围内，源端口在1000–2000范围内，优先级为6的IPv4建链TCP报文匹配，动作为permit：ZXROSNG(config-ipv4-acl)#rule permit tcp 192.168.0.0 0.0.0.255 range 1000-2000 any established precedence 6
 
@@ -6757,8 +6260,7 @@ log|统计标记，配置该标记后会统计命中该条目的次数。
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv4–access-lists 
 
@@ -6773,8 +6275,7 @@ show ipv4-access-groups
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示配置IPv4 port-ACL绑定信息。 
 
@@ -6783,8 +6284,7 @@ show ipv4-access-groups
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -6793,8 +6293,7 @@ show ipv4-access-groups
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6803,8 +6302,7 @@ show ipv4-access-groups
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -6824,8 +6322,7 @@ show ipv4-access-groups
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6846,18 +6343,7 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6866,8 +6352,16 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置IPv4 port-ACL:ZXROSNG(config)#ipv4-access-group interface gei-0/1/0/1 egress MyACLZXROSNG(config)#ipv4-access-group interface gei-0/1/0/1 ingress MyACL2ZXROSNG(config)#ipv4-access-group vlan 1 egress MyACL显示所有：ZXROSNG(config)#show ipv4-access-group===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress       MyACL2Egress        MyACL===============================================================================VLAN ID:1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress      MyACL根据VLAN ID过滤显示：ZXROSNG(config)#show ipv4-access-group by-vlan 1===============================================================================VLAN ID:1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       MyACL根据接口名字过滤显示：ZXROSNG(config)#show ipv4-access-groups by-interface gei-0/1/0/1===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress      MyACL2Egress       MyACL根据接口方向过滤显示：ZXROSNG(config)#show ipv4-access-groups by-direction egress ===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       MyACL===============================================================================VLAN ID:1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Egress       MyACLZXROSNG(config)#根据ACL名称过滤显示：ZXROSNG(config)#show ipv4-access-groups by-access-list MyACL2===============================================================================Interface name:gei-0/1/0/1-------------------------------------------------------------------------------Direction    ACL name                        Sequence-num    Default action-------------------------------------------------------------------------------Ingress       MyACL2ZXROSNG(config)#
 
@@ -6875,8 +6369,7 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ipv4-access-group 
 
@@ -6891,8 +6384,7 @@ show ipv4-access-lists
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示配置的IPv4 ACL规则信息。如果规则配置了LOG选项，显示规则命中统计计数。 
 
@@ -6901,8 +6393,7 @@ show ipv4-access-lists
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -6911,8 +6402,7 @@ show ipv4-access-lists
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -6921,8 +6411,7 @@ show ipv4-access-lists
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -6950,8 +6439,7 @@ show ipv4-access-lists
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -6976,18 +6464,7 @@ brief|用于指定只显示ACL的简要信息，不列出ACL的详细规则条�
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -6996,8 +6473,16 @@ brief|用于指定只显示ACL的简要信息，不列出ACL的详细规则条�
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示IPv4 ACL目前的系统信息：ZXROSNG(config)#show ipv4-access-lists config Current config total access-lists :1Current config total access-list rules :4System total access-lists upper limit :4000System total access-list rules upper limit :32000ZXROSNG(config)#显示所有IPv4 ACL列表：ZXROSNG(config-ipv4-acl)#show ipv4-access-listsipv4-access-list myacl4/4 (showed/total)10 deny tcp 192.168.0.10 0.0.0.0 any 11 permit tcp 192.168.1.14 0.0.0.0 range 1000-2000 any precedence 615 permit tcp 168.192.0.10 0.0.0.0 any20 deny tcp 192.168.0.100 0.0.0.0 any显示IPv4 ACL的简要信息：ZXROSNG(config)#show ipv4-access-lists brief No. ACL RuleSum -------------------------------------------------------1 sss 4 2 xxx 3 ZXROSNG(config)#显示IPv4 ACL sss在接口gei-0/1/0/1出方向上的统计信息：ZXROSNG(config-if-smartgroup1)#show ipv4-access-lists usage smartgroup1 egress port-acl ipv4-access-list sss4/4 (showed/total)1 deny 1.1.1.1 0.0.0.0 log(101 matches)2 deny 2.2.2.2 0.0.0.0 log(10 matches)3 deny 3.3.3.3 0.0.0.0 log(90 matches)4 deny 4.4.4.4 0.0.0.0 log(102 matches)
 
@@ -7005,8 +6490,7 @@ brief|用于指定只显示ACL的简要信息，不列出ACL的详细规则条�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ipv4-access-list 
 
@@ -7021,8 +6505,7 @@ show ipv6-access-groups
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示配置IPv6 port-ACL绑定信息。 
 
@@ -7031,8 +6514,7 @@ show ipv6-access-groups
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -7041,8 +6523,7 @@ show ipv6-access-groups
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7051,8 +6532,7 @@ show ipv6-access-groups
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7072,8 +6552,7 @@ show ipv6-access-groups
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7094,18 +6573,7 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7114,8 +6582,16 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置IPv6 port-ACL:ZXROSNG(config)#ipv6-access-group interface gei-0/1/0/1 egress MyACLZXROSNG(config)#ipv6-access-group interface gei-0/1/0/1 ingress MyACL2ZXROSNG(config)#ipv6-access-group vlan 1 egress MyACL显示所有：ZXROSNG(config)#show ipv6-access-groupInterface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Ingress MyACL2            Egress  MyACLvlan 1      Egress  MyACL根据VLAN ID过滤显示：ZXROSNG(config)#show ipv6-access-group by-vlan 1Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------vlan 1 Egress MyACL根据接口名字过滤显示：ZXROSNG(config)#show ipv6-access-groups by-interface gei-0/1/0/1Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Ingress MyACL2            Egress  MyACL根据接口方向过滤显示：ZXROSNG(config)#show ipv6-access-groups by-direction egress Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Egress MyACLvlan 1      Egress MyACLZXROSNG(config)#根据ACL名称过滤显示：ZXROSNG(config)#show ipv6-access-groups by-access-list MyACL2Interface name|vlan   Direction ACL name                        Default action-------------------------------------------------------------------------------gei-0/1/0/1 Ingress MyACL2ZXROSNG(config)#
 
@@ -7123,8 +6599,7 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ipv6-access-group 
 
@@ -7139,8 +6614,7 @@ show user-defined-access-groups
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示配置port-ACL绑定信息。 
 
@@ -7149,8 +6623,7 @@ show user-defined-access-groups
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -7159,8 +6632,7 @@ show user-defined-access-groups
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7169,8 +6641,7 @@ show user-defined-access-groups
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7190,8 +6661,7 @@ show user-defined-access-groups
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7212,18 +6682,7 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7232,8 +6691,16 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置user-defined port-ACL:ZXROSNG(config)#user-defined-access-group interface gei-0/1/0/1 egress MyACLZXROSNG(config)#user-defined-access-group interface gei-0/1/0/1 ingress MyACLZXROSNG(config)#user-defined-access-group vlan 1 egress MyACL显示所有：ZXROSNG(config)#show user-defined-access-groupInterface name|vlan               Direction  ACL name-----------------------------------------------------------------gei-0/1/0/1                       Ingress    MyACL2Egress     MyACLvlan 1                            Egress     MyACL根据VLAN ID过滤显示：ZXROSNG(config)#show user-defined-access-group by-vlan 1Interface name|vlan               Direction  ACL name-----------------------------------------------------------------vlan 1                            Egress     MyACL根据接口名字过滤显示：ZXROSNG(config)#show user-defined-access-groups by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name-----------------------------------------------------------------gei-0/1/0/1                       Ingress    MyACL2Egress     MyACL根据接口方向过滤显示：ZXROSNG(config)#show user-defined-access-groups by-direction egressInterface name|vlan               Direction  ACL name-----------------------------------------------------------------gei-0/1/0/1                       Egress     MyACLvlan 1                            Egress     MyACLZXROSNG(config)#
 根据ACL名称过滤显示：ZXROSNG(config)#show user-defined-access-groups by-access-list MyACL2Interface name|vlan               Direction  ACL name-----------------------------------------------------------------gei-0/1/0/1                       Ingress    MyACL2ZXROSNG(config)#
@@ -7243,8 +6710,7 @@ egress|根据绑定接口的方向过滤显示：出向
 
 
 
-### 相关命令 
-
+相关命令 :
 
 user-defined-access-group  
 
@@ -7259,8 +6725,7 @@ user-defined-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口出方向。 
 
@@ -7269,8 +6734,7 @@ user-defined-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  10G以太接口模式,pos子接口模式,pos接口模式,smartgroup子接口模式,smartgroup接口模式,以太接口模式,千兆以太接口模式  
 
@@ -7279,8 +6743,7 @@ user-defined-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 10G以太接口模式:15,smartgroup接口模式:15,pos子接口模式:15,以太接口模式:15,千兆以太接口模式:15,smartgroup子接口模式:15,pos接口模式:15 
 
@@ -7289,8 +6752,7 @@ user-defined-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7307,8 +6769,7 @@ no user-defined-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7323,18 +6784,7 @@ no user-defined-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7343,8 +6793,16 @@ no user-defined-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1出方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group egress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Egress        myacl
 
@@ -7352,8 +6810,7 @@ no user-defined-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -7368,8 +6825,7 @@ user-defined-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口出方向。 
 
@@ -7378,8 +6834,7 @@ user-defined-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  dsl接口模式,multilink接口模式,posgroup接口模式,serial接口模式,supervlan接口模式,ulei子接口模式,ulei接口模式,通道化ce1接口模式,通道化cpos_e1接口模式  
 
@@ -7388,8 +6843,7 @@ user-defined-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 dsl接口模式:15,serial接口模式:15,通道化cpos_e1接口模式:15,ulei子接口模式:15,posgroup接口模式:15,ulei接口模式:15,通道化ce1接口模式:15,multilink接口模式:15,supervlan接口模式:15 
 
@@ -7398,8 +6852,7 @@ dsl接口模式:15,serial接口模式:15,通道化cpos_e1接口模式:15,ulei子
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7416,8 +6869,7 @@ no user-defined-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7432,18 +6884,7 @@ no user-defined-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7452,8 +6893,16 @@ no user-defined-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1出方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group egress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Egress        myacl
 
@@ -7461,8 +6910,7 @@ no user-defined-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -7477,8 +6925,7 @@ user-defined-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口出方向。 
 
@@ -7487,8 +6934,7 @@ user-defined-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  qx子接口模式,qx接口模式  
 
@@ -7497,8 +6943,7 @@ user-defined-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 qx子接口模式:15,qx接口模式:15 
 
@@ -7507,8 +6952,7 @@ qx子接口模式:15,qx接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7525,8 +6969,7 @@ no user-defined-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7541,18 +6984,7 @@ no user-defined-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7561,8 +6993,16 @@ no user-defined-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1出方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group egress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Egress        myacl
 
@@ -7570,8 +7010,7 @@ no user-defined-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -7586,8 +7025,7 @@ user-defined-access-group egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口出方向。 
 
@@ -7596,8 +7034,7 @@ user-defined-access-group egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太子接口模式  
 
@@ -7606,8 +7043,7 @@ user-defined-access-group egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -7616,8 +7052,7 @@ user-defined-access-group egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7634,8 +7069,7 @@ no user-defined-access-group egress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7650,18 +7084,7 @@ no user-defined-access-group egress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7670,8 +7093,16 @@ no user-defined-access-group egress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1出方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group egress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Egress        myacl
 
@@ -7679,8 +7110,7 @@ no user-defined-access-group egress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -7695,8 +7125,7 @@ user-defined-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口入方向上。 
 
@@ -7705,8 +7134,7 @@ user-defined-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  10G以太接口模式,pos子接口模式,pos接口模式,smartgroup子接口模式,smartgroup接口模式,以太接口模式,千兆以太接口模式  
 
@@ -7715,8 +7143,7 @@ user-defined-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 千兆以太接口模式:15,以太接口模式:15,smartgroup子接口模式:15,pos接口模式:15,10G以太接口模式:15,smartgroup接口模式:15,pos子接口模式:15 
 
@@ -7725,8 +7152,7 @@ user-defined-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7743,8 +7169,7 @@ no user-defined-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7759,18 +7184,7 @@ no user-defined-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7779,8 +7193,16 @@ no user-defined-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1入方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group ingress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Ingress        myacl
 
@@ -7788,8 +7210,7 @@ no user-defined-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -7804,8 +7225,7 @@ user-defined-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口入方向上。 
 
@@ -7814,8 +7234,7 @@ user-defined-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  dsl接口模式,multilink接口模式,posgroup接口模式,serial接口模式,supervlan接口模式,ulei子接口模式,ulei接口模式,通道化ce1接口模式,通道化cpos_e1接口模式  
 
@@ -7824,8 +7243,7 @@ user-defined-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 通道化ce1接口模式:15,multilink接口模式:15,supervlan接口模式:15,posgroup接口模式:15,ulei接口模式:15,通道化cpos_e1接口模式:15,ulei子接口模式:15,dsl接口模式:15,serial接口模式:15 
 
@@ -7834,8 +7252,7 @@ user-defined-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7852,8 +7269,7 @@ no user-defined-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7868,18 +7284,7 @@ no user-defined-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7888,8 +7293,16 @@ no user-defined-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1入方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group ingress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Ingress        myacl
 
@@ -7897,8 +7310,7 @@ no user-defined-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -7913,8 +7325,7 @@ user-defined-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口入方向上。 
 
@@ -7923,8 +7334,7 @@ user-defined-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  qx子接口模式,qx接口模式  
 
@@ -7933,8 +7343,7 @@ user-defined-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 qx接口模式:15,qx子接口模式:15 
 
@@ -7943,8 +7352,7 @@ qx接口模式:15,qx子接口模式:15
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -7961,8 +7369,7 @@ no user-defined-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -7977,18 +7384,7 @@ no user-defined-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -7997,8 +7393,16 @@ no user-defined-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1入方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group ingress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Ingress        myacl
 
@@ -8006,8 +7410,7 @@ no user-defined-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -8022,8 +7425,7 @@ user-defined-access-group ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口入方向上。 
 
@@ -8032,8 +7434,7 @@ user-defined-access-group ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  以太子接口模式  
 
@@ -8042,8 +7443,7 @@ user-defined-access-group ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8052,8 +7452,7 @@ user-defined-access-group ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8070,8 +7469,7 @@ no user-defined-access-group ingress
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8086,18 +7484,7 @@ no user-defined-access-group ingress
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -8106,8 +7493,16 @@ no user-defined-access-group ingress
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1入方向上：ZXROSNG(config-if-gei-0/1/0/1)#user-defined-access-group ingress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Ingress        myacl
 
@@ -8115,8 +7510,7 @@ no user-defined-access-group ingress
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -8131,8 +7525,7 @@ user-defined-access-group interface <mid> egress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口出方向上。 
 
@@ -8141,8 +7534,7 @@ user-defined-access-group interface <mid> egress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8151,8 +7543,7 @@ user-defined-access-group interface <mid> egress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8161,8 +7552,7 @@ user-defined-access-group interface <mid> egress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8183,8 +7573,7 @@ no user-defined-access-group interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8200,18 +7589,7 @@ no user-defined-access-group interface
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -8220,8 +7598,16 @@ no user-defined-access-group interface
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1出方向上：ZXROSNG(config)#user-defined-access-group interface gei-0/1/0/1 egress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface gei-0/1/0/1Interface name|vlan               Direction  ACL name---------------------------------------------------------------gei-0/1/0/1                              Egress         myacl
 
@@ -8229,8 +7615,7 @@ no user-defined-access-group interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -8245,8 +7630,7 @@ user-defined-access-group interface <mid> ingress
 
 
 
-### 命令功能 
-
+命令功能 :
 
 绑定ACL列表到接口入方向上。 
 
@@ -8255,8 +7639,7 @@ user-defined-access-group interface <mid> ingress
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8265,8 +7648,7 @@ user-defined-access-group interface <mid> ingress
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8275,8 +7657,7 @@ user-defined-access-group interface <mid> ingress
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8297,8 +7678,7 @@ no user-defined-access-group interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8314,18 +7694,7 @@ no user-defined-access-group interface
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -8334,8 +7703,16 @@ no user-defined-access-group interface
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 绑定ACL列表myacl到接口gei-0/1/0/1入方向上：ZXROSNG(config)#user-defined-access-group interface gei-0/1/0/1 ingress myacl查看配置结果信息：ZXROSNG(config)#show user-defined-access-groups by-interface-or-vlan by-interface-or-vlan by-interface gei-0/1/0/1Interface name|vlan               Direction   ACL name----------------------------------------------------------------gei-0/1/0/1                               Ingress      myacl
 
@@ -8343,8 +7720,7 @@ no user-defined-access-group interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show user-defined-access-groups 
 
@@ -8360,8 +7736,7 @@ blackhole-route
 
 
 
-### 命令功能 
-
+命令功能 :
 
 此命令用于使能或去使能黑洞路由。 
 
@@ -8370,8 +7745,7 @@ blackhole-route
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -8380,8 +7754,7 @@ blackhole-route
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8390,8 +7763,7 @@ blackhole-route
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8406,8 +7778,7 @@ blackhole-route
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8423,8 +7794,7 @@ disable|去使能黑洞路由
 
 
 
-### 缺省 
-
+缺省 :
 
 PBR路由类型为黑洞路由则不下发。 
 
@@ -8433,8 +7803,7 @@ PBR路由类型为黑洞路由则不下发。
 
 
 
-### 使用说明 
-
+使用说明 :
 
 当配置blackhole-route enable时，PBR路由类型为黑洞路由则下发。当配置blackhole-route disable时，PBR路由类型为黑洞路由则不下发。blackhole-route disable是默认配置。 
 
@@ -8443,8 +7812,7 @@ PBR路由类型为黑洞路由则不下发。
 
 
 
-### 范例 
-
+范例 :
 
 1、设置黑洞路由生效：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#blackhole-route enable2、采用show running-config配置示意如下：ZXROSNG(config-route-map)#show running-config route-map !<route-map>route-map zte permit 1  blackhole-route enable $
 
@@ -8452,8 +7820,7 @@ PBR路由类型为黑洞路由则不下发。
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -8468,8 +7835,7 @@ continue
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在当前策略路由序列号匹配成功时，使用本命令在该route-map实例的下一个序列号中继续匹配操作。 
 
@@ -8478,8 +7844,7 @@ continue
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -8488,8 +7853,7 @@ continue
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8498,8 +7862,7 @@ continue
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8518,8 +7881,7 @@ no continue
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8535,8 +7897,7 @@ next|策略路由跳转到下一序列号。
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8545,8 +7906,7 @@ next|策略路由跳转到下一序列号。
 
 
 
-### 使用说明 
-
+使用说明 :
 
 仅限于同route-map实例下跳转。配置continue next时，策略路由跳转到下一个序列号执行匹配操作。配置continue sequence时，策略路由跳转到指定序列号执行匹配操作。配置的指定序列号要大于当前序列号。
 
@@ -8554,8 +7914,7 @@ next|策略路由跳转到下一序列号。
 
 
 
-### 范例 
-
+范例 :
 
 1、策略路由跳转到下一个序列号执行匹配操作：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#continue next2、采用show running-config配置示意如下：ZXROSNG(config-route-map)#show running-config route-map !<route-map>route-map zte permit 1  continue next  ——》表示：跳转到 route-map zte permit 10规则$route-map zte permit 10  match interface gei-0/1/0/1  continue sequence 100 ——》表示：跳转到 route-map zte permit 100规则$route-map zte permit 20  match interface gei-0/1/0/2$route-map zte permit 100  match interface gei-0/1/0/2$
 
@@ -8563,8 +7922,7 @@ next|策略路由跳转到下一序列号。
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -8579,8 +7937,7 @@ default-route
 
 
 
-### 命令功能 
-
+命令功能 :
 
 此命令用于使能或去使能默认路由。 
 
@@ -8589,8 +7946,7 @@ default-route
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -8599,8 +7955,7 @@ default-route
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8609,8 +7964,7 @@ default-route
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8625,8 +7979,7 @@ default-route
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8642,8 +7995,7 @@ disable|去使能默认路由
 
 
 
-### 缺省 
-
+缺省 :
 
 PBR路由类型为默认路由则不下发。 
 
@@ -8652,8 +8004,7 @@ PBR路由类型为默认路由则不下发。
 
 
 
-### 使用说明 
-
+使用说明 :
 
 当配置default-route enable时，PBR路由类型为默认路由则下发。当配置default-route disable时，PBR路由类型为默认路由则不下发。default-route disable是默认配置。 
 
@@ -8662,8 +8013,7 @@ PBR路由类型为默认路由则不下发。
 
 
 
-### 范例 
-
+范例 :
 
 1、设置默认路由生效：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#default-route enable2、采用show running-config配置示意如下：ZXROSNG(config-route-map)#show running-config route-map !<route-map>route-map zte permit 1  default-route enable $
 
@@ -8671,24 +8021,21 @@ PBR路由类型为默认路由则不下发。
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
 
 
 
-## description 
-
+description :
 
 description 
 
 
 
 
-### 命令功能 
-
+命令功能 :
 
 使用本命令在route-map的序列中配置文本描述。 
 
@@ -8697,8 +8044,7 @@ description
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -8707,8 +8053,7 @@ description
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8717,8 +8062,7 @@ description
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8735,8 +8079,7 @@ no description
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8751,18 +8094,7 @@ no description
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -8771,8 +8103,16 @@ no description
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 在route-map中配置文本描述：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#description abc
 
@@ -8781,8 +8121,7 @@ no description
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -8797,8 +8136,7 @@ ip as-path access-list standard
 
 
 
-### 命令功能 
-
+命令功能 :
 
 定义与BGP相关的标准自治系统路径访问表。使用no命令使访问表无效。 
 
@@ -8807,8 +8145,7 @@ ip as-path access-list standard
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8817,8 +8154,7 @@ ip as-path access-list standard
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8827,8 +8163,7 @@ ip as-path access-list standard
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip as-path access-list standard 
@@ -8849,8 +8184,7 @@ no ip as-path access-list standard
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8868,8 +8202,7 @@ no ip as-path access-list standard
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -8878,8 +8211,7 @@ no ip as-path access-list standard
 
 
 
-### 使用说明 
-
+使用说明 :
 
 标准AS路径列表名下最多可配255个系列号。 
 
@@ -8888,8 +8220,7 @@ no ip as-path access-list standard
 
 
 
-### 范例 
-
+范例 :
 
 配置标准AS路径列表a， 并指定AS为5个1.1ZXROSNG(config)#ip as-path access-list standard a 1 1.1 count 5
 
@@ -8898,8 +8229,7 @@ no ip as-path access-list standard
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip as-path-access-list standard 
 
@@ -8914,8 +8244,7 @@ ip as-path access-list trigger-delay
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置自治系统路径访问表同步到应用的延迟时间。 
 
@@ -8924,8 +8253,7 @@ ip as-path access-list trigger-delay
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -8934,8 +8262,7 @@ ip as-path access-list trigger-delay
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -8944,8 +8271,7 @@ ip as-path access-list trigger-delay
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -8962,8 +8288,7 @@ no ip as-path access-list trigger-delay
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -8978,8 +8303,7 @@ no ip as-path access-list trigger-delay
 
 
 
-### 缺省 
-
+缺省 :
 
 默认10秒。 
 
@@ -8988,8 +8312,7 @@ no ip as-path access-list trigger-delay
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、应用协议（如BGP等）引用自治系统路径访问表后，当自治系统路径访问表创建、更新，会同步到对应的应用协议。同步会有一定延时，可以通过本命令调整延时时间。2、本配置针对所有自治系统路径访问表实例生效。
 
@@ -8998,8 +8321,7 @@ no ip as-path access-list trigger-delay
 
 
 
-### 范例 
-
+范例 :
 
 设置自治系统路径访问表同步延迟时间为20秒：ZXROSNG(config)#ip as-path access-list trigger-delay 20
 
@@ -9008,8 +8330,7 @@ no ip as-path access-list trigger-delay
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip as-path-access-list 
 
@@ -9024,8 +8345,7 @@ ip as-path access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 定义与BGP相关的自治系统路径访问表。使用no命令使访问表无效。 
 
@@ -9034,8 +8354,7 @@ ip as-path access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9044,8 +8363,7 @@ ip as-path access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9054,8 +8372,7 @@ ip as-path access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip as-path access-list 
@@ -9081,8 +8398,7 @@ no ip as-path access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9101,8 +8417,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 缺省 
-
+缺省 :
 
 未定义访问表。 
 
@@ -9111,8 +8426,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 使用说明 
-
+使用说明 :
 
 可以在入端或出端BGP路由上规定访问表过滤器。此外，还可以在一组过滤器基础上分配权重。每个过滤器就是一个基于正则表达式的访问表。如果正则表达式匹配于路由自治系统路径的描述，该路由以ASCII字符串形式表现，那就用permit或deny条件。自治系统路径不包括本地自治系统号。用ip as-path access-list全局配置命令来定义BGP访问表，用neighbor路由配置命令来申请特殊的访问表。配置的自治系统路径访问表名称不能为纯数字。
 
@@ -9120,8 +8434,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 范例 
-
+范例 :
 
 指定带IP地址128.125.1.1的BGP邻居不发送来自邻近自治系统123的任何路径的通告：ZXROSNG(config)#ip as-path access-list 1 permit 123ZXROSNG(config)#route-map test deny 10ZXROSNG(config-route-map)#match as-path 1ZXROSNG(config-route-map)#exitZXROSNG(config-bgp)#network 131.108.0.0 255.255.0.0 ZXROSNG(config-bgp)#neighbor 128.140.6.6 remote-as 123ZXROSNG(config-bgp)#neighbor 128.125.1.1 remote-as 47ZXROSNG(config-bgp)#neighbor 128.125.1.1 route-map test out
 
@@ -9129,8 +8442,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip as-path-access-list 
 
@@ -9145,8 +8457,7 @@ ip color-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 定义与BGP相关的color访问表。使用no命令使访问表无效。 
 
@@ -9155,8 +8466,7 @@ ip color-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9165,8 +8475,7 @@ ip color-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9175,8 +8484,7 @@ ip color-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip color-list 
@@ -9196,8 +8504,7 @@ no ip color-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9213,18 +8520,7 @@ no ip color-list
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -9233,8 +8529,16 @@ no ip color-list
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置color列表：ZXROSNG(config)#ip color-list name zte 22233
 
@@ -9243,8 +8547,7 @@ no ip color-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip color-list 
 
@@ -9259,8 +8562,7 @@ ip community-list trigger-delay
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置团体表同步到应用的延迟时间。 
 
@@ -9269,8 +8571,7 @@ ip community-list trigger-delay
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9279,8 +8580,7 @@ ip community-list trigger-delay
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9289,8 +8589,7 @@ ip community-list trigger-delay
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9307,8 +8606,7 @@ no ip community-list trigger-delay
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9323,8 +8621,7 @@ no ip community-list trigger-delay
 
 
 
-### 缺省 
-
+缺省 :
 
 默认10秒。 
 
@@ -9333,8 +8630,7 @@ no ip community-list trigger-delay
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、应用协议（如BGP等）引用团体表后，当团体表创建、更新，会同步到对应的应用协议。同步会有一定延时，可以通过本命令调整延时时间。2、本配置针对所有团体表实例生效。
 
@@ -9343,8 +8639,7 @@ no ip community-list trigger-delay
 
 
 
-### 范例 
-
+范例 :
 
 设置团体表同步延迟时间为20秒：ZXROSNG(config)#ip community-list trigger-delay 20
 
@@ -9353,8 +8648,7 @@ no ip community-list trigger-delay
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip community-list  
 
@@ -9369,8 +8663,7 @@ ip community-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 给BGP创建一个团体表且控制对它的访问。使用no命令删除团体表。 
 
@@ -9379,8 +8672,7 @@ ip community-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9389,8 +8681,7 @@ ip community-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9399,8 +8690,7 @@ ip community-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip community-list 
@@ -9448,8 +8738,7 @@ no ip community-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9493,8 +8782,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 缺省 
-
+缺省 :
 
 缺省不配置团体表。 
 
@@ -9503,8 +8791,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.配置重复值会过滤重复。2.一旦允许一个团体号值，那么该团体表就拒绝其他团体号。3.团体列表的名字不能为纯数字。4.基础团体列表名字和扩展团体列表名字不能相同。
 
@@ -9513,8 +8800,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 范例 
-
+范例 :
 
 除了团体5和10或团体10和15的路由之外，允许其它所有路由：ZXROSNG(config)#ip community-list 1 deny 5 10 ZXROSNG(config)#ip community-list 1 deny 10 15ZXROSNG(config)#ip community-list 1 permit any
 
@@ -9522,8 +8808,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip community-list 
 
@@ -9538,8 +8823,7 @@ ip extcommunity-list trigger-delay
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置扩展团体表同步到应用的延迟时间。 
 
@@ -9548,8 +8832,7 @@ ip extcommunity-list trigger-delay
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9558,8 +8841,7 @@ ip extcommunity-list trigger-delay
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9568,8 +8850,7 @@ ip extcommunity-list trigger-delay
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9586,8 +8867,7 @@ no ip extcommunity-list trigger-delay
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9602,8 +8882,7 @@ no ip extcommunity-list trigger-delay
 
 
 
-### 缺省 
-
+缺省 :
 
 默认10秒。 
 
@@ -9612,8 +8891,7 @@ no ip extcommunity-list trigger-delay
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、应用协议（如BGP等）引用扩展团体表后，当扩展团体表创建、更新，会同步到对应的应用协议。同步会有一定延时，可以通过本命令调整延时时间。2、本配置针对所有扩展团体表实例生效。
 
@@ -9622,8 +8900,7 @@ no ip extcommunity-list trigger-delay
 
 
 
-### 范例 
-
+范例 :
 
 设置扩展团体表同步延迟时间为20秒：ZXROSNG(config)#ip extcommunity-list trigger-delay 20
 
@@ -9632,8 +8909,7 @@ no ip extcommunity-list trigger-delay
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip extcommunity-list  
 
@@ -9648,8 +8924,7 @@ ip extcommunity-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 给BGP创建一个扩展团体表且控制对它的访问。使用no命令删除扩展团体表。 
 
@@ -9658,8 +8933,7 @@ ip extcommunity-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9668,8 +8942,7 @@ ip extcommunity-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9678,8 +8951,7 @@ ip extcommunity-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip extcommunity-list 
@@ -9749,8 +9021,7 @@ no ip extcommunity-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9806,8 +9077,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 缺省 
-
+缺省 :
 
 缺省不配置扩展团体表。 
 
@@ -9816,8 +9086,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.配置重复值会过滤重复。2.一旦允许一个团体号值，那么该团体表就拒绝其他团体号。3.团体列表的名字不能为纯数字。4.基础团体列表名字和扩展团体列表名字不能相同。
 
@@ -9826,8 +9095,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 范例 
-
+范例 :
 
 配置扩展团体表：ZXROSNG(config)#ip extcommunity-list 400 deny zte
 
@@ -9836,8 +9104,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip extcommunity-listshow ip extcommunity-list name
 
@@ -9852,8 +9119,7 @@ ip large-community-list trigger-delay
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置大团体表同步到应用的延迟时间。 
 
@@ -9862,8 +9128,7 @@ ip large-community-list trigger-delay
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9872,8 +9137,7 @@ ip large-community-list trigger-delay
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9882,8 +9146,7 @@ ip large-community-list trigger-delay
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -9900,8 +9163,7 @@ no ip large-community-list trigger-delay
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -9916,8 +9178,7 @@ no ip large-community-list trigger-delay
 
 
 
-### 缺省 
-
+缺省 :
 
 默认10秒。 
 
@@ -9926,8 +9187,7 @@ no ip large-community-list trigger-delay
 
 
 
-### 使用说明 
-
+使用说明 :
 
 使用场景：设置大团体表同步到应用的延迟时间。注意事项：1、应用协议（如BGP等）引用大团体表后，当大团体表创建、更新，会同步到对应的应用协议。同步会有一定延时，可以通过本命令调整延时时间。2、本配置针对所有大团体表实例生效。
 
@@ -9936,8 +9196,7 @@ no ip large-community-list trigger-delay
 
 
 
-### 范例 
-
+范例 :
 
 设置大团体表同步延迟时间为20秒：ZXROSNG(config)#ip large-community-list trigger-delay 20
 
@@ -9946,8 +9205,7 @@ no ip large-community-list trigger-delay
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip large-community-list  
 
@@ -9962,8 +9220,7 @@ ip large-community-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 创建一个大团体表且控制对它的访问。使用no命令删除大团体表。 
 
@@ -9972,8 +9229,7 @@ ip large-community-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -9982,8 +9238,7 @@ ip large-community-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -9992,8 +9247,7 @@ ip large-community-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip large-community-list 
@@ -10019,8 +9273,7 @@ no ip large-community-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10039,8 +9292,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 缺省 
-
+缺省 :
 
 缺省不配置大团体表。 
 
@@ -10049,8 +9301,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 使用说明 
-
+使用说明 :
 
 使用场景：给BGP创建一个大团体表，BGP用来改变其路由属性。注意事项：1.最多可配置100个大团体名称。2.同名称同系列号下最多配置10个团体号，且必须配置相同的匹配类型。3.团体号格式为<0-4294967295>:<0-4294967295>:<0-4294967295>, 例  0:0:0为有效值，01:02:03为无效值，1:2:3为有效值
 
@@ -10059,8 +9310,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 范例 
-
+范例 :
 
 创建大团体表a，除了团体1:2:3和2:3:4或团体5:6:7和6:7:8的路由之外，拒绝其它所有路由：ZXROSNG(config)#ip large-community-list name a 1 permit 1:2:3 ZXROSNG(config)#ip large-community-list name a 1 permit 2:3:4ZXROSNG(config)#ip large-community-list name a 2 permit 5:6:7ZXROSNG(config)#ip large-community-list name a 2 permit 6:7:8
 
@@ -10069,8 +9319,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip large-community-list 
 
@@ -10085,8 +9334,7 @@ ip policy
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上绑定route-map。 
 
@@ -10095,8 +9343,7 @@ ip policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -10105,8 +9352,7 @@ ip policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10115,8 +9361,7 @@ ip policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip policy 
@@ -10136,8 +9381,7 @@ no ip policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10153,8 +9397,7 @@ no ip policy
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -10163,8 +9406,7 @@ no ip policy
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置前确认<interface-name>对应的接口是否存在，如果不存在则配置不成功。策略路由支持空绑定route-map，即route-map不存在或内容为空也可以绑定到接口上，但策略路由不会生效，配置前请确认route-map是否有效。策略路由的匹配规则目前支持route-map配置的match ip address、match ip policy-route-id等，动作设置支持set ip next-hop、set interface、set ip tos、set ip precedence、set dscp、set global、set global ip next-hop、set vrf vrfname、set vrf vrfname ip next-hop、set ip path interface等。其余不支持的route-map配置将会被策略路由过滤掉，不会生效。
 
@@ -10172,8 +9414,7 @@ no ip policy
 
 
 
-### 范例 
-
+范例 :
 
 配置一个名称为acl-name的IPv4 ACL， 将该IPv4 ACL应用到名称为rmp_test的route-map中，然后将rmp_test绑定到接口gei-0/1/0/2上。ZXROSNG(config)#ipv4-access-list acl-nameZXROSNG(config-ipv4-acl)#rule permit 3.3.3.3 0.0.0.255ZXROSNG(config-ipv4-acl)#exitZXROSNG(config)#ZXROSNG(config)#route-map rmp_testZXROSNG(config-route-map)#match ip address acl-nameZXROSNG(config-route-map)#set ip next-hop 1.1.1.2ZXROSNG(config-route-map)#exitZXROSNG(config)#ip policy interface gei-0/1/0/2 route-map rmp_testZXROSNG(config)#
 
@@ -10181,8 +9422,7 @@ no ip policy
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-mapshow running-config pbr
 
@@ -10196,8 +9436,7 @@ ipv6 policy
 
 
 
-### 命令功能 
-
+命令功能 :
 
 在接口上绑定route-map。 
 
@@ -10206,8 +9445,7 @@ ipv6 policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -10216,8 +9454,7 @@ ipv6 policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10226,8 +9463,7 @@ ipv6 policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv6 policy 
@@ -10247,8 +9483,7 @@ no ipv6 policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10264,8 +9499,7 @@ no ipv6 policy
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -10274,8 +9508,7 @@ no ipv6 policy
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置前确认<interface-name>对应的接口是否存在，如果不存在则配置不成功；另外，对于IPv6策略路由来说，在绑定前，还需要先将<interface-name>对应的接口使能，否则不能绑定。IPv6策略路由支持空绑定route-map，即route-map不存在或内容为空也可以绑定到接口上，但策略路由不会生效。因此，配置前请确认route-map是否有效。IPv6 策略路由的匹配规则目前支持route-map配置的match ipv6 address、match ipv6 policy-route-id等，动作配置支持set ipv6 next-hop、set interface、set ipv6 path interface、set ipv6 traffic-class等。其余不支持的route-map配置将会被策略路由过滤掉，不会生效。
 
@@ -10283,8 +9516,7 @@ no ipv6 policy
 
 
 
-### 范例 
-
+范例 :
 
 配置一个名称为acl-name-v6的IPv6 ACL， 将该IPv6 ACL应用到名称为rmp_test的route-map中，然后将rmp_test绑定到接口gei-0/1/0/1上，其中gei-0/1/0/1需要先使能IPv6。ZXROSNG(config)#ipv6-access-list acl-name-v6ZXROSNG(config-ipv6-acl)#rule permit ip 3:3::3:3/112 anyZXROSNG(config-ipv6-acl)#exitZXROSNG(config)#ZXROSNG(config)#route-map rmp_testv6ZXROSNG(config-route-map)#match ipv6 address acl-name-v6ZXROSNG(config-route-map)#set ipv6 next-hop 3:3::3:3ZXROSNG(config-route-map)#exitZXROSNG(config)#ZXROSNG(config)#interface gei-0/1/0/1ZXROSNG(config-if-gei-0/1/0/1)#ipv6 enableZXROSNG(config-if-gei-0/1/0/1)#exitZXROSNG(config)#ZXROSNG(config)#ipv6 policy interface gei-0/1/0/1 route-map rmp_testv6ZXROSNG(config)#
 
@@ -10292,8 +9524,7 @@ no ipv6 policy
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-mapshow running-config pbr
 
@@ -10307,8 +9538,7 @@ load-share
 
 
 
-### 命令功能 
-
+命令功能 :
 
 使用本命令在route-map的序列中配置使能路由负荷分担功能。 
 
@@ -10317,8 +9547,7 @@ load-share
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -10327,8 +9556,7 @@ load-share
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10337,8 +9565,7 @@ load-share
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10354,8 +9581,7 @@ no load-share
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -10366,8 +9592,7 @@ no load-share
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -10376,8 +9601,7 @@ no load-share
 
 
 
-### 使用说明 
-
+使用说明 :
 
 Route-map中配置load-share后，该route-map中配置的有效路由会形成负荷分担，流量会均匀分担到各条路由。 
 
@@ -10386,8 +9610,7 @@ Route-map中配置load-share后，该route-map中配置的有效路由会形成�
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置路由时能负荷分担：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#load-share
 
@@ -10395,8 +9618,7 @@ Route-map中配置load-share后，该route-map中配置的有效路由会形成�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -10411,8 +9633,7 @@ match as-path
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置匹配BGP自治系统路径访问表。使用no命令删除一条路径表记录。 
 
@@ -10421,8 +9642,7 @@ match as-path
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -10431,8 +9651,7 @@ match as-path
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10441,8 +9660,7 @@ match as-path
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match as-path 
@@ -10462,8 +9680,7 @@ no match as-path
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10479,8 +9696,7 @@ no match as-path
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -10489,8 +9705,7 @@ no match as-path
 
 
 
-### 使用说明 
-
+使用说明 :
 
 如果配置的<as-path-number>或＜aspath-list-name＞不存在，默认为permit any。配置重复的<as-path-number>或＜aspath-list-name＞会过滤重复。配置的＜aspath-list-name＞不能为纯数字。 
 
@@ -10499,8 +9714,7 @@ no match as-path
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配BGP自治系统路径访问表和访问表名称：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match as-path 1ZXROSNG(config-route-map)#match as-path name zte
 
@@ -10509,8 +9723,7 @@ no match as-path
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -10525,8 +9738,7 @@ match as-path-length
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置匹配BGP自治系统路径访问表长度。使用no命令删除一条路径表记录。
 
@@ -10534,8 +9746,7 @@ match as-path-length
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -10544,8 +9755,7 @@ match as-path-length
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10554,8 +9764,7 @@ match as-path-length
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match as-path-length 
@@ -10574,8 +9783,7 @@ no match as-path-length
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10593,18 +9801,7 @@ le|运算符小于
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10613,8 +9810,16 @@ le|运算符小于
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match as-path-length eq 1
 
@@ -10623,8 +9828,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match as-path-length eq 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -10638,8 +9842,7 @@ match as-path-unique-length
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置匹配BGP自治系统路径访问表长度。使用no命令删除一条路径表记录。
 
@@ -10647,8 +9850,7 @@ match as-path-unique-length
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -10657,8 +9859,7 @@ match as-path-unique-length
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10667,8 +9868,7 @@ match as-path-unique-length
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match as-path-unique-length 
@@ -10687,8 +9887,7 @@ no match as-path-unique-length
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10706,18 +9905,7 @@ le|运算符小于
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -10726,8 +9914,16 @@ le|运算符小于
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match as-path-unique-length eq 1
 
@@ -10735,8 +9931,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match as-path-unique-leng
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -10750,8 +9945,7 @@ match community-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置匹配团体表。使用no命令删除团体表记录。 
 
@@ -10760,8 +9954,7 @@ match community-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -10770,8 +9963,7 @@ match community-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10780,8 +9972,7 @@ match community-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match community-list 
@@ -10801,8 +9992,7 @@ no match community-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -10818,8 +10008,7 @@ no match community-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -10828,8 +10017,7 @@ no match community-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<community-list-number>会过滤重复。 
 
@@ -10838,8 +10026,7 @@ no match community-list
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配团体表：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match community-list 1
 
@@ -10847,8 +10034,7 @@ no match community-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -10863,8 +10049,7 @@ match esi
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置一个基于ESI的匹配规则，用于匹配携带非0 ESI的路由。使用no命令恢复缺省配置。 
 
@@ -10873,8 +10058,7 @@ match esi
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -10883,8 +10067,7 @@ match esi
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10893,8 +10076,7 @@ match esi
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -10910,8 +10092,7 @@ no match esi
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -10922,8 +10103,7 @@ no match esi
 
 
 
-### 缺省 
-
+缺省 :
 
 没有配置基于ESI的匹配规则。 
 
@@ -10932,8 +10112,7 @@ no match esi
 
 
 
-### 使用说明 
-
+使用说明 :
 
 无 
 
@@ -10942,8 +10121,7 @@ no match esi
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match esiZXROSNG(config-route-map)#no match esi
 
@@ -10952,8 +10130,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match esiZXROSNG(config-r
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -10968,8 +10145,7 @@ match extcommunity-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置匹配BGP或者VPN拓展团体表。使用no命令删除团体表记录。 
 
@@ -10978,8 +10154,7 @@ match extcommunity-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -10988,8 +10163,7 @@ match extcommunity-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -10998,8 +10172,7 @@ match extcommunity-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match extcommunity-list 
@@ -11019,8 +10192,7 @@ no match extcommunity-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11036,8 +10208,7 @@ no match extcommunity-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11046,8 +10217,7 @@ no match extcommunity-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<extcommunity-list-number>会过滤重复。 
 
@@ -11056,8 +10226,7 @@ no match extcommunity-list
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配拓展团体表：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match extcommunity-list 1ZXROSNG(config-route-map)#match extcommunity-list name zte
 
@@ -11066,8 +10235,7 @@ no match extcommunity-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -11082,8 +10250,7 @@ match interface
 
 
 
-### 命令功能 
-
+命令功能 :
 
 匹配配置的接口名。 
 
@@ -11092,8 +10259,7 @@ match interface
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11102,8 +10268,7 @@ match interface
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11112,8 +10277,7 @@ match interface
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match interface 
@@ -11129,8 +10293,7 @@ no match interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11145,8 +10308,7 @@ no match interface
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11155,8 +10317,7 @@ no match interface
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<interface-name>会过滤重复。 
 
@@ -11165,8 +10326,7 @@ no match interface
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配的接口：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match interface gei-0/3/0/8配置匹配的接口：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match interface gei-0/3/0/8
 
@@ -11174,8 +10334,7 @@ no match interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -11190,8 +10349,7 @@ match ip address
 
 
 
-### 命令功能 
-
+命令功能 :
 
 重分配任何含有标准访问表许可的目的地网络地址的路由，或对包进行策略路由。使用no命令取消设置。 
 
@@ -11200,8 +10358,7 @@ match ip address
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11210,8 +10367,7 @@ match ip address
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11220,8 +10376,7 @@ match ip address
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ip address 
@@ -11240,8 +10395,7 @@ no match ip address
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11257,8 +10411,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11267,8 +10420,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<acl-name>或<prefix-list-name>会过滤重复。 
 
@@ -11277,8 +10429,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配目的地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip address ACL3
 
@@ -11286,8 +10437,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -11302,8 +10452,7 @@ match ip metric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配含指定尺度的路由。使用no命令删除匹配项。 
 
@@ -11312,8 +10461,7 @@ match ip metric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11322,8 +10470,7 @@ match ip metric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11332,8 +10479,7 @@ match ip metric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ip metric 
@@ -11354,8 +10500,7 @@ no match ip metric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11374,8 +10519,7 @@ le|运算符小于
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11384,8 +10528,7 @@ le|运算符小于
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<metric-value>会过滤重复。 
 
@@ -11394,8 +10537,7 @@ le|运算符小于
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配路由尺度：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip metric 20
 
@@ -11403,8 +10545,7 @@ le|运算符小于
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -11419,8 +10560,7 @@ match ip next-hop
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配所制定的标准访问表之一所经过的、有下一跳的路由器地址的路由。使用no命令删除该匹配项。 
 
@@ -11429,8 +10569,7 @@ match ip next-hop
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11439,8 +10578,7 @@ match ip next-hop
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11449,8 +10587,7 @@ match ip next-hop
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ip next-hop 
@@ -11469,8 +10606,7 @@ no match ip next-hop
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11496,8 +10632,7 @@ No参数|描述
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11506,8 +10641,7 @@ No参数|描述
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的＜access-list-or-prefix-list＞会被过滤。 
 
@@ -11516,8 +10650,7 @@ No参数|描述
 
 
 
-### 范例 
-
+范例 :
 
 1、配置使用ACL匹配下一跳地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip next-hop ACL42、配置使用PFL匹配下一跳地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip next-hop prefix-list PFL1
 
@@ -11525,8 +10658,7 @@ No参数|描述
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -11541,8 +10673,7 @@ match ip peer
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置对于BGP对等体的匹配项。 
 
@@ -11551,8 +10682,7 @@ match ip peer
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11561,8 +10691,7 @@ match ip peer
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11571,8 +10700,7 @@ match ip peer
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ip peer 
@@ -11594,8 +10722,7 @@ no match ip peer
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11613,8 +10740,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11623,8 +10749,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、No命令不带参数时删除此命令所有条目，<access-list>与<prefix-list>互斥。2、Route-map每个sequence下最多配置10个<access-list>或<prefix-list>。
 
@@ -11633,8 +10758,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配的BGP对等体：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip peer access-list ACL3
 
@@ -11643,8 +10767,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -11659,8 +10782,7 @@ match ip policy-route-id
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置对于策略路由的policy-router-id的匹配项 
 
@@ -11669,8 +10791,7 @@ match ip policy-route-id
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11679,8 +10800,7 @@ match ip policy-route-id
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11689,8 +10809,7 @@ match ip policy-route-id
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ip policy-route-id 
@@ -11710,8 +10829,7 @@ no match ip policy-route-id
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11728,8 +10846,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11738,8 +10855,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在一个route-map的不同的序列中，只能配置唯一一个policy-route-id值。在一个route-map中，destination选项和source选项互斥。在一个route-map中，match ip policy-route-id命令和match ip address命令互斥。
 
@@ -11748,8 +10864,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 范例 
-
+范例 :
 
 设置匹配项对于目的IP策略路由的ID值为1：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# match ip policy-route-id 1 destination 
 
@@ -11758,8 +10873,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-mapmatch ip address
 
@@ -11774,8 +10888,7 @@ match ip source
 
 
 
-### 命令功能 
-
+命令功能 :
 
 重分配任何含有标准访问表许可的源地网络地址的路由，或对包进行策略路由。使用no命令取消设置。
 
@@ -11783,8 +10896,7 @@ match ip source
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11793,8 +10905,7 @@ match ip source
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11803,8 +10914,7 @@ match ip source
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ip source 
@@ -11823,8 +10933,7 @@ no match ip source
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11840,8 +10949,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11850,8 +10958,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<acl-name>或<prefix-list-name>会过滤重复。
 
@@ -11859,8 +10966,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip source ACL1
 
@@ -11868,8 +10974,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip source ACL1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -11883,8 +10988,7 @@ match ip tag
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配路由表中与指定标记相匹配的路由。使用no命令删除标记匹配项。 
 
@@ -11893,8 +10997,7 @@ match ip tag
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -11903,8 +11006,7 @@ match ip tag
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -11913,8 +11015,7 @@ match ip tag
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ip tag 
@@ -11930,8 +11031,7 @@ no match ip tag
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -11946,8 +11046,7 @@ no match ip tag
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -11956,8 +11055,7 @@ no match ip tag
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<tag-value>会过滤重复。 
 
@@ -11966,8 +11064,7 @@ no match ip tag
 
 
 
-### 范例 
-
+范例 :
 
 配置再分配路由表中与指定标记相匹配的路由：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ip tag 0
 
@@ -11975,8 +11072,7 @@ no match ip tag
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -11991,8 +11087,7 @@ match ipv6 address
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配IPv6任何含有标准访问表许可的目的地网络地址的路由，或对包进行策略路由。 
 
@@ -12001,8 +11096,7 @@ match ipv6 address
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12011,8 +11105,7 @@ match ipv6 address
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12021,8 +11114,7 @@ match ipv6 address
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 address 
@@ -12041,8 +11133,7 @@ no match ipv6 address
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12058,8 +11149,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12068,8 +11158,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<access-list-name>会过滤重复。 
 
@@ -12078,8 +11167,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 范例 
-
+范例 :
 
 再分配IPV6任何含有标准访问表许可的目的地网络地址的路由：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 address ACL5
 
@@ -12087,8 +11175,7 @@ prefix-list|前缀列表配置标记
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -12103,8 +11190,7 @@ match ipv6 metric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配含指定尺度的路由。使用no命令删除匹配项。 
 
@@ -12113,8 +11199,7 @@ match ipv6 metric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12123,8 +11208,7 @@ match ipv6 metric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12133,8 +11217,7 @@ match ipv6 metric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 metric 
@@ -12155,8 +11238,7 @@ no match ipv6 metric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12175,8 +11257,7 @@ le|运算符小于
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12185,8 +11266,7 @@ le|运算符小于
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的< metric-value>会过滤重复。 
 
@@ -12195,8 +11275,7 @@ le|运算符小于
 
 
 
-### 范例 
-
+范例 :
 
 配置路由尺度：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 metric 20009
 
@@ -12204,8 +11283,7 @@ le|运算符小于
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -12220,8 +11298,7 @@ match ipv6 next-hop
 
 
 
-### 命令功能 
-
+命令功能 :
 
 对IPv6下一跳进行匹配。 
 
@@ -12230,8 +11307,7 @@ match ipv6 next-hop
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12240,8 +11316,7 @@ match ipv6 next-hop
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12250,8 +11325,7 @@ match ipv6 next-hop
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 next-hop 
@@ -12270,8 +11344,7 @@ no match ipv6 next-hop
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12297,8 +11370,7 @@ No参数|描述
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12307,8 +11379,7 @@ No参数|描述
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的＜access-list-or-prefix-list＞会被过滤。 
 
@@ -12317,8 +11388,7 @@ No参数|描述
 
 
 
-### 范例 
-
+范例 :
 
 1、使用ACL对IPv6下一跳进行匹配：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 next-hop ACL72、使用PFL对IPv6下一跳进行匹配：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 next-hop prefix-list PFL1
 
@@ -12326,8 +11396,7 @@ No参数|描述
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -12342,8 +11411,7 @@ match ipv6 peer
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置对于IPv6 BGP对等体的匹配项。 
 
@@ -12352,8 +11420,7 @@ match ipv6 peer
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12362,8 +11429,7 @@ match ipv6 peer
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12372,8 +11438,7 @@ match ipv6 peer
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 peer 
@@ -12395,8 +11460,7 @@ no match ipv6 peer
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12414,8 +11478,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12424,8 +11487,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、No命令不带参数时删除此命令所有条目，<access-list>与<prefix-list>互斥。2、Route-map每个sequence下最多配置10个<access-list>或<prefix-list>。
 
@@ -12434,8 +11496,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配的IPv6 BGP对等体：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 peer access-list ACL3
 
@@ -12444,8 +11505,7 @@ access-list|访问控制列表配置标记
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -12460,8 +11520,7 @@ match ipv6 policy-route-id
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置对于IPv6策略路由的policy-router-id的匹配项 
 
@@ -12470,8 +11529,7 @@ match ipv6 policy-route-id
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12480,8 +11538,7 @@ match ipv6 policy-route-id
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12490,8 +11547,7 @@ match ipv6 policy-route-id
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 policy-route-id 
@@ -12511,8 +11567,7 @@ no match ipv6 policy-route-id
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12529,8 +11584,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12539,8 +11593,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 使用说明 
-
+使用说明 :
 
 在一个route-map的不同的序列中，只能配置唯一一个policy-route-id值。在一个route-map中，destination选项和source选项互斥。在一个route-map中，match ipv6 policy命令和match ipv6 address命令互斥。
 
@@ -12549,8 +11602,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 范例 
-
+范例 :
 
 设置匹配项对于目的IP策略路由的ID值为1：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# match ipv6 policy-route-id 1 destination 
 
@@ -12559,8 +11611,7 @@ source|用目的IP查路由获得路由的community属性来匹配策略路由
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-mapmatch ipv6 address
 
@@ -12575,8 +11626,7 @@ match ipv6 source
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配IPv6任何含有标准访问表许可的源网络地址的路由，或对包进行策略路由。 
 
@@ -12585,8 +11635,7 @@ match ipv6 source
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12595,8 +11644,7 @@ match ipv6 source
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12605,8 +11653,7 @@ match ipv6 source
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 source 
@@ -12625,8 +11672,7 @@ no match ipv6 source
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12652,8 +11698,7 @@ No参数|描述
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12662,8 +11707,7 @@ No参数|描述
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的＜access-list-or-prefix-list＞会被过滤。
 
@@ -12671,8 +11715,7 @@ No参数|描述
 
 
 
-### 范例 
-
+范例 :
 
 1、使用ACL匹配源地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 source ACL22、使用PFL匹配源地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 source prefix-list PFL1p
 
@@ -12680,8 +11723,7 @@ No参数|描述
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -12695,8 +11737,7 @@ match ipv6 tag
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配路由表中与指定标记相匹配的路由。使用no命令删除标记匹配项。 
 
@@ -12705,8 +11746,7 @@ match ipv6 tag
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12715,8 +11755,7 @@ match ipv6 tag
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12725,8 +11764,7 @@ match ipv6 tag
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match ipv6 tag 
@@ -12742,8 +11780,7 @@ no match ipv6 tag
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12758,8 +11795,7 @@ no match ipv6 tag
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12768,8 +11804,7 @@ no match ipv6 tag
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<tag-value>会过滤重复。 
 
@@ -12778,8 +11813,7 @@ no match ipv6 tag
 
 
 
-### 范例 
-
+范例 :
 
 配置再分配路由表中与指定标记相匹配的路由：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match ipv6 tag 0
 
@@ -12787,8 +11821,7 @@ no match ipv6 tag
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -12803,8 +11836,7 @@ match l2-vni-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 匹配二层VNI标签值。 
 
@@ -12813,8 +11845,7 @@ match l2-vni-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12823,8 +11854,7 @@ match l2-vni-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12833,8 +11863,7 @@ match l2-vni-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -12851,8 +11880,7 @@ no match l2-vni-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12867,8 +11895,7 @@ no match l2-vni-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12877,8 +11904,7 @@ no match l2-vni-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.route-map提供match l2-vni-label项，BGP用来匹配EVPN路由的二层VNI标签属性。 
 
@@ -12887,8 +11913,7 @@ no match l2-vni-label
 
 
 
-### 范例 
-
+范例 :
 
 1.在route-map中配置l2-vni-label：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# match l2-vni-label 16777215
 
@@ -12897,8 +11922,7 @@ no match l2-vni-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -12913,8 +11937,7 @@ match l3-vni-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 匹配三层VNI标签值。 
 
@@ -12923,8 +11946,7 @@ match l3-vni-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -12933,8 +11955,7 @@ match l3-vni-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -12943,8 +11964,7 @@ match l3-vni-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -12961,8 +11981,7 @@ no match l3-vni-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -12977,8 +11996,7 @@ no match l3-vni-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -12987,8 +12005,7 @@ no match l3-vni-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.route-map提供match l3-vni-label项，BGP用来匹配EVPN路由的三层VNI标签属性。 
 
@@ -12997,8 +12014,7 @@ no match l3-vni-label
 
 
 
-### 范例 
-
+范例 :
 
 1.在route-map中配置l3-vni-label：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# match l3-vni-label 16777215
 
@@ -13007,8 +12023,7 @@ no match l3-vni-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -13023,8 +12038,7 @@ match large-community-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置匹配大团体表。使用no命令删除大团体表记录。 
 
@@ -13033,8 +12047,7 @@ match large-community-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13043,8 +12056,7 @@ match large-community-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13053,8 +12065,7 @@ match large-community-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match large-community-list 
@@ -13072,8 +12083,7 @@ no match large-community-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13088,8 +12098,7 @@ no match large-community-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -13098,8 +12107,7 @@ no match large-community-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 使用场景：BGP用来匹配大团体表。注意事项：1、同序列下最多配置10个大团体列表名。No命令不带参数，是删除当前序列号下所有大团体列表。
 
@@ -13108,8 +12116,7 @@ no match large-community-list
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配大团体表：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match large-community-list name a
 
@@ -13118,8 +12125,7 @@ no match large-community-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -13134,8 +12140,7 @@ match local-preference
 
 
 
-### 命令功能 
-
+命令功能 :
 
 匹配优先权值。使用no命令恢复缺省值。
 
@@ -13143,8 +12148,7 @@ match local-preference
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13153,8 +12157,7 @@ match local-preference
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13163,8 +12166,7 @@ match local-preference
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match local-preference 
@@ -13183,8 +12185,7 @@ no match local-preference
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13202,18 +12203,7 @@ le|运算符小于
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -13222,8 +12212,16 @@ le|运算符小于
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match local-preference eq 4294967295
 
@@ -13231,8 +12229,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match local-preference eq
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -13246,8 +12243,7 @@ match metric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配含指定尺度的路由。使用no命令删除匹配项。 
 
@@ -13256,8 +12252,7 @@ match metric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13266,8 +12261,7 @@ match metric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13276,8 +12270,7 @@ match metric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match metric 
@@ -13298,8 +12291,7 @@ no match metric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13327,8 +12319,7 @@ all|删除所有路由尺度
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -13337,8 +12328,7 @@ all|删除所有路由尺度
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<metric-value>会被过滤，此命令与match ip metric和match ipv6 metric互斥。 
 
@@ -13347,8 +12337,7 @@ all|删除所有路由尺度
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配路由尺度：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match metric 20
 
@@ -13357,8 +12346,7 @@ all|删除所有路由尺度
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -13373,8 +12361,7 @@ match mpls-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置一个基于MPLS标签的匹配规则，用于匹配带有MPLS标签的路由。使用no命令恢复缺省配置。 
 
@@ -13383,8 +12370,7 @@ match mpls-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13393,8 +12379,7 @@ match mpls-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13403,8 +12388,7 @@ match mpls-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -13420,8 +12404,7 @@ no match mpls-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -13432,8 +12415,7 @@ no match mpls-label
 
 
 
-### 缺省 
-
+缺省 :
 
 没有配置基于MPLS标签的匹配规则。 
 
@@ -13442,8 +12424,7 @@ no match mpls-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 无 
 
@@ -13452,8 +12433,7 @@ no match mpls-label
 
 
 
-### 范例 
-
+范例 :
 
 匹配携带标签标志的路由：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match mpls-label ZXROSNG(config-route-map)#no match mpls-label 
 
@@ -13462,8 +12442,7 @@ no match mpls-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -13478,8 +12457,7 @@ match origin
 
 
 
-### 命令功能 
-
+命令功能 :
 
 匹配BGP路由起源属性。 
 
@@ -13488,8 +12466,7 @@ match origin
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13498,8 +12475,7 @@ match origin
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13508,8 +12484,7 @@ match origin
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -13528,8 +12503,7 @@ no match origin
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13546,18 +12520,7 @@ incomplete|未知的残余项
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -13566,8 +12529,16 @@ incomplete|未知的残余项
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match origin egp
 
@@ -13575,8 +12546,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match origin egp
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -13590,8 +12560,7 @@ match rd-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 BGP基于RD属性的过滤 
 
@@ -13600,8 +12569,7 @@ BGP基于RD属性的过滤
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13610,8 +12578,7 @@ BGP基于RD属性的过滤
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13620,8 +12587,7 @@ BGP基于RD属性的过滤
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match rd-list 
@@ -13637,8 +12603,7 @@ no match rd-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13653,8 +12618,7 @@ no match rd-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -13663,8 +12627,7 @@ no match rd-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<rd-list-number>会过滤重复 
 
@@ -13673,8 +12636,7 @@ no match rd-list
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#route-map zte  ZXROSNG(config-route-map)#match rd-list 1
 
@@ -13683,8 +12645,7 @@ ZXROSNG(config)#route-map zte  ZXROSNG(config-route-map)#match rd-list 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -13699,8 +12660,7 @@ match route-type
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置匹配路由类型。使用no命令删除该匹配项。 
 
@@ -13709,8 +12669,7 @@ match route-type
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13719,8 +12678,7 @@ match route-type
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13729,8 +12687,7 @@ match route-type
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match route-type 
@@ -13772,8 +12729,7 @@ no match route-type
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13801,18 +12757,7 @@ bgp-agg|BGP聚合路由类型
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -13821,8 +12766,16 @@ bgp-agg|BGP聚合路由类型
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 1.配置匹配路由类型：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match route-type external type-12. 配置匹配EBGP路由类型：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match route-type ebgp3. 去配置匹配BGP聚合路由类型：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# no match route-type bgp-agg
 
@@ -13831,8 +12784,7 @@ bgp-agg|BGP聚合路由类型
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -13847,8 +12799,7 @@ match rpki origin-as-validation
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置对于RPKI的BGP路由起源AS验证结果的匹配项。 
 
@@ -13857,8 +12808,7 @@ match rpki origin-as-validation
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13867,8 +12817,7 @@ match rpki origin-as-validation
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13877,8 +12826,7 @@ match rpki origin-as-validation
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match rpki origin-as-validation 
@@ -13898,8 +12846,7 @@ no match rpki origin-as-validation
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -13916,8 +12863,7 @@ not-found|无法验证的BGP路由
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -13926,8 +12872,7 @@ not-found|无法验证的BGP路由
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置基于BGP路由起源AS验证结果的匹配规则后，路由信息必须符合基于BGP路由起源AS验证结果的匹配规则，才可以执行相应动作对路由的一些属性进行修改。 
 
@@ -13936,8 +12881,7 @@ not-found|无法验证的BGP路由
 
 
 
-### 范例 
-
+范例 :
 
 配置匹配的RPKI的BGP路由起源AS验证结果：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match rpki origin-as-validation valid
 
@@ -13946,8 +12890,7 @@ not-found|无法验证的BGP路由
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -13962,8 +12905,7 @@ match tag
 
 
 
-### 命令功能 
-
+命令功能 :
 
 再分配路由表中与指定标记相匹配的路由。使用no命令删除标记匹配项。 
 
@@ -13972,8 +12914,7 @@ match tag
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -13982,8 +12923,7 @@ match tag
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -13992,8 +12932,7 @@ match tag
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 match tag 
@@ -14009,8 +12948,7 @@ no match tag
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14025,8 +12963,7 @@ no match tag
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -14035,8 +12972,7 @@ no match tag
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复的<tag-value>会被过滤。此命令与match ip tag和match ipv6 tag互斥。 
 
@@ -14045,8 +12981,7 @@ no match tag
 
 
 
-### 范例 
-
+范例 :
 
 配置再分配路由表中与指定标记相匹配的路由：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match tag 0
 
@@ -14055,8 +12990,7 @@ no match tag
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -14071,8 +13005,7 @@ match vni
 
 
 
-### 命令功能 
-
+命令功能 :
 
 使用本命令在route-map中配置VNI的匹配项，VNI匹配项用于PBR匹配报文的VXLAN network identifier。 
 
@@ -14081,8 +13014,7 @@ match vni
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -14091,8 +13023,7 @@ match vni
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14101,8 +13032,7 @@ match vni
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -14134,8 +13064,7 @@ no match vni
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14157,8 +13086,7 @@ no match vni
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -14167,8 +13095,7 @@ no match vni
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1 route-map中配置VNI后，route-map具有IPV4属性，不能再配置IPV6属性的命令。2 route-map配置具有IPV6属性的命令后，不能再配置VNI。3 同一个route-map中，match ip address acl 和 match vni不能同时配置。4 match vni中一个数据段的上限数值应大于等于下限数值。5 match vni中一个数据段的上限数值和下限数值的差值应小于等于255。6 match vni中各个段的数值不能有重复部分。
 
@@ -14177,8 +13104,7 @@ no match vni
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置match vni：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#match vni from 1 to 2
 
@@ -14187,8 +13113,7 @@ no match vni
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -14203,8 +13128,7 @@ policy-commit-immediately
 
 
 
-### 命令功能 
-
+命令功能 :
 
 操作类命令，执行后策略对业务立即生效。可以通过选择不同的参数实现所有策略对业务立即生效或者指定的某种策略对业务立即生效。 
 
@@ -14213,8 +13137,7 @@ policy-commit-immediately
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -14223,8 +13146,7 @@ policy-commit-immediately
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14233,8 +13155,7 @@ policy-commit-immediately
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -14253,8 +13174,7 @@ policy-commit-immediately
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14274,8 +13194,7 @@ route-map|命令作用route-map模块立即生效同步到业务
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -14284,8 +13203,7 @@ route-map|命令作用route-map模块立即生效同步到业务
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、应用业务（如BGP、OSPF等）引用策略（如route-map、as-path、community-list、rd-list等）后，可以通过本命令实现对之前已创建、更新的策略立即同步到对应的应用业务，但是对执行该命令后，新生成的策略不生效。2、命令配置多次，采用覆盖方式生效，如先配置参数all，再配置参数as-path，最后只生效as-path。3、本命令配置后会覆盖对应业务已配置的trigger-delay延迟时间，使之立即生效，不会延迟。
 
@@ -14294,8 +13212,7 @@ route-map|命令作用route-map模块立即生效同步到业务
 
 
 
-### 范例 
-
+范例 :
 
 1、所有策略立即同步到对应的业务：ZXROSNG(config)#policy-commit-immediately all2、策略route-map立即同步到对应的业务：ZXROSNG(config)#policy-commit-immediately route-map
 
@@ -14304,8 +13221,7 @@ route-map|命令作用route-map模块立即生效同步到业务
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ip as-path access-list trigger-delayip community-list trigger-delayip extcommunity-list trigger-delayip rd-list trigger-delayroute-map-trigger-delay
 
@@ -14320,8 +13236,7 @@ route-map
 
 
 
-### 命令功能 
-
+命令功能 :
 
 创建（删除）或进入route-map配置模式。 
 
@@ -14330,8 +13245,7 @@ route-map
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -14340,8 +13254,7 @@ route-map
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14350,8 +13263,7 @@ route-map
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 route-map 
@@ -14371,8 +13283,7 @@ no route-map
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14390,18 +13301,7 @@ permit|如果路由映射符合匹配条件，允许再分配策略路由标志�
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -14410,8 +13310,16 @@ permit|如果路由映射符合匹配条件，允许再分配策略路由标志�
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置route-map：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#
 
@@ -14419,8 +13327,7 @@ permit|如果路由映射符合匹配条件，允许再分配策略路由标志�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -14435,8 +13342,7 @@ route-map-trigger-delay
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置route-map同步到应用的延迟时间。 
 
@@ -14445,8 +13351,7 @@ route-map-trigger-delay
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -14455,8 +13360,7 @@ route-map-trigger-delay
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14465,8 +13369,7 @@ route-map-trigger-delay
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -14483,8 +13386,7 @@ no route-map-trigger-delay
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14499,8 +13401,7 @@ no route-map-trigger-delay
 
 
 
-### 缺省 
-
+缺省 :
 
 同步延时时间$#34406405#$。 
 
@@ -14509,8 +13410,7 @@ no route-map-trigger-delay
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、应用协议（如BGP、OSPF等）引用route-map后，当route-map创建、更新，会同步到对应的应用协议。同步会有一定延时，可以通过本命令调整延时时间。2、本配置针对所有route-map实例生效。
 
@@ -14519,8 +13419,7 @@ no route-map-trigger-delay
 
 
 
-### 范例 
-
+范例 :
 
 设置route-map同步延迟时间为20秒：ZXROSNG(config)#route-map-trigger-delay 20
 
@@ -14529,8 +13428,7 @@ no route-map-trigger-delay
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -14545,8 +13443,7 @@ set as-path
 
 
 
-### 命令功能 
-
+命令功能 :
 
 修改BGP路由自治系统路径。使用no命令取消修改。 
 
@@ -14555,8 +13452,7 @@ set as-path
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -14565,8 +13461,7 @@ set as-path
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14575,8 +13470,7 @@ set as-path
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -14606,8 +13500,7 @@ no set as-path
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14635,18 +13528,7 @@ delete|删除标志位
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -14655,8 +13537,16 @@ delete|删除标志位
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 配置BGP路由自治系统路径属性：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set as-path prepend 2 3 4 5 6
 
@@ -14664,8 +13554,7 @@ delete|删除标志位
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -14680,8 +13569,7 @@ set color-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP SR携带的color值，可以配置多个。使用no命令取消配置。 
 
@@ -14690,8 +13578,7 @@ set color-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -14700,8 +13587,7 @@ set color-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14710,8 +13596,7 @@ set color-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -14728,8 +13613,7 @@ no set color-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14744,8 +13628,7 @@ no set color-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -14754,8 +13637,7 @@ no set color-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 同一序列号下，set color命令和set color-list命令不能同时配置。 
 
@@ -14764,8 +13646,7 @@ no set color-list
 
 
 
-### 范例 
-
+范例 :
 
 配置color列表，用于标识BGP SR能够提供的服务质量，以及对外层SR policy的要求：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set color-list a
 
@@ -14774,8 +13655,7 @@ no set color-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -14790,8 +13670,7 @@ set community
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP COMMUNITY属性。使用no命令删除该属性。 
 
@@ -14800,8 +13679,7 @@ set community
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -14810,8 +13688,7 @@ set community
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14820,8 +13697,7 @@ set community
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set community 
@@ -14857,8 +13733,7 @@ no set community
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -14891,8 +13766,7 @@ all|删除所有set community配置
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -14901,8 +13775,7 @@ all|删除所有set community配置
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复值会过滤重复。同一个序列号内set community value和set community name互斥
 
@@ -14911,8 +13784,7 @@ all|删除所有set community配置
 
 
 
-### 范例 
-
+范例 :
 
 设置BGP COMMUNITY属性和COMMUNITY名称：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set community 12 13 no-exportZXROSNG(config-route-map)#exitZXROSNG(config)#route-map zte1ZXROSNG(config-route-map)#set community name zte
 
@@ -14921,8 +13793,7 @@ all|删除所有set community配置
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -14937,8 +13808,7 @@ set dampening
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP路由阻尼因素。使用no命令使该功能无效。 
 
@@ -14947,8 +13817,7 @@ set dampening
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -14957,8 +13826,7 @@ set dampening
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -14967,8 +13835,7 @@ set dampening
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -14988,8 +13855,7 @@ no set dampening
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15007,8 +13873,7 @@ no set dampening
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -15017,8 +13882,7 @@ no set dampening
 
 
 
-### 使用说明 
-
+使用说明 :
 
 路由阻尼因素的路由抑制值应该大于路由阻尼因素的重新使用值。 
 
@@ -15027,8 +13891,7 @@ no set dampening
 
 
 
-### 范例 
-
+范例 :
 
 配置路由阻尼因素：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set dampening 45 100 210 46
 
@@ -15036,8 +13899,7 @@ no set dampening
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15052,8 +13914,7 @@ set distance
 
 
 
-### 命令功能 
-
+命令功能 :
 
 基于OSPF的route-map里支持匹配策略的前缀设置不同的distance值。使用no命令取消配置。 
 
@@ -15062,8 +13923,7 @@ set distance
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15072,8 +13932,7 @@ set distance
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15082,8 +13941,7 @@ set distance
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -15100,8 +13958,7 @@ no set distance
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15116,8 +13973,7 @@ no set distance
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -15126,8 +13982,7 @@ no set distance
 
 
 
-### 使用说明 
-
+使用说明 :
 
 Route-map提供set distance项，在OSPF配置中应用route-map。 
 
@@ -15136,8 +13991,7 @@ Route-map提供set distance项，在OSPF配置中应用route-map。
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set distance 1
 
@@ -15146,8 +14000,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set distance 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15162,8 +14015,7 @@ set dscp
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置PBR的DSCP值。 
 
@@ -15172,8 +14024,7 @@ set dscp
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15182,8 +14033,7 @@ set dscp
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15192,8 +14042,7 @@ set dscp
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -15210,8 +14059,7 @@ no set dscp
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15226,18 +14074,7 @@ no set dscp
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -15246,8 +14083,16 @@ no set dscp
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置DSCP值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set dscp 35
 
@@ -15255,8 +14100,7 @@ no set dscp
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15271,8 +14115,7 @@ set evpn-router-mac interface
 
 
 
-### 命令功能 
-
+命令功能 :
 
 BGP 获取配置的接口MAC，用来设置EVPN Router's MAC扩展团体属性。 
 
@@ -15281,8 +14124,7 @@ BGP 获取配置的接口MAC，用来设置EVPN Router's MAC扩展团体属性�
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15291,8 +14133,7 @@ BGP 获取配置的接口MAC，用来设置EVPN Router's MAC扩展团体属性�
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15301,8 +14142,7 @@ BGP 获取配置的接口MAC，用来设置EVPN Router's MAC扩展团体属性�
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -15319,8 +14159,7 @@ no set evpn-router-mac interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15335,8 +14174,7 @@ no set evpn-router-mac interface
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -15345,8 +14183,7 @@ no set evpn-router-mac interface
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.    route-map提供set evpn-router-mac interface项，BGP通过获取配置的接口MAC地址，设置EVPN Router's MAC扩展团体属性。 
 
@@ -15355,8 +14192,7 @@ no set evpn-router-mac interface
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置evpn-router-mac interface：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set evpn-router-mac interface loopback1
 
@@ -15364,8 +14200,7 @@ no set evpn-router-mac interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15380,8 +14215,7 @@ set extcommunity general-asn
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP EXTCOMMUNITY属性。使用no命令取消设置。
 
@@ -15389,8 +14223,7 @@ set extcommunity general-asn
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15399,8 +14232,7 @@ set extcommunity general-asn
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15409,8 +14241,7 @@ set extcommunity general-asn
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set extcommunity general-asn 
@@ -15429,8 +14260,7 @@ no set extcommunity general-asn
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15447,8 +14277,7 @@ additive|添加一个已经存在的扩展团体
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -15457,8 +14286,7 @@ additive|添加一个已经存在的扩展团体
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复值会过滤重复。
 
@@ -15466,8 +14294,7 @@ additive|添加一个已经存在的扩展团体
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set extcommunity general-asn 0:0
 
@@ -15475,8 +14302,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set extcommunity general-
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -15490,8 +14316,7 @@ set extcommunity rt-trans
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP EXTCOMMUNITY属性。使用no命令取消设置。 
 
@@ -15500,8 +14325,7 @@ set extcommunity rt-trans
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15510,8 +14334,7 @@ set extcommunity rt-trans
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15520,8 +14343,7 @@ set extcommunity rt-trans
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set extcommunity rt-trans 
@@ -15544,8 +14366,7 @@ no set extcommunity rt-trans
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15564,8 +14385,7 @@ A.B.C.D:<0-65535>|VPN的扩展团体
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -15574,8 +14394,7 @@ A.B.C.D:<0-65535>|VPN的扩展团体
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复值会过滤重复。 
 
@@ -15584,8 +14403,7 @@ A.B.C.D:<0-65535>|VPN的扩展团体
 
 
 
-### 范例 
-
+范例 :
 
 设置BGP EXTCOMMUNITY属性：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set extcommunity rt-trans 192.168.20.110:0
 
@@ -15593,8 +14411,7 @@ A.B.C.D:<0-65535>|VPN的扩展团体
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15609,8 +14426,7 @@ set extcommunity soo-trans
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP EXTCOMMUNITY属性。使用no命令取消设置。 
 
@@ -15619,8 +14435,7 @@ set extcommunity soo-trans
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15629,8 +14444,7 @@ set extcommunity soo-trans
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15639,8 +14453,7 @@ set extcommunity soo-trans
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -15660,8 +14473,7 @@ no set extcommunity soo-trans
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15679,18 +14491,7 @@ A.B.C.D:<0-65535>|VPN的扩展团体
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -15699,8 +14500,16 @@ A.B.C.D:<0-65535>|VPN的扩展团体
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置BGP EXTCOMMUNITY属性：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set extcommunity soo-trans 65535:1
 
@@ -15708,8 +14517,7 @@ A.B.C.D:<0-65535>|VPN的扩展团体
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15724,8 +14532,7 @@ set global
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置PBR全局路由。 
 
@@ -15734,8 +14541,7 @@ set global
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15744,8 +14550,7 @@ set global
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15754,8 +14559,7 @@ set global
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -15774,8 +14578,7 @@ no set global
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15792,18 +14595,7 @@ next-hop|下一跳
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -15812,8 +14604,16 @@ next-hop|下一跳
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置全局路由：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set global ip next-hop 1.1.1.1
 
@@ -15821,8 +14621,7 @@ next-hop|下一跳
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15837,8 +14636,7 @@ set gw-ip
 
 
 
-### 命令功能 
-
+命令功能 :
 
 指定网关的IPv4地址。使用no命令取消设置。 
 
@@ -15847,8 +14645,7 @@ set gw-ip
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15857,8 +14654,7 @@ set gw-ip
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15867,8 +14663,7 @@ set gw-ip
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -15885,8 +14680,7 @@ no set gw-ip
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -15901,8 +14695,7 @@ no set gw-ip
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -15911,8 +14704,7 @@ no set gw-ip
 
 
 
-### 使用说明 
-
+使用说明 :
 
 此命令与set ipv6 gw-ip互斥。 
 
@@ -15921,8 +14713,7 @@ no set gw-ip
 
 
 
-### 范例 
-
+范例 :
 
 指定网关的IPv4地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set gw-ip 2.2.2.2
 
@@ -15931,8 +14722,7 @@ no set gw-ip
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -15947,8 +14737,7 @@ set interface
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当数据包符合用于策略路由的路由映像的一个匹配项而可被策略路由时，使用本命令把数据包路由到指定接口上。 
 
@@ -15957,8 +14746,7 @@ set interface
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -15967,8 +14755,7 @@ set interface
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -15977,8 +14764,7 @@ set interface
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set interface 
@@ -15994,8 +14780,7 @@ no set interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16010,8 +14795,7 @@ no set interface
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -16020,8 +14804,7 @@ no set interface
 
 
 
-### 使用说明 
-
+使用说明 :
 
 配置重复<interface-name>会过滤重复。 
 
@@ -16030,8 +14813,7 @@ no set interface
 
 
 
-### 范例 
-
+范例 :
 
 把数据包路由到指定接口gre_tunnel10上：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set interface gre_tunnel10
 
@@ -16039,8 +14821,7 @@ no set interface
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16055,8 +14836,7 @@ set ip default-next-hop
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置默认下一跳地址。 
 
@@ -16065,8 +14845,7 @@ set ip default-next-hop
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16075,8 +14854,7 @@ set ip default-next-hop
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16085,8 +14863,7 @@ set ip default-next-hop
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set ip default-next-hop 
@@ -16111,8 +14888,7 @@ no set ip default-next-hop
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16136,18 +14912,7 @@ no set ip default-next-hop
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -16156,8 +14921,16 @@ no set ip default-next-hop
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 在route-map中配置默认下一跳地址为3.3.3.3：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip default-next-hop 3.3.3.3
 
@@ -16166,8 +14939,7 @@ no set ip default-next-hop
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16182,8 +14954,7 @@ set ip metric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置路由选择协议的尺度值。使用no命令恢复缺省状态。 
 
@@ -16192,8 +14963,7 @@ set ip metric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16202,8 +14972,7 @@ set ip metric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16212,8 +14981,7 @@ set ip metric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -16232,8 +15000,7 @@ no set ip metric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16250,18 +15017,7 @@ no set ip metric
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -16270,8 +15026,16 @@ no set ip metric
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置路由选择协议的尺度值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip metric + 1
 
@@ -16279,8 +15043,7 @@ no set ip metric
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16295,8 +15058,7 @@ set ip metric-type
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置路由选择协议的尺度类型。使用no命令取消设置。 
 
@@ -16305,8 +15067,7 @@ set ip metric-type
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16315,8 +15076,7 @@ set ip metric-type
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16325,8 +15085,7 @@ set ip metric-type
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -16346,8 +15105,7 @@ no set ip metric-type
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16365,18 +15123,7 @@ type-2|OSPF外部类型2尺度
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -16385,8 +15132,16 @@ type-2|OSPF外部类型2尺度
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置路由选择协议的尺度类型：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip metric-type internal
 
@@ -16394,8 +15149,7 @@ type-2|OSPF外部类型2尺度
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16410,8 +15164,7 @@ set ip next-hop
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当数据包符合用于策略路由的路由映像的一个匹配项而可被策略路由时，使用本命令把数据包路由到指定的下一跳。 
 
@@ -16420,8 +15173,7 @@ set ip next-hop
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16430,8 +15182,7 @@ set ip next-hop
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16440,8 +15191,7 @@ set ip next-hop
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set ip next-hop 
@@ -16486,8 +15236,7 @@ no set ip next-hop
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16521,18 +15270,7 @@ no set ip next-hop
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -16541,8 +15279,16 @@ no set ip next-hop
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 把数据包路由到指定的下一跳地址3.3.3.3上：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip next-hop 3.3.3.3
 
@@ -16550,8 +15296,7 @@ no set ip next-hop
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16566,8 +15311,7 @@ set ip path interface
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当数据包符合用于策略路由的路由映像的一个匹配项而可被策略路由时，使用本命令把数据包路由到指定的以太接口及下一跳。 
 
@@ -16576,8 +15320,7 @@ set ip path interface
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16586,8 +15329,7 @@ set ip path interface
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16596,8 +15338,7 @@ set ip path interface
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -16616,8 +15357,7 @@ no set ip path interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16633,18 +15373,7 @@ no set ip path interface
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -16653,8 +15382,16 @@ no set ip path interface
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip path interface gei-0/1/0/2 next-hop 1.2.3.4ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip path interface gei-0/1/0/2 next-hop 1.2.3.4
 
@@ -16662,8 +15399,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip path interface gei
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16678,8 +15414,7 @@ set ip precedence
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置IP报头优先级。 
 
@@ -16688,8 +15423,7 @@ set ip precedence
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16698,8 +15432,7 @@ set ip precedence
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16708,8 +15441,7 @@ set ip precedence
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -16727,8 +15459,7 @@ no set ip precedence
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16744,18 +15475,7 @@ no set ip precedence
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -16764,8 +15484,16 @@ no set ip precedence
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置IP报头优先级：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip precedence 5
 
@@ -16773,8 +15501,7 @@ no set ip precedence
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16789,8 +15516,7 @@ set ip sr-policy
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当数据包符合应用于PBR的route-map的一个匹配项而可被策略路由时，使用本命令把数据包转发到相应color值和IPv4地址对应的隧道。 
 
@@ -16799,8 +15525,7 @@ set ip sr-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16809,8 +15534,7 @@ set ip sr-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16819,8 +15543,7 @@ set ip sr-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -16840,8 +15563,7 @@ no set ip sr-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16857,8 +15579,7 @@ no set ip sr-policy
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -16867,8 +15588,7 @@ no set ip sr-policy
 
 
 
-### 使用说明 
-
+使用说明 :
 
 使用场景：此命令应用于策略路由，当规则匹配时把数据包转发到相应color值和IPv4地址对应的隧道。前提要求：此命令与set ipv6 sr-policy互斥。
 
@@ -16877,8 +15597,7 @@ no set ip sr-policy
 
 
 
-### 范例 
-
+范例 :
 
 当规则匹配时把数据包转发到相应color值和IPv4地址对应的隧道：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip sr-policy color 12 end-point 1.2.3.4
 
@@ -16887,8 +15606,7 @@ no set ip sr-policy
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -16903,8 +15621,7 @@ set ip tag
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置目的路由选择协议的标记值。使用no命令取消设置。 
 
@@ -16913,8 +15630,7 @@ set ip tag
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -16923,8 +15639,7 @@ set ip tag
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -16933,8 +15648,7 @@ set ip tag
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -16951,8 +15665,7 @@ no set ip tag
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -16967,18 +15680,7 @@ no set ip tag
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -16987,8 +15689,16 @@ no set ip tag
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置目的路由选择协议的标记值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip tag 210
 
@@ -16996,8 +15706,7 @@ no set ip tag
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17012,8 +15721,7 @@ set ip tos
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置IP报头的TOS字段值。 
 
@@ -17022,8 +15730,7 @@ set ip tos
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17032,8 +15739,7 @@ set ip tos
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17042,8 +15748,7 @@ set ip tos
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17061,8 +15766,7 @@ no set ip tos
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17078,18 +15782,7 @@ no set ip tos
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -17098,8 +15791,16 @@ no set ip tos
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置IP报头的TOS字段值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ip tos normal
 
@@ -17107,8 +15808,7 @@ no set ip tos
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17123,8 +15823,7 @@ set ip vxlan-tunnel source
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置VXLAN隧道源地址。 
 
@@ -17133,8 +15832,7 @@ set ip vxlan-tunnel source
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17143,8 +15841,7 @@ set ip vxlan-tunnel source
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17153,8 +15850,7 @@ set ip vxlan-tunnel source
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17171,8 +15867,7 @@ no set ip vxlan-tunnel source
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17187,8 +15882,7 @@ no set ip vxlan-tunnel source
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -17197,8 +15891,7 @@ no set ip vxlan-tunnel source
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. route-map提供set ip vxlan-tunnel source项，BGP通过此配置来修改VXLAN隧道的源地址。 
 
@@ -17207,8 +15900,7 @@ no set ip vxlan-tunnel source
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置ip vxlan-tunnel source：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set ip vxlan-tunnel source 1.2.3.4
 
@@ -17216,8 +15908,7 @@ no set ip vxlan-tunnel source
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17232,8 +15923,7 @@ set ipv6 gw-ip
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置网关IPv6地址。使用no命令取消设置。 
 
@@ -17242,8 +15932,7 @@ set ipv6 gw-ip
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17252,8 +15941,7 @@ set ipv6 gw-ip
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17262,8 +15950,7 @@ set ipv6 gw-ip
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17280,8 +15967,7 @@ no set ipv6 gw-ip
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17296,8 +15982,7 @@ no set ipv6 gw-ip
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -17306,8 +15991,7 @@ no set ipv6 gw-ip
 
 
 
-### 使用说明 
-
+使用说明 :
 
 此命令与set gw-ip互斥。 
 
@@ -17316,8 +16000,7 @@ no set ipv6 gw-ip
 
 
 
-### 范例 
-
+范例 :
 
 设置网关IPv6地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 gw-ip 1:1::2:3
 
@@ -17326,8 +16009,7 @@ no set ipv6 gw-ip
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17342,8 +16024,7 @@ set ipv6 metric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置IPv6路由选择协议的尺度值。使用no命令恢复缺省状态。 
 
@@ -17352,8 +16033,7 @@ set ipv6 metric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17362,8 +16042,7 @@ set ipv6 metric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17372,8 +16051,7 @@ set ipv6 metric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17392,8 +16070,7 @@ no set ipv6 metric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17410,18 +16087,7 @@ no set ipv6 metric
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -17430,8 +16096,16 @@ no set ipv6 metric
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置路由协议的尺度值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 metric + 2346
 
@@ -17439,8 +16113,7 @@ no set ipv6 metric
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17455,8 +16128,7 @@ set ipv6 metric-type
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置路由选择协议的尺度类型。使用no命令取消设置。 
 
@@ -17465,8 +16137,7 @@ set ipv6 metric-type
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17475,8 +16146,7 @@ set ipv6 metric-type
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17485,8 +16155,7 @@ set ipv6 metric-type
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17506,8 +16175,7 @@ no set ipv6 metric-type
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17525,18 +16193,7 @@ type-2|OSPF外部类型2尺度
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -17545,8 +16202,16 @@ type-2|OSPF外部类型2尺度
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置IPv6路由选择协议的尺度类型：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 metric-type internal
 
@@ -17554,8 +16219,7 @@ type-2|OSPF外部类型2尺度
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17570,8 +16234,7 @@ set ipv6 next-hop
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置下一跳地址为IPv6的路由。 
 
@@ -17580,8 +16243,7 @@ set ipv6 next-hop
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17590,8 +16252,7 @@ set ipv6 next-hop
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17600,8 +16261,7 @@ set ipv6 next-hop
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set ipv6 next-hop 
@@ -17619,8 +16279,7 @@ no set ipv6 next-hop
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17636,18 +16295,7 @@ peer-address|直连地址标识
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -17656,8 +16304,16 @@ peer-address|直连地址标识
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置下一跳地址为IPv6的路由：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 next-hop 1:1::2:3
 
@@ -17665,8 +16321,7 @@ peer-address|直连地址标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17681,8 +16336,7 @@ set ipv6 path interface
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当数据包符合用于策略路由的路由映像的一个匹配项而可被策略路由时，使用本命令把数据包路由到指定的以太接口及下一跳。 
 
@@ -17691,8 +16345,7 @@ set ipv6 path interface
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17701,8 +16354,7 @@ set ipv6 path interface
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17711,8 +16363,7 @@ set ipv6 path interface
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17731,8 +16382,7 @@ no set ipv6 path interface
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17748,18 +16398,7 @@ no set ipv6 path interface
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -17768,8 +16407,16 @@ no set ipv6 path interface
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set ipv6 path interfac gei-0/1/0/2 next-hop 1:0:0:0:0:0:0:2ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set ipv6 path interfac gei-0/1/0/2 next-hop 1:0:0:0:0:0:0:2
 
@@ -17777,8 +16424,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set ipv6 path interfac g
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17793,8 +16439,7 @@ set ipv6 precedence
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置IPv6报头优先级。 
 
@@ -17803,8 +16448,7 @@ set ipv6 precedence
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17813,8 +16457,7 @@ set ipv6 precedence
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17823,8 +16466,7 @@ set ipv6 precedence
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17842,8 +16484,7 @@ no set ipv6 precedence
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17859,18 +16500,7 @@ no set ipv6 precedence
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -17879,8 +16509,16 @@ no set ipv6 precedence
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置IPv6报头优先级：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 precedence 5
 
@@ -17888,8 +16526,7 @@ no set ipv6 precedence
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -17904,8 +16541,7 @@ set ipv6 sr-policy
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当数据包符合应用于PBR的route-map的一个匹配项而可被策略路由时，使用本命令把数据包转发到相应color值和IPv6地址对应的隧道。 
 
@@ -17914,8 +16550,7 @@ set ipv6 sr-policy
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -17924,8 +16559,7 @@ set ipv6 sr-policy
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -17934,8 +16568,7 @@ set ipv6 sr-policy
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -17955,8 +16588,7 @@ no set ipv6 sr-policy
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -17972,8 +16604,7 @@ no set ipv6 sr-policy
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -17982,8 +16613,7 @@ no set ipv6 sr-policy
 
 
 
-### 使用说明 
-
+使用说明 :
 
 使用场景：此命令应用于策略路由，当规则匹配时把数据包转发到相应color值和IPv6地址对应的隧道。前提要求：此命令与set ip sr-policy互斥。
 
@@ -17992,8 +16622,7 @@ no set ipv6 sr-policy
 
 
 
-### 范例 
-
+范例 :
 
 当规则匹配时把数据包转发到相应color值和IPv6地址对应的隧道：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 sr-policy color 12 end-point 1::1
 
@@ -18002,8 +16631,7 @@ no set ipv6 sr-policy
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18018,8 +16646,7 @@ set ipv6 tag
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置目的IPv6路由选择协议的标记值。使用no命令取消设置。 
 
@@ -18028,8 +16655,7 @@ set ipv6 tag
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18038,8 +16664,7 @@ set ipv6 tag
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18048,8 +16673,7 @@ set ipv6 tag
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18066,8 +16690,7 @@ no set ipv6 tag
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -18082,18 +16705,7 @@ no set ipv6 tag
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -18102,8 +16714,16 @@ no set ipv6 tag
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置目的IPv6路由选择协议的标记值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 tag 33
 
@@ -18111,8 +16731,7 @@ no set ipv6 tag
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18127,8 +16746,7 @@ set ipv6 traffic-class
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置IPv6路由的traffic等级，使用no命令取消设置。 
 
@@ -18137,8 +16755,7 @@ set ipv6 traffic-class
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18147,8 +16764,7 @@ set ipv6 traffic-class
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18157,8 +16773,7 @@ set ipv6 traffic-class
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18175,8 +16790,7 @@ no set ipv6 traffic-class
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -18191,18 +16805,7 @@ no set ipv6 traffic-class
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -18211,8 +16814,16 @@ no set ipv6 traffic-class
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置IPv6路由的traffic等级：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set ipv6 traffic-class 2
 
@@ -18220,8 +16831,7 @@ no set ipv6 traffic-class
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18236,8 +16846,7 @@ set ipv6 vxlan-tunnel source
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置VXLAN隧道IPv6源地址。 
 
@@ -18246,8 +16855,7 @@ set ipv6 vxlan-tunnel source
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18256,8 +16864,7 @@ set ipv6 vxlan-tunnel source
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18266,8 +16873,7 @@ set ipv6 vxlan-tunnel source
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18284,8 +16890,7 @@ no set ipv6 vxlan-tunnel source
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -18300,8 +16905,7 @@ no set ipv6 vxlan-tunnel source
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -18310,8 +16914,7 @@ no set ipv6 vxlan-tunnel source
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1. route-map提供set ipv6 vxlan-tunnel source项，BGP通过此配置来修改VXLAN隧道的IPv6源地址。 
 
@@ -18320,8 +16923,7 @@ no set ipv6 vxlan-tunnel source
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置set ipv6 vxlan-tunnel source：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set ipv6 vxlan-tunnel source 1::1
 
@@ -18330,8 +16932,7 @@ no set ipv6 vxlan-tunnel source
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18346,8 +16947,7 @@ set l2-vni-label equivalent-vni-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置二层VNI使用等价标签。 
 
@@ -18356,8 +16956,7 @@ set l2-vni-label equivalent-vni-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18366,8 +16965,7 @@ set l2-vni-label equivalent-vni-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18376,8 +16974,7 @@ set l2-vni-label equivalent-vni-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18393,8 +16990,7 @@ no set l2-vni-label equivalent-vni-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -18405,8 +17001,7 @@ no set l2-vni-label equivalent-vni-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -18415,8 +17010,7 @@ no set l2-vni-label equivalent-vni-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 route-map提供设置二层VNI等价标签，BGP用来修改EVPN路由的二层VNI等价标签属性。 
 
@@ -18425,8 +17019,7 @@ route-map提供设置二层VNI等价标签，BGP用来修改EVPN路由的二层V
 
 
 
-### 范例 
-
+范例 :
 
 配置二层VNI使用等价标签：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set l2-vni-label equivalent-vni-label
 
@@ -18435,8 +17028,7 @@ route-map提供设置二层VNI等价标签，BGP用来修改EVPN路由的二层V
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18451,8 +17043,7 @@ set l2-vni-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置二层VNI标签值。 
 
@@ -18461,8 +17052,7 @@ set l2-vni-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18471,8 +17061,7 @@ set l2-vni-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18481,8 +17070,7 @@ set l2-vni-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18499,8 +17087,7 @@ no set l2-vni-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -18515,8 +17102,7 @@ no set l2-vni-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -18525,8 +17111,7 @@ no set l2-vni-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.route-map提供set l2-vni-label项，BGP用来修改EVPN路由的二层VNI标签属性。 
 
@@ -18535,8 +17120,7 @@ no set l2-vni-label
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置l2-vni-label：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set l2-vni-label 16777215
 
@@ -18544,8 +17128,7 @@ no set l2-vni-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18560,8 +17143,7 @@ set l3-vni-label automatic
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置三层VNI自动获取标签。 
 
@@ -18570,8 +17152,7 @@ set l3-vni-label automatic
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18580,8 +17161,7 @@ set l3-vni-label automatic
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18590,8 +17170,7 @@ set l3-vni-label automatic
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18607,8 +17186,7 @@ no set l3-vni-label automatic
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -18619,8 +17197,7 @@ no set l3-vni-label automatic
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -18629,8 +17206,7 @@ no set l3-vni-label automatic
 
 
 
-### 使用说明 
-
+使用说明 :
 
 route-map提供设置三层VNI自动获取标签，BGP用来自动获取EVPN路由的三层VNI标签。此命令与set l3-vni-label和set l3-vni-label equivalent-vni-label两两互斥。 
 
@@ -18639,8 +17215,7 @@ route-map提供设置三层VNI自动获取标签，BGP用来自动获取EVPN路�
 
 
 
-### 范例 
-
+范例 :
 
 配置三层VNI自动获取标签：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set l3-vni-label automatic 
 
@@ -18649,8 +17224,7 @@ route-map提供设置三层VNI自动获取标签，BGP用来自动获取EVPN路�
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18665,8 +17239,7 @@ set l3-vni-label equivalent-vni-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置三层VNI使用等价标签。 
 
@@ -18675,8 +17248,7 @@ set l3-vni-label equivalent-vni-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18685,8 +17257,7 @@ set l3-vni-label equivalent-vni-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18695,8 +17266,7 @@ set l3-vni-label equivalent-vni-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18712,8 +17282,7 @@ no set l3-vni-label equivalent-vni-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -18724,8 +17293,7 @@ no set l3-vni-label equivalent-vni-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -18734,8 +17302,7 @@ no set l3-vni-label equivalent-vni-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 route-map提供设置三层VNI等价标签，BGP用来修改EVPN路由的三层VNI等价标签属性。 
 
@@ -18744,8 +17311,7 @@ route-map提供设置三层VNI等价标签，BGP用来修改EVPN路由的三层V
 
 
 
-### 范例 
-
+范例 :
 
 配置三层VNI使用等价标签：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set l3-vni-label equivalent-vni-label
 
@@ -18754,8 +17320,7 @@ route-map提供设置三层VNI等价标签，BGP用来修改EVPN路由的三层V
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18770,8 +17335,7 @@ set l3-vni-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置三层VNI标签值。 
 
@@ -18780,8 +17344,7 @@ set l3-vni-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18790,8 +17353,7 @@ set l3-vni-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18800,8 +17362,7 @@ set l3-vni-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -18818,8 +17379,7 @@ no set l3-vni-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -18834,8 +17394,7 @@ no set l3-vni-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -18844,8 +17403,7 @@ no set l3-vni-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1.    route-map提供set l3-vni-label项，BGP用来修改EVPN路由的三层VNI标签属性。 
 
@@ -18854,8 +17412,7 @@ no set l3-vni-label
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置l3-vni-label：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)# set l3-vni-label 16777215
 
@@ -18863,8 +17420,7 @@ no set l3-vni-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18879,8 +17435,7 @@ set large-community
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置大团体属性。使用no命令删除该属性。 
 
@@ -18889,8 +17444,7 @@ set large-community
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -18899,8 +17453,7 @@ set large-community
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -18909,8 +17462,7 @@ set large-community
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set large-community 
@@ -18933,8 +17485,7 @@ no set large-community
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -18953,8 +17504,7 @@ delete|删除一个存在的large community
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -18963,8 +17513,7 @@ delete|删除一个存在的large community
 
 
 
-### 使用说明 
-
+使用说明 :
 
 使用场景：给BGP设置大团体属性。注意事项：1、同一个序列号内最多配置10个大团体号，且需要配置相同的操作类型。No命令不带参数，是删除当前序列号内所有的大团体号。
 
@@ -18973,8 +17522,7 @@ delete|删除一个存在的large community
 
 
 
-### 范例 
-
+范例 :
 
 设置BGP大团体属性：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set large-community overwrite 1:1:1ZXROSNG(config-route-map)#
 
@@ -18983,8 +17531,7 @@ delete|删除一个存在的large community
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -18999,8 +17546,7 @@ set level
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当路由符合用于重分发的route-map的一个匹配项而可被分发时，使用本命令指定分发的层次。使用no命令取消设置。 
 
@@ -19009,8 +17555,7 @@ set level
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19019,8 +17564,7 @@ set level
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19029,8 +17573,7 @@ set level
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19049,8 +17592,7 @@ no set level
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -19067,18 +17609,7 @@ level-1-2|分发层次
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -19087,8 +17618,16 @@ level-1-2|分发层次
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 指定分发的层次为level-1：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set level level-1
 
@@ -19096,8 +17635,7 @@ level-1-2|分发层次
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -19112,8 +17650,7 @@ set local-preference
 
 
 
-### 命令功能 
-
+命令功能 :
 
 为自治系统路径指定优先权值。使用no命令恢复缺省值。 
 
@@ -19122,8 +17659,7 @@ set local-preference
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19132,8 +17668,7 @@ set local-preference
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19142,8 +17677,7 @@ set local-preference
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19162,8 +17696,7 @@ no set local-preference
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -19180,18 +17713,7 @@ no set local-preference
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -19200,8 +17722,16 @@ no set local-preference
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 1、为自治系统路径指定优先权值为333：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set local-preference 3332、指定自治系统路径优先权值加上333：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set local-preference + 333
 
@@ -19210,8 +17740,7 @@ no set local-preference
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -19226,8 +17755,7 @@ set metric inherit
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置继承路由原有的开销值。使用no命令恢复缺省状态。 
 
@@ -19236,8 +17764,7 @@ set metric inherit
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19246,8 +17773,7 @@ set metric inherit
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19256,8 +17782,7 @@ set metric inherit
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19273,8 +17798,7 @@ no set metric inherit
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -19285,8 +17809,7 @@ no set metric inherit
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -19295,8 +17818,7 @@ no set metric inherit
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、此命令与set ip metric，set ipv6 metric，set metric和set metric inherit-igp-metirc互斥。2、应用在BGP路由时：路由器从IBGP对等体学到的路由在通告给EBGP对等体时，如果配置此命令， 继承路由的原有开销值。
 
@@ -19305,8 +17827,7 @@ no set metric inherit
 
 
 
-### 范例 
-
+范例 :
 
 设置继承路由原有的开销值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set metric inherit
 
@@ -19315,8 +17836,7 @@ no set metric inherit
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -19331,8 +17851,7 @@ set metric inherit-igp-metric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置继承IGP路由的开销值。使用no命令恢复缺省状态。 
 
@@ -19341,8 +17860,7 @@ set metric inherit-igp-metric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19351,8 +17869,7 @@ set metric inherit-igp-metric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19361,8 +17878,7 @@ set metric inherit-igp-metric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19378,8 +17894,7 @@ no set metric inherit-igp-metric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -19390,8 +17905,7 @@ no set metric inherit-igp-metric
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -19400,8 +17914,7 @@ no set metric inherit-igp-metric
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、此命令与set ip metric，set ipv6 metric，set metric和set metric inherit互斥。2、应用在BGP路由时：路由器从IBGP对等体学到的路由在通告给EBGP对等体时，如果配置此命令，则路由器会将向EBGP对等体通告的路由的MED值设置为该路由的下一跳的IGP开销值。
 
@@ -19410,8 +17923,7 @@ no set metric inherit-igp-metric
 
 
 
-### 范例 
-
+范例 :
 
 设置继承IGP路由的开销值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set metric inherit-igp-metric
 
@@ -19420,8 +17932,7 @@ no set metric inherit-igp-metric
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -19436,8 +17947,7 @@ set metric
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置路由选择协议的开销值。使用no命令恢复缺省状态。 
 
@@ -19446,8 +17956,7 @@ set metric
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19456,8 +17965,7 @@ set metric
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19466,8 +17974,7 @@ set metric
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19486,8 +17993,7 @@ no set metric
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -19504,8 +18010,7 @@ no set metric
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -19514,8 +18019,7 @@ no set metric
 
 
 
-### 使用说明 
-
+使用说明 :
 
 此命令与set ip metric，set ipv6 metric，set metric inherit和set metric inherit-igp-metirc互斥。 
 
@@ -19524,8 +18028,7 @@ no set metric
 
 
 
-### 范例 
-
+范例 :
 
 设置路由选择协议的开销值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set metric + 1
 
@@ -19534,8 +18037,7 @@ no set metric
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -19550,8 +18052,7 @@ set monitor-group-id
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置镜像ID 
 
@@ -19560,8 +18061,7 @@ set monitor-group-id
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19570,8 +18070,7 @@ set monitor-group-id
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19580,8 +18079,7 @@ set monitor-group-id
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19598,8 +18096,7 @@ no set monitor-group-id
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -19614,18 +18111,7 @@ no set monitor-group-id
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -19634,8 +18120,16 @@ no set monitor-group-id
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set monitor-group-id 1
 
@@ -19644,8 +18138,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set monitor-group-id 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -19659,8 +18152,7 @@ set mpls-label equivalent-evi-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置EVI（EVPN Instance）等价标签标记，表示发布路由时取用EVI等价标签。使用no命令取消设置。 
 
@@ -19669,8 +18161,7 @@ set mpls-label equivalent-evi-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19679,8 +18170,7 @@ set mpls-label equivalent-evi-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19689,8 +18179,7 @@ set mpls-label equivalent-evi-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19706,8 +18195,7 @@ no set mpls-label equivalent-evi-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -19718,8 +18206,7 @@ no set mpls-label equivalent-evi-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -19728,8 +18215,7 @@ no set mpls-label equivalent-evi-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 此命令与set mpls-label evi-label互斥。 
 
@@ -19738,8 +18224,7 @@ no set mpls-label equivalent-evi-label
 
 
 
-### 范例 
-
+范例 :
 
 1、在route-map中配置EVI等价标签：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set mpls-label equivalent-evi-labelZXROSNG(config-route-map)#no set mpls-label equivalent-evi-label
 
@@ -19748,8 +18233,7 @@ no set mpls-label equivalent-evi-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -19764,8 +18248,7 @@ set mpls-label evi-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 配置EVI（EVPN Instance）标签值，表示发布路由时取用配置的EVI标签值。使用no命令取消设置。 
 
@@ -19774,8 +18257,7 @@ set mpls-label evi-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19784,8 +18266,7 @@ set mpls-label evi-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19794,8 +18275,7 @@ set mpls-label evi-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19812,8 +18292,7 @@ no set mpls-label evi-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -19828,8 +18307,7 @@ no set mpls-label evi-label
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -19838,8 +18316,7 @@ no set mpls-label evi-label
 
 
 
-### 使用说明 
-
+使用说明 :
 
 此命令与set mpls-label equivalent-evi-label互斥。 
 
@@ -19848,8 +18325,7 @@ no set mpls-label evi-label
 
 
 
-### 范例 
-
+范例 :
 
 1、在route-map中配置EVI标签值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set mpls-label evi-label 1048575ZXROSNG(config-route-map)#no set mpls-label evi-label
 
@@ -19858,8 +18334,7 @@ no set mpls-label evi-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -19874,8 +18349,7 @@ set mpls-label
 
 
 
-### 命令功能 
-
+命令功能 :
 
 给匹配的路由配置发送标签的标志。使用no命令取消设置。 
 
@@ -19884,8 +18358,7 @@ set mpls-label
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19894,8 +18367,7 @@ set mpls-label
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -19904,8 +18376,7 @@ set mpls-label
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -19921,8 +18392,7 @@ no set mpls-label
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -19933,18 +18403,7 @@ no set mpls-label
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -19953,8 +18412,16 @@ no set mpls-label
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 给匹配的路由配置发送标签的标志：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set mpls-label
 
@@ -19962,8 +18429,7 @@ no set mpls-label
 
 
 
-### 相关命令 
-
+相关命令 :
 
  show route-map 
 
@@ -19978,8 +18444,7 @@ set next-hop
 
 
 
-### 命令功能 
-
+命令功能 :
 
 指定下一跳的地址。使用no命令取消设置。 
 
@@ -19988,8 +18453,7 @@ set next-hop
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -19998,8 +18462,7 @@ set next-hop
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20008,8 +18471,7 @@ set next-hop
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 set next-hop 
@@ -20027,8 +18489,7 @@ no set next-hop
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20044,18 +18505,7 @@ peer-address|直连地址标识
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -20064,8 +18514,16 @@ peer-address|直连地址标识
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 指定下一跳的地址：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set next-hop 2.2.2.2
 
@@ -20073,8 +18531,7 @@ peer-address|直连地址标识
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -20089,8 +18546,7 @@ set origin
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP路由起源属性。使用no命令取消设置。 
 
@@ -20099,8 +18555,7 @@ set origin
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20109,8 +18564,7 @@ set origin
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20119,8 +18573,7 @@ set origin
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20139,8 +18592,7 @@ no set origin
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20157,18 +18609,7 @@ incomplete|未知的残余项
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -20177,8 +18618,16 @@ incomplete|未知的残余项
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置BGP路由起源属性：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set origin egp
 
@@ -20186,8 +18635,7 @@ incomplete|未知的残余项
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -20202,8 +18650,7 @@ set path-selection
 
 
 
-### 命令功能 
-
+命令功能 :
 
 BGP设置路径选择算法 
 
@@ -20212,8 +18659,7 @@ BGP设置路径选择算法
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20222,8 +18668,7 @@ BGP设置路径选择算法
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20232,8 +18677,7 @@ BGP设置路径选择算法
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20257,8 +18701,7 @@ no set path-selection
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20280,18 +18723,7 @@ advertise|将选择出的路径向外通告
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -20300,8 +18732,16 @@ advertise|将选择出的路径向外通告
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set path-selection backup 1 install
 
@@ -20310,8 +18750,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set path-selection backup
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -20325,8 +18764,7 @@ set policy-priority
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置PBR策略优先级 
 
@@ -20335,8 +18773,7 @@ set policy-priority
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20345,8 +18782,7 @@ set policy-priority
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20355,8 +18791,7 @@ set policy-priority
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20373,8 +18808,7 @@ no set policy-priority
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20389,18 +18823,7 @@ no set policy-priority
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -20409,8 +18832,16 @@ no set policy-priority
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set policy-priority 1
 
@@ -20419,8 +18850,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set policy-priority 1
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -20435,8 +18865,7 @@ set policy-route-id
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置策略路由的ID值 
 
@@ -20445,8 +18874,7 @@ set policy-route-id
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20455,8 +18883,7 @@ set policy-route-id
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20465,8 +18892,7 @@ set policy-route-id
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20483,8 +18909,7 @@ no set policy-route-id
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20499,18 +18924,7 @@ no set policy-route-id
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -20519,8 +18933,16 @@ no set policy-route-id
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置策略路由的ID值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set policy-route-id 1
 
@@ -20528,8 +18950,7 @@ no set policy-route-id
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -20544,8 +18965,7 @@ set qos-id
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置路由的qos-id值，使用no命令取消设置。 
 
@@ -20554,8 +18974,7 @@ set qos-id
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20564,8 +18983,7 @@ set qos-id
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20574,8 +18992,7 @@ set qos-id
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20592,8 +19009,7 @@ no set qos-id
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20608,18 +19024,7 @@ no set qos-id
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -20628,8 +19033,16 @@ no set qos-id
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 设置qos id：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set qos-id 2
 
@@ -20637,8 +19050,7 @@ no set qos-id
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -20653,8 +19065,7 @@ set split-horizon-scope
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置用于进行水平分割域的名称。 
 
@@ -20663,8 +19074,7 @@ set split-horizon-scope
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20673,8 +19083,7 @@ set split-horizon-scope
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20683,8 +19092,7 @@ set split-horizon-scope
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20701,8 +19109,7 @@ no set split-horizon-scope
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20717,8 +19124,7 @@ no set split-horizon-scope
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -20727,8 +19133,7 @@ no set split-horizon-scope
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1、水平分割域名称只支持配置一个字母，  支持配置字母集合为$#84018727#$个。  该个数对应的含义，举例说明如下：  1：不允许配置；  2：可以配置字母A、B中任意一个；  3：可以配置字母A、B、C中任意一个；  26：可以配置字母A~Z中任意一个。2、只能配置一个水平分割域。
 
@@ -20737,8 +19142,7 @@ no set split-horizon-scope
 
 
 
-### 范例 
-
+范例 :
 
 配置用于水平分割的域名称列表：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set split-horizon-scope A
 
@@ -20747,8 +19151,7 @@ no set split-horizon-scope
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -20763,8 +19166,7 @@ set tag
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置目的路由选择协议的标记值。使用no命令取消设置。 
 
@@ -20773,8 +19175,7 @@ set tag
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20783,8 +19184,7 @@ set tag
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20793,8 +19193,7 @@ set tag
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20811,8 +19210,7 @@ no set tag
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20827,8 +19225,7 @@ no set tag
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -20837,8 +19234,7 @@ no set tag
 
 
 
-### 使用说明 
-
+使用说明 :
 
 此命令与set ip tag和set ipv6 tag互斥。 
 
@@ -20847,8 +19243,7 @@ no set tag
 
 
 
-### 范例 
-
+范例 :
 
 设置目的路由选择协议的标记值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set tag 210
 
@@ -20857,8 +19252,7 @@ no set tag
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -20873,8 +19267,7 @@ set traffic-index
 
 
 
-### 命令功能 
-
+命令功能 :
 
 设置BGP流统计索引 
 
@@ -20883,8 +19276,7 @@ set traffic-index
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -20893,8 +19285,7 @@ set traffic-index
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -20903,8 +19294,7 @@ set traffic-index
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -20921,8 +19311,7 @@ no set traffic-index
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -20937,18 +19326,7 @@ no set traffic-index
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -20957,8 +19335,16 @@ no set traffic-index
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set traffic-index 5
 
@@ -20966,8 +19352,7 @@ ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set traffic-index 5
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map
 
@@ -20981,8 +19366,7 @@ set tunnel-encapsulation
 
 
 
-### 命令功能 
-
+命令功能 :
 
 BGP需要支持VXLAN和MPLS的EVPN共存，通过本命令配置BGP隧道封装类型为VXLAN或者MPLS。 
 
@@ -20991,8 +19375,7 @@ BGP需要支持VXLAN和MPLS的EVPN共存，通过本命令配置BGP隧道封装�
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -21001,8 +19384,7 @@ BGP需要支持VXLAN和MPLS的EVPN共存，通过本命令配置BGP隧道封装�
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21011,8 +19393,7 @@ BGP需要支持VXLAN和MPLS的EVPN共存，通过本命令配置BGP隧道封装�
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21030,8 +19411,7 @@ no set tunnel-encapsulation
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21047,18 +19427,7 @@ vxlan|VXLAN封装
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -21067,8 +19436,16 @@ vxlan|VXLAN封装
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 指定隧道封装为mpls：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set tunnel-encapsulation mpls
 
@@ -21077,8 +19454,7 @@ vxlan|VXLAN封装
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -21093,8 +19469,7 @@ set urpf-id
 
 
 
-### 命令功能 
-
+命令功能 :
 
 基于BGP neighbor的route-map里配置URPF ID属性。使用no命令恢复缺省状态。 
 
@@ -21103,8 +19478,7 @@ set urpf-id
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -21113,8 +19487,7 @@ set urpf-id
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21123,8 +19496,7 @@ set urpf-id
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21141,8 +19513,7 @@ no set urpf-id
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21157,8 +19528,7 @@ no set urpf-id
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -21167,8 +19537,7 @@ no set urpf-id
 
 
 
-### 使用说明 
-
+使用说明 :
 
 Route-map提供set urpf-id 项，在BGP的neighbor配置里应用route-map。 
 
@@ -21177,8 +19546,7 @@ Route-map提供set urpf-id 项，在BGP的neighbor配置里应用route-map。
 
 
 
-### 范例 
-
+范例 :
 
 设置路由选择协议的尺度值：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set urpf-id 1ZXROSNG(config-route-map)#no set urpf-id
 
@@ -21187,8 +19555,7 @@ Route-map提供set urpf-id 项，在BGP的neighbor配置里应用route-map。
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -21203,8 +19570,7 @@ set vrf
 
 
 
-### 命令功能 
-
+命令功能 :
 
 当数据包符合用于策略路由的路由映像的一个匹配项而可被策略路由时，使用本命令把数据包路由到指定VPN上。 
 
@@ -21213,8 +19579,7 @@ set vrf
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -21223,8 +19588,7 @@ set vrf
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21233,8 +19597,7 @@ set vrf
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21256,8 +19619,7 @@ no set vrf
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21276,18 +19638,7 @@ next-hop|下一跳
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -21296,8 +19647,16 @@ next-hop|下一跳
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 把数据包路由到指定VPN上：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#set vrf name
 
@@ -21305,8 +19664,7 @@ next-hop|下一跳
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -21321,8 +19679,7 @@ show ip as-path-access-list name
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示指定的自治系统路径访问表的内容。 
 
@@ -21331,8 +19688,7 @@ show ip as-path-access-list name
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -21341,8 +19697,7 @@ show ip as-path-access-list name
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21351,8 +19706,7 @@ show ip as-path-access-list name
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21366,8 +19720,7 @@ show ip as-path-access-list name
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21382,18 +19735,7 @@ show ip as-path-access-list name
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -21402,8 +19744,16 @@ show ip as-path-access-list name
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示列表号名称为zte的自治系统路径访问表的内容：ZXROSNG# show ip as-path-access-list name zteRegular Expression Access List zte  permit  aaa111
 
@@ -21412,8 +19762,7 @@ show ip as-path-access-list name
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -21428,8 +19777,7 @@ show ip as-path-access-list standard
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示指定的标准自治系统路径访问表的内容。 
 
@@ -21438,8 +19786,7 @@ show ip as-path-access-list standard
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -21448,8 +19795,7 @@ show ip as-path-access-list standard
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21458,8 +19804,7 @@ show ip as-path-access-list standard
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21473,8 +19818,7 @@ show ip as-path-access-list standard
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21489,18 +19833,7 @@ show ip as-path-access-list standard
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -21509,8 +19842,16 @@ show ip as-path-access-list standard
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示列表号名称为zte的自治系统路径访问表的内容：ZXROSNG#show ip as-path-access-list standard zteGlobal configuration:trigger delay: 10 secondsip as-path-list name(standard): zte  seq     as-number     count  4       65535.65535   255  65534   1.65535       255  65535   1.1           255显示信息说明：seq：序列号as-number：AS号count：AS路径重复次数
 
@@ -21519,8 +19860,7 @@ show ip as-path-access-list standard
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ip as-path access-list standard 
 
@@ -21535,8 +19875,7 @@ show ip as-path-access-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示全部或指定的正则表达式访问表的内容。 
 
@@ -21545,8 +19884,7 @@ show ip as-path-access-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -21555,8 +19893,7 @@ show ip as-path-access-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21565,8 +19902,7 @@ show ip as-path-access-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21580,8 +19916,7 @@ show ip as-path-access-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21596,8 +19931,7 @@ show ip as-path-access-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -21606,8 +19940,7 @@ show ip as-path-access-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 如果本命令不带参数，则显示所有的正则表达式访问表；如果带参数，则显示指定表号的正则表达式访问表。 
 
@@ -21616,8 +19949,7 @@ show ip as-path-access-list
 
 
 
-### 范例 
-
+范例 :
 
 显示列表号为1的正则表达式访问表的内容：ZXROSNG# show ip as-path-access-list 1Regular Expression Access List 1  deny    123
 
@@ -21625,8 +19957,7 @@ show ip as-path-access-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -21641,8 +19972,7 @@ show ip color-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示配置的color列表内容。 
 
@@ -21651,8 +19981,7 @@ show ip color-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -21661,8 +19990,7 @@ show ip color-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21671,8 +19999,7 @@ show ip color-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21686,8 +20013,7 @@ show ip color-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21702,18 +20028,7 @@ show ip color-list
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -21722,8 +20037,16 @@ show ip color-list
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示color列表名称为zte的内容：ZXROSNG# show ip color-list zteGlobal configuration:trigger delay: 10 secondsip color-list name: zte   22233   5556666
 
@@ -21732,8 +20055,7 @@ show ip color-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ip color-list 
 
@@ -21748,8 +20070,7 @@ show ip community-list name
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示指定名字的团体表的内容。 
 
@@ -21758,8 +20079,7 @@ show ip community-list name
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -21768,8 +20088,7 @@ show ip community-list name
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21778,8 +20097,7 @@ show ip community-list name
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21793,8 +20111,7 @@ show ip community-list name
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21809,18 +20126,7 @@ show ip community-list name
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -21829,8 +20135,16 @@ show ip community-list name
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示名字为zte的团体表的内容：ZXROSNG(config)#show ip community-list name zteBasic Community List zteip community-list zte permit 1:1
 
@@ -21838,8 +20152,7 @@ show ip community-list name
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -21854,8 +20167,7 @@ show ip community-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示全部或指定的团体表的内容。 
 
@@ -21864,8 +20176,7 @@ show ip community-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -21874,8 +20185,7 @@ show ip community-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21884,8 +20194,7 @@ show ip community-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -21899,8 +20208,7 @@ show ip community-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -21915,8 +20223,7 @@ show ip community-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -21925,8 +20232,7 @@ show ip community-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 如果本命令不带参数，则显示所有的团体表；如果带参数，则显示指表号的团体表。
 
@@ -21934,8 +20240,7 @@ show ip community-list
 
 
 
-### 范例 
-
+范例 :
 
 显示列表号为1的团体表的内容：ZXROSNG(config)#show ip community-list 1Standard Community List 1ip community-list 1 deny   10 15ip community-list 1 deny   5 10ip community-list 1 permit  any
 
@@ -21944,8 +20249,7 @@ show ip community-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -21960,8 +20264,7 @@ show ip extcommunity-list name
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示指定名字的扩展团体表的内容。 
 
@@ -21970,8 +20273,7 @@ show ip extcommunity-list name
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -21980,8 +20282,7 @@ show ip extcommunity-list name
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -21990,8 +20291,7 @@ show ip extcommunity-list name
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -22005,8 +20305,7 @@ show ip extcommunity-list name
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22021,18 +20320,7 @@ show ip extcommunity-list name
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -22041,8 +20329,16 @@ show ip extcommunity-list name
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示名字为zte的扩展团体表的内容：ZXROSNG(config)#show ip extcommunity-list name zteBasic Community List zteip extcommunity-list zte permit general-asn 1:1
 
@@ -22051,8 +20347,7 @@ show ip extcommunity-list name
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ip extcommunity-list 
 
@@ -22067,8 +20362,7 @@ show ip extcommunity-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示全部或指定的扩展团体表的内容。 
 
@@ -22077,8 +20371,7 @@ show ip extcommunity-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -22087,8 +20380,7 @@ show ip extcommunity-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -22097,8 +20389,7 @@ show ip extcommunity-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -22112,8 +20403,7 @@ show ip extcommunity-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22128,8 +20418,7 @@ show ip extcommunity-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -22138,8 +20427,7 @@ show ip extcommunity-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 如果本命令不带参数，则显示所有的扩展团体表；如果带参数，则显示指表号的扩展团体表。
 
@@ -22147,8 +20435,7 @@ show ip extcommunity-list
 
 
 
-### 范例 
-
+范例 :
 
 显示所有扩展团体表的内容：ZXROSNG(config)#show ip extcommunity-listExtended Community List 400ip extcommunity-list 400 deny  zte
 
@@ -22157,8 +20444,7 @@ show ip extcommunity-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -22173,8 +20459,7 @@ show ip large-community-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示全部或指定的大团体表的内容。 
 
@@ -22183,8 +20468,7 @@ show ip large-community-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -22193,8 +20477,7 @@ show ip large-community-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -22203,8 +20486,7 @@ show ip large-community-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -22219,8 +20501,7 @@ show ip large-community-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22235,8 +20516,7 @@ show ip large-community-list
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -22245,8 +20525,7 @@ show ip large-community-list
 
 
 
-### 使用说明 
-
+使用说明 :
 
 使用场景：显示全部或指定的大团体表的内容。注意事项：如果本命令不带参数，则显示所有的大团体表；如果带参数，则显示指定的大团体表。
 
@@ -22255,8 +20534,7 @@ show ip large-community-list
 
 
 
-### 范例 
-
+范例 :
 
 显示列表名为a的大团体表的内容：ZXROSNG#show ip large-community-list name aGlobal configuration:trigger delay: 30 secondsLarge Community List aseq 1          permit 1:1:1seq 1          permit 1:1:2seq 1          permit 1:1:3seq 1          permit 1:1:4seq 1          permit 1:1:5seq 1          permit 1:1:6seq 1          permit 1:1:7seq 1          permit 1:1:8seq 1          permit 1:1:9seq 1          permit 1:1:10  seq 2          permit 1:1:11seq 2          permit 1:1:13seq 2          permit 1:1:14seq 2          permit 1:1:15seq 2          permit 1:1:16seq 2          permit 1:1:17
 
@@ -22265,8 +20543,7 @@ show ip large-community-list
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ip large-community-listip large-community-list trigger-delay
 
@@ -22281,8 +20558,7 @@ show route-map
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示route-map配置信息。 
 
@@ -22291,8 +20567,7 @@ show route-map
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -22301,8 +20576,7 @@ show route-map
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -22311,8 +20585,7 @@ show route-map
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -22326,8 +20599,7 @@ show route-map
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22342,18 +20614,7 @@ show route-map
 
 
 
-### 缺省 
-
-
-无 
-
-
-
-
-
-
-### 使用说明 
-
+缺省 :
 
 无 
 
@@ -22362,8 +20623,16 @@ show route-map
 
 
 
-### 范例 
+使用说明 :
 
+无 
+
+
+
+
+
+
+范例 :
 
 显示route-map的配置信息：ZXROSNG(config-route-map)#show route-map [route-map zte] IP type: IPv6route-map zte permit 10  match ipv6 next-hop zxr10zte  match ipv6 address ipv6address  match ipv6 metric 10 20  match ipv6 tag 0  set ipv6 next-hop 1:1:0:0:0:0:2:3  set level level-1  set origin egp  set mpls-label    set extcommunity soo-trans 65535:1  set extcommunity rt-trans 192.168.20.110:0  set ipv6 metric-type external  set ipv6 metric + 20  set ipv6 tag 2
 
@@ -22371,8 +20640,7 @@ show route-map
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -22387,8 +20655,7 @@ time-range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 使用本命令在route-map的序列中配置时间列表。Route-map的序列中配置了时间列表之后，该序列的有效性由配置的时间列表控制。 
 
@@ -22397,8 +20664,7 @@ time-range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  路由映射模式  
 
@@ -22407,8 +20673,7 @@ time-range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -22417,8 +20682,7 @@ time-range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -22435,8 +20699,7 @@ no time-range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22451,8 +20714,7 @@ no time-range
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -22461,8 +20723,7 @@ no time-range
 
 
 
-### 使用说明 
-
+使用说明 :
 
 1在route-rmap的序列中配置time-range时，需要该time-range已经存在。2 Route-map的一个序列中配置time-range后，该序列的有效性由配置的时间列表控制。
 
@@ -22470,8 +20731,7 @@ no time-range
 
 
 
-### 范例 
-
+范例 :
 
 在route-map中配置时间列表：ZXROSNG(config)#route-map zteZXROSNG(config-route-map)#time-range abc
 
@@ -22479,8 +20739,7 @@ no time-range
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show route-map 
 
@@ -22496,8 +20755,7 @@ absolute
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于TimeRange配置模式，用于配置绝对时间段。 
 
@@ -22506,8 +20764,7 @@ absolute
 
 
 
-### 命令模式 
-
+命令模式 :
 
  TimeRange模式  
 
@@ -22516,8 +20773,7 @@ absolute
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -22526,8 +20782,7 @@ absolute
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -22549,8 +20804,7 @@ no absolute
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22568,8 +20822,7 @@ no absolute
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -22578,8 +20831,7 @@ no absolute
 
 
 
-### 使用说明 
-
+使用说明 :
 
 进入TimeRange配置模式才能配置时间段，时间日期的格式为：小时：分：秒 月-日-年，最小时间2001-01-01 00：00。秒数必须是15的倍数。一个TimeRange列表中只能有一个绝对时间段。绝对时间段定义了整个列表的生效时间区间，只有绝对时间有效时才检查相对时间段。在time-range disable状态下所有的TimeRange列表不再起作用。不再随时间进行状态转换，而是处于time-range disable时的状态。使用no absolute命令删除绝对时间段。
 
@@ -22587,8 +20839,7 @@ no absolute
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#time-range mytime ZXROSNG(config-tr-mytime)#absolute start 01:00:00 01-09-2012 end 01:00:00 01-10-2012
 
@@ -22597,8 +20848,7 @@ ZXROSNG(config)#time-range mytime ZXROSNG(config-tr-mytime)#absolute start 01:00
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show time-rangetime-range <time-range-name>
 
@@ -22613,8 +20863,7 @@ debug time-range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于特权模式，用于打开TimeRange列表状态发生转换时的debug开关。打开TimeRange的debug开关后，当TimeRange列表状态发生转换时，在命令终端上自动显示信息提示用户，显示的debug信息包括系统时间、TimeRange的名字、之前状态、转换后的状态等。 
 
@@ -22623,8 +20872,7 @@ debug time-range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  特权模式  
 
@@ -22633,8 +20881,7 @@ debug time-range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 2 
 
@@ -22643,8 +20890,7 @@ debug time-range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -22663,8 +20909,7 @@ no debug time-range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22680,8 +20925,7 @@ inactive|只打开状态从active转为inactive的TimeRange列表的debug开关�
 
 
 
-### 缺省 
-
+缺省 :
 
 输出所有状态的TimeRange列表。 
 
@@ -22690,8 +20934,7 @@ inactive|只打开状态从active转为inactive的TimeRange列表的debug开关�
 
 
 
-### 使用说明 
-
+使用说明 :
 
 TimeRange列表状态包括inactive状态和active状态。默认打开所有状态的TimeRange列表的debug开关。
 
@@ -22699,8 +20942,7 @@ TimeRange列表状态包括inactive状态和active状态。默认打开所有状
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG#debug time-range change-to inactive TIME-RANGE inactive debugging has been turned on
 
@@ -22709,8 +20951,7 @@ ZXROSNG#debug time-range change-to inactive TIME-RANGE inactive debugging has be
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show debug time-range 
 
@@ -22725,8 +20966,7 @@ periodic
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于TimeRange配置模式，用于配置相对时间段。一个TimeRange列表中可以配置多个相对时间段。 
 
@@ -22735,8 +20975,7 @@ periodic
 
 
 
-### 命令模式 
-
+命令模式 :
 
  TimeRange模式  
 
@@ -22745,8 +20984,7 @@ periodic
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -22755,8 +20993,7 @@ periodic
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 periodic 
@@ -22876,8 +21113,7 @@ no periodic
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -22934,8 +21170,7 @@ weekdays|工作日
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -22944,8 +21179,7 @@ weekdays|工作日
 
 
 
-### 使用说明 
-
+使用说明 :
 
 进入TimeRange配置模式才能配置时间段，配置完成后，可以使用show time-range查看已配置的时间段。使用no periodic命令删除相对时间段。
 
@@ -22953,8 +21187,7 @@ weekdays|工作日
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#time-range mytimeZXROSNG(config-tr-mytime)#periodic monday 8:30:00 to friday 17:40:00
 
@@ -22963,8 +21196,7 @@ ZXROSNG(config)#time-range mytimeZXROSNG(config-tr-mytime)#periodic monday 8:30:
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show time-rangetime-range <time-range-name>
 
@@ -22979,8 +21211,7 @@ show debug time-range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于用户模式外的其它所有模式，用于显示状态发生转换时的TimeRange列表。TimeRange列表状态发生转换是指TimeRange列表状态由inactive转换为active或由active转换为inactive：假设配置mytimerange列表的时间段为周一00：00：00到01：01：01，那么在系统时间进入该时间段时，mytimerange列表的状态由inactive转换为active，系统时间不在该时间段时mytimerange列表的状态就由active转换为inactive。 
 
@@ -22989,8 +21220,7 @@ show debug time-range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -22999,8 +21229,7 @@ show debug time-range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23009,8 +21238,7 @@ show debug time-range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -23023,8 +21251,7 @@ show debug time-range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -23035,8 +21262,7 @@ show debug time-range
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -23045,8 +21271,7 @@ show debug time-range
 
 
 
-### 使用说明 
-
+使用说明 :
 
 显示TimeRange状态发生转换时的TimeRange列表，TimeRange状态有：active、inactive。 
 
@@ -23055,8 +21280,7 @@ show debug time-range
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#show debug time-range TIMERANGE:  Time-range state debugging is on, print out switching to active only  debug time-range [change-to {inactive|active}]
 
@@ -23065,8 +21289,7 @@ ZXROSNG(config)#show debug time-range TIMERANGE:  Time-range state debugging is
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -23081,8 +21304,7 @@ show time-range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于用户模式外的其它所有模式，用于显示指定或者显示全部TimeRange列表。 
 
@@ -23091,8 +21313,7 @@ show time-range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -23101,8 +21322,7 @@ show time-range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23111,8 +21331,7 @@ show time-range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -23126,8 +21345,7 @@ show time-range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -23142,8 +21360,7 @@ show time-range
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -23152,8 +21369,7 @@ show time-range
 
 
 
-### 使用说明 
-
+使用说明 :
 
   进入TimeRange配置模式才能配置时间段，时间日期的格式为：小时：分：秒 月-日-年，最小时间2001-01-01 00：00。秒数必须是15的倍数。  一个TimeRange列表中只能有一个绝对时间段。绝对时间段定义了整个列表的生效时间区间，只有绝对时间有效时才检查相对时间段。   在time-range disable状态下所有的TimeRange列表不再起作用。不再随时间进行状态转换，而是处于time-range disable时的状态。  使用no absolute命令删除绝对时间段。
 
@@ -23161,8 +21377,7 @@ show time-range
 
 
 
-### 范例 
-
+范例 :
 
 显示全部TimeRange列表：ZXROSNG#show time-range Current time is 00:19:04 01-09-2012 Mondaytime-range mytime <inactive>   absolute start 01:00:00 01-09-2012 end 01:00:00 01-10-2012 
 time-range mytime1 <active> 显示特定TimeRange列表 mytime：ZXROSNG#show time-range mytimeCurrent time is 00:19:40 01-09-2012 Mondaytime-range mytime <inactive>   absolute start 01:00:00 01-09-2012 end 01:00:00 01-10-2012 
@@ -23172,8 +21387,7 @@ time-range mytime1 <active> 显示特定TimeRange列表 mytime：ZXROSNG#show ti
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -23188,8 +21402,7 @@ time-range disable clear
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于全局配置模式，用于关闭TimeRange时间段功能，并清除TimeRange相关配置。 
 
@@ -23198,8 +21411,7 @@ time-range disable clear
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -23208,8 +21420,7 @@ time-range disable clear
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23218,8 +21429,7 @@ time-range disable clear
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -23232,8 +21442,7 @@ time-range disable clear
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -23244,8 +21453,7 @@ time-range disable clear
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -23254,8 +21462,7 @@ time-range disable clear
 
 
 
-### 使用说明 
-
+使用说明 :
 
     TimeRange时间段功能默认关闭。    开启TimeRange时间段功能的命令为time-range enable。 
 
@@ -23263,8 +21470,7 @@ time-range disable clear
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#time-range disable clear  
 
@@ -23273,8 +21479,7 @@ ZXROSNG(config)#time-range disable clear
 
 
 
-### 相关命令 
-
+相关命令 :
 
 time-range enabletime-range disable
 
@@ -23289,8 +21494,7 @@ time-range disable
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于全局配置模式，用于关闭TimeRange时间段功能。time-range disable命令只关闭TimeRange时间段功能，不清除TimeRange相关配置。TimeRange时间段功能关闭后，TimeRange列表的状态不会随着时间而改变，一直保持关闭前状态。 
 
@@ -23299,8 +21503,7 @@ time-range disable
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -23309,8 +21512,7 @@ time-range disable
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23319,8 +21521,7 @@ time-range disable
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -23333,8 +21534,7 @@ time-range disable
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -23345,8 +21545,7 @@ time-range disable
 
 
 
-### 缺省 
-
+缺省 :
 
 TimeRange功能不开启。 
 
@@ -23355,8 +21554,7 @@ TimeRange功能不开启。
 
 
 
-### 使用说明 
-
+使用说明 :
 
     TimeRange时间段功能默认为关闭状态。    开启TimeRange时间段功能的命令为time-range enable。 
 
@@ -23364,8 +21562,7 @@ TimeRange功能不开启。
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#time-range disable 
 
@@ -23374,8 +21571,7 @@ ZXROSNG(config)#time-range disable
 
 
 
-### 相关命令 
-
+相关命令 :
 
 time-range enable 
 
@@ -23390,8 +21586,7 @@ time-range enable
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于全局配置模式，用于开启TimeRange时间段功能。开启时间段功能后才能进行时间段相关配置。 
 
@@ -23400,8 +21595,7 @@ time-range enable
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -23410,8 +21604,7 @@ time-range enable
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23420,8 +21613,7 @@ time-range enable
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -23434,8 +21626,7 @@ time-range enable
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 					无
@@ -23446,8 +21637,7 @@ time-range enable
 
 
 
-### 缺省 
-
+缺省 :
 
 TimeRange功能不开启。 
 
@@ -23456,8 +21646,7 @@ TimeRange功能不开启。
 
 
 
-### 使用说明 
-
+使用说明 :
 
     TimeRange时间段功能开启后，才能通过time-range命令进入TimeRange配置模式进行Timerange相关配置：time-rangabsoluteperiodic    TimeRange时间段功能默认不开启。    关闭TimeRange时间段功能的命令为time-range disable或者time-range disable clear。
 
@@ -23465,8 +21654,7 @@ TimeRange功能不开启。
 
 
 
-### 范例 
-
+范例 :
 
 ZXROSNG(config)#time-range enableZXROSNG(config)#
 
@@ -23475,8 +21663,7 @@ ZXROSNG(config)#time-range enableZXROSNG(config)#
 
 
 
-### 相关命令 
-
+相关命令 :
 
 time-range disabletime-range disable clear
 
@@ -23491,8 +21678,7 @@ time-range
 
 
 
-### 命令功能 
-
+命令功能 :
 
 该命令工作于全局配置模式，用于进入TimeRange配置模式并创建TimeRange列表。若TimeRange列表已经存在则只进入TimeRange配置模式。使用no命令删除配置的TimeRange列表。 
 
@@ -23501,8 +21687,7 @@ time-range
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -23511,8 +21696,7 @@ time-range
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23521,8 +21705,7 @@ time-range
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 time-range 
@@ -23538,8 +21721,7 @@ no time-range
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -23554,8 +21736,7 @@ no time-range
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -23564,8 +21745,7 @@ no time-range
 
 
 
-### 使用说明 
-
+使用说明 :
 
 系统支持的最大TimeRange列表数为2048个，一个TimeRange列表中最多包含24条时间段，包括绝对时间段和相对时间段，其中最多只能有一条绝对时间段。时间段在以下三种情况下能够生效。只配置了绝对时间段。当前系统时间在配置的绝对时间段内，则该时间段有效。只配置了相对时间段。无论配置了几个相对时间段，只要当前系统时间在任何一个相对时间段，则该时间段有效。既配置了绝对时间段，又配置了相对时间段。系统时间必须同时符合绝对时间段及其中一个相对时间段，才能认为该时间段有效。在time-range disable状态下所有的TimeRange列表不再起作用。不再随时间进行状态转换，而是处于time-range disable时的状态。
 
@@ -23573,8 +21753,7 @@ no time-range
 
 
 
-### 范例 
-
+范例 :
 
 创建名称为mytime的TimeRange列表：ZXROSNG(config)#time-range mytimeZXROSNG(config-tr-mytime)#
 
@@ -23582,8 +21761,7 @@ no time-range
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show time-range 
 
@@ -23599,8 +21777,7 @@ ip prefix-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 给BGP创建一个前缀表且控制对它的访问。使用no命令删除前缀表。 
 
@@ -23609,8 +21786,7 @@ ip prefix-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -23619,8 +21795,7 @@ ip prefix-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23629,8 +21804,7 @@ ip prefix-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ip prefix-list 
@@ -23669,8 +21843,7 @@ no ip prefix-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -23694,8 +21867,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 缺省 
-
+缺省 :
 
 未定义前缀列表。 
 
@@ -23704,8 +21876,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 使用说明 
-
+使用说明 :
 
 不配置{deny|permit}选项的话，默认是permit操作。 
 
@@ -23714,8 +21885,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 范例 
-
+范例 :
 
 指定前缀列表test的描述信息为“test”并指定允许地址为100.1.1.1掩码范围为大于等于25的路由：ZXROSNG(config)#ip prefix-list test seq  1 permit 100.1.1.1 24 ge 25ZXROSNG(config)#ip prefix-list test description test
 
@@ -23723,8 +21893,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ip prefix-list 
 
@@ -23739,8 +21908,7 @@ ipv6 prefix-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 给业务创建一个IPv6前缀表且控制对它的访问。使用no命令删除前缀表。 
 
@@ -23749,8 +21917,7 @@ ipv6 prefix-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  全局配置模式  
 
@@ -23759,8 +21926,7 @@ ipv6 prefix-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23769,8 +21935,7 @@ ipv6 prefix-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 ipv6 prefix-list 
@@ -23807,8 +21972,7 @@ no ipv6 prefix-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -23831,8 +21995,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 缺省 
-
+缺省 :
 
 未定义前缀列表。 
 
@@ -23841,8 +22004,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 使用说明 
-
+使用说明 :
 
 不配置{deny|permit}选项的话，默认是permit操作。 
 
@@ -23851,8 +22013,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 范例 
-
+范例 :
 
 指定前缀列表test的描述信息为“test”并指定允许地址为1:2::3:4掩码范围为大于等于127的路由：ZXROSNG(config)#ipv6 prefix-list test permit 1:2::3:4/126 ge 127ZXROSNG(config)#ipv6 prefix-list test description test
 
@@ -23860,8 +22021,7 @@ permit|允许对匹配条件进行访问
 
 
 
-### 相关命令 
-
+相关命令 :
 
 show ipv6 prefix-list 
 
@@ -23876,8 +22036,7 @@ show ip prefix-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示全部或指定的前缀表的内容。 
 
@@ -23886,8 +22045,7 @@ show ip prefix-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -23896,8 +22054,7 @@ show ip prefix-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -23906,8 +22063,7 @@ show ip prefix-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -23923,8 +22079,7 @@ show ip prefix-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -23941,8 +22096,7 @@ summary|指定显示统计信息
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -23951,8 +22105,7 @@ summary|指定显示统计信息
 
 
 
-### 使用说明 
-
+使用说明 :
 
 如果不带< prefix-list-name >参数，则显示所有的前缀表。如果带< prefix-list-name >参数，则显示指定名称的前缀表。
 
@@ -23960,8 +22113,7 @@ summary|指定显示统计信息
 
 
 
-### 范例 
-
+范例 :
 
 显示所有前缀表的内容：ZXROSNG#show ip prefix-listtotal numbers of ip prefix-list: 4 seq entries, 1 range entriesip prefix-list multi :seq 5 permit 230.0.0.0 24ip prefix-list ly :seq 1 permit 229.0.0.0 24ip prefix-list test :description: testseq 1 permit 100.1.1.0 24 ge 25seq 6 permit 100.1.1.0 24
 
@@ -23969,8 +22121,7 @@ summary|指定显示统计信息
 
 
 
-### 相关命令 
-
+相关命令 :
 
 无 
 
@@ -23985,8 +22136,7 @@ show ipv6 prefix-list
 
 
 
-### 命令功能 
-
+命令功能 :
 
 显示全部或指定的前缀表的内容 
 
@@ -23995,8 +22145,7 @@ show ipv6 prefix-list
 
 
 
-### 命令模式 
-
+命令模式 :
 
  除用户模式外的其他所有模式  
 
@@ -24005,8 +22154,7 @@ show ipv6 prefix-list
 
 
 
-### 命令默认权限级别 
-
+命令默认权限级别 :
 
 15 
 
@@ -24015,8 +22163,7 @@ show ipv6 prefix-list
 
 
 
-### 命令格式 
-
+命令格式 :
 
 
 
@@ -24032,8 +22179,7 @@ show ipv6 prefix-list
 
 
 
-### 命令参数解释 
-
+命令参数解释 :
 
 
 
@@ -24050,8 +22196,7 @@ summary|指定显示统计信息
 
 
 
-### 缺省 
-
+缺省 :
 
 无 
 
@@ -24060,8 +22205,7 @@ summary|指定显示统计信息
 
 
 
-### 使用说明 
-
+使用说明 :
 
 如果不带< prefix-list-name >参数，则显示所有的前缀表。如果带< prefix-list-name >参数，则显示指定名称的前缀表。
 
@@ -24070,8 +22214,7 @@ summary|指定显示统计信息
 
 
 
-### 范例 
-
+范例 :
 
 显示所有前缀表的内容：ZXROSNG(config)#show ipv6 prefix-list                                            total numbers of ip prefix-list: 4 seq entries, 2 range entriesipv6 prefix-list 2 :    seq 5 deny 2::2/128ipv6 prefix-list 1 :    seq 5 permit 1::1/1    seq 10 permit 1::1/1 ge 2 le 3ipv6 prefix-list test :description: test    seq 5 permit 1:2::3:4/126 ge 127
 
@@ -24079,8 +22222,7 @@ summary|指定显示统计信息
 
 
 
-### 相关命令 
-
+相关命令 :
 
 ipv6 prefix-list 
 

@@ -1,6 +1,4 @@
-# 动态管理 
-# 动态管理 
-
+动态管理 动态管理 
 
 [](None)背景知识 
 
@@ -14763,9 +14761,7 @@ Copyright © ZTE Corporation. All right reserved.
 PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central R&D Insititute. 
 
 
-## 调测信息采集 
-## 调测信息采集 
-
+调测信息采集 调测信息采集 
 
 [](None)背景知识 
 

@@ -1062,32 +1062,25 @@ IETF RFC 5216|EAP-TLS认证协议（The EAP-TLS Authentication Protocol）
 IETF RFC 5246|传输层安全（TLS）协议版本1.2 （The Transport Layer Security(TLS) Protocol Version 1.2）
 
 
-# 缩略语 
-# 缩略语 
-## 3GPP 
-3rd Generation Partnership Project第三代合作伙伴计划
+缩略语 :缩略语 :3GPP :3rd Generation Partnership Project第三代合作伙伴计划
 ## 4A 
 Account, Authorization, Authentication, Audit认证、账号、授权、审计
-## 5GC 
-5G Core Network5G核心网
+5GC :5G Core Network5G核心网
 ## ACL 
 Access Control List访问控制列表
 ## AES 
 Advanced Encryption Standard高级加密标准
-## AF 
-Application Function应用功能
+AF :Application Function应用功能
 ## AKA 
 Authentication and Key Agreement鉴权和密钥协商
-## AMF 
-Access and Mobility Management Function接入和移动管理功能
+AMF :Access and Mobility Management Function接入和移动管理功能
 ## API 
 Application Programming Interface应用编程接口
 ## APP 
 Application应用
 ## AR 
 Augmented Reality增强现实
-## AUSF 
-Authentication Server Function鉴权服务器功能
+AUSF :Authentication Server Function鉴权服务器功能
 ## BGP 
 Border Gateway Protocol边界网关协议
 ## BIOS 
@@ -1128,14 +1121,12 @@ End-to-End终端到终端
 Error Check and Correction错误检查和纠正
 ## eMBB 
 Enhanced Mobile Broadband增强移动宽带
-## EMS 
-Element Management System网元管理系统
+EMS :Element Management System网元管理系统
 ## FCC 
 Federal Communication Commission联邦通信委员会（美国）
 ## FlexE 
 Flex Ethernet灵活以太网
-## FTP 
-File Transfer Protocol文件传输协议
+FTP :File Transfer Protocol文件传输协议
 ## GDPR 
 General Data Protection Regulation通用数据保护条例
 ## GRE 
@@ -1144,23 +1135,19 @@ General Routing Encapsulation通用路由封装
 Global Service Orchestrator全局业务编排器
 ## GTSM 
 Generalized TTL Security Mechanism通用TTL安全保护机制
-## GUTI 
-Globally Unique Temporary Identity全球唯一临时标识
+GUTI :Globally Unique Temporary Identity全球唯一临时标识
 ## IDC 
 Internet Data Center互联网数据中心
 ## IEEE 
 Institute of Electrical and Electronics Engineers电气与电子工程师学会
 ## IGMP 
 Internet Group Management Protocol因特网组播管理协议
-## IMEI 
-International Mobile Equipment Identity国际移动设备标识
-## IMSI 
-International Mobile Subscriber Identity国际移动用户标识
+IMEI :International Mobile Equipment Identity国际移动设备标识
+IMSI :International Mobile Subscriber Identity国际移动用户标识
 ## IO 
 Input &
 Output输入输出
-## IP 
-Internet Protocol因特网协议
+IP :Internet Protocol因特网协议
 ## IPSec 
 IP Security ProtocolIP安全协议
 ## ISDN 
@@ -1175,12 +1162,10 @@ Location Area Information移动台位置信息
 Label Distribution Protocol标记分发协议
 ## LRDIMM 
 Load Reduced Dual Inline Memory Module低负载双列直插内存模块
-## LTE 
-Long Term Evolution长期演进
+LTE :Long Term Evolution长期演进
 ## MAC 
 Media Access Control媒介接入控制
-## MANO 
-Management and Orchestration管理和编排
+MANO :Management and Orchestration管理和编排
 ## MEC 
 Mobile Edge Computing移动边缘计算
 ## MEP 
@@ -1189,24 +1174,18 @@ MEC Platform多接入边缘计算平台
 Massive Machine Type Communication海量机器类通信
 ## MS 
 Mobile Station移动台
-## NAS 
-Network Access Service网络接入服务
+NAS :Network Access Service网络接入服务
 ## NE 
 Network Element网络单元（网元）
-## NEF 
-Network Exposure Function网络开放功能
-## NF 
-Network Function网络功能
-## NFV 
-Network Functions Virtualization网络功能虚拟化
+NEF :Network Exposure Function网络开放功能
+NF :Network Function网络功能
+NFV :Network Functions Virtualization网络功能虚拟化
 ## NFVI 
 Network Functions Virtualization Infrastructure网络功能虚拟化基础设施
-## NFVO 
-Network Functions Virtualization Orchestrator网络功能虚拟化编排器
+NFVO :Network Functions Virtualization Orchestrator网络功能虚拟化编排器
 ## NR 
 New Radio新无线
-## NRF 
-NF Repository Function网络仓储功能
+NRF :NF Repository Function网络仓储功能
 ## NS 
 Network Service网络服务
 ## OFDMA 
@@ -1215,18 +1194,14 @@ Orthogonal Frequency Division Multiple Access正交频分多址接入
 Operation Support System运营支撑系统
 ## PC 
 Personal Computer个人电脑
-## PCF 
-Policy Control Function策略控制功能
-## QoS 
-Quality of Service服务质量
+PCF :Policy Control Function策略控制功能
+QoS :Quality of Service服务质量
 ## RADIUS 
 Remote Authentication Dial In User Service远端鉴权拨号用户服务
 ## RAID 
 Redundant Array of Independent Disks独立冗余磁盘阵列
-## RAN 
-Radio Access Network无线接入网
-## RAT 
-Radio Access Technology无线接入技术
+RAN :Radio Access Network无线接入网
+RAT :Radio Access Technology无线接入技术
 ## RDIMM 
 Registered Dual Inline Memory Module带寄存器的双列直插内存模块
 ## RIP 
@@ -1237,24 +1212,20 @@ Service Based Architecture基于服务的架构
 Service Based Interface基于服务的接口
 ## SDN 
 Software Defined Network软件定义网络
-## SFTP 
-Secure File Transfer Protocol安全文件传输协议
-## SMF 
-Session Management Function会话管理功能
+SFTP :Secure File Transfer Protocol安全文件传输协议
+SMF :Session Management Function会话管理功能
 ## SQL 
 Structured Query Language结构化查询语言
 ## SSH 
 Secure Shell安全外壳协议
 ## SUCI 
 Subscription Concealed Identifier签约的隐藏标识符
-## SUPI 
-Subscriber Permanent Identifier用户永久标识
+SUPI :Subscriber Permanent Identifier用户永久标识
 ## TACACS 
 Terminal Access Controller Access Control System终端访问控制器访问控制系统
 ## TCM 
 Trusted Cryptography Module可信密码模块
-## TCP 
-Transmission Control Protocol传输控制协议
+TCP :Transmission Control Protocol传输控制协议
 ## TD-SCDMA 
 Time Division-Synchronization Code Division
 Multiple Access时分同步码分多址接入
@@ -1264,14 +1235,11 @@ Transport Layer Security传输层安全
 Temporary Mobile Subscriber Identity临时移动用户识别码
 ## TPM 
 Trusted Platform Module可信平台模块
-## UDM 
-Unified Data Management统一数据管理
-## UE 
-User Equipment用户设备
+UDM :Unified Data Management统一数据管理
+UE :User Equipment用户设备
 ## UL 
 Underwriters Laboratories美国保险商实验所安全标准
-## UPF 
-User Plane Function用户平面功能
+UPF :User Plane Function用户平面功能
 ## URLLC 
 Ultra Reliable Low Latency Communication超高可靠超低时延通信
 ## USB 
@@ -1280,14 +1248,11 @@ Universal Serial Bus通用串行总线
 Virtual Data Center虚拟数据中心
 ## vFW 
 virtual Firewall虚拟防火墙
-## VIM 
-Virtualized Infrastructure Manager虚拟化基础设施管理系统
+VIM :Virtualized Infrastructure Manager虚拟化基础设施管理系统
 ## VLAN 
 Virtual Local Area Network虚拟局域网
-## VNF 
-Virtualized Network Function虚拟化网络功能
-## VNFM 
-Virtualized Network Function Manager虚拟化网络功能管理器
+VNF :Virtualized Network Function虚拟化网络功能
+VNFM :Virtualized Network Function Manager虚拟化网络功能管理器
 ## VPN 
 Virtual Private Network虚拟专用网
 ## VR 
@@ -1302,12 +1267,10 @@ Wideband Code Division Multiple Access宽带码分多址
 Wireless Fidelity无线保真
 ## ZENIC 
 ZTE Elastic Network Intelligent Controller中兴通讯弹性网络智能控制器
-## ZTE 
-Zhongxing Telecommunications Equipment中兴通讯
+ZTE :Zhongxing Telecommunications Equipment中兴通讯
 # 5GC容灾解决方案 
 ## 方案概述 
-### 概述 
-随着5G业务的全面铺开，越来越多的用户可以享受5G更快的速度、更低的时延、更大的网络容量等优势。接入5G网络的设备也越来越多样化，包括传统的人网、海量的物联网、低延时高智能的车联网等。 
+概述 :随着5G业务的全面铺开，越来越多的用户可以享受5G更快的速度、更低的时延、更大的网络容量等优势。接入5G网络的设备也越来越多样化，包括传统的人网、海量的物联网、低延时高智能的车联网等。 
 随着信息化在各个行业的不断深入，诸如医疗、金融、能源等对于通讯网络的依赖性也越来越强。以上既为5G网络带来了无限的机遇与广阔的前景，同时也对5G网络提出了更高、更严格的要求。 
 对于因为设备故障、停电、自然灾害等种种原因导致的网络服务中断而引发的通讯不畅、数据丢失、资金损失甚至生命危险是不可想象的。5GC提供了丰富的容灾手段来应对上述问题，使得即使遇到不可抗因素而导致部分网络设备不可用时，也可以通过多种方式保障业务的可用性。5GC相对于传统EPC网络演进了一些新的特性，基于这些新特性5GC的容灾方式与EPC的容灾方式也不尽相同。 
 虚拟化相对于传统EPC网元，5GC所有网元均运行在虚拟化的服务器上。当出现虚拟机级或服务器级的故障，从而导致网元部分功能或整个网元功能不可用时，可借助虚拟机的重生机制快速恢复正常业务。 
@@ -1357,8 +1320,7 @@ NSSF|1+1主备|服务化NF：PATCH心跳探测|NSSF 1+1主备容灾方式是指�
 ### 虚机级容灾 
 
 
-#### 场景说明 
-虚拟化网元系统中，相同规格的虚机一般使用1+1主备、1+1互备或N+M负荷分担部署。 
+场景说明 :虚拟化网元系统中，相同规格的虚机一般使用1+1主备、1+1互备或N+M负荷分担部署。 
 实际运行过程中，如果出现一个虚机损坏，该损坏虚机的功能（或角色）会容灾到其他虚机中正常运行，不会对功能和性能产生影响。 
 
 
@@ -1371,8 +1333,7 @@ NSSF|1+1主备|服务化NF：PATCH心跳探测|NSSF 1+1主备容灾方式是指�
 
 
 
-#### 实现原理 
-NF|虚机容灾方案
+实现原理 :NF|虚机容灾方案
 ---|---
 虚机类型|容灾方式|功能说明
 ---|---|---
@@ -1427,8 +1388,7 @@ NSSF|GSU业务|N+M负荷分担|完成切片选择、可用性更新业务相关�
 NSSF|CDU|N+M负荷分担|保存切片信息。
 
 
-#### 应用限制 
-
+应用限制 :
  
 部署时要考虑主备跨物理节点部署。 
 
@@ -1448,8 +1408,7 @@ NSSF|CDU|N+M负荷分担|保存切片信息。
 ### 服务器级容灾 
 
 
-#### 场景说明 
-服务器级容灾包括以下场景： 
+场景说明 :服务器级容灾包括以下场景： 
 
  
 服务器故障单个/多个物理服务器或连接到某个/多个物理服务器的网络端口/链路故障。 
@@ -1467,12 +1426,10 @@ NSSF|CDU|N+M负荷分担|保存切片信息。
 容灾组网如[图1](0.html#T_1604980389569__461e0c4f-56a5-4ba3-afc5-708e4f35c313)所示。
 
 
-#### 实现原理 
-VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒换到其他正常的VM上。
+实现原理 :VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒换到其他正常的VM上。
 
 
-#### 应用限制 
-
+应用限制 :
  
 部署时要考虑主备跨物理节点部署。 
 
@@ -1490,13 +1447,11 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 
 
 ### 网元级容灾 
-#### 场景说明 
-一个网元实例发生故障，所有业务相关网元的连接切换到其他备份网元实例。 
+场景说明 :一个网元实例发生故障，所有业务相关网元的连接切换到其他备份网元实例。 
 #### 组网 
 5GC核心网，部署两个DC，放置5GC控制面网元。同时对于UPF采用专U方案进行建设，部署在5GC核心网机房，连接5GC CE。
 网元容灾逻辑组网如[图1](0.html#T_1604980389569__461e0c4f-56a5-4ba3-afc5-708e4f35c313)所示。
-#### 实现原理 
-NF|部署方式|容灾方案|方案详情
+实现原理 :NF|部署方式|容灾方案|方案详情
 ---|---|---|---
 NRF|互备|在NRF间需要实现数据同步，保证各NF注册数据一致性。维护其他NF状态，识别NF故障后，根据订阅数据向订阅者发送NF故障状态通知；并在对应的NF发现流程中，返回可用NF列表。|NRF容灾
 AMF|POOL|按照注册区域，根据切片维度，以POOL方式组网，POOL内进行容灾，AMF POOL内进行用户容量冗余，AMF1故障时，NR重选AMF2。|AMF容灾
@@ -1507,13 +1462,11 @@ PCF|POOL|多个PCF PooL容灾，PCF1故障时，业务重选PCF2。|PCF容灾
 UDM/AUSF/UDR|主备|按主备方式容灾，BE 1+1部署，FE 1+1，主用故障后其他NF选择备用接管业务。|UDM容灾
 BSF|互备|业务负荷分担，会话绑定数据在两套设备中保证同步。|BSF容灾
 NSSF|主备|切片相关信息需要OMC保证在各NSSF中数据配置一致性。|NSSF容灾
-#### 可获得性 
-AMF网元“AMF支持无UDSF容灾部分备份功能”需License支持。 
+可获得性 :AMF网元“AMF支持无UDSF容灾部分备份功能”需License支持。 
 ### 机柜级容灾 
 
 
-#### 场景说明 
-通信云硬件资源池按照层次化架构设计，自下而上分为接入层、核心层、出口层三层，各层部署以下设备： 
+场景说明 :通信云硬件资源池按照层次化架构设计，自下而上分为接入层、核心层、出口层三层，各层部署以下设备： 
 
  
 接入层：部署TOR和各类计算型服务器、存储设备。 
@@ -1556,8 +1509,7 @@ AMF网元“AMF支持无UDSF容灾部分备份功能”需License支持。
 容灾组网如[图1](0.html#T_1604980389569__461e0c4f-56a5-4ba3-afc5-708e4f35c313)所示。
 
 
-#### 实现原理 
-
+实现原理 :
  
 VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒换到其他正常的VM上。 
 
@@ -1570,8 +1522,7 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
  
 
 
-#### 应用限制 
-
+应用限制 :
  
 网络设计时要考虑机柜故障场景下的冗余备份，部署时要考虑同类型VM跨物理机柜部署。 
 
@@ -1588,20 +1539,17 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 ### 资源池级容灾 
 
 
-#### 场景说明 
-资源池级容灾指承载层(TOR/EOR)的资源池发生故障时的容灾，某个资源池不可用，如EOR交换机故障，需要将该资源池内的所有VNF切换到同Pool内的其他资源池中的VNF上。 
+场景说明 :资源池级容灾指承载层(TOR/EOR)的资源池发生故障时的容灾，某个资源池不可用，如EOR交换机故障，需要将该资源池内的所有VNF切换到同Pool内的其他资源池中的VNF上。 
 
 
 #### 组网 
 容灾组网如[图1](0.html#T_1604980389569__461e0c4f-56a5-4ba3-afc5-708e4f35c313)所示。
 
 
-#### 实现原理 
-5GC业务应用层各VNF在多资源池进行冗余部署。在一个资源池故障时，由其它资源池的VNF设备自动接管业务，可以使用本DC内的其它资源池的VNF接管业务，也可以使用其他DC的资源池的VNF接管业务。 
+实现原理 :5GC业务应用层各VNF在多资源池进行冗余部署。在一个资源池故障时，由其它资源池的VNF设备自动接管业务，可以使用本DC内的其它资源池的VNF接管业务，也可以使用其他DC的资源池的VNF接管业务。 
 
 
-#### 应用限制 
-网络设计时要考虑资源池故障场景下的冗余备份。 
+应用限制 :网络设计时要考虑资源池故障场景下的冗余备份。 
 
 
 #### 容灾配置 
@@ -1611,8 +1559,7 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 ### 机房级容灾 
 
 
-#### 场景说明 
-机房级容灾的应用场景主要包括： 
+场景说明 :机房级容灾的应用场景主要包括： 
 
  
 机房整体故障：例如机房整体掉电，或机房出口传输设备或链路故障。 
@@ -1633,8 +1580,7 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 5GC业务应用层各VNF在多机房进行冗余部署。在一个机房故障时，由其它机房的VNF设备自动接管业务。 
 
 
-#### 应用限制 
-网络设计时要考虑机房故障场景下的冗余备份。 
+应用限制 :网络设计时要考虑机房故障场景下的冗余备份。 
 
 
 #### 容灾配置 
@@ -1644,8 +1590,7 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 ### 机楼级容灾 
 
 
-#### 场景说明 
-在两个或多个机楼部署多套功能相同的设备，当机楼因意外停止工作时，通过部署在其它机楼的容灾设备可以快速接管业务，保证业务的连续性和可用性，降低突发意外事件对系统正常运行的影响。 
+场景说明 :在两个或多个机楼部署多套功能相同的设备，当机楼因意外停止工作时，通过部署在其它机楼的容灾设备可以快速接管业务，保证业务的连续性和可用性，降低突发意外事件对系统正常运行的影响。 
 机楼级容灾的场景主要包括： 
 
  
@@ -1668,12 +1613,10 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 容灾组网如[图1](0.html#T_1604980389569__461e0c4f-56a5-4ba3-afc5-708e4f35c313)所示。
 
 
-#### 实现原理 
-5GC业务应用层各VNF在多机楼进行冗余部署。在一个机楼故障时，由其它机楼的VNF设备自动接管业务。 
+实现原理 :5GC业务应用层各VNF在多机楼进行冗余部署。在一个机楼故障时，由其它机楼的VNF设备自动接管业务。 
 
 
-#### 应用限制 
-网络设计时要考虑机楼故障场景下的冗余备份。 
+应用限制 :网络设计时要考虑机楼故障场景下的冗余备份。 
 
 
 #### 容灾配置 
@@ -1683,8 +1626,7 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 ### DC级容灾 
 
 
-#### 场景说明 
-在发生大范围故障或灾难的情况下，有整DC设备宕机及退出服务的可能，如DC级范围的火灾、掉电，DC出口网络设备范围性的故障或掉电等场景。针对此场景，可以根据运营商的规划提供DC级容灾功能。
+场景说明 :在发生大范围故障或灾难的情况下，有整DC设备宕机及退出服务的可能，如DC级范围的火灾、掉电，DC出口网络设备范围性的故障或掉电等场景。针对此场景，可以根据运营商的规划提供DC级容灾功能。
 
 
 #### 组网 
@@ -1702,13 +1644,11 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
  
 
 
-#### 实现原理 
-5GC各网络设备均提供了NF级的容灾备份机制。当某台设备发生故障后，其备份设备处于正常工作状态，则话务将由其备份设备进行处理。  
+实现原理 :5GC各网络设备均提供了NF级的容灾备份机制。当某台设备发生故障后，其备份设备处于正常工作状态，则话务将由其备份设备进行处理。  
 在DC级容灾的场景，RAN设备在识别其中一个DC（如DC1）的AMF设备故障后，会将话务分发到状态正常的另一个DC（如DC2）的AMF设备上。AMF接收话务的后续处理，将转化为AMF容灾处理流程，其他NF正常处理流程或容灾处理流程，流程处理中由于DC1中的设备均不可用，则最终会由DC2中的设备完成用户接入及会话建立等处理流程，进而实现业务恢复。 
 
 
-#### 应用限制 
-部署DC级容灾，在设备的冗余容量上，需要每个DC能够接入总用户数。 
+应用限制 :部署DC级容灾，在设备的冗余容量上，需要每个DC能够接入总用户数。 
 
 
 #### 容灾配置 
@@ -1717,8 +1657,7 @@ VNF内部VM有容灾机制，故障服务器上的虚机运行的业务自动倒
 
 ## 容灾原理 
 ### 架构可靠性 
-#### 概述 
-5GC容灾解决方案支持负荷分担、主备实例功能和无状态特性，从而实现架构可靠性。 
+概述 :5GC容灾解决方案支持负荷分担、主备实例功能和无状态特性，从而实现架构可靠性。 
 #### 负荷分担 
 负荷分担是指运行实例采用负荷分担的工作方式，即所有运行实例共同分担处理业务。当部分运行实例异常宕机时，由其余运行正常的实例共同分担处理业务，从而保证业务正常运行。 
 采用N+M冗余方式，即当N个实例可以满足系统容量的业务处理时，再提供M个实例用于冗余。 
@@ -1742,8 +1681,7 @@ NF的无状态设计如[图3](11.html#T_1604980389589__23dadbf1-0956-408f-ab67-2
 图3  无状态设计
 []images/%E6%97%A0%E7%8A%B6%E6%80%81%E8%AE%BE%E8%AE%A1.png)
 ### 部署可靠性 
-#### 概述 
-5GC容灾解决方案支持网元分域部署、双DC部署、互斥部署，同时采用网卡Bond模式和网络双平面，从而实现部署可靠性。
+概述 :5GC容灾解决方案支持网元分域部署、双DC部署、互斥部署，同时采用网卡Bond模式和网络双平面，从而实现部署可靠性。
 #### 分域部署 
 采用管理域、业务域、转发域分离的方式进行网元部署。 
 #### 双DC部署 
@@ -1761,8 +1699,7 @@ NF的无状态设计如[图3](11.html#T_1604980389589__23dadbf1-0956-408f-ab67-2
 网络双平面是指NF对内与对外的所有逻辑网络接口，都需要支持至少2个不同的物理网络平面互为备份。当其中一个物理网络平面发生故障时，另一个物理网络平面依旧能够接管所有的网络流量，保证业务不中断。
 网络双平面支持NF的所有网络接口，包括：内部管理面、内部业务平面以及所有的对外接口。 
 ### 资源可靠性 
-#### 概述 
-5GC的资源包括以下两种： 
+概述 :5GC的资源包括以下两种： 
 计算资源：如VM、容器、进程。 
 通信资源：如Management通信平面、Service通信平面、TOR/EOR。 
 业务功能的正常运行，依赖以上的资源正常运行。而以上资源的可靠性，可通过链路检测、自愈、防脑裂等机制来保障。 
@@ -1773,8 +1710,7 @@ NF的无状态设计如[图3](11.html#T_1604980389589__23dadbf1-0956-408f-ab67-2
 #### 防脑裂 
 防脑裂指主控节点采用仲裁形式，防止主控节点脑裂的发生。当主备之间无法通信，需要决定主备状态时，引入仲裁节点，辅助主备决策。 
 ### 数据可靠性 
-#### 概述 
-5GC的NF按无状态设计，在当前处理流程完成后，将用户及会话上下文状态数据保存在UDSF中，由UDSF对数据进行多副本保存。当NF故障时，NF
+概述 :5GC的NF按无状态设计，在当前处理流程完成后，将用户及会话上下文状态数据保存在UDSF中，由UDSF对数据进行多副本保存。当NF故障时，NF
 SET内的其他NF在接管故障NF的业务时可以从UDSF读取上下文状态数据并继续话务处理。NF可以共享UDSF存储各自的非结构化数据，或者可以各自拥有自己的UDSF。 
 UDSF地理容灾方案是在多个地理位置部署数据节点，数据节点在不同的地理位置以站点为单位进行组织。多个站点之间相互协作，呈现为一个有机的完整的系统，对外提供稳定可靠的服务。UDSF支持的容灾方式有： 
 1+1冗余存储在DC内，数据存储节点之间通过可靠的复制机制，实现用户数据的双副本存储。通过互斥组设置，用户数据的两个副本，可以存储在不同的物理机上，确保一个物理机的故障，不会影响用户数据的所有副本。 
@@ -1785,8 +1721,7 @@ UDSF租户（Tenant）一个或两个站点的若干CDN节点的集合，在UDSF
 NF的部分数据，所有CDN节点的数据构成了FE NF的全部数据。租户是容灾的基本单位。 
 UDSF控制中心（Control Center）负责监控所有CDN节点和UDSF租户的工作状态，确保FE的数据访问在合适的CDN节点上完成。 
 主用站点（Home Site）和备用站点（BackupSite）将租户的其中一个站点设置为主用站点，另外一个站点设置为备用站点。主用站点和备用站点的设置只影响数据访问的优先级，不影响数据的访问功能。两个站点都可以提供增、删、查、改等全部数据访问操作。 
-#### 应用场景 
-无容灾场景
+应用场景 :无容灾场景
 不需要地理容灾功能时，UDSF租户的节点只部署在一个站点，如[图1](14.html#T_1604980389599__c8649993-42ed-4f94-b258-34b90f67fc5a)所示。
 图1  无容灾场景
 []images/%E6%97%A0%E5%AE%B9%E7%81%BE%E5%9C%BA%E6%99%AF.png)
@@ -1818,8 +1753,7 @@ N+1集中容灾场景
 []images/N+1%E9%9B%86%E4%B8%AD%E5%AE%B9%E7%81%BE%E5%9C%BA%E6%99%AF.png)
 N+1集中容灾场景，除了集中的备用站点，其他站点的FE都不需要预留处理能力用于接管业务。FE的资源利用率更高，且由于不需要接管业务，各个站点的FE之间不会相互影响。 
 ### Bypass方案 
-#### 概述 
-Bypass（旁路）方案是指在某种类型的NF均发生故障而无法正常交互的情况下，将此NF进行旁路（不再交互），从而使业务处理流程得以继续进行。 
+概述 :Bypass（旁路）方案是指在某种类型的NF均发生故障而无法正常交互的情况下，将此NF进行旁路（不再交互），从而使业务处理流程得以继续进行。 
 #### AMF提供的Bypass方案 
 NRF Bypass：在NRF均故障的情况下，AMF为继续提供服务，支持如下处理功能：NRF均故障时，本地缓存停止老化，继续使用缓存选择NF/NFS。NRF均故障时，本地缓存发现失败的情况下，根据配置可以使用本地配置发现和选择NF/NFS。 
 NSSF Bypass：在NSSF均故障的情况下，AMF为继续提供服务，支持如下处理功能：NSSF均故障时，当“请求切片和签约切片的交集”AMF均无法支持时，AMF支持向NRF发现满足切片交集的AMF，根据返回结果择优选择AMF并视需要选择执行AMF
@@ -1865,8 +1799,7 @@ Diameter看门狗检测|Diameter支持设备看门狗消息。DWR、DWA是在本
 
 
 ## 各网元容灾方案 
-### NRF 
-#### NRF容灾 
+NRF :#### NRF容灾 
 ##### 容灾组网 
 NRF容灾组网如[图1](21.html#T_1604980389609__36bb894e-4173-48fa-886f-2a1e37491bfd)所示，NF的注册信息会在2个DC的NRF上自动同步，保证网元的注册数据不会因节点故障而丢失。
 NRF提供本地备份功能，网元重启会重新导入本地备份的数据，并和另一NRF进行同步，保证重启后的NRF数据和工作NRF的数据同步。 
@@ -1902,10 +1835,8 @@ AMF1通过备用NRF发现的高优先级AUSF/UDM，为用户UE2的注册调用�
 
 AMF通过保活检测，定时向主用NRF进行检测，一旦发现主用NRF恢复，AMF使用主用NRF提供的服务。 
 #### NRF容灾配置 
-##### 配置前提 
-已完成网元的基本配置。 
-##### 数据规划 
-LNRF数据规划
+配置前提 :已完成网元的基本配置。 
+数据规划 :LNRF数据规划
 LNRF（二级NRF）的数据规划参见下表。 
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
@@ -1965,8 +1896,7 @@ UDR功能选项配置SET UDSFUNC|租户ID|1|1|租户的唯一标识。通过SHOW
 序号|增加动态合并规则配置2ADD MERGERULE|2|2|序号，从1开始连续，在一个Schema工程名下唯一，不同的schema中可以重复。
 长度|增加动态合并规则配置2ADD MERGERULE|500|500|指示合并规则字段Context的长度，便于读取。
 合并规则内容|增加动态合并规则配置2ADD MERGERULE|{$RID = 1; $TID = 21;$TIMEID=; $REF={};$OPER= {$UPDATE $FLT={$DEST.nfInstanceID == $SRC.nfInstanceID + $SRC.validityTime> $DEST.validityTime} $VAL=$SRC.*};$NTF={}}|{$RID = 1; $TID = 21;$TIMEID=; $REF={};$OPER= {$UPDATE $FLT={$DEST.nfInstanceID == $SRC.nfInstanceID + $SRC.validityTime> $DEST.validityTime} $VAL=$SRC.*};$NTF={}}|合并规则的内容。
-##### 配置步骤 
-LNRF141配置
+配置步骤 :LNRF141配置
 步骤|操作说明|操作
 ---|---|---
 1|增加NF标识配置|ADD NFCFG:NFID=141,NFNAME="NRF141",NFTYPE="self_nf"ADD NFCFG:NFID=142,NFNAME="NRF142",NFTYPE="diff_tmsp_nf"
@@ -2065,8 +1995,7 @@ BSF2|主要需要配置主备NRF的信息，以及到LNRF的客户端模板选�
 ADD DNFDISC:ID=2,NRFIPTYPE="IPTYPE6",NRFIP="240E:0180:02E1:FF00:0000:0000:0000:0009",NRFPORT=8080,STANDBY="SLAVE",PRIORITY=200,SCHEMA="HTTP",VERSION="V1",LOCALNFTYPE="AF"|BSF2|主要需要配置主备NRF的信息，以及到LNRF的客户端模板选择配置。
 ADD SELPF:ID=1,IPFAMILY="IPV6",STARTIP="240E:0180:02E2:FF00:0000:0000:0000:0009",ENDIP="240E:0180:02E2:FF00:0000:0000:0000:0009",PORT=8080,CPROFILE=1-1|BSF2|主要需要配置主备NRF的信息，以及到LNRF的客户端模板选择配置。
 ADD SELPF:ID=2,IPFAMILY="IPV6",STARTIP="240E:0180:02E1:FF00::009",ENDIP="240E:0180:02E1:FF00::009",PORT=8080,CPROFILE=1-1|BSF2|主要需要配置主备NRF的信息，以及到LNRF的客户端模板选择配置。
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 NRF容灾需要监控的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -2093,8 +2022,7 @@ NRF容灾涉及的告警与通知参见下表。
 3|3407216644 服务发现QPS超过门限告警
 4|3406823440 主备局断链告警
 5|3406888961 容灾数据恢复失败通知
-### AMF 
-#### AMF容灾 
+AMF :#### AMF容灾 
 ##### 容灾组网 
 AMF容灾组网方式为AMF POOL。 
 一个AMF POOL由多个为相同区域和网络切片提供服务的AMF组成。AMF POOL内的AMF为区域内的UE提供服务，共同分担处理区域内所有UE的业务。UE在AMF POOL所服务的区域间移动不需要改变服务AMF。区域内的(R)AN与AMF POOL内的所有AMF均进行互联。 
@@ -2177,12 +2105,10 @@ NRF接收AMF1的更新或去注册消息后，根据具体的消息类型，向�
 6b. 对于用户发起的其他请求，消息中无5G-GUTI信息，则触发用户进行重注册。 
 6c. 其他NF将业务消息发送给AMF2，AMF2使用用户备份数据寻呼用户，用户发起业务请求。AMF2接收用户的业务请求后，无法正常获取用户上下文数据，按3GPP协议要求，触发用户重注册。 
 #### AMF容灾配置 
-##### 配置前提 
-执行SHOW AMFLOCALOFFICECFG命令，查询并确认AMF POOL中各个AMF在本局配置中的权重一致。 
+配置前提 :执行SHOW AMFLOCALOFFICECFG命令，查询并确认AMF POOL中各个AMF在本局配置中的权重一致。 
 执行SHOW TACFG、SHOW REGAREACFG、SHOW REGAREA TAIDLIST命令，查询并确认在POOL内各AMF的配置一致。 
 执行SHOW BACKUPDATA命令，在备份容灾AMF上查询用户的位置信息。 
-##### 数据规划 
-数据规划参见下表。 
+数据规划 :数据规划参见下表。 
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
 AMF1|AMF2
@@ -2221,8 +2147,7 @@ API版本|Set内其他AMF配置ADD OTHERAMFCFG|v1|v1|该参数用于配置Set内
 Notify IP配置ADD NOTIFYIP|通知IP名称|amf38|amf37|参数用于设置本AMF对应的备份AMF的Notify IP地址的名称。每个SBI（Service BasedInterface，基于服务的接口）服务的接口地址可能会不一样，用该名称进行标识。
 通知IP地址类型|Notify IP配置ADD NOTIFYIP|ipv4|ipv4|本参数用于设置本AMF对应的备份AMF的Notify IP地址类型，包括IPv4和IPv6两种类型。
 通知IP地址|Notify IP配置ADD NOTIFYIP|192.38.80.100|192.37.80.100|本参数用于设置本AMF对应的备份AMF的Notify IP地址。Notify IP即其他NF向AMF发起反向Notify通知时，使用的AMF的NotifyIP地址。
-##### 配置步骤 
-AMF1配置
+配置步骤 :AMF1配置
 步骤|操作说明|操作
 ---|---|---
 1|打开容灾开关，开启容灾功能。|SET DISASTERSWITCHPARA:SUPPORTDISASTER="YES",TAKETIMERAPPROACH="NO",TAKENOTIIPWITHUDSF="NO",TAKENOTIIPNOUDSF="YES"
@@ -2258,8 +2183,7 @@ AMF2配置
 网元|配置说明|配置命令
 ---|---|---
 SMF|设置SMF支持AMF备份。通过NRF发现备用AMF功能开关设置为打开的场景：如果现场AMF向NRF注册时未携带备用AMF信息，通过NRF发现备用AMF的方式应当配置为通过REGIONID与SETID发现备用AMF。如果现场AMF向NRF注册时携带备用AMF信息，通过NRF发现备用AMF的方式应当配置为通过GUAMI发现备用AMF。|SET BACKUPAMF:BACKUPAMFSWITCH="ENABLE",SELECTIONNUM=1,DISCBACKUPAMFSWITCH="ENABLE"
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 AMF容灾需要监控的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -2286,8 +2210,7 @@ AMF容灾涉及的告警与通知参见下表。
 10|3305242916 SMF不可达
 11|3305242915 UDM不可达
 12|3305242914 AUSF不可达
-### SMF 
-#### SMF容灾 
+SMF :#### SMF容灾 
 ##### 容灾组网 
 SMF采用组POOL方式进行容灾组网部署，POOL中的SMF负荷分担业务。 
 考虑到异地容灾的要求，POOL内的SMF应该部署在不同地域的DC中，如下图所示。 
@@ -2388,10 +2311,8 @@ MME触发与该SAE GW-C/SMF1相关的所有用户的去附着流程。MME1通知
 []images/%E8%AF%AD%E9%9F%B3%E5%92%8C%E7%9F%AD%E4%BF%A1%E4%B8%9A%E5%8A%A1NSA%E6%8E%A5%E5%85%A5%E7%9A%84SMF%20Pool%E5%AE%B9%E7%81%BE%E6%B5%81%E7%A8%8B.png)
 具体流程与“[数据业务NSA接入的SMF Pool容灾流程](23.html#T_1604980389609__93576bbf-182a-496f-9c80-408aa9f95a4d)”基本一致，唯一不同的是，此时用户的业务流由UPF接入到P-CSCF，发起语音接入流程。
 #### SMF容灾配置 
-##### 配置前提 
-已完成数据、语音、短信、彩信等基础流程的配置。 
-##### 数据规划 
-数据规划参见下表。 
+配置前提 :已完成数据、语音、短信、彩信等基础流程的配置。 
+数据规划 :数据规划参见下表。 
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
 SMF1|SMF2
@@ -2412,8 +2333,7 @@ NRF注册管理配置SET NRFREGMANAGE|权重|65535|1|65535|1|该参数表示SMF�
 Sx口心跳检测消息配置SET HEARTBEATMSG|是否主动发送心跳检测请求消息|是|是|是|是|该参数用于设置SMF是否主动发送心跳检测请求消息。取值为否(FALSE)或者是(TRUE)。
 请求发送周期(s)|Sx口心跳检测消息配置SET HEARTBEATMSG|20|20|20|20|该参数用于设置请求发送周期，即每隔多长时间发送一次心跳请求。取值范围是11~3600，单位：秒。
 最大连续无响应次数|Sx口心跳检测消息配置SET HEARTBEATMSG|5|5|5|5|该参数用于设置最大连续无响应次数，即连续多少次没收到心跳响应，则认为断链。取值范围是1~100。
-##### 配置步骤 
-SMF1配置
+配置步骤 :SMF1配置
 步骤|操作说明|操作
 ---|---|---
 1|增加NRF地址配置。|ADD NRFNODEIP:NRFNODEID=1,HTTPCLIENTTMPID=1,TYPECHOICE="ACTIVE",IPTYPE="IPV6",IPV6ADDR="195:168:68:1::11",PRIORITY=1,PORT=8080,SCHEME="HTTP",APIVERSION="V1"ADD NRFNODEIP:NRFNODEID=2,HTTPCLIENTTMPID=1,TYPECHOICE="BACKUP",IPTYPE="IPV6",IPV6ADDR="195:168:69:1::11",PRIORITY=1,PORT=8080,SCHEME="HTTP",APIVERSION="V1"
@@ -2439,8 +2359,7 @@ AMF|开启过负荷控制，具体的控制量需要根据实际情况来计算�
 修改202软参为1，用于配置业务请求中与SMF交互无响应时删除会话信息。|AMF|SET COMMU SOFTWARE PARAMETER:ID=202,VALUE=1
 打开NRF检测开关。|AMF|SET NFDETECPROCCFG:NRFSWITCH="ON"
 UPF|设置PFCP心跳检测参数。|SET HEARTBEAT:ENABLEHEARTBEAT="ENABLE",RESENDTIMES=5,SENDINTERVAL=30
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 SMF容灾需要监控的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -2461,8 +2380,7 @@ SMF容灾涉及的告警与通知参见下表。
 5|150101 接口IPv4协议态Down
 6|150102 接口IPv6协议态Down
 7|150111 接口二层协议态Down
-### UPF 
-#### UPF容灾 
+UPF :#### UPF容灾 
 ##### 容灾组网 
 UPF系统容灾目前主要通过CU Full Mesh组POOL的方式：一组设备组成一个POOL，为一个区域或一组区域的用户提供服务。当POOL中某个设备宕机后，该设备上的用户会被全部下线，SMF/GW-C后续在  POOL中重新选择一个可用的UPF/GW-U设备上线。
 如下图所示， 一个SMF/GW-C可以与多个UPF/GW-U对接，一个UPF/GW-U也可以和多个SMF/GW-C对接。 
@@ -2507,8 +2425,7 @@ SMF/GW-C发送PFCP Session Establishment Request消息给正常运行的UPF/GW-U
 #### UPF容灾配置 
 
 
-##### 配置前提 
-
+配置前提 :
  
 POOL内的所有UPF都分别跟主备SMF建立了N4口连接。 
 
@@ -2518,12 +2435,10 @@ UPF上的地址池、地址段及与DNN关联关系的配置，跟对应SMF上�
  
 
 
-##### 数据规划 
-不涉及数据规划。 
+数据规划 :不涉及数据规划。 
 
 
-##### 配置步骤 
-UPF配置
+配置步骤 :UPF配置
 不涉及UPF的配置。 
 周边网元配置
 网元|配置说明|配置命令
@@ -2531,8 +2446,7 @@ UPF配置
 SMF|Sx口心跳检测消息配置|SET HEARTBEATMSG:SNDREQ="true",SNDPERIOD=20,MAXNORSPNUM=5
 
 
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 UPF容灾需要监控的性能统计数据参见下表。 
 编号|测量类型|性能计数器
 ---|---|---
@@ -2545,8 +2459,7 @@ UPF容灾需要监控的性能统计数据参见下表。
 不涉及告警与通知的监控。 
 
 
-### CHF 
-#### CG容灾 
+CHF :#### CG容灾 
 
 
 ##### 容灾组网 
@@ -2619,11 +2532,9 @@ SMF选择其他可用CG，发送用户的计费消息。
 
 
 #### CHF容灾配置 
-##### 配置前提 
-CHF已完成和周边网元的对接，且能正常出话单。 
+配置前提 :CHF已完成和周边网元的对接，且能正常出话单。 
 SMF上已完成计费相关的基本配置。融合会话离线计费模板标识融合在线计费模板标识在线计费上报策略模板标识在线异常模板标识在线计费处理策略模板标识CCFH模板名称 
-##### 数据规划 
-CHF数据规划示意图如[图1](1606294047410.html#zbb0281d876ca47fd9f2c695c67996e46__3630c985-fd29-4981-aa69-cab4e8510d7b)所示。
+数据规划 :CHF数据规划示意图如[图1](1606294047410.html#zbb0281d876ca47fd9f2c695c67996e46__3630c985-fd29-4981-aa69-cab4e8510d7b)所示。
 图1  CHF数据规划示意图
 []images/CHF%E6%95%B0%E6%8D%AE%E8%A7%84%E5%88%92%E7%A4%BA%E6%84%8F%E5%9B%BE.png)
 对接SMF配置配置命令参数名称参数取值CHF1参数取值CHF2说明本端配置ADD NCHFLOCAL编号1212Nchf本端配置编号，唯一，范围1-36。主用地址191:1:1::9:7195:168:171::10195:168:172::10195:168:173::10主CHF IP。主用端口5586558655865586主CHF侦听端口，取值范围：5586-5595，开通可采用缺省值。对端配置ADD NCHFPEER编号1212Nchf对端配置节点编号，范围：1-1024。对端地址195:168:41::11195:168:42::11195:168:41::11195:168:42::11SMF端IP地址。开启Http2发送PING包EnableEnableEnableEnable开启Http2发送PING包，默认启用。开关启用时，CHF将主动以PING间隔向SMF发送PING包，用于检测链路状态。PING间隔（秒）3333ping包发送时间间隔，单位s。名称smf01smf02smf01smf02名称。通知消息本端配置ADD
@@ -2632,8 +2543,7 @@ NCHFNOTIFY编号1212通知消息本端配置编号，唯一，范围：1-12。�
 NRFLOCAL编号1212记录编号，唯一，范围1-12。本端地址191:1:1::19:7195:168:181::10195:168:182::10195:168:183::10CHF的OCS网络平面eth13浮动地址。本端起始端口5626562655865586CHF与OCS对接建立连接可以使用的端口范围的起始端口，默认5626，开通采用默认值。本端终止端口5645564556455645CHF与OCS对接建立连接可以使用的端口范围的终止端口，默认5645，开通采用默认值。创建对端配置ADD
 NCHFPEER编号1212记录编号，唯一，范围1-5。对端地址195:168:68::11195:168:135::11195:168:68::11195:168:135::11NRF的IP地址，开通时与NRF协商确定。对端端口8080808080808080NRF的端口号，开通时与NRF协商确定。优先级1212优先级，范围0 - 4。优先级数值越小，优先级越高。CHF通过NRF的优先级区分主备NRF。别名NRF68NRF135NRF68NRF135名称。对此条数据记录起的名称。订阅消息本端配置ADD
 NRFSUB编号1212通知消息本端配置编号，唯一，范围：1-12。本端地址191:1:1::19:7195:168:181::10195:168:182::10195:168:183::10CHF的OCS网络平面eth13浮动地址。本端端口5616561656165616CHF接收NRF通知消息的地址端口号，默认端口号：5616。开启Http2发送PING包EnableEnableEnableEnable开启Http2发送PING包，默认启用。开关启用时，CHF将主动以PING间隔向NRF发送PING包，用于检测链路状态。PING间隔（秒）3333ping包发送时间间隔，单位s。计费消息路由状态订阅策略配置SET OCSSUBOCS状态订阅策略NF Type订阅策略：No Subscription：不订阅（默认）。Instance ID：OCS实例ID。NF Type：网元类型。Service Name：服务名称。订阅OCS通知事件"NF_DEREGISTERED"&"NF_PROFILE_CHANGED"&"NF_REGISTERED"订阅事件：NF_DEREGISTERED：注册。NF_PROFILE_CHANGED：更新。NF_DEREGISTERED：去注册。当OCS发生注册/更新/去注册时，NRF将会向CHF发送通知消息（携带OCS相关信息）。 
-##### 配置步骤 
-CHF1配置-对接SMF
+配置步骤 :CHF1配置-对接SMF
 步骤|操作说明|操作
 ---|---|---
 1|CHF本端配置：CHF为4虚机（2输入机），与SMF对接的CHF地址为191:1:1::9:7/195:168:171::10（两个输入机eth1浮动地址）输入机个数与配置记录个数应相同|ADD NCHFLOCAL:ID=1,PRIMARYIP=191:1:1::9:7,PRIMARYPORT=5586ADD NCHFLOCAL:ID=2,PRIMARYIP=195:168:172::10,PRIMARYPORT=5586
@@ -2678,8 +2588,7 @@ CHF Profile配置|SMF2|ADD CHFPROFILECONFIG:CHFPROFILENAME="chfproifle01",FAILOV
 配置CHF Node和CHF Profile的映射关系|SMF2|ADD CHFNODEPROFILEMAP:CHFPROFILENAME="chfproifle01",CHFNODENAME="chfnodem01",CHFNODEROLE="PRIMARY"ADD CHFNODEPROFILEMAP:CHFPROFILENAME="chfproifle01",CHFNODENAME="chfnodes01",CHFNODEROLE="SECONDARY"ADD CHFNODEPROFILEMAP:CHFPROFILENAME="chfproifle02",CHFNODENAME="chfnodem02",CHFNODEROLE="PRIMARY"ADD CHFNODEPROFILEMAP:CHFPROFILENAME="chfproifle02",CHFNODENAME="chfnodes02",CHFNODEROLE="SECONDARY"
 配置CHF Profile Group和CHF Profile的映射关系|SMF2|ADD CHFPROFILEGROUPMAP:CHFPROFILEGROUPNAME="chfproiflegroup01",CHFPROFILENAME="chfproifle01",WEIGHT=100ADD CHFPROFILEGROUPMAP:CHFPROFILEGROUPNAME="chfproiflegroup01",CHFPROFILENAME="chfproifle02",WEIGHT=10
 配置DNN和CHF Profile Group的映射关系|SMF2|ADD CONVERGETEMP:CONVERGETEMPNAME="cmnet",TRIGGERCAPNAME="default",CHFPROFILETYPE="PROFILEGROUP",CHFPROFILEGROUPNAME="chfproiflegroup01",CONVERGETARIFFNAME="cmnet",CONVERGEOFFTEMPNAME="cmnet",CONVERGEONTEMPNAME="cmnet",CCRREPORTPOLICYNAME="cmnet",ONLINEABNORMALNAME="cmnet",CCAPOLICYNAME="cmnet",CCFHNAME="ccfh_cmnet",APPRESULTCODENAME="app_resultcode_temp",MUIRESULTCODENAME="mui_resultcode_temp",CHANGECONDITIONNUM=1,DISCOVERYCHFBYSUPI="DISABLE",DISCOVERYCHFBYGPSI="DISABLE",DISCOVERYCHFBYPLMN="DISABLE“
-##### 指标监控 
-性能监控
+指标监控 :性能监控
 CHF容灾需要监控的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -2694,8 +2603,7 @@ CHF容灾涉及的告警与通知参见下表。
 ---|---
 1|2365981697 网元与网管服务端链路断
 2|2265317446 节点容灾告警
-### PCF 
-#### PCF容灾 
+PCF :#### PCF容灾 
 ##### 容灾组网 
 5G网络中的RCP融合了PCF和PCRF功能，通常采用Pool组网，Pool内多个RCP间采用冷备或热备模式。组网图如[图1](26.html#T_1604980389619__e6be1f50-561b-46a9-a623-144a688e290f)所示。
 冷备模式下RCP间不同步用户会话上下文，热备模式下RCP间需要同步用户会话上下文。 
@@ -2820,8 +2728,7 @@ UpdateNotify流程PROXY方式（UpdateNotify）的热备容灾状态切换流程
 从上述流程可以看出，PROXY方式下，中间RCP（上例中的RCP1）仅转发上行请求/响应，最终业务在目标RCP（上例中的RCP2）处理。反向请求则由目标RCP直接发给对端网元，不经过中间RCP。Diameter消息的处理方式和HTTP类似，主要差异在于RCP1转Diameter请求给RCP2时，会将RCP2填到消息的Destination-Host上，而RCP1转发HTTP请求给RCP2时则不用修改消息内容。 
 RCP的PROXY/REDIRECT方式适用的接口范围相同，既包括服务接口如N7、N15、N5，也包括Diameter接口如Gx、Gxx、Sd、Rx、Sy，但都不处理Sp/Sp'接口的PNR消息。收到PNR时，如果RCP判断非本网元处理，直接丢弃（容灾接管RCP会主动发UDR到SPR注册，此外存在SPR广播PNR的场景，因此PNR不适合做PROXY或REDIRECT）。
 #### PCF容灾配置 
-##### 配置前提 
-完成以下检查。 
+配置前提 :完成以下检查。 
 序号|检查项目|通过标准|备注
 ---|---|---|---
 1|租户配置检查|主备局号需要正确，租户名称需要为tenant_1，访问策略为主用访问优先。左右域SC TYPE对应值必须正确（老版本升级的是1和2，新版本实例化是9和10）。|检查主备局号、租户名称和访问策略：在Ncudr_SystemManagement_0服务下，执行SHOW CDBTENANT命令。检查SC类型ID：在CommonS_TMSP_0服务下，执行SHOW SERVICEINFO:SERVICETYPENAME="Nudsf_UnstructuredDataManagement"命令。
@@ -2830,8 +2737,7 @@ RCP的PROXY/REDIRECT方式适用的接口范围相同，既包括服务接口如
 4|网元告警检查|检查是否有异常告警，如果有则需要确认是否影响容灾配置。|-
 5|时间同步检查|检查所有局的系统时间是否一致，NTP必须启用。|在CommonS_TMSP_0下，执行SHOW NTP命令。
 6|网络平面检查|需要规划独立的容灾网络平面（data平面）。|-
-##### 数据规划 
-数据规划参见下表。 
+数据规划 :数据规划参见下表。 
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
 带UDSF主局|带UDSF备局|不带UDSF局1|不带UDSF局2|不带UDSF局3
@@ -2877,8 +2783,7 @@ IP地址|ADD CGWCLIENT（增加CGW客户端配置）|N/A|N/A|240E:0180:02E1:FF00
 VPNID|ADD CGWCLIENT（增加CGW客户端配置）|N/A|N/A|21|21|21|容灾业务地址关联VPNID，根据现网规划填写。
 SET PCFSERVICE（修改服务基础）|服务类型|NPCFNPCF_SMPOLICYCONTROLNPCF_AMPOLICYCONTROL|NPCFNPCF_SMPOLICYCONTROLNPCF_AMPOLICYCONTROL|NPCFNPCF_SMPOLICYCONTROLNPCF_AMPOLICYCONTROL|NPCFNPCF_SMPOLICYCONTROLNPCF_AMPOLICYCONTROL|NPCFNPCF_SMPOLICYCONTROLNPCF_AMPOLICYCONTROL|该参数用于设置服务类型：NPCF_SMPOLICYCONTROL：表示使用Npcf_SMPolicyControl服务作为服务类型。NPCF_AMPOLICYCONTROL：表示使用Npcf_AMPolicyControl服务作为服务类型。NPCF_UEPOLICYCONTROL：表示使用NPCF_UEPOLICYCONTROL服务作为服务类型。NPCF_POLICYAUTHORIZATION：表示使用Npcf_PolicyAuthorization服务作为服务类型。Npcf：表示通配服务类型。
 优先级|SET PCFSERVICE（修改服务基础）|10|10|10|10|10|本参数指定该服务的优先级。取值范围为0~65535，数值越小，优先级越高。
-##### 配置步骤 
-PCF配置
+配置步骤 :PCF配置
 Proxy链路配置 
 PCF使用Proxy方式容灾时需要配置。 
 同一个POOL里所有PCF局之间需要配置局间Diameter链路，本局到每个PCF局需要配置4条SCTP偶联、4条Diameter链路、2-3个路由组（Gx、Rx、Sy（中国电信需要额外配置））、8-12条路由（Gx、Rx、Sy（中国电信需要额外配置））。 
@@ -2952,8 +2857,7 @@ SHOW CHG|无
 SMF|查询PCF负载模式是否为非绑定，如果不是，则需修改，PROFILENAME参数根据实际配置填写。|SET PCFDYNAMICPROFILE:PROFILENAME="ctnet",BALANCEMODE="PCF_NOT_BINGDING"SET PCFDYNAMICPROFILE:PROFILENAME="ims",BALANCEMODE="PCF_NOT_BINGDING"
 NRF|在NRF上配置心跳检测时长。|ADD HEARTBEATCHECK:NFTYPE="PCF",SENDINTERVAL=10,SENDTIMES=3
 BSF/DRA|BSF、DRA要求指向POOL PCF，且某PCF故障后对于新会话、老会话要能指向POOL内其他PCF。|-
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 PCF容灾需要监控的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -2980,8 +2884,7 @@ PCF容灾涉及的告警与通知参见下表。
 8|2987001347 短信链路组不可用
 9|2987001345 短信中心链路建立失败
 10|3339321607 系统处于故障状态
-### UDM 
-#### UDM容灾 
+UDM :#### UDM容灾 
 ##### 容灾组网 
 UDM由FE、BE两部分组成，支持以下地理容灾方案。 
 1+1主备两个UDM站点跨DC主备部署，如图1所示。UDM FE跨DC主备部署，UDM BE跨DC主备部署。图1  1+1主备容灾组网正常情况下只有主用FE以及主用BE处理业务。容灾FE作为信令处理的备份，不处理业务。容灾BE和主用BE之间通过数据复制消息，保持主备BE间的数据一致性。BOSS系统只接入主用BE，通过主用FE向对端网元同步下发修改后的用户数据。 
@@ -3050,8 +2953,7 @@ NRF向已订阅UDM状态的AMF、SMF发送主用UDM状态正常通知。AMF/SMF�
 AMF/SMF对新用户业务，选择主用UDM。 
 AMF/SMF对已有用户的业务，切换选择主用UDM。 
 #### UDM容灾配置 
-##### 配置前提 
-系统运行状态检查序号检查项目通过标准备注1容灾局巡检所有FE和BE局无异常告警所有BE局的WEB受理台可用所有FE局信令链路正常营帐路由可达信令链路状态检查，包括SCTP链路、M3UA偶联、Diameter链路和SBI链路检查：SCTP链路：在CommonS_SIG_0服务下，执行SHOW ALLSCTPSTAT命令。M3UA偶联：在CommonS_SIG_0服务下，执行SHOW ALLASPSTAT命令。Diameter链路：在CommonS_DAP_0服务下，执行SHOW DIMLNKSTAT命令。SBI链路：在CommonS_HTTP_LB_0服务下，执行SHOW LINK INFO命令。2UDS数据节点主备状态UDS的集群PDS主节点驻留在其用户数据归属的BE主用局，SDS备节点在其用户数据归属BE容灾局并处于SSDS状态。节点状态查询：在 Ncudr_SystemManagement_0服务下，执行SHOW
+配置前提 :系统运行状态检查序号检查项目通过标准备注1容灾局巡检所有FE和BE局无异常告警所有BE局的WEB受理台可用所有FE局信令链路正常营帐路由可达信令链路状态检查，包括SCTP链路、M3UA偶联、Diameter链路和SBI链路检查：SCTP链路：在CommonS_SIG_0服务下，执行SHOW ALLSCTPSTAT命令。M3UA偶联：在CommonS_SIG_0服务下，执行SHOW ALLASPSTAT命令。Diameter链路：在CommonS_DAP_0服务下，执行SHOW DIMLNKSTAT命令。SBI链路：在CommonS_HTTP_LB_0服务下，执行SHOW LINK INFO命令。2UDS数据节点主备状态UDS的集群PDS主节点驻留在其用户数据归属的BE主用局，SDS备节点在其用户数据归属BE容灾局并处于SSDS状态。节点状态查询：在 Ncudr_SystemManagement_0服务下，执行SHOW
 DSANODE STATUS命令。在任意一个BE局都可以查询到所有DSA节点状态，包括：主用BE局节点状态和备用BE局节点状态。BE主备局确认：在 Ncudr_SystemManagement_0服务下，执行SHOW
 UDSTENANT命令。租户的归属NF ID和归属的第二监控中心NFID标识了当前用户所在租户下主备BE局配置。3DST节点状态各DST显示集群状态和数据状态均为正常。在 Ncudr_SystemManagement_0服务下，执行SHOW DSTNODE
 STATUS命令。4容灾FE重同步定时器检查备用FE局的重同步定时器时长需调整为2小时。在备用FE局的SDM_CMS_0服务下，执行以下命令调整重同步定时器时长：SET DEFPRETMR:TIMERID=210365,CURRENTVAL=7200000说明：启用域GT后，如果因为网络原因导致的链路瞬断，业务会自动切换到容灾FE上，当链路恢复后自动切回主用FE。业务切回过程中，会存在部分业务的回程消息发到主用FE上，导致容灾FE上业务失败，引起重同步。
@@ -3064,8 +2966,7 @@ DSANODE STATUS命令。
 UDM/AUSF链路状态检查序号检查项目通过标准备注1HTTP链路状态检查检查跨局组网下，所有FE局HTTP动态链路的TCP链路状态和HTTP2连接状态都为“已激活”。主备FE到NRF的链路，要求已建立链路且状态正常。在FE局检查HTTP动态链路状态：在CommonS_HTTP_LB_0服务下，执行SHOW
 LINK INFO:LINKTYPE="DYNAMIC LINK"命令。2NRF注册状态检查在主备NRF上检查AUSF和UDM的注册状态，主备NRF上的注册状态都应该为“REGISTERED”状态。在UDM/AUSF侧的EM上跟踪NRF信令消息，UDM/AUSF和NRF间心跳正常。在NRF上检查主备UDM/AUSF注册状态：在Nnrf_NFManagement_0服务下，执行SHOW ALL NFID命令。 
 受理配置检查序号检查项目通过标准备注1WEB受理台登录检查分别登录主用和备用BE所在的WEB受理台，使用预设的受理账户可以成功登录，且受理操作可成功执行。在SDM_CMS_0服务下，执行SHOW UWEBACFG查询WEB受理台配置。WEB受理台登录地址示例：http://[IPV6]:8080/webagent/index32.html#2远端地址PING测试在主用和备用BE局的ROSNG中，执行PING远端地址测试，源地址填写PGW（Provision Gateway，受理网关）的虚地址。远端地址可以从UMCFGITEM配置的Remoteinfo节点中查看，远端地址可包括：BOSS地址，对端MI地址（开启RELAY功能需要测试）PGW虚地址可以从UMCFGITEM配置的LocalInfo节点中查看进入ROSNG：在CommonS_TMSP_0服务下，选择Rosng配置管理→router配置。 
-##### 数据规划 
-数据规划参见下表。 
+数据规划 :数据规划参见下表。 
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
 UDM01|UDM02|UDR01|UDR02
@@ -3088,8 +2989,7 @@ UDM优先级配置SET UDMNFREGBASE|优先级|0|65535|0|65535|65535|65535|65535|6
 其他参数|UDM优先级配置SET UDMNFREGBASE|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|其他参数保持默认值即可。|-|-
 AUSF优先级配置SET AUSFNFREGBASE|优先级|0|65535|0|65535|65535|65535|65535|65535|0|0|0|0|-|-|NF优先级，用于指示服务优先级，数值越低优先级越高。
 其他参数|AUSF优先级配置SET AUSFNFREGBASE|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|默认值|其他参数保持默认值即可。|-|-
-##### 配置步骤 
-UDM01配置
+配置步骤 :UDM01配置
 步骤|操作说明|操作
 ---|---|---
 1|NF标识配置：NFID参数配置成局号，NFNAME按照命名规范配置，如：“SC-CD-BS-RP0001B-A-5GC-ZE-UDM01-B”。NFTYPE包括：self_nf（本地NF）same_tmsp_nf（和本地NF部署在同一TMSP的其他NF）diff_tmsp_nf（和本地NF部署在不同TMSP的其他NF）|ADD NFCFG:NFID=91,NFNAME="SC-CD-BS-RP0001B-A-5GC-ZE-UDM01-B",NFTYPE="self_nf"ADD NFCFG:NFID=111,NFNAME="SC-CD-BS-RP0001B-A-5GC-ZE-UUDR01-B",NFTYPE="diff_tmsp_nf"ADD NFCFG:NFID=112,NFNAME="SC-CD-XX-RP0002B-A-5GC-ZE-UUDR02-B",NFTYPE="diff_tmsp_nf"
@@ -3121,8 +3021,7 @@ UDR02配置
 3|对端网络配置，配置UDR02的对接参数。|ADD NFSEED:ID=1,NFID=111,TYPE="CUDR_DMCC",IPTYPE="IPV6",IP=240E:0180:02E1:FF00::000E,PORT=60001
 周边网元配置
 不涉及周边网元的配置。 
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 UDM容灾需要监控的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -3168,16 +3067,14 @@ UDM容灾需要监控的告警与通知参见下表。
 4|3356098570 网元实例注册配置错误
 5|3356114945 邻接NF通讯中断
 6|3456237573 网卡端口down检测告警
-##### 常见问题处理 
-故障现象
+常见问题处理 :故障现象
 两套UDR主备同步不成功，都为主用状态。 
 故障分析
 备用UDR实例化时UDR Site
 No.设置不正确，主备UDR均设置为1。应该主用局设置为1、备用局设置为2。 
 处理方法
 重新实例化UDR，确保参数填写正确。 
-### BSF 
-#### BSF容灾 
+BSF :#### BSF容灾 
 
 
 ##### 容灾组网 
@@ -3307,8 +3204,7 @@ DRA转发响应消息到P-CSCF。P-CSCF向S-CSCF返回语音流协商响应。
 #### BSF容灾配置 
 
 
-##### 配置前提 
-
+配置前提 :
  
 BSF到PCF
 BSF到PCF路由选路（如图1所示）：第一路由：用户会话记录所在的PCF。第二路由：异机房BSF的路由选择。第三路由：容灾PCF。图1  BSF到PCF的路由
@@ -3330,8 +3226,7 @@ BSF到DRA路由选路（如图2所示）：第一路由：同机房BSF到DRA的�
  
 
 
-##### 数据规划 
-BSF配置数据规划
+数据规划 :BSF配置数据规划
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
 BSF01|BSF02
@@ -3362,8 +3257,7 @@ BSF01|BSF02
 新增复制网关配置ADD DRGW|对端端口号|链路1：1001链路2：1002链路3：1003链路4：1004|链路1：1001链路2：1002链路3：1003链路4：1004|本局与对端信令设备的对接参数之一，用于指定本局与对端局的承载链路所使用的对端端口号。
 
 
-##### 配置步骤 
-BSF01配置
+配置步骤 :BSF01配置
 步骤|操作说明|操作
 ---|---|---
 1|增加对等端组配置|ADD DPGROUP:ID=100,PEER=100-1,NAME="BSF02";ADD DPGROUP:ID=101,PEER=101-1,NAME="PCF01";ADD DPGROUP:ID=102,PEER=102-1,NAME="PCF02";ADD DPGROUP:ID=103,PEER=103-1,NAME="DRA01";ADD DPGROUP:ID=104,PEER=104-1,NAME="DRA02";
@@ -3379,15 +3273,13 @@ BSF02配置
 4|新增复制网关配置|ADD DRGW:ID=1001,BNO=151,ROLE="CLIENT",MODULE=101,LOCADDR="IPV4"-12-"183.22.36.238"&"IPV4"-12-"183.22.36.239",LOCPORT=1001,REMADDR="IPV4"-12-"183.22.4.238"&"IPV4"-12-"183.22.4.239",REMPORT=1001,NAME="session-to-bsf01-01",DESC="session-to-bsf01-01";ADD DRGW:ID=1002,BNO=151,ROLE="SERVER",MODULE=101,LOCADDR="IPV4"-12-"183.22.36.239"&"IPV4"-12-"183.22.36.238",LOCPORT=1002,REMADDR="IPV4"-12-"183.22.4.239"&"IPV4"-12-"183.22.4.238",REMPORT=1002,NAME="session-to-bsf01-02",DESC="session-to-bsf01-02";ADD DRGW:ID=1003,BNO=151,ROLE="CLIENT",MODULE=102,LOCADDR="IPV4"-12-"183.22.36.238"&"IPV4"-12-"183.22.36.239",LOCPORT=1003,REMADDR="IPV4"-12-"183.22.4.238"&"IPV4"-12-"183.22.4.239",REMPORT=1003,NAME="session-to-bsf01-03",DESC="session-to-bsf01-03";ADD DRGW:ID=1004,BNO=151,ROLE="SERVER",MODULE=102,LOCADDR="IPV4"-12-"183.22.36.239"&"IPV4"-12-"183.22.36.238",LOCPORT=1004,REMADDR="IPV4"-12-"183.22.4.239"&"IPV4"-12-"183.22.4.238",REMPORT=1004,NAME="session-to-bsf01-04",DESC="session-to-bsf01-04";
 
 
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 不涉及性能统计数据的监控。 
 告警与通知
 不涉及告警与通知的监控。 
 
 
-### NSSF 
-#### NSSF容灾 
+NSSF :#### NSSF容灾 
 ##### 容灾组网 
 NSSF容灾组网如[图1](29.html#T_1604980389619__36696ba1-6086-457c-9b60-ee5850d33f51)所示，一对NSSF分别部署在两个DC中，在AMF上静态配置NSSF的主备连接关系。
 图1  NSSF容灾组网图
@@ -3426,10 +3318,8 @@ SMF从UDM获取用户会话签约信息，并注册会话连接信息。
 SMF选择PCF，为用户建立PDU会话资源。 
 SMF发送用户UE2的PDU会话建立响应给AMF1，AMF1通知空口与UE，建立PDU会话资源。 
 #### NSSF容灾配置 
-##### 配置前提 
-已完成网元的基本数据配置。 
-##### 数据规划 
-数据规划参见下表。 
+配置前提 :已完成网元的基本数据配置。 
+数据规划 :数据规划参见下表。 
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
 主用NSSF|备用NSSF
@@ -3453,8 +3343,7 @@ IP地址类型|增加容灾NSSF配置ADD BACKUPNSSF（仅在备用NSSF配置）|
 HTTP模板号|增加容灾NSSF配置ADD BACKUPNSSF（仅在备用NSSF配置）|NA|1|主用NSSF的关联的IHTTP模板号，请先在HTTP配置管理中添加客户端模版。配置方法：HTTP配置管理-HTTP模版配置-客户端模版配置。
 修改通用开关配置SET SWITCHCONFIG（仅在备用NSSF配置）|开关参数名称|NA|mainStandbyFlag|每个全局配置的参数名,都有指定的含义，业务需支持开发实现。
 开关参数值|修改通用开关配置SET SWITCHCONFIG（仅在备用NSSF配置）|NA|1|全局配置的开关参数值。
-##### 配置步骤 
-主用NSSF配置
+配置步骤 :主用NSSF配置
 步骤|操作说明|操作
 ---|---|---
 1|增加NF标识配置|ADD NFCFG:NFID=131,NFNAME="NSSF131",NFTYPE="self_nf"ADD NFCFG:NFID=132,NFNAME="NSSF132",NFTYPE="diff_vnfp_nf"
@@ -3468,8 +3357,7 @@ HTTP模板号|增加容灾NSSF配置ADD BACKUPNSSF（仅在备用NSSF配置）|N
 3|增加对端网络配置|ADD NFSEED:ID=1,NFID=131,TYPE="CUDR_DMCC",IPTYPE="ip_v6",IP="2409:8027:5003:1113::214:1002",PORT=60001
 4|增加容灾NSSF配置|ADD BACKUPNSSF:IP="2409:8027:5003:1115::214:1001",PORT=8080,IPTYPE="IPV6",HTTPMOULD=1
 5|修改通用开关配置|SET SWITCHCONFIG:PARANAME="mainStandbyFlag",PARAVALUE="1"
-##### 指标监控 
-性能统计
+指标监控 :性能统计
 NSSF容灾需要监控的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -3481,22 +3369,17 @@ NSSF容灾涉及的告警与通知参见下表。
 ---|---
 1|3423600649 NSSAI Availability服务QPS超过告警门限
 2|3423600640 NSSAI NSSelection服务QPS超过告警门限
-# 缩略语 
-# 缩略语 
-## 5G-GUTI 
+缩略语 :缩略语 :## 5G-GUTI 
 5G Globally Unique Temporary Identity5G全球唯一临时标识
 ## AMBR 
 Aggregate Maximum Bit Rate聚合最大比特率
-## AMF 
-Access and Mobility Management Function接入和移动管理功能
-## AUSF 
-Authentication Server Function鉴权服务器功能
+AMF :Access and Mobility Management Function接入和移动管理功能
+AUSF :Authentication Server Function鉴权服务器功能
 ## BE 
 Back End后端/后台
 ## BOSS 
 Business and Operation Support System运营和运维支撑系统
-## BSF 
-Binding Support Function绑定支持功能
+BSF :Binding Support Function绑定支持功能
 ## CDU 
 Cloud Database Unit云数据库单元
 ## CE 
@@ -3505,8 +3388,7 @@ Carrier Ethernet电信级（运营级）以太网
 Charging Gateway计费网关
 ## CGW 
 CDB GatewayCDB接入网关
-## CHF 
-Charging Function计费功能
+CHF :Charging Function计费功能
 ## CMP 
 Calling Main Processor主呼叫处理模块
 ## DB 
@@ -3515,34 +3397,25 @@ Database数据库
 Data Center数据中心
 ## DDB 
 DSC DatabaseDSC数据库模块
-## DNN 
-Data Network Name数据网名称
+DNN :Data Network Name数据网名称
 ## DSA 
 Directory Service Agent目录服务代理
-## EM 
-Element Management网元管理
+EM :Element Management网元管理
 ## FE 
 Front End前端/前台
-## FQDN 
-Fully Qualified Domain Name完全限定域名
-## GPSI 
-Generic Public Subscription Identifier一般公共用户标识
-## GSU 
-General Service Unit通用业务单元
+FQDN :Fully Qualified Domain Name完全限定域名
+GPSI :Generic Public Subscription Identifier一般公共用户标识
+GSU :General Service Unit通用业务单元
 ## GT 
 Global Title全局名
-## GTP 
-GPRS Tunneling ProtocolGPRS隧道协议
+GTP :GPRS Tunneling ProtocolGPRS隧道协议
 ## GUAMI 
 Globally Unique AMF ID全球唯一AMF标识
-## GUTI 
-Globally Unique Temporary Identity全球唯一临时标识
+GUTI :Globally Unique Temporary Identity全球唯一临时标识
 ## GW 
 GateWay网关
-## HTTP 
-Hypertext Transfer Protocol超文本传输协议
-## IP 
-Internet Protocol因特网协议
+HTTP :Hypertext Transfer Protocol超文本传输协议
+IP :Internet Protocol因特网协议
 ## IPU 
 Interface Process Unit接口处理单元
 ## LB 
@@ -3557,102 +3430,72 @@ Mobile Country Code移动国家码
 Mobile Network Code移动网络号
 ## MPU 
 Main Processing Unit主处理单元
-## NF 
-Network Function网络功能
-## NRF 
-NF Repository Function网络仓储功能
+NF :Network Function网络功能
+NRF :NF Repository Function网络仓储功能
 ## NRI 
 Network Resource Identifier网络资源标识
-## NSSF 
-Network Slice Selection Function网络切片选择功能
+NSSF :Network Slice Selection Function网络切片选择功能
 ## OMM 
 Operation and Maintenance Management操作维护管理
 ## OMP 
 Operation & maintenance Main Processor操作维护主处理板
-## OMU 
-Operation & Management Unit操作管理单元
-## P-CSCF 
-Proxy-Call Session Control Function代理呼叫会话控制功能
-## PCC 
-Policy and Charging Control计费和策略控制
-## PCF 
-Policy Control Function策略控制功能
-## PCRF 
-Policy and Charging Rules Function策略和计费规则功能
+OMU :Operation & Management Unit操作管理单元
+P-CSCF :Proxy-Call Session Control Function代理呼叫会话控制功能
+PCC :Policy and Charging Control计费和策略控制
+PCF :Policy Control Function策略控制功能
+PCRF :Policy and Charging Rules Function策略和计费规则功能
 ## PDS 
 Primary Directory Server主用目录服务器
-## PDU 
-Packet Data Unit分组数据单元
+PDU :Packet Data Unit分组数据单元
 ## PEI 
 Permanent Equipment Identifier永久设备标识
 ## PFCP 
 Packet Forwarding Control Protocol报文转发控制协议
 ## PFU 
 Packet Forwarding Unit网络处理单元
-## PGW 
-Provision Gateway受理网关
+PGW :Provision Gateway受理网关
 ## PI 
 Performance Index性能指标
-## PLMN 
-Public Land Mobile Network公共陆地移动网
+PLMN :Public Land Mobile Network公共陆地移动网
 ## PNR 
 Push-Notification-Request推送通知请求
-## RAN 
-Radio Access Network无线接入网
-## RCP 
-Resource Control Platform资源控制平台
+RAN :Radio Access Network无线接入网
+RCP :Resource Control Platform资源控制平台
 ## RG 
 Rating Group费率组
 ## RGW 
 Replication Gateway局间复制模块
-## S-NSSAI 
-Single Network Slice Selection Assistance Information单个网络切片选择辅助信息
+S-NSSAI :Single Network Slice Selection Assistance Information单个网络切片选择辅助信息
 ## SA 
 Standalone5G独立组网
 ## SBI 
 Service Based Interface基于服务的接口
-## SC 
-Service Component服务组件
-## SCTP 
-Stream Control Transmission Protocol流控制传输协议
+SC :Service Component服务组件
+SCTP :Stream Control Transmission Protocol流控制传输协议
 ## SIPI 
 Signaling IP bearer Interface信令IP承载接入板
-## SM 
-Session Management会话管理
-## SMF 
-Session Management Function会话管理功能
+SM :Session Management会话管理
+SMF :Session Management Function会话管理功能
 ## SMP 
 Signal Main Processor信令主处理模块
-## SPR 
-Subscription Profile Repository用户签约数据库
+SPR :Subscription Profile Repository用户签约数据库
 ## SSDS 
 Secondary Synchronization Directory Server数据同步的备用目录服务器
-## SUPI 
-Subscriber Permanent Identifier用户永久标识
-## TA 
-Tracking Area跟踪区域
+SUPI :Subscriber Permanent Identifier用户永久标识
+TA :Tracking Area跟踪区域
 ## TEID 
 Tunnel Endpoint Identifier隧道端点标识
-## UDM 
-Unified Data Management统一数据管理
-## UDR 
-User Data Request用户数据（读取）请求
-## UDSF 
-Unstructured Data Storage Function非结构化数据存储功能
-## UE 
-User Equipment用户设备
-## UPF 
-User Plane Function用户平面功能
-## URI 
-Uniform Resource Identifier统一资源标识符
-## VM 
-Virtual Machine虚拟机
-## VNF 
-Virtualized Network Function虚拟化网络功能
+UDM :Unified Data Management统一数据管理
+UDR :User Data Request用户数据（读取）请求
+UDSF :Unstructured Data Storage Function非结构化数据存储功能
+UE :User Equipment用户设备
+UPF :User Plane Function用户平面功能
+URI :Uniform Resource Identifier统一资源标识符
+VM :Virtual Machine虚拟机
+VNF :Virtualized Network Function虚拟化网络功能
 ## VoLTE 
 Voice over LTELTE语音
-## VoNR 
-Voice over New Radio新空口承载语音
+VoNR :Voice over New Radio新空口承载语音
 # 5GC逃生解决方案 
 ## 方案概述 
  5GC逃生方案是指因终端或网络原因出现5GC业务全阻或部分业务受阻，且短时间内无法恢复，在此期间通过存量4G网络为用户提供正常业务服务。导致5GC业务不可用的原因包括：传输层故障、网络故障、网元故障、应用故障、终端协议处理异常等。从业务角度看，5GC业务不可用会影响数据、语音、短信、彩信、定位等业务的可用性。 
@@ -3675,17 +3518,14 @@ KPI指标（例如：5G的会话建立成功率、注册成功率、EPS Fallback
 ---|---|---|---
 1|5G全业务逃生|断开全部AMF N2接口，5G用户全部重新接入4G网络，使用4G的语音/数据/短信业务。|5G无独立ToB网络4G网络支持5G ToB业务5G业务全阻或数据/语音业务的其中之一全阻
 2|5G ToC业务逃生|断开ToC AMF N2接口，ToC用户被ToB AMF拒绝接入后重新接入到4G网络，使用4G的语音/数据/短信业务。|4G网络不支持5G ToB业务
-## 业务场景 
+业务场景 :### 5G全业务逃生 
 ### 5G全业务逃生 
-### 5G全业务逃生 
-##### 应用场景 
-5G网络或网元故障导致5G业务全阻或部分业务全阻，但存量的4G网络正常。为保证终端业务可用，同时避免5G终端在故障网络中反复尝试造成系统雪崩，可启动5G业务全阻逃生方案，将全部5G接入用户切换到4G网络。 
+应用场景 :5G网络或网元故障导致5G业务全阻或部分业务全阻，但存量的4G网络正常。为保证终端业务可用，同时避免5G终端在故障网络中反复尝试造成系统雪崩，可启动5G业务全阻逃生方案，将全部5G接入用户切换到4G网络。 
 ##### 组网架构 
 5G全业务逃生的组网示意图如[图1](1604453722955.html#zbc4fa31656d74e3681da4424e8941d61__ed52b569-d995-41c7-916a-3548c5f285d9)所示。
 图1  5G全业务逃生组网示意图
 []images/1606266807055.png)
-#### 实现原理 
-###### 方案 
+实现原理 :###### 方案 
 5G全业务逃生是通过接口隔离来触发5G接入的用户快速地逃生到存量网络，并阻断与故障网络间的交互，防止故障范围的扩散。 
 隔离AMF的N2接口和N26接口隔离N2接口：NG-RAN检测到N2接口无可用连接时，将触发小区退出服务或闭塞小区。终端在5G信号覆盖区域发现无可用小区时，会自动选择可用网络，通过IMSI附着或局间TAU接入4G网络。如图2所示，该方案可保证用户快速回到4G网络，同时用户在5G网络反复尝试，当5G网络正常后，UE可快速接入5G网络。图2  隔离N2接口隔离N26接口：隔离与4G网络间的互操作接口，用于避免逃生后触发4/5G互操作带来的不可预料的异常。 
 （可选）隔离融合SMF的2/3/4G接口如果SMF为融合局且现场判断需要隔离SMF，则需要断开融合SMF（作为SAE-GW-C时，提供对SGW/MME的接口（S5/S8/S11）；作为GGSN时，提供对SGSN的Gn接口）。 
@@ -3725,21 +3565,18 @@ SMF|SMF依赖N4口断链回收所有会话资源。|SMF可回收残留的会话�
 4G网络|随着5G用户逐步返回5G网络，4G用户数逐步减少。|在MME/PGW/HSS网元收集用户数/会话数统计，作为5G指标变化的参考。
 ### 5G ToC业务逃生 
 ### 5G ToC业务逃生 
-##### 应用场景 
-5G中仅ToC网络或网元故障，导致5G ToC业务全阻或部分类型业务全阻，但存量4G系统正常。为保证终端业务可用，同时避免5G终端在故障网络中反复尝试造成系统雪崩，此时可启动5G
+应用场景 :5G中仅ToC网络或网元故障，导致5G ToC业务全阻或部分类型业务全阻，但存量4G系统正常。为保证终端业务可用，同时避免5G终端在故障网络中反复尝试造成系统雪崩，此时可启动5G
 ToC业务逃生方案，将5G ToC接入用户切换到4G网络。 
 ##### 组网架构 
 5G ToC业务逃生的组网示意图如[图1](1604453726115.html#zb789f9432a4242b29dcd4e383b523b43__b3bd259f-d85b-4061-be33-931d040612a3)所示。
 图1  5G ToC业务逃生组网示意图
 []images/1606266945661.png)
-#### 实现原理 
-###### 方案 
+实现原理 :###### 方案 
 5G ToC业务逃生是通过接口隔离触发5G接入用户快速逃生到存量网络，并阻断与故障网络间交互，防止故障范围扩散。 
 隔离ToC AMF的N2接口和N26接口隔离N2接口：NG-RAN检测到ToC AMF的N2接口断链后，ToC用户信令将被转发到ToB网络可用的AMF中。由于业务受限（签约或号段），ToB
 AMF拒绝ToC用户接入，拒绝原因值缺省#111。终端自动选择其他可用网络，通过IMSI附着或局间TAU接入4G网络。如图2所示，该方案可保证用户快速回到4G网络。图2  隔离N2接口隔离N26接口：隔离与4G间互操作接口，避免逃生后触发4/5G互操作带来不可预料的异常。 
 （可选）隔离ToC网络融合SMF的2/3/4G接口如果SMF为融合局且现场判断需要隔离SMF，则需要断开融合SMF（作为SAE-GW-C时，提供对SGW/MME的接口（S5/S8/S11）；作为GGSN时，提供对SGSN的Gn接口）。 
-###### 业务流程 
-5G ToC逃生过程中的业务流程如[图3](1604453726115.html#z32b88dfdcb3942e3ba2ad5a30524db00__45ce04c8-104e-4c21-9ce8-3fea21497687)所示。
+业务流程 :5G ToC逃生过程中的业务流程如[图3](1604453726115.html#z32b88dfdcb3942e3ba2ad5a30524db00__45ce04c8-104e-4c21-9ce8-3fea21497687)所示。
 图3  5G ToC逃生业务流程
 []images/1606267286136.png)
 流程说明如下： 
@@ -3792,18 +3629,15 @@ SMF|SMF依赖N4接口断链回收所有会话资源。|SMF可回收会话资源�
 用户|N2接口恢复后5G小区解闭塞，终端重新收到5G信号后，连接态用户在进入空闲态时通过注册更新返回5G网络，空闲态用户逐渐返回5G网络。|观测测试手机信号变化为5G接入。
 5G网络|5G各NF用户数逐步增加，一段时间后（一般是一次周期性更新时长，时长默认为54分钟）恢复到逃生前的水平。如果之前有残留用户资源未释放，有可能会导致用户数超过逃生前用户数，但是一段时间（不超过24小时）内会回收掉。|恢复后在AMF/SMF/UDM网元收集用户数/会话数统计，作为5G指标变化的参考。观测5G各网元的接入成功率、CPU利用率指标，是否有过负荷、容量、数据区等告警。
 4G网络|随着5G用户逐步返回5G网络，4G用户数逐步减少。|恢复后在MME/PGW/HSS网元收集用户数/会话数统计，作为5G指标变化的参考。
-## 应用限制 
-本方案在应用上存在如下约束： 
+应用限制 :本方案在应用上存在如下约束： 
 无4G能力终端将无法保障业务可用。 
 需要确保4G业务可用并预留足够资源。 
 无法保证业务连续，存在一次数据和语音会话重建。 
-## 客户收益 
-受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|保证5G业务可用，避免因网络故障引发用户投诉。
 用户|可正常使用移动通信业务。
-## 可获得性 
-### 涉及NF 
+可获得性 :### 涉及NF 
 网元|发布版本
 ---|---
 AMF|ZXUN uMAC V7.20.30
@@ -3816,13 +3650,10 @@ SMF|ZXUN xGW V7.20.30
 连接态用户逃生完成时间|N2接口断链后1分钟
 空闲态用户逃生完成时间|最长不超过54分钟（一次周期性注册更新时长）
 5G恢复后用户返回5G网络时间|最长不超过54分钟（一次周期性注册更新时长）
-## 遵循标准 
-标准类别|标准名称
+遵循标准 :标准类别|标准名称
 ---|---
 3GPP|3GPP TS 23.401 General Packet Radio Service (GPRS) enhancements for Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access
-## 指标监控 
-### 性能统计 
-#### AMF网元 
+指标监控 :性能统计 :#### AMF网元 
 性能测量类型|说明
 ---|---
 初始注册流程测量|编号为C51001开头的计数器。
@@ -3841,8 +3672,7 @@ PDU会话流程测量|编号为C51007开头的计数器。
 I-SMF会话建立流程测量|编号为C51533开头的计数器。
 会话数测量|编号为C51507开头的计数器。
 GSU性能测量|编号为C04909开头的计数器。
-### 告警与通知 
-#### AMF网元 
+告警与通知 :#### AMF网元 
 告警码|告警名称
 ---|---
 150101|接口IPv4协议态down
@@ -3865,11 +3695,9 @@ GSU性能测量|编号为C04909开头的计数器。
 150101|接口IPv4协议态down
 150102|接口IPv6协议态down
 ## 数据配置 
-### 配置前提 
-用户已经在4G签约。 
+配置前提 :用户已经在4G签约。 
 如果SMF作为2/3/4/5G融合的网元，需要完成与MME的对接配置。 
-### 数据规划 
-#### MME网元 
+数据规划 :#### MME网元 
 配置命令|参数名称|参数取值|说明
 ---|---|---|---
 SET SOFTWARE PARAMETER|786601|1|该软件参数用于控制MME是否支持PRN功能（可参考协议3GPP 29274的7.9.5章节）。该软件参数应用于需要判断MME是否支持PRN功能的场景。 该软件参数值设置为0：MME不支持该功能，丢弃PGW Restart Notification消息。 该软件参数值设置为1：MME支持该功能，处理PGW Restart Notification消息。
@@ -3901,8 +3729,7 @@ SET HEARTBEAT|心跳开关|ENABLE|该参数用于开启/关闭UP心跳检测功�
 SET SCTP|SCTP标识|10|该参数为需要隔离的基站的偶联ID。
 本端端口|SET SCTP|38415|该参数为偶联的本端端口号。修改为任意端口，使得与基站的偶联建立失败。
 其他参数|SET SCTP|-|保持原有配置，无需修改。
-### 配置过程 
-#### MME网元 
+配置过程 :#### MME网元 
 当融合的SMF有2/3/4G用户接入时，需要进行该设置。 
 步骤|说明|操作
 ---|---|---
@@ -3923,8 +3750,7 @@ SET SCTP|SCTP标识|10|该参数为需要隔离的基站的偶联ID。
 步骤|说明|操作
 ---|---|---
 1|进入Rosng，将SMF网元的对外接口全部shutdown|ZXROSNG#con tZXROSNG(config)#interface xgei-1/0/1/1ZXROSNG(config-if-xgei-1/0/1/1)#shutdown
-### 测试用例 
-#### 5G全业务逃生测试用例 
+测试用例 :#### 5G全业务逃生测试用例 
 ##### 5G全业务逃生 
 测试项目|5G全业务逃生
 ---|---
@@ -3958,8 +3784,7 @@ SET SCTP|SCTP标识|10|该参数为需要隔离的基站的偶联ID。
 测试过程|恢复AMF上ToC业务的N2接口和N26接口。恢复SMF上断开S5/S8接口。
 通过准则|ToC业务链路恢复后，ToC用户终端主动尝试重新接入5G网络。逃生到4G网络的ToC业务用户逐步回到5G网络，ToC业务正常。新接入的ToC用户可以正常选择5G网络接入，业务正常。
 测试结果|-
-## 常见问题处理 
-### 问题一 
+常见问题处理 :### 问题一 
 故障现象
 逃生后，部分终端不切回4G网络或2G网络，一直驻留在5G网络。 
 故障分析
@@ -3985,26 +3810,17 @@ AMF未收到IWF的Deregistration Notification消息，并不代表用户未逃�
 5G网络恢复后，部分终端未及时切回5G网络。 
 故障分析
 对未及时切回5G网络的测试号码进行信令回溯，在5G网络侧并未跟踪到用户的注册信令。因此，终端未及时切回5G网络可能与无线配置的RSRP门限、信号强弱有关系。终端所在位置未达到选择5G的门限，因此导致部分用户回5G网络较慢。 
-# 缩略语 
-# 缩略语 
-## AMF 
-Access and Mobility Management Function接入和移动管理功能
-## HSS 
-Home Subscriber Server归属用户服务器
+缩略语 :缩略语 :AMF :Access and Mobility Management Function接入和移动管理功能
+HSS :Home Subscriber Server归属用户服务器
 ## KPI 
 Key Performance Index关键性能指标
-## MME 
-Mobility Management Entity移动管理实体
-## NAS 
-Network Access Service网络接入服务
-## PGW 
-PDN Gateway分组数据网网关
+MME :Mobility Management Entity移动管理实体
+NAS :Network Access Service网络接入服务
+PGW :PDN Gateway分组数据网网关
 ## PRN 
 PGW Restart NotificationPGW重启通知
-## SGW 
-Serving Gateway服务网关
-## UDM 
-Unified Data Management统一数据管理
+SGW :Serving Gateway服务网关
+UDM :Unified Data Management统一数据管理
 ## URLLC 
 Ultra Reliable Low Latency Communication超高可靠超低时延通信
 # 信令风暴抑制方案 
@@ -4054,20 +3870,16 @@ AMF/MME/SGSN提供自保流控、周边网元过载保护及无效信令抑制�
 
 ### 自保流控 
 #### AMF CPU过负荷控制 
-##### 应用场景 
-系统过载时，通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
-##### 保护对象 
-AMF 
-##### 流控原理 
-AMF CPU过载控制是AMF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量的门限（超过门限外的其他话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。 
+应用场景 :系统过载时，通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
+保护对象 :AMF 
+流控原理 :AMF CPU过载控制是AMF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量的门限（超过门限外的其他话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。 
 图1  CPU过载控制
 []images/image.png)
 CPU过载控制包括门限配置，分为高低两个控制门限及负荷区间。一般低负荷区间在75%~85%，高负荷区间在85%~100%。 
 当系统CPU负荷超过低负荷控制门限（可配置）后，将启动CPU过载控制功能，此时对系统定义的低优先级消息/业务进行控制。 
 当系统CPU负荷超过高负荷控制门限（可配置）后，将对系统定义的低优先级消息/业务，以及高优先级消息/业务同时进行控制。 
 最终CPU过载控制的目标是将CPU负荷控制在一定区间以内（一般为70%~75%，可配置）。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
 在消息优先级及业务优先级均为低时按低优先级处理，其他情况按高优先级处理。从而在控制话务的同时，能够尽力兼顾高优先级消息/业务的处理。 
 系统对高低优先级消息定义的缺省示例如下： 
 高优先级：位置更新，切换等。 
@@ -4077,26 +3889,21 @@ CPU过载控制包括门限配置，分为高低两个控制门限及负荷区�
 高优先级：语音业务。 
 低优先级：数据业务。 
 不受控消息：紧急业务。 
-##### 配置方法 
-启用CPU过负荷控制。 
+配置方法 :启用CPU过负荷控制。 
 [SET OVERLOADCFG](None):OLSWITCH="AMFOLSWITCHON"
 设置CPU负荷等级，使用如下默认配置。 
 [SET OLCPULEVELCFG](None):OL1THRESHOLD=90,OL2THRESHOLD=80,OL3THRESHOLD=70,OL4THRESHOLD=60
 #### MME/SGSN CPU过负荷控制 
-##### 应用场景 
-系统过载时，通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
-##### 保护对象 
-MME/SGSN 
-##### 流控原理 
-MME/SGSN CPU过载控制是MME/SGSN过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量的门限（超过门限外的其他话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。 
+应用场景 :系统过载时，通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
+保护对象 :MME/SGSN 
+流控原理 :MME/SGSN CPU过载控制是MME/SGSN过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量的门限（超过门限外的其他话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。 
 图1  CPU过载控制
 []images/1616118426355.png)
 CPU过载控制包括门限配置，分为高低两个控制门限及负荷区间。一般低负荷区间在75%~85%，高负荷区间在85%~100%。 
 当系统CPU负荷超过低负荷控制门限（可配置）后，将启动CPU过载控制功能，此时对系统定义的低优先级消息/业务进行控制。 
 当系统CPU负荷超过高负荷控制门限（可配置）后，将对系统定义的低优先级消息/业务，以及高优先级消息/业务同时进行控制。 
 最终CPU过载控制的目标是将CPU负荷控制在一定区间以内（一般为70%~75%，可配置）。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
 在消息优先级及业务优先级均为低时按低优先级处理，其他情况按高优先级处理。从而在控制话务的同时，能够尽力兼顾高优先级消息/业务的处理。 
 系统对高低优先级消息定义的缺省示例如下： 
 高优先级：位置更新，切换等。 
@@ -4106,52 +3913,38 @@ CPU过载控制包括门限配置，分为高低两个控制门限及负荷区�
 高优先级：语音业务。 
 低优先级：数据业务。 
 不受控消息：紧急业务。 
-##### 配置方法 
-使用默认配置。 
+配置方法 :使用默认配置。 
 [SET OVERLOAD BASIC PARA](None)
 #### AMF入向业务总量控制 
-##### 应用场景 
-无论系统是否过载，通过控制单位时间内通过的业务总量，来限制大话务业务量的输入对系统的冲击。 
-##### 保护对象 
-AMF 
-##### 流控原理 
-入向业务总量，指各个单项业务通过量按照权重（对CPU负荷的占用比例）累加，AMF入向业务总量控制区分为： 
+应用场景 :无论系统是否过载，通过控制单位时间内通过的业务总量，来限制大话务业务量的输入对系统的冲击。 
+保护对象 :AMF 
+流控原理 :入向业务总量，指各个单项业务通过量按照权重（对CPU负荷的占用比例）累加，AMF入向业务总量控制区分为： 
 N2口业务总量控制 
 SBI业务总量控制 
 AMF支持配置“每秒每实例N2口入向控制总量”和“每秒每实例SBI口入向控制总量”，以及各个单项业务的权重。 
 各个业务处理实例将分别统计单位时间内N2口入向业务总量和SBI接口业务总量，对于单位时间内超过配置的入向业务将予以拒绝或丢弃。 
 入向业务控制不考虑CPU是否拥塞，配置后立即生效，迅速限制大话务业务量的输入。 
-##### 防御策略 
-本功能一般用于网元设备升级、突发业务（比如大型赛事）等场景，网络中的话务量超过正常运行的话务量。 
+防御策略 :本功能一般用于网元设备升级、突发业务（比如大型赛事）等场景，网络中的话务量超过正常运行的话务量。 
 除了默认开启的CPU过负荷控制功能外，也可以开启入向业务总量控制功能。事先获取本网元正常话务情况下的入向业务量和CPU负荷，再设置CPU负荷达到75%时允许的入向业务总量。 
-##### 配置方法 
-启用业务通过量负荷控制。 
+配置方法 :启用业务通过量负荷控制。 
 [SET OVERLOADCFG](None):SRVSWITCH="SRVSWITCHON"
 设置AMF Communication服务的入向业务总量控制。 
 [SET OLTOTALNUMCFG](None)
 #### MME/SGSN入向业务总量控制 
-##### 应用场景 
-无论系统是否过载，通过控制单位时间内通过的业务总量，来限制大话务业务量的输入对系统的冲击。 
-##### 保护对象 
-MME/SGSN 
-##### 流控原理 
-入向业务总量，指各个单项业务通过量按照权重（对CPU负荷的占用比例）累加，MME/SGSN的入向业务总量控制，包括MME入向业务总量控制和SGSN入向业务总量控制。 
+应用场景 :无论系统是否过载，通过控制单位时间内通过的业务总量，来限制大话务业务量的输入对系统的冲击。 
+保护对象 :MME/SGSN 
+流控原理 :入向业务总量，指各个单项业务通过量按照权重（对CPU负荷的占用比例）累加，MME/SGSN的入向业务总量控制，包括MME入向业务总量控制和SGSN入向业务总量控制。 
 MME/SGSN支持分别配置MME和SGSN的“每实例每秒通过业务最大个数”以及各个单项业务的权重。 
 各个业务处理实例将分别统计单位时间内MME入向业务总量、SGSN入向业务总量，对于单位时间内超过配置的入向业务将予以拒绝或丢弃。 
 入向业务控制不考虑CPU是否拥塞，配置后立即生效，迅速限制大话务业务量的输入。 
-##### 防御策略 
-本功能一般用于网元设备升级、突发业务（比如大型赛事）等场景，网络中的话务量超过正常运行的话务量。 
+防御策略 :本功能一般用于网元设备升级、突发业务（比如大型赛事）等场景，网络中的话务量超过正常运行的话务量。 
 除了默认开启的CPU过负荷控制功能外，也可以开启入向业务总量控制功能。事先获取本网元正常话务情况下的入向业务量和CPU负荷，然后设置CPU负荷达到75%时允许的入向业务总量。 
-##### 配置方法 
-设置MME业务控制参数。SET MME SERVICE CONTROL 
+配置方法 :设置MME业务控制参数。SET MME SERVICE CONTROL 
 设置SGSN业务控制参数。SET SERVICE CONTROL 
 #### AMF入向业务单项控制 
-##### 应用场景 
-无论系统是否过载，通过控制单位时间内通过的各个单项业务量，来限制大话务业务量的输入对系统的冲击。 
-##### 保护对象 
-AMF 
-##### 流控原理 
-AMF支持入向业务单向控制，支持控制单位时间内N2接口和SBI接口的各个单项业务量的输入量。 
+应用场景 :无论系统是否过载，通过控制单位时间内通过的各个单项业务量，来限制大话务业务量的输入对系统的冲击。 
+保护对象 :AMF 
+流控原理 :AMF支持入向业务单向控制，支持控制单位时间内N2接口和SBI接口的各个单项业务量的输入量。 
 以Communication服务为例，N2接口支持被控制的单项业务包括： 
 初次注册和周期性注册 
 注册更新 
@@ -4168,11 +3961,9 @@ DDN请求类型的N1N2转发
 NF状态通知 
 AMF支持配置各个单项入向业务的单位时间内的通过量，超过配置的业务将予以拒绝或丢弃。 
 入向业务控制不考虑CPU是否拥塞，配置后立即生效，迅速限制大话务业务量的输入。 
-##### 防御策略 
-本功能一般用于网元设备升级场景，由于整局重启，导致初始接入的业务量远远超过正常业务量。 
+防御策略 :本功能一般用于网元设备升级场景，由于整局重启，导致初始接入的业务量远远超过正常业务量。 
 除了默认开启的CPU过负荷控制功能外，也可以开启入向业务单项控制功能，通过限制每秒内初次注册的次数，来控制用户接入速率，避免对AMF设备的冲击。 
-##### 配置方法 
-启用业务通过量负荷控制。 
+配置方法 :启用业务通过量负荷控制。 
 [SET OVERLOADCFG](None):SRVSWITCH="SRVSWITCHON"
 设置Communication N2口业务单项控制。 
 [ADD OLINPUTN2SRVCFG](None)
@@ -4184,16 +3975,13 @@ AMF支持配置各个单项入向业务的单位时间内的通过量，超过�
 #### MME/SGSN入向业务单项控制 
 
 
-##### 应用场景 
-无论系统是否过载，通过控制单位时间内通过的各个单项业务量，来限制大话务业务量的输入对系统的冲击。 
+应用场景 :无论系统是否过载，通过控制单位时间内通过的各个单项业务量，来限制大话务业务量的输入对系统的冲击。 
 
 
-##### 保护对象 
-MME/SGSN 
+保护对象 :MME/SGSN 
 
 
-##### 流控原理 
-MME/SGSN支持入向业务单向控制，支持控制单位时间内MME和SGSN的各个单项业务量的输入量。 
+流控原理 :MME/SGSN支持入向业务单向控制，支持控制单位时间内MME和SGSN的各个单项业务量的输入量。 
 MME支持被控制的单项业务量包括： 
 
  
@@ -4243,13 +4031,11 @@ MME/SGSN支持配置各个单项入向业务的单位时间内的通过量，超
 入向业务控制不考虑CPU是否拥塞，配置后立即生效，迅速限制大话务业务量的输入。 
 
 
-##### 防御策略 
-本功能一般用于网元设备升级场景，由于整局重启，导致初始接入的业务量远远超过正常业务量。 
+防御策略 :本功能一般用于网元设备升级场景，由于整局重启，导致初始接入的业务量远远超过正常业务量。 
 除了默认开启的CPU过负荷控制功能外，也可以开启入向业务单项控制功能，通过限制每秒内附着的次数，来控制用户接入速率，避免对MME/SGSN设备的冲击。 
 
 
-##### 配置方法 
-
+配置方法 :
  
 设置MME业务控制参数。SET MME SERVICE CONTROL 
 
@@ -4260,34 +4046,24 @@ MME/SGSN支持配置各个单项入向业务的单位时间内的通过量，超
 
 
 #### AMF NAS拥塞控制 
-##### 应用场景 
-支持区分业务的流量控制，避免单个业务占用过多系统资源。 
-##### 保护对象 
-AMF 
-##### 流控原理 
-当NAS接口某类型的业务输入过多时，AMF可以通过向UE发送拒绝消息并携带退避时长，请求UE在此时间内抑制请求消息的发送，从而有效减少业务输入并实现负荷控制。 
+应用场景 :支持区分业务的流量控制，避免单个业务占用过多系统资源。 
+保护对象 :AMF 
+流控原理 :当NAS接口某类型的业务输入过多时，AMF可以通过向UE发送拒绝消息并携带退避时长，请求UE在此时间内抑制请求消息的发送，从而有效减少业务输入并实现负荷控制。 
 图1  AMF NAS拥塞控制
 []images/1616119783255.png)
-##### 防御策略 
-NAS拥塞控制功能一般在CPU过载控制功能之前生效，NAS拥塞控制功能尝试通过拒绝和抑制一部分比例UE的请求，从而尝试预防或阻止AMF负荷继续升高。NAS拥塞控制的具体启控门限取决于运营商要求，一般可以配置为综合话务模型50%~60%CPU负荷时的话务量。 
+防御策略 :NAS拥塞控制功能一般在CPU过载控制功能之前生效，NAS拥塞控制功能尝试通过拒绝和抑制一部分比例UE的请求，从而尝试预防或阻止AMF负荷继续升高。NAS拥塞控制的具体启控门限取决于运营商要求，一般可以配置为综合话务模型50%~60%CPU负荷时的话务量。 
 当系统实际话务量继续增长，达到CPU过载控制门限时（一般是70%~75%CPU负荷），AMF将进一步启动CPU过载控制机制。 
-##### 配置方法 
-需要对全类型业务控制时，配置基于NAS MM的拥塞控制。SET NASMMCONGESTINCFG:CONGESTIONSWITCH="SUPCONGESTIONCTRL",TYPE="MAXNASMM",MAXNASMM=1300TYPE参数设置为MAXNASMM，表示“NAS MM拥塞控制类型”为“接收NAS MM信令速率”。MAXNASMM参数为每实例支持的最大NAS MM信令接收速率，一般根据现场话务模型设置。 
+配置方法 :需要对全类型业务控制时，配置基于NAS MM的拥塞控制。SET NASMMCONGESTINCFG:CONGESTIONSWITCH="SUPCONGESTIONCTRL",TYPE="MAXNASMM",MAXNASMM=1300TYPE参数设置为MAXNASMM，表示“NAS MM拥塞控制类型”为“接收NAS MM信令速率”。MAXNASMM参数为每实例支持的最大NAS MM信令接收速率，一般根据现场话务模型设置。 
 需要对指定DNN业务进行控制时，配置基于DNN的拥塞控制。ADD DNNCONGESTIONCFG:CONGESTIONSWITCH="SUPDNNCONGESTIONCTRL",DNN="ims",TYPE="MAXRATE",MAXRATE=1000,MINDELAY=600,MAXDELAY=1800,REJECTRATE=100TYPE参数为“DNN拥塞控制类型”，默认设置为MAXRATE，表示“建立会话速率”。MAXRATE参数为每实例最大会话建立速率，一般根据现场话务模型设置。 
 需要对指定切片业务进行控制时，配置基于SNSSAI的拥塞控制。ADD SNSSAICONGESTIONCFG:CONGESTIONSWITCH="SUPSNSSAICONGESTIONCTRL",SNSSAINAME="1",SST="eMBB",SD="100001",TYPE="MAXRATE",MAXRATE=400,MINDELAY=600,MAXDELAY=1800,REJECTRATE=100SNSSAINAME、SST、SD为SNSSAI值，根据现场情况配置。TYPE参数为“SNSSAI拥塞控制类型”，默认设置为MAXRATE，表示“建立会话速率”。MAXRATE参数为每实例最大会话建立速率。 
 需要对指定DNN+切片业务进行控制时，配置基于SNSSAI和DNN的拥塞控制。ADD SNSSAIDNNCONGESTIONCFG:CONGESTIONSWITCH="SUPSNSSAIDNNCONGESTIONCTRL",SNSSAIDNNIDENTITY="1",SST="eMBB",SD="100001",DNN="ims",TYPE="MAXRATE",MAXRATE=400,MINDELAY=600,MAXDELAY=1800,REJECTRATE=100 
 #### MME NAS拥塞控制 
-##### 应用场景 
-支持区分业务的流量控制，避免单个业务占用过多系统资源。 
-##### 保护对象 
-MME 
-##### 流控原理 
-当NAS接口某类型（RAT、APN）的业务输入过多时，MME可以通过向UE发送拒绝消息并携带退避时长，请求UE在此时间内抑制请求消息的发送，从而有效减少业务输入并实现负荷控制。 
-##### 防御策略 
-NAS拥塞控制功能一般在CPU过载控制功能之前生效，NAS拥塞控制功能尝试通过拒绝和抑制一部分比例UE的请求，从而尝试预防或阻止MME负荷继续升高。NAS拥塞控制的具体启控门限取决于运营商要求，一般可以配置为综合话务模型50%~60%CPU负荷时的话务量。 
+应用场景 :支持区分业务的流量控制，避免单个业务占用过多系统资源。 
+保护对象 :MME 
+流控原理 :当NAS接口某类型（RAT、APN）的业务输入过多时，MME可以通过向UE发送拒绝消息并携带退避时长，请求UE在此时间内抑制请求消息的发送，从而有效减少业务输入并实现负荷控制。 
+防御策略 :NAS拥塞控制功能一般在CPU过载控制功能之前生效，NAS拥塞控制功能尝试通过拒绝和抑制一部分比例UE的请求，从而尝试预防或阻止MME负荷继续升高。NAS拥塞控制的具体启控门限取决于运营商要求，一般可以配置为综合话务模型50%~60%CPU负荷时的话务量。 
 当系统实际话务量继续增长，达到CPU过载控制门限时（一般是70%~75%CPU负荷），MME将进一步启动CPU过载控制机制。 
-##### 配置方法 
-基于接入类型进行NAS拥塞控制
+配置方法 :基于接入类型进行NAS拥塞控制
 打开基于RAT进行NAS拥塞控制的开关。 
 [SET RAT CONGESTION SWITCH](None):SUPNBRATCON="YES"
 设置针对NB-IoT接入的用户进行拥塞控制，拥塞控制类型为承载建立速率，拥塞控制的域值为承载建立速率100个每秒，超过此阈值后承载建立拒绝比例为100%，下发的拒绝消息中携带的backoff time时间为300秒到600秒之间的随机值。 
@@ -4308,13 +4084,10 @@ NAS拥塞控制功能一般在CPU过载控制功能之前生效，NAS拥塞控�
 设置对于签约MTC GroupID为460-01-1以及签约了zte.com的用户进行拥塞控制，拥塞控制类型为接收NAS MM信令速率，拥塞控制的域值为最大接收NAS MM信令速率为100个每秒，超过此阈值后用户NAS MM信令拒绝比例为100%，下发的拒绝消息中携带的backoff time时间普通用户为300秒到600秒之间的随机值，低优先级用户为600秒到1800秒之间的随机值。 
 [ADD MTCAPN CONGESTION POLICY](None):MTCGRPID="460"-"01"-"1",APN="zte.com",TYPE="NASMMRATE",MAXNASMM=100,MINDELAY=300,MAXDELAY=600,DEACTBEAR="NO",LOWMIN=600,LOWMAX=1800
 #### N2接口过载控制 
-##### 应用场景 
-AMF过载时，向gNodeB发送N2 Overload Start消息，对gNodeB输入的话务消息进行一定比例的控制，帮助AMF降低系统处理负荷并恢复正常状态。 
+应用场景 :AMF过载时，向gNodeB发送N2 Overload Start消息，对gNodeB输入的话务消息进行一定比例的控制，帮助AMF降低系统处理负荷并恢复正常状态。 
 在AMF系统负荷恢复正常后，AMF向gNodeB发送N2 Overload Stop消息，告知gNodeB解除对话务的输入控制，恢复正常处理状态。 
-##### 保护对象 
-AMF 
-##### 流控原理 
-图1  过负荷控制执行 - N2 OVERLOAD START流程图
+保护对象 :AMF 
+流控原理 :图1  过负荷控制执行 - N2 OVERLOAD START流程图
 []images/1616120545099.png)
 过负荷控制执行 - N2 OVERLOAD START流程说明： 
 AMF根据资源负荷等级判断，需要执行过负荷控制功能。 
@@ -4327,57 +4100,42 @@ gNodeB接收N2 OVERLOAD START消息后，根据携带参数执行相应控制，
 AMF根据资源负荷等级判断，需要解除之前已启动的过负荷控制功能。 
 AMF向gNodeB发送N2 OVERLOAD STOP消息，指示gNodeB解除过负荷控制。 
 gNodeB接收N2 OVERLOAD STOP消息后，解除过负荷控制，正常向此AMF进行话务输出。 
-##### 防御策略 
-当AMF因对输入的业务处理造成系统发生过载时，需要减少业务输入从而对系统负荷进行有效控制。 
+防御策略 :当AMF因对输入的业务处理造成系统发生过载时，需要减少业务输入从而对系统负荷进行有效控制。 
 对于N2接口，N2 Overload Control机制可以将AMF的过负荷情况告知给gNodeB，同时指示gNodeB减少某类型业务的输入。 
-##### 配置方法 
-开启过载控制。 
+配置方法 :开启过载控制。 
 [SET OLTORANCFG](None):OLSWITCH="OLSWITCHON"
 设置N2过负荷控制参数。 
 [SET OLTORANBASICCFG](None)
 #### S1接口过载控制 
-##### 应用场景 
-当MME负荷较高时，通过S1接口过载控制，限制部分eNodeB发给MME的业务，使MME的负荷稳定在一个正常的范围。 
-##### 保护对象 
-MME 
-##### 流控原理 
-图1  S1接口过载控制
+应用场景 :当MME负荷较高时，通过S1接口过载控制，限制部分eNodeB发给MME的业务，使MME的负荷稳定在一个正常的范围。 
+保护对象 :MME 
+流控原理 :图1  S1接口过载控制
 []images/1616120703740.png)
 MME检测到本网元负荷过高时，选择部分eNodeB发送Overload Start消息。 
 MME检测到本网元负荷恢复时，向已经发送Overload Start消息的eNodeB发送Overload Stop消息。 
-##### 防御策略 
-当MME因对输入的业务处理造成系统发生过载时，需要减少业务输入从而对系统负荷进行有效控制。 
+防御策略 :当MME因对输入的业务处理造成系统发生过载时，需要减少业务输入从而对系统负荷进行有效控制。 
 对于S1接口，S1 Overload Control机制可以将MME的过负荷情况告知给eNodeB，同时指示eNodeB减少某类型业务的输入。 
-##### 配置方法 
-设置S1过载控制参数。 
+配置方法 :设置S1过载控制参数。 
 [SET  MME OVERLOAD PARA](None)
 #### Iu接口过载控制 
-##### 应用场景 
-SGSN在自身负荷较高时，通知对端降低发给本端的业务量，避免因本网元负荷过高导致设备异常或崩溃。
-##### 保护对象 
-SGSN 
-##### 流控原理 
-图1  Iu接口过载控制
+应用场景 :SGSN在自身负荷较高时，通知对端降低发给本端的业务量，避免因本网元负荷过高导致设备异常或崩溃。
+保护对象 :SGSN 
+流控原理 :图1  Iu接口过载控制
 []images/1616120794885.png)
 SGSN定时检测本端CPU负荷，如果CPU超过过负荷门限，则随机选择RNC发送Overload消息，支持发送消息的间隔时间可配置。 
-##### 防御策略 
-当SGSN因对输入的业务处理造成系统发生过载时，需要通知RNC网元减少接入到本端网元的业务量。 
-##### 配置方法 
-设置Iu过载控制参数。 
+防御策略 :当SGSN因对输入的业务处理造成系统发生过载时，需要通知RNC网元减少接入到本端网元的业务量。 
+配置方法 :设置Iu过载控制参数。 
 [SET OVERLOAD PARA](None)
 #### 服务化接口过载控制 
 
 
-##### 应用场景 
-支持服务化接口的过载预防和过载控制，避免因服务化接口输入话务造成系统过载。 
+应用场景 :支持服务化接口的过载预防和过载控制，避免因服务化接口输入话务造成系统过载。 
 
 
-##### 保护对象 
-AMF 
+保护对象 :AMF 
 
 
-##### 流控原理 
-当AMF接近过载或进入过载状态后，可控制AMF对SMF/PCF网元执行SBI接口过载控制机制，从而抑制SMF/PCF对AMF的输入话务量，辅助实现AMF过载控制。 
+流控原理 :当AMF接近过载或进入过载状态后，可控制AMF对SMF/PCF网元执行SBI接口过载控制机制，从而抑制SMF/PCF对AMF的输入话务量，辅助实现AMF过载控制。 
 图1  服务化接口过载控制
 
 
@@ -4385,16 +4143,14 @@ AMF
 
 
 
-##### 防御策略 
-当AMF接近过载（门限可配置）状态时，可配置AMF对输入话务较多的SMF或PCF启动429控制机制，向实际话务输入较多（超过接收消息门限）的SMF或PCF回送429
+防御策略 :当AMF接近过载（门限可配置）状态时，可配置AMF对输入话务较多的SMF或PCF启动429控制机制，向实际话务输入较多（超过接收消息门限）的SMF或PCF回送429
 Too Many Requests响应，并携带Retry-After头部（单位秒，头部示例：Retry-After: 60），指示其在此期间抑制向AMF发送请求消息，从而辅助AMF进行过载控制。 
 当AMF进入过载（门限可配置）状态时，可配置AMF对输入话务较多的SMF或PCF启动503控制机制，向实际话务输入较多（超过接收消息门限）的SMF或PCF回送503
 Service Unavailable响应，并携带Retry-After头部，指示其在此期间抑制向AMF发送请求消息，从而辅助AMF进行过载控制。 
 当Retry-After头部指示的时间过后，接收429或503响应的SMF或PCF恢复正常的请求消息发送。 
 
 
-##### 配置方法 
-
+配置方法 :
 
 配置功能开关。 
 [SET OVERLOADCFG](None):STATUSSENDSWITCH="STATUSSENDSWITCHON"
@@ -4431,29 +4187,21 @@ MAXRETRYAFTER参数表示：当执行状态码过载控制时，429或503响应�
 
 
 #### S6a接口拥塞控制 
-##### 应用场景 
-S6a接口拥塞控制支持入向控制， MME和HSS业务交互过程中，MME为保护自身网元不被冲击，控制单位时间内HSS的业务消息数量，防止MME拥塞。 
-##### 保护对象 
-MME 
-##### 流控原理 
-S6a入向拥塞控制原理：MME设置单位时间内从S6a口接收的消息数量，用以控制HSS的入向消息，保护MME网元。 
+应用场景 :S6a接口拥塞控制支持入向控制， MME和HSS业务交互过程中，MME为保护自身网元不被冲击，控制单位时间内HSS的业务消息数量，防止MME拥塞。 
+保护对象 :MME 
+流控原理 :S6a入向拥塞控制原理：MME设置单位时间内从S6a口接收的消息数量，用以控制HSS的入向消息，保护MME网元。 
 图1  S6a接口拥塞控制
 []images/1616121112093.png)
-##### 防御策略 
-本功能防御手段主要是根据MME自身能力和负荷，设置S6a口入向消息速率，防止HSS发起的话务冲击。 
+防御策略 :本功能防御手段主要是根据MME自身能力和负荷，设置S6a口入向消息速率，防止HSS发起的话务冲击。 
 此功能默认未开启。 
-##### 配置方法 
-通过软参“MME和SGSN是否支持接口消息流控（0xc01e2）”开启接口消息流控。 
+配置方法 :通过软参“MME和SGSN是否支持接口消息流控（0xc01e2）”开启接口消息流控。 
 [SET SOFTWARE PARAMETER](None):PARAID=786914,PARAVALUE=1
 设置S6a口入向消息速率控制。 
 [SET INTERFACE MSG OVERLOAD](None)
 #### GTP接口拥塞控制 
-##### 应用场景 
-由于网络故障或者节假日导致业务激增，或者周边网元引发相关GTP接口入向业务大量增加，导致MME负荷上升，MME拥塞后启动拥塞负荷控制，降低接入消息负荷，保障MME网元正常。 
-##### 保护对象 
-MME 
-##### 流控原理 
-GTP接口拥塞控制是指系统运行中，MME对自身进行拥塞负荷控制，控制入向消息量，同时在负荷拥塞时将负荷信息通知给SGW，在系统负荷允许的范围内通过尽量多的业务。进行负荷控制时，用户业务被拒绝后，通过重新尝试，可以逐渐平滑的接入网络。 
+应用场景 :由于网络故障或者节假日导致业务激增，或者周边网元引发相关GTP接口入向业务大量增加，导致MME负荷上升，MME拥塞后启动拥塞负荷控制，降低接入消息负荷，保障MME网元正常。 
+保护对象 :MME 
+流控原理 :GTP接口拥塞控制是指系统运行中，MME对自身进行拥塞负荷控制，控制入向消息量，同时在负荷拥塞时将负荷信息通知给SGW，在系统负荷允许的范围内通过尽量多的业务。进行负荷控制时，用户业务被拒绝后，通过重新尝试，可以逐渐平滑的接入网络。 
 图1  GTP接口拥塞控制
 []images/1616121204545.png)
 详细描述： 
@@ -4462,13 +4210,11 @@ MME发生过负荷后，MME将过负荷信息通过SGW通知给PGW，由PGW根�
 MME发生过负荷后，MME在DDN响应消息中向SGW返回控制门限和延迟时间，由SGW完成对DDN消息的控制。 
 对于UE的上行业务，MME在拒绝时，通过返回在一定范围内随机化的Back-Off Timer的方式，控制UE后继的业务重试，将业务洪峰离散化，使UE平滑接入。 
 MME设置单位时间内从GTP接口接收的消息量，控制GTP接口入向消息量。 
-##### 防御策略 
-根据CPU负荷控制GTP口入向负荷，与S1口流控一起控制MME的负荷， CPU负荷流控默认开启。 
+防御策略 :根据CPU负荷控制GTP口入向负荷，与S1口流控一起控制MME的负荷， CPU负荷流控默认开启。 
 MME过负荷时，通过SGW向PGW发送过负荷信息，包括负荷时长和缩减比例。默认关闭。 
 MME控制GTP接口上的入向消息速率，控制周边网元业务量增加导致MME负荷升高。默认关闭。 
 根据需要开启对应的防御方法。 
-##### 配置方法 
-PGW负荷拥塞控制配置
+配置方法 :PGW负荷拥塞控制配置
 基于APN和MTC用户的拥塞配置。 
 基于APN的拥塞控制开关配置。 
 [SET APN CONGESTION SWITCH](None)
@@ -4498,36 +4244,28 @@ CPU负荷控制配置
 设置CPU过负荷基本参数。 
 [SET OVERLOAD BASIC PARA](None)
 #### MAP接口拥塞控制 
-##### 应用场景 
-系统过载时，SGSN一方面通过Iu/Gb口的终端入向流控防止拥塞恶化造成整系统瘫痪，同时通过控制MAP口消息防止SGSN拥塞扩大，从SGSN网元两端保证业务稳定。 
-##### 保护对象 
-SGSN 
-##### 流控原理 
-MAP接口拥塞是根据CPU过载控制来实现的。SGSN综合评估CPU负荷及实际处理话务量的关系，通过动态调整MAP口入向话务量，实现将CPU负荷控制在目标范围之内。 
+应用场景 :系统过载时，SGSN一方面通过Iu/Gb口的终端入向流控防止拥塞恶化造成整系统瘫痪，同时通过控制MAP口消息防止SGSN拥塞扩大，从SGSN网元两端保证业务稳定。 
+保护对象 :SGSN 
+流控原理 :MAP接口拥塞是根据CPU过载控制来实现的。SGSN综合评估CPU负荷及实际处理话务量的关系，通过动态调整MAP口入向话务量，实现将CPU负荷控制在目标范围之内。 
 图1  MAP接口拥塞控制
 []images/1616121557099.png)
 CPU过载控制包括门限配置，分为高低两个控制门限及负荷区间。一般低负荷区间在75%~85%，高负荷区间在85%~100%。 
 最终CPU过载控制的目标是将CPU负荷控制在一定区间以内（一般为70%~75%，可配置）。 
-##### 防御策略 
-CPU负荷控制默认开启，是基础SGSN防御措施。在CPU负荷到达门限时，根据业务消息优先级对消息进行流控，在消息优先级及业务优先级均为低时按低优先级处理，其他情况按高优先级处理。从而在控制话务的同时，能够尽力兼顾高优先级消息/业务的处理。 
+防御策略 :CPU负荷控制默认开启，是基础SGSN防御措施。在CPU负荷到达门限时，根据业务消息优先级对消息进行流控，在消息优先级及业务优先级均为低时按低优先级处理，其他情况按高优先级处理。从而在控制话务的同时，能够尽力兼顾高优先级消息/业务的处理。 
 CPU负荷高时，SGSN根据CPU负荷控制MAP口周边网元始发的MAP对话消息。 
-##### 配置方法 
-设置CPU过负荷基本参数，使用默认配置。 
+配置方法 :设置CPU过负荷基本参数，使用默认配置。 
 [SET OVERLOAD BASIC PARA](None)
 ### 周边网元过载保护 
 #### AMF出向业务控制 
 
 
-##### 应用场景 
-AMF对发往RAN、SBI接口的业务量进行一定的限制，保护对方网元不会被冲击。 
+应用场景 :AMF对发往RAN、SBI接口的业务量进行一定的限制，保护对方网元不会被冲击。 
 
 
-##### 保护对象 
-gNodeB、SMF等周边SBI接口的网元。 
+保护对象 :gNodeB、SMF等周边SBI接口的网元。 
 
 
-##### 流控原理 
-AMF支持对发往RAN和SBI接口的业务量，进行出向业务控制。 
+流控原理 :AMF支持对发往RAN和SBI接口的业务量，进行出向业务控制。 
 AMF支持几个主要业务的“N2口出向业务每秒每实例最大通过量”和“SBI口出向业务每秒每实例最大通过量”配置。超过配置的业务将予以丢弃。 
 以Communication服务为例，支持的N2口出向控制的业务包括： 
 
@@ -4558,12 +4296,10 @@ NF更新
  
 
 
-##### 防御策略 
-如果周边网元（比如UDM）处理能力较弱，可以设置出局的业务数量（比如UE鉴权的最大通过数），从而保障周边网元安全。 
+防御策略 :如果周边网元（比如UDM）处理能力较弱，可以设置出局的业务数量（比如UE鉴权的最大通过数），从而保障周边网元安全。 
 
 
-##### 配置方法 
-
+配置方法 :
 
 启用业务通过量负荷控制。 
 [SET OVERLOADCFG](None):SRVSWITCH="SRVSWITCHON"
@@ -4582,16 +4318,13 @@ NF更新
 #### MME出向业务控制 
 
 
-##### 应用场景 
-MME对发往HSS、VLR的业务量进行一定的限制，保护对方网元不会被冲击。 
+应用场景 :MME对发往HSS、VLR的业务量进行一定的限制，保护对方网元不会被冲击。 
 
 
-##### 保护对象 
-HSS、VLR等 
+保护对象 :HSS、VLR等 
 
 
-##### 流控原理 
-MME支持对发往Diameter局向和VLR局向的业务，进行基于局向的出向单项业务控制。 
+流控原理 :MME支持对发往Diameter局向和VLR局向的业务，进行基于局向的出向单项业务控制。 
 MME支持配置通用Diameter局向、VLR局向的单位时间单项业务最大数目，和特定Diameter局向、VLR局向的单位时间单项业务最大数目。 
 如果对端Diameter局向或VLR局向已经配置了特定局向出向业务控制，则采用该特定局向的单位时间单项业务最大数目作为控制门限，否则采用通用局向的单位时间单项业务最大数目作为控制门限。如果单位时间内发往该局向的业务量超过配置的最大业务量，则超过的业务将被丢弃。 
 Diameter局向出向控制的业务包括： 
@@ -4614,12 +4347,10 @@ VLR局向出向控制的业务包括：
  
 
 
-##### 防御策略 
-如果周边网元（比如HSS）处理能力较弱，可以设置出局到该网元的业务数量（比如鉴权的最大通过数），从而保障周边网元安全。 
+防御策略 :如果周边网元（比如HSS）处理能力较弱，可以设置出局到该网元的业务数量（比如鉴权的最大通过数），从而保障周边网元安全。 
 
 
-##### 配置方法 
-
+配置方法 :
  
 设置MME通用局向的出向业务控制。SET MME SERVICE CONTROL 
 
@@ -4634,12 +4365,9 @@ MAXIMUM/SET MME DIAMETER SERVICE MAXIMUM
 
 
 #### SGSN出向业务控制 
-##### 应用场景 
-SGSN对发往HLR、SMC的业务量进行一定的限制，保护对方网元不会被冲击。 
-##### 保护对象 
-HLR、SMC 
-##### 流控原理 
-SGSN支持对发往HLR局向和SMC局向的业务，进行基于局向的出向单项业务控制。 
+应用场景 :SGSN对发往HLR、SMC的业务量进行一定的限制，保护对方网元不会被冲击。 
+保护对象 :HLR、SMC 
+流控原理 :SGSN支持对发往HLR局向和SMC局向的业务，进行基于局向的出向单项业务控制。 
 SGSN支持配置通用HLR局向、SMC局向的单位时间单项业务最大数目，和特定HLR局向、SMC局向的单位时间单项业务最大数目。 
 如果对端HLR局向或SMC局向已经配置了特定局向出向业务控制，则采用该特定局向的单位时间单项业务最大数目作为控制门限，否则采用通用局向的单位时间单项业务最大数目作为控制门限。如果单位时间内发往该局向的业务量超过配置的最大业务量，则超过的业务将被丢弃。 
 HLR局向出向控制的业务包括： 
@@ -4647,18 +4375,13 @@ HLR局向出向控制的业务包括：
 位置更新 
 SMC局向出向控制的业务包括： 
 短消息 
-##### 防御策略 
-如果周边网元（比如HLR）处理能力较弱，可以设置出局到该网元的业务数量（比如鉴权的最大通过数），从而保障周边网元安全。 
-##### 配置方法 
-设置SGSN通用局向的出向业务控制。SET SERVICE CONTROL 
+防御策略 :如果周边网元（比如HLR）处理能力较弱，可以设置出局到该网元的业务数量（比如鉴权的最大通过数），从而保障周边网元安全。 
+配置方法 :设置SGSN通用局向的出向业务控制。SET SERVICE CONTROL 
 设置SGSN特定局向出向业务控制。ADD SGSN OFFICE SERVICE MAXIMUM/SET SGSN OFFICE SERVICE MAXIMUM 
 #### S6a接口自动流控 
-##### 应用场景 
-S6a接口自动流控是指周边HSS网元存在过载风险时，MME根据HSS网元返回成功应答数的周期变化自动调节Attach、Inter-MME TAU、Inter RAT Intra  TAU流程的处理速率，从而控制向HSS网元发送的请求数，达到保护HSS网元的目的。 
-##### 保护对象 
-DRA、HSS 
-##### 流控原理 
-MME根据DRA能力以及HSS能力，统一设置S6a口ALC（Analog Line Card模拟用户板）自动流控的初始控制门限、初始最大控制门限等自动流控参数，当业务达到控制条件后，控制S1口的Attach、Inter-MME TAU、Inter RAT Intra  TAU的业务消息速率，从而保护S6a口的DRA和HSS网元。 
+应用场景 :S6a接口自动流控是指周边HSS网元存在过载风险时，MME根据HSS网元返回成功应答数的周期变化自动调节Attach、Inter-MME TAU、Inter RAT Intra  TAU流程的处理速率，从而控制向HSS网元发送的请求数，达到保护HSS网元的目的。 
+保护对象 :DRA、HSS 
+流控原理 :MME根据DRA能力以及HSS能力，统一设置S6a口ALC（Analog Line Card模拟用户板）自动流控的初始控制门限、初始最大控制门限等自动流控参数，当业务达到控制条件后，控制S1口的Attach、Inter-MME TAU、Inter RAT Intra  TAU的业务消息速率，从而保护S6a口的DRA和HSS网元。 
 图1  S6a接口自动流控
 []images/1616122024499.png)
 图中： 
@@ -4670,8 +4393,7 @@ MME根据DRA能力以及HSS能力，统一设置S6a口ALC（Analog Line Card模�
 过了一个评判周期（15 s）后，业务负荷依然高，且HSS成功率高于设定值（85%），根据步长加大放通率。 
 当加大放通率后，HSS成功率低于设定值（85%），下个周期根据步长降低放通率。 
 后续如果业务负荷平稳，无流控，并且HSS成功率高于设定值（85%），持续设定时长后，解除本次拥塞流控。 
-##### 防御策略 
-S6a接口自动流控是重要的防御DRA和HSS拥塞的手段， 默认是开启，建议按开启处理。 
+防御策略 :S6a接口自动流控是重要的防御DRA和HSS拥塞的手段， 默认是开启，建议按开启处理。 
 防御措施： 
 评估出DRA和HSS的能力，取最小值，例如：3000 caps。 
 根据业务SC数量算出每个SC的最大caps，如100个SC（模块），单SC最大caps为：3000/100 = 30 caps。 
@@ -4680,17 +4402,13 @@ S6a接口自动流控是重要的防御DRA和HSS拥塞的手段， 默认是开�
 触发拥塞的接入业务通过数量(单模块每秒)：30 caps ×（50%～60%） = 15 caps～20 caps。 
 接入业务控制步长： 动态调整通过率步长。 
 控制持续时间(分钟)： 没有流控时， 解除流控的保护时长。在该参数设定的时长超时后， 告警恢复。 
-##### 配置方法 
-配置的重要内容是评估出DRA、HSS的能力，并进行设置。 
+配置方法 :配置的重要内容是评估出DRA、HSS的能力，并进行设置。 
 通过MME自动业务控制配置，设置拥塞负荷控制参数。 
 [SET MME AUTO CNGCTL](None)
 #### Iu接口过载控制 
-##### 应用场景 
-RNC在自身负荷较高时，通知SGSN降低发给本端的业务量，避免因本网元负荷过高导致设备异常或崩溃。 
-##### 保护对象 
-RNC 
-##### 流控原理 
-RNC过载时，通过Overload消息通知SGSN。 
+应用场景 :RNC在自身负荷较高时，通知SGSN降低发给本端的业务量，避免因本网元负荷过高导致设备异常或崩溃。 
+保护对象 :RNC 
+流控原理 :RNC过载时，通过Overload消息通知SGSN。 
 SGSN收到RNC的Overload消息时，开启TigOC、TinTC定时器，来维护对端RNC的过载step。 
 TigOC定时器超时前如果继续收到该RNC的Overload消息，则忽略该消息。 
 如果TigOC定时器超时但TinTC定时器未超时，收到该RNC的Overload消息，则step++，并重新启动TigOC、TinTC定时器。 
@@ -4698,39 +4416,29 @@ TigOC定时器超时前如果继续收到该RNC的Overload消息，则忽略该�
 图1  RNC Congest Step
 []images/1616122613188.png)
 当RNC的过载step不为0时，SGSN对该RNC进行网元过载控制，减少发往该RNC的寻呼、切换消息。 
-##### 防御策略 
-RNC过载时，会通知SGSN，SGSN减少发往该RNC的寻呼、切换消息。 
-##### 配置方法 
-设置Iu过载控制参数。 
+防御策略 :RNC过载时，会通知SGSN，SGSN减少发往该RNC的寻呼、切换消息。 
+配置方法 :设置Iu过载控制参数。 
 [SET OVERLOAD PARA](None)
 #### RNC/eNodeB无线拥塞控制 
-##### 应用场景 
-RNC/eNodeB在自身负荷较高时，通知PCRF降低发给本端的业务量，避免因本网元负荷过高导致设备异常或崩溃。 
-##### 保护对象 
-RNC、eNodeB 
-##### 流控原理 
-无线拥塞控制可以部署在无线侧，检测小区内的负载状态，上报拥塞现象报告，并依据下发的拥塞控制策略，预防或减轻拥塞现象。 
+应用场景 :RNC/eNodeB在自身负荷较高时，通知PCRF降低发给本端的业务量，避免因本网元负荷过高导致设备异常或崩溃。 
+保护对象 :RNC、eNodeB 
+流控原理 :无线拥塞控制可以部署在无线侧，检测小区内的负载状态，上报拥塞现象报告，并依据下发的拥塞控制策略，预防或减轻拥塞现象。 
 无线侧RNC/eNodeB检测小区负载状态，若发生拥塞现象，则会在上行的IuPS/S1-U的GTP-U消息里携带一个特殊的字段，这个字段指示发生了拥塞。 
 SGSN/SGW把对应的表示拥塞的字段转发给GGSN/PGW，由PCEF向PCRF申请特定的预定义规则。 
 无线侧RNC/eNodeB根据PCRF分配的拥塞控制规则对小区拥塞现象进行预防或处理。 
-##### 防御策略 
-需要端到端定制，默认关闭。 
-##### 配置方法 
-将“SGSN支持Iu口GTP-U扩展头”功能配置为开启。 
+防御策略 :需要端到端定制，默认关闭。 
+配置方法 :将“SGSN支持Iu口GTP-U扩展头”功能配置为开启。 
 [SET SOFTWARE PARAMETER](None):PARAID=393267, PARAVALUE=1
 #### 服务化接口过载控制 
 
 
-##### 应用场景 
-支持服务化接口的过载预防和过载控制，避免因服务化接口输出话务造成对端NF系统过载。 
+应用场景 :支持服务化接口的过载预防和过载控制，避免因服务化接口输出话务造成对端NF系统过载。 
 
 
-##### 保护对象 
-SMF、PCF、UDM等。 
+保护对象 :SMF、PCF、UDM等。 
 
 
-##### 流控原理 
-AMF接收到对端NF的429/503响应码，若其携带Retry-After头部（包含抑制时间），则在指定时间内AMF将抑制向此NF发送新的初始请求，帮助其恢复正常。在指定时间超时后，再恢复向此NF发送新请求。 
+流控原理 :AMF接收到对端NF的429/503响应码，若其携带Retry-After头部（包含抑制时间），则在指定时间内AMF将抑制向此NF发送新的初始请求，帮助其恢复正常。在指定时间超时后，再恢复向此NF发送新请求。 
 图1  服务化接口过载控制
 
 
@@ -4738,15 +4446,13 @@ AMF接收到对端NF的429/503响应码，若其携带Retry-After头部（包含
 
 
 
-##### 防御策略 
-当AMF接收到对端NF发送的429 Too Many Requests或503
+防御策略 :当AMF接收到对端NF发送的429 Too Many Requests或503
 Service Unavailable响应后，若其携带Retry-After头部（包含抑制时间），则在指定时间内AMF抑制向其发送请求消息，从而辅助对端NF进行负载/过载控制。 
 控制过程中，若存在其他可选NF，则AMF尝试选择其他NF继续流程；若不存在其他可选NF，则AMF按本次流程失败处理。 
 当Retry-After头部指示的时间超时后，AMF恢复正常的请求消息发送。 
 
 
-##### 配置方法 
-设置功能开关。 
+配置方法 :设置功能开关。 
 [SET OVERLOADCFG](None):STATUSRECVSWITCH="STATUSRECVSWITCHON"
 STATUSRECVSWITCH参数设置为STATUSRECVSWITCHON，表示该AMF启用状态码过载控制中的状态码接收处理，包括429和503。
 
@@ -4754,17 +4460,14 @@ STATUSRECVSWITCH参数设置为STATUSRECVSWITCHON，表示该AMF启用状态码�
 #### S6a接口拥塞控制 
 
 
-##### 应用场景 
-S6a接口HSS过载时，HSS将负荷拥塞报告通知给MME，MME根据HSS的负荷拥塞报告进行出向负荷控制，从而控制到HSS的业务量，以保护HSS正常工作。 
+应用场景 :S6a接口HSS过载时，HSS将负荷拥塞报告通知给MME，MME根据HSS的负荷拥塞报告进行出向负荷控制，从而控制到HSS的业务量，以保护HSS正常工作。 
 DRA能力不足时，MME根据DRA能力设置S6a口出向消息的最大速率门限，保护S6a口周边网元（DRA、HSS）。 
 
 
-##### 保护对象 
-DRA、HSS 
+保护对象 :DRA、HSS 
 
 
-##### 流控原理 
-
+流控原理 :
 
 S6a接口过载控制是MME保护自身和周边网元的一种机制，MME根据HSS返回的负荷控制拥塞信息，根据负荷有效时长和缩减比例，控制到HSS的鉴权和位置更新的消息量，从而保护HSS网元。 
 []images/1616122839162.png)
@@ -4776,8 +4479,7 @@ MME根据DRA能力设置S6a口出向消息的最大速率门限，保护S6a口�
 
 
 
-##### 防御策略 
-
+防御策略 :
 
 MME收到HSS的消息，消息中携带负荷拥塞信息，MME根据消息中携带的过负荷有效时长和缩减百分比进行业务控制。默认关闭。 
 
@@ -4788,8 +4490,7 @@ DRA发生拥塞的场景，根据DRA能力设置S6a口出向消息的最大速�
 根据实际判断打开开关。 
 
 
-##### 配置方法 
-携带OC-Supported-Features和OC-OLR，通知MMEHSS发生拥塞，MME进行负荷控制配置
+配置方法 :携带OC-Supported-Features和OC-OLR，通知MMEHSS发生拥塞，MME进行负荷控制配置
 
 
 License项“MME支持HSS过负荷控制功能”为“支持”。 
@@ -4823,24 +4524,19 @@ SOFTWARE PARAMETER](None):PARAID=786914,PARAVALUE=1
 
 
 #### GTP接口拥塞控制 
-##### 应用场景 
-由于网络故障或者节假日导致业务激增，导致MME发往周边GTP接口网元的消息量急剧增加，导致周边SGW/PGW发生负荷拥塞，MME启动出向拥塞负荷控制，降低接入消息负荷，保障周边GTP接口网元正常。 
-##### 保护对象 
-SGW/PGW 
-##### 流控原理 
-GTP出向负荷控制为了保护MME周边GTP接口网元，指系统运行中，SGW/PGW在负荷拥塞时，将负荷拥塞信息通知MME，MME根据有效时长和缩减百分比进行入向业务消息控制，拒绝用户业务，并携带backoff
+应用场景 :由于网络故障或者节假日导致业务激增，导致MME发往周边GTP接口网元的消息量急剧增加，导致周边SGW/PGW发生负荷拥塞，MME启动出向拥塞负荷控制，降低接入消息负荷，保障周边GTP接口网元正常。 
+保护对象 :SGW/PGW 
+流控原理 :GTP出向负荷控制为了保护MME周边GTP接口网元，指系统运行中，SGW/PGW在负荷拥塞时，将负荷拥塞信息通知MME，MME根据有效时长和缩减百分比进行入向业务消息控制，拒绝用户业务，并携带backoff
 time，使用户逐渐平滑的接入网络，有效保障SGW/PGW网元安全。 
 图1  GTP接口拥塞控制
 []images/1616122972842.png)
 SGW/PGW拥塞控制SGW网元过负荷控制用户业务急剧增加，引发SGW短时间内突发大量的业务，发生过负荷。SGW过负荷后，将序列号、有效时长和减少百分比等信息通知MME。MME根据有效时长、减少百分比、业务的优先级，减少到该SGW的业务负荷。PGW网元的网元级过负荷控制用户业务急剧增加，引发PGW短时间内突发大量的业务，发生过负荷。PGW过负荷后，将序列号、有效时长和减少百分比等过负荷信息通过SGW通知MME。MME根据有效时长、减少百分比、业务的优先级，减少到该PGW的业务负荷。PGW网元的APN级过负荷控制PGW为不同的APN分配不同的可用资源，某个APN引发短时间内突发大量的业务，造成该APN资源不足发生过负荷，MME根据PGW返回的APN拥塞策略继续控制：PGW将包含APN、序列号、有效时长和减少百分比等信息的过负荷信息通知MME，MME根据有效时长、减少百分比、业务的优先级，减少到该PGW上该APN的业务负荷。PGW收到该APN的创建会话请求后返回拒接，携带“APN拥塞”的拒绝原因，以及back-off time。MME收到后，在back-off
 time内，该APN的PDN链接建立时不再选择此PGW。上述两种方式，同一时间只有一种生效。 
 GTP口固定速率控制MME根据S11/Sv/S10/Gn口网元能力设置GTP口出向消息的最大速率门限，保护S11/Sv/S10/Gn口周边网元。 
-##### 防御策略 
-根据SGW和PGW负荷拥塞信息，MME根据业务优先级控制入向PDN建立等业务消息，降低SGW/PGW的负荷。默认关闭。 
+防御策略 :根据SGW和PGW负荷拥塞信息，MME根据业务优先级控制入向PDN建立等业务消息，降低SGW/PGW的负荷。默认关闭。 
 MME根据S11/Sv/S10/Gn口网元能力设置GTP口出向消息的最大速率门限，保护S11/Sv/S10/Gn口周边网元。默认关闭。 
 根据实际情况开启对应的防御方法。 
-##### 配置方法 
-SGW/PGW负荷拥塞控制配置
+配置方法 :SGW/PGW负荷拥塞控制配置
 SGW过负荷控制配置。修改SGW过负荷控制参数，包括功能开关，以及SGW过负荷时NAS拒绝消息中携带的Back-off
 Timer的范围。 
 [SET SGW OVERLOAD CONTROL](None)
@@ -4854,81 +4550,56 @@ SOFTWARE PARAMETER](None):PARAID=786914,PARAVALUE=1
 设置GTP接口出向消息速率控制。 
 [SET INTERFACE MSG OVERLOAD](None)
 #### MAP接口拥塞控制 
-##### 应用场景 
-由于网络故障引发大量UE重新附着，或者因节假日业务激增等原因，引发MAP口HLR短时间内突发大量的业务，发生过负荷。 
+应用场景 :由于网络故障引发大量UE重新附着，或者因节假日业务激增等原因，引发MAP口HLR短时间内突发大量的业务，发生过负荷。 
 由于节假日等原因，终端集中发送短信，造成短信风暴，引发短消息中心信令风暴。 
-##### 保护对象 
-HLR、SMS-GMSC/SMS-IWMSC 
-##### 流控原理 
-MME根据STP、HLR、SMS接口网关能力设置MAP口出向消息的最大速率门限，保护MAP口周边网元。 
+保护对象 :HLR、SMS-GMSC/SMS-IWMSC 
+流控原理 :MME根据STP、HLR、SMS接口网关能力设置MAP口出向消息的最大速率门限，保护MAP口周边网元。 
 图1  MAP接口拥塞控制
 []images/1616123305781.png)
-##### 防御策略 
-STP发生拥塞的场景根据STP能力设置全局MAP口鉴权、位置更新、短消息的最大速率门限，进行MAP口出向消息防御。默认65525（等同未开启）。 
+防御策略 :STP发生拥塞的场景根据STP能力设置全局MAP口鉴权、位置更新、短消息的最大速率门限，进行MAP口出向消息防御。默认65525（等同未开启）。 
 HLR/SMS-GMSC/SMS-IWMSC发生拥塞的场景根据对应局向能力设置对应局向的鉴权、位置更新、短消息的最大速率门限，进行对应局向出向消息防御。默认未配置数据。 
 根据实际判断进行配置。 
-##### 配置方法 
-全局MAP出向拥塞控制。配置通用业务控制，即配置全局MAP口出向控制参数，包括：HLR鉴权最大数目、 HLR位置更新最大数目 、SMC短消息最大数目。SET SERVICE CONTROL 
+配置方法 :全局MAP出向拥塞控制。配置通用业务控制，即配置全局MAP口出向控制参数，包括：HLR鉴权最大数目、 HLR位置更新最大数目 、SMC短消息最大数目。SET SERVICE CONTROL 
 分局向MAP出向拥塞控制。配置SGSN特定局向业务控制，即配置分局向MAP口出向控制参数，包括：HLR鉴权最大数目、 HLR位置更新最大数目 、SMC短消息最大数目。ADD SGSN OFFICE SERVICE MAXIMUM 
 #### 信令拥塞控制 
-##### 应用场景 
-按照信令链路拥塞情况，限制信令接口的业务通过量，保护信令链路。 
-##### 保护对象 
-AMF/MME/SGSN和对方网元之间的信令链路。 
-##### 流控原理 
-AMF、MME、SGSN根据信令链路是否拥塞，动态调整该信令链路上的出向业务话务量门限（超过门限的其他话务量将被丢弃，不再处理），来实现该信令链路不会完全“堵死”。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
-##### 配置方法 
-AMF或MME局点，执行ADD SIGLOADCTRL命令，其中“负荷控制类型”为“SCTP”，“发送拥塞流控”参数为“打开”。 
+应用场景 :按照信令链路拥塞情况，限制信令接口的业务通过量，保护信令链路。 
+保护对象 :AMF/MME/SGSN和对方网元之间的信令链路。 
+流控原理 :AMF、MME、SGSN根据信令链路是否拥塞，动态调整该信令链路上的出向业务话务量门限（超过门限的其他话务量将被丢弃，不再处理），来实现该信令链路不会完全“堵死”。 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
+配置方法 :AMF或MME局点，执行ADD SIGLOADCTRL命令，其中“负荷控制类型”为“SCTP”，“发送拥塞流控”参数为“打开”。 
 SGSN局点，执行ADD SIGLOADCTRL命令，其中“负荷控制类型”为“SCCP”，“发送拥塞流控”参数为“打开”。 
 AMF、MME和SGSN融合局点，执行两次ADD SIGLOADCTRL命令，其中“负荷控制类型”分别为“SCTP”和“SCCP”，“发送拥塞流控”参数都为“打开”。 
 ### 无效信令抑制 
 #### AMF UE异常信令管控 
-##### 应用场景 
-终端由于网络或者自身的原因，无法获取正常的网络服务，从而尝试不停触发信令业务。 
-##### 保护对象 
-AMF 
-##### 流控原理 
-当大批量的用户陷入这种异常行为时，将会产生大量的业务信令，触发信令风暴，造成网络拥塞。为了避免这种情况产生，网络需要提前识别异常行为的用户，并采取诸如黑名单管控、虚假网络服务等措施，以减少用户无效而频繁的信令业务。 
-##### 防御策略 
-针对终端异常行为，AMF启用基于UE粒度的异常信令管控功能，使用默认参数配置，对用户注册、业务请求、PDU会话建立三种信令业务进行异常行为管控。 
-##### 配置方法 
-启用异常信令管控功能。 
+应用场景 :终端由于网络或者自身的原因，无法获取正常的网络服务，从而尝试不停触发信令业务。 
+保护对象 :AMF 
+流控原理 :当大批量的用户陷入这种异常行为时，将会产生大量的业务信令，触发信令风暴，造成网络拥塞。为了避免这种情况产生，网络需要提前识别异常行为的用户，并采取诸如黑名单管控、虚假网络服务等措施，以减少用户无效而频繁的信令业务。 
+防御策略 :针对终端异常行为，AMF启用基于UE粒度的异常信令管控功能，使用默认参数配置，对用户注册、业务请求、PDU会话建立三种信令业务进行异常行为管控。 
+配置方法 :启用异常信令管控功能。 
 [SET ABNORMALSIGMCPOLICY](None):SUPPORTSIGCTRL="YES"
 设置异常信令管控参数，使用默认值。 
 [SET ABNORMALSIGMCCONFIG](None)
 #### MME UE异常信令管控 
-##### 应用场景 
-终端由于网络或者自身的原因，无法获取正常的网络服务，从而尝试不停触发信令业务。 
-##### 保护对象 
-MME 
-##### 流控原理 
-当大批量的用户陷入这种异常行为时，将会产生大量的业务信令，触发信令风暴，造成网络拥塞。为了避免这种情况产生，网络需要提前识别异常行为的用户，并采取诸如黑名单管控、虚假网络服务等措施，以减少用户无效而频繁的信令业务。 
-##### 防御策略 
-MME异常信令管控，具体包括附着请求异常信令管控、业务请求异常信令管控和PDN连接建立异常信令管控。 
+应用场景 :终端由于网络或者自身的原因，无法获取正常的网络服务，从而尝试不停触发信令业务。 
+保护对象 :MME 
+流控原理 :当大批量的用户陷入这种异常行为时，将会产生大量的业务信令，触发信令风暴，造成网络拥塞。为了避免这种情况产生，网络需要提前识别异常行为的用户，并采取诸如黑名单管控、虚假网络服务等措施，以减少用户无效而频繁的信令业务。 
+防御策略 :MME异常信令管控，具体包括附着请求异常信令管控、业务请求异常信令管控和PDN连接建立异常信令管控。 
 MME在各信令的每个统计周期内统计各信令数，如果统计的信令数大于配置的对应信令的最大信令数，则MME将用户加入信令黑名单，并启动黑名单定时器。 
 在信令黑名单定时器管理时间内，MME拒绝或丢弃信令；或MME建立FAKE APN PDN连接，用户使用此PDN连接无法上网。 
 信令黑名单定时器超时后，用户从信令黑名单被移除，可以正常上网。 
-##### 配置方法 
-启用异常信令管控功能。 
+配置方法 :启用异常信令管控功能。 
 [SET SIGSRESTRAIN FLAG](None):FLAG="YES"
 设置异常信令管控参数：虚假APN取决于运营商规划，其他管控参数取默认值。 
 [SET SIGSRESTRAIN](None):FAKEAPN="fake.apn"
 #### SGSN UE异常信令管控 
-##### 应用场景 
-终端由于网络或者自身的原因，无法获取正常的网络服务，从而尝试不停触发信令业务。 
-##### 保护对象 
-SGSN 
-##### 流控原理 
-当大批量的用户陷入这种异常行为时，将会产生大量的业务信令，触发信令风暴，造成网络拥塞。为了避免这种情况产生，网络需要提前识别异常行为的用户，并采取诸如黑名单管控、虚假网络服务等措施，以减少用户无效而频繁的信令业务。 
-##### 防御策略 
-SGSN异常信令管控，具体包括附着请求异常信令管控、业务请求异常信令管控和PDP激活异常信令管控。 
+应用场景 :终端由于网络或者自身的原因，无法获取正常的网络服务，从而尝试不停触发信令业务。 
+保护对象 :SGSN 
+流控原理 :当大批量的用户陷入这种异常行为时，将会产生大量的业务信令，触发信令风暴，造成网络拥塞。为了避免这种情况产生，网络需要提前识别异常行为的用户，并采取诸如黑名单管控、虚假网络服务等措施，以减少用户无效而频繁的信令业务。 
+防御策略 :SGSN异常信令管控，具体包括附着请求异常信令管控、业务请求异常信令管控和PDP激活异常信令管控。 
 SGSN在各信令的每个统计周期内统计各信令数，如果统计的信令数大于配置的对应信令的最大信令数，则SGSN将用户加入信令黑名单，并启动黑名单定时器。 
 在信令黑名单定时器管理时间内，SGSN拒绝或丢弃信令；或SGSN建立FAKE APN PDP，用户使用此PDP连接无法上网。 
 信令黑名单定时器超时后，用户从信令黑名单被移除，可以正常上网。 
-##### 配置方法 
-启用异常信令管控功能。 
+配置方法 :启用异常信令管控功能。 
 [SET SGSN SIGSRESTRAIN FLAG](None):FLAG="ON"
 设置异常信令管控参数：虚假APN取决于运营商规划，其他管控参数取默认值。 
 [SET SGSN SIGSRESTRAIN](None):FAKEAPN="fake.apn"
@@ -4949,12 +4620,9 @@ SMF/GW-C提供自保流控及周边网元过载保护多套解决方案，对信
 ### 自保流控 
 #### 基于业务的自保流控 
 ##### 基于CPU过负荷入向流控 
-###### 应用场景 
-系统过载时，SMF/GW-C通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。
-###### 保护对象 
-SMF/GW-C
-###### 流控原理 
-CPU过载控制是SMF/GW-C过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），将CPU控制在目标范围之内。CPU过载控制分为过载区、目标控制区和正常负荷区三个区间。
+应用场景 :系统过载时，SMF/GW-C通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。
+保护对象 :SMF/GW-C
+流控原理 :CPU过载控制是SMF/GW-C过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），将CPU控制在目标范围之内。CPU过载控制分为过载区、目标控制区和正常负荷区三个区间。
 CPU负荷过载区：系统指定的CPU负荷过大的区间，可以通过SET OL_LEVEL_CPU命令进行配置。 
 CPU负荷目标控制区：正常负荷区和过载区之间的区域，也可被视为过载区和正常负荷区之间的一个缓冲区。 
 CPU正常负荷区：目标控制区以下的区域为CPU负荷正常区域。 
@@ -4975,15 +4643,13 @@ SMF/GW-C中的过负荷控制原理是通过二分法动态调整业务，控制
 到达评价周期时，如不在过负荷状态且仍然丢包，则需要往上调整允许通过数 ={low值（将上一周期通过数作为low值）+high值（高值的初始值为第一次过负荷时的通过数，high值为固定值）}
 / 2。 
 到达评价周期时，如不在过负荷状态且无丢包，则允许通过数不变。 
-###### 防御策略 
-本功能默认开启，并推荐使用默认配置。在消息优先级及业务优先级均为低时按低优先级处理，其他情况按高优先级处理，从而在控制话务的同时，能够尽力兼顾高优先级消息/业务的处理。 
+防御策略 :本功能默认开启，并推荐使用默认配置。在消息优先级及业务优先级均为低时按低优先级处理，其他情况按高优先级处理，从而在控制话务的同时，能够尽力兼顾高优先级消息/业务的处理。 
 系统对高优先级消息定义缺省示例：更新类消息 
 系统对低优先级消息定义缺省示例：创建类消息 
 系统对不识别的消息定义缺省示例：释放类消息 
  说明： 
 对于紧急呼叫不进行控制。 
-###### 配置方法 
-打开CPU过负荷告警通知，打开业务拥塞控制，关闭业务通过数门限控制，修改控制周期为1 s(单位100 ms)，评估周期与控制周期比值为5，CPU采样周期为10
+配置方法 :打开CPU过负荷告警通知，打开业务拥塞控制，关闭业务通过数门限控制，修改控制周期为1 s(单位100 ms)，评估周期与控制周期比值为5，CPU采样周期为10
 s(单位2 s)，CPU负荷缓冲区为5%。 
 [SET OVERLOAD_CFG](None):OL_SWITCH=ENABLE,OL_ALARM_SWITCH=ALL,SRV_SWITCH=DISABLE,CONTROL_CYCLE=10,JUDGE_RATIO=5,SAMPLE_CYCLE=5,RECOV_BUFF=5
 配置CPU拥塞控制各负荷等级对应的CPU利用率区间。 
@@ -4995,16 +4661,13 @@ s(单位2 s)，CPU负荷缓冲区为5%。
 ##### 4G基于GTP-C入向流控 
 
 
-###### 应用场景 
-系统过载时，GW-C通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
+应用场景 :系统过载时，GW-C通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
 
 
-###### 保护对象 
-PGW-C、SGW-C 
+保护对象 :PGW-C、SGW-C 
 
 
-###### 流控原理 
-GTP-C拥塞控制包括以下几个方面： 
+流控原理 :GTP-C拥塞控制包括以下几个方面： 
 
  
 PGW/SGW基于业务通过数的流控，根据新建和更新类消息通过量控制新建和更新消息。 
@@ -5022,12 +4685,10 @@ time(仅GTPv2接入)给SGW，再透传至MME。
  
 
 
-###### 防御策略 
-不区分消息类型，无特殊策略。 
+防御策略 :不区分消息类型，无特殊策略。 
 
 
-###### 配置方法 
-
+配置方法 :
 
 打开业务通过数门限控制。 
 [SET OVERLOAD_CFG](None):SRV_SWITCH=ENABLE
@@ -5060,134 +4721,99 @@ time(仅GTPv2接入)给SGW，再透传至MME。
 
 
 ##### 4G基于QoS接纳控制 
-###### 应用场景 
-在系统资源受限时，可以开启本功能保证高优先级用户的接入成功率。 
-###### 保护对象 
-PGW-C、SGW-C 
-###### 流控原理 
-4G基于QoS接纳控制包括基于ARP、CPU占用率执行接纳控制和执行抢占两部分。
+应用场景 :在系统资源受限时，可以开启本功能保证高优先级用户的接入成功率。 
+保护对象 :PGW-C、SGW-C 
+流控原理 :4G基于QoS接纳控制包括基于ARP、CPU占用率执行接纳控制和执行抢占两部分。
 基于ARP、CPU占用率执行接纳控制：按ARP中的PL把承载分为高、中、低三个等级，通过SET ARPPLMAP命令配置PL和承载等级的对应关系。针对每个等级，配置对应的允许接入的CPU利用率。默认承载和专有承载建立时，根据ARP中的PL值和配置策略将承载划分为高、中、低三类，获取CPU利用率门限以及当前的CPU利用率，若当前CPU利用率超出门限，则拒绝承载的建立。 
 基于ARP、CPU占用率执行抢占：当整个系统或接入的APN中无可用资源，即没有空闲上下文空间时，可以通过SET ARPACCESSCONTROL命令配置启用抢占功能，即高优先级承载可以抢占低优先级的承载的上下文空间，低优先级承载将会被强制删除。 
-###### 防御策略 
-本功能默认关闭。开启本功能后，可以通过以下方式进行防御： 
+防御策略 :本功能默认关闭。开启本功能后，可以通过以下方式进行防御： 
 高优先级承载可以抢占低优先级的承载的上下文空间。 
 低优先级承载将会被强制删除。 
-###### 配置方法 
-当基于ARP、CPU占用率执行接纳控制时，配置ARP接纳控制策略。开启APP接纳控制开关及承载抢占开关，设置CPU利用率负荷门限。SET ARPACCESSCONTROL:FUNCTION="ENABLE",BEARPREEMPTABLE="ENABLE",CPULOWLOADGATE=65,CPUMIDDLELOADGATE=75,CPUHIGHLOADGATE=85 
+配置方法 :当基于ARP、CPU占用率执行接纳控制时，配置ARP接纳控制策略。开启APP接纳控制开关及承载抢占开关，设置CPU利用率负荷门限。SET ARPACCESSCONTROL:FUNCTION="ENABLE",BEARPREEMPTABLE="ENABLE",CPULOWLOADGATE=65,CPUMIDDLELOADGATE=75,CPUHIGHLOADGATE=85 
 当基于ARP、CPU占用率执行抢占时，配置PL到承载等级映射，修改PL映射承载等级。SET ARPPLMAP:ARPPRIORITYLEVEL=1,BEARERLEVEL="LOW" 
 ##### 5G基于消息入向流控 
-###### 应用场景 
-在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与SMF对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
-###### 保护对象 
-SMF 
-###### 流控原理 
-5G基于消息入向流控可分为基于NAS消息、基于会话创建消息和通过会话创建总量的过负荷控制。 
+应用场景 :在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与SMF对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
+保护对象 :SMF 
+流控原理 :5G基于消息入向流控可分为基于NAS消息、基于会话创建消息和通过会话创建总量的过负荷控制。 
 基于NAS消息通过速率的过负荷控制。使用令牌桶算法进行速率限制。控制创建、更新请求消息。 
 基于会话创建消息通过速率的过负荷控制。使用令牌桶算法进行速率限制。仅控制会话创建消息。 
 基于会话创建总量的过负荷控制。会话创建总量指最大建立会话数。仅控制会话创建消息。 
-###### 防御策略 
-本功能默认关闭。 
+防御策略 :本功能默认关闭。 
 5G拥塞控制的优先级如下： 
 CPU的过负荷控制 > NAS消息通过速率的过负荷控制 > 会话创建消息通过速率的过负荷控制 > 会话创建总量的过负荷控制 > 服务化接口消息通过速率的过负荷控制 
-###### 配置方法 
-修改过负荷控制配置。打开5G NAS拥塞控制开关，修改5G拥塞控制全局配置。5G过负荷拥塞控制方式为切片联合DNN模式（支持四种模式：CLOSE/SLICE_DNN/SLICE/DNN）。 
+配置方法 :修改过负荷控制配置。打开5G NAS拥塞控制开关，修改5G拥塞控制全局配置。5G过负荷拥塞控制方式为切片联合DNN模式（支持四种模式：CLOSE/SLICE_DNN/SLICE/DNN）。 
 [SET CONGESTIONCFG5G](None):CONSWITCH="SLICE_DNN"
 新增拥塞控制配置。配置只控制会话建立请求，不填写429响应码，新增切片ST为EMBB，SD为123456，DNN为cmnet。配置最大会话数为100（整局），最大会话速率为200个每秒（整局），最大接收NAS信令速率为300tps，最小退避时间为600s，最大退避时间为1800s，拒绝门限为80%，拒绝率为20%。其余参数为默认配置。 
 [ADD CONCFG5G](None):ESTASWITCH="true"RSPSWITCH="false",SNSSAISST="EMBB",SNSSAISD="123456",DNN="cmnet",MAXSESSION=100,MAXRATE=200,MAXNASSM=300,MINDELAY=600,MAXDELAY=1800,REJECT_THRESHOLD="80",REJECT_RATE="20"
 #### 基于接口的自保流控 
 ##### 5G基于接口入向流控 
-###### 应用场景 
-在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与SMF对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
-###### 保护对象 
-SMF 
-###### 流控原理 
-5G基于接口入向流控基于服务化接口的消息通过速率，使用令牌桶算法进行速率限制，控制N11、N10、N7接口的入向消息。 
-###### 防御策略 
-本功能默认关闭。 
+应用场景 :在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与SMF对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
+保护对象 :SMF 
+流控原理 :5G基于接口入向流控基于服务化接口的消息通过速率，使用令牌桶算法进行速率限制，控制N11、N10、N7接口的入向消息。 
+防御策略 :本功能默认关闭。 
 5G拥塞控制的优先级如下： 
 CPU的过负荷控制 > NAS消息通过速率的过负荷控制 > 会话创建消息通过速率的过负荷控制 > 会话创建总量的过负荷控制 > 服务化接口消息通过速率的过负荷控制 
-###### 配置方法 
-配置5G服务化接口最大收发消息。 
+配置方法 :配置5G服务化接口最大收发消息。 
 新增SMF服务化接口最大收发消息配置，接口类型为N11，入向请求消息的速率为1000tps(整局速率，实际根据该局的能力配置)，控制update信令开关为“关闭”。ADD MMR:INTERFACE="N11",INRATE=1000,CTRLUPT="DISABLE" 
 新增SMF服务化接口最大收发消息配置，接口类型为N10，入向请求消息的速率为1000tps，控制update信令开关为“关闭”。ADD MMR:INTERFACE="N10",INRATE=1000,CTRLUPT="DISABLE" 
 新增SMF服务化接口最大收发消息配置，接口类型为N7，入向请求消息的速率为1000tps，控制update信令开关为“关闭”（开启N7拥塞控制功能后，可能造成用量统计丢失）。ADD MMR:INTERFACE="N7",INRATE=1000,CTRLUPT="DISABLE" 
 ### 周边网元过载保护 
 #### 基于业务的周边网元过载保护 
 ##### 4G基于GTP-C出向流控 
-###### 应用场景 
-在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与GW-C对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
-###### 保护对象 
-MME/SGW-C 
-###### 流控原理 
-PGW向SGW发送专有承载建立/更新请求消息时，比较MME、SGSN和SGW的OCI中的ORM（Overload Reduction Metric，过载减少指标），取最大值ORM对应的OCI(包括OCSN、ORM、PoV)，在PoV（Period of Validity，有效期间）时间内，按照ORM进行消息节流。如果收到的OCI变化，则取最大值ORM对应的OCI重置PoV进行消息节流。
-###### 防御策略 
-本功能默认关闭，只控制专有承载创建和更新消息。 
-###### 配置方法 
-配置GTP-C流控控制开关。 
+应用场景 :在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与GW-C对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
+保护对象 :MME/SGW-C 
+流控原理 :PGW向SGW发送专有承载建立/更新请求消息时，比较MME、SGSN和SGW的OCI中的ORM（Overload Reduction Metric，过载减少指标），取最大值ORM对应的OCI(包括OCSN、ORM、PoV)，在PoV（Period of Validity，有效期间）时间内，按照ORM进行消息节流。如果收到的OCI变化，则取最大值ORM对应的OCI重置PoV进行消息节流。
+防御策略 :本功能默认关闭，只控制专有承载创建和更新消息。 
+配置方法 :配置GTP-C流控控制开关。 
 [SET PGWGTPCOVERLOADCTL](None):CFGSWITCH="ENABLE"
 ##### 4G DDN信令抑制 
-###### 应用场景 
-当运营商部署的现网业务中有大量下行寻呼流程时，可能对MME网元造成信令冲击，导致其过负荷。此时需要对下行数据通知信令进行抑制。 
-###### 保护对象 
-MME 
-###### 流控原理 
-SGW-U收到IDLE用户的下行数据，触发下行数据寻呼流程。 
+应用场景 :当运营商部署的现网业务中有大量下行寻呼流程时，可能对MME网元造成信令冲击，导致其过负荷。此时需要对下行数据通知信令进行抑制。 
+保护对象 :MME 
+流控原理 :SGW-U收到IDLE用户的下行数据，触发下行数据寻呼流程。 
 MME回复给SGW-C的Downlink Data Notification Acknowledge消息中携带throttling，指示SGW-C对低优先级用户进行下行寻呼消息截流，并对发送给当前指示截流的MME的下行寻呼消息进行测速。 
 SGW-C根据下行寻呼消息速度，按照令牌桶算法进行截流，取到令牌的寻呼消息则会发送给MME。若未取到令牌，则丢弃消息，同时清除用户缓存的下行报文。 
  说明： 
 若Throttling Delay到期，则不进行DDN节流。 
-###### 防御策略 
-不区分消息类型，无特殊策略。 
-###### 配置方法 
-开启SGW GTP-C过负荷控制开关。 
+防御策略 :不区分消息类型，无特殊策略。 
+配置方法 :开启SGW GTP-C过负荷控制开关。 
 [SET SGWGTPCOVERLOADCTL](None):CFGSWITCH="ENABLE"
 配置GTP-C流控控制开关，修改低优选级流控配置。 
 [SET LOWPRIORTHROT](None):CFGSWITCH="ENABLE",PL=5
 #### 基于接口的周边网元过载保护 
 ##### 5G基于接口出向流控 
-###### 应用场景 
-在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与SMF对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
-###### 保护对象 
-周边NF（AMF/CHF/UDM/PCF/NRF等） 
-###### 流控原理 
-5G基于接口出向流控是基于服务化接口消息通过速率的过负荷控制。使用令牌桶算法进行速率限制。用于控制N11接口、N10接口、N7接口和NRF的出向消息，不支持N40接口。 
-###### 防御策略 
-本功能默认关闭。开启后，5G基于接口出向流控对各接口出向消息的控制优先级分类举例如下。 
+应用场景 :在话务量高峰时期或者话务模型异常畸变（如重大节日导致的话务量飙升等）、以及与SMF对接的设备性能严重不匹配的场景下，需要启用本功能保证用户的正常接入。 
+保护对象 :周边NF（AMF/CHF/UDM/PCF/NRF等） 
+流控原理 :5G基于接口出向流控是基于服务化接口消息通过速率的过负荷控制。使用令牌桶算法进行速率限制。用于控制N11接口、N10接口、N7接口和NRF的出向消息，不支持N40接口。 
+防御策略 :本功能默认关闭。开启后，5G基于接口出向流控对各接口出向消息的控制优先级分类举例如下。 
 优先级|消息类型
 ---|---
 高优先级|N11接口：会话更新消息N7接口：会话更新消息
 低优先级|N11接口：新建会话建立消息、承载建立消息N7/N10接口：初始消息
 不受控消息|N11接口：会话释放消息N7/N10接口：会话释放消息
-###### 配置方法 
-配置5G服务化接口最大收发消息。 
+配置方法 :配置5G服务化接口最大收发消息。 
 新增SMF服务化接口最大收发消息配置，接口类型为N11，出向请求消息的速率为1000tps（全局），控制update信令开关为“关闭”。ADD MMR:INTERFACE="N11",OUTRATE=1000,CTRLUPT="DISABLE"、 
 新增SMF服务化接口最大收发消息配置，接口类型为N10，出向请求消息的速率为1000tps（全局），控制update信令开关为“关闭”。ADD MMR:INTERFACE="N10",OUTRATE=1000,CTRLUPT="DISABLE" 
 新增SMF服务化接口最大收发消息配置，接口类型为N7，出向请求消息的速率为1000tps（全局），控制update信令开关为“关闭”。ADD MMR:INTERFACE="N7",OUTRATE=1000,CTRLUPT="DISABLE" 
 配置NRF缓存老化时长策略。 
 [SET NRFPOLICY](None):RENEWCACHETHRESHOLD=30
 ##### 4G基于网元出向流控 
-###### 应用场景 
-GW-C支持S11接口、Gx接口、Gy接口与Ga接口的出向过负荷控制，可以在话务量冲击过大时保护MME、PCRF、OCS与CG等周边网元不会被过量负荷冲击瘫痪。 
-###### 保护对象 
-MME、PCRF、OCS、CG 
-###### 流控原理 
-根据人工配置阈值的出向过负荷控制对各个接口进行控制，具体情况参见下表。 
+应用场景 :GW-C支持S11接口、Gx接口、Gy接口与Ga接口的出向过负荷控制，可以在话务量冲击过大时保护MME、PCRF、OCS与CG等周边网元不会被过量负荷冲击瘫痪。 
+保护对象 :MME、PCRF、OCS、CG 
+流控原理 :根据人工配置阈值的出向过负荷控制对各个接口进行控制，具体情况参见下表。 
 接口|控制原则
 ---|---
 S11接口|报文发送速率超过所配置的向MME发送速率阈值后，报文会被丢弃。
 Gx接口|报文发送速率超过所配置的向PCRF发送速率阈值后，超出部分的报文将会被丢弃或发送向备用PCRF（如果存在备用PCRF）。
 Gy接口|报文发送速率超过所配置的向OCS发送速率阈值后，超出部分的报文将会被丢弃或发送向备用OCS（如果存在备用OCS）。
 Ga接口|报文发送速率超过所配置的向CG发送速率阈值后，超出部分的报文将会被丢弃或发送向备用CG（如果存在备用CG）。
-###### 防御策略 
-本功能默认关闭。各接口的防御策略参见下表。 
+防御策略 :本功能默认关闭。各接口的防御策略参见下表。 
 接口|防御策略
 ---|---
 S11接口|只针对专载创建和更新消息进行控制。
 Gx接口|如果有备用PCRF则向备用PCRF发送消息，如果没有备用PCRF，则：对于CCR-I消息，进行丢弃处理。对于CCR-U消息，进行丢弃处理。对于CCR-T消息，不进行过负荷控制。
 Gy接口|如果有备用OCS则向备用OCS发送消息，如果没有备用OCS，则：对于CCR-I消息，进行丢弃处理。对于CCR-U消息，进行丢弃处理。对于CCR-T消息，不进行过负荷控制。
 Ga接口|对于超出当前周期（每秒）最大发送量的消息，如果有备用CG，会将消息切换发送向备用CG。如果所有CG服务器都无法发送，则将话单缓存到本地。
-###### 配置方法 
-S11接口
+配置方法 :S11接口
 配置GTP-C流控控制开关，开启SGW GTP-C过负荷控制开关。 
 [SET SGWGTPCOVERLOADCTL](None):CFGSWITCH="ENABLE"
 配置S11出口流控。设置S11出口每秒发送消息的最大条数为60。 
@@ -5225,27 +4851,22 @@ NRF提供自保流控、分局向流控多套解决方案，对信令风暴进�
 
 ### 自保流控 
 #### CPU过负荷流控 
-##### 应用场景 
-CPU负荷超过门限配置时，根据配置的策略降低业务通过率，保护业务进程稳定。 
-##### 保护对象 
-NRF 
-##### 流控原理 
-CPU过载控制是NRF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），将CPU控制在目标范围之内。流控示意图如[图1](1615166928880.html#z85c0603eb02a4bf3a9cba4888de0ab94__4a9daa3a-444b-4b21-a3a2-f65724b745b3)所示。
+应用场景 :CPU负荷超过门限配置时，根据配置的策略降低业务通过率，保护业务进程稳定。 
+保护对象 :NRF 
+流控原理 :CPU过载控制是NRF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），将CPU控制在目标范围之内。流控示意图如[图1](1615166928880.html#z85c0603eb02a4bf3a9cba4888de0ab94__4a9daa3a-444b-4b21-a3a2-f65724b745b3)所示。
 图1  NRF CPU过载控制
 []images/NRF%20CPU%E8%BF%87%E8%BD%BD%E6%8E%A7%E5%88%B6.png)
 CPU过载控制包括门限配置和控制策略两部分。 
 门限配置：按CPU利用率可分为四级负荷、三级负荷、二级负荷、一级负荷四级。 
 控制策略：包括保持业务通过率不变、按步长降低业务通过率、按步长升高业务通过率、业务通过率置为最小值四类。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。默认配置参见[表1](1615166928880.html#z85c0603eb02a4bf3a9cba4888de0ab94__a692c9ae-8f54-466a-89b6-a4968eaac95e)。
+防御策略 :本功能默认开启，并推荐使用默认配置。默认配置参见[表1](1615166928880.html#z85c0603eb02a4bf3a9cba4888de0ab94__a692c9ae-8f54-466a-89b6-a4968eaac95e)。
 负荷等级|CPU利用率|控制策略
 ---|---|---
 一级负荷|90%|业务通过率置为最小值
 二级负荷|80%|按步长降低业务通过率
 三级负荷|75%|按步长降低业务通过率
 四级负荷|70%|保持业务通过率不变
-##### 配置方法 
-配置CPU过负荷功能开关 
+配置方法 :配置CPU过负荷功能开关 
 该功能默认开启（值为1）。配置为1表示开启CPU过负荷控制，配置为0表示关闭CPU过负荷控制。 
 [SET PARAMETER](None):PARANAME="CPUOverLoadControl",PARAVALUE=1
 配置CPU负荷等级： 
@@ -5261,42 +4882,32 @@ CPU过载控制包括门限配置和控制策略两部分。
 当CPU超过一级负荷的时候允许业务通过率，默认为1%。当业务通过率设置成1%后，CPU占有率会逐步降低，在一个CPU过载控制调整周期后，CPU占有率根据CPU过负荷控制策略，逐渐增加/降低业务的通过率（每次增加/降低的业务通过率为：CPU过载控制时每个周期调整步长）。 
 [SET PARAMETER](None):PARANAME="CPUOverLoadControlMinRate",PARAVALUE="30"
 #### NRF QPS流控 
-##### 应用场景 
-接收请求超过系统QPS设置时，NRF通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。
-##### 保护对象 
-NRF 
-##### 流控原理 
-流量控制与TPS类型License功能融合： 
+应用场景 :接收请求超过系统QPS设置时，NRF通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。
+保护对象 :NRF 
+流控原理 :流量控制与TPS类型License功能融合： 
 TPS使用达到License的80%，上报告警。 
 TPS使用达到License的100%，进行流控。 
 当请求总量达到流控阈值时，根据配置的策略，返回503或307。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置：TPS使用达到Lisence的80%，上报告警；达到License的100%，进行流控。 
+防御策略 :本功能默认开启，并推荐使用默认配置：TPS使用达到Lisence的80%，上报告警；达到License的100%，进行流控。 
 NRF容灾方式为双活部署时，流控总量控制策略配置项为响应307。 
 NRF容灾方式为主备部署时，流控总量控制策略配置项为响应503。 
-##### 配置方法 
-配置流控总量控制策略：配置流控总量控制为重试，间隔5秒。 
+配置方法 :配置流控总量控制策略：配置流控总量控制为重试，间隔5秒。 
 [SET TRAFFICPOLICY](None):TRAFFPOLICY="RETRY"
 [SET TRAFFRETRYPERIOD](None):RETRYPERIOD=5
 ### 周边网元过载保护 
 #### 分局向QPS流控 
-##### 应用场景 
-由于业务请求的不均衡性，NRF可通过业务层标识例如NFID、FQDN等或IP区分局向，对不同局向的业务请求进行QPS流控，防止某一局向异常，影响其他局向的业务处理。
-##### 保护对象 
-其他NF 
-##### 流控原理 
-NRF通过业务层标识如NFID、FQDN等或IP区分局向，对不同局向的业务请求分别进行统计： 
+应用场景 :由于业务请求的不均衡性，NRF可通过业务层标识例如NFID、FQDN等或IP区分局向，对不同局向的业务请求进行QPS流控，防止某一局向异常，影响其他局向的业务处理。
+保护对象 :其他NF 
+流控原理 :NRF通过业务层标识如NFID、FQDN等或IP区分局向，对不同局向的业务请求分别进行统计： 
 当某一局向达到配置的流控阈值时，进行QPS流控，防止某一局向异常，影响其他局向的业务处理。 
 当某个NF请求达到流控阈值时，返回429响应。 
-##### 防御策略 
-区分局向的策略分为两种： 
+防御策略 :区分局向的策略分为两种： 
 按业务层标识进行流控，如NFID、FQDN等。 
 按IP进行流控。 
 流控策略分为两种： 
 按统一阈值进行流控，例如单NF请求阈值统一设置为500。 
 分NF分别进行阈值设置。 
-##### 配置方法 
-配置NF流控策略： 
+配置方法 :配置NF流控策略： 
 配置为“ON”表示开启NF流控，配置为“OFF”表示关闭NF流控。 
 [SET NFTRAFPOLICY](None):NFCTRLPOLICY="ON"
 配置NF流控QPS公共阈值 
@@ -5318,27 +4929,22 @@ NSSF QPS流控|自保流控|业务请求数过多时，拒绝超过门限的业�
 周边网元过载保护|分局向QPS流控|单局向业务请求数过多时，拒绝超过门限的业务请求，保护业务进程稳定。|是|默认开启
 ### 自保流控 
 #### CPU过负荷流控 
-##### 应用场景 
-接收请求超过系统QPS设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
-##### 保护对象 
-NSSF 
-##### 流控原理 
-CPU过载控制是NSSF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），将CPU控制在目标范围之内。流控示意图如[图1](1615970635542.html#z85c0603eb02a4bf3a9cba4888de0ab94__b2a59c13-d039-4c13-a72a-131349fd927e)所示。
+应用场景 :接收请求超过系统QPS设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
+保护对象 :NSSF 
+流控原理 :CPU过载控制是NSSF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），将CPU控制在目标范围之内。流控示意图如[图1](1615970635542.html#z85c0603eb02a4bf3a9cba4888de0ab94__b2a59c13-d039-4c13-a72a-131349fd927e)所示。
 图1  NSSF CPU过载控制
 []images/NSSF%20CPU%E8%BF%87%E8%BD%BD%E6%8E%A7%E5%88%B6.png)
 CPU过载控制包括门限配置和控制策略两部分。 
 门限配置：按CPU利用率可分为四级负荷、三级负荷、二级负荷、一级负荷四级。 
 控制策略：包括保持业务通过率不变、按步长降低业务通过率、按步长升高业务通过率、业务通过率置为最小值四类。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。默认配置参见[表1](1615970635542.html#z85c0603eb02a4bf3a9cba4888de0ab94__8c145934-325b-4aad-a58c-adc3d9581a5b)。
+防御策略 :本功能默认开启，并推荐使用默认配置。默认配置参见[表1](1615970635542.html#z85c0603eb02a4bf3a9cba4888de0ab94__8c145934-325b-4aad-a58c-adc3d9581a5b)。
 负荷等级|CPU利用率|控制策略
 ---|---|---
 一级负荷|90%|业务通过率置为最小值
 二级负荷|80%|按步长降低业务通过率
 三级负荷|75%|按步长降低业务通过率
 四级负荷|70%|保持业务通过率不变
-##### 配置方法 
-配置CPU过负荷功能开关 
+配置方法 :配置CPU过负荷功能开关 
 该功能默认开启（值为1）。配置为1表示开启CPU过负荷控制，配置为0表示关闭CPU过负荷控制。 
 [SET SWITCHCONFIG](None):PARANAME=CPUOverLoadControl,PARAVALUE=1
 配置CPU负荷等级： 
@@ -5354,42 +4960,32 @@ CPU过载控制包括门限配置和控制策略两部分。
 当CPU超过一级负荷的时候允许业务通过率，默认为1%。当业务通过率设置成1%后，CPU占有率会逐步降低，在一个CPU过载控制调整周期后，CPU占有率根据CPU过负荷控制策略，逐渐增加/降低业务的通过率（每次增加/降低的业务通过率为：CPU过载控制时每个周期调整步长）。 
 [SET SWITCHCONFIG](None):PARANAME=CPUOverLoadControlMinRate,PARAVALUE=30
 #### NSSF QPS流控 
-##### 应用场景 
-接收请求超过系统QPS设置时，NSSF通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。
-##### 保护对象 
-NSSF 
-##### 流控原理 
-流量控制与TPS类型License功能融合： 
+应用场景 :接收请求超过系统QPS设置时，NSSF通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。
+保护对象 :NSSF 
+流控原理 :流量控制与TPS类型License功能融合： 
 TPS使用达到License的80%，上报告警。 
 TPS使用达到License的100%，进行流控。 
 当请求总量达到流控阈值时，根据配置的策略，返回503或307。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置：TPS使用达到Lisence的80%，上报告警；达到License的100%，进行流控。 
+防御策略 :本功能默认开启，并推荐使用默认配置：TPS使用达到Lisence的80%，上报告警；达到License的100%，进行流控。 
 NSSF容灾方式为双活部署时，流控总量控制策略配置项为响应307。 
 NSSF容灾方式为主备部署时，流控总量控制策略配置项为响应503。 
-##### 配置方法 
-配置流控总量控制策略：配置流控总量控制为重试，间隔5秒。 
+配置方法 :配置流控总量控制策略：配置流控总量控制为重试，间隔5秒。 
 [SET TRAFFICPOLICY](None):TRAFFPOLICY="RETRY"
 [SET TRAFFRETRYPERIOD](None):RETRYPERIOD=5
 ### 周边网元过载保护 
 #### 分局向QPS流控 
-##### 应用场景 
-由于业务请求的不均衡性，NSSF可通过业务层标识例如NFID、FQDN等或IP区分局向，对不同局向的业务请求进行QPS流控，防止某一局向异常，影响其他局向的业务处理。
-##### 保护对象 
-其他NF 
-##### 流控原理 
-NSSF通过业务层标识如NFID、FQDN等或IP区分局向，对不同局向的业务请求分别进行统计： 
+应用场景 :由于业务请求的不均衡性，NSSF可通过业务层标识例如NFID、FQDN等或IP区分局向，对不同局向的业务请求进行QPS流控，防止某一局向异常，影响其他局向的业务处理。
+保护对象 :其他NF 
+流控原理 :NSSF通过业务层标识如NFID、FQDN等或IP区分局向，对不同局向的业务请求分别进行统计： 
 当某一局向达到配置的流控阈值时，进行QPS流控，防止某一局向异常，影响其他局向的业务处理。 
 当某个NF请求达到流控阈值时，返回429。 
-##### 防御策略 
-区分局向的策略分为两种： 
+防御策略 :区分局向的策略分为两种： 
 按业务层标识进行流控，如NFID、FQDN等。 
 按IP进行流控。 
 流控策略分为两种： 
 按统一阈值进行流控，例如单NF请求阈值统一设置为500。 
 分NF分别进行阈值设置。 
-##### 配置方法 
-配置NF流控策略： 
+配置方法 :配置NF流控策略： 
 配置为“ON”表示开启NF流控，配置为“OFF”表示关闭NF流控。 
 [SET NFTRAFPOLICY](None):NFCTRLPOLICY="ON"
 配置NF流控QPS公共阈值 
@@ -5410,12 +5006,9 @@ PCF/PCRF提供自保流控、周边网元过载保护等多套解决方案，对
 周边网元过载保护|业务请求出局流控|PCF/PCRF发送业务请求消息时，根据业务全局配置对发送业务请求进行流量控制，防止本端出向流量过大造成周边网元过载。|是|默认开启
 ### 自保流控 
 #### 系统资源过负荷控制 
-##### 应用场景 
-系统过载时，通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
-##### 保护对象 
-PCF/PCRF 
-##### 流控原理 
-系统资源负荷等级通过CPU负荷等级、数据区负荷等级、业务内存负荷等级、License在线用户容量负荷等级共同决定，PCF/PCRF根据当前系统资源负荷等级对业务消息进行控制。 
+应用场景 :系统过载时，通过入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定和高优先级业务成功率。 
+保护对象 :PCF/PCRF 
+流控原理 :系统资源负荷等级通过CPU负荷等级、数据区负荷等级、业务内存负荷等级、License在线用户容量负荷等级共同决定，PCF/PCRF根据当前系统资源负荷等级对业务消息进行控制。 
 当License在线用户容量未达到一级负荷阈值时，取CPU负荷等级、数据区负荷等级、业务内存负荷等级中的最高等级作为当前系统资源负荷等级。 
 当License在线用户容量达到一级负荷阈值时，当前系统资源负荷等级即为一级。 
 缺省配置情况下，CPU负荷等级、数据区负荷等级、业务负荷等级、License在线用户容量负荷等级阈值参见[表1](1615883759057.html#z837cc62d89bd4149b2bcd32b8e3aef4d__439bede6-88d4-4a43-afa6-d5a06692c58c)，包含三个等级的上下限阈值。
@@ -5442,26 +5035,19 @@ License在线用户容量三个负荷级别的阈值设定，主要用于告警�
 系统资源过负荷控制机制综合评估系统资源负荷与实际处理话务量（各业务类型消息的处理个数）的关系，通过动态调整实际处理话务量（超出的话务量将被丢弃/拒绝，不再处理），将系统资源负荷控制在目标范围之内。以系统资源中的CPU过负荷控制为例，流控示意图如[图1](1615883759057.html#z837cc62d89bd4149b2bcd32b8e3aef4d__5693213e-5d7c-4f17-8862-9fe667ec3b35)所示。
 图1  CPU过负荷流控示意图
 []images/1616142504201.png)
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置，参见[表1](1615883759057.html#z837cc62d89bd4149b2bcd32b8e3aef4d__439bede6-88d4-4a43-afa6-d5a06692c58c)和[表2](1615883759057.html#z837cc62d89bd4149b2bcd32b8e3aef4d__2fa3bf8e-f5a4-445d-a1eb-998f9c761813)。
-##### 配置方法 
-配置过负荷控制：[SET LOADCFG](../../Npcf_PolicyManagement\zh-CN\mml\1787059.html)
+防御策略 :本功能默认开启，并推荐使用默认配置，参见[表1](1615883759057.html#z837cc62d89bd4149b2bcd32b8e3aef4d__439bede6-88d4-4a43-afa6-d5a06692c58c)和[表2](1615883759057.html#z837cc62d89bd4149b2bcd32b8e3aef4d__2fa3bf8e-f5a4-445d-a1eb-998f9c761813)。
+配置方法 :配置过负荷控制：[SET LOADCFG](../../Npcf_PolicyManagement\zh-CN\mml\1787059.html)
 配置过负荷业务通过率：[SET OLSERVRATIO](../../Npcf_PolicyManagement\zh-CN\mml\1787119.html)
 ### 周边网元过载保护 
 #### 业务请求出局流控 
-##### 应用场景 
-在套餐生效/失效、规则生效/失效以及月初批量用量清零时，可能会有大量业务规则重决策，从而引发业务请求消息的发送。PCF/PCRF根据业务全局配置对发送业务请求进行流量控制，防止本端出向流量过大造成周边NF（如SMF）过载。 
-##### 保护对象 
-周边NF（SMF/xGW/AMF等） 
-##### 流控原理 
-PCF/PCRF在用户割接、容灾切换和月初用量清零等场景时，可能会触发大量用户重决策规则，从而向对端NF（如SMF）下发大量决策消息，引发对端NF负荷瞬时陡增。因而，PCF/PCRF采用缓冲队列方式，通过决策限速的方式（如每个处理模块每秒最多下发30个决策请求）达到保护对端NF不过载的目的。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
+应用场景 :在套餐生效/失效、规则生效/失效以及月初批量用量清零时，可能会有大量业务规则重决策，从而引发业务请求消息的发送。PCF/PCRF根据业务全局配置对发送业务请求进行流量控制，防止本端出向流量过大造成周边NF（如SMF）过载。 
+保护对象 :周边NF（SMF/xGW/AMF等） 
+流控原理 :PCF/PCRF在用户割接、容灾切换和月初用量清零等场景时，可能会触发大量用户重决策规则，从而向对端NF（如SMF）下发大量决策消息，引发对端NF负荷瞬时陡增。因而，PCF/PCRF采用缓冲队列方式，通过决策限速的方式（如每个处理模块每秒最多下发30个决策请求）达到保护对端NF不过载的目的。 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
 参数编号|参数名称|默认值
 ---|---|---
 1052|消息流控参数|10
-##### 配置方法 
-配置消息流控参数：[SET SYS GLOBPARA](../../Npcf_PolicyManagement\zh-CN\mml\1787502.html):IDX=1052,CURVAL="10",EXTFLAG=1
+配置方法 :配置消息流控参数：[SET SYS GLOBPARA](../../Npcf_PolicyManagement\zh-CN\mml\1787502.html):IDX=1052,CURVAL="10",EXTFLAG=1
 ## CHF/CGF流控 
 网络故障、系统升级、特殊事件、终端及应用等多种原因，均可能引发信令风暴，为保证业务稳定运行需部署相应的流控方案来预防，抑制信令风暴，避免网络拥塞及过载。 
 CHF/CGF提供自保流控解决方案，对信令风暴进行综合治理。
@@ -5477,24 +5063,16 @@ License流控|CG Rf口自保流控|根据License配置限定的处理话单速�
 CG Ga口自保流控|License流控|根据License配置限定的处理话单速率以及当前处理话单速率来决定是否限流。当处理速率超过License限定时，停止处理计费消息。|4G、5G适用建议开启|默认开启
 资源异常流控|CG Ga口自保流控|当话单存储出现异常（例如，云盘只读、空间不足）时，停止处理计费消息。|4G适用自动开启（无法关闭）|自动开启（无法关闭）
 ### 信令跟踪限流 
-#### 应用场景 
-信令跟踪功能打开则上报信令消息，在发生信令风暴时，如果网管未及时终止信令跟踪，系统UB可能会占满，使得其它重要消息申请UB失败，进而影响业务的正常运行。 
-#### 保护对象 
-CHF/CGF 
-#### 流控原理 
-CPU使用率超过80%或者每秒信令跟踪流量超过2048KiB时自动停止信令跟踪。 
-#### 防御策略 
-本功能永久生效，无法关闭。 
-#### 配置方法 
-默认开启，无需配置。 
+应用场景 :信令跟踪功能打开则上报信令消息，在发生信令风暴时，如果网管未及时终止信令跟踪，系统UB可能会占满，使得其它重要消息申请UB失败，进而影响业务的正常运行。 
+保护对象 :CHF/CGF 
+流控原理 :CPU使用率超过80%或者每秒信令跟踪流量超过2048KiB时自动停止信令跟踪。 
+防御策略 :本功能永久生效，无法关闭。 
+配置方法 :默认开启，无需配置。 
 ### CHF自保流控 
 #### CPU过负荷流控 
-##### 应用场景 
-系统过载时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证CHF业务稳定。
-##### 保护对象 
-CHF 
-##### 流控原理 
-CPU过载控制是CHF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他计费消息将被丢弃/拒绝），将CPU使用率控制在目标范围之内。
+应用场景 :系统过载时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证CHF业务稳定。
+保护对象 :CHF 
+流控原理 :CPU过载控制是CHF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他计费消息将被丢弃/拒绝），将CPU使用率控制在目标范围之内。
 流控示意图如[图1](1615774714071.html#zade658aafc9742c39ac7bd69225f3a80__a2413ee0-72be-4cca-8e36-693eb23d94a6)所示。
 图1  CPU过负荷流控示意图
 []images/1616142733686.png)
@@ -5502,52 +5080,37 @@ CPU过载控制的门限配置，分为三级：轻度、普通、严重。默�
 当系统CPU负荷超过轻度负荷控制的门限（可配置）后，将按照固定比例丢弃来自SMF业务网元的CREATE消息。 
 当系统CPU负荷超过普通负荷控制的门限（可配置）后，将全部丢弃来自SMF业务网元的CREATE消息。 
 当系统CPU负荷超过严重负荷控制的门限（可配置）后，将全部丢弃来自SMF业务网元的计费消息，并且向业务返回429（可配置）。 
-##### 防御策略 
-本功能永久生效，无法关闭。 
+防御策略 :本功能永久生效，无法关闭。 
 推荐使用默认配置，可以配置检测周期。 
-##### 配置方法 
-推荐采用默认配置。 
+配置方法 :推荐采用默认配置。 
 设置CPU监控参数。例如：监控阈值-轻度为70%，监控阈值-普通为80%，监控阈值-严重为90%，监控周期时长为1分钟。SET CPUCONTROL:BRTHRESHOLD=70,TRTHRESHOLD=80,FTHRESHOLD=90,DURATION=1;CPU使用率监控阈值必须满足如下规则：轻度(%) < 普通(%) < 严重(%)。当CPU使用率超过设置的阈值时，会产生相应级别的告警。 
 查询CPU监控参数。SHOW CPUCONTROL; 
 #### License流控 
-##### 应用场景 
-接收请求超过系统License设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
-##### 保护对象 
-CHF 
-##### 流控原理 
-流量控制与License功能融合，当每秒话务量超过License最大处理话务量，进行流控，向业务返回状态码429（可配置）。 
-##### 防御策略 
-本功能默认开启。当每秒话务量超过License最大处理话务量，进行流控。当一个检测周期（1800秒）内流控次数达到指定次数（默认3次）时，上报告警。 
+应用场景 :接收请求超过系统License设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
+保护对象 :CHF 
+流控原理 :流量控制与License功能融合，当每秒话务量超过License最大处理话务量，进行流控，向业务返回状态码429（可配置）。 
+防御策略 :本功能默认开启。当每秒话务量超过License最大处理话务量，进行流控。当一个检测周期（1800秒）内流控次数达到指定次数（默认3次）时，上报告警。 
 推荐使用默认配置。 
-##### 配置方法 
-推荐采用默认配置。 
+配置方法 :推荐采用默认配置。 
 当发生流控时，CHF向业务返回状态码。修改响应码，例如过载保护错误码设置为429。SET OCSCODE:BUSYCODE=429;查询系统中的响应码配置。SHOW OCSCODE; 
 License流控的开关，配置在/global/bill/conf/nmbsys.ini文件中。[FlowControl]
 FlowControlSwitch=1  /*开启license流控*/
 ThresholdTimes=3    /*一个检测周期内每秒话务量超过license设置的次数才上报告警*/
 AlarmPeriod=1800    /*上报告警检测周期*/ 
 #### 资源异常流控 
-##### 应用场景 
-由于CHF需要话单落地，磁盘空间成为关键资源。当资源不足时，为了防止计费信息丢失，保证SMF业务稳定，CHF需要设置流控。 
-##### 保护对象 
-CHF 
-##### 流控原理 
-当CHF出现资源不足时，向SMF回应状态码503，SMF将计费消息转到其他CHF处理。 
-##### 防御策略 
-本功能永久生效，无法关闭。 
+应用场景 :由于CHF需要话单落地，磁盘空间成为关键资源。当资源不足时，为了防止计费信息丢失，保证SMF业务稳定，CHF需要设置流控。 
+保护对象 :CHF 
+流控原理 :当CHF出现资源不足时，向SMF回应状态码503，SMF将计费消息转到其他CHF处理。 
+防御策略 :本功能永久生效，无法关闭。 
 当CHF出现资源不足或者磁盘操作异常时，向业务返回状态码503（可配置）。 
-##### 配置方法 
-推荐采用默认配置。 
+配置方法 :推荐采用默认配置。 
 修改响应码，例如，资源不足错误码设置为503。SET OCSCODE:STOPSVR=503; 
 查询系统中的响应码配置。SHOW OCSCODE; 
 ### CG Rf口自保流控 
 #### CPU过负荷流控 
-##### 应用场景 
-系统过载时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证CG业务稳定。 
-##### 保护对象 
-CGF 
-##### 流控原理 
-CPU过载控制是CG过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他计费消息将被丢弃/拒绝），将CPU使用率控制在目标范围之内。
+应用场景 :系统过载时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证CG业务稳定。 
+保护对象 :CGF 
+流控原理 :CPU过载控制是CG过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他计费消息将被丢弃/拒绝），将CPU使用率控制在目标范围之内。
 流控示意图如[图1](1615774734679.html#z6984a574b35e4317b318d2043717f716__d165de26-b0a2-437c-a088-0145f49358b5)所示。
 图1  CPU过负荷流控示意图
 []images/1616142799766.png)
@@ -5555,26 +5118,19 @@ CPU过载控制的门限配置，分为三级：轻度、普通、严重。默�
 当系统CPU负荷超过轻度负荷控制的门限（可配置）后，将按比例拒绝一部分ACR。 
 当系统CPU负荷超过普通负荷控制的门限（可配置）后，将不再接收新会话ACR（EVENT和START ACR）。 
 当系统CPU负荷超过严重负荷控制的门限（可配置）后，将不再接收ACR。 
-##### 防御策略 
-本功能永久生效，无法关闭。 
+防御策略 :本功能永久生效，无法关闭。 
 推荐使用默认配置，可以配置检测周期。 
 当拒绝接收ACR，CG向前台网元回复resultCode为3004（Diameter too busy）的ACA，网元会处理此类回复消息。 
-##### 配置方法 
-推荐采用默认配置。 
+配置方法 :推荐采用默认配置。 
 设置CPU监控参数。例如：监控阈值-轻度为60%，监控阈值-普通为80%，监控阈值-严重为90%，监控周期时长为1分钟。SET CPUCONTROL:BRTHRESHOLD=60,TRTHRESHOLD=80,FTHRESHOLD=90,DURATION=1;CPU使用率监控阈值必须满足如下规则：轻度(%) < 普通(%) < 严重(%)。当CPU使用率超过设置的阈值时，会产生相应级别的告警。 
 查询CPU监控参数。SHOW CPUCONTROL; 
 #### License流控 
-##### 应用场景 
-接收请求超过系统License设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
-##### 保护对象 
-CGF 
-##### 流控原理 
-流量控制与License功能融合，当每个流控检测周期（100秒）接收到的话务量超过License最大处理话务量，将不再接收ACR，向前台网元回复resultCode为3004（Diameter too busy）的ACA，网元会处理此类回复消息。 
-##### 防御策略 
-本功能默认开启。当每个流控检测周期的话务量超过License最大处理话务量，进行流控。当一个检测周期（1800秒）内流控次数达到指定次数（默认3次）时，上报告警。 
+应用场景 :接收请求超过系统License设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
+保护对象 :CGF 
+流控原理 :流量控制与License功能融合，当每个流控检测周期（100秒）接收到的话务量超过License最大处理话务量，将不再接收ACR，向前台网元回复resultCode为3004（Diameter too busy）的ACA，网元会处理此类回复消息。 
+防御策略 :本功能默认开启。当每个流控检测周期的话务量超过License最大处理话务量，进行流控。当一个检测周期（1800秒）内流控次数达到指定次数（默认3次）时，上报告警。 
 推荐使用默认配置。 
-##### 配置方法 
-推荐采用默认配置。 
+配置方法 :推荐采用默认配置。 
 License流控的开关，设置在/global/bill/conf/nmbsys.ini文件中。
 `[FlowControl]
 FlowControlSwitch=1 /*开启license流控*/
@@ -5582,30 +5138,20 @@ CheckPeriod=100    /*流控检测周期*/
 ThresholdTimes=3   /*一个检测周期内每秒话务量超过license设置的次数才上报告警*/
 AlarmPeriod=1800   /*上报告警检测周期*/` 
 #### 资源异常流控 
-##### 应用场景 
-由于CG需要话单落地，磁盘空间成为关键资源。当资源不足时，为了防止计费信息丢失，CG需要流控。 
-##### 保护对象 
-CGF 
-##### 流控原理 
-当CG出现资源不足时，向前台网元回复resultCode为4002（Out Of Space）的ACA，网元会处理此类回复消息。 
-##### 防御策略 
-本功能永久生效，无法关闭。 
+应用场景 :由于CG需要话单落地，磁盘空间成为关键资源。当资源不足时，为了防止计费信息丢失，CG需要流控。 
+保护对象 :CGF 
+流控原理 :当CG出现资源不足时，向前台网元回复resultCode为4002（Out Of Space）的ACA，网元会处理此类回复消息。 
+防御策略 :本功能永久生效，无法关闭。 
 当CG出现资源不足或者磁盘操作异常时，向业务返回状态码4002。 
-##### 配置方法 
-无。 
+配置方法 :无。 
 ### CG Ga口自保流控 
 #### License流控 
-##### 应用场景 
-接收请求超过系统License设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
-##### 保护对象 
-CGF 
-##### 流控原理 
-流量控制与License功能融合，当每个流控检测周期（100秒）已接收到的话务量超过License最大处理话务量，进行流控，该粒度的后续时间都不再处理UDP的socket缓存话单。
-##### 防御策略 
-本功能默认开启。当每个流控检测周期的话务量超过License最大处理话务量，进行流控。当一个检测周期（1800秒）内流控次数达到指定次数（默认3次）时，上报告警。 
+应用场景 :接收请求超过系统License设置时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
+保护对象 :CGF 
+流控原理 :流量控制与License功能融合，当每个流控检测周期（100秒）已接收到的话务量超过License最大处理话务量，进行流控，该粒度的后续时间都不再处理UDP的socket缓存话单。
+防御策略 :本功能默认开启。当每个流控检测周期的话务量超过License最大处理话务量，进行流控。当一个检测周期（1800秒）内流控次数达到指定次数（默认3次）时，上报告警。 
 推荐使用默认配置。 
-##### 配置方法 
-推荐采用默认配置。 
+配置方法 :推荐采用默认配置。 
 License流控的开关，设置在/global/bill/conf/nmbsys.ini文件中。
 `[FlowControl]
 FlowControlSwitch=1 /*开启license流控*/
@@ -5613,17 +5159,12 @@ CheckPeriod=100    /*流控检测周期*/
 ThresholdTimes=3   /*一个检测周期内每秒话务量超过license设置的次数才上报告警*/
 AlarmPeriod=1800   /*上报告警检测周期*/` 
 #### 资源异常流控 
-##### 应用场景 
-由于CG需要话单落地，磁盘空间成为关键资源。当资源不足时，为了防止计费信息丢失，CG需要流控。 
-##### 保护对象 
-CGF 
-##### 流控原理 
-当CG出现硬盘空间不足时，向前台网元回复资源不可用消息，同时发送重定向消息。 
-##### 防御策略 
-本功能永久生效，无法关闭。 
+应用场景 :由于CG需要话单落地，磁盘空间成为关键资源。当资源不足时，为了防止计费信息丢失，CG需要流控。 
+保护对象 :CGF 
+流控原理 :当CG出现硬盘空间不足时，向前台网元回复资源不可用消息，同时发送重定向消息。 
+防御策略 :本功能永久生效，无法关闭。 
 当CG出现硬盘空间不足时，触发流控。 
-##### 配置方法 
-无。 
+配置方法 :无。 
 ## DSC流控 
 
 
@@ -5644,12 +5185,9 @@ DSC提供自保流控、周边网元过载保护多套解决方案，对信令�
 
 ### 自保流控 
 #### 系统资源过负荷控制 
-##### 应用场景 
-系统过载时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务的稳定和高优先级业务的成功率。 
-##### 保护对象 
-DRA/STP/BSF/SCP
-##### 流控原理 
-系统资源负荷等级由CPU负荷等级和业务资源负荷等级共同决定，取其中负荷等级最高的作为当前系统资源负荷等级，并根据当前系统资源负荷等级对业务消息进行控制。 
+应用场景 :系统过载时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证业务的稳定和高优先级业务的成功率。 
+保护对象 :DRA/STP/BSF/SCP
+流控原理 :系统资源负荷等级由CPU负荷等级和业务资源负荷等级共同决定，取其中负荷等级最高的作为当前系统资源负荷等级，并根据当前系统资源负荷等级对业务消息进行控制。 
 目前业务资源包括会话缓存的内存资源和事务资源两种。 
 DRA系统中判断依据是取CPU负荷等级、会话资源负荷等级、事务资源负荷等级中的最高等级作为当前系统资源负荷等级并根据该等级对业务消息进行控制。 
 缺省配置情况下，CPU负荷等级设定参见[表1](DSC%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90%E8%BF%87%E8%B4%9F%E8%8D%B7%E6%8E%A7%E5%88%B6.html#T_1615002940323__CPU%E8%B4%9F%E8%8D%B7%E7%AD%89%E7%BA%A7-A69A35A5)（边界值按照低一级优先级处理）。
@@ -5679,18 +5217,13 @@ PPR|Cx|3
 3|业务优先级|100%|75%|50%|25%|0
 2|业务优先级|100%|100%|75%|50%|0
 1|业务优先级|100%|100%|100%|75%|0
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
-##### 配置方法 
-配置控制选项：其中：CPU负荷等级ID取值范围为100~104，业务资源负荷等级ID取值范围为105~109。例如：将ID为100的CPU 5级拥塞下限（%）设置为75。SET DOLCTRL:ID=100,VALUE=75; 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
+配置方法 :配置控制选项：其中：CPU负荷等级ID取值范围为100~104，业务资源负荷等级ID取值范围为105~109。例如：将ID为100的CPU 5级拥塞下限（%）设置为75。SET DOLCTRL:ID=100,VALUE=75; 
 配置消息优先级：例如：将消息优先级的标识设置为1，应用接口类型设置为16777238，命令码设置为272，优先级设置为LEVEL1。ADD DOLMSGPRI:ID=1,APPID=16777238,CMDCODE=272,PRIORITY="LEVEL1"; 
 #### 模块流量控制 
-##### 应用场景 
-模块流量超过预定的门限时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证本模块业务的稳定和高优先级业务的成功率。  
-##### 保护对象 
-DRA 
-##### 流控原理 
-模块流量控制分散在各模块独立控制。各模块收到Diameter业务请求消息时，根据本模块当前的流量和对应的消息优先级通过率，判断是否对该消息进行负荷控制。 
+应用场景 :模块流量超过预定的门限时，通过控制入向流控防止拥塞恶化造成整系统瘫痪，保证本模块业务的稳定和高优先级业务的成功率。  
+保护对象 :DRA 
+流控原理 :模块流量控制分散在各模块独立控制。各模块收到Diameter业务请求消息时，根据本模块当前的流量和对应的消息优先级通过率，判断是否对该消息进行负荷控制。 
 模块流量门限包括该模块总的流量门限和各优先级消息的流量门限。 
 各优先级消息的流量门限设定方式为： 
 各优先级消息的流量门限
@@ -5704,59 +5237,42 @@ DRA
 3|90%
 2|95%
 1|100%
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
-##### 配置方法 
-配置控制选项：例如：将ID为110的Diameter SMP流控门限设置为8000，ID为111的Diameter CMP流控门限设置为8000。SET DOLCTRL:ID=110,VALUE=8000;SET DOLCTRL:ID=111,VALUE=8000; 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
+配置方法 :配置控制选项：例如：将ID为110的Diameter SMP流控门限设置为8000，ID为111的Diameter CMP流控门限设置为8000。SET DOLCTRL:ID=110,VALUE=8000;SET DOLCTRL:ID=111,VALUE=8000; 
 配置消息优先级：例如：将消息优先级的标识设置为1，应用接口类型设置为16777238，命令码设置为272，优先级设置为LEVEL1。ADD DOLMSGPRI:ID=1,APPID=16777238,CMDCODE=272,PRIORITY="LEVEL1"; 
 #### 按对等端入局流控 
-##### 应用场景 
-某对等端异常，发送大量请求消息到本端时，触发入局流控保护本端。 
-##### 保护对象 
-DRA  
-##### 流控原理 
-收到Diameter Peer 1的请求消息Request后，先获取对等端局向的流控开关。若开关打开则进行入局局向流控，同时统计接收对等端（Diameter
+应用场景 :某对等端异常，发送大量请求消息到本端时，触发入局流控保护本端。 
+保护对象 :DRA  
+流控原理 :收到Diameter Peer 1的请求消息Request后，先获取对等端局向的流控开关。若开关打开则进行入局局向流控，同时统计接收对等端（Diameter
 Peer 1）消息流量，如果超过配置的接收对等端局向流量则启动流控。 
 对等端入局流控启动后，不同的应用消息可以按照不同的优先级设定控制规则。优先级设定条件包括应用ID、命令码、目的主机名、目的域名、源主机名、源域名等，根据不同的条件设定不同的控制优先级以及控制动作。控制动作分为丢弃、丢弃返回错误码。 
-##### 防御策略 
-本功能默认关闭，需要针对不同的对等端分析其合理的流量门限后，设置流控门限，并且针对该对等端的消息进行优先级分类。 
+防御策略 :本功能默认关闭，需要针对不同的对等端分析其合理的流量门限后，设置流控门限，并且针对该对等端的消息进行优先级分类。 
 建议按照对等端的角色开启。一般而言，针对客户端角色网元开启入局流控获取流控门限。 
 获取流控门限的方法：通过查询该对等端，统计一段时间内的峰值流量后计算得到。 
-##### 配置方法 
-设置合理的入局流控门限： 
+配置方法 :设置合理的入局流控门限： 
 例如：将入局流控门限设置为8000。 
 [SET DPEER](None):INFCTH=8000;
 #### 事务资源保护 
-##### 应用场景 
-某对等端异常，发送给它的请求消息都无法正常回复响应消息，会导致本端事务资源无法释放，影响到其他对等端业务。  
-##### 保护对象 
-DRA 
-##### 流控原理 
-本端事务资源为每个对等端的使用上限设置一个百分比的利用率。当给某个对等端发送请求消息后，如果该对等端不能及时返回响应消息，在事务超时之前的这段时间内，该对等端可能会占用大量事务资源不释放，造成其他对等端没有事务资源，无法发送消息。因此事务资源百分比可以控制某个对等端异常情况下最大能使用的资源数，保护有足够的事务资源供其他对等端使用。 
+应用场景 :某对等端异常，发送给它的请求消息都无法正常回复响应消息，会导致本端事务资源无法释放，影响到其他对等端业务。  
+保护对象 :DRA 
+流控原理 :本端事务资源为每个对等端的使用上限设置一个百分比的利用率。当给某个对等端发送请求消息后，如果该对等端不能及时返回响应消息，在事务超时之前的这段时间内，该对等端可能会占用大量事务资源不释放，造成其他对等端没有事务资源，无法发送消息。因此事务资源百分比可以控制某个对等端异常情况下最大能使用的资源数，保护有足够的事务资源供其他对等端使用。 
 当某个对等端出现异常，占用的事务资源超过上限后，本端针对后续请求消息就会直接丢弃或者返回指定响应码。 
-##### 防御策略 
-本功能默认开启，每个对等端取默认值。 
+防御策略 :本功能默认开启，每个对等端取默认值。 
 目前在用版本的默认值均为80%，需要手工调整为30%。 
-##### 配置方法 
-设置合理的最大事务资源百分比： 
+配置方法 :设置合理的最大事务资源百分比： 
 例如：将最大事务资源百分比设置为30。 
 [SET DPEER](None):MAXTRANS=30;
 ### 周边网元过载保护 
 #### 按对等端出局流控 
-##### 应用场景 
-某对等端异常，发送大量请求消息到本端时，触发出局流控保护下游网元。 
-##### 保护对象 
-对等端网元 
-##### 流控原理 
-发送Diameter Peer 1的请求消息前，先获取对等端局向的流控开关。若开关打开则进行出局局向流控，同时统计发送给对等端（Diameter
+应用场景 :某对等端异常，发送大量请求消息到本端时，触发出局流控保护下游网元。 
+保护对象 :对等端网元 
+流控原理 :发送Diameter Peer 1的请求消息前，先获取对等端局向的流控开关。若开关打开则进行出局局向流控，同时统计发送给对等端（Diameter
 Peer 1）消息流量，如果消息流量超过配置的发送对等端局向流量则启动流控。 
 对等端出局流控启动后，不同的应用消息可以按照不同的优先级设定控制规则。优先级设定条件包括应用ID、命令码、目的主机名、目的域名、源主机名、源域名等，根据不同的条件设定不同的控制优先级以及控制动作。控制动作分为丢弃、丢弃返回错误码。 
-##### 防御策略 
-本功能默认关闭，需要针对不同的对等端分析其合理的流量门限后，设置流控门限，并且针对该对等端的消息进行优先级分类。 
+防御策略 :本功能默认关闭，需要针对不同的对等端分析其合理的流量门限后，设置流控门限，并且针对该对等端的消息进行优先级分类。 
 建议按照对等端的角色开启。一般而言，针对服务端角色网元开启出局流控。 
 获取流控门限的方法：可以由下游网元给出，也可以根据DRA一段时间内统计的下游网元话务量来计算得到。  
-##### 配置方法 
-设置合理的出局流控门限： 
+配置方法 :设置合理的出局流控门限： 
 例如：将出局流控门限设置为8000。 
 [SET DPEER](None):OUTFCTH=8000;
 ## MSCS流控 
@@ -5780,12 +5296,9 @@ MSCS提供自保流控、周边网元过载保护多套解决方案，对信令�
 
 ### 自保流控 
 #### CPU拥塞控制 
-##### 应用场景 
-系统CPU过载时（包括MP/CMP/VMP），通过控制入向业务流，防止拥塞恶化造成整系统瘫痪，保证MSCS业务稳定以及高优先级业务的成功率。 
-##### 保护对象 
-MSCS 
-##### 流控原理 
-CPU拥塞控制是MSCS过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。 
+应用场景 :系统CPU过载时（包括MP/CMP/VMP），通过控制入向业务流，防止拥塞恶化造成整系统瘫痪，保证MSCS业务稳定以及高优先级业务的成功率。 
+保护对象 :MSCS 
+流控原理 :CPU拥塞控制是MSCS过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。 
 流控示意图如[图1](1615885038756.html#zd74910c6ba8b4a4ba32103c0fa7eb818__0d90c04f-7430-49b6-b56b-057300132fd8)所示。
 图1  CPU过负荷流控示意图
 []images/CPU%E8%BF%87%E8%BD%BD%E6%8E%A7%E5%88%B6.png)
@@ -5798,10 +5311,8 @@ CPU拥塞控制通过设置过载门限，将业务按照优先级进行控制�
 受控业务类型以及系统缺省定义的优先级如下： 
 高优先级位置更新、紧急呼叫、高优先级用户呼叫。 
 普通优先级移动起呼、局间入呼、短信起呼（包括A/Iu/SGs接口）、短信终呼补充业务、切换（包括A/Iu/Sv/MAP接口）。 
-##### 防御策略 
-本功能默认开启，推荐使用默认配置。 
-##### 配置方法 
-推荐采用默认配置。 
+防御策略 :本功能默认开启，推荐使用默认配置。 
+配置方法 :推荐采用默认配置。 
 使用[SHOW DEFCPUOLCFG](None)命令查询CPU过载默认配置，如[图2](1615885038756.html#zd74910c6ba8b4a4ba32103c0fa7eb818__cd081ef4-29a7-4eb6-a0ba-de433a1db089)所示。
 图2  CPU过载默认配置
 []images/1621394437627.png)
@@ -5809,30 +5320,22 @@ CPU拥塞控制通过设置过载门限，将业务按照优先级进行控制�
 图3  CPU过载当前配置
 []images/1621394534572.png)
 #### 总量流量控制 
-##### 应用场景 
-当系统CPU拥塞控制机制出现异常，导致CPU负荷居高不下，维护人员需手动对系统总的流量进行控制，限制接入MSCS的业务量。 
-##### 保护对象 
-MSCS 
-##### 流控原理 
-流量控制机制是指在流量控制周期（单位时间，缺省为10s）内，如果允许的所有业务数量超过设定阈值，则拒绝业务请求。允许流量按照MSCS全局允许通过量来设定。 
+应用场景 :当系统CPU拥塞控制机制出现异常，导致CPU负荷居高不下，维护人员需手动对系统总的流量进行控制，限制接入MSCS的业务量。 
+保护对象 :MSCS 
+流控原理 :流量控制机制是指在流量控制周期（单位时间，缺省为10s）内，如果允许的所有业务数量超过设定阈值，则拒绝业务请求。允许流量按照MSCS全局允许通过量来设定。 
 总量控制是指所有的业务数量之和超过设定阈值，按照每类业务流量的多少，对每类业务设置一个“等效CPU消耗”，表示系统该类一次业务所花费的负荷。 
 目前系统根据各业务流量自动计算等效CPU消耗。 
-##### 防御策略 
-当本局需要进行入向流量控制时，需要进行MSC业务能力限制配置。按照控制方式，入向流量控制可分为总量流量控制和单项流量控制。 
+防御策略 :当本局需要进行入向流量控制时，需要进行MSC业务能力限制配置。按照控制方式，入向流量控制可分为总量流量控制和单项流量控制。 
 总量流量控制主要按照CPU消耗来进行控制。MSC业务能力设置成功后，MSCS将对入向业务进行流量检查，当入向业务超过设置的阈值时，将进行流量控制。 
-##### 配置方法 
- 小心！ 
+配置方法 : 小心！ 
 该配置对业务影响较大，如需开启，请先联系中兴通讯。 
 当需要进行入向总量流量控制时，使用[ADD MSCSRVLMT](None)命令，新增MSCS业务能力限制。
 例如，设置为允许的业务总量为10000，其中，参数ALLSRVNUM表示控制每秒通过的业务总量。
 [ADD MSCSRVLMT](None):ALLSRVNUM=10000;
 #### 单项流量控制 
-##### 应用场景 
-当系统出现特定单个业务突发流量超过系统能力，维护人员需手动对系统单项业务的流量进行控制，限制该业务接入MSCS的业务量。 
-##### 保护对象 
-MSCS 
-##### 流控原理 
-流量控制（单项）是指在流量控制周期（可配置，缺省为10s）内，如果允许的某种业务数量超过设定阈值，则拒绝该业务请求。 
+应用场景 :当系统出现特定单个业务突发流量超过系统能力，维护人员需手动对系统单项业务的流量进行控制，限制该业务接入MSCS的业务量。 
+保护对象 :MSCS 
+流控原理 :流量控制（单项）是指在流量控制周期（可配置，缺省为10s）内，如果允许的某种业务数量超过设定阈值，则拒绝该业务请求。 
 目前支持的控制业务类型包括： 
 呼叫（包括移动起呼和入局呼叫） 
 短消息（包括起呼和终呼） 
@@ -5842,10 +5345,8 @@ LCS
 直传短消息 
 USSD 
 彩铃 
-##### 防御策略 
-当本局需要进行入向流量控制，并且是采用单项流量控制时，需要进行MSC业务能力限制配置，设置呼叫、位置更新、短消息、切换等单项业务的每秒允许通过数。 
-##### 配置方法 
-根据需要设置各单项业务数量。 
+防御策略 :当本局需要进行入向流量控制，并且是采用单项流量控制时，需要进行MSC业务能力限制配置，设置呼叫、位置更新、短消息、切换等单项业务的每秒允许通过数。 
+配置方法 :根据需要设置各单项业务数量。 
 [ADD MSCSRVLMT](None):CALLNUM=1000,LUNUM=1000,SMSNUM=1000,HONUM=1000,USSDNUM=1000,LCSNUM=1000,PBRTNUM=1000,DSMSNUM=1000;
 参数说明参考[表1](1615885288981.html#z837e44f2097b4764bed9bcd9351c43b6__46f4030f-3cc5-49b8-bd1c-e4d24204b592)。
 参数|说明
@@ -5859,13 +5360,10 @@ LCSNUM|允许的每秒LCS业务数量。
 PBRTNUM|允许的每秒彩铃数量。
 DSMSNUM|允许的每秒直传短消息数量。
 #### 信令拥塞控制 
-##### 应用场景 
-由于数据的配置或者是网络原因，导致信令交互出现大量失败，产生信令风暴，从而影响正常业务。 
+应用场景 :由于数据的配置或者是网络原因，导致信令交互出现大量失败，产生信令风暴，从而影响正常业务。 
 信令拥塞控制就是为了防止信令流量过大，造成业务拥塞。 
-##### 保护对象 
-MSCS 
-##### 流控原理 
-
+保护对象 :MSCS 
+流控原理 :
 信令拥塞通过如下两个指标进行判断： 
 链路拥塞No.7号链路可以通过设置ERL阈值来确定是否拥塞。偶联链路的拥塞程度通过发送缓存占用率来确定是否拥塞。当信令拥塞级别满足链路拥塞时，则对出向流量进行控制，即对下行业务进行控制。 
 SMP模块拥塞通过CPU占用率来判断是否拥塞。当信令拥塞级别满足SMP拥塞时，需要对入向/出向业务进行控制。一旦进入CPU过载区，还需要启动过负荷控制机制，按照流量控制机制实现一个业务周期内，下发的业务通过数超过允许通过量时即采取控制。每2s作为一个业务周期，可配置。 
@@ -5877,11 +5375,9 @@ NNI接口：TUP/BICC/ISUP的IAM消息。
 SIP接口：Invite消息。 
 SGs：Page消息。 
 Sv：HO消息。 
-##### 防御策略 
-入向业务控制：接收流控开关打开。 
+防御策略 :入向业务控制：接收流控开关打开。 
 出向业务控制：发送流控开关可在周边网元拥塞时，手动开启。 
-##### 配置方法 
-当需要对本局业务进行过负荷流量控制时，使用命令[SET SENDFC](None)设置信令处理模块负荷流量控制的数据。
+配置方法 :当需要对本局业务进行过负荷流量控制时，使用命令[SET SENDFC](None)设置信令处理模块负荷流量控制的数据。
 命令[SET SENDFC](None)参数说明参见[表1](1615885320045.html#z76c40d8cdc6442c3a019fdcd9fc56122__e1badda5-8e22-4088-8225-a9745a060731)。
 参数|名称|说明
 ---|---|---
@@ -5889,22 +5385,17 @@ FCFLAG|发送流控开关|出局业务流量过大，会导致信令处理模块
 RCVFC|接收流控开关|入局业务流量过大，会导致信令处理模块CPU负荷过高以及链路拥塞等问题，打开本开关，业务会根据所配流控参数，对入局消息进行流控。
 ### 周边网元过载保护 
 #### 单项业务流量控制 
-##### 应用场景 
-MSCS通过单向业务流量控制机制，限定到目标GT所对应邻接设备的业务，实现出向业务负荷控制，防止过量业务对邻接网元造成冲击。 
-##### 保护对象 
-对端网元 
-##### 流控原理 
-为了防止MSCS的业务对邻接网元产生严重冲击影响，需要通过出向单项流量控制机制控制到其他网元的消息流量。出向单项流量控制是指在流量控制周期（可配置，缺省为10s）内，如果出向业务数量超过设定阈值，则丢弃该消息，不再发送。 
+应用场景 :MSCS通过单向业务流量控制机制，限定到目标GT所对应邻接设备的业务，实现出向业务负荷控制，防止过量业务对邻接网元造成冲击。 
+保护对象 :对端网元 
+流控原理 :为了防止MSCS的业务对邻接网元产生严重冲击影响，需要通过出向单项流量控制机制控制到其他网元的消息流量。出向单项流量控制是指在流量控制周期（可配置，缺省为10s）内，如果出向业务数量超过设定阈值，则丢弃该消息，不再发送。 
 目前出向的控制主要考虑以下4种情况： 
 到HLR业务 
 到短消息中心业务 
 到SCP业务 
 到EIR的业务 
 通过目标GT配置，实现根据该GT组的负荷控制模板对目标GT所对应邻接设备的出向业务进行负荷控制。 
-##### 防御策略 
-缺省关闭。需要打开时，需先获知对端网元的处理能力，再根据处理能力设置最大允许通过业务数量。 
-##### 配置方法 
-使用命令[ADD GTLOADTMPLT](None)配置需要进行出向业务控制的邻接网元对应的目标GT。
+防御策略 :缺省关闭。需要打开时，需先获知对端网元的处理能力，再根据处理能力设置最大允许通过业务数量。 
+配置方法 :使用命令[ADD GTLOADTMPLT](None)配置需要进行出向业务控制的邻接网元对应的目标GT。
 命令[ADD GTLOADTMPLT](None)参数说明参见[表1](1615885345803.html#z744e61e1c5974982af0ba94a1c91f7c0__c32c9c27-0101-4378-bf57-06857488801d)。
 参数|名称|说明
 ---|---|---
@@ -5914,19 +5405,14 @@ NUMPERSECSMS|每秒允许发起到短消息中心业务的次数|该参数用于
 NUMPERSECSCP|每秒允许发起到SCP业务的次数|该参数用于设置每秒允许发起到SCP业务的次数。被控制的到SCP的业务请求包含各种到SCP的智能业务请求。
 NUMPERSECOTHER|每秒允许发起到其他对应网元业务的次数|该参数用于设置每秒允许发起到其他对应网元业务的次数。当前被控制的到其他对应网元业务请求包含Check IMEI过程。
 #### 其他网元拥塞控制 
-##### 应用场景 
-其他网元拥塞的时候，MSCS减少到该网元的业务量。当邻接局发生拥塞的时候，本局可以通过自动拥塞控制（ACC）机制，只允许一部分呼叫通过，另一部分呼叫直接拒绝或者重新选择新的局向出局，减少拥塞局的话务量，以减轻其拥塞。邻接局拥塞状态分为不拥塞、1级拥塞、2级拥塞。1级拥塞是CPU处于CPU负荷配置的低过载区，2级拥塞是CPU处于负荷配置的高过载区。 
-##### 保护对象 
-对端网元 
-##### 流控原理 
-周边网元拥塞的时候，会给MSCS发送通知消息（或字段），MSCS相应减少到该网元的业务量。目前支持BSC、RNC以及NNI接口。 
+应用场景 :其他网元拥塞的时候，MSCS减少到该网元的业务量。当邻接局发生拥塞的时候，本局可以通过自动拥塞控制（ACC）机制，只允许一部分呼叫通过，另一部分呼叫直接拒绝或者重新选择新的局向出局，减少拥塞局的话务量，以减轻其拥塞。邻接局拥塞状态分为不拥塞、1级拥塞、2级拥塞。1级拥塞是CPU处于CPU负荷配置的低过载区，2级拥塞是CPU处于负荷配置的高过载区。 
+保护对象 :对端网元 
+流控原理 :周边网元拥塞的时候，会给MSCS发送通知消息（或字段），MSCS相应减少到该网元的业务量。目前支持BSC、RNC以及NNI接口。 
 A/Iu接口的控制如果在A/Iu口接收到OVERLOAD消息，将该局向拥塞级别加1，并设定长短定时器。在短定时器期间如果再次收到OVERLOAD，则不理会。如果短定时器到时后又收到OVERLOAD消息，则局向拥塞级别加1，同时重新设置长短定时器。如果长定时器到时，则局向拥塞级别减1，直到为0。MSCS记录RNC/BSC拥塞级别，并相应减少允许下发的请求消息数（Page和CR）。 
 MC接口的控制如果MGW检测到拥塞，通过拥塞包通知MSCS，MSCS则根据MGW上报的允许通过率对下行消息进行控制。 
 NNI接口控制（ACC，自动拥塞控制）如果本网元收到来自对端的RELEASE消息，消息中携带了自动拥塞级别，则通知数据库，让数据库减少到该局向的电路选择次数。 
-##### 防御策略 
-缺省关闭。如果需要开启，则在和对端网元协商后才能开启。 
-##### 配置方法 
-A/Iu/MC口控制开启安全变量874， 根据MGW/RNC/BSC拥塞级别控制下行消息。命令如下： SET VARVAL:ID=874,VAL=1; 
+防御策略 :缺省关闭。如果需要开启，则在和对端网元协商后才能开启。 
+配置方法 :A/Iu/MC口控制开启安全变量874， 根据MGW/RNC/BSC拥塞级别控制下行消息。命令如下： SET VARVAL:ID=874,VAL=1; 
 NNI口控制开启ACC功能，对出向和入向话务控制分别控制。命令如下：SET TGFLG:CTGADD="ACCTCTL"&"ACLSEND";设置中继组拥塞控制参数。在中继组上配置拥塞级别1是操作方式为CANCEL（拒绝呼叫），比例为80%，拥塞级别2也为CANCEL（拒绝呼叫），比例为50%。整个中继的占用阈值为100%。命令如下：SET TG:GATE=100,EQUC1="TRUE",ACCL1=80,EQUC2="TRUE",ACCL2=50;设置CPU拥塞控制阈值保持缺省配置。设置QoS指标拥塞控制参数设置QoS指标对应的拥塞级别，QoS 指标50对应拥塞级别1，指标90对应拥塞级别2。命令如下：SET IPQOSCFG:AUTOCONGLVL1=50,AUTOCONGLVL2=90; 
 ## MGW流控 
 
@@ -5946,12 +5432,9 @@ NNI口控制开启ACC功能，对出向和入向话务控制分别控制。命�
 
 ### 自保流控 
 #### CPU拥塞控制 
-##### 应用场景 
-系统过载时，通过控制入向业务量防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
-##### 保护对象 
-MGW 
-##### 流控原理 
-CPU过载控制是MGW过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系。通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），来实现将CPU控制在目标范围之内。 
+应用场景 :系统过载时，通过控制入向业务量防止拥塞恶化造成整系统瘫痪，保证业务稳定。 
+保护对象 :MGW 
+流控原理 :CPU过载控制是MGW过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系。通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），来实现将CPU控制在目标范围之内。 
 CPU过载控制包括门限配置，过负荷区间在80%~100%，如下图所示。 
 图1  CPU过负荷区间
 []images/%E5%9B%BE%E7%89%871.png)
@@ -5961,23 +5444,16 @@ CPU过载控制包括门限配置，过负荷区间在80%~100%，如下图所示
 SCCP的CR消息（包含各种业务请求，例如位置更新、呼叫、短信）。 
 MAP的TC_BEGIN消息。 
 局间入局的IAM消息。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
-##### 配置方法 
-使用[SET CPUCTRL](None)命令设置用户面CPU负荷控制属性，推荐采用默认配置。
+防御策略 :本功能默认开启，并推荐使用默认配置。 
+配置方法 :使用[SET CPUCTRL](None)命令设置用户面CPU负荷控制属性，推荐采用默认配置。
 #### 信令拥塞控制 
-##### 应用场景 
-防止信令流量过大造成业务拥塞。 
-##### 保护对象 
-MGW 
-##### 流控原理 
-信令拥塞通过如下两个指标进行判断： 
+应用场景 :防止信令流量过大造成业务拥塞。 
+保护对象 :MGW 
+流控原理 :信令拥塞通过如下两个指标进行判断： 
 链路拥塞通过发送缓存占用率判断是否拥塞。 说明：No.7号链路可以通过设置ERL阈值来确定是否拥塞，偶联链路没有ERL统计，而且不同偶联共用带宽。偶联链路的拥塞程度通过发送缓存占用率来确定。 
 SMP模块拥塞通过CPU判断是否拥塞。信令拥塞级别为链路拥塞或SMP拥塞，两者之一拥塞，则对下行业务进行控制。SMP拥塞的情况下，还对入向的业务进行控制。目前支持控制的业务类型为：A/Iu接口：SCCP的CR消息和Page消息。MAP接口：TC_BEGIN消息。NNI接口：TUP/BICC/ISUP的IAM消息。 
-##### 防御策略 
-缺省不开启。MGW已不再作为STP使用，该控制无应用场景，不开启。 
-##### 配置方法 
-使用[SET FLOWCCTRL](None)命令设置信令流量控制，出向/入向流控开关参数说明参见下表，其他参数采用缺省配置。
+防御策略 :缺省不开启。MGW已不再作为STP使用，该控制无应用场景，不开启。 
+配置方法 :使用[SET FLOWCCTRL](None)命令设置信令流量控制，出向/入向流控开关参数说明参见下表，其他参数采用缺省配置。
 参数|名称|说明
 ---|---|---
 SFCFLAG|出向流控开关|发送流控开关，出局业务流量过大，会导致信令处理模块CPU负荷过高以及链路拥塞等问题。打开本开关，业务会根据所配流控参数，对出局消息进行流控。
@@ -5992,60 +5468,45 @@ UPF提供自保流控及周边网元过载保护多套解决方案，对信令�
 L2TP信令流控|周边网元过载保护|UPF和LNS 在L2TP隧道创建过程中的SCCRQ、SCCRP消息里携带Receive Window Size这个AVP，了解对端的L2TP消息并发处理能力。|是|自动开启（无法关闭）
 ### 自保流控 
 #### N4口过负荷控制 
-##### 应用场景 
-UPF在高负荷状态下运行，或被黑客进行PFCP消息攻击时，UPF进行N4口过负荷控制。 
-##### 保护对象 
-UPF 
-##### 流控原理 
-CPU过载控制是UPF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），来实现将CPU控制在目标范围之内。 
+应用场景 :UPF在高负荷状态下运行，或被黑客进行PFCP消息攻击时，UPF进行N4口过负荷控制。 
+保护对象 :UPF 
+流控原理 :CPU过载控制是UPF过载控制的核心机制，此机制综合评估CPU负荷及实际处理话务量（各类型消息的处理个数）的关系，通过动态调整实际处理话务量（其他话务量将被丢弃/拒绝，不再处理），来实现将CPU控制在目标范围之内。 
 UPF定时收集各个业务虚机CPU、流量、用户数信息，根据配置的负荷计算方式计算CPU负荷，然后根据CPU负荷进行PFCP会话创建消息接入控制。 
 PFCP会话创建消息负荷控制分为两级： 
 一级为控制会话创建Caps、上报OCI和LCI。 
 二级为拒绝会话创建消息，拒绝会话创建消息还可以配置是否给SMF应答。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。默认配置参见下表。 
+防御策略 :本功能默认开启，并推荐使用默认配置。默认配置参见下表。 
 负荷等级|相关参数|控制策略
 ---|---|---
 一级负荷|过负荷门限：75%恢复门限：55%|上报OCI、LCI（默认打开），控制会话接入Caps（默认关闭）
 二级负荷|CPU利用率：90%|拒绝所有会话创建消息
-##### 配置方法 
-配置负荷与过负荷控制参数，打开过负荷控制。设置不同业务单元CPU负荷采用最大值计算方式、上下文负荷采用平均值计算方式。总的负荷计算中，CPU利用率占比35%、上下文使用率占比35%，吞吐量占比30%。SET LOADINFOCFG:ENABLELCI="ENABLE",ENABLEOCI="ENABLE",CPUPOLICY="MAXPOLICY",USRPOLICY="AVERAGEPOLICY",THROUGHPUTPOLICY="ENABLE",ENABLEWEIGHT="ENABLE",CPUWEIGHT=35,USRWEIGHT=35,THROUGHPUTWEIGHT=30,CAPSSWITCH="ENABLE",CAPSTHRESHOLD=2 
+配置方法 :配置负荷与过负荷控制参数，打开过负荷控制。设置不同业务单元CPU负荷采用最大值计算方式、上下文负荷采用平均值计算方式。总的负荷计算中，CPU利用率占比35%、上下文使用率占比35%，吞吐量占比30%。SET LOADINFOCFG:ENABLELCI="ENABLE",ENABLEOCI="ENABLE",CPUPOLICY="MAXPOLICY",USRPOLICY="AVERAGEPOLICY",THROUGHPUTPOLICY="ENABLE",ENABLEWEIGHT="ENABLE",CPUWEIGHT=35,USRWEIGHT=35,THROUGHPUTWEIGHT=30,CAPSSWITCH="ENABLE",CAPSTHRESHOLD=2 
 打开过负荷控制，设置过负荷时控制会话接入速率为2KCaps。SET LOADINFOCFG:ENABLELCI="ENABLE",ENABLEOCI="ENABLE",CAPSSWITCH="ENABLE",CAPSTHRESHOLD=2 
 打开过负荷控制，设置CPU负荷超90%拒绝新会话接入。SET LOADINFOCFG:ENABLELCI="ENABLE",ENABLEOCI="ENABLE",RSPPOLICY="RESPONSE",REJECTTHRESHOLD=90 
 ### 周边网元过载保护 
 #### Error indication抑制 
-##### 应用场景 
-当UPF向对端GSN设备，特别是RAN发送的Error indication报文数目，影响对接网元的指标时，进行Error indication抑制。
-##### 保护对象 
-RAN、UPF 
-##### 流控原理 
-如果Error Indication发送开关关闭，则不发送Error Indication报文。 
+应用场景 :当UPF向对端GSN设备，特别是RAN发送的Error indication报文数目，影响对接网元的指标时，进行Error indication抑制。
+保护对象 :RAN、UPF 
+流控原理 :如果Error Indication发送开关关闭，则不发送Error Indication报文。 
 如果Error Indication发送开关打开，根据报文间隔数与静默时长，分为以下两种情况：配置报文间隔数为N，则按照协议每产生N个Error Indication报文才真正给对端发送一次。配置静默时长为M，则GTPU承载删除后的M秒内，收到报文都不会给对端设备回Error Indication报文。 
-##### 防御策略 
-本功能默认关闭。UPF可以通过以下三种方式抑制Error indication报文。 
+防御策略 :本功能默认关闭。UPF可以通过以下三种方式抑制Error indication报文。 
 完全关闭Error Indication报文发送。 
 每N个找不到转发表的报文发送一个Error Indication报文。 
 设置转发表删除一定时间内不发送Error Indication报文。 
  说明： 
 UPF默认每有一个找不到转发表的报文就发送一个Error Indication。如果有需要可以启用Error Indication抑制功能。 
-##### 配置方法 
-修改GTPU错误指示，关闭Error Indication报文发送。SET ERRORINDICATION:SENDSWITCH="DISABLE" 
+配置方法 :修改GTPU错误指示，关闭Error Indication报文发送。SET ERRORINDICATION:SENDSWITCH="DISABLE" 
 修改GTPU错误指示，设置每20个报文发送一个Error Indication。SET ERRORINDICATION:SENDSWITCH="ENABLE",SENDINTVAL=20 
 修改GTPU错误指示，设置Error Indication报文静默时长为5s。SET ERRORINDICATION:SENDSWITCH="ENABLE",SLILENTDURATION=5 
 #### L2TP信令流控 
-##### 应用场景 
-UPF和LNS之间发送L2TP信令。 
-##### 保护对象 
-UPF、LNS 
-##### 流控原理 
-UPF和LNS 在L2TP隧道创建过程中的SCCRQ、SCCRP消息里携带Receive Window Size这个AVP，了解对端的L2TP消息并发处理能力。
+应用场景 :UPF和LNS之间发送L2TP信令。 
+保护对象 :UPF、LNS 
+流控原理 :UPF和LNS 在L2TP隧道创建过程中的SCCRQ、SCCRP消息里携带Receive Window Size这个AVP，了解对端的L2TP消息并发处理能力。
 例如：UPF/LNS在Receive Window Size消息中指示接收窗口为N，对端可以在没有收到确认的情况下最多发送N个消息。如果没有发送这个AVP，对端必须假设接收窗口是4（协议规定的默认值）。 
-##### 防御策略 
-本功能默认开启。没有开关，通过协议实现。 
+防御策略 :本功能默认开启。没有开关，通过协议实现。 
 UPF根据对接的LNS数量决定本端接收窗口大小。 
 UPF支持按APN配置决定本端接收窗口大小。 
-##### 配置方法 
-配置L2TP接收窗口为20。 
+配置方法 :配置L2TP接收窗口为20。 
 [SET L2TPCFG](None):NAME="aaa",LACWINSIZE=20
 ## UDM/AUSF流控 
 因网络故障、系统升级、特殊事件、终端及应用等多种原因，均可能引发信令风暴，为保证业务稳定运行需部署相应的流控方案来预防、抑制信令风暴，避免网络拥塞及过载。 
@@ -6058,34 +5519,26 @@ UDM/AUSF提供自保流控、周边网元过载保护等多套解决方案，对
 周边网元过载保护|出向自适应流控|AUSF/UDM作为服务使用方，在服务提供方（比如AMF、SMF等）过负荷时，根据其返回的状态码主动进行流量控制或卸载处理。|是|默认开启
 ### 自保流控 
 #### 入向消息流量控制 
-##### 应用场景 
-通过控制单位时间内通过的各个单业务消息量和全部业务消息总量，来限制大话务业务量的输入对系统的冲击。 
-##### 保护对象 
-UDM/AUSF 
-##### 流控原理 
-单业务消息量流控：UDM/AUSF对单业务操作流量进行统计和流控。一旦达到各类业务配置的流量门限，AUSF/UDM针对流量过高的NF发起的被拒业务返回HTTP 429(Too Many Requests)状态码。收到该状态码后，对端NF应抑制到AUSF/UDM的请求消息数量。对于其他NF的被拒业务，则返回500(Internal Server Error)状态码。 
+应用场景 :通过控制单位时间内通过的各个单业务消息量和全部业务消息总量，来限制大话务业务量的输入对系统的冲击。 
+保护对象 :UDM/AUSF 
+流控原理 :单业务消息量流控：UDM/AUSF对单业务操作流量进行统计和流控。一旦达到各类业务配置的流量门限，AUSF/UDM针对流量过高的NF发起的被拒业务返回HTTP 429(Too Many Requests)状态码。收到该状态码后，对端NF应抑制到AUSF/UDM的请求消息数量。对于其他NF的被拒业务，则返回500(Internal Server Error)状态码。 
 全部业务消息总量流控：AUSF/UDM支持以服务为单位对业务总流量进行控制，避免AUSF/UDM的CPU等资源满载。一旦达到配置的业务总流量门限后，AUSF/UDM返回500(Internal Server Error)状态码。收到该状态码后，对端NF应抑制到AUSF/UDM的请求消息数量。支持对以下服务消息的总流量控制：AUSF服务消息UEAUTH服务消息SDM服务消息UECM服务消息EE服务消息(NF) AUSF/UDM全服务消息 
 各个业务处理实例将分别统计单位时间内单业务消息量和区分服务的业务消息总量，对于单位时间内超过配置的入向业务将予以拒绝或丢弃。 
 入向业务控制不考虑CPU是否拥塞，配置后立即生效，迅速限制大话务业务量的输入。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
-##### 配置方法 
-修改入向单业务流量门限：例如：修改AMF鉴权请求业务流控参数，为10000条/秒。SET SBISVCOLOPT:NFSOP="AUSF_GET_AUTHENTICATION_VECTOR_FOR_AMF",FLOWTHRESHOLD=10000; 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
+配置方法 :修改入向单业务流量门限：例如：修改AMF鉴权请求业务流控参数，为10000条/秒。SET SBISVCOLOPT:NFSOP="AUSF_GET_AUTHENTICATION_VECTOR_FOR_AMF",FLOWTHRESHOLD=10000; 
 修改入向NFS总业务流量门限：例如：修改(NFS) Nudm_SDM服务消息流量为10000条/秒。SET SBISVCOLOPT:NFSOP="SDM_SERVICE",FLOWTHRESHOLD=10000; 说明：触发NFS总业务流控时，AUSF/UDM不支持分时分用户流控策略，可能会导致同一用户的连续多次业务请求（如鉴权、注册、获取数据、订阅数据变更通知等）出现随机业务失败的情况，影响单用户全流程业务成功率，请谨慎设置。 
 修改入向NF总业务流量门限：例如：修改AUSF/UDM全服务消息流量为10000条/秒。SET SBISVCOLOPT:NFSOP="AUSF_UDM_SERVICE",FLOWTHRESHOLD=10000; 
 #### 系统资源过负荷控制 
 
 
-##### 应用场景 
-系统过载时，通过控制入向流控防止拥塞恶化造成系统瘫痪，保证业务稳定和高优先级业务成功率。 
+应用场景 :系统过载时，通过控制入向流控防止拥塞恶化造成系统瘫痪，保证业务稳定和高优先级业务成功率。 
 
 
-##### 保护对象 
-UDM/AUSF 
+保护对象 :UDM/AUSF 
 
 
-##### 流控原理 
-系统资源过负荷控制用于动态评估CPU负荷及实际处理话务量（各业务消息的处理个数）的关系，通过动态调整实际处理话务量（超出的话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。
+流控原理 :系统资源过负荷控制用于动态评估CPU负荷及实际处理话务量（各业务消息的处理个数）的关系，通过动态调整实际处理话务量（超出的话务量将被丢弃/拒绝，不再处理），来实现将CPU负荷控制在目标范围之内。
 预期控制效果如[图1](1615949489266.html#z608ee0cc850c4dccb28555bb4ab16834__d987bfd0-0c49-4eec-8e99-d8dd5f2678e3)所示。
 图1  系统资源过负荷控制
 
@@ -6106,90 +5559,66 @@ UDM/AUSF
 负荷超过流控阈值（默认85%，可配置）以后，低优先级业务被优先丢弃，高优先级业务也在逐渐增加丢弃比例，降低系统负荷。 
 
 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
 
 
-##### 配置方法 
-修改过负荷控制参数： 
+配置方法 :修改过负荷控制参数： 
 例如：“过负荷阀值”设置为70%，“过负荷拒绝方式”设置为返回429状态码，“流控用户流转周期”设置为30s。 
 [SET SBIOLOPT](None):OLTHRESHOLD=70,OLREJMODE=1,ROULETTECYCLE=30;
 
 
 #### 出向异常NF检测 
-##### 应用场景 
-识别并隔离异常NF的流量，防止少量异常NF过多占用系统资源，导致整个系统瘫痪。
-##### 保护对象 
-UDM/AUSF 
-##### 流控原理 
-UDM以实时PDB负荷作为参考指标，当PDB占用率超过80%时启动异常NF检测和保护，识别并隔离异常NF的流量，防止少量异常NF过多占用系统资源，导致整系统瘫痪。
+应用场景 :识别并隔离异常NF的流量，防止少量异常NF过多占用系统资源，导致整个系统瘫痪。
+保护对象 :UDM/AUSF 
+流控原理 :UDM以实时PDB负荷作为参考指标，当PDB占用率超过80%时启动异常NF检测和保护，识别并隔离异常NF的流量，防止少量异常NF过多占用系统资源，导致整系统瘫痪。
 
 UDM的每个业务模块对NF的交互异常行为（请求/响应超时）进行统计，每"异常交互统计周期"（默认10s），如NF的连续无响应次数大于配置的"单个端局连续交互异常门限"（默认100次），则认定该NF为异常端局，UDM发送"外部网元无响应异常"告警。如果异常NF端局已占用PDB个数超出配置的"单个异常端局占用资源上限"（默认100个），或者所有异常端局占用PDB总数超出配置的"全部异常端局占用资源上限"（默认800个）时，则禁止接收来自异常端局的新业务或主发到这些端局的新业务，否则允许业务。拒绝接收新业务时，返回503状态码。禁止主发新业务时，上报"当前网元业务受控"呼损。 
 当前异常端局的连续成功业务次数达到配置的"扫描周期内业务连续成功次数"（默认15次），判定端局恢复正常，并将端局从异常列表中删除。如果连续三个检查周期（每个周期默认10s，周期次数可通过"网络连续恢复正常次数"进行配置，默认3次），异常端局表中没有异常端局记录，且PDB占用小于70%，则对"外部网元无响应异常"告警进行恢复。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
-##### 配置方法 
-修改出向异常NF检测相关参数： 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
+配置方法 :修改出向异常NF检测相关参数： 
 例如："异常交互统计周期"设置为10s，"单个端局连续交互异常门限"为100次，"单个异常端局占用资源上限"设置为100个，"全部异常端局占用资源上限"设置为800个，"扫描周期内业务连续成功次数"设置为15次“，"网络连续恢复正常次数"设置为3次。 
 [SET SBIRESCTL](None):SCANTIMER=10,FAILTHRESHOLD=100,FAULTNFRES=100,ALLFAULTNFRES=800,SUCCTHRESHOLD=15,NWSUCCTHRESHOLD=3;
 ### 周边网元过载保护 
 #### 出向自适应流控 
-##### 应用场景 
-在批量修改业务签约或者大量用户4/5G切换时，可能触发UDM/AUSF发送大量的请求消息给AMF/SMF。UDM/AUSF根据AMF/SMF返回的状态码进行流量控制，防止本端出向流量过大造成周边网元持续过载。
-##### 保护对象 
-AMF/SMF等周边SBI接口网元 
-##### 流控原理 
-
+应用场景 :在批量修改业务签约或者大量用户4/5G切换时，可能触发UDM/AUSF发送大量的请求消息给AMF/SMF。UDM/AUSF根据AMF/SMF返回的状态码进行流量控制，防止本端出向流量过大造成周边网元持续过载。
+保护对象 :AMF/SMF等周边SBI接口网元 
+流控原理 :
 AUSF/UDM作为服务使用方，在服务提供方（比如AMF、SMF等）过负荷时，根据其返回的状态码主动进行流量控制或卸载处理。 
 收到HTTP 307 (Temporary Redirect)响应状态码时，支持根据响应中Location头部指示，将本次请求消息重定向至目标服务方。 
 收到HTTP 429 (Too Many Requests)响应状态码时，支持抑制出向到该NF的请求流量。 
 收到HTTP 503 (Service Unavailable)响应状态码时，支持抑制出向到该NF的请求流量。 
 AUSF/UDM在检测到上述状态码时，参考3GPP TS29.500中SRE（Site Reliability Engineering）描述，根据AUSF/UDM的出向业务请求数量、接收的响应数量，动态计算出向流量丢弃率，实现出向自适应节流。 
-##### 防御策略 
-本功能默认开启，并推荐使用默认配置。 
-##### 配置方法 
-修改出向自适应流控参数： 
+防御策略 :本功能默认开启，并推荐使用默认配置。 
+配置方法 :修改出向自适应流控参数： 
 例如：出向消息拒绝率设置为1。 
 [SET SBIOLOPT](None):OUTMSGREJRATE=1;
-# 缩略语 
-# 缩略语 
-## ACR 
+缩略语 :缩略语 :## ACR 
 Accounting Request计费请求
-## AMF 
-Access and Mobility Management Function接入和移动管理功能
-## APN 
-Access Point Name接入点名称
-## AUSF 
-Authentication Server Function鉴权服务器功能
+AMF :Access and Mobility Management Function接入和移动管理功能
+APN :Access Point Name接入点名称
+AUSF :Authentication Server Function鉴权服务器功能
 ## AVP 
 Attribute Value Pair属性值对
-## BSF 
-Binding Support Function绑定支持功能
+BSF :Binding Support Function绑定支持功能
 ## CGF 
 Charging
 Gateway Function 计费网关功能
-## CHF 
-Charging Function计费功能
+CHF :Charging Function计费功能
 ## CPU 
 Central Processing Unit中央处理器
-## DNN 
-Data Network Name数据网名称
+DNN :Data Network Name数据网名称
 ## DRA 
 Diameter Routing AgentDiameter路由代理
-## FQDN 
-Fully Qualified Domain Name完全限定域名
+FQDN :Fully Qualified Domain Name完全限定域名
 ## ID 
 Identifier识别
-## IP 
-Internet Protocol因特网协议
+IP :Internet Protocol因特网协议
 ## L2TP 
 Layer2 Tunneling Protocol第二层隧道协议
 ## LNS 
 L2TP Network ServerL2TP网络服务器
-## MME 
-Mobility Management Entity移动管理实体
-## NF 
-Network Function网络功能
+MME :Mobility Management Entity移动管理实体
+NF :Network Function网络功能
 ## OCI 
 Overload Control Information过载控制信息
 ## PDB 
@@ -6198,20 +5627,16 @@ Process Data Block进程数据区
 Packet Forwarding Control Protocol报文转发控制协议
 ## PL 
 Priority Level优先等级
-## QoS 
-Quality of Service服务质量
+QoS :Quality of Service服务质量
 ## QPS 
 Queries-per-second每秒查询率
 ## SCP 
 Service Control Point业务控制点
-## SGSN 
-Serving GPRS Support Node服务GPRS支持节点
-## SMF 
-Session Management Function会话管理功能
+SGSN :Serving GPRS Support Node服务GPRS支持节点
+SMF :Session Management Function会话管理功能
 ## STP 
 Signaling Transfer Point信令转接点
-## UDM 
-Unified Data Management统一数据管理
+UDM :Unified Data Management统一数据管理
 ## UDP 
 User Datagram Protocol用户数据报协议
 # 全融合接入解决方案 
@@ -6242,17 +5667,13 @@ User Datagram Protocol用户数据报协议
 动态共享：支持全接入模式，2/3/4/5G容量动态共享，避免为各种制式分别预留额外资源，节约资源成本。 
 协调演进：2/3/4G向5G平滑演进，网络节点数量及组网不变，演进过程中避免频繁的网元销毁、新建。 
 ## 全融合局点采用服务化接口 
-### 描述 
-
-### 描述 
-
+描述 :
+描述 :
 
  
 
-#### 应用场景 
-现有的2/3G网络服务于物联网用户及部分人网用户，将长期存在并持续提供服务，退网可能性较小。未来设备将演进为2/3/4/5G融合设备，支持对2/3/4/5G用户进行策略控制和融合计费。 
-#### 客户收益 
-受益方|受益描述
+应用场景 :现有的2/3G网络服务于物联网用户及部分人网用户，将长期存在并持续提供服务，退网可能性较小。未来设备将演进为2/3/4/5G融合设备，支持对2/3/4/5G用户进行策略控制和融合计费。 
+客户收益 :受益方|受益描述
 ---|---
 用户|用户不感知该方案。
 运营商|保护现有的2/3G网络，同时提供5G网络服务，节约建设成本。节省运维成本、提升运维效率。
@@ -6279,8 +5700,7 @@ N7+接口支持2/3G接入，即接入到PGW-C的2/3G用户的策略信息可以�
 在漫游接入场景下的全融合网络的组网架构中， 
 针对国际漫游用户，SGW-C通过Ga接口生成承载级话单（按承载计费）。 
 针对2/3G用户，GGSN-C/PGW-C/SMF通过N40+/N7+接口生成会话级话单（按会话计费）。 
-#### 实现原理 
-###### GGSN-C/SGW-C/PGW-C/SMF全融合 
+实现原理 :###### GGSN-C/SGW-C/PGW-C/SMF全融合 
 控制面功能全融合架构图如[图4](1607926602112.html#zeff3daa60b82441ea23576c135989f99__1a9941e2-c166-4d67-aa4b-9d4fc71b2c18)所示。
 图4  GGSN-C/SGW-C/PGW-C/SMF全融合
 []images/1607935360589.png)
@@ -6298,8 +5718,7 @@ SGW-C不提供服务化接口。
 SGW-U与PGW-C之间的S5-U接口采用内部接口。 
 ### 配置 
 ### 配置 
-#### 配置前提 
-###### 前提条件 
+配置前提 :###### 前提条件 
 核心网各网元已完成4、5G业务的基础配置，并保证5G用户的N7和N40接口信令交互正常。 
 ###### SMF数据规划 
 配置项|参数名称|参数取值|说明
@@ -6346,8 +5765,7 @@ IP地址类型|4G网络接口业务地址配置|IPv6|IPv6|IPv6|IPv6|IPv6|该参�
 IPV6地址|4G网络接口业务地址配置|195:166:127:5::100|195:166:127:5::100|195:166:127:6::100|195:166:127:6::100|195:166:127:7::100|该参数在“IPVERSION”配置为“IPv6”时为必选参数。该参数用于指示逻辑接口的IPv6地址。
 参考点类型|4G网络接口业务地址配置|S5S8U|S5S8U|S5S8U|S5S8U|S1U|该参数用于标识该逻辑接口是哪种3gpp referface point，可用于向NRF注册时携带的UPInterfaceTyp。判断具体注册的逻辑接口类型是N3，N6，N9。
 其他参数|4G网络接口业务地址配置|默认值|-|默认值|默认值|默认值|默认值
-#### 配置过程 
-###### SMF配置步骤 
+配置过程 :###### SMF配置步骤 
 步骤|说明|操作
 ---|---|---
 1|新增APNDNN接口模式配置模板，设置2/3/4/5G用户支持N40计费接口模式，2/3G和纯4G用户支持N7的PCC接口模式。|ADD INTERFACEMODEPROFILE:PROFILENAME="interfacemode",PURE4G23GACCINTERFACEMODE="N40",PURE4G23GPCCINTERFACEMODE="N7",5GACCINTERFACEMODE="N40"
@@ -6363,17 +5781,13 @@ IPV6地址|4G网络接口业务地址配置|195:166:127:5::100|195:166:127:5::10
 2|增加4G网络接口的网络实例配置。|ADD VPNINSTANCE:NETWORKINSTANCE="SGW-S5u",VPNID=0,VRFNAMEV6="N9",VPNIDV6=9,MS2MSMODE="INNERFORWARD"ADD VPNINSTANCE:NETWORKINSTANCE="SGW-S8u",VPNID=0,VRFNAMEV6="N9",VPNIDV6=9,MS2MSMODE="INNERFORWARD"ADD VPNINSTANCE:NETWORKINSTANCE="PGW-S5u",VPNID=0,VRFNAMEV6="N9",VPNIDV6=9,MS2MSMODE="INNERFORWARD"ADD VPNINSTANCE:NETWORKINSTANCE="PGW-S8u",VPNID=0,VRFNAMEV6="N9",VPNIDV6=9,MS2MSMODE="INNERFORWARD"ADD VPNINSTANCE:NETWORKINSTANCE="S1u",VPNID=0,VRFNAMEV6="N3",VPNIDV6=3,MS2MSMODE="INNERFORWARD"
 3|增加4G网络接口业务地址。|ADD LOGICIP:LOGICIPNAME="SGW-S5u",INTTYPE="CORE",NETWORKINSTANCE="SGW-S5u",IPVERSION="IPV6",IPV6ADDR="195:166:127:5::100",STATUS=NORMAL,PUBLISHBGPROUTE="ON",UPINTERFACETYPE="S5S8U"ADD LOGICIP:LOGICIPNAME="SGW-S8u",INTTYPE="CORE",NETWORKINSTANCE="SGW-S8u",IPVERSION="IPV6",IPV6ADDR="195:166:127:5::100",STATUS=NORMAL,PUBLISHBGPROUTE="ON",UPINTERFACETYPE="S5S8U"ADD LOGICIP:LOGICIPNAME="PGW-S5u",INTTYPE="ACCESS",NETWORKINSTANCE="PGW-S5u",IPVERSION="IPV6",IPV6ADDR="195:166:127:6::100",STATUS=NORMAL,PUBLISHBGPROUTE="ON",UPINTERFACETYPE="S5S8U"ADD LOGICIP:LOGICIPNAME="PGW-S8u",INTTYPE="ACCESS",NETWORKINSTANCE="PGW-S8u",IPVERSION="IPV6",IPV6ADDR="195:166:127:6::100",STATUS=NORMAL,PUBLISHBGPROUTE="ON",UPINTERFACETYPE="S5S8U"ADD LOGICIP:LOGICIPNAME="S1u",INTTYPE="ACCESS",NETWORKINSTANCE="S1u",IPVERSION="IPV6",IPV6ADDR="195:166:127:7::100",STATUS=NORMAL,PUBLISHBGPROUTE="ON",UPINTERFACETYPE="S1U"
 ## 全融合局点采用非服务化接口 
-### 描述 
-
-### 描述 
-
+描述 :
+描述 :
 
  
 
-#### 应用场景 
-部分运营商对支持服务化接口的计费功能改造困难，周期长，为了快速推出5G业务，可以在现有CG/OCS设备进行改造，以支持5G相关字段。 
-#### 客户收益 
-受益方|受益描述
+应用场景 :部分运营商对支持服务化接口的计费功能改造困难，周期长，为了快速推出5G业务，可以在现有CG/OCS设备进行改造，以支持5G相关字段。 
+客户收益 :受益方|受益描述
 ---|---
 用户|该方案用户不感知。
 运营商|对现网设备改造，快速开展5G业务，增加营收。充分利用现有投资，降低成本。
@@ -6383,8 +5797,7 @@ CG/OCS没有设计新的接口，在原有接口上进行扩展，变为Ga+/Gy+�
 图1  组网说明
 []images/Ch-0XV_O7RuAQVMyAADj_aZMbdY430.png)
 图中的红色实线表示数据流。 
-#### 实现原理 
-###### Ga+计费功能 
+实现原理 :###### Ga+计费功能 
 现有的Ga计费的原理如[图2](1607926660502.html#zeff3daa60b82441ea23576c135989f99__1077253f-7cbc-4fae-b1fa-ec9013b9fcd0)所示。
 Ga计费以承载为粒度生成话单，每个承载生成的话单有唯一的一个Charging ID。每个承载生成的话单内部对不同Service ID、Rating Group的业务用量进行了细分。 
 图2  现有Ga计费原理
@@ -6404,8 +5817,7 @@ Gy+支持按会话计费，原理如[图5](1607926660502.html#zeff3daa60b82441ea
 4/5G互操作用户及2/3/4G用户均可使用Gy+接口进行计费。 
 图5  Gy+计费
 []images/1608088147612.png)
-#### 应用限制 
-开启Ga+/Gy+接口功能时，有以下限制： 
+应用限制 :开启Ga+/Gy+接口功能时，有以下限制： 
 系统不支持多锚点功能，包括本地分流（即ULCL分流），Multi-Homing功能，SSC Mode3。 
 系统不支持碎片话单功能。 
 ### 配置 
@@ -6415,8 +5827,7 @@ Gy+支持按会话计费，原理如[图5](1607926660502.html#zeff3daa60b82441ea
 
  
 
-#### 配置前提 
-###### 前提条件 
+配置前提 :###### 前提条件 
 各网元已完成开局初始配置，保证用户可以正常接入，正常使用数据业务。 
 现网CG/OCS设备改造前，核心网已完成跟CG/OCS的对接，并且离线/在线话单可以正常生成。 
 已开通离线内容计费功能和在线内容计费功能，具体操作参见ZUF-82-13-002 离线内容计费和ZUF-82-13-003 在线内容计费。 
@@ -6432,8 +5843,7 @@ Gy+支持按会话计费，原理如[图5](1607926660502.html#zeff3daa60b82441ea
 5G用户的ACC接口模式|新增APNDNN接口模式配置模板，设置23G和纯4G用户的计费接口模式|Ga+/Gy+|5G用户的ACC接口模式，选项如下。N40：对会话进行计费，将计费信息通过N40接口发给CHF。Ga+/Gy+：对会话进行计费，将计费信息通过Gy接口发给OCS。
 修改关联APNDNN基础配置|APN/DNN|cmnet|APN/DNN。该APN/DNN名称必须先通过ADD APNDNN命令进行配置。
 接口模板名|修改关联APNDNN基础配置|interfacemode|该参数用于配置与APN/DNN关联的接口模板名称。该模板名称必须先通过ADD INTERFACEMODEPROFILE命令进行配置。
-#### 配置过程 
-###### SMF配置步骤 
+配置过程 :###### SMF配置步骤 
 步骤|说明|操作
 ---|---|---
 1|设置PGW话单里面携带TRAFFICVOLUME相关的字段。|SET CDRCARRY:CDRTYPE="PCDR",CDRFIELD="TRAFFICVOLUME",CARRY="ENABLE"
@@ -6448,8 +5858,7 @@ Gy+支持按会话计费，原理如[图5](1607926660502.html#zeff3daa60b82441ea
 5G网络切片是基于现有物理网络资源（如核心网设备、承载网设备、无线网络设备）之上的一个逻辑网络概念。定义和部署这个逻辑网络的目的，是基于统一的物理基础设施用于满足不同行业、不同用户的业务需求及网络特性。 
 5G网络切片是提供特定网络能力的、端到端的逻辑专用网络。一个网络切片实例是由网络功能和所需的物理/虚拟资源的集合，由无线、传输和核心网的子网络切片实例组成。从编排部署的角度看，切片的编排部署，就是每个子切片的编排部署以及子切片之间网络连接关系的部署。 
 ## 部署方案 
-### 系统架构 
-端到端切片系统架构图如[图1](1602816677580.html#z22d3a6099f75441b9ab9d18841d994ec__b989c91c-f170-4b08-88cc-47dcecb69a43)所示。
+系统架构 :端到端切片系统架构图如[图1](1602816677580.html#z22d3a6099f75441b9ab9d18841d994ec__b989c91c-f170-4b08-88cc-47dcecb69a43)所示。
 图1  端到端切片系统架构
 []images/%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%88%87%E7%89%87%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.png)
 端到端切片包括管理域和设备域。管理域和设备域又分为无线、承载和核心网三个网络子域： 
@@ -6492,8 +5901,7 @@ FlexE时隙。对所有业务，承载网均采用L3VPN Over SR Over FlexE业务
 因交换机仅做L2转发，承载网PE与UPF之间采用多个L3接口时，配置为ECMP方式，L3接口上启用BFD检测。 
 ## 三网子切片设计 
 ### 无线子切片设计 
-#### 概述 
-无线子切片设计指的是对无线子切片模板RAN NSST及配套的无线业务参数模板的设计。无线业务参数模板用于配套具体业务场景提供具体的业务参数。
+概述 :无线子切片设计指的是对无线子切片模板RAN NSST及配套的无线业务参数模板的设计。无线业务参数模板用于配套具体业务场景提供具体的业务参数。
 无线子切片实例RAN NSSI基于子切片模板和对应的无线业务参数模板，生成实例化参数并完成实例创建。
 #### 总体要求 
 设计无线子切片模板RAN NSST和配套无线业务参数模板，包括：子切片模板基本信息（比如：标识、子切片类型等）。切片PRB保留策略。切片QoS映射策略等信息。 
@@ -6527,8 +5935,7 @@ BOSS开通EHPLMN：可选。采用多PLMN ID方案下适用。需在USIM卡中�
  说明： 
 基站应支持配置至少15个切片。 
 ### 传输与承载子切片设计 
-#### 概述 
-承载子切片规划基于切片的VLAN分配、划分VPN ，并根据专网专线场景规划承载子切片的软硬通道。传输SPN的切片设计包括硬隔离(FLEX E)技术、软隔离(VPN)技术、QoS保障。 
+概述 :承载子切片规划基于切片的VLAN分配、划分VPN ，并根据专网专线场景规划承载子切片的软硬通道。传输SPN的切片设计包括硬隔离(FLEX E)技术、软隔离(VPN)技术、QoS保障。 
 #### 传输隔离能力划分 
 传输隔离能力划分为以下几类： 
 T10|T20|T30
@@ -6569,8 +5976,7 @@ VLAN优先级完成无线VLAN priority和VLAN ID与传输VLAN priority/DSCP的�
 承载|网管配置域|映射参数|VLAN<->VPN，不同VPN
 承载|网管配置域|映射参数|DC内VLAN<->DC外VLAN
 ### 核心网子切片设计 
-#### 概述 
-核心网子切片设计指的是对核心网子切片模板NSST的设计，核心网子切片实例NSSI基于此模板并结合具体的实例化参数完成实例创建。 
+概述 :核心网子切片设计指的是对核心网子切片模板NSST的设计，核心网子切片实例NSSI基于此模板并结合具体的实例化参数完成实例创建。 
 #### 总体要求 
 设计核心网子切片模板NSST，包括：切片子网模板基本信息（例如：标识、切片子网类型等）。切片子网能力模型参数 (例如：用户数、时延、容量、移动性、可靠性等)。切片子网所包含资源模型（例如：NSD信息等）。切片子网策略模型信息（例如：SLA闭环策略、自愈策略等）。 
 在没有单独设计NFV网络服务的情况下，核心网子切片设计应包括：NS的设计。核心网子切片网络资源设计。 
@@ -6601,12 +6007,9 @@ BOSS开通/签约数据配置策略数据：包含新增/修改用户属性签�
 ### 开通无线子切片 
 开通无线子切片可以基于图形化界面配置，也可以通过导入参数模板文件的方式进行批量操作。 
 #### 开通无线子切片（图形化界面方式） 
-##### 摘要 
-本节介绍如何通过图形化界面的方式开通无线子切片功能。 
-##### 前提 
-承载网打通与无线RAN和5GC两侧的路由。 
-##### 步骤 
-在无线UME网管客户端，选择菜单无线配置管理→MO编辑器
+摘要 :本节介绍如何通过图形化界面的方式开通无线子切片功能。 
+前提 :承载网打通与无线RAN和5GC两侧的路由。 
+步骤 :在无线UME网管客户端，选择菜单无线配置管理→MO编辑器
 ，选择需要配置的网元进行配置。
 选择传输网络→接口
 节点，配置管理面、控制面及用户面VLAN等基站接口参数信息，如[图1](1603795105116.html#z9c1a7a05b9244429b0776f60cf4b7496__acbae343-dbd1-4b30-a8ce-45a37263c8b1)所示。
@@ -6661,12 +6064,9 @@ BOSS开通/签约数据配置策略数据：包含新增/修改用户属性签�
 图11  打开切片组PRB资源保障功能开关
 []images/%E6%89%93%E5%BC%80%E5%88%87%E7%89%87%E7%BB%84PRB%E8%B5%84%E6%BA%90%E4%BF%9D%E9%9A%9C%E5%8A%9F%E8%83%BD%E5%BC%80%E5%85%B3.png)
 #### 开通无线子切片（参数模板方式） 
-##### 摘要 
-本节介绍如何通过参数模板文件方式开通无线子切片功能。 
-##### 前提 
-承载网开通与无线RAN和5GC两侧的路由。 
-##### 步骤 
-导出excel参数模板
+摘要 :本节介绍如何通过参数模板文件方式开通无线子切片功能。 
+前提 :承载网开通与无线RAN和5GC两侧的路由。 
+步骤 :导出excel参数模板
 在无线UME客户端，选择菜单无线配置管理→数据导出
 ，打开数据导出页面，如[图1](1603795108416.html#zb364d538fce44e98b94076614c04387f__6b44ec1b-0913-4982-98b9-12b88c4f43e8)所示。
 图1  数据导出页面
@@ -6705,18 +6105,15 @@ PlmnGroupList|PlmnGroupList|该节点用于设置PlmnGroupList相关参数。
 ，进行数据同步，如[图6](1603795108416.html#zb364d538fce44e98b94076614c04387f__e022642e-9a2c-4be3-8fa1-1d789af4491a)所示。
 图6  立即激活
 []images/%E7%AB%8B%E5%8D%B3%E6%BF%80%E6%B4%BB.png)
-##### 相关任务 
-如果参数模板页面显示为空，则需要先进行创建参数模板的操作。 
+相关任务 :如果参数模板页面显示为空，则需要先进行创建参数模板的操作。 
 在UME客户端，选择无线配置管理→模板管理
 ，单击创建，增加全参模板，如[图7](1603795108416.html#zb364d538fce44e98b94076614c04387f__4cbaaeaa-f724-4663-91cc-3abaff92723f)所示。
 图7  创建参数模板
 []images/%E5%88%9B%E5%BB%BA%E5%8F%82%E6%95%B0%E6%A8%A1%E6%9D%BF.png)
 ### 开通承载子切片 
 #### 配置承载子切片数据 
-##### 摘要 
-本节介绍如何在承载UME客户端配置承载子切片数据。 
-##### 步骤 
-在承载UME客户端网络切片页面，配置承载子切片硬隔离，如[图1](1603807350199.html#z31f2795d54ee49439e476a2bcfb19fec__57d0c2e4-b27b-4d1a-9f62-3946ca28e478)所示。
+摘要 :本节介绍如何在承载UME客户端配置承载子切片数据。 
+步骤 :在承载UME客户端网络切片页面，配置承载子切片硬隔离，如[图1](1603807350199.html#z31f2795d54ee49439e476a2bcfb19fec__57d0c2e4-b27b-4d1a-9f62-3946ca28e478)所示。
 图1  承载子切片硬隔离配置
 []images/%E6%89%BF%E8%BD%BD%E5%AD%90%E5%88%87%E7%89%87%E7%A1%AC%E9%9A%94%E7%A6%BB%E9%85%8D%E7%BD%AE.png)
 在业务配置页面配置隧道软隔离技术，如[图2](1603807350199.html#z31f2795d54ee49439e476a2bcfb19fec__a83fe906-a0e9-4989-a183-910539fd28ac)和[图3](1603807350199.html#z31f2795d54ee49439e476a2bcfb19fec__60fbfb8c-51b5-47ea-9a0b-891d063f5772)所示。
@@ -6730,10 +6127,8 @@ PlmnGroupList|PlmnGroupList|该节点用于设置PlmnGroupList相关参数。
 配置网元、链路。 
 配置flexegroup、flexe channel、flexe以太网通道。 
 #### 实例化承载子切片 
-##### 摘要 
-本节介绍如何进行承载子切片实例化操作。 
-##### 步骤 
-获取现场组网信息，根据组网信息配置切片实例化参数文件slice.xlsx。参数含义及配置方法参见[表1](1603942798689.html#zfdfd2c4301024c9f84eaf8d571c11755__88eae516-462a-4a55-9e30-25cd27dd6d19)。
+摘要 :本节介绍如何进行承载子切片实例化操作。 
+步骤 :获取现场组网信息，根据组网信息配置切片实例化参数文件slice.xlsx。参数含义及配置方法参见[表1](1603942798689.html#zfdfd2c4301024c9f84eaf8d571c11755__88eae516-462a-4a55-9e30-25cd27dd6d19)。
 字段|取值获取方法
 ---|---
 网元ID|从拓扑→资源列表→网元中获取。
@@ -6764,12 +6159,10 @@ FlexE切片ID|目前测试使用的都是基于物理网络的L3VPN，此处不�
 #### 创建核心网子切片蓝图 
 
 
-##### 摘要 
-本节介绍如何开通核心网子切片蓝图。 
+摘要 :本节介绍如何开通核心网子切片蓝图。 
 
 
-##### 相关信息 
-通过创建核心网子切片蓝图，设计核心网子切片模板NSST。NSST模板是面向不同的业务场景需求及不同的资源部署形态而制定的具备一定可重用性的子切片实例模板。
+相关信息 :通过创建核心网子切片蓝图，设计核心网子切片模板NSST。NSST模板是面向不同的业务场景需求及不同的资源部署形态而制定的具备一定可重用性的子切片实例模板。
 当部署切片时，可以通过核心网NS的定义来设置切片参数数据。 
 核心网NS主要定义5GC NF如何分配到不同的NS中。如共享同一个切片的5GC NF可以分配到一个NS中，独占一个切片的5GC
 NF可以单独分配到一个NS中。NS的规划示例参见[表1](1605183921585.html#z301e720794b04f5e934eb405511f3d65__2ef4e16a-c900-4e8a-a7da-cd1683f37df9)。其中，控制面NF共享一个NS中。由于每个切片独占UPF，故UPF单独分配到一个NS中。
@@ -6780,8 +6173,7 @@ NS-VR|UPF17
 NS-SHM|UPF27
 
 
-##### 步骤 
-
+步骤 :
 
 在GSO客户端，选择菜单编排→设计→蓝图中心
 ，并切换到NSST页签，如[图1](1605183921585.html#z301e720794b04f5e934eb405511f3d65__aaf4f3b3-ee1d-403f-b336-091e1360c96f)所示。
@@ -6838,10 +6230,8 @@ NS-SHM|UPF27
 
 
 #### 实例化核心网子切片 
-##### 摘要 
-本节介绍如何实例化核心网子切片。 
-##### 步骤 
-在GSO客户端，选择编排→应用→NSSI
+摘要 :本节介绍如何实例化核心网子切片。 
+步骤 :在GSO客户端，选择编排→应用→NSSI
 ，在NSSI页面，单击新建按钮，如[图1](1605343790464.html#z2a7f2e7a73df41e189bd2af72f64a58f__0dac56f5-e754-40da-94f1-5cb106f98b3f)所示。
 图1  NSSI页面
 []images/NSSI%E9%A1%B5%E9%9D%A2.png)
@@ -6866,26 +6256,21 @@ NS-SHM|UPF27
 目前，运营商均自建了端到端切片管理系统。当无线子切片、承载子切片、核心网子切片创建完成后，中兴通讯支持将三网子切片接入运营商NSMF。由运营商NSMF拉通三网子切片并统一管理。 
 当运营商没有自建NSMF系统时，可以通过核心网Cloudstudio GSO作为NSMF，与中兴通讯三网子切片对接，统一拉通三网子切片，具体步骤参见[GSO统一开通端到端切片](1603448467219.html)。
 ## GSO统一开通端到端切片 
-### 摘要 
-在GSO客户端统一开通端到端切片，拉通无线子切片、承载子切片和核心网子切片，包括： 
+摘要 :在GSO客户端统一开通端到端切片，拉通无线子切片、承载子切片和核心网子切片，包括： 
 创建核心网子切片蓝图在GSO客户端蓝图中心NSST页面，新建核心网子切片NSST模板。 
 创建端到端切片蓝图在GSO客户端蓝图中心NST页面，新建端到端切片NST模板，通过与无线UME和承载UME的接口，获取无线子切片和承载子切片的模型。 
 部署端到端切片在GSO客户端编排页面，通过导入json文件，获取无线子切片和承载子切片的配置文件，触发各子切片NSSMF系统加载配置文件，再由GSO统一拉通三网子切片。 
-### 前提 
-GSO上需要提供的端到端切片和各子切片的json文件，包括： 
+前提 :GSO上需要提供的端到端切片和各子切片的json文件，包括： 
 端到端切片json文件提供切片的能力需求参数、S-NSSAI和PLMN等相关信息，在部署切片时导入。 
 无线子切片json文件提供无线子切片的配置文件名称，如“SubSlice-sd1118481-RAN.zip”。在创建无线子切片时导入，从而能够通过接口通知无线NSSMF创建无线子切片。 
 核心网子切片json文件提供核心网子切片NSSI和NS的对应关系。在创建核心网子切片时导入，从而能够建立核心网子切片与NS之间的关系。 
 承载子切片json文件提供承载子切片的配置文件slice.xlsx在承载UME的路径。在创建承载子切片时导入，从而能够通过接口通知承载NSSMF创建承载子切片。 说明：slice.xlsx文件的具体参数参见实例化承载子切片。 
-### 步骤 
-在GSO客户端蓝图中心NSST页面，创建核心网子切片蓝图。 
+步骤 :在GSO客户端蓝图中心NSST页面，创建核心网子切片蓝图。 
 在GSO客户端蓝图中心NST页面，创建端到端切片蓝图。 
 在GSO客户端编排页面，部署端到端切片。
 扫描如下二维码，获取《GSO端到端切片操作演示》完整视频。 
 []images/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA%E4%BA%8C%E7%BB%B4%E7%A0%81_new.png)
-# 缩略语 
-# 缩略语 
-## CIDR 
+缩略语 :缩略语 :## CIDR 
 Classless Inter-Domain Routing无类别域间路由
 ## CP 
 Connection Point连接点
@@ -6893,14 +6278,12 @@ Connection Point连接点
 Data Center数据中心
 ## FlexE 
 Flex Ethernet灵活以太网
-## FTP 
-File Transfer Protocol文件传输协议
+FTP :File Transfer Protocol文件传输协议
 ## GSO 
 Global Service Orchestrator全局业务编排器
 ## L3VPN 
 Layer 3 Virtual Private Network三层虚拟专用网
-## NF 
-Network Function网络功能
+NF :Network Function网络功能
 ## NS 
 Network Service网络服务
 ## NSMF 
@@ -6915,35 +6298,29 @@ Network Slice Subnet Template网络子切片模板
 Provider Edge运营商网络边缘
 ## PRB 
 Physical Resource Block物理资源块
-## QoS 
-Quality of Service服务质量
+QoS :Quality of Service服务质量
 ## SLA 
 Service Level Agreement服务等级协议
 ## UME 
 Unified Management Expert统一管理专家
-## UPF 
-User Plane Function用户平面功能
+UPF :User Plane Function用户平面功能
 ## UUID 
 Universal Unique Identifier全局唯一标识符
 ## VL 
 Virtual Link虚拟链路
-## VNF 
-Virtualized Network Function虚拟化网络功能
+VNF :Virtualized Network Function虚拟化网络功能
 # 流量经营解决方案 
 ## 背景与挑战 
 在移动互联网时代，越来越多的互联网公司越过运营商，发展基于开放互联网的各种视频及数据服务业务（又称OTT）。这些OTT应用促进用户行为改变，把人的时间碎片化和重叠化，一方面吸引用户使用移动数据业务增加运营商管道的流量，另一方面也从海量用户的大数据分析中挖掘新的价值。
 运营商和OTT跨界竞争，实质是产业价值正向应用和服务转移。为了避免管道化，运营商需要强化数据业务精细化运营能力，优化网络资源使用、提升网络的智能化水平、提升用户体验，从而拥抱OTT的强力挑战，把产业价值更好地向应用和服务转移。
 在以上运营商业务转型的背景下，流量经营应运而生，本文重点阐述5G核心网流量经营解决方案的场景和原理。 
 ## 方案描述 
-### 定义 
-#### 定义 
-流量经营是以智能管道（物理网络）和聚合平台（商业网络）为基础；以扩大流量规模、提升流量层次、丰富流量内涵为经营方向；以释放流量价值为目的的一系列理念、策略和行动的集合。流量经营的最终目的是顺应移动互联网的发展，转变运营商的收入结构，达到利润最大化。中兴通讯提供的流量经营解决方案，包括了流量经营的若干场景，利用3GPP协议的PCC架构实现流量经营。
+定义 :定义 :流量经营是以智能管道（物理网络）和聚合平台（商业网络）为基础；以扩大流量规模、提升流量层次、丰富流量内涵为经营方向；以释放流量价值为目的的一系列理念、策略和行动的集合。流量经营的最终目的是顺应移动互联网的发展，转变运营商的收入结构，达到利润最大化。中兴通讯提供的流量经营解决方案，包括了流量经营的若干场景，利用3GPP协议的PCC架构实现流量经营。
 不同于话务经营和宽带经营，流量经营是在全业务和移动互联网新形势下，通信运营商向信息运营商转型的全新命题，是顺应移动互联网发展规律、把握移动互联网发展机遇，改变互联网时代“管道工”角色的关键。 
 流量经营的提出与通信需求向信息需求的转型有莫大的关系。这种转型根本性地重塑电信运营商的价值创造方式，必然也要求电信运营商的基础设施和商业模式随之做出转变，而智能管道和聚合平台是实现这一转变的抓手和基石。为了避免“被管道化”，目前三大运营商正积极构建移动互联网的生态体系，在服务内容上不断丰富。 
 流量经营对运营商的意义在于：帮助运营商从个性化需求中寻求价值；从流量规模的经营转变为流量价值的经营；从而丰富流量内涵，突破底层流量，提升流量层次。 
 流量经营也与大家的生活息息相关。例如每个月大家使用的各式各样的流量套餐，套餐的本质一种流量经营——对流量、上网速率等使用情况进行管控。例如：在签约的包月流量套餐耗尽前，能享受高速带宽，看视频、下载均畅通无阻，但套餐快要耗尽时，用户会收到短信，提示合理使用流量，套餐耗尽后也会短信提示对用户上网将进行限速等。 
-#### 系统架构 
-5G网络中的PCC整体系统架构如[图1](1632395447564.html#z718f43945a644d4ba70ff7b152063a5f__57a0fdfe-4266-41ca-aadd-748493860f1c)所示。
+系统架构 :5G网络中的PCC整体系统架构如[图1](1632395447564.html#z718f43945a644d4ba70ff7b152063a5f__57a0fdfe-4266-41ca-aadd-748493860f1c)所示。
 图1  组网图
 []images/1630342114762.png)
 涉及NF的功能说明，参见下表。 
@@ -7103,8 +6480,7 @@ QoS策略
 举例： 
 PCC系统可以根据用户的时段实施差异化策略控制。通常，网络忙时负荷重，闲时负荷轻。运营商希望通过时段策略来调节忙闲时网络负荷，例如：忙时对P2P等低价值业务限速，防止网络拥塞；推出闲时优惠套餐，引导用户增加闲时上网，减少忙时上网。此外，运营商也可能推出Happy Hour流量免费等基于时段的促销活动，或和OTT厂商合作在指定时段对OTT业务流量免费。 
 用户位置实施差异化策略控制。例如：当用户在特定位置时，向其发送欢迎或促销短信。限制用户在体育场馆等人口密集区使用P2P业务或视频业务的带宽，以保障大多数人的上网体验。 
-### 场景说明 
-5GC支持如下流量经营的典型应用场景。 
+场景说明 :5GC支持如下流量经营的典型应用场景。 
 场景名称|描述|参考
 ---|---|---
 拥塞控制|运营商根据不同场景下业务的优先级进行差异化服务的策略。|具体场景说明参见：流量经营场景之拥塞控制
@@ -7117,13 +6493,11 @@ Tethering控制|运营商基于用户终端的区别实行差异化流量经营�
 达量降速|运营商通过PCF进行流量累计，在累计流量达到一定限额时，限制用户访问速率或提高资费。|具体场景说明参见：流量经营场景之达量限速
 超套限速|运营商通过第三方系统上报的流量累计，在累计流量达到一定限额时，限制用户访问速率。|具体场景说明参见：流量经营场景之超套限速
 ## 流量经营场景之拥塞控制 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 网络拥塞是一种网络过度负载状态。在这种状态下，少量用户使用带宽抢占能力强的业务（例如P2P业务）时占用大量传输资源，使大量其他用户在使用交互类业务（例如网页浏览、邮件收发）时发生数据丢失、时延增加、吞吐量下降的现象，影响用户体验。 
 网络拥塞十分普遍，通常发生在人口密集区域，例如景区、高校、道路、高铁、地铁、商业中心、办公区、居民区、大型活动等场所。 
 为了满足运营商根据用户所在位置区域进行差异化业务控制需求，中兴通讯提出了支持基于用户位置的拥塞控制解决方案。 
-#### 场景说明 
-拥塞控制策略是一种根据不同位置场景下业务的优先级进行差异化服务的策略。有利于运营商提高网络资源效益，提高用户体验。 
+场景说明 :拥塞控制策略是一种根据不同位置场景下业务的优先级进行差异化服务的策略。有利于运营商提高网络资源效益，提高用户体验。 
 拥塞控制策略的核心在于“控保结合”，即： 
 控制用户不敏感、大颗粒度、流量占比大的业务，对受控制业务的上行/下行速率进行控制。 
 保障高敏感、用户易投诉、流量占比小的业务。 
@@ -7158,9 +6532,7 @@ QCI是资源类型、优先级、时延、丢包率等一组参数（称为QCI�
 优先级：承载上数据包的调度和速率控制等转发处理的优先级。 
 分组数据延时：即时延，指一个报文或分组从一个网络的一端传送到另一端所需要的时间。 
 分组数据丢包率：即丢包率，指在网络传输过程中丢失报文的百分比，用来衡量网络正确转发用户数据的能力。 
-### 实现原理 
-#### 概述 
-拥塞控制策略是一种根据不同位置场景下业务的优先级进行差异化服务的策略，可以基于指定位置和业务进行差异化的策略控制。 
+实现原理 :概述 :拥塞控制策略是一种根据不同位置场景下业务的优先级进行差异化服务的策略，可以基于指定位置和业务进行差异化的策略控制。 
 部署基于指定用户位置的拥塞控制解决方案，是指为拥塞控制的区域定义PRA（Presence Reporting Area，出现上报区域）区域，用户进入这些区域，区分业务流进行限速。 
 PRA可分为动态PRA和预定义PRA两种类型。 
 动态PRA类型PRA区域列表来自用户签约信息或由第三方应用提供给PCF，PCF给SMF下发PRA订阅信息时，需要同时携带PRA ID和完整的PRA区域列表。 
@@ -7187,22 +6559,18 @@ SMF通过Namf_EventExposure_Subscribe Request向AMF订阅PRA事件，当UE进入
 26|PCF向SMF发送Npcf_SMPolicyControl_Update Response消息，PCF基于PRA位置进行策略决策，判断用户进入拥塞区域，下发拥塞区域的预定义规则组。
 27|SMF向UPF发送PFCP Session Modification Request消息，携带拥塞区域的预定义规则组，UPF上预配置拥塞区域的预定义规则组，比如保障用户上网和IM类通信业务、劣化游戏和视频类业务。
 ## 流量经营场景之校园通 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 校园是具备集中用户的典型区域。充分开发集中用户，可以实现校园这一特定区域的无线资源利用最大化，节省运营商资源消耗。为了吸纳校园区域内的用户，提升资源利用率，可以引入校园通策略。 
  说明： 
 基于区域的策略场景繁多，本文档以“校园通”举例说明位置控制的解决方案，其他场景控制策略原理相同。 
-#### 场景说明 
-校园通策略指的是：在运营商规划的校园区域内，使用差异化计费方式。采用这种策略，可以让特定区域的用户享受更便宜的资费，为运营商吸引更多新用户。具体场景说明参见[表1](1629101220096.html#ze3296216bc6445a0a39f974da9cb8b38__8b14f7e1-974d-438b-abf0-199df1ee37cb)。
+场景说明 :校园通策略指的是：在运营商规划的校园区域内，使用差异化计费方式。采用这种策略，可以让特定区域的用户享受更便宜的资费，为运营商吸引更多新用户。具体场景说明参见[表1](1629101220096.html#ze3296216bc6445a0a39f974da9cb8b38__8b14f7e1-974d-438b-abf0-199df1ee37cb)。
 用户类型|策略
 ---|---
 签约校园通套餐的校园用户|在校园区域内使用数据业务，比在校园区域外使用数据业务的资费更便宜。
 未签约校园通套餐的校园用户|在校园区域内使用数据业务与在校园区域外使用数据业务资费没有差异。
  说明： 
 除了实行差异化计费策略外，还可以实行差异化QoS、差异化业务接纳，体现运营商的定制化服务能力，吸纳更多用户。 
-### 实现原理 
-#### 概述 
-该方案除了需要利用多维度套餐策略功能、PCC策略功能的支持以外，还需要利用以下功能支持： 
+实现原理 :概述 :该方案除了需要利用多维度套餐策略功能、PCC策略功能的支持以外，还需要利用以下功能支持： 
 PRA功能 
 位置上报功能 
 PRA功能
@@ -7235,12 +6603,10 @@ PCF下发位置类的事件，当用户位置发生改变时，SMF向PCF上报�
 29|PCF向SMF发送Npcf_SMPolicyControl_Update Response消息，PCF基于NCGI进行策略决策，移除校园区域的预定义规则组。
 32|终端访问业务，SMF向CHF发送非校园区域的计费标识，对用户进行普通计费。
 ## 流量经营场景之金银铜用户 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 网络中存在不少低价值不限流量套餐用户，这种套餐用户群数量大，特别是在忙时拥塞小区对网络资源冲击比较大，为运营商带来收益极少。而对运营商收入贡献占比比较大的套餐用户，网络资源却得不到有效保障，影响这部分优质用户满意度。 
 为了缓解网络资源忙时紧张状况，特引入金银铜控制策略。基于用户流量消费对用户进行分级，等级越高的用户流量消费越高，可以享受更好的数据传输质量。从而保障高价值套餐用户的网络资源使用率，为运营商带来更多收益。 
-#### 场景说明 
-根据用户等级，制定金银铜用户控制策略，参见[表1](1630983049657.html#z256986900642446981f2d60474a6cec8__8a898dc1-081c-4c20-a059-f3737835b3ff)。
+场景说明 :根据用户等级，制定金银铜用户控制策略，参见[表1](1630983049657.html#z256986900642446981f2d60474a6cec8__8a898dc1-081c-4c20-a059-f3737835b3ff)。
 用户类型|拥塞小区1|非拥塞小区2
 ---|---|---
 忙时（09:00～22:00）|非忙时|不区分闲忙时
@@ -7250,9 +6616,7 @@ PCF下发位置类的事件，当用户位置发生改变时，SMF向PCF上报�
 铜牌用户|BT业务：禁止其他业务：不限速|BT业务：禁止其他业务：不限速|BT业务：禁止其他业务：不限速|BT业务：禁止其他业务：不限速
  说明： 
 BT全称BitTorrent，即比特流，是一种内容分发协议，每个下载者在下载的同时不断向其他下载者上传已下载的数据，充分利用用户的上载带宽，共享大体积文件。 
-### 实现原理 
-#### 概述 
-该方案用到两大基本功能： 
+实现原理 :概述 :该方案用到两大基本功能： 
 弹性、多维度的套餐策略 
 PCC策略执行功能 
 #### 关键流程 
@@ -7291,8 +6655,7 @@ PCC策略执行功能
 6|PCF向SMF发送Npcf_SMPolicyControl_Create Response消息，PCF判断用户是铜牌用户，下发铜牌预定义规则组，不区分忙时忙区。
 9|SMF向UPF发送PFCP Session Establishment Request消息，携带铜牌预定义规则组，UPF上预先配置了该预定义规则组的策略，比如不能访问BT业务，其他业务不限速。
 ## 流量经营场景之Tethering控制 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 Tethering是一种网络共享技术，Laptop、Tablet或其他智能终端等设备（从终端）可以通过WiFi接入具备Tethering功能的移动智能终端（主终端），使用分组数据业务，如[图1](1630999672677.html#z04850f8933cd4ff9902cbaab90b73adb__c8dd1dbc-f867-4b41-85a3-897dcf13cc44)所示。
 图1  Tethering共享接入
 []images/1631151983278.png)
@@ -7300,17 +6663,14 @@ Tethering是一种网络共享技术，Laptop、Tablet或其他智能终端等�
 非签约设备（Laptop、PC、Tablet等）可以作为从终端使用主终端的网络流量，用户月平均使用流量出现明显上升，运营商的成本上升，盈利下降。 
 对运营商业务数据卡的销售产生冲击，减少运营商收益点。 
 基于上述问题，引入了Tethering用户检测功能，利用Tethering检测对Tethering用户的主、从终端进行不同的策略控制。 
-#### 场景说明 
-Tethering控制策略是一种基于用户终端的区别实行差异化流量经营的策略，可以增加新的收入增长点，弥补其数据卡业务收入流失。Tethering套餐是目前针对使用Tethering情况设计的一种流量套餐。针对用户是否签约Tethering套餐，可以设置不同的PCC控制策略，具体策略说明参见[表1](1630999672677.html#z04850f8933cd4ff9902cbaab90b73adb__99913787-1be6-4005-b090-963ac7475dd2)。
+场景说明 :Tethering控制策略是一种基于用户终端的区别实行差异化流量经营的策略，可以增加新的收入增长点，弥补其数据卡业务收入流失。Tethering套餐是目前针对使用Tethering情况设计的一种流量套餐。针对用户是否签约Tethering套餐，可以设置不同的PCC控制策略，具体策略说明参见[表1](1630999672677.html#z04850f8933cd4ff9902cbaab90b73adb__99913787-1be6-4005-b090-963ac7475dd2)。
 用户类型|终端类型|策略
 ---|---|---
 签约了Tethering套餐的用户|主终端|允许访问所有业务，不限速
 从终端|签约了Tethering套餐的用户|允许访问所有业务，限速256kbps定义一个套餐流量更大、单位流量成本更低的Tethering套餐，培养用户新的消费习惯
 没有签约Tethering套餐的用户|主终端|允许访问所有业务，不限速
 从终端|没有签约Tethering套餐的用户|不允许访问所有业务发送E-mail/SMS短信给该用户，引导其签约Tethering套餐
-### 实现原理 
-#### 概述 
-该解决方案，除了应用多维度的套餐策略功能外，还利用了如下功能： 
+实现原理 :概述 :该解决方案，除了应用多维度的套餐策略功能外，还利用了如下功能： 
 主从业务流量独立控制功能 
 Tethering上报功能 
 主从业务流量独立控制功能
@@ -7342,31 +6702,26 @@ UPF把检测的Tethering终端个数上报给SMF，SMF把Tethering终端个数�
 9|SMF向UPF发送PFCP Session Establishment Request 消息，携带非Tethering套餐的主从用户预定义规则组，UPF上预先配置了该预定义规则组的策略，比如主终端允许访问所有业务且不限速，从终端不允许访问所有业务。
 18|用户开始Tethering行为，由于UPF禁止从终端的业务报文，从终端无法访问业务，UPF向SMF上报PFCP Session Report Request消息，携带tetheringCount属性指示Tethering终端个数。
 20|SMF向PCF发送Npcf_SMPolicyControl_Update Request消息，携带TETHERING_COUNT事件，并通知tetheringCount属性指示Tethering终端个数。PCF收到该消息后，发送E-mail/SMS短信给该Tethering用户，引导其订阅Tethering套餐。
-#### 应用限制 
-当存在如下情况时，无法进行Tethering检测，会导致策略失效： 
+应用限制 :当存在如下情况时，无法进行Tethering检测，会导致策略失效： 
 非Android、iOS、Windows系统。 
 通过其他系统（如移动Wi-Fi设备）共享上网。 
 使用工具软件修改了默认IP或TCP首部。 
 使用Proxy共享、VPN共享上网。 
 智能终端的出厂预装操作系统是Android9（Linux内核版本V4.9+）及以上系统。 
 ## 流量经营场景之家长控制 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 未成年人的自我约束能力较弱，需要家长引导，引导主要体现在四个层面。 
 年龄：小学生和中学生的自我约束能力不同，家长的引导程度不同。 
 业务：未成年人分辨能力较弱，需要引导他们浏览正确内容（例如教育、科研），免遭不健康网站、易沉迷性游戏的毒害。 
 时间：未成年人自制能力不强，需要引导他们在允许时间内使用网络业务，例如上课时间不允许使用。 
 每日用量：未成年人使用网络过度，既易上瘾又易对身体健康造成伤害，因此需要限制他们每天的使用量，超出用量时，拒绝访问。 
 基于上述引导需要，本策略引入家长控制，方便家长对未成年人实施引导教育，体现运营商差别化定制的能力。 
-#### 场景说明 
-本方案采用控制手段，辅助家长引导不同年龄阶段的未成年人在规定时间、有限度地访问适龄业务。基于年龄的引导可参照[流量经营场景之金银铜用户](1630983508909.html)策略，基于每日用量的引导可参照[流量经营场景之达量限速](1631063710268.html)策略，以下对业务和时间引导策略做场景说明，参见[表1](1631069430329.html#z04fc9744e72a4a7e9a82f44e1b9279e5__26c1388d-73fe-4bba-87bb-99c74647dea5)。
+场景说明 :本方案采用控制手段，辅助家长引导不同年龄阶段的未成年人在规定时间、有限度地访问适龄业务。基于年龄的引导可参照[流量经营场景之金银铜用户](1630983508909.html)策略，基于每日用量的引导可参照[流量经营场景之达量限速](1631063710268.html)策略，以下对业务和时间引导策略做场景说明，参见[表1](1631069430329.html#z04fc9744e72a4a7e9a82f44e1b9279e5__26c1388d-73fe-4bba-87bb-99c74647dea5)。
 控制对象|策略
 ---|---
 业务|拒绝访问IM通信类业务、不健康网站、游戏等，只允许访问特定业务，比如教育、科研类业务。
 时间|上课时间不允许使用业务，课余时间、节假日可以使用业务。
-### 实现原理 
-#### 概述 
-该解决策略，除了应用概述中提到的基本功能外，还应用了规则支持时间策略。 
+实现原理 :概述 :该解决策略，除了应用概述中提到的基本功能外，还应用了规则支持时间策略。 
 规则支持时间策略即策略中的规则可以携带AT（激活时间）和DT（去激活时间），用户处于规则生效时间内，规则才有效，当用户处于非生效时间内，规则不生效。规则支持时间策略需要以下网元支持： 
 PCF：PCF下发规则携带AT和DT。 
 SMF：SMF收到PCF下发的规则，SMF把规则名和AT、DT一并携带给UPF。 
@@ -7397,8 +6752,7 @@ UPF：PCC预定义规则的策略配置在UPF上，UPF收到SMF透传的预定�
 18|上午8:00，UPF激活基于时间的业务禁止规则组，禁止访问任何业务。
 19|下午17:00，UPF去激活基于时间的业务禁止规则组，允许访问教育、科研类业务。
 ## 流量经营场景之能力开放 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 QoS能够反映网络服务质量，网络服务包括网络传输带宽、时延、丢包率等，网络服务质量越高，用户体验感越好。 
 专载QoS Flow是5G网络中为特定业务（如视频、语音等）建立的有特定QoS保证的数据通路。专载QoS Flow原理示意图如[图1](1631067025006.html#zc48a6c75e64c481ca1cad65505c29cb2__dd5bd90a-5b7f-4d7b-aa67-f9cd8677a39a)所示。
 图1  专载QoS Flow原理示意图
@@ -7412,15 +6766,12 @@ QoS能够反映网络服务质量，网络服务包括网络传输带宽、时�
 上述效果是OTT厂家的迫切需求，而前提是运营商部署对应的网络。为探索运营商和OTT厂家合作新模式，引入该能力开放策略。 
  说明： 
 OTT是通过互联网向用户提供的应用业务。这种业务和目前运营商所提供的通信业务不同，它仅利用运营商的网络，而服务由运营商之外的第三方提供。目前，典型的OTT业务有互联网电视业务、苹果应用商店等。 
-#### 场景说明 
-能力开放策略指的是，将QoS控制能力一定程度上开放给OTT厂商，触发专载QoS Flow。打通运营商和OTT厂家之间的联系，有助于增强用户的业务体验和黏性，拓宽运营商市场，增加收益。场景说明参见[表2](1631067025006.html#zc48a6c75e64c481ca1cad65505c29cb2__e408af83-8011-4663-a43d-039c7a975c4b)。
+场景说明 :能力开放策略指的是，将QoS控制能力一定程度上开放给OTT厂商，触发专载QoS Flow。打通运营商和OTT厂家之间的联系，有助于增强用户的业务体验和黏性，拓宽运营商市场，增加收益。场景说明参见[表2](1631067025006.html#zc48a6c75e64c481ca1cad65505c29cb2__e408af83-8011-4663-a43d-039c7a975c4b)。
 场景|场景说明|场景收益
 ---|---|---
 一键加速|一键加速场景指的是用户可以通过一键加速这一选项提升网速。|与SP合作，为用户提供更优体验，实现后向盈利，促进用户消费。通过APP客户端，用户可通过临时签约提升带宽，满足用户紧急需求。
 赞助业务QoS保障|赞助业务指的是赞助商替用户付费的业务，例如视频广告。|OTT厂商为VIP用户流量买单，运营商提升VIP用户的QoS。运营商向OTT厂商开放QoS控制及用量监控能力，满足OTT厂商的赞助业务需求并使得运营商能够分享收益。
-### 实现原理 
-#### 概述 
-该解决方案需要利用以下功能支持： 
+实现原理 :概述 :该解决方案需要利用以下功能支持： 
 PCF的能力开放 
 第三方支付 
 PCF能力开放
@@ -7461,22 +6812,18 @@ UPF|接收SMF的消息，安装相应的第三方业务规则，对匹配第三�
 25-37|SMF根据PCF的规则授权结果，触发释放QoS Flow。
 38-40|赞助业务不再单独出话单，开始对用户收费。
 ## 流量经营场景之高价值业务QoS提升 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 QoS能够反映网络服务质量，网络服务包括网络传输带宽、时延、丢包率等，网络服务质量越高，用户体验感越好。 
 专有QoS Flow是5G网络中为特定业务（如视频、语音等）建立有特定QoS保证的数据通路。专有QoS Flow的实现原理和保障效果请参考“[流量经营场景之能力开放](1631067019481.html)”
 章节。
 为了建立专有QoS Flow，运营商需要将QoS控制能力在一定程度上开放给OTT厂商，由OTT厂家触发专有QoS Flow的建立。同时，运营商需要部署能力开放平台，由OTT厂家向能力开放平台申请QoS提升，并且PCF需要向能力开发平台开放接口（Rx接口或者N5接口）。 
 但由于运营商部署能力开放平台有一定的门槛，当运营商不愿将QoS控制能力开放给OTT厂商，或者暂时无法部署能力开发平台，或者OTT厂家不具备接入能力开发的条件时，可采用本方案来实现高价值业务QoS保障。 
-#### 场景说明 
-高价值业务QoS保障的专有QoS Flow建立由业务触发，当UPF检测到高价值的业务数据流到达时，UPF向SMF请求创建专有QoS Flow。当UPF检测到高价值的业务数据流结束时，UPF向SMF请求释放专有QoS Flow。 
+场景说明 :高价值业务QoS保障的专有QoS Flow建立由业务触发，当UPF检测到高价值的业务数据流到达时，UPF向SMF请求创建专有QoS Flow。当UPF检测到高价值的业务数据流结束时，UPF向SMF请求释放专有QoS Flow。 
 本方案通过SMF/UPF检测业务，若为高价值业务则主动触发建立专载QoS Flow，对高价值业务进行保障。详细的场景说明参见[表1](1631005450887.html#z1311350d621846a2b4b3fddae97cfb13__1781b45d-ee31-4acb-bacc-e75e1e06e1b5)。
 场景|场景说明|场景收益
 ---|---|---
 高价值业务QoS保|当UPF检测到高价值的业务数据流到达时，UPF向SMF请求创建专有QoS Flow。当UPF检测到高价值的业务数据流结束时，UPF向SMF请求释放专有QoS Flow。|与SP合作，为用户提供更优体验，实现后向盈利，促进用户消费。通过APP客户端，用户可通过临时签约提升带宽，降低时延。相比较“流量经营场景之能力开放”，OTT厂家不需要对接能力开发平台，不需要提供高价值业务流的流特征信息。
-### 实现原理 
-#### 概述 
-该策略除了需要基本功能支持以外，还需要TDF功能支持。
+实现原理 :概述 :该策略除了需要基本功能支持以外，还需要TDF功能支持。
 SMF/UPF根据PCF下发的PCC预定义规则或本地配置的静态规则为用户建立专有QoS
 Flow进行QoS保障。 
 具体需要以下网元的配合： 
@@ -7497,12 +6844,10 @@ UPF|收到SMF下发的支持本地TDF功能的预定义规则，对规则关联�
 7|SMF向UPF发送PFCP Session Establishment Request消息，携带QoS提升的预定义规则，UPF上预先配置了该预定义规则组的策略，开启TDF功能。
 18|用户访问高价值业务，UPF检测业务开始后，通过PFCP Session Report Request消息，通知SMF业务开始。
 20-32|SMF根据UPF触发的业务开始行为，SMF建立QoS Flow。
-#### 应用限制 
-SMF/UPF需要提取业务的五元组建立专载，当业务的五元组不明确时，SMF/UPF提取的五元组不能表示业务特征，业务的上行报文可能传输在默认承载上。 
+应用限制 :SMF/UPF需要提取业务的五元组建立专载，当业务的五元组不明确时，SMF/UPF提取的五元组不能表示业务特征，业务的上行报文可能传输在默认承载上。 
 建议仅针对五元组比较明确的高价值业务开启该功能。 
 ## 流量经营场景之达量限速 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 由于运营商最初采用包月不限流量的方式来拓展市场，对用户使用的业务没有限制，但P2P业务的广泛传播，打破了原有的网络流量模型，20%的用户占用了网络80%的流量，使得大部分用户由于网络拥塞而无法满足通信需求，新业务难以发展。因此，需要限制用户在某周期内的流量，在用户访问量超出限额时降低其访问速率或者提高费率，达到网络公平使用的原则，保证使用相同业务的用户得到同样的网络体验。
 例如，对于包月用户，随着用户使用流量的增加，逐步降低用户带宽，降低访问速率，直至阻塞，如[图1](1631063713425.html#z4aa70a9a5bf0454ea799ec0cec998435__e6f140da-77ce-409b-854e-62061c2cb0fd)所示。
 图1  包月用户被降低带宽过程
@@ -7510,16 +6855,13 @@ SMF/UPF需要提取业务的五元组建立专载，当业务的五元组不明�
 用户流量的累计是采用流量控制策略的前提。目前有两种方法实现用户流量的累计： 
 通过PCF进行流量累计。 
 通过第三方系统（如计费系统）进行流量累计。 
-#### 场景说明 
-该方案采用PCF进行流量累计，在累计流量达到一定限额时，限制用户访问速率，实现对用户流量的控制，保证网络资源的公平使用，为使用相同业务的用户提供同样的网络体验。具体场景说明参见[表1](1631063713425.html#z4aa70a9a5bf0454ea799ec0cec998435__57862daf-76c5-4714-82b5-d9c8405e6275)。
+场景说明 :该方案采用PCF进行流量累计，在累计流量达到一定限额时，限制用户访问速率，实现对用户流量的控制，保证网络资源的公平使用，为使用相同业务的用户提供同样的网络体验。具体场景说明参见[表1](1631063713425.html#z4aa70a9a5bf0454ea799ec0cec998435__57862daf-76c5-4714-82b5-d9c8405e6275)。
 场景|套餐说明
 ---|---
 不限量上网流量包月|套餐配额为20 GB，超过20 GB要限速。当配额在20 GB内，限速Session AMBR=1 Gbps。当配额超过20 GB且小于30 GB，限速Session AMBR=1 Mbps。当配额超过30 GB，限速Session AMBR=256 Kbps。在每个速率切换的时间点，发送消息通知用户。
  说明： 
 Session AMBR信元用于表示UE建立PDU会话时指示初始签约的PDU会话聚合最大比特速率，或者在网络改变PDU会话聚合最大比特速率时指示新签约的PDU会话聚合最大比特速率。 
-### 实现原理 
-#### 概述 
-除了需要多维度的套餐策略以及PCC策略执行功能支持外，还需要用量监测功能支持。 
+实现原理 :概述 :除了需要多维度的套餐策略以及PCC策略执行功能支持外，还需要用量监测功能支持。 
 用量检测功能的具体内容如下： 
 监测：SMF/UPF根据PCF指定的用量监控条件，对用户使用业务的流量和时长等进行监控统计。 
 上报：当达到用量上报触发条件时，SMF向PCF上报用户的用量，PCF可以基于用户的用量进行PCC策略的重决策和重授权。 
@@ -7539,15 +6881,11 @@ Session AMBR信元用于表示UE建立PDU会话时指示初始签约的PDU会话
 38|SMF向PCF发送Npcf_SMPolicyControl_Update Request消息，持续进行用量监控和用量上报。
 39|PCF判断流量使用大于30GB，PCF发送E-mail/SMS短信给该用户，提醒速率变更。PCF向SMF发送Npcf_SMPolicyControl_UpdateResponse消息，携带Session AMBR=256Kbps。
 ## 流量经营场景之超套限速 
-### 应用场景 
-#### 背景介绍 
+应用场景 :#### 背景介绍 
 本方案的背景与[流量经营场景之达量限速](1631063710268.html)一致。区别在于流量累计的主体不同。
-#### 场景说明 
-在[流量经营场景之达量限速](1631063710268.html)中，是由PCF进行流量累计，在累计流量达到一定限额时，限制用户访问速率。
+场景说明 :在[流量经营场景之达量限速](1631063710268.html)中，是由PCF进行流量累计，在累计流量达到一定限额时，限制用户访问速率。
 本方案通过第三方系统（如计费系统）进行流量累计，当计费信息判断累计流量达到一定限额时，BOSS系统到UDR上修改套餐的状态，PCF针对不同的套餐状态修改PCC策略，达到超套限速的目的。 
-### 实现原理 
-#### 概述 
-该方案需要多维度的套餐策略、PCC策略执行功能两大基础功能的支持。 
+实现原理 :概述 :该方案需要多维度的套餐策略、PCC策略执行功能两大基础功能的支持。 
 #### 关键流程 
 超套限速流程图如[图1](1631013136410.html#z808754508688466593cfc08cec91f8ff__ce99a791-177f-4130-9aaa-cec84f1793cf)所示。
 图1  超套限速流程
@@ -7562,20 +6900,15 @@ Session AMBR信元用于表示UE建立PDU会话时指示初始签约的PDU会话
 21|UDM通知PCF用户签约信息的套餐状态发生改变。
 23|PCF判断用户签约信息套餐状态发生改变，通过Npcf_SMPolicyControl_UpdateNotify Request消息通知SMF，指示sessionAMBR=10Mbps。
 25-37|SMF触发修改sessionAMBR=10Mbps。
-# 缩略语 
-# 缩略语 
-## AF 
-Application Function应用功能
+缩略语 :缩略语 :AF :Application Function应用功能
 ## AM 
 Access and Mobility Management接入移动管理
 ## AMBR 
 Aggregate Maximum Bit Rate聚合最大比特率
-## AMF 
-Access and Mobility Management Function接入和移动管理功能
+AMF :Access and Mobility Management Function接入和移动管理功能
 ## ANDSP 
 Access Network Discovery & Selection Policy接入网发现和选择策略
-## CHF 
-Charging Function计费功能
+CHF :Charging Function计费功能
 ## DN 
 Data Network数据网
 ## DPI 
@@ -7590,10 +6923,8 @@ Maximum Flow Bit Rate最大流比特率
 Over The Top通过互联网向用户提供各种应用服务
 ## P2P 
 Point to Point点对点
-## PCC 
-Policy and Charging Control计费和策略控制
-## PCF 
-Policy Control Function策略控制功能
+PCC :Policy and Charging Control计费和策略控制
+PCF :Policy Control Function策略控制功能
 ## PDB 
 Packet Delay Budget数据包时延预算
 ## PDR 
@@ -7608,14 +6939,12 @@ RAT/Frequency Selection Priority无线/频率选择优先级
 Reflective QoS Attribute反射QoS属性
 ## SBI 
 Service Based Interface基于服务的接口
-## SMF 
-Session Management Function会话管理功能
+SMF :Session Management Function会话管理功能
 ## SP 
 Service Provider服务提供商
 ## TDF 
 Traffic Detection Function流量检测功能
-## UPF 
-User Plane Function用户平面功能
+UPF :User Plane Function用户平面功能
 ## URSP 
 UE Route Selection PolicyUE路由选择策略
 # 5G ULCL分流解决方案 
@@ -7623,8 +6952,7 @@ UE Route Selection PolicyUE路由选择策略
 ### 何为分流 
 #### 概念 
 ULCL是3GPP标准定义的新技术之一，目的是将PDU会话的上行流量分流到不同UPF，进一步发送至不同的DN，称之为“分流”。
-#### 背景知识 
-在没有“分流”概念的4G时代，移动网络已经出现了比较广泛的、对数据目的地的定制化诉求： 
+背景知识 :在没有“分流”概念的4G时代，移动网络已经出现了比较广泛的、对数据目的地的定制化诉求： 
 服务商将服务器逐渐下沉部署，减少线路迂回以提升客户体验。 
 企业对内部网络进行定制化管理，获得具有更高安全性和保障性的带宽。 
 但仍有诉求在4G时代并没有得到很好的解决： 
@@ -7633,8 +6961,7 @@ ULCL是3GPP标准定义的新技术之一，目的是将PDU会话的上行流量
 ULCL技术出现后，上述问题迎刃而解。负责分流的ULCL UPF将本地业务（如企业内部使用的业务，或服务商部署的下沉业务）与Internet业务分离开来，并分别通过主/辅锚点UPF，送达中心网络或本地网络，如[图3](6944191.html#Qy-0440B6F3__82dcb439-3efc-4a6e-b483-fc7c7f66cec2)所示。
 图3  ULCL分流
 []images/1646796418354.png)
-#### 系统架构 
-针对ULCL分流，3GPP标准定义的网络架构图如[图4](6944191.html#Qy-0440B6F3__6bab3431-dae8-42d3-b747-c78928f6a707)所示。
+系统架构 :针对ULCL分流，3GPP标准定义的网络架构图如[图4](6944191.html#Qy-0440B6F3__6bab3431-dae8-42d3-b747-c78928f6a707)所示。
 图4  3GPP定义的分流架构
 []images/%E5%9B%BE%E7%89%871.png)
 在如[图4](6944191.html#Qy-0440B6F3__6bab3431-dae8-42d3-b747-c78928f6a707)所示分流线路上，UPF有两种形态——ULCL UPF（中文常称为“分流UPF”）和PSA UPF（中文常称为“锚点UPF”），而PSA UPF可以细分为主锚点UPF与辅锚点UPF，具体说明参见[表1](6944191.html#Qy-0440B6F3__9a79b50c-d2ef-45ea-854f-6ab743f68f9b)。
@@ -7644,8 +6971,7 @@ ULCL UPF（Uplink Classifier UPF）|实现ULCL功能的UPF。在激活分流策�
 PSA UPF|主锚点UPF (PDU Session Anchor UPF)|该UPF通过N6接口与Internet连接。用户业务过程中，主锚点UPF作为Internet的PDU会话锚点，对ULCL UPF-主锚点UPF-Internet链路中的用户数据进行转发，并完成计费、业务控制等功能。
 辅锚点UPF(Additional PDU Session Anchor UPF)|PSA UPF|激活分流策略时，与ULCL UPF同时插入到用户会话中的UPF。该UPF通过N6接口与本地DN连接。用户业务过程中，辅锚点UPF作为访问本地DN的PDU会话锚点，对ULCL UPF-辅锚点UPF-本地DN链路中的用户数据进行转发，并完成计费、业务控制等功能。
 ### 为何分流 
-#### 概述 
-ULCL分流作为5GC的新技术之一，目前主要有两类应用场景。 
+概述 :ULCL分流作为5GC的新技术之一，目前主要有两类应用场景。 
 应用场景一：园区或者企业希望“数据不出园区”。 
 应用场景二：企业基于对数据安全/隐私的考虑，希望内网数据能够从移动核心网直接转发至企业内部。 
 #### 应用场景一 
@@ -7679,8 +7005,7 @@ Internet的数据|学校的数据
 []images/1646362214898.png)
 通过ULCL分流，将校园网用户的流量转发至属于学校的本地DN，使用户可以远程访问校园服务器，比如电子图书馆等数据。 
 ### 如何分流 
-#### 概述 
-ULCL分流的实现原理参见下表。 
+概述 :ULCL分流的实现原理参见下表。 
 核心|作用|实施网元
 ---|---|---
 分流策略下发|分流策略决定哪些数据是通用业务，哪些数据是本地业务，以及本地业务部署在哪些位置（TA、小区等移动网络可区分的粒度）。激活分流策略，即在指定的用户会话上启动分流。|PCF/SMF
@@ -7739,8 +7064,7 @@ Step5：流程结束
 图7  分流转发路径的迁移
 []images/%E5%9B%BE%E7%89%875.png)
 ## 分流实现原理 
-### 描述 
-       3GPP针对于5G用户数据分流场景定义了ULCL功能，通过上行分流器（即ULCL  UPF）实现根据用户业务流特征将访问园区业务的数据分流到园区内，将访问Internet的数据分流到Internet，有以下优点：
+描述 :       3GPP针对于5G用户数据分流场景定义了ULCL功能，通过上行分流器（即ULCL  UPF）实现根据用户业务流特征将访问园区业务的数据分流到园区内，将访问Internet的数据分流到Internet，有以下优点：
 实现对用户业务数据的分流控制，满足用户“数据不出园区”的诉求。 
 避免边缘侧数据通过公共承载网迂回，缩短数据传输路径。 
 提升用户体验，节省运营商传输资源。 
@@ -7783,8 +7107,7 @@ PDR|入向数据业务流识别策略，对进入UPF的数据包进行识别，�
 FAR|指示转发动作，转发动作包含转发、缓存、丢弃等。
 QER|指示流控类动作，如带宽控制等。
 URR|指示统计上报类动作，包含配额、阈值、时长、流量、上报原因等。
-#### 业务流程 
-分流示意图
+业务流程 :分流示意图
 分流会话过程中，上下行PDR、上下行数据流及组网接口如[图1](1448289.html#Qy-0440B6F3__75d08231-9049-4038-a8c0-d52cd8569759)所示。
 图1  分流会话示意图
 []images/1648452906524.png)
@@ -7826,8 +7149,7 @@ UPF本地配置分流策略主要针对固定业务模式的行业用户，分�
 网络侧动态下发分流策略主要针对动态上线的业务，可以通过PCF下发动态PCC规则来获取分流策略，其中包括定义业务报文特征的PF，SMF将PF通过N4接口规则PDR下发给UPF，UPF通过PF识别分流业务。 
 综上，对于ULCL UPF来说，无论是哪一种分流策略获取方式，都需要在用户的分流会话创建/更新流程中由控制面来激活这些分流策略。 
 ### 执行分流策略 
-#### 场景描述 
-UPF按照分流策略，对符合分流特征的数据包进行分流，将本地业务流分流到园区服务器。 
+场景描述 :UPF按照分流策略，对符合分流特征的数据包进行分流，将本地业务流分流到园区服务器。 
 #### 分流策略的安装 
 ULCL UPF与辅锚点UPF可以分设，也可以合设。 
 合设的场景下，SMF为合设的UPF创建一个PFCP会话，会话中包含分流到辅锚点UPF的PDR和分流到主锚点UPF的PDR，以及每个PDR关联的URR、QER、FAR。 
@@ -7936,8 +7258,7 @@ ULCL/PSA1将N3接口的GTPU隧道报文解封装后，通过N6接口发送到本
 ULCL/PSA1将下行报文封装在N3接口的GTPU隧道中发送给(R)AN，(R)AN将下行业务报文发送给UE。 
 正常对后续报文进行分流。 
 ## 分流UPF部署 
-### 描述 
-  
+描述 :  
 ULCL分流是MEC解决方案的基础，支撑着整个解决方案。移动边缘计算MEC将应用、内容以及核心网的部分业务处理和资源调度功能，一同部署在靠近接入侧的网络边缘，通过业务在网络边缘的本地处理，以及应用、内容与网络的协同，提供可靠、极致的业务体验。ULCL分流可广泛应用于自动驾驶、AR维修、远程医疗等5G业务场景，可灵活部署在企业园区、体育场、CBD等热点区域。3GPP协议定义，将靠近接入侧分流的ULCL架构嵌入到MEC解决方案中，也就是将ULCL UPF、辅锚点UPF部署在靠近用户的MEC平台中。
 除了MEC、校园网等对接入侧的分流需求之外，在实际的应用中，也存在企业基于对数据安全/隐私的考虑，希望内网数据能从移动核心网直接转发至企业内部。不管用户移动到哪里，都可以访问企业内网，例如高校的学生放假回家也可以访问校园内的电子图书馆等数据。而这类应用场景，内网数据位置是固定的，不随用户移动而变更。针对这种实际的需求，利用ULCL数据分离技术，在归属UPF侧进行数据的分离，也就是ULCL UPF和主锚点UPF合一部署，达到数据在网络后侧分流的目的。 
 为了方便表述，将3GPP定义的ULCL架构（前述第一类分流）称为前向分流，将第二类分流称之为后向分流。
@@ -8030,14 +7351,12 @@ NF|支持版本
 SMF|V7.21.33及以后版本
 UPF|V7.21.32及以后版本
 PCF|V7.20.20及以后版本
-### 应用限制 
-ULCL分流功能只针对5G用户，2/3/4G用户不支持。 
+应用限制 :ULCL分流功能只针对5G用户，2/3/4G用户不支持。 
 漫游V-SMF/I-SMF场景下暂不支持ULCL分流功能。 
 前向分流功能不支持ULCL UPF和辅锚点UPF分离部署。 
 ULCL方案必须开启融合计费功能，否则ULCL分流功能无法正常使用。 
 ### 基于预定义规则的前向分流 
-#### 场景描述 
-某大学建设校园网，希望所有教职员工以及学生能够使用自有终端设备通过专用的数据通路访问校园网，同时不对这些用户访问Internet的行为进行干涉。 
+场景描述 :某大学建设校园网，希望所有教职员工以及学生能够使用自有终端设备通过专用的数据通路访问校园网，同时不对这些用户访问Internet的行为进行干涉。 
 该场景的典型特征是人员流动频繁，每年会有大量学生离开或入学。运营商可以通过为校园用户统一签约套餐，在网络侧配置校园网用户信息以及允许访问校园网的区域范围，使校园网用户在规定范围内可以通过ULCL分流的方式访问校园网和Internet。 
 当校园用户在规定区域内访问校园网时，PCF侧会根据用户信息以及用户当前所处的位置信息下发ULCL分流预定义规则给SMF，SMF基于分流预定义规则为用户创建 “UE→(R)AN→ULCL UPF/辅锚点UPF→主锚点UPF→Internet”和“UE→(R)AN→ULCL UPF/辅锚点UPF→本地DN”的数据通路，具体实现如[图1](0792243.html#Qy-0440B6F3__54b4502b-3025-4cdb-ba96-a768dc171ae1)所示。
 图1  基于PCF签约分流策略
@@ -8059,9 +7378,7 @@ ULCL UPF执行分流策略，将访问Internet的数据分流至主锚点UPF，�
 在基于预定义规则的分流配置过程中，PCF、SMF和UPF相关配置及关联关系如[图2](0860107.html#Qy-0440B6F3__61397169-4b92-4225-898d-8843548ec893)所示。
 图2  预定义规则配置架构
 []images/1658284628389.png)
-##### SMF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+SMF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD APNDNN|APNDNN|abc.com|全网规划|企业专用DNN。
 是否真实APNDNN|ADD APNDNN|是|全网规划|-
@@ -8129,8 +7446,7 @@ ADD TACRANGEMAPPINGDNAI|段名称|TAC1|已配置数据中获取|该参数引用�
 START(十六进制)|ADD TACRANGEMAPPINGDNAI|0x000001|全局规划|-
 END(十六进制)|ADD TACRANGEMAPPINGDNAI|0x000006|全局规划|-
 DNAI1|ADD TACRANGEMAPPINGDNAI|dnai_abc|全局规划|-
-###### 配置步骤 
-步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|增加DNN，并开启ULCL分流。|ADD APNDNN:APNDNN="abc.com",REAL="false",REALAPNDNN="cmnet"ADD APNDNNPROFILE:NAME="abc.com"ADD MAPAPNDNNPROFILE:APNDNN="abc.com",ACCESS="ENABLE",NAME="abc.com"SET APNDNNBASIC:NAME="abc.com",ULCLBPSWITCH=ENABLE
 2|设置规则分流功能方式为预定义规则分流。|SET PCCFUNCPROFILE:PROFILENAME="abc.com",RULESTEERINGMETHOD="PRERULE",STEERINGMODE="SMFSTEERING"
@@ -8143,9 +7459,7 @@ DNAI1|ADD TACRANGEMAPPINGDNAI|dnai_abc|全局规划|-
 9|配置UPF和切片关联。|ADD UPSNSSAI:UPNAME="UPF_local",SST="EMBB",SD="010101"
 10|配置UPF和TAC关联。|ADD TACGROUP:TACGROUPNAME="TAClist",TYPE="TACNR"ADD TACNRSECTION:SECNAME="TAC1",STARTTACNR="0x000001",ENDTACNR="0x000006",TACGROUPNAME="TAClist"ADD UPTACNRGROUP:UPNAME="UPF_local",TACGROUPNAME="TAClist"
 11|配置TAC和DNAI关联。|ADD TACRANGEMAPPINGDNAI:SECNAME="TAC1",STARTTAC="0x000001",ENDTAC="0x000006",DNAI1="dnai_abc"
-##### UPF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+UPF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD APNDNN|APNDNN|abc.com|全网规划|abc.com|企业专用DNN。
 是否真实APNDNN|ADD APNDNN|是|全网规划|是|-
@@ -8212,8 +7526,7 @@ QoS策略|ADD RULE|qos_zte|qos_zte|已配置数据中获取|该参数引用自AD
 ADD RULEBINDUP|用户模板|prerule/dynrule|prerule|已配置数据中获取|该参数引用自ADD USERPROFILE命令中的NAME参数。
 规则名|ADD RULEBINDUP|iprule|dnsrule|已配置数据中获取|该参数引用自ADD RULE命令中的NAME参数。
 优先级|ADD RULEBINDUP|0|0|本端规划|-
-###### 配置步骤 
-步骤|说明||操作
+配置步骤 :步骤|说明||操作
 ---|---|---|---
 1|配置用户模板|配置APNDNN。|ADD APNDNN:APNDNN="abc.com",REAL="false",REALAPNDNN="abc.com"
 配置DNN。|1|配置用户模板|ADD DNCFG:DNN="abc.com",NETWORKINSTANCE="N6"
@@ -8236,9 +7549,7 @@ ADD RULEBINDUP|用户模板|prerule/dynrule|prerule|已配置数据中获取|该
 配置DPI规则，关联流过滤器、QoS策略、计费策略等，根据这些规则识别满足条件的业务报文，进行不同的计费和控制。|7|配置规则（基于域名分流时配置）|ADD RULE:NAME="dnsrule",APPLICATION="10001",FLOWFILTER="l7_dns_lbo_ff",QOSDATA="qos_zte",CHARGINGDATA="charging_zte",TRAFFICCONTROLDATA="traffic_dnslbo"
 配置用户模板与DPI规则绑定。|7|配置规则（基于域名分流时配置）|ADD RULEBINDUP:UPNAME="prerule",RULENAME="dnsrule",PRECEDENCE=0
 8|激活DPI规则|DPI RULE REFRESH|激活DPI规则
-##### PCF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+PCF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD PKGINFO|套餐标识|10000|对端协商|10000|校园网专用套餐标识，PCF和SPR(PUDR)保持一致。
 全局优先级|ADD PKGINFO|50|本端规划|50|-
@@ -8285,8 +7596,7 @@ ADD DM ROLE|场景名称|xxxxstu_ULCL|本端规划|xxxxstu_ULCL|-
 场景入口|ADD DM ROLE|"SYS.SERV_PAK_ID"-"10000"|已配置数据中获取|"SYS.SERV_PAK_ID"-"10000"|该参数引用自ADD PKGINFO命令中的PKGID参数。
 规则名称|ADD DM ROLE|xxxxstu_ULCL|已配置数据中获取|xxxxstu_ULCL|该参数引用自ADD DM RULE命令中的NAME参数。
 使能开关|ADD DM ROLE|生效|本端规划|生效|-
-###### 配置步骤 
-步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|增加套餐，PKGID和SPR(PUDR)保持一致。|ADD PKGINFO:PKGID="10000",PRIORITY=50,PKGNAME="xxxxstu",PKGATTR="SERVICE_PKG"
 2|套餐关联业务ID，现场根据实际情况规划PKGSVCID和SUBSID。|ADD PKGSVC:ID=10001,PKGID="10000",SUBSID="10001"
@@ -8346,17 +7656,14 @@ SMF返回Nsmf_UpdateSmContext Response消息给AMF，携带N2 Container（N2 Pat
 AMF向(R)AN发送N2 Path Swtich Ack，更新N3隧道信息。 
 SMF向PSA0 UPF发送PFCP Session Modification Request，删除用户初始激活时创建的N3上行PDR。 
 ### 基于动态规则的前向分流 
-#### 场景描述 
-基于动态规则的前向分流的场景描述与基于预定义规则的前向分流的[场景描述](0792243.html)基本相同，区别为：第三步PCF向SMF下发的是动态规则。
+场景描述 :基于动态规则的前向分流的场景描述与基于预定义规则的前向分流的[场景描述](0792243.html)基本相同，区别为：第三步PCF向SMF下发的是动态规则。
 在该部署场景下，细分三种业务应用场景，具体信令交互流程参见[信令交互](1656467845634PUYtqo.html)。
 #### 功能配置 
 ##### 动态规则配置架构 
 在基于动态规则的分流配置过程中，PCF、SMF和UPF相关配置及关联关系如[图1](1656467845624hOHTrz.html#Qy-0440B6F3__28081349-b1e9-4150-93c8-c852c49e781e)所示。
 图1  动态规则配置架构
 []images/1659411938710.png)
-##### SMF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+SMF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD APNDNN|APNDNN|abc.com|全网规划|企业专用DNN
 是否真实APNDNN|ADD APNDNN|是|全网规划|-
@@ -8418,8 +7725,7 @@ ADD TACRANGEMAPPINGDNAI|段名称|TAC1|已配置数据中获取|该参数引用�
 START(十六进制)|ADD TACRANGEMAPPINGDNAI|0x000001|全局规划|-
 END(十六进制)|ADD TACRANGEMAPPINGDNAI|0x000006|全局规划|-
 DNAI1|ADD TACRANGEMAPPINGDNAI|dnai_abc|对端协商|-
-###### 配置步骤 
-步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|增加DNN，并开启ULCL分流。|ADD APNDNN:APNDNN="abc.com",REAL="false",REALAPNDNN="cmnet"ADD APNDNNPROFILE:NAME="abc.com"ADD MAPAPNDNNPROFILE:APNDNN="abc.com",ACCESS="ENABLE",NAME="abc.com"SET APNDNNBASIC:NAME="abc.com",ULCLBPSWITCH=ENABLE
 2|设置规则分流功能方式为动态规则分流。|SET PCCFUNCPROFILE:PROFILENAME="abc.com",RULESTEERINGMETHOD="DYNAMICRULE",STEERINGMODE="SMFSTEERING"
@@ -8430,9 +7736,7 @@ DNAI1|ADD TACRANGEMAPPINGDNAI|dnai_abc|对端协商|-
 7|配置UPF和切片关联。|ADD UPSNSSAI:UPNAME="UPF_local",SST="EMBB",SD="010101"
 8|配置UPF和TAC关联。|ADD TACGROUP:TACGROUPNAME="TAClist",TYPE="TACNR"ADD TACNRSECTION:SECNAME="TAC1",STARTTACNR="0x000001",ENDTACNR="0x000006",TACGROUPNAME="TAClist"ADD UPTACNRGROUP:UPNAME="UPF_local",TACGROUPNAME="TAClist"
 9|配置TAC和DNAI关联。|ADD TACRANGEMAPPINGDNAI:SECNAME="TAC1",STARTTAC="0x000001",ENDTAC="0x000006",DNAI1="dnai_abc"
-##### UPF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+UPF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD APNDNN|APNDNN|abc.com|全网规划|abc.com|企业专用DNN。
 是否真实APNDNN|ADD APNDNN|是|全网规划|是|-
@@ -8474,8 +7778,7 @@ ADD RULE|规则名称|iprule|本端规划|iprule|-
 ADD RULEBINDUP|用户模板|up_zte|已配置数据中获取|up_zte|该参数引用自ADD USERPROFILE命令中的NAME参数。
 规则名|ADD RULEBINDUP|iprule|已配置数据中获取|iprule|该参数引用自ADD RULE命令中的NAME参数。
 优先级|ADD RULEBINDUP|0|本端规划|0|-
-###### 配置步骤 
-步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|配置用户模板|配置APNDNN。|ADD APNDNN:APNDNN="abc.com",REAL="false",REALAPNDNN="abc.com"
 配置DNN。|1|配置用户模板|ADD DNCFG:DNN="abc.com",NETWORKINSTANCE="N6"
@@ -8489,9 +7792,7 @@ ADD RULEBINDUP|用户模板|up_zte|已配置数据中获取|up_zte|该参数引�
 5|配置规则（基于IP地址分流时配置）|配置DPI规则，关联流过滤器、QoS策略、计费策略等，根据这些规则识别满足条件的业务报文，进行不同的计费和控制。|ADD RULE:NAME="iprule",APPLICATION="20001",FLOWFILTER="l34_ff",QOSDATA="qos_zte",CHARGINGDATA="charging_zte",TRAFFICCONTROLDATA="traffic_zte"
 配置用户模板与DPI规则绑定。|5|配置规则（基于IP地址分流时配置）|ADD RULEBINDUP:UPNAME="up_zte",RULENAME="iprule",PRECEDENCE=0
 8|激活DPI规则|DPI RULE REFRESH|激活DPI规则
-##### PCF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+PCF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD PKGINFO|套餐标识|20000|对端协商|20000|校园网专用套餐标识，PCF和SPR(PUDR)保持一致。
 全局优先级|ADD PKGINFO|50|本端规划|50|-
@@ -8560,8 +7861,7 @@ ADD DM ROLE|场景名称|xxxxstu_ULCL_dy|本端规划|xxxxstu_ULCL_dy|-
 场景入口|ADD DM ROLE|"SYS.SERV_PAK_ID"-"20000"|本端规划|"SYS.SERV_PAK_ID"-"20000"|-
 规则名称|ADD DM ROLE|xxxxstu_ULCL_dy|本端规划|xxxxstu_ULCL_dy|-
 使能开关|ADD DM ROLE|生效|本端规划|生效|-
-###### 配置步骤 
-步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|增加套餐，PKGID和SPR(PUDR)保持一致。|ADD PKGINFO:PKGID="20000",PRIORITY=50,PKGNAME="xxxxstu_ULCL_dy",PKGATTR="SERVICE_PKG"
 2|套餐关联业务ID，现场根据实际情况规划PKGSVCID和SUBSID。|ADD PKGSVC:ID=20001,PKGID="20000",SUBSID="20001"
@@ -8625,8 +7925,7 @@ SMF返回Nsmf_UpdateSmContext Response消息给AMF，携带N2 Container（N2 Pat
 AMF向(R)AN发送N2 Path Swtich Ack，更新N3隧道信息。 
 SMF向PSA0 UPF发送PFCP Session Modification Request，删除用户初始激活时创建的N3上行PDR。 
 ### 基于本地规则的前向分流 
-#### 场景描述 
-某企业用户向运营商申请签约了专用DNN，统一给员工发放企业终端，希望员工在企业园区范围内通过专用DNN访问企业内部数据，同时允许员工通过企业终端访问Internet。运营商在针对该企业用户放号时，会在SIM卡中内置专用DNN。 
+场景描述 :某企业用户向运营商申请签约了专用DNN，统一给员工发放企业终端，希望员工在企业园区范围内通过专用DNN访问企业内部数据，同时允许员工通过企业终端访问Internet。运营商在针对该企业用户放号时，会在SIM卡中内置专用DNN。 
 当企业用户访问普通Internet业务时，基于专用DNN激活PDU会话，网络侧为用户创建“UE→(R)AN→主锚点UPF→Internet”的数据通路。 
 当用户访问企业业务时，基于专用DNN激活PDU会话，网络侧为用户创建“UE→(R)AN→ULCL/辅锚点合一UPF→主锚点UPF→Internet”和“UE→(R)AN→ULCL/辅锚点合一 UPF→本地DN”的数据通路。 
 图1  基于SMF本地规则的分流
@@ -8643,9 +7942,7 @@ ULCL UPF执行分流策略，将访问Internet的数据流分流至主锚点UPF�
 在基于本地规则的分流配置过程中，PCF、SMF和UPF相关配置及关联关系如[图1](0894839.html#Qy-0440B6F3__88087ee4-f677-4fe9-b08d-4146ab4b0fa3)所示。
 图1  本地规则配置架构
 []images/1658453693249.png)
-##### SMF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+SMF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD APNDNN|APNDNN|abc.com|全网规划|企业专用DNN。
 是否真实APNDNN|ADD APNDNN|是|全网规划|-
@@ -8715,8 +8012,7 @@ ADD TACRANGEMAPPINGDNAI|段名称|TAC1|已配置数据中获取|该参数引用�
 START(十六进制)|ADD TACRANGEMAPPINGDNAI|0x000001|全局规划|-
 END(十六进制)|ADD TACRANGEMAPPINGDNAI|0x000006|全局规划|-
 DNAI1|ADD TACRANGEMAPPINGDNAI|dnai_abc|全局规划|-
-###### 配置步骤 
-步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|增加DNN，并开启ULCL分流。|ADD APNDNN:APNDNN="abc.com",REAL="false",REALAPNDNN="cmnet"ADD APNDNNPROFILE:NAME="abc.com"ADD MAPAPNDNNPROFILE:APNDNN="abc.com",ACCESS="ENABLE",NAME="abc.com"SET APNDNNBASIC:NAME="abc.com",ULCLBPSWITCH=ENABLE
 2|设置规则分流功能方式为预定义规则分流。|SET PCCFUNCPROFILE:PROFILENAME="abc.com",RULESTEERINGMETHOD="LOCALRULE",STEERINGMODE="SMFSTEERING"
@@ -8730,9 +8026,7 @@ ADD STEERINGRULEBASE:STEERINGRULEBASENAME="localup",STEERINGRULENAME="localrule"
 9|配置UPF和切片关联。|ADD UPSNSSAI:UPNAME="UPF_local",SST="EMBB",SD="010101"
 10|配置UPF和TAC关联。|ADD TACGROUP:TACGROUPNAME="TAClist",TYPE="TACNR"ADD TACNRSECTION:SECNAME="TAC1",STARTTACNR="0x000001",ENDTACNR="0x000006",TACGROUPNAME="TAClist"ADD UPTACNRGROUP:UPNAME="UPF_local",TACGROUPNAME="TAClist"
 11|配置TAC和DNAI关联。|ADD TACRANGEMAPPINGDNAI:SECNAME="TAC1",STARTTAC="0x000001",ENDTAC="0x000006",DNAI1="dnai_abc"
-##### UPF 
-###### 数据规划 
-命令|参数名称|取值样例|数据来源|说明
+UPF :数据规划 :命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---
 ADD APNDNN|APNDNN|abc.com|全网规划|abc.com|企业专用DNN。
 是否真实APNDNN|ADD APNDNN|是|全网规划|是|-
@@ -8799,8 +8093,7 @@ QoS策略|ADD RULE|qos_zte|qos_zte|已配置数据中获取|该参数引用自AD
 ADD RULEBINDUP|用户模板|localrule|localrule|已配置数据中获取|该参数引用自ADD USERPROFILE命令中的NAME参数。
 规则名|ADD RULEBINDUP|iprule|dnsrule|已配置数据中获取|该参数引用自ADD RULE命令中的NAME参数。
 优先级|ADD RULEBINDUP|0|0|本端规划|-
-###### 配置步骤 
-步骤|说明||操作
+配置步骤 :步骤|说明||操作
 ---|---|---|---
 1|配置用户模板|配置APNDNN。|ADD APNDNN:APNDNN="abc.com",REAL="false",REALAPNDNN="abc.com"
 配置DNN。|1|配置用户模板|ADD DNCFG:DNN="abc.com",NETWORKINSTANCE="N6"
@@ -8877,8 +8170,7 @@ UE终端地址冲突|某地市的企业专网用户以本地市UPF作为主锚�
 园区内网地址和UE终端地址冲突|园区内网服务器的IP地址与终端地址池的IP地址都是私网地址，各自规划，可能存在冲突。|园区内网地址和UE终端地址冲突解决方案
 不同园区私网之间的地址冲突|本地市用户对应的ULCL分流UPF对接所有本地的园区，不同园区的内网服务器IP地址可能存在冲突。|不同园区内网地址冲突解决方案
 #### ULCL UPF上UE地址冲突解决方案 
-##### 场景说明 
-如[图1](0862400.html#Qy-0440B6F3__98f43da9-91c9-4d96-8814-94ef73cf7384)所示，不同主锚点的用户对应同一个ULCL+辅锚点UPF。
+场景说明 :如[图1](0862400.html#Qy-0440B6F3__98f43da9-91c9-4d96-8814-94ef73cf7384)所示，不同主锚点的用户对应同一个ULCL+辅锚点UPF。
 图1  ULCL上UE地址冲突场景
 []images/1658459097894.png)
 当同时满足以下条件时，用户在ULCL+辅锚点UPF上会产生地址冲突问题。 
@@ -8893,8 +8185,7 @@ ULCL+辅锚点UPF进行UE地址冲突检测，若发现冲突，可采取如下�
 保留老用户，拒绝新用户接入。 
 两种策略可通过配置调整，默认保留老用户。 
 #### 园区内网地址和UE终端地址冲突解决方案 
-##### 场景说明 
-中心UPF作为会话主锚点，为用户分配的IP地址IP1与园区网服务器地址相同。 
+场景说明 :中心UPF作为会话主锚点，为用户分配的IP地址IP1与园区网服务器地址相同。 
 用户使用该地址访问园区内网，上行报文到达ULCL+辅锚点UPF时，UPF会认为该报文是发往终端的下行报文，导致业务中断。 
 图1  UE地址和园区内网地址冲突
 []images/1658472652338.png)
@@ -8903,8 +8194,7 @@ ULCL+辅锚点UPF进行UE地址冲突检测，若发现冲突，可采取如下�
 使用专用DNN。专用DNN地址有限，规划地址时，避免与园区内网地址重叠。 
 本地UPF和园区内网间部署双向NAT，将园区网与核心网隔离，避免地址冲突，如图2所示。图2  双向NAT 
 #### 不同园区内网地址冲突解决方案 
-##### 场景说明 
-园区1和园区2都使用ULCL+辅锚点UPF，将内网数据分流到园区内，两个园区服务器地址相同，都是IP1。当用户访问园区业务，目的地址是IP1时，ULCL+辅锚点UPF无法确定将报文发送至哪个园区。 
+场景说明 :园区1和园区2都使用ULCL+辅锚点UPF，将内网数据分流到园区内，两个园区服务器地址相同，都是IP1。当用户访问园区业务，目的地址是IP1时，ULCL+辅锚点UPF无法确定将报文发送至哪个园区。 
 图1  不同园区内网地址冲突
 []images/1658496640358.png)
 ##### 解决方案 
@@ -8915,28 +8205,21 @@ UPF针对RouteProfileID配置不同VPN策略，实现两个园区数据的隔离
 用户A访问园区1的业务，SMF根据本地分流策略配置或者PCF下发的预定义规则判断需要进行分流，在ULCL+辅锚点UPF上的PFCP会话Session1的建立过程中，上行数据的FAR中转发策略为Forwarding Policy ID=RouteProfileID1。用户B访问园区2的业务，SMF根据本地分流策略配置或者PCF下发的预定义规则判断需要进行分流，在ULCL+辅锚点UPF上的PFCP会话Session2建立过程中，上行数据的FAR中转发策略为Forwarding Policy ID=RouteProfileID2。
 用户A发送上行数据报文P1（目的IP为10.10.10.1），ULCL+辅锚点UPF根据N3隧道匹配到Session1，根据FAR的转发策略判断需要转发至VPN-A，报文P1送至园区1。用户B发送上行数据报文P2（目的IP为10.10.10.1），ULCL+辅锚点UPF根据N3隧道匹配到Session2，根据FAR的转发策略判断需要转发至VPN-B，报文P2送至园区2。 
 ### ULCL容灾方案 
-#### 描述 
-##### 定义 
-支持ULCL容灾，是指ULCL UPF支持主备路由组网下的主备方式容灾，或者主机路由组网下的负荷分担方式容灾，提高业务可用性。 
+描述 :定义 :支持ULCL容灾，是指ULCL UPF支持主备路由组网下的主备方式容灾，或者主机路由组网下的负荷分担方式容灾，提高业务可用性。 
 容灾，指位于不同地理位置的两个站点，当其中一个站点因自然灾害、电力故障等不可控因素无法提供服务时，另一个站点可以接管用户业务，提高网络可靠性。 
-##### 背景知识 
-ULCL是在PDU会话的数据路径上插入一个UPF作为Uplink Classifier，用于将会话的一部分数据分流到本地网络，对数据进行合理路由。一般情况下，ULCL UPF和辅锚点UPF合一部署，本功能特指合一部署的ULCL UPF。
+背景知识 :ULCL是在PDU会话的数据路径上插入一个UPF作为Uplink Classifier，用于将会话的一部分数据分流到本地网络，对数据进行合理路由。一般情况下，ULCL UPF和辅锚点UPF合一部署，本功能特指合一部署的ULCL UPF。
 为了提高ULCL业务的可用性，可以部署一对UPF提供高可用ULCL服务，有如下两种部署方式。
 当使用主备静态路由组网时，这一对UPF配置为主备方式容灾。 
 当使用主机路由方式组网时，这一对UPF配置为负荷分担方式容灾。 
 ULCL容灾特性可以保证单ULCL故障期间，业务仍可用。 
-#### 实现原理 
-##### 系统架构 
-按照组网方式的不同，ULCL容灾可分为如下两种情况。 
+实现原理 :系统架构 :按照组网方式的不同，ULCL容灾可分为如下两种情况。 
 本地网络到主备ULCL UPF采用静态路由方式组网，系统架构如图1所示。图1  静态路由方式ULCL容灾架构图 
 本地网络到两个ULCL UPF采用BGP路由方式组网，ULCL用户动态发布主机路由，系统架构如图2所示。图2  主机路由方式ULCL容灾系统图 
-##### 涉及的网元 
-网元名称|网元作用
+涉及的网元 :网元名称|网元作用
 ---|---
 SMF|SMF可根据不同的APN配置ULCL UPF的优先级，在插入ULCL UPF时，优选高优先级的ULCL UPF。
 本地网络|静态路由方式：支持到主备ULCL UPF的主备路由。主机路由方式：支持主机路由通告，即由用户上线时发布单地址路由。
-##### 本网元实现 
-ULCL UPF和辅锚点UPF合设，作为ULCL业务分流点，同时也作为本地网络的辅锚点。以下按照不同的路由方式对实现原理进行介绍。
+本网元实现 :ULCL UPF和辅锚点UPF合设，作为ULCL业务分流点，同时也作为本地网络的辅锚点。以下按照不同的路由方式对实现原理进行介绍。
 静态路由方式
 主用ULCL UPF故障及恢复场景的报文转发主用ULCL UPF故障时报文转发场景如图3所示，当主用ULCL UPF故障恢复后，对于故障期间从备用ULCL UPF接入的用户，本地网络将按主用路由发送下行报文到主用ULCL UPF。主用ULCL UPF将此类报文，通过配置的NF互转隧道，转发到备用ULCL UPF进行下行报文的发送，报文转发场景如图4所示。图3  故障时报文转发场景当主用ULCL UPF发生故障时，主要涉及如下处理过程。主用ULCL UPF发生故障，SMF检测到故障后，将用户下线。用户重新接入，SMF选择备用ULCL UPF作为到本地网络的分流点，上行报文正常分流到本地网络。本地网络的企业网关检测到主用ULCL UPF故障，选择备用路由发送下行报文到备用ULCL UPF。图4  故障后恢复下行报文转发场景当主用ULCL UPF发生了故障并且故障已经恢复时，主要涉及如下处理过程。主用ULCL UPF恢复，故障期间通过备用ULCL UPF重新接入的用户，仍然通过备用ULCL UPF分流。主用ULCL UPF上无此用户上下文。本地网络的企业网关检测到主用ULCL UPF链路恢复，选择主用路由，发送下行报文到主用ULCL UPF。主用ULCL UPF收到下行报文，发现用户不在本ULCL UPF，且目的地址为配置的ULCL UPF地址池中的地址，则通过互转隧道，将报文转发到备用ULCL UPF。备用ULCL UPF收到互转来的报文，下行发送给用户。 
 主用ULCL UPF与本地网络之间路由故障场景的报文转发主用ULCL UPF与本地网络之间的路由故障时，上行报文通过配置的NF互转隧道，转发到备用ULCL UPF发送。路由故障上行互转场景如图5所示。图5  路由故障上行互转场景当主用ULCL UPF与本地网络之间的路由故障时，主要涉及如下处理过程。主用ULCL UPF进行路由查找失败，则通过互转隧道，将上行报文转发到备用ULCL UPF。备用ULCL UPF收到互转来的报文，上行发送到本地网络。 
@@ -8949,20 +8232,15 @@ ULCL UPF在用户会话建立时，发布用户的主机路由；在用户会话
 用户重新接入，SMF选择可用ULCL UPF2作为到本地网络的分流点，上行报文正常分流到本地网络，ULCL UPF2发布此用户IP的主机路由。 
 本地网络的企业网关接收到ULCL UPF2通告的主机路由，发送下行报文到ULCL UPF2。 
 使用本方式时，用户从接入的ULCL UPF发布路由，下行报文始终发往用户所在的ULCL UPF，无需互转隧道。 
-# 缩略语 
-# 缩略语 
-## AMF 
-Access and Mobility Management Function接入和移动管理功能
-## APN 
-Access Point Name接入点名称
+缩略语 :缩略语 :AMF :Access and Mobility Management Function接入和移动管理功能
+APN :Access Point Name接入点名称
 ## BGP 
 Border Gateway Protocol边界网关协议
 ## DN 
 Data Network数据网
 ## DNAI 
 DN Access Identifier数据网络接入标识符
-## DNN 
-Data Network Name数据网名称
+DNN :Data Network Name数据网名称
 ## DPI 
 Deep Packet Inspection深度包检测
 ## FAR 
@@ -8973,14 +8251,11 @@ Information Element信息元
 Multi-access Edge Computing多接入边缘计算
 ## NAT 
 Network Address Translation网络地址转换
-## PCC 
-Policy and Charging Control计费和策略控制
-## PCF 
-Policy Control Function策略控制功能
+PCC :Policy and Charging Control计费和策略控制
+PCF :Policy Control Function策略控制功能
 ## PDR 
 Packet Detection Rule报文检测规则
-## PDU 
-Protocol Data Unit协议数据单元
+PDU :Protocol Data Unit协议数据单元
 ## PF 
 Packet Filter包过滤
 ## PFCP 
@@ -8991,24 +8266,19 @@ PDU Session AnchorPDU会话锚点
 Policy UDR统一的策略数据存储库
 ## QER 
 QoS Enforcement RuleQoS执行规则
-## SMF 
-Session Management Function会话管理功能
-## SPR 
-Subscription Profile Repository用户签约数据库
-## UE 
-User Equipment用户设备
+SMF :Session Management Function会话管理功能
+SPR :Subscription Profile Repository用户签约数据库
+UE :User Equipment用户设备
 ## ULCL 
 Uplink Classifier上行分类器
-## UPF 
-User Plane Function用户平面功能
+UPF :User Plane Function用户平面功能
 ## URR 
 Usage Reporting Rule用量上报规则
 # 5G异网漫游解决方案 
 ## 方案概述 
 ### 背景与挑战 
 由于终端用户具有不断移动的特点，当终端用户在国内移动到了归属运营商的5G网络未覆盖的地区时，则无法继续使用5G通信服务，可能导致用户掉线、业务中断。为了保证用户的持续接入、确保业务连续性，5G异网漫游应运而生。 
-### 定义 
-5G异网漫游，是指终端用户在本国内移动到归属运营商没有5G网络覆盖的地区时，可以通过其他运营商的5G网络继续使用5G通信服务。 
+定义 :5G异网漫游，是指终端用户在本国内移动到归属运营商没有5G网络覆盖的地区时，可以通过其他运营商的5G网络继续使用5G通信服务。 
 中兴通讯提供的5G异网漫游解决方案，以3GPP协议定义的5G国际漫游为基础，使用HomeRouted漫游架构构建。 
 ### 漫游架构参考 
 3GPP协议定义的5G国际漫游架构分为Home Routed架构和Local Breakout架构。 
@@ -9154,8 +8424,7 @@ Charging Id是话单中的关键字段，在每一个PDU会话建立（包括I-S
 当会话在归属网络中初始建立（包括I-SMF插入的情况）时，Charging Id由hSMF产生。当UE从归属网络移动到拜访网络，不存在I-SMF时，vSMF向hSMF获取SMContext，其中包含Charging Id。当UE从归属网络移动到拜访网络，存在I-SMF时，vSMF向I-SMF获取SMContext，其中不包含Charging Id，在后续vSMF向hSMF发起的会话更新请求过程中，hSMF将Charging Id通过homeProvidedChargingId参数传递给vSMF。 
 当会话在拜访网络中初始建立时，Charging Id由vSMF产生传递给hSMF，vSMF产生Charging Id包含VPLMN的PLMN ID。 
 在同一PLMN内发生vSMF改变时或不同PLMN间发生vSMF改变时，Charging Id从老的vSMF传递给新的vSMF。 
-### 遵循标准 
-标准类别|标准编号|标准名称
+遵循标准 :标准类别|标准编号|标准名称
 ---|---|---
 3GPP|23.501|system architecture for the 5g system
 23.502|3GPP|procedures for the 5g system
@@ -9170,17 +8439,14 @@ Charging Id是话单中的关键字段，在每一个PDU会话建立（包括I-S
 32.291|3GPP|5g system, charging service
 行业标准|-|5G异网漫游_核心网漫游总体技术要求
 ## 无SCP的SEPP多对多组网 
-### 场景说明 
-5G异网漫游场景需要部署SEPP作为边界网关，当用户漫游到归属运营商网络以外的地区时，可以通过SEPP进行信令消息转发，SEPP在信令消息转发过程中对消息进行拓扑隐藏，用户可以继续使用5G通信服务。 
+场景说明 :5G异网漫游场景需要部署SEPP作为边界网关，当用户漫游到归属运营商网络以外的地区时，可以通过SEPP进行信令消息转发，SEPP在信令消息转发过程中对消息进行拓扑隐藏，用户可以继续使用5G通信服务。 
 在无SCP的SEPP异网漫游组网场景中，NF与SEPP直连，SEPP路由方式为3gpp-Sbi-Target-apiroot方式，且两个PLMN间的SEPP按多对多进行不对等部署。
-### 客户收益 
-客户收益参见下表。 
+客户收益 :客户收益参见下表。 
 受益方|受益描述
 ---|---
 终端用户|用户跨PLMN漫游时无需换卡，不感知网络变化。
 运营商|节省投资：通过异网漫游方式，共享其他运营商的网络。增加收益：通过对其他运营商用户提供业务，提高网络使用效率，增加收益。提高用户业务体验：使用户在归属运营商无5G网络覆盖的地区，可继续使用5G通信服务。
-### 实现原理 
-#### 组网说明 
+实现原理 :#### 组网说明 
 5GC异网漫游架构下的无SCP的SEPP多对多组网如[图1](1668738012846.html#z5dd1dbaa70d44adba683241d00504bde__5fef5e12-6ccb-488d-a182-9c32ab573857)所示。
 图1  无SCP的SEPP多对多组网
 []images/eba5b05d40564967a07b9d44ab47f45a.png)
@@ -9206,8 +8472,7 @@ RAN|5G无线接入网络，在5G异网漫游场景中的功能如下：支持广
 UE|支持5G接入的终端，在5G异网漫游场景中的功能如下：支持异网漫游频段的搜网。支持接入5G核心网，及对5G核心网进行能力上报。支持5G系统间互操作（如：4/5G互操作）、5G系统内互操作（如：异网漫游）等。不支持VoNR的终端，应结合用户标识和拜访网络的PLMN ID禁止接入拜访地的5G网络。
 ##### SEPP功能 
 ###### SEPP路由功能 
-####### 概述 
-NF针对目标网元地址为其他运营商地址的信令消息，将信令消息路由至SEPP，SEPP负责PLMN间信令的路由转发。在SEPP对等或不对等组网场景下，跨PLMN信令的路由有基于Request URI的路由方式及基于3gpp-Sbi-Target-apiRoot的路由方式两种，具体路由流程如下。 
+概述 :NF针对目标网元地址为其他运营商地址的信令消息，将信令消息路由至SEPP，SEPP负责PLMN间信令的路由转发。在SEPP对等或不对等组网场景下，跨PLMN信令的路由有基于Request URI的路由方式及基于3gpp-Sbi-Target-apiRoot的路由方式两种，具体路由流程如下。 
 ####### 基于Request URI的路由方式 
 图1  基于Request URI的路由方式
 []images/9a725d1042a6497287c0e615ebd3f2ee.png)
@@ -9244,8 +8509,7 @@ NF消费者根据服务发现的结果发起业务请求消息给cSEPP。
 cSEPP将业务请求消息发送给pSEPP。 
 pSEPP将业务请求消息发送给NF服务者。 
 ###### SEPP拓扑隐藏功能 
-####### 概述 
-SEPP向对端SEPP发送消息前通过拓扑隐藏将信令中的FQDN信息或其他重要网络信息（如号段、IP地址等），进行转换、修改或替换，避免暴露给其他运营商。 
+概述 :SEPP向对端SEPP发送消息前通过拓扑隐藏将信令中的FQDN信息或其他重要网络信息（如号段、IP地址等），进行转换、修改或替换，避免暴露给其他运营商。 
  说明： 
 在下面的流程中，当SEPP对x信息进行拓扑隐藏时，隐藏后的信息用x`表示。 
 ####### 服务发现隐藏 
@@ -9356,8 +8620,7 @@ plmnList：异网漫游场景下，一个运营商可能有多个PLMN，AMF向NR
 allowedPlmns：allowedPlmns中包含签约了漫游协议的其他运营商的PLMN ID，如果未携带allowedPlmns则表示支持任意PLMN的NF发现本NF。 
 NFR返回NF注册响应/NF更新响应。 
 ###### NF服务发现功能 
-####### 概述 
-5G异网漫游场景下，涉及发现其他PLMN下的NF，包括： 
+概述 :5G异网漫游场景下，涉及发现其他PLMN下的NF，包括： 
 vAMF发现AUSF 
 vAMF发现UDM 
 vAMF发现hSMF 
@@ -9584,8 +8847,7 @@ vSEPP将请求URI中的apiRoot解码，得到vNF的地址，向vNF转发变更�
 vNF向vSEPP返回响应。 
 vSEPP向hSEPP返回响应。 
 hSEPP向hL-NRF返回响应。 
-#### 业务流程 
-##### 初始注册流程 
+业务流程 :##### 初始注册流程 
 UE在拜访地开机接入5G无线网络，发起初始注册流程。 
 图1  初始注册流程
 []images/8b07a454719a4a79ab5b25f503340424.png)
@@ -9988,8 +9250,7 @@ Target I-UPF向Target I-SMF返回N4 Session Modification Response消息。
 Source vSMF判断资源保护定时器超时。 
 Source vSMF向Source vUPF发送N4 Session Release Request消息，通知Source vUPF释放用户面资源。 
 Source vUPF向Source vSMF返回N4 Session Release Response消息。 
-### 应用限制 
-#### NRF应用限制 
+应用限制 :#### NRF应用限制 
 I-NRF根据target PLMN查询路由配置，获取本网SEPP的地址和异网I-NRF的FQDN。支持1个PLMN配置指向多个异网I-NRF的FQDN。 
 I-NRF和本网所有的L-NRF互通。 
 进行NF订阅时，I-NRF对subid的编解码是根据中兴通讯特有方式实现，组网需保证订阅请求经过的I-NRF与续订阅/去订阅请求经过的I-NRF为同一厂家设备。 
@@ -10006,9 +9267,7 @@ SMF|V7.22.31
 AUSF/UDM|V7.21.16
 SEPP|V7.22.40
 NRF|V7.23.20
-### 指标监控 
-#### 性能统计 
-AMF
+指标监控 :性能统计 :AMF
 AMF中需要关注的性能统计数据参见下表。 
 序号|测量类型|性能计数器
 ---|---|---
@@ -10365,22 +9624,18 @@ C550630024 每PLMN发送的上行数据包字节峰值速率(KB/s)|1|基于服�
 C550630025 每PLMN接收的下行数据包字节峰值速率(KB/s)|1|基于服务PLMN的流量测量
 C550630026 每PLMN发送的下行数据包字节峰值速率(KB/s)|1|基于服务PLMN的流量测量
 ### 各网元配置 
-#### 数据规划 
-##### 配置前提 
-各运营商网内的5G业务正常运行。 
+数据规划 :配置前提 :各运营商网内的5G业务正常运行。 
 已规划运营商间异网漫游相关的对接配置数据。 
  说明： 
 建议的配置顺序如下： 
 完成NRF网元配置，避免在未配置共享PLMN的情况下，AMF/SMF先增加共享PLMN配置，导致AMF/SMF向NRF进行注册更新失败。 
 完成SMF、AUSF/UDM、NSSF和SEPP的配置后，再进行AMF/MME/SGSN的配置，避免漫游用户在网络侧配置未完成的情况下，从共享PLMN接入网络，导致接入失败。 
-##### License要求 
-NF|LicenseID|License控制项|取值
+License要求 :NF|LicenseID|License控制项|取值
 ---|---|---|---
 AMF|uMAC_AMF_7256|AMF支持跨PLMN移动|开
 uMAC_AMF_7241|AMF|AMF支持用户QoS控制功能|开
 uMAC_AMF_7246|AMF|AMF支持基于SEPP通信|开
-##### 数据规划 
-无SCP的SEPP多对多组网规划如[图1](1668739046297.html#z51e69f8117ee4ede9adeef4cbebbafc0__434c74dd-0067-43cd-8f85-f43748a14af9)所示。
+数据规划 :无SCP的SEPP多对多组网规划如[图1](1668739046297.html#z51e69f8117ee4ede9adeef4cbebbafc0__434c74dd-0067-43cd-8f85-f43748a14af9)所示。
 图1  无SCP的SEPP多对多组网
 []images/44b8dadf861a4fb094a74d6a602652e9.png)
 以运营商A和运营商B的异网漫游组网为例，网络总体数据规划参见下表。 
@@ -10551,8 +9806,7 @@ I-NRF路由转发配置
 10|设置服务发现配置|SET SBISRVDISCOVERY:SUBWITHPLMN="YES"|配置订阅请求消息携带被订阅NF所属的PLMN ID。
 11|设置订阅参数配置|SET SBISUBPARAM:INTERPLMNSUBSWITCH="SWITCH_ON",SUBREQINTERPLMNFQDN="interplmn_0A_zz_udm181udm01_zx.0A.node.5gc.mnc006.mcc460.3gppnetwork.org",CBINTERPLMNFQDN="SWITCH_ON"|INTERPLMNSUBSWITCH配置为SWITCH_ON，表示订阅请求消息携带request plmn。SUBREQINTERPLMNFQDN配置订阅请求消息携带的interplmnfqdn。订阅者Inter Plmn Fqdn取值引用自SET UDMNFREGBASE命令中的INTERPLMNFQDN参数。
 12|传送数据|SYNA:STYPE="CHG"|-
-#### NSSF 
- 说明： 
+NSSF : 说明： 
 当不同的运营商使用不同的切片时需要配置。 
 以运营商A在A省部署的NSSF网元为例，配置参见下表。 
 步骤|说明|操作|备注
@@ -10634,8 +9888,7 @@ PLMN ID校验配置（中国移动配置）
 4|新增远端PLMN ID组配置|ADD REMOTE PLMNID ARRAY:ARRAYID=1,PLMNID=1ADD REMOTE PLMNID ARRAY:ARRAYID=1,PLMNID=2|对端运营商的每一个合法的PLMN ID，对应配置一条记录。PLMN ID组标识按照各运营商合法PLMN ID组设置对应标识，从1开始配置。PLMN ID配置索引引用所有远端合法PLMN ID，即引用自ADD REMOTE PLMNID命令中的INDEX参数。
 5|设置本端PLMN ID校验|SET DSCPADDR:PLMNCHECK="CHECK_ON",LPLMNIDARRID=1|本端PLMN ID组标识取值引用自ADD LOCAL PLMN ID ARRAY命令中的ARRAYID参数。
 6|设置对等端PLMN ID校验|SET DHTTPPEER:ID=51,RPLMNIDARRID=1SET DHTTPPEER:ID=52,RPLMNIDARRID=1|每个需要校验的异网SEPP对等端都必须执行本配置。远端PLMN ID组标识引用对应域的合法PLMN ID组，即引用自ADD REMOTE PLMNID ARRAY命令中的ARRAYID参数。
-#### AMF 
-以运营商A在A省部署的AMF为例，配置参见下表。 
+AMF :以运营商A在A省部署的AMF为例，配置参见下表。 
 步骤|说明|操作|备注
 ---|---|---|---
 1|新增TA配置|ADD TACFG:TAID=1,MCC="460",MNC="32",TAC="0A000A",TANAME="TA-1",TAVOICEPOLICYTEMPID=1,EMERGCAPA="BOTHNRANDEUTRANSPRT",SPRTEMERGFALLBACK="YES",EMERGFALLBACKCAPA="BOTHNRANDEUTRANSPRT",EMERGENCYNUMLISTID=0,EXTEMERGNUMLISTID=0|配置共享PLMN的TA信息。
@@ -10688,23 +9941,20 @@ ADD GUAMICFG:GUAMIID=3,MCC="460",MNC="32",REGIONID=1,SETID=1,POINTID=2|5|新增G
 47|设置671号软参|SET COMMU SOFTWARE PARAMETER:ID=671,VALUE=1|针对互操作流程中基于HR架构的漫游，当AMF向NRF发送hSMF发现请求消息时，优化消息中TargetPlmn的获取策略，获取TargetPlmn的顺序依次为：DNN OI、PGW FQDN、SUPI。
 48|设置673号软参|SET COMMU SOFTWARE PARAMETER:ID=673,VALUE=1|配置漫游切片映射功能开启时触发N2切换流程，Target AMF向UDM获取切片签约数据。
 49|设置565号软参|SET COMMU SOFTWARE PARAMETER:ID=565,VALUE=1|配置局间HO切换，未切换的会话发生I-SMF/V-SMF改变/删除时，AMF通知Source I-SMF/V-SMF释放。
-#### MME 
-以运营商A在A省部署的MME为例，配置参见下表。 
+MME :以运营商A在A省部署的MME为例，配置参见下表。 
 步骤|说明|操作|备注
 ---|---|---|---
 1|对等PLMN Profile增加PLMN配置|ADD MME PLMN:PROFILEID=1,PLMN="460"-"22"|如果已存在EPLMN Profile，使用该命令增加漫游网络的共享PLMN作为EPLMN下发给本网的用户。
 2|新增对等PLMN Profile配置|ADD MME PLMN PROFILE:PROFILEID=1,PLMN="460"-"22"|如果不存在EPLMN Profile，使用该命令新增一个EPLMN Profile，将漫游网络的共享PLMN作为EPLMN下发给本网的用户。
 3|新增MME IMSI对等PLMN配置|ADD MME IMSI TAI PLMN:IMSI="46006",ISALLTA="YES",PROFILEID=1|配置本网用户在全TA区域下发EPLMN。PROFILEID参数引用自ADD MME PLMN PROFILE或ADD MME PLMN命令中的PROFILEID参数，需要预先配置。
 4|设置移动管理参数配置|SET MOBILE MANAGEMENT:MMEEPLMNLISTNUM="5 EPLMNs"|设置最大支持的EPLMN组数，根据实际情况配置。
-#### SGSN 
-以运营商A在A省部署的SGSN网元为例，配置参加下表。 
+SGSN :以运营商A在A省部署的SGSN网元为例，配置参加下表。 
 步骤|说明|操作|备注
 ---|---|---|---
 1|对等PLMN Profile增加PLMN配置|ADD SGSN PLMN:PROFILEID=1,PLMN="460"-"22"|如果已存在EPLMN Profile，使用该命令增加漫游网络的共享PLMN作为EPLMN下发给本网的用户。
 2|新增对等PLMN Profile配置|ADD SGSN PLMN PROFILE:PROFILEID=1,PLMN="460"-"22"|如果不存在EPLMN Profile，使用该命令新增一个EPLMN Profile，漫游网络的共享PLMN作为EPLMN下发给本网的用户。
 3|新增SGSN IMSI对等PLMN配置|ADD SGSN IMSI RAI PLMN:IMSI="46006",ISALLRA="YES",PROFILEID=1|配置本网用户在全TA区域下发EPLMN。PROFILEID参数引用自ADD SGSN PLMN PROFILE或ADD SGSN PLMN命令中的PROFILEID参数，需要预先配置。
-#### 测试用例 
-测试项目|漫游用户在拜访地初始接入
+测试用例 :测试项目|漫游用户在拜访地初始接入
 ---|---
 测试目的|验证终端在非漫游区域关机、在漫游区域开机并注册成功。
 预置条件|拜访网络和归属网络中5GC各网元系统及操作维护平台运行正常。设置发现AUSF/UDM的策略为NRF发现。服务化接口的信令监控、分析工具或者仪表准备就绪。
@@ -10727,97 +9977,66 @@ ADD GUAMICFG:GUAMIID=3,MCC="460",MNC="32",REGIONID=1,SETID=1,POINTID=2|5|新增G
 测试结果|-
 ## 术语解释 
 ### vNF 
-#### 全称 
-Visited Network Function 
-#### 解释 
-表示位于VPLMN中的NF，例如：vAMF、vSMF、vUPF等。 
+全称 :Visited Network Function 
+解释 :表示位于VPLMN中的NF，例如：vAMF、vSMF、vUPF等。 
 ### hNF 
-#### 全称 
-Home Network Function 
-#### 解释 
-表示位于HPLMN中的NF，例如：hAMF、hSMF、hUPF等。 
+全称 :Home Network Function 
+解释 :表示位于HPLMN中的NF，例如：hAMF、hSMF、hUPF等。 
 ### cNF 
-#### 全称 
-Network Function as Customer 
-#### 解释 
-表示异网漫游场景中，作为NF服务消费者的NF，例如：cNRF。 
+全称 :Network Function as Customer 
+解释 :表示异网漫游场景中，作为NF服务消费者的NF，例如：cNRF。 
 ### pNF 
-#### 全称 
-Network Function as Producer 
-#### 解释 
-表示异网漫游场景中，作为NF服务生产者的NF，例如：pNRF。 
+全称 :Network Function as Producer 
+解释 :表示异网漫游场景中，作为NF服务生产者的NF，例如：pNRF。 
 ### L-NRF 
-#### 全称 
-Local Network Repository Function 
-#### 解释 
-表示本地NRF，直接与NF交互。 
+全称 :Local Network Repository Function 
+解释 :表示本地NRF，直接与NF交互。 
 ### I-NRF 
-#### 全称 
-Intermediate Network Repository Function 
-#### 解释 
-表示中间NRF，作为关口局NRF，用于和其他PLMN的NRF/NF进行通信，负责异网漫游互通，隐藏网内拓扑，简化组网对接。 
+全称 :Intermediate Network Repository Function 
+解释 :表示中间NRF，作为关口局NRF，用于和其他PLMN的NRF/NF进行通信，负责异网漫游互通，隐藏网内拓扑，简化组网对接。 
 ### vL-NRF 
-#### 全称 
-Visited Local Network Repository Function 
-#### 解释 
-表示位于VPLMN中的本地NRF，与VPLMN中的NF直接交互。 
+全称 :Visited Local Network Repository Function 
+解释 :表示位于VPLMN中的本地NRF，与VPLMN中的NF直接交互。 
 ### vI-NRF 
-#### 全称 
-Visited Intermediate Network Repository Function 
-#### 解释 
-表示位于VPLMN中的中间NRF，作为关口局NRF，用于和其他PLMN的NRF/NF进行通信。 
+全称 :Visited Intermediate Network Repository Function 
+解释 :表示位于VPLMN中的中间NRF，作为关口局NRF，用于和其他PLMN的NRF/NF进行通信。 
 ### hL-NRF 
-#### 全称 
-Home Local Network Repository Function 
-#### 解释 
-表示位于HPLMN中的本地NRF，与HPLMN中的NF直接交互。 
+全称 :Home Local Network Repository Function 
+解释 :表示位于HPLMN中的本地NRF，与HPLMN中的NF直接交互。 
 ### hI-NRF 
-#### 全称 
-Home Intermediate Network Repository Function 
-#### 解释 
-表示位于HPLMN中的中间NRF，作为关口局NRF，用于和其他PLMN的NRF/NF进行通信。 
+全称 :Home Intermediate Network Repository Function 
+解释 :表示位于HPLMN中的中间NRF，作为关口局NRF，用于和其他PLMN的NRF/NF进行通信。 
 ### pSEPP 
-#### 全称 
-Security Edge Protection Proxy as Producer 
-#### 解释 
-NF服务生产者（请求接收方）一侧的SEPP称为pSEPP。 
+全称 :Security Edge Protection Proxy as Producer 
+解释 :NF服务生产者（请求接收方）一侧的SEPP称为pSEPP。 
 ### cSEPP 
-#### 全称 
-Security Edge Protection Proxy as Customer 
-#### 解释 
-NF服务消费者（请求发起方）一侧的SEPP称为cSEPP。 
-# 缩略语 
-# 缩略语 
-## BG 
+全称 :Security Edge Protection Proxy as Customer 
+解释 :NF服务消费者（请求发起方）一侧的SEPP称为cSEPP。 
+缩略语 :缩略语 :## BG 
 Border Gateways边界网关
 ## IPX 
 Internetwork Packet Exchange protocolInternet网络分组交换协议
 ## SEPP 
 Security Edge Protection Proxy安全边缘保护代理
-## SUPI 
-Subscriber Permanent Identifier用户永久标识
+SUPI :Subscriber Permanent Identifier用户永久标识
 # 5GC容灾语音快速恢复综合解决方案 
 ## 术语约定 
 ### 适用NF 
 AMF、SMF、UDM、P-CSCF、S-CSCF、BSF、DRA、IWF、PCF 
-### 术语 
-本文所涉及的相关术语参见下表。 
+术语 :本文所涉及的相关术语参见下表。 
 术语|说明
 ---|---
 BSF|BSF功能是3GPP定义的标准功能，用于存储用户信息和为PDU会话选择PCF地址。当其他网元，如NEF或者AF需要选择PCF时，通过BSF提供的服务化接口获取对应的PCF信息。当4G和5G进行互操作时，BSF实现对同一个会话选择一个合一的PCRF和PCF节点，使用户在4G和5G之间移动时，绑定的PCF和PCRF地址不变，保证会话不中断。BSF可以部署为以下两种模式：独立BSF。在SMF中内置BSF。
 热备|NF Set组网方式下，主用NF将用户的全部数据同步到备用NF；当NF Set下某个或部分NF发生故障，NF Set下其他正常NF根据备用NF中保存的用户全部数据，能无损接管当前用户的业务。
 冷备|NF Set组网方式下，NF Set下的NF间不同步用户动态信息；当NF Set下某个或部分NF发生故障，对端NF可以选择NF Set下其他正常NF处理用户业务。
 AMF部分备份|AMF Set组网方式下，主用AMF将全部用户的部分数据（TA list、SUPI、GUTI）备份到备用AMF；当主用AMF发生故障，备用AMF收到被叫业务（下行业务）时，根据用户部分上下文信息（TA list、SUPI、GUTI）寻呼用户，触发用户重新初始注册，快速恢复用户语音和数据业务。
-## 定义 
-### 定义 
-5GC容灾语音快速恢复是指：在5GC网元级容灾或DC级容灾等容灾场景下，由于单个/多个NF不可用，或IMS PDU Session在5GC的各个NF上状态不一致，导致出现用户语音业务受阻且短时间内无法恢复时，通过采用增强P-CSCF Restore方式，快速恢复用户语音业务（恢复时间能够达到秒级），提升用户业务体验。 
+定义 :定义 :5GC容灾语音快速恢复是指：在5GC网元级容灾或DC级容灾等容灾场景下，由于单个/多个NF不可用，或IMS PDU Session在5GC的各个NF上状态不一致，导致出现用户语音业务受阻且短时间内无法恢复时，通过采用增强P-CSCF Restore方式，快速恢复用户语音业务（恢复时间能够达到秒级），提升用户业务体验。 
 本方案主要针对基于增强P-CSCF Restore的语音快速恢复机制展开说明。 
  说明： 
 本文中的故障NF均指5GC中的NF。 
 当语音业务全阻（所用用户的所有语音业务均不可用）时，请参考5GC逃生解决方案。 
 增强P-CSCF Restore流程是运营商通过对标准P-CSCF Restore流程进行增强，使5GC中的NF故障时可以快速恢复用户语音业务的方式。 
-### 背景知识 
-5G语音的挑战
+背景知识 :5G语音的挑战
 在5GS中，UE仅在PS域下注册，不在CS域下注册。如果UE在5GS中进行语音业务，但业务受阻，则无法通过CS域继续进行语音业务，语音业务失败，如[图1](1685966470322.html#z4619068e34d5497494804a630d86c246__dca45389-d40f-44f0-b4c6-3a5dd2a24d5f)所示。
 图1  5G语音业务失败场景
 []images/5fd77112d5d74e3a8ede012488d76d4a.png)
@@ -10848,8 +10067,7 @@ VoNR的语音呼叫流程示意图如[图3](1685966470322.html#z4619068e34d54974
 P-CSCF触发语音业务资源预留流程，即语音专有QoS Flow建立流程。 
 主叫UE和被叫UE完成振铃以及摘机等交互。 
 ## 组网架构 
-### 概述 
-5GC容灾语音快速恢复解决方案基于BSF的部署方式的不同有如下两种组网方式。 
+概述 :5GC容灾语音快速恢复解决方案基于BSF的部署方式的不同有如下两种组网方式。 
 内置BSF组网方式：BSF内置在SMF。 
 外置BSF组网方式：BSF独立部署。 
 ### 内置BSF组网方式 
@@ -10907,21 +10125,18 @@ BSF|外置BSF|外置BSF触发P-CSCF Restore|当BSF返回失败原因码5002给DR
 内置BSF|内置BSF触发P-CSCF Restore|内置BSF|当BSF返回404(not found)给DRA时，DRA模拟PCF返回失败原因码5002给P-CSCF，触发P-CSCF Restore流程。|立即恢复（秒级）
 PCF|PCF触发P-CSCF Restore|PCF|当PCF（不区分冷备和热备 ）返回失败原因码5065给P-CSCF时，触发P-CSCF Restore流程。|立即恢复（秒级）
 根据上述结果，本解决方案以不同网元触发的P-CSCF Restore方式分析特定场景的语音快速恢复方案。 
-### 客户收益 
-受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|用户语音业务受阻后能够快速恢复，增强语音可靠性，提升运营商的服务质量。
 用户|语音业务受阻后能够快速恢复，提升用户体验。
-### 遵循标准 
-标准类别|标准编号|标准名称
+遵循标准 :标准类别|标准编号|标准名称
 ---|---|---
 3GPP|23.501|system architecture for the 5g system
 23.502|3GPP|procedures for the 5g system
 23.380|3GPP|IMS Restoration Procedures
 29.502|3GPP|session management services
 29.503|3GPP|unified data management services
-## 实现原理 
-### 增强P-CSCF Restore 
+实现原理 :### 增强P-CSCF Restore 
 #### 组网架构 
 3GPP 23.380协议定义的标准P-CSCF Restore流程用于UE接入的P-CSCF发生故障时，快速恢复用户语音业务。 
 当5GC中的NF故障，导致用户语音业务受阻且短时间内无法恢复时，运营商对标准P-CSCF Restore流程进行了增强，使5GC中的NF时故障可以使用增强P-CSCF Restore机制，快速恢复用户语音业务。 
@@ -10937,8 +10152,7 @@ S-CSCF发起标准的基于UDM的P-CSCF Restore流程，UDM通知AMF处理P-CSCF
 内置BSF触发的增强P-CSCF Restore 
 外置BSF触发的增强P-CSCF Restore 
 PCF触发的增强P-CSCF Restore 
-#### 业务流程 
-增强P-CSCF Restore功能主要涉及如下流程： 
+业务流程 :增强P-CSCF Restore功能主要涉及如下流程： 
 注册流程 
 PDU Session建立流程 
 UDM通知AMF触发P-CSCF Restore流程 
@@ -11010,8 +10224,7 @@ DRA收到BSF回复的失败响应（404 Not Found）。
 内置BSF触发的增强P-CSCF Restore组网图如[图1](1686101333513.html#z68a598750a3e47a3be0d70a726a7531e__e190b657-71f4-4f63-9bac-4bfda77038d6)所示。
 图1  内置BSF触发的增强P-CSCF Restore组网
 []images/adbf3e99831e4bb381fe642c84436d60.png)
-#### 实现原理 
-内置BSF触发的增强P-CSCF Restore流程示意图如[图2](1686101333513.html#z68a598750a3e47a3be0d70a726a7531e__149bf4ae-ffa0-4919-a84f-08ce1a9f14e9)所示。
+实现原理 :内置BSF触发的增强P-CSCF Restore流程示意图如[图2](1686101333513.html#z68a598750a3e47a3be0d70a726a7531e__149bf4ae-ffa0-4919-a84f-08ce1a9f14e9)所示。
 图2  内置BSF触发的增强P-CSCF Restore流程示意
 []images/0a600b62b03e421b89a17737a901bc30.png)
 主要处理流程如下： 
@@ -11022,8 +10235,7 @@ DRA给P-CSCF返回AAA。
 如果收到失败响应（404 Not Found），则DRA根据本地配置，把失败响应转成携带错误码5065（IP-CAN Session Unavailable）或5002（Unknown Session ID）。 
 P-CSCF通过扩展SIP消息，通知S-CSCF发起标准的基于UDM的P-CSCF Restore流程。 
 S-CSCF发起标准的基于UDM的P-CSCF Restore流程。 
-#### 业务流程 
-相关业务流程参见[增强P-CSCF Restore](1686100896196.html)中的业务流程。
+业务流程 :相关业务流程参见[增强P-CSCF Restore](1686100896196.html)中的业务流程。
 ### 外置BSF触发的增强P-CSCF Restore 
 #### 组网说明 
 BSF提供会话绑定管理功能，可以基于UE IP地址等信息查询对应的PCF信息。BSF向NRF注册该BSF的IP号段信息，DRA可以通过NRF获取BSF信息。 
@@ -11031,8 +10243,7 @@ BSF提供会话绑定管理功能，可以基于UE IP地址等信息查询对应
 外置BSF触发的增强P-CSCF Restore组网图如[图1](1686101336810.html#z82e247c76d924821a06f9c6a5200f2cb__adf9a081-e5cf-4093-a03a-2afc42c9dddf)所示。
 图1  外置BSF触发的增强P-CSCF Restore组网图
 []images/5c827d31e29a4c6fb710850b29020312.png)
-#### 实现原理 
-外置BSF异常触发的P-CSCF Restore流程示意图如[图2](1686101336810.html#z82e247c76d924821a06f9c6a5200f2cb__441998b7-fc0f-471c-b0e8-1346422ef3cb)所示。
+实现原理 :外置BSF异常触发的P-CSCF Restore流程示意图如[图2](1686101336810.html#z82e247c76d924821a06f9c6a5200f2cb__441998b7-fc0f-471c-b0e8-1346422ef3cb)所示。
 图2  外置BSF异常触发的P-CSCF Restore流程示意
 []images/40d9e4c1d44847bca8aa591eb136a6ed.png)
 主要处理流程如下： 
@@ -11042,8 +10253,7 @@ DRA通过NRF发现BSF成功，向BSF发送Nbsf_Management_Discovery Req(UE IP)�
 DRA向P-CSCF返回AAA-5002。 
 P-CSCF通过扩展SIP消息，通知S-CSCF发起标准的P-CSCF Restore流程。 
 S-CSCF发起标准的基于UDM的P-CSCF Restore流程。 
-#### 业务流程 
-相关业务流程参见[增强P-CSCF Restore](1686100896196.html)中的业务流程。
+业务流程 :相关业务流程参见[增强P-CSCF Restore](1686100896196.html)中的业务流程。
 ### PCF触发的增强P-CSCF Restore 
 #### 组网架构 
 当PCF故障或PCF丢失了部分用户的IMS PDU Session信息时，如果PCF收到AAR消息请求建立专载，由于PCF找不到会话，会向P-CSCF返回AAA-5065（IP-CAN Session Unavailable），触发P-CSCF发起P-CSCF Restore流程。 
@@ -11053,8 +10263,7 @@ BSF外置时，需要BSF支持重路由功能。
 BSF内置时，需要DRA支持重路由功能。 
 图1  PCF触发的增强P-CSCF Restore
 []images/2361ae70d94e4c0086df0dd54a10837e.png)
-#### 实现原理 
-基于PCF的增强P-CSCF Restore流程示意图如[图2](1686101393489.html#zc78d7f2161c542cc8921da8c5030a968__8c602d63-fc2b-4665-ad03-b98dbac2c78f)所示。
+实现原理 :基于PCF的增强P-CSCF Restore流程示意图如[图2](1686101393489.html#zc78d7f2161c542cc8921da8c5030a968__8c602d63-fc2b-4665-ad03-b98dbac2c78f)所示。
 图2  PCF触发的增强P-CSCF Restore流程示意
 []images/c81e9d115421494da0267043c256e682.png)
 主要处理流程如下： 
@@ -11064,10 +10273,8 @@ PCF本地找不到对应会话上下文。
 PCF经过DRA和BSF向P-CSCF返回AAA-5065（IP-CAN Session Unavailable）。 
 P-CSCF通过扩展SIP消息，通知S-CSCF触发S-CSCF的P-CSCF Restore流程。 
 S-CSCF发起标准的基于UDM的P-CSCF Restore流程。 
-#### 业务流程 
-相关业务流程参见[增强P-CSCF Restore](1686100896196.html)中的业务流程。
-## 可获得性 
-### 版本说明 
+业务流程 :相关业务流程参见[增强P-CSCF Restore](1686100896196.html)中的业务流程。
+可获得性 :### 版本说明 
 网元|产品版本
 ---|---
 AMF|ZXUN uMAC V7.20.24及以上版本
@@ -11079,11 +10286,8 @@ S-CSCF|ZXUN CSCF V5.17.10及以上版本
 BSF|ZXUN DSC V5.20.10及以上版本
 DRA|ZXUN DSC V5.20.10及以上版本
 PCF|ZXUN RCP V7.20.20及以上版本
-### 工程规划要求 
-P-CSCF收到AAA-5065（IP-CAN Session Unavailable）或AAA-5002（Unknown Session ID）后，需要通过扩展SIP消息（定制消息），通知S-CSCF触发P-CSCF Restore流程。 
-## 指标监控 
-### 概述 
-本解决方案需要监控的性能统计数据涉及AMF、SMF、PCF和SBC网元。 
+工程规划要求 :P-CSCF收到AAA-5065（IP-CAN Session Unavailable）或AAA-5002（Unknown Session ID）后，需要通过扩展SIP消息（定制消息），通知S-CSCF触发P-CSCF Restore流程。 
+指标监控 :概述 :本解决方案需要监控的性能统计数据涉及AMF、SMF、PCF和SBC网元。 
 ### AMF网元关键指标 
 AMF网元需要监控的性能统计数据参见下表。 
 关键指标|计算公式|指标描述
@@ -11163,19 +10367,15 @@ Rx接口接收AAA响应率(%)|C000380005 / C000380004 × 100|该测量指标主�
 8|（C000110031）被叫接通次数
 9|（C000110063）呼叫中断次数
 10|（C000110012）试呼次数
-## 配置过程 
-### 预配置（增强P-CSCF Restore） 
-#### 场景说明 
-5GC容灾语音快速恢复解决方案涉及如下三个配置场景： 
+配置过程 :### 预配置（增强P-CSCF Restore） 
+场景说明 :5GC容灾语音快速恢复解决方案涉及如下三个配置场景： 
 内置BSF触发的增强P-CSCF Restore场景配置 
 外置BSF触发的增强P-CSCF Restroe场景配置 
 PCF触发的增强P-CSCF Restore场景配置 
 以上三个场景的配置均有相同的前置配置步骤，即在进行以上三个场景的配置前，均需先执行本节的预配置过程。 
-#### 配置前提 
-各运营商网内的5G业务正常运行。 
+配置前提 :各运营商网内的5G业务正常运行。 
 语音业务网元正常运行。 
-#### 数据规划 
-网元|命令|参数名称|取值样例|数据来源|说明
+数据规划 :网元|命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---|---
 P-CSCF|SET VD|虚拟设备编号|1|已配置数据中获取|把每个VDID（虚拟设备编号）对应的PCRF重启恢复通知开关都配置为ENABLE。
 PCRF重启恢复通知开关|P-CSCF|SET VD|ENABLE|本端规划|把每个VDID（虚拟设备编号）对应的PCRF重启恢复通知开关都配置为ENABLE。
@@ -11196,8 +10396,7 @@ ADD PCSCFREST|SMF|数据网络名称|ims|已配置数据中获取|指定与P-CSC
 基于PCF/PCRF的P-CSCF恢复|ADD PCSCFREST|SMF|DISABLE|本端规划|PCF/PCRF发现P-CSCF服务器故障时，会发消息通知SMF/PGW-C。在SMF/PGW-C收到消息后，该APN/DNN下的用户不需要下线重连。
 AMF|SET UDMPCSCFRESTORCFG|AMF支持基于UDM的P-CSCF恢复功能|SUPTPCSCFRESTORE|本端规划|-
 支持无IMS会话的P-CSCF恢复功能|AMF|SET UDMPCSCFRESTORCFG|SUPTPCSCFNOIMSPDU|本端规划|-
-#### 配置过程 
-P-CSCF网元
+配置过程 :P-CSCF网元
 步骤|说明|操作|备注
 ---|---|---|---
 1|把每个VDID对应的PCRF重启恢复通知开关配置为ENABLE。|SET VD:VDID=1,PCRFNOTIFY="ENABLE"|操作前使用SHOW VD命令查看当前配置中PCRFNOTIFY是否已经配置为ENABLE，若已经开启则无需再次执行本步骤命令。命令中的VDID的取值根据现场实际VDID进行填写，所有VDID都需要配置。
@@ -11228,8 +10427,7 @@ AMF网元
 ---|---|---|---
 1|配置AMF支持基于UDM的P-CSCF Restore功能，开关打开后，AMF向UDM注册时会携带pcscfRestorationCallbackUri。配置AMF在用户未创建IMS会话时的P-CSCF Restore功能。|SET UDMPCSCFRESTORCFG:SUPPCSCFRESTORE="SUPTPCSCFRESTORE",SUPPCSCFNOIMSPDU="SUPTPCSCFNOIMSPDU"|-
 ### 内置BSF触发的增强P-CSCF Restore场景配置 
-#### 场景说明 
-内置BSF触发的P-CSCF Restore场景涉及两种组网架构，分别是有UDM无IWF组网和有IWF无UDM组网。 
+场景说明 :内置BSF触发的P-CSCF Restore场景涉及两种组网架构，分别是有UDM无IWF组网和有IWF无UDM组网。 
 有UDM无IWF组网如[图1](1686102198309.html#zdd3cd1a97c324f198ad1fdc10ea416ca__6deceb9b-f46c-4690-b93b-400eabbee4b4)所示。
 图1  内置BSF组网，有UDM无IWF
 []images/14c5f04323ed46acaa71322fd767286d.png)
@@ -11245,21 +10443,17 @@ BSF内置部署在SMF中。
 A省PCF1与A省PCF2冷备组网；B省PCF3与B省PCF4冷备组网。 
 IWF与HSS分离部署。 
 本节介绍内置BSF触发的增强P-CSCF Restore流程配置。 
-#### 配置前提 
-各运营商网内的5G业务正常运行。 
+配置前提 :各运营商网内的5G业务正常运行。 
 语音业务网元正常运行，DRA与PCF之间的diameter链路和diameter路由配置正常。 
 已完成预配置。 
-#### 数据规划 
-网元|命令|参数名称|取值样例|数据来源|说明
+数据规划 :网元|命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---|---
 DRA|SET DPCCPARA|DRA|Rx接口绑定失败后的处理动作|RETURN_ERROR_ANSWER|本端规划|-
 Rx接口返回失败码|DRA|SET DPCCPARA|DRA|5002|本端规划|-
-#### 配置过程 
-步骤|说明|操作
+配置过程 :步骤|说明|操作
 ---|---|---
 1|配置DRA上Rx接口消息查询绑定信息失败后给对端返回失败响应，响应中的失败码为5002。|SET DPCCPARA:RXBINDFAIL="RETURN_ERROR_ANSWER",RXRETCODE=5002
-#### 测试用例 
-测试项目|内置BSF场景下，内置BSF故障，用户发起语音呼叫，触发增强P-CSCF Restore流程
+测试用例 :测试项目|内置BSF场景下，内置BSF故障，用户发起语音呼叫，触发增强P-CSCF Restore流程
 ---|---
 预置条件|网络中有多个SMF（内置BSF）且运行正常。已经完成预配置。已经完成内置BSF触发的增强P-CSCF Restore配置。
 测试过程|用户上线。对SMF（内置BSF）的端口进行shutdown操作实现SMF（内置BSF）故障。用户发起语音呼叫。在用户IMS会话重建后重新发起语音呼叫。
@@ -11267,8 +10461,7 @@ Rx接口返回失败码|DRA|SET DPCCPARA|DRA|5002|本端规划|-
 测试结果|-
 ### 外置BSF触发的增强P-CSCF Restroe场景配置 
 #### BSF按省份部署组网场景配置 
-##### 场景说明 
-外置BSF场景下，BSF按省份部署的组网架构如[图1](1686102206262.html#zbfe5279462404966acea3ef1ccbf9dd8__181993f4-641b-4754-a1f4-8f0c79d73dd9)所示。
+场景说明 :外置BSF场景下，BSF按省份部署的组网架构如[图1](1686102206262.html#zbfe5279462404966acea3ef1ccbf9dd8__181993f4-641b-4754-a1f4-8f0c79d73dd9)所示。
 图1  外置BSF组网，BSF按省份部署
 []images/c21abefd7a3344038ee76b81ab42c55d.png)
 该组网架构的特点如下： 
@@ -11276,12 +10469,10 @@ BSF外置独立部署，每个省单独部署一对BSF，A省BSF对接A省PCF，
 A省PCF1与A省PCF2热备，两个PCF之间可以进行消息互转；B省PCF3和B省PCF4热备，两个PCF之间可以进行消息互转。 
 UDM和HSS融合部署。 
 本节介绍外置BSF按省份部署组网场景下，BSF触发的增强P-CSCF Restore流程配置。 
-##### 配置前提 
-各运营商网内的5G业务正常运行。 
+配置前提 :各运营商网内的5G业务正常运行。 
 语音业务网元正常运行，且BSF与PCF之间的diameter链路和diameter路由配置正常。 
 已完成预配置。 
-##### 数据规划 
-网元|命令|参数名称|取值样例|数据来源|说明
+数据规划 :网元|命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---|---
 BSF|ADD DRTOUT|查询索引号|200|本端规划|在BSF上配置用作保障的目的主机所对应的路由出口索引号。
 优选Diameter对等端组ID|BSF|ADD DRTOUT|30|已配置数据中获取|在BSF上配置主用PCF1所在的diamter对等端组索引。在SHOW DPGROUP命令的查询结果中，根据“组名称”参数来确定主用PCF1对应的标识，即为优选Diameter对等端组ID。
@@ -11292,22 +10483,19 @@ ADD DRTDHOST|BSF|查询索引号|30004|已配置数据中获取|配置Rx口目�
 下一个路由规则|ADD DRTDHOST|BSF|路由出口|本端规划|-
 SET DPCCPARA|BSF|Rx接口绑定失败后的处理动作|ROUTE_SUBSEQUENTLY|本端规划|Rx接口消息查询会话绑定的PCF失败后，继续根据消息中的字段查询路由。
 Rx接口返回失败码|SET DPCCPARA|BSF|5002|本端规划|Rx接口失败后返回失败原因码5002。
-##### 配置过程 
-步骤|说明|操作|备注
+配置过程 :步骤|说明|操作|备注
 ---|---|---|---
 1|增加Rx口路由出口，用于在BSF查询会话绑定的PCF失败时能够有一个路由保障信息的继续传递。|ADD DRTOUT:REFINDEX="200",RESULT="OUT",PGROUPID="30",BAKPGROUPID="31",HTTPPGROUPID="0",RETURNCODE="0",CHGDHOST="NO",CHGDREALM="NO",SPECRERTPGID="0",AREAID="0"|-
 2|增加目的主机名方式的路由配置。|ADD DRTDHOST:REFINDEX="30004",DHOST="ztedefault",NEXTRULE="OUT",NEXTINDEX="200",AREAID="0"|-
 3|Rx接口消息查询会话绑定的PCF失败后，继续根据消息中的字段查询路由。|SET DPCCPARA:RXBINDFAIL="ROUTE_SUBSEQUENTLY",RXRETCODE=5002|-
-##### 测试用例 
-测试项目|外置BSF按省份部署，BSF丢失会话绑定信息，用户发起呼叫，触发P-CSCF Restore流程
+测试用例 :测试项目|外置BSF按省份部署，BSF丢失会话绑定信息，用户发起呼叫，触发P-CSCF Restore流程
 ---|---
 预置条件|已经完成预配置。已经完成外置BSF触发的增强P-CSCF Restore配置。
 测试过程|用户上线。在BSF上执行命令DEL DMBINDING删除会话绑定记录，造成BSF中的会话绑定信息丢失的情况。在主备PCF上执行动态命令REL_USER_SLIENTLY，使主备PCF的会话信息丢失。用户发起语音呼叫。用户IMS会话重建后重新发起语音呼叫。
 通过准则|用户注册成功。BSF会话绑定记录丢失后用户发起呼叫，通过信令跟踪功能查看到如下信息：SBC收到invite消息后给DRA发送AAR消息。DRA把AAR消息路由给BSF，BSF查询会话绑定消息失败。BSF给兜底的主用PCF1发送AAR消息。主用PCF1上查询会话绑定记录失败，向BSF返回失败原因码5065。BSF向DRA返回失败原因码5065。DRA向SBC返回失败原因码5065。SBC收到DRA返回的失败原因码5065后，向S-CSCF发送SIP MESSAGE消息，包含pcrf-failure的消息体，指示S-CSCF发起P-CSCF Restore。S-CSCF向HSS+UDM发送Cx SAR消息，携带SAR-Flags（包含P-CSCF Restoration指示），且P-CSCF Restoration指示中的Server-Assignment-Type AVP值置为DEREGISTER-USER。HSS+UDM向为用户提供服务的AMF发送P-CSCF恢复通知Nudm_UECM_PCscfRestoration notification Request，AMF的地址为AMF注册过程中向HSS+UDM携带的pcscfRestorationCallbackUri。AMF通知SMF发起IMS PDU Session释放，通知UE重新激活IMS PDU Session。3.     用户IMS会话重建后发起的语音呼叫正常。
 测试结果|-
 #### BSF按大区部署组网场景配置 
-##### 场景说明 
-外置BSF场景下，BSF按大区部署的组网架构如[图1](1686102209606.html#zaed79ffcb71046dfbdd55c54eace4a94__59531e7d-c68c-427d-b0b9-581caae1b742)所示。
+场景说明 :外置BSF场景下，BSF按大区部署的组网架构如[图1](1686102209606.html#zaed79ffcb71046dfbdd55c54eace4a94__59531e7d-c68c-427d-b0b9-581caae1b742)所示。
 图1  外置BSF组网，BSF按大区部署
 []images/aaf1907a06de4e2ea5cda18247b1e132.png)
 该组网架构的特点如下： 
@@ -11315,21 +10503,17 @@ BSF外置独立部署，一个大区部署一对BSF，同时对接A省和B省的
 A省PCF1与A省PCF2热备，两个PCF之间可以进行消息互转；B省PCF3和B省PCF4热备，两个PCF之间可以进行消息互转。 
 UDM和HSS融合部署。 
 本节介绍外置BSF按大区部署组网场景下，BSF触发的增强P-CSCF Restore流程配置。 
-##### 配置前提 
-各运营商网内的5G业务正常运行。 
+配置前提 :各运营商网内的5G业务正常运行。 
 语音业务网元正常运行，且BSF与PCF之间的diameter链路和diameter路由配置正常。 
 已完成预配置。 
-##### 数据规划 
-网元|命令|参数名称|取值样例|数据来源|说明
+数据规划 :网元|命令|参数名称|取值样例|数据来源|说明
 ---|---|---|---|---|---
 BSF|SET DPCCPARA|BSF|Rx接口绑定失败后的处理动作|RETURN_ERROR_ANSWER|本端规划|Rx接口消息查询绑定失败后的处理动作为返回错误响应。
 Rx接口返回失败码|BSF|SET DPCCPARA|BSF|5002|本端规划|Rx接口消息查询绑定失败后返回失败原因码5002。
-##### 配置过程 
-步骤|说明|操作|备注
+配置过程 :步骤|说明|操作|备注
 ---|---|---|---
 1|在BSF上配置Rx接口消息查询绑定失败后，向对端返回失败响应，失败原因码为5002。|SET DPCCPARA:RXBINDFAIL="RETURN_ERROR_ANSWER",RXRETCODE=5002|BSF查询会话绑定的PCF失败后，向对端返回失败原因码5002。
-##### 测试用例 
-测试项目|外置BSF按大区部署，BSF丢失会话绑定信息，用户发起呼叫，触发增强P-CSCF Restore流程
+测试用例 :测试项目|外置BSF按大区部署，BSF丢失会话绑定信息，用户发起呼叫，触发增强P-CSCF Restore流程
 ---|---
 预置条件|已经完成预配置。已经完成外置BSF触发的增强P-CSCF Restore配置。
 测试过程|用户上线。在BSF上执行命令DEL DMBINDING删除会话绑定记录，造成BSF中的会话绑定信息丢失的情况。用户发起语音呼叫。在用户IMS会话重建后重新发起语音呼叫。
@@ -11337,8 +10521,7 @@ Rx接口返回失败码|BSF|SET DPCCPARA|BSF|5002|本端规划|Rx接口消息查
 测试结果|-
 ### PCF触发的增强P-CSCF Restore场景配置 
 #### 内置BSF组网场景配置 
-##### 场景说明 
-在PCF触发的增强P-CSCF Restore流程中，内置BSF组网是否有UDM或IWF在配置上无差别。因此本节以有UDM无IWF组网为例进行介绍，组网架构如[图1](1686102216523.html#zfef979a51ebf442384eaa5b960e3de96__3de7d9ba-8551-4df4-8d47-06d01a12fba3)所示。
+场景说明 :在PCF触发的增强P-CSCF Restore流程中，内置BSF组网是否有UDM或IWF在配置上无差别。因此本节以有UDM无IWF组网为例进行介绍，组网架构如[图1](1686102216523.html#zfef979a51ebf442384eaa5b960e3de96__3de7d9ba-8551-4df4-8d47-06d01a12fba3)所示。
 图1  内置BSF组网，有UDM无IWF组网
 []images/3da97aaf67b14bc688f16f6027a6a44f.png)
 该组网架构的特点如下： 
@@ -11346,22 +10529,18 @@ BSF内置部署在SMF中。
 A省PCF1与A省PCF2冷备组网；B省PCF3与B省PCF4冷备组网。 
 UDM与HSS融合部署。 
 本节介绍内置BSF组网场景下，PCF触发的增强P-CSCF Restore流程配置。 
-##### 配置前提 
-各运营商网内的5G业务正常运行。 
+配置前提 :各运营商网内的5G业务正常运行。 
 语音业务网元正常运行，DRA与PCF之间的diameter链路和diameter路由配置正常。 
 已完成预配置。 
-##### 数据规划 
-网元|命令|参数名称|参数取值|数据来源|说明
+数据规划 :网元|命令|参数名称|参数取值|数据来源|说明
 ---|---|---|---|---|---
 DRA|SET DRTOUT|优选Diameter对等端组ID|30|已配置数据中获取|在DRA上配置主用PCF1所在的diamter对等端组索引。在SHOW DPGROUP命令的查询结果中，根据组名称参数来确定主用PCF1对应的标识，即为优选Diameter对等端组ID。
 备份Diameter对等端组ID|DRA|SET DRTOUT|31|已配置数据中获取|在DRA上配置备用PCF2所在的diamter对等端组索引。在SHOW DPGROUP命令的查询结果中，根据组名称参数来确定备用PCF2对应的标识，即为备份Diameter对等端组ID。
 查询索引号|DRA|SET DRTOUT|100|已配置数据中获取|在DRA上配置主用PCF1的目的主机名对应的路由出口索引号。在SHOW DRTDHOST结果中，根据目的主机名来确定主用PCF1对应的路由出口，即“下一个路由索引号”参数。
-##### 配置过程 
-步骤|说明|操作|备注
+配置过程 :步骤|说明|操作|备注
 ---|---|---|---
 1|DRA从内置BSF查询到PCF主机名后，新增该目的主机名对应的路由出口配置，为主用PCF1增加一个备用的PCF对等端组，当主用PCF1故障时，给备用PCF2发送消息。|SET DRTOUT:REFINDEX="100",RESULT="OUT",PGROUPID="30",BAKPGROUPID="31",RETURNCODE="0",CHGDHOST="NO",CHGDREALM="NO",SPECRERTPGID="0",AREAID="0"|-
-##### 测试用例 
-测试项目|内置BSF场景下，主用PCF故障，用户发起语音呼叫，触发增强P-CSCF Restore流程。
+测试用例 :测试项目|内置BSF场景下，主用PCF故障，用户发起语音呼叫，触发增强P-CSCF Restore流程。
 ---|---
 预置条件|已经完成预配置。已经完成内置BSF场景下，PCF触发的增强P-CSCF Restore配置。备用PCF可用。
 测试过程|用户上线。对主用PCF的端口进行shutdown操作实现主用PCF故障。用户发起呼叫。在触发增强P-CSCF Restore流程后，重新发起语音呼叫。
@@ -11374,8 +10553,7 @@ DRA|SET DRTOUT|优选Diameter对等端组ID|30|已配置数据中获取|在DRA�
 通过准则|用户注册成功。主用PCF上的会话丢失后用户发起呼叫，通过信令跟踪功能查看到如下信息：SBC收到invite消息后给DRA发送AAR消息。DRA根据IP地址向NRF发现BSF，DRA向发现的BSF查询会话绑定消息。BSF查询到用户会话绑定的PCF，给DRA返回绑定的PCF信息。DRA给PCF发送AAR消息。PCF本地查询不到会话，PCF向DRA返回错误码5065，DRA向SBC返回错误码5065。SBC收到DRA的错误码5065后，给S-CSCF发送SIP MESSAGE消息，包含pcrf-failure的消息体，指示S-CSCF发起P-CSCF Restore。S-CSCF向HSS+UDM发送Cx SAR消息，携带SAR-Flags（包含P-CSCF Restoration指示），且P-CSCF Restoration指示中的Server-Assignment-Type AVP值置为DEREGISTER-USER。HSS+UDM向为用户提供服务的AMF发送P-CSCF恢复通知Nudm_UECM_PCscfRestoration notification Request，AMF的地址为AMF注册过程中向HSS+UDM携带的pcscfRestorationCallbackUri。AMF通知SMF发起IMS PDU Session释放，通知UE重新激活IMS PDU Session 3.       用户IMS会话重建后发起的语音呼叫正常。
 测试结果|-
 #### 外置BSF组网场景配置 
-##### 场景说明 
-对于PCF触发的增强P-CSCF流程而言，外置BSF组网场景下的BSF按大区部署组网和BSF按省份组网在配置上无差别。因此本节以BSF按大区组网为例进行介绍，组网架构如[图1](1686102220321.html#z5f604ac68acf4e7fa28b82953b41b62a__8d6b731c-eac6-4992-a47c-fcb7f5d2e63b)所示。
+场景说明 :对于PCF触发的增强P-CSCF流程而言，外置BSF组网场景下的BSF按大区部署组网和BSF按省份组网在配置上无差别。因此本节以BSF按大区组网为例进行介绍，组网架构如[图1](1686102220321.html#z5f604ac68acf4e7fa28b82953b41b62a__8d6b731c-eac6-4992-a47c-fcb7f5d2e63b)所示。
 图1  外置BSF组网，BSF大区部署
 []images/36af615692a44979b642353c9e961589.png)
 该组网架构的特点如下： 
@@ -11383,22 +10561,18 @@ BSF外置独立部署，一个大区部署一对BSF，同时对接A省和B省的
 A省PCF1与A省PCF2热备，两个PCF之间可以进行消息互转；B省PCF3和B省PCF4热备，两个PCF之间可以进行消息互转。 
 UDM和HSS融合部署。 
 本节介绍外置BSF组网场景下，PCF触发的增强P-CSCF Restore流程配置。 
-##### 配置前提 
-各运营商网内的5G业务正常运行。 
+配置前提 :各运营商网内的5G业务正常运行。 
 语音业务网元正常运行，BSF与PCF之间的diameter链路和diameter路由配置正常。 
 已完成预配置。 
-##### 数据规划 
-网元|命令|参数名称|参数取值|数据来源|说明
+数据规划 :网元|命令|参数名称|参数取值|数据来源|说明
 ---|---|---|---|---|---
 BSF|SET DRTOUT|优选Diameter对等端组ID|30|已配置数据中获取|在BSF上配置主用PCF1所在的diamter对等端组索引。在SHOW DPGROUP命令的查询结果中，根据组名称参数来确定主用PCF1对应的标识，即为优选Diameter对等端组ID。
 备份Diameter对等端组ID|BSF|SET DRTOUT|31|已配置数据中获取|BSF上备用PCF2所在的diamter对等端组索引。在SHOW DPGROUP命令的查询结果中，根据组名称参数来确定备用PCF2对应的标识，即为备份Diameter对等端组ID。
 查询索引号|BSF|SET DRTOUT|100|已配置数据中获取|在BSF上配置主用PCF1的目的主机名对应的路由出口索引号。在SHOW DRTDHOST结果中，根据目的主机名来确定主用PCF1对应的路由出口，即下一个路由索引号参数。
-##### 配置过程 
-步骤|说明|操作|备注
+配置过程 :步骤|说明|操作|备注
 ---|---|---|---
 1|BSF查询到PCF主机名后，新增该目的主机名对应的路由出口配置，为主用PCF1增加一个备用的PCF对等端组，当主用PCF1故障时，给备用PCF2发送消息。|SET DRTOUT:REFINDEX="100",RESULT="OUT",PGROUPID="30",BAKPGROUPID="31",RETURNCODE="0",CHGDHOST="NO",CHGDREALM="NO",SPECRERTPGID="0",AREAID="0"|-
-##### 测试用例 
-测试项目|外置BSF场景下，主用PCF故障，备用PCF会话丢失，用户发起语音呼叫，触发增强P-CSCF Restore流程
+测试用例 :测试项目|外置BSF场景下，主用PCF故障，备用PCF会话丢失，用户发起语音呼叫，触发增强P-CSCF Restore流程
 ---|---
 预置条件|已经完成预配置。已经完成外置BSF场景下，PCF触发的增强P-CSCF Restore配置。备用PCF可用。
 测试过程|用户上线。对主用PCF的端口进行shutdown操作实现主用PCF故障。在备用PCF上执行命令REL_USER_SLIENTLY，释放在线用户，使备用PCF上的会话丢失。用户发起语音呼叫。在用户IMS会话重建后重新发起语音呼叫。
@@ -11410,13 +10584,7 @@ BSF|SET DRTOUT|优选Diameter对等端组ID|30|已配置数据中获取|在BSF�
 测试过程|用户上线。在主用PCF上执行命令REL_USER_SLIENTLY，释放在线用户会话，使主用PCF上的会话丢失。用户发起语音呼叫在用户IMS会话重建后重新发起语音呼叫。
 通过准则|用户注册成功。主用PCF会话丢失后用户发起呼叫，通过信令跟踪功能查看到如下信息：SBC收到invite消息后给DRA发送AAR消息。DRA把AAR消息路由给BSF，BSF查询会话绑定消息。BSF获取到绑定的主用PCF信息，给主用PCF发送AAR消息。主用PCF本地无会话绑定记录给BSF返回失败原因码5065。BSF给DRA返回失败原因码5065。DRA给SBC返回失败原因码5065SBC收到DRA的失败原因码5065后，给S-CSCF发送SIP MESSAGE消息，包含pcrf-failure的消息体，指示S-CSCF发起P-CSCF Restore。S-CSCF向HSS+UDM发送Cx SAR消息，携带SAR-Flags（包含P-CSCF Restoration指示），且P-CSCF Restoration指示中的Server-Assignment-Type AVP值置为DEREGISTER-USER。HSS+UDM向为用户提供服务的AMF发送P-CSCF恢复通知Nudm_UECM_PCscfRestoration notification Request，AMF的地址为AMF注册过程中向HSS+UDM携带的pcscfRestorationCallbackUri。AMF通知SMF发起IMS PDU Session释放，通知UE重新激活IMS PDU Session。3.      用户IMS会话重建后发起的语音呼叫正常。
 测试结果|-
-# 缩略语 
-# 缩略语 
-## AF 
-Application Function应用功能
-## RCP 
-Resource Control Platform资源控制平台
-## SM 
-Session Management会话管理
-## SMF 
-Session Management Function会话管理功能
+缩略语 :缩略语 :AF :Application Function应用功能
+RCP :Resource Control Platform资源控制平台
+SM :Session Management会话管理
+SMF :Session Management Function会话管理功能
