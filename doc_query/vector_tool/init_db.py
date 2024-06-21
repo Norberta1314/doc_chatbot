@@ -74,7 +74,7 @@ class VersionBase:
             for split in split_list:
                 split.metadata['source'] = file_path
                 if title_mark:
-                    split.page_content = f"《{get_file_name_from_path(file_name)}》标题:{title_mark.strip(':')} 内容:{split.page_content}"
+                    split.page_content = f"《{get_file_name_from_path(file_name[1])}》标题:{title_mark.strip(':')} 内容:{split.page_content}"
             doc_list.extend(split_list)
         return doc_list
 
