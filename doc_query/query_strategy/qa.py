@@ -121,6 +121,7 @@ class Qa:
         context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
+        logging.info(f"第一次prompt：{ask_prompt}")
         response = client.chat.completions.create(
             model="glm-4",  # Fill in the model name to be called
             messages=[
@@ -166,10 +167,11 @@ class Qa:
         # context, search_results = self.obtain_contexts_from_vectordb(new_query)
         search_results = self.retriever.get_relevant_documents(new_query)
         if not search_results:
-            return "没有找到相关的背景材料", search_results
+            return "没有找到相关的背景材料", result_by_llm, search_results
         context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
+        logging.info(f"第二次prompt：{ask_prompt}")
         response = client.chat.completions.create(
             model="glm-4",  # Fill in the model name to be called
             messages=[
@@ -230,6 +232,7 @@ class Qa:
         context = self.combine_source_documents(search_results)
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
+        logging.info(f"第三次prompt：{ask_prompt}")
         response = client.chat.completions.create(
             model="glm-4",  # Fill in the model name to be called
             messages=[
@@ -245,7 +248,7 @@ class Qa:
             second_result, result_by_llm, search_results = self.second_query(query)
             logging.info(f"second answer: {second_result}")
             answer = {"query": query, "result": second_result, "source_documents": search_results}
-            if not search_results or self.check_no_answer(second_result):
+            if not search_results:
                 # 进行第三次检索
                 third_result, result_by_llm, search_results = self.third_query(query, search_results)
                 answer['result'] = third_result

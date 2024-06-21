@@ -38,9 +38,10 @@ def main():
         result = get_query(question)
         answer = result["result"]
         answers.append(answer)
+        save_answers(queries, answers, "submit_result.jsonl")
         specific_results.loc[count] = [question, answer, str(result['source_documents'])]
         count += 1
-        break
+
 
     # 处理结果
     save_answers(queries, answers, "submit_result.jsonl")
