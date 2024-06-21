@@ -38,13 +38,12 @@ def main():
         result = get_query(question)
         answer = result["result"]
         answers.append(answer)
-        specific_results.loc[count] = [question, answer, json.dumps(result['source_documents'])]
+        specific_results.loc[count] = [question, answer, str(result['source_documents'])]
         count += 1
-        break
 
-    # 处理结果
-    save_answers(queries, answers, "submit_result.jsonl")
-    specific_results.to_excel("specific_results.xlsx", index=False)
+        # 处理结果
+        save_answers(queries, answers, "result.jsonl")
+        specific_results.to_excel("specific_results.xlsx", index=False)
 
 
 if __name__ == "__main__":

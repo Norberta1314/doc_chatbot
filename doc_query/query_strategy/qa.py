@@ -35,7 +35,7 @@ class Qa:
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
                                                         base_retriever=self.vector.as_retriever(
                                                             search_type="similarity",
-                                                            search_kwargs={"k": 20, "score_threshold": 0.8}))
+                                                            search_kwargs={"k": 20, "score_threshold": 0.7}))
 
     @staticmethod
     def check_no_answer(answer):
@@ -161,10 +161,10 @@ class Qa:
             second_result, result_by_llm, search_results = self.second_query(query)
             logging.info(f"second answer: {second_result}")
             answer = {"query": query, "result": second_result, "source_documents": search_results}
-            if not search_results:
-                # 进行第三次检索
-                logging.info(f"前两次答案为空，所以采用llm自身的答案: {result_by_llm}")
-                answer["result"] = result_by_llm
+            # if not search_results:
+            #     # 进行第三次检索
+            #     logging.info(f"前两次答案为空，所以采用llm自身的答案: {result_by_llm}")
+            #     answer["result"] = result_by_llm
             return answer
         return {"query": query, "result": first_result, "source_documents": search_results}
 
