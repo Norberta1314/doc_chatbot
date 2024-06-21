@@ -172,6 +172,7 @@ class Qa:
 qa_map = {}
 
 
+
 def init_qa_map(embeddings, reranker):
     vector_total_path = os.path.abspath(config_util.get_common("vectordb"))
     if not os.path.exists(vector_total_path):
