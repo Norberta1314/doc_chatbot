@@ -1,7 +1,7 @@
  MME对等PLMN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPLMN即对等PLMN（Equivalent Public Land Mobile Network），运营商可以在网络侧配置不同PLMN间的对等关系，这些PLMN处于一个平等的网络中，它们之间可以实现通信网络资源共享。 
@@ -32,7 +32,7 @@ EPLMN即对等PLMN（Equivalent Public Land Mobile Network），运营商可以�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 如果不同运营商的网络资源之间或者同一运营商定义的不同PLMN之间需要实现通信网络资源共享。比如共有A、B两个PLMN网络。在B网络信号好的时候，原先登记在A网络的用户的手机可以根据保存在SIM卡上的EPLMN的信息自动重选B网络。此时，需要配置MME对等PLMN。 
@@ -84,7 +84,7 @@ MME支持对整个网元配置默认的对等PLMN，也支持根据IMSI号段/�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -112,7 +112,7 @@ IMSI号段对等PLMN配置
 
 
 
-父主题： [系统配置](../../zh-CN/tree/N_126066_operation_cm_mml_umacV4_cm_combo_gngp_system.html)
+父主题： [系统配置]
 
 
 
@@ -135,7 +135,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 默认对等PLMN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPLMN即对等PLMN（Equivalent Public Land Mobile Network），运营商可以在网络侧配置不同PLMN间的对等关系，这些PLMN处于一个平等的网络中，它们之间可以实现通信网络资源共享。 
@@ -149,12 +149,12 @@ EPLMN即对等PLMN（Equivalent Public Land Mobile Network），运营商可以�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 
                 当SGSN为移动用户提供EPLMN列表时，如果移动用户对应的IMSI号段已经在“IMSI号段对等PLMN配置（
-                [ADD SGSN IMSI RAI PLMN](../mml/1260035.html)
+                [ADD SGSN IMSI RAI PLMN]
                 ）”中配置，则SGSN网元根据配置的列表下发EPLMN信息；如果移动用户IMSI号段不在已经配置的列表中，则SGSN根据“默认对等PLMN配置”获取EPLMN列表，下发给RNC和UE。
             
 
@@ -167,7 +167,7 @@ SGSN根据软件参数“SGSN支持EPLMN组数”，决定向用户提供EPLMN�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -195,7 +195,7 @@ SGSN根据软件参数“SGSN支持EPLMN组数”，决定向用户提供EPLMN�
 
 
 
-父主题： [MME对等PLMN配置](../../zh-CN/tree/N_1254290.html)
+父主题： [MME对等PLMN配置]
 
 
 
@@ -218,7 +218,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置默认对等PLMN(SET MME PLMN DEFAULT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置MME支持的默认对等PLMN网络，对等PLMN是指为与终端当前所选择的PLMN处于同等地位、优先级相同的PLMN网络。 
@@ -232,7 +232,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -261,10 +261,10 @@ MME携带给终端的对等PLMN组数可设置为0组、5组、15组，0组表�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|运营商|参数可选性:必选参数；参数类型:复合参数|即为PLMN（Public Land Mobile Network，公共陆地移动网络），由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|即MCC（Mobile Country Code），MCC的资源由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位。例如，中国的“移动国家码”为“460”、美国的“移动国家码”为“310”等。
@@ -275,7 +275,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置默认对等PLMN，设置移动国家码为460，移动网号为001。
@@ -288,7 +288,7 @@ SET MME PLMN DEFAULT:PLMN="460"-"001";
 
 
 
-父主题： [默认对等PLMN配置](../../zh-CN/tree/N_1254291.html)
+父主题： [默认对等PLMN配置]
 
 
 
@@ -311,7 +311,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除默认对等PLMN(DEL MME PLMN DEFAULT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除默认对等的PLMN网络。 
@@ -322,15 +322,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-该命令将一次性删除[SET MME PLMN DEFAULT](1260215.html)命令中配置的全部PLMN。
+该命令将一次性删除[SET MME PLMN DEFAULT]命令中配置的全部PLMN。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除所有的默认对等PLMN。
@@ -343,7 +343,7 @@ DEL MME PLMN DEFAULT;
 
 
 
-父主题： [默认对等PLMN配置](../../zh-CN/tree/N_1254291.html)
+父主题： [默认对等PLMN配置]
 
 
 
@@ -366,7 +366,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询默认对等PLMN(SHOW MME PLMN DEFAULT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME网元的默认对等PLMN。 
@@ -377,15 +377,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|运营商|参数可选性:任选参数；参数类型:字符型；参数范围为:0~500个字符。|即为PLMN（Public Land Mobile Network，公共陆地移动网络），由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
 
@@ -394,7 +394,7 @@ PLMN|运营商|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有的默认对等PLMN。
@@ -422,7 +422,7 @@ SHOW MME PLMN DEFAULT;
 
 
 
-父主题： [默认对等PLMN配置](../../zh-CN/tree/N_1254291.html)
+父主题： [默认对等PLMN配置]
 
 
 
@@ -445,7 +445,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 对等PLMN Profile配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPLMN即对等PLMN（Equivalent Public Land Mobile Network），运营商可以在网络侧配置不同PLMN间的对等关系，这些PLMN处于一个平等的网络中，它们之间可以实现通信网络资源共享。 
@@ -456,7 +456,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 区分用户号段/路由区/位置区配置对等PLMN时，由于用户号段＋路由区＋位置区的组合很多，为了提高配置效率，SGSN根据“对等PLMN Profile配置”把EPLMN列表组和PLMN Profile标识关联，用户号段＋路由区＋位置区的组合只需要引用相应的PLMN Profile标识。 
@@ -471,7 +471,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
                         配置对等PLMN Profile。配置命令为：
-                        [ADD SGSN PLMN PROFILE](../mml/1260028.html)
+                        [ADD SGSN PLMN PROFILE]
                         。
                     
 
@@ -482,7 +482,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
                         如果需要在PLMN Profile中增加运营商，使用命令：
-                        [ADD SGSN PLMN](../mml/1260030.html)
+                        [ADD SGSN PLMN]
                         。
                     
 
@@ -493,7 +493,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
                         配置SGSN IMSI号段对等PLMN。参见
-                        [ADD SGSN IMSI RAI PLMN](../mml/1260035.html)
+                        [ADD SGSN IMSI RAI PLMN]
                         。
                     
 
@@ -510,7 +510,7 @@ SGSN根据软件参数“SGSN支持EPLMN组数”，决定向用户提供EPLMN�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -553,7 +553,7 @@ SGSN根据软件参数“SGSN支持EPLMN组数”，决定向用户提供EPLMN�
 
 
 
-父主题： [MME对等PLMN配置](../../zh-CN/tree/N_1254290.html)
+父主题： [MME对等PLMN配置]
 
 
 
@@ -576,7 +576,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 增加PLMN(ADD MME PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改已经配置好的某个对等PLMN Profile。如果该PLMN Profile包含的PLMN太少了，则可以使用该命令，在现有的基础上添加一个或者多个PLMN。 
@@ -584,18 +584,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-该命令可以新增PROFILE标识和PLMN，但不包括用户别名，如果想增加别名，可以使用修改EPLMN分组配置添加，配置命令为： [SET MME PLMN PROFILE](1260219.html);
+该命令可以新增PROFILE标识和PLMN，但不包括用户别名，如果想增加别名，可以使用修改EPLMN分组配置添加，配置命令为： [SET MME PLMN PROFILE];
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|PLMN Profile标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|对等PLMN Profile的编号。这个标识供“IMSI号段对等PLMN配置”使用，“查询IMSI号段对等PLMN配置”的命令为：SHOW MME IMSI TAI PLMN。
 PLMN|运营商|参数可选性:必选参数；参数类型:复合参数|即为PLMN（Public Land Mobile Network，公共陆地移动网络），由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -607,7 +607,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加PLMN，设置PLMN Profile标识为2，移动国家码为460，移动网号为002。
@@ -620,7 +620,7 @@ ADD MME PLMN:PROFILEID=2,PLMN="460"-"002";
 
 
 
-父主题： [对等PLMN Profile配置](../../zh-CN/tree/N_1254292.html)
+父主题： [对等PLMN Profile配置]
 
 
 
@@ -643,7 +643,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除PLMN(DEL MME PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置好的某个对等PLMN Profile。如果该PLMN Profile包含的PLMN太多了，则可以使用该命令，在现有的基础上删除一个或者多个PLMN。 
@@ -651,7 +651,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令可以根据PLMN Profile标识和PLMN号码单条记录。 
@@ -659,10 +659,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|PLMN Profile标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|对等PLMN Profile的编号。这个标识供“IMSI号段对等PLMN配置”使用，“查询IMSI号段对等PLMN配置”的命令为：SHOW MME IMSI TAI PLMN。
 PLMN|运营商|参数可选性:必选参数；参数类型:复合参数|即为PLMN（Public Land Mobile Network，公共陆地移动网络），由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -674,7 +674,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除PLMN Profile标识为2，移动国家码为460，移动网号为002的PLMN。
@@ -687,7 +687,7 @@ DEL MME PLMN:PROFILEID=2,PLMN="460"-"002";
 
 
 
-父主题： [对等PLMN Profile配置](../../zh-CN/tree/N_1254292.html)
+父主题： [对等PLMN Profile配置]
 
 
 
@@ -710,7 +710,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增对等PLMN Profile配置(ADD MME PLMN PROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME网元新增的对等PLMN分组配置。 
@@ -724,7 +724,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -741,10 +741,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|PLMN Profile标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|对等PLMN Profile的编号。这个标识供“IMSI号段对等PLMN配置”使用，“查询IMSI号段对等PLMN配置”的命令为：SHOW MME IMSI TAI PLMN。
 PLMN|运营商|参数可选性:任选参数；参数类型:复合参数|即为PLMN（Public Land Mobile Network，公共陆地移动网络），由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -757,7 +757,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增对等PLMN Profile配置，设置PLMN Profile标识为1，移动国家码为460，移动网号为003。 
@@ -772,7 +772,7 @@ ADD MME PLMN PROFILE:PROFILEID=1,PLMN="460"-"003";
 
 
 
-父主题： [对等PLMN Profile配置](../../zh-CN/tree/N_1254292.html)
+父主题： [对等PLMN Profile配置]
 
 
 
@@ -795,7 +795,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改对等PLMN Profile配置(SET MME PLMN PROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改MME网元的对等PLMN 组配置。 
@@ -806,7 +806,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令可以修改已配置成功的PROFILE标识中的PLMN和用户别名。 
@@ -814,10 +814,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|PLMN Profile标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|对等PLMN Profile的编号。这个标识供“IMSI号段对等PLMN配置”使用，“查询IMSI号段对等PLMN配置”的命令为：SHOW MME IMSI TAI PLMN。
 PLMN|运营商|参数可选性:任选参数；参数类型:复合参数|即为PLMN（Public Land Mobile Network，公共陆地移动网络），由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -830,7 +830,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改PLMN Profile标识为1的对等PLMN Profile配置，移动国家码修改为460，移动网号修改为001。
@@ -843,7 +843,7 @@ SET MME PLMN PROFILE:PROFILEID=1,PLMN="460"-"001";
 
 
 
-父主题： [对等PLMN Profile配置](../../zh-CN/tree/N_1254292.html)
+父主题： [对等PLMN Profile配置]
 
 
 
@@ -866,15 +866,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除对等PLMN Profile配置(DEL MME PLMN PROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除MME网元的对等PLMN Profile配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
-根据PROFILE标识删除记录，执行该命令之前，需要确认PLMN Profile标识是否在“IMSI号段对等PLMN配置”（查看命令为：[SHOW MME IMSI TAI PLMN](1260088.html)）中被引用。
+根据PROFILE标识删除记录，执行该命令之前，需要确认PLMN Profile标识是否在“IMSI号段对等PLMN配置”（查看命令为：[SHOW MME IMSI TAI PLMN]）中被引用。
 
 
 
@@ -891,10 +891,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|PLMN Profile标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|对等PLMN Profile的编号。这个标识供“IMSI号段对等PLMN配置”使用，“查询IMSI号段对等PLMN配置”的命令为：SHOW MME IMSI TAI PLMN。
 
@@ -903,7 +903,7 @@ PROFILEID|PLMN Profile标识|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除PLMN Profile标识为1的PLMN。
@@ -916,7 +916,7 @@ DEL MME PLMN PROFILE:PROFILEID=1;
 
 
 
-父主题： [对等PLMN Profile配置](../../zh-CN/tree/N_1254292.html)
+父主题： [对等PLMN Profile配置]
 
 
 
@@ -939,7 +939,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询对等PLMN Profile配置(SHOW MME PLMN PROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 命令用于查询MME网元的对等PLMN Profile配置。 
@@ -962,15 +962,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|PLMN Profile标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~4096。|对等PLMN Profile的编号。这个标识供“IMSI号段对等PLMN配置”使用，“查询IMSI号段对等PLMN配置”的命令为：SHOW MME IMSI TAI PLMN。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|起注释作用，对此项命令配置并没有影响。当新增或修改此配置时，如果配置人员有需要特别说明的内容，可以填写在此处。
@@ -980,10 +980,10 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|PLMN Profile标识|参数可选性:任选参数；参数类型:整数。|对等PLMN Profile的编号。这个标识供“IMSI号段对等PLMN配置”使用，“查询IMSI号段对等PLMN配置”的命令为：SHOW MME IMSI TAI PLMN。
 PLMN|运营商|参数可选性:任选参数；参数类型:字符型；参数范围为:0~500个字符。|即为PLMN（Public Land Mobile Network，公共陆地移动网络），由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -994,7 +994,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有的对等PLMN Profile配置。
@@ -1021,7 +1021,7 @@ SHOW MME PLMN PROFILE;
 
 
 
-父主题： [对等PLMN Profile配置](../../zh-CN/tree/N_1254292.html)
+父主题： [对等PLMN Profile配置]
 
 
 
@@ -1044,7 +1044,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # IMSI号段对等PLMN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPLMN即对等PLMN（Equivalent Public Land Mobile Network），运营商可以在网络侧配置不同PLMN间的对等关系，这些PLMN处于一个平等的网络中，它们之间可以实现通信网络资源共享。 
@@ -1055,7 +1055,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当SGSN需要为用户提供EPLMN列表时，属于IMSI号段对等PLMN配置内的用户使用对等PLMN功能时，SGSN根据“IMSI号段对等PLMN配置”获取EPLMN列表。 
@@ -1070,7 +1070,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
                         配置对等PLMN Profile。参见
-                        [ADD SGSN PLMN PROFILE](../mml/1260028.html)
+                        [ADD SGSN PLMN PROFILE]
                         。
                     
 
@@ -1081,7 +1081,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
                         如果需要在PLMN Profile中增加运营商，使用命令：
-                        [ADD SGSN PLMN](../mml/1260030.html)
+                        [ADD SGSN PLMN]
                         。
                     
 
@@ -1092,7 +1092,7 @@ ZXUN uMAC-SGSN产品支持配置全局默认的对等PLMN，也支持区分用�
 
 
                         配置SGSN IMSI号段对等PLMN。配置命令为：
-                        [ADD SGSN IMSI RAI PLMN](../mml/1260035.html)
+                        [ADD SGSN IMSI RAI PLMN]
                         。
                     
 
@@ -1109,7 +1109,7 @@ SGSN根据软件参数“SGSN支持EPLMN组数”，决定向用户提供EPLMN�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1142,7 +1142,7 @@ SGSN根据软件参数“SGSN支持EPLMN组数”，决定向用户提供EPLMN�
 
 
 
-父主题： [MME对等PLMN配置](../../zh-CN/tree/N_1254290.html)
+父主题： [MME对等PLMN配置]
 
 
 
@@ -1165,7 +1165,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增MME IMSI对等PLMN配置(ADD MME IMSI TAI PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME新增基于IMSI号段和跟踪区的对等PLMN配置。 
@@ -1176,7 +1176,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1205,10 +1205,10 @@ MME携带给终端的对等PLMN组数可设置为0组、5组、15组， 0组表�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码（IMSI，International Mobile Subscriber Identification Number），是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行限制的作用，而不需要将每个用户的完整号码都配置上。
 ISALLTA|是否适用于所有跟踪区|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对于已选择的IMSI号段，是否是针对所有跟踪区来新增或修改或删除对等PLMN配置。否（NO）：不适用于所有跟踪区，表示只针对某个或部分跟踪区，此时需要输入跟踪区标识。是（YES）：适用于所有跟踪区，此时不需要输入跟踪区标识。
@@ -1224,7 +1224,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MME IMSI对等PLMN配置，设置IMSI号段为46001，适用于所有路由区，PLMN Profile标识为1。 
@@ -1239,7 +1239,7 @@ ADD MME IMSI TAI PLMN:IMSI="46001",ISALLTA="YES",PROFILEID=1;
 
 
 
-父主题： [IMSI号段对等PLMN配置](../../zh-CN/tree/N_1254293.html)
+父主题： [IMSI号段对等PLMN配置]
 
 
 
@@ -1262,12 +1262,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改MME IMSI对等PLMN配置(SET MME IMSI TAI PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据IMSI号段和跟踪区来修改的对等PLMN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1284,10 +1284,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码（IMSI，International Mobile Subscriber Identification Number），是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行限制的作用，而不需要将每个用户的完整号码都配置上。
 ISALLTA|是否适用于所有跟踪区|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对于已选择的IMSI号段，是否是针对所有跟踪区来新增或修改或删除对等PLMN配置。否（NO）：不适用于所有跟踪区，表示只针对某个或部分跟踪区，此时需要输入跟踪区标识。是（YES）：适用于所有跟踪区，此时不需要输入跟踪区标识。
@@ -1303,7 +1303,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI号段为46001，适用于所有路由区的MME IMSI对等PLMN配置，将PLMN Profile标识修改为2。 
@@ -1318,7 +1318,7 @@ SET MME IMSI TAI PLMN:IMSI="46001",ISALLTA="YES",PROFILEID=2;
 
 
 
-父主题： [IMSI号段对等PLMN配置](../../zh-CN/tree/N_1254293.html)
+父主题： [IMSI号段对等PLMN配置]
 
 
 
@@ -1341,12 +1341,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除MME IMSI对等PLMN配置(DEL MME IMSI TAI PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据IMSI号段和跟踪区删除的对等PLMN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1363,10 +1363,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码（IMSI，International Mobile Subscriber Identification Number），是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行限制的作用，而不需要将每个用户的完整号码都配置上。
 ISALLTA|是否适用于所有跟踪区|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对于已选择的IMSI号段，是否是针对所有跟踪区来新增或修改或删除对等PLMN配置。否（NO）：不适用于所有跟踪区，表示只针对某个或部分跟踪区，此时需要输入跟踪区标识。是（YES）：适用于所有跟踪区，此时不需要输入跟踪区标识。
@@ -1380,7 +1380,7 @@ PLMN|PLMN|参数可选性:任意单选参数；参数类型:复合参数|PLMN识
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 IMSI号段为46001，适用于所有路由区的MME IMSI对等PLMN配置。 
@@ -1395,7 +1395,7 @@ DEL MME IMSI TAI PLMN:IMSI="46001",ISALLTA="YES";
 
 
 
-父主题： [IMSI号段对等PLMN配置](../../zh-CN/tree/N_1254293.html)
+父主题： [IMSI号段对等PLMN配置]
 
 
 
@@ -1418,7 +1418,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询MME IMSI对等PLMN配置(SHOW MME IMSI TAI PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME查询IMSI号段对等PLMN配置关系。 
@@ -1438,15 +1438,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码（IMSI，International Mobile Subscriber Identification Number），是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行限制的作用，而不需要将每个用户的完整号码都配置上。
 TAID|跟踪区标识|参数可选性:任意单选参数；参数类型:整数；参数范围为:1~65535。|某个IMSI号段可以根据某个跟踪区来进行添加或修改或删除PLMN配置。在MME中一个TAID对应一个跟踪区。当“是否适用于所有跟踪区参数”设置为“否”时，需要输入该参数。在配置该参数前需要先查询跟踪区配置中的“跟踪区标识”，根据已配置成功的跟踪区来设置该参数，查询命令为SHOW TA。最多可以配置16个跟踪区标识。
@@ -1460,10 +1460,10 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|IMSI是国际移动用户识别码（IMSI，International Mobile Subscriber Identification Number），是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行限制的作用，而不需要将每个用户的完整号码都配置上。
 ISALLTA|是否适用于所有跟踪区|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|对于已选择的IMSI号段，是否是针对所有跟踪区来新增或修改或删除对等PLMN配置。否（NO）：不适用于所有跟踪区，表示只针对某个或部分跟踪区，此时需要输入跟踪区标识。是（YES）：适用于所有跟踪区，此时不需要输入跟踪区标识。
@@ -1477,7 +1477,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询IMSI号段为46002的对等PLMN配置。 
@@ -1506,7 +1506,7 @@ SHOW MME IMSI TAI PLMN:IMSI="46002";
 
 
 
-父主题： [IMSI号段对等PLMN配置](../../zh-CN/tree/N_1254293.html)
+父主题： [IMSI号段对等PLMN配置]
 
 
 

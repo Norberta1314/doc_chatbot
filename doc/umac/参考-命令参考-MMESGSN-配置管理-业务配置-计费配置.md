@@ -1,7 +1,7 @@
  计费配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN输出的计费话单包括移动性管理话单M-CDR、会话管理话单S-CDR、短消息始呼SMS-MO-CDR和终呼话单SMS-MT-CDR等。 
@@ -55,7 +55,7 @@ M-CDR和SMS-CDR则只能判断是否归属，当不是归属时，可以指定�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 计费配置是SGSN的一项基本配置，SGSN根据本配置进行计费话单的输出及话单中计费特性参数控制。 
@@ -69,7 +69,7 @@ M-CDR和SMS-CDR则只能判断是否归属，当不是归属时，可以指定�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -122,7 +122,7 @@ IMSI号段过滤CDR配置
 
 
 
-父主题： [业务配置](../../zh-CN/tree/N_126085_operation_cm_mml_umacV4_cm_combo_gngp_service.html)
+父主题： [业务配置]
 
 
 
@@ -145,7 +145,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # APN计费模板配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 计费策略包括计费方式（按流量还是按时长）、最大时长限制、最大流量限制、部分话单最大碎片数、无线资源占用时长、PDP非激活时长和费率时段等。 
@@ -162,7 +162,7 @@ SGSN根据计费策略来产生会话管理话单S-CDR。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当不同的APN具有不同的计费策略时，需要基于APN来设置计费策略，配置流程如下所示。 
@@ -174,7 +174,7 @@ SGSN根据计费策略来产生会话管理话单S-CDR。
 
 
                         配置计费策略模板（计费策略+模板号），该配置命令为：
-                        [ADD APNCTPL](../mml/1262400.html)
+                        [ADD APNCTPL]
                         。
                     
 
@@ -185,7 +185,7 @@ SGSN根据计费策略来产生会话管理话单S-CDR。
 
 
                         在APN配置中配置APN计费策略对应的计费模板号，参见
-                        [ADD GPRS APN](../mml/1261500.html)
+                        [ADD GPRS APN]
                         。
                     
 
@@ -205,7 +205,7 @@ SGSN根据计费策略来产生会话管理话单S-CDR。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -248,7 +248,7 @@ SGSN根据计费策略来产生会话管理话单S-CDR。
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -271,18 +271,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增APN计费模板配置(ADD APNCTPL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增APN计费模板配置。当新增一种计费策略时，使用该命令。成功后，不同的APN可以使用不同时长或者流量的计费策略。 
 
 
-一个APN计费模板就是一种计费策略，被[ADD GPRS APN](1261500.html)关联。
+一个APN计费模板就是一种计费策略，被[ADD GPRS APN]关联。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -309,10 +309,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~31。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 TYPE|计费方式|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:TIMEFLOW。|该参数表示计费方式，取值含义如下：TIME：定时长计费方式FLOW：定流量计费方式TIMEFLOW：定时长+流量计费方式
@@ -328,7 +328,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN计费模板，计费模板标识为0，计费方式是流量和时间，计费时间门限为120分钟，计费流量门限为4096000000字节，部分话单最大碎片数为6，无线承载释放时间为360分钟，无活动PDP存在时长为360分钟。
@@ -341,7 +341,7 @@ ADD APNCTPL:TPLID=1,TYPE="TIMEFLOW",TIMELMT=120,FLOWLMT=4096000000,MAXFRAG=6,RAB
 
 
 
-父主题： [APN计费模板配置](../../zh-CN/tree/N_1254441.html)
+父主题： [APN计费模板配置]
 
 
 
@@ -364,7 +364,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改APN计费模板配置(SET APNCTPL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改APN计费模板配置。 
@@ -375,7 +375,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -402,10 +402,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~31。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 TYPE|计费方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示计费方式，取值含义如下：TIME：定时长计费方式FLOW：定流量计费方式TIMEFLOW：定时长+流量计费方式
@@ -421,7 +421,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改标识为1的APN计费模板，将计费方式修改是流量和时间，计费时间门限修改为240分钟，计费流量门限修改为104857600字节，部分话单最大碎片数修改为为9，无线承载释放时间修改为480分钟，无活动PDP存在时长改为960分钟。
@@ -434,7 +434,7 @@ SET APNCTPL:TPLID=1,TYPE="TIMEFLOW",TIMELMT=240,FLOWLMT=104857600,MAXFRAG=9,RABT
 
 
 
-父主题： [APN计费模板配置](../../zh-CN/tree/N_1254441.html)
+父主题： [APN计费模板配置]
 
 
 
@@ -457,12 +457,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除APN计费模板配置(DEL APNCTPL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除APN计费模板配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -479,10 +479,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~31。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 
@@ -491,7 +491,7 @@ TPLID|计费模板标识|参数可选性:必选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除标识为2的APN计费模板。
@@ -504,7 +504,7 @@ DEL APNCTPL:TPLID=2;
 
 
 
-父主题： [APN计费模板配置](../../zh-CN/tree/N_1254441.html)
+父主题： [APN计费模板配置]
 
 
 
@@ -527,20 +527,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN计费模板配置(SHOW APNCTPL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN计费模板配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 
@@ -549,10 +549,10 @@ TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 TYPE|计费方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示计费方式，取值含义如下：TIME：定时长计费方式FLOW：定流量计费方式TIMEFLOW：定时长+流量计费方式
@@ -568,7 +568,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已配置的APN计费模板信息。
@@ -594,7 +594,7 @@ SHOW APNCTPL;
 
 
 
-父主题： [APN计费模板配置](../../zh-CN/tree/N_1254441.html)
+父主题： [APN计费模板配置]
 
 
 
@@ -617,12 +617,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改APN计费模板费率时段(SET APNCTPL RATE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改计费模板费率时段。当计费模板需要在不同时间按不同标准收费时，使用该命令。设置成功后，每到该命令设置的一个时刻，系统将产生一张费率切换的碎片话单。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -643,10 +643,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~31。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 TIME|费率时段|参数可选性:必选参数；参数类型:复合参数|该参数表示计费时段，每个时段可以有不同的费率折扣。
@@ -659,7 +659,7 @@ RATE|费率折扣|参数可选性:必选参数；参数类型:整数；参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改标识为1的计费模板费率时段：在00:00-02:00之间的费率折扣为20%、在02:00-04:00之间的费率折扣为30%、在04:00-06:30之间的费率折扣为60%、在06:30-09:00之间的费率折扣为50%、在09:00-11:30之间的费率折扣为40%、在11:30-14:00之间的费率折扣为20%、在14:00-17:00之间的费率折扣为30%、在17:00-20:00之间的费率折扣为20%、在20:00-22:30之间的费率折扣为10%、在22:30-00:00之间的费率折扣为20%。
@@ -672,7 +672,7 @@ SET APNCTPL RATE:TPLID=1,TIME="00:00"-"02:00"-"20"&"02:00"-"04:00"-"30"&"04:00"-
 
 
 
-父主题： [APN计费模板配置](../../zh-CN/tree/N_1254441.html)
+父主题： [APN计费模板配置]
 
 
 
@@ -695,20 +695,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN计费模板费率时段(SHOW APNCTPL RATE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN计费模板费率时段。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 
@@ -717,10 +717,10 @@ TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数。|该参数为计费模板标识，不同的模板可以实现不同的计费策略。
 TIME_F|起始时间(HH:MM)|参数可选性:任选参数；参数类型:字符型。|该参数表示一个费率时段的起始时间。
@@ -732,7 +732,7 @@ RATE|费率折扣|参数可选性:任选参数；参数类型:整数。|该参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已配置的APN计费模板费率时段。
@@ -763,7 +763,7 @@ SHOW APNCTPL RATE;
 
 
 
-父主题： [APN计费模板配置](../../zh-CN/tree/N_1254441.html)
+父主题： [APN计费模板配置]
 
 
 
@@ -786,14 +786,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 指定出话单时间配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             定点产生话单，即指定一天中的某一个或多个半点或整点时间点产生S-CDR话单。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 话单时间超长会导致计费中心处理出问题时，根据计费中心能够容忍的话单时长和CG负荷综合考虑，配置指定一天中任何一个或多个半点或整点产生话单，指定的时间点越多，产生的话单就越多，CG的负荷会越大，所以需要综合考虑来指定出话单的时间。 
@@ -804,7 +804,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -842,7 +842,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -865,7 +865,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置出话单时间(SET CDR TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于对某个或所有计费模板设置产生管理话单的时间点，当需要指定一天中的某些整点或者半点出话单时，使用本命令。本命令执行成功后，关联本计费模板的所有APN的PDP在设置的时刻产生管理话单。 
@@ -879,7 +879,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -904,10 +904,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISDEFAULT|是否缺省配置|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:NO。|该参数用于指定是否缺省配置。如果是缺省配置，对于没有使用命令SET CDR TIME配置的计费模板，都使用这个缺省配置。其取值含义如下所示。NO： 非缺省YES：缺省
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|该参数用于设置产生管理话单时间的计费模板，如果ISDEFAULT指示是缺省配置，则不能指定本参数。
@@ -920,7 +920,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置产生管理话单时间，非缺省配置，计费模板标识为1，出管理话单时间为02:00以及02:30，出话单原因为费率改变，用户别名为zte。
@@ -933,7 +933,7 @@ SET CDR TIME:TPLID=1,CDRTIME="02:00"&"02:30",CAUSE="Tariff Time Change",NAME="zt
 
 
 
-父主题： [指定出话单时间配置](../../zh-CN/tree/N_1254442.html)
+父主题： [指定出话单时间配置]
 
 
 
@@ -956,12 +956,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 增加时间(ADD TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于对某个计费模板增加产生管理话单的时间点。当需要指定一天中的某些整点或者半点产生话单时，使用本命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -986,10 +986,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISDEFAULT|是否缺省配置|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:NO。|该参数用于指定是否缺省配置。如果是缺省配置，对于没有使用命令SET CDR TIME配置的计费模板，都使用这个缺省配置。其取值含义如下所示。NO： 非缺省YES：缺省
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|该参数用于设置产生管理话单时间的计费模板，如果ISDEFAULT指示是缺省配置，则不能指定本参数。
@@ -1000,7 +1000,7 @@ CDRTIME|出话单时间|参数可选性:必选参数；参数类型:枚举。参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 为非缺省配置、标识为1的计费模板增加产生管理话单时间，增加在01:00出话单。
@@ -1013,7 +1013,7 @@ ADD TIME:TPLID=1,CDRTIME="01:00";
 
 
 
-父主题： [指定出话单时间配置](../../zh-CN/tree/N_1254442.html)
+父主题： [指定出话单时间配置]
 
 
 
@@ -1036,20 +1036,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除时间(DEL TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除某个计费模板部分管理话单产生的时间点。当需要删除指定一天中某些管理话单产生时间点时，使用本命令。
 
 
-[](None)注意事项 
+注意事项 
 
-如果全部删除管理话单产生时间，配置命令参见：[CLEAR CDR TIME](1262408.html)。
-
-
-[](None)参数说明 
+如果全部删除管理话单产生时间，配置命令参见：[CLEAR CDR TIME]。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ISDEFAULT|是否缺省配置|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于指定是否缺省配置。如果是缺省配置，对于没有使用命令SET CDR TIME配置的计费模板，都使用这个缺省配置。其取值含义如下所示。NO： 非缺省YES：缺省
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|该参数用于设置产生管理话单时间的计费模板，如果ISDEFAULT指示是缺省配置，则不能指定本参数。
@@ -1060,7 +1060,7 @@ CDRTIME|出话单时间|参数可选性:必选参数；参数类型:枚举。参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除产生管理话单时间，非缺省配置，计费模板标识为1，删除在01:00出话单。
@@ -1073,7 +1073,7 @@ DEL TIME:ISDEFAULT="NO",TPLID=1,CDRTIME="01:00";
 
 
 
-父主题： [指定出话单时间配置](../../zh-CN/tree/N_1254442.html)
+父主题： [指定出话单时间配置]
 
 
 
@@ -1096,20 +1096,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 清空出话单时间(CLEAR CDR TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除某个计费模板所有产生管理话单的时间点。当需要删除指定一天中所有产生管理话单的时间点时，使用本命令。
 
 
-[](None)注意事项 
+注意事项 
 
-如果只删除部分管理话单产生时间，配置命令参见：[DEL TIME](1262407.html)。
-
-
-[](None)参数说明 
+如果只删除部分管理话单产生时间，配置命令参见：[DEL TIME]。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ISDEFAULT|是否缺省配置|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于指定是否缺省配置。如果是缺省配置，对于没有使用命令SET CDR TIME配置的计费模板，都使用这个缺省配置。其取值含义如下所示。NO： 非缺省YES：缺省
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|该参数用于设置产生管理话单时间的计费模板，如果ISDEFAULT指示是缺省配置，则不能指定本参数。
@@ -1119,7 +1119,7 @@ TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 清空标识为1的计费模块的产生管理话单时间。
@@ -1132,7 +1132,7 @@ CLEAR CDR TIME:ISDEFAULT="NO",TPLID=1;
 
 
 
-父主题： [指定出话单时间配置](../../zh-CN/tree/N_1254442.html)
+父主题： [指定出话单时间配置]
 
 
 
@@ -1155,20 +1155,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询出话单时间(SHOW CDR TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询产生管理话单时间。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISDEFAULT|是否缺省配置|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指定是否缺省配置。如果是缺省配置，对于没有使用命令SET CDR TIME配置的计费模板，都使用这个缺省配置。其取值含义如下所示。NO： 非缺省YES：缺省
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|该参数用于设置产生管理话单时间的计费模板，如果ISDEFAULT指示是缺省配置，则不能指定本参数。
@@ -1178,10 +1178,10 @@ TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISDEFAULT|是否缺省配置|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指定是否缺省配置。如果是缺省配置，对于没有使用命令SET CDR TIME配置的计费模板，都使用这个缺省配置。其取值含义如下所示。NO： 非缺省YES：缺省
 TPLID|计费模板标识|参数可选性:任选参数；参数类型:整数。|该参数用于设置产生管理话单时间的计费模板，如果ISDEFAULT指示是缺省配置，则不能指定本参数。
@@ -1194,7 +1194,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已配置的产生管理话单时间。
@@ -1221,7 +1221,7 @@ SHOW CDR TIME;
 
 
 
-父主题： [指定出话单时间配置](../../zh-CN/tree/N_1254442.html)
+父主题： [指定出话单时间配置]
 
 
 
@@ -1244,14 +1244,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # DNS解析类APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             如果为APN服务的GGSN是SGSN通过对APN FQDN进行DNS查询得到的，则该APN称为DNS解析类APN。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 当DNS解析类APN需要特殊计费策略，设置双栈支持、DT属性、过滤S-CDR时，需要进行本配置，配置原则如下： 
@@ -1283,7 +1283,7 @@ DNS解析类APN不需要输出会话管理类话单S-CDR时，则在配置中配
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1316,7 +1316,7 @@ DNS解析类APN不需要输出会话管理类话单S-CDR时，则在配置中配
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -1339,7 +1339,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增DNS解析类APN配置(ADD DNSAPNCHG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 APN在GGSN中用于标识一个指定的外部PDN，SGSN可根据用户在PDP上下文中携带的APN，通过DNS解析结果或本地配置信息得到与此APN对应的GGSN地址。 
@@ -1365,21 +1365,21 @@ APN在GGSN中用于标识一个指定的外部PDN，SGSN可根据用户在PDP上
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此功能适用于SGSN网元。 
 
 
-如果对接入此类APN的用户，SGSN使用指定的计费策略对用户计费，则先需要通过[ADD APNCTPL](1262400.html)命令配置计费模板。
+如果对接入此类APN的用户，SGSN使用指定的计费策略对用户计费，则先需要通过[ADD APNCTPL]命令配置计费模板。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|表示DNS解析类APN的名称。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN；另一方面，APN标识了通过该GGSN所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnAPN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置DNS解析类APN的名称为“zte.com.cn.mnc011.mcc460.gprs”
 CHGTPL|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。默认值:0。|表示DNS解析类APN关联的计费模板标识，表示对接入此APN的用户，SGSN使用指定计费模板的计费策略对用户计费。该参数的取值是通过ADD APNCTPL命令配置的参数“TPLID”。
@@ -1392,7 +1392,7 @@ SCDRFLT|过滤S-CDR|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增DNS解析类APN，APN名称为zte.com.cn.mnc460.mcc001.gprs，计费模板标识为1，不支持DT功能，不支持终端双栈功能。
@@ -1405,7 +1405,7 @@ ADD DNSAPNCHG:APN="zte.com.cn.mnc460.mcc001.gprs",CHGTPL=1;
 
 
 
-父主题： [DNS解析类APN配置](../../zh-CN/tree/N_1254443.html)
+父主题： [DNS解析类APN配置]
 
 
 
@@ -1428,7 +1428,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改DNS解析类APN配置(SET DNSAPNCHG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改DNS解析类APN的配置数据，包括如下内容： 
@@ -1448,15 +1448,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|表示DNS解析类APN的名称。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN；另一方面，APN标识了通过该GGSN所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnAPN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置DNS解析类APN的名称为“zte.com.cn.mnc011.mcc460.gprs”
 CHGTPL|计费模板标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~31。|表示DNS解析类APN关联的计费模板标识，表示对接入此APN的用户，SGSN使用指定计费模板的计费策略对用户计费。该参数的取值是通过ADD APNCTPL命令配置的参数“TPLID”。
@@ -1469,7 +1469,7 @@ SCDRFLT|过滤S-CDR|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改名称为zte.com.cn.mnc460.mcc001.gprs的DNS解析类APN，将计费模板标识修改为0，支持DT功能，支持终端双栈功能。
@@ -1482,7 +1482,7 @@ SET DNSAPNCHG:APN="zte.com.cn.mnc460.mcc001.gprs",CHGTPL=0,DTSPRT="YES",DUALSTAC
 
 
 
-父主题： [DNS解析类APN配置](../../zh-CN/tree/N_1254443.html)
+父主题： [DNS解析类APN配置]
 
 
 
@@ -1505,20 +1505,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除DNS解析类APN配置(DEL DNSAPNCHG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除DNS解析类APN的属性配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|表示DNS解析类APN的名称。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN；另一方面，APN标识了通过该GGSN所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnAPN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置DNS解析类APN的名称为“zte.com.cn.mnc011.mcc460.gprs”
 
@@ -1527,7 +1527,7 @@ APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除名称为zte.com.cn.mnc460.mcc001.gprs的DNS解析类APN配置信息。
@@ -1540,7 +1540,7 @@ DEL DNSAPNCHG:APN="zte.com.cn.mnc460.mcc001.gprs";
 
 
 
-父主题： [DNS解析类APN配置](../../zh-CN/tree/N_1254443.html)
+父主题： [DNS解析类APN配置]
 
 
 
@@ -1563,20 +1563,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询DNS解析类APN配置(SHOW DNSAPNCHG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询DNS解析类APN的相关属性。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~99个字符。|表示DNS解析类APN的名称。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN；另一方面，APN标识了通过该GGSN所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnAPN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置DNS解析类APN的名称为“zte.com.cn.mnc011.mcc460.gprs”
 
@@ -1585,10 +1585,10 @@ APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|表示DNS解析类APN的名称。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN；另一方面，APN标识了通过该GGSN所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnAPN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置DNS解析类APN的名称为“zte.com.cn.mnc011.mcc460.gprs”
 CTPLID|计费模板标识|参数可选性:任选参数；参数类型:整数。|表示DNS解析类APN关联的计费模板标识，表示对接入此APN的用户，SGSN使用指定计费模板的计费策略对用户计费。该参数的取值是通过ADD APNCTPL命令配置的参数“TPLID”。
@@ -1601,7 +1601,7 @@ SCDRFLT|过滤S-CDR|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已配置的DNS解析类APN信息。
@@ -1627,7 +1627,7 @@ SHOW DNSAPNCHG;
 
 
 
-父主题： [DNS解析类APN配置](../../zh-CN/tree/N_1254443.html)
+父主题： [DNS解析类APN配置]
 
 
 
@@ -1650,7 +1650,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 缺省计费特性配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 计费特性就是计费方法标识，运营商可以对不同用户或不同APN采用不同计费方法，比如普通计费、预付费、平率计费和热计费等。 
@@ -1698,7 +1698,7 @@ M-CDR和SMS-CDR则只能判断是否归属，当不是归属时，可以指定�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 存在不签约计费特性的用户或者需要控制非归属用户的计费特性时，进行本配置。 
@@ -1709,7 +1709,7 @@ SGSN产生话单时，SGSN先确定用户类型，根据用户类型获取配置
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1732,7 +1732,7 @@ SGSN产生话单时，SGSN先确定用户类型，根据用户类型获取配置
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -1755,7 +1755,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置缺省计费特性配置(SET CHGCHAR DEFAULT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 本命令用于根据用户类型来配置不同用户的缺省计费特性，用户分为三种类型： 
@@ -1776,10 +1776,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 其中，对于归属用户，只受到“计费特性“的限制，不受”计费特性优先“和”非PDP优先“两个条件的限制，这两个计费条件仅对非归属用户（包括漫游用户和拜访用户）进行限制。 
 
 
-对于非归属用户，SGSN首先根据用户的IMSI号码获取MCC和MNC，然后根据获取的MCC和MNC与通过[ADD CHGCHAR PLMN](1262415.html)命令配置的MCC和MNC进行比较：
+对于非归属用户，SGSN首先根据用户的IMSI号码获取MCC和MNC，然后根据获取的MCC和MNC与通过[ADD CHGCHAR PLMN]命令配置的MCC和MNC进行比较：
 
 
-如果匹配成功，则使用通过[SET CHGCHAR PLMN](1262416.html)命令配置的计费特性。
+如果匹配成功，则使用通过[SET CHGCHAR PLMN]命令配置的计费特性。
 
 
 如果匹配失败，则使用本命令的”计费特性优先“和”非PDP优先“两个条件决定的计费特性。 
@@ -1787,7 +1787,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -1795,10 +1795,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MODE|计费选择模式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|计费选择模式根据用户进行分类，包括以下三种：归属用户：用户归属本地PLMN。拜访用户：用户不归属本地PLMN，但使用本SGSN所在PLMN的GGSN激活PDP。漫游用户：用户不归属本地PLMN，使用用户归属PLMN的GGSN激活PDP。此参数设置为“归属缺省计费选择模式”：表示对归属用户配置计费特性。此参数设置为“拜访计费选择模式”：表示对拜访用户配置计费特性。此参数设置为“漫游计费选择模式”：表示对漫游用户配置计费特性。
 CHAR|计费特性|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示用户的计费类型，仅当“计费选择模式”设置为“归属缺省计费选择模式”时有效，即该参数仅对归属用户进行限制，包括以下选项：热计费：具有普通计费的所有功能，只是话单产生速度比普通话单更快。SGSN根据自身的配置或HLR中签约的计费属性确定MS是否采用热计费，若采用热计费，在CDR中打上热计费标志，传给CG。平率计费：即统一费率计费，用户按照指定周期（例如按月）支付费用，且每个周期（例如每月）费用固定。预付费计费：用户在获取某种服务之前需要预先支付一定的费用，如果费用不足以支付某项服务的花销，该项服务将会被强制中止。普通计费：基于用户使用业务的数据流量或时间长度来进行计费，不区分数据的业务种类。
@@ -1810,7 +1810,7 @@ MPRIO|非PDP优先|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置缺省计费特性，计费选择模式为归属缺省计费选择模式，计费特性为热计费，计费特性优选缺省计费特性，移动性管理话单和短消息话单时优先为拜访计费。
@@ -1823,7 +1823,7 @@ SET CHGCHAR DEFAULT:MODE="Roaming",CHAR="Hot Billing",PRIO="Default",MPRIO="Visi
 
 
 
-父主题： [缺省计费特性配置](../../zh-CN/tree/N_1254444.html)
+父主题： [缺省计费特性配置]
 
 
 
@@ -1846,7 +1846,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询缺省计费特性配置(SHOW CHGCHAR DEFAULT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询缺省计费特性配置。显示SGSN当前缺省计费特性配置 
@@ -1854,7 +1854,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -1862,10 +1862,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MODE|计费选择模式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|计费选择模式根据用户进行分类，包括以下三种：归属用户：用户归属本地PLMN。拜访用户：用户不归属本地PLMN，但使用本SGSN所在PLMN的GGSN激活PDP。漫游用户：用户不归属本地PLMN，使用用户归属PLMN的GGSN激活PDP。此参数设置为“归属缺省计费选择模式”：表示对归属用户配置计费特性。此参数设置为“拜访计费选择模式”：表示对拜访用户配置计费特性。此参数设置为“漫游计费选择模式”：表示对漫游用户配置计费特性。
 CHAR|计费特性|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示用户的计费类型，仅当“计费选择模式”设置为“归属缺省计费选择模式”时有效，即该参数仅对归属用户进行限制，包括以下选项：热计费：具有普通计费的所有功能，只是话单产生速度比普通话单更快。SGSN根据自身的配置或HLR中签约的计费属性确定MS是否采用热计费，若采用热计费，在CDR中打上热计费标志，传给CG。平率计费：即统一费率计费，用户按照指定周期（例如按月）支付费用，且每个周期（例如每月）费用固定。预付费计费：用户在获取某种服务之前需要预先支付一定的费用，如果费用不足以支付某项服务的花销，该项服务将会被强制中止。普通计费：基于用户使用业务的数据流量或时间长度来进行计费，不区分数据的业务种类。
@@ -1877,7 +1877,7 @@ MPRIO|非PDP优先|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询缺省计费特性的配置信息。
@@ -1905,7 +1905,7 @@ SHOW CHGCHAR DEFAULT;
 
 
 
-父主题： [缺省计费特性配置](../../zh-CN/tree/N_1254444.html)
+父主题： [缺省计费特性配置]
 
 
 
@@ -1928,7 +1928,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 多网号用户计费特性配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 对漫游用户可以忽略用户签约的计费特性，而使用在SGSN中根据归属网号配置的计费特性；当漫游用户没有签约计费特性时，使用归属网号配置的计费特性，此时该计费特性又称为该网号的缺省计费特性。 
@@ -1939,7 +1939,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当网络中存在多网号，且不同网号有不同的计费特性要求时，则需要为网号配置计费特性，配置信息包括网号、计费模式、计费特性和是否忽略HLR中签约计费特性。SGSN产生话单时，先确定用户类型，对非归属用户，根据计费模式和网号查询本配置的计费特性信息，以确定输出话单中的计费特性。 
@@ -1947,14 +1947,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 在本配置中没有配置的网号，则取“缺省计费特性配置”中配置的计费特性，参见
-                [SET CHGCHAR DEFAULT](../mml/1262411.html)
+                [SET CHGCHAR DEFAULT]
                 。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1987,7 +1987,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -2010,7 +2010,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增多网号用户计费特性配置(ADD CHGCHAR PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 本命令用于设置非归属用户（包括漫游用户和拜访用户）的计费特性。 
@@ -2033,10 +2033,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-SGSN首先根据非归属用户的IMSI号码匹配PLMN查询通过本命令配置的计费特性，如果获取不到匹配的记录，会根据[SET CHGCHAR DEFAULT](1262411.html)命令设置的缺省计费特性对非归属用户计费。
+SGSN首先根据非归属用户的IMSI号码匹配PLMN查询通过本命令配置的计费特性，如果获取不到匹配的记录，会根据[SET CHGCHAR DEFAULT]命令设置的缺省计费特性对非归属用户计费。
 
 
 可通过“计费特性”、“计费特性优先”和“非PDP优先”三个限制条件设置对应的计费特性。 
@@ -2044,10 +2044,10 @@ SGSN首先根据非归属用户的IMSI号码匹配PLMN查询通过本命令配�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:必选参数；参数类型:复合参数|PLMN（Public Land Mobile Network，公共陆地移动网）由MCC和MNC组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|MCC（Mobile Country Code，移动国家码），用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。（参考协议3GPP PS 24.003）
@@ -2058,7 +2058,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增多网号用户计费特性，其中国家移动码为460，移动网号是01。 
@@ -2073,7 +2073,7 @@ ADD CHGCHAR PLMN:PLMN="460"-"01";
 
 
 
-父主题： [多网号用户计费特性配置](../../zh-CN/tree/N_1254445.html)
+父主题： [多网号用户计费特性配置]
 
 
 
@@ -2096,7 +2096,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改多网号用户计费特性配置(SET CHGCHAR PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改多网号用户计费特性配置。 
@@ -2104,7 +2104,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -2112,10 +2112,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:必选参数；参数类型:复合参数|PLMN（Public Land Mobile Network，公共陆地移动网）由MCC和MNC组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|MCC（Mobile Country Code，移动国家码），用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。（参考协议3GPP PS 24.003）
@@ -2130,7 +2130,7 @@ MPRIO|非PDP优先|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改国家移动码为460、移动网号为01的多网号用户计费特性，计费选择模式修改为拜访计费选择模式，计费特性修改为热计费。 
@@ -2145,7 +2145,7 @@ SET CHGCHAR PLMN:PLMN="460"-"01",MODE="Visiting",CHAR="Hot Billing";
 
 
 
-父主题： [多网号用户计费特性配置](../../zh-CN/tree/N_1254445.html)
+父主题： [多网号用户计费特性配置]
 
 
 
@@ -2168,7 +2168,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除多网号用户计费特性配置(DEL CHGCHAR PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除多网号用户计费特性配置。使用本命令删除网号标识。 
@@ -2176,7 +2176,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -2184,10 +2184,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:必选参数；参数类型:复合参数|PLMN（Public Land Mobile Network，公共陆地移动网）由MCC和MNC组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|MCC（Mobile Country Code，移动国家码），用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。（参考协议3GPP PS 24.003）
@@ -2198,7 +2198,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除国家移动码为460、移动网号为01的多网号用户计费特性。 
@@ -2213,7 +2213,7 @@ DEL CHGCHAR PLMN:PLMN="460"-"01";
 
 
 
-父主题： [多网号用户计费特性配置](../../zh-CN/tree/N_1254445.html)
+父主题： [多网号用户计费特性配置]
 
 
 
@@ -2236,7 +2236,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询多网号用户计费特性配置(SHOW CHGCHAR PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询多网号用户计费特性配置。 
@@ -2244,7 +2244,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -2252,10 +2252,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:任选参数；参数类型:复合参数|PLMN（Public Land Mobile Network，公共陆地移动网）由MCC和MNC组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|MCC（Mobile Country Code，移动国家码），用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。（参考协议3GPP PS 24.003）
@@ -2266,10 +2266,10 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:任选参数；参数类型:字符型。|PLMN（Public Land Mobile Network，公共陆地移动网）由MCC和MNC组成。
 MODE|计费选择模式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|SGSN对非归属用户在生成S-CDR话单时，SGSN根据计费选择模式选择相应的计费特性，计费选择模式根据用户进行分类，包括以下两种类型：拜访用户：用户不归属本SGSN所属PLMN，但使用本SGSN所在PLMN的GGSN激活PDP。漫游用户：用户不归属本SGSN所属PLMN，使用用户归属PLMN的GGSN激活PDP。此参数设置为“拜访计费选择模式”：表示对拜访用户配置计费特性。此参数设置为“漫游计费选择模式”：表示对漫游用户配置计费特性。
@@ -2282,7 +2282,7 @@ MPRIO|非PDP优先|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已配置的多网号用户计费特性。 
@@ -2311,7 +2311,7 @@ SHOW CHGCHAR PLMN;
 
 
 
-父主题： [多网号用户计费特性配置](../../zh-CN/tree/N_1254445.html)
+父主题： [多网号用户计费特性配置]
 
 
 
@@ -2334,7 +2334,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # Ga接口配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 Ga接口为SGSN/GGSN与计费网关CG之间的接口，用于传送CDR计费话单，采用GTP'协议，承载在UDP/IP协议上。SGSN可以为用户产生SMS-CDR（短信话单）、S-CDR（流量话单），生成话单后发送给CG网关，CG对话单进行合并整理后上报给计费中心。 
@@ -2342,7 +2342,7 @@ Ga接口为SGSN/GGSN与计费网关CG之间的接口，用于传送CDR计费话�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 如SGSN支持Ga接口，需对本模块配置，配置步骤如下： 
@@ -2379,7 +2379,7 @@ Ga接口为SGSN/GGSN与计费网关CG之间的接口，用于传送CDR计费话�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2422,7 +2422,7 @@ CG PLMN配置
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -2445,7 +2445,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 本地Ga接口其他配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在3GPP 32.295协议中定义了SGSN或CG使用NodeAlive Request/Respond来完成Ga接口的建立，SGSN和CG均可发起Ga接口建立。Ga接口建立后SGSN和CG使用Echo Request/Respond来监测Ga连接是否正常。 
@@ -2456,7 +2456,7 @@ SGSN需要发送话单时，向CG发送Data Record Transfer Request消息携带�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本模块对Ga接口上各种管理参数进行配置，包括： 
@@ -2503,7 +2503,7 @@ CG链路恢复前ECHO消息测试次数，SGSN判断Ga连接故障后，定时�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2526,7 +2526,7 @@ CG链路恢复前ECHO消息测试次数，SGSN判断Ga连接故障后，定时�
 
 
 
-父主题： [Ga接口配置](../../zh-CN/tree/N_1254446.html)
+父主题： [Ga接口配置]
 
 
 
@@ -2549,12 +2549,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置本地Ga接口其他配置(SET LOCAL GAINFO) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置本地Ga接口其他相关配置，包括：发送ECHO REQ时间间隔、发送NODEALIVE REQ时间间隔、等待CG应答时间、CG无应答消息发送次数、MP话单保存缓冲区的话单自动保存到硬盘文件的时间、检测到CG硬盘无空间后，SGSN尝试向该CG发送话单时间以及SGSN跟CG链路有断到通前ECHO消息测试次数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 如果SGSN跟CG之间的链路不稳定，比如网络延时等，"等待CG应答时间(秒)"和"CG无应答消息发送次数"可以相对设置大一些以减少消息重发。建议配置"等待CG应答时间(秒)"为6秒，"CG无应答消息发送次数"为6。 
@@ -2562,10 +2562,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ECHOSNDTIME|发送ECHO REQ时间间隔(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:60~300。|该参数指定SGSN在与CG链路正常的情况下发送ECHO REQ时间间隔。一般使用默认值60秒，无需修改。
 NODEALIVESNDTIME|发送NODEALIVE REQ时间间隔(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:30~300。|该参数指定SGSN发送NODEALIVE REQ时间间隔。一般使用默认值30秒，无需修改。
@@ -2580,7 +2580,7 @@ LINKRESTESTTIME|CG链路恢复前ECHO消息测试次数|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置CG应答超时时长是8秒。 
@@ -2595,7 +2595,7 @@ SET LOCAL GAINFO:CGTIMEOUT=8;
 
 
 
-父主题： [本地Ga接口其他配置](../../zh-CN/tree/N_1254457.html)
+父主题： [本地Ga接口其他配置]
 
 
 
@@ -2618,20 +2618,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询本地Ga接口其他配置(SHOW LOCAL GAINFO) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询本地Ga接口其他相关配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ECHOSNDTIME|发送ECHO REQ时间间隔(秒)|参数可选性:任选参数；参数类型:整数。|该参数指定SGSN在与CG链路正常的情况下发送ECHO REQ时间间隔。一般使用默认值60秒，无需修改。
 NODEALIVESNDTIME|发送NODEALIVE REQ时间间隔(秒)|参数可选性:任选参数；参数类型:整数。|该参数指定SGSN发送NODEALIVE REQ时间间隔。一般使用默认值30秒，无需修改。
@@ -2646,7 +2646,7 @@ LINKRESTESTTIME|CG链路恢复前ECHO消息测试次数|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本地Ga接口其他相关配置。 
@@ -2674,7 +2674,7 @@ SHOW LOCAL GAINFO;
 
 
 
-父主题： [本地Ga接口其他配置](../../zh-CN/tree/N_1254457.html)
+父主题： [本地Ga接口其他配置]
 
 
 
@@ -2697,7 +2697,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## CG服务器配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 CG服务器作为计费网关，使用Ga接口与SGSN网元连接，接收SGSN发送的用户话单信息，进行缓存、合并、整理后上报给计费中心。 
@@ -2705,7 +2705,7 @@ CG服务器作为计费网关，使用Ga接口与SGSN网元连接，接收SGSN�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本模块配置CG服务器的IP地址和UDP端口号，SGSN建向此IP地址和UDP端口号发送NodeAlive Request消息，请求Ga接口建立。 
@@ -2713,7 +2713,7 @@ CG服务器作为计费网关，使用Ga接口与SGSN网元连接，接收SGSN�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2746,7 +2746,7 @@ CG服务器作为计费网关，使用Ga接口与SGSN网元连接，接收SGSN�
 
 
 
-父主题： [Ga接口配置](../../zh-CN/tree/N_1254446.html)
+父主题： [Ga接口配置]
 
 
 
@@ -2769,12 +2769,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增CG服务器配置(ADD CGCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增一个CG服务器。当系统需要新增一个计费服务器来接收话单时，使用本命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -2791,10 +2791,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CG服务器ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~32。|CG服务器的标识，每个CG服务器都有一个唯一的编号。
 CGADDR|CG侧地址|参数可选性:必选参数；参数类型:地址|CG服务器地址，可以配置为IPV4的地址也可以配置IPV6的地址。CG侧和本端使用相同的IP地址类型，查询命令参见SHOW SINGLE ADDR或者SHOW MULTI ADDR。
@@ -2807,7 +2807,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增了一个CG服务器。CG服务器标识为2。CG的地址为20.10.1.200，CG侧端口为3000，CG的名称为CG2。 
@@ -2822,7 +2822,7 @@ ADD CGCFG:ID=2,CGADDR="20.10.1.200",CGPORT=3000,PORTNUM=1,NAME="CG2";
 
 
 
-父主题： [CG服务器配置](../../zh-CN/tree/N_1254448.html)
+父主题： [CG服务器配置]
 
 
 
@@ -2845,23 +2845,23 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改CG服务器配置(SET CGCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改CG服务器属性，包括对CG侧地址和端口号、用户别名的修改。
 
 
-[](None)注意事项 
+注意事项 
 
 
-新增的CG必须被CGPROFILE关联才可以使用，配置命令参见[ADD CGPROFILE](1262466.html)或者[SET CGPROFILE](1262467.html)。
+新增的CG必须被CGPROFILE关联才可以使用，配置命令参见[ADD CGPROFILE]或者[SET CGPROFILE]。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CG服务器ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~32。|CG服务器的标识，每个CG服务器都有一个唯一的编号。
 CGADDR|CG侧地址|参数可选性:任选参数；参数类型:地址|CG服务器地址，可以配置为IPV4的地址也可以配置IPV6的地址。CG侧和本端使用相同的IP地址类型，查询命令参见SHOW SINGLE ADDR或者SHOW MULTI ADDR。
@@ -2874,7 +2874,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将CG服务器ID为2的CG服务器对应的地址修改为20.10.1.190，端口改为5000，用户别名改为CG2。 
@@ -2889,7 +2889,7 @@ SET CGCFG:ID=2,CGADDR="20.10.1.190",CGPORT=5000,PORTNUM=1,NAME="CG2";
 
 
 
-父主题： [CG服务器配置](../../zh-CN/tree/N_1254448.html)
+父主题： [CG服务器配置]
 
 
 
@@ -2912,27 +2912,27 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除CG服务器配置(DEL CGCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除一个CG服务器。
 
 
-[](None)注意事项 
+注意事项 
 
 
 被删除CG服务器不能被任何CG Profile关联。 
 
 
-首先查询CG服务器是否被CG Prolfile关联，命令参见[SHOW CGPROFILE](1262469.html)。
-若该CG服务器与CG Prolfile关联，应先删除相应的关联，命令参见[SET CGPROFILE](1262467.html)，再删除该CG服务器。
+首先查询CG服务器是否被CG Prolfile关联，命令参见[SHOW CGPROFILE]。
+若该CG服务器与CG Prolfile关联，应先删除相应的关联，命令参见[SET CGPROFILE]，再删除该CG服务器。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CG服务器ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~32。|CG服务器的标识，每个CG服务器都有一个唯一的编号。
 
@@ -2941,7 +2941,7 @@ ID|CG服务器ID|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除CG服务器ID为2的CG服务器配置。 
@@ -2956,7 +2956,7 @@ DEL CGCFG:ID=2;
 
 
 
-父主题： [CG服务器配置](../../zh-CN/tree/N_1254448.html)
+父主题： [CG服务器配置]
 
 
 
@@ -2979,12 +2979,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询CG服务器配置(SHOW CGCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询CG服务器配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 如果不指定任何ID，将显示本局配置的所有CG服务器。 
@@ -2992,10 +2992,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CG服务器ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~32。|CG服务器的标识，每个CG服务器都有一个唯一的编号。
 
@@ -3004,10 +3004,10 @@ ID|CG服务器ID|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CG服务器ID|参数可选性:任选参数；参数类型:整数。|CG服务器的标识，每个CG服务器都有一个唯一的编号。
 CGADDR|CG侧地址|参数可选性:任选参数；参数类型:地址|CG服务器地址，可以配置为IPV4的地址也可以配置IPV6的地址。CG侧和本端使用相同的IP地址类型，查询命令参见SHOW SINGLE ADDR或者SHOW MULTI ADDR。
@@ -3020,7 +3020,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|CG服
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询CG服务器的配置。 
@@ -3051,7 +3051,7 @@ SHOW CGCFG;
 
 
 
-父主题： [CG服务器配置](../../zh-CN/tree/N_1254448.html)
+父主题： [CG服务器配置]
 
 
 
@@ -3074,7 +3074,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## CG Profile配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为了提高Ga接口的容灾能力，3GPP 32.295协议中定义Ga接口支持主备CG。主用CG故障时，备用CG代替原主用CG，接收SGSN发送的话单，整理合并后上报给计费中心。 
@@ -3085,7 +3085,7 @@ ZXUN uMAC SGSN Ga接口最大支持连接32个具有不同优先级或者权重�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 CG Profile是一组CG服务器的集合，以CG Profile ID为标识，一个CG Profile中最少包括一个，最多包括32个CG服务器，这32个CG服务器具有不同的优先级或者权重。 
@@ -3093,14 +3093,14 @@ CG Profile是一组CG服务器的集合，以CG Profile ID为标识，一个CG P
 
 
                 SGSN上可以配置多个CG Profile ID。SGSN发送话单时，首先根据用户PLMN在“CG PLMN配置”(参见命令
-                [ADD CGPLMN](../mml/1262471.html)
+                [ADD CGPLMN]
                 )中得到CG Profile ID，使用此ID在“CG Profile 配置”中查找CG服务器，优先选择级别高的CG服务器，在同一优先级时基于CG的权重选择CG服务器。如用户PLMN未配置对应一个CG Profile，SGSN选择默认属性的CG Profile。在“CG Profile配置”中，ID为0的CG Profile是默认属性，此记录自动生成，不可删除。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3143,7 +3143,7 @@ CG Profile是一组CG服务器的集合，以CG Profile ID为标识，一个CG P
 
 
 
-父主题： [Ga接口配置](../../zh-CN/tree/N_1254446.html)
+父主题： [Ga接口配置]
 
 
 
@@ -3166,7 +3166,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增CG Profile配置(ADD CGPROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增一个CG Profile，一次可以将多个CG服务器关联到一个CG Profile中。使用该命令新增CG Profile成功后，SGSN才可以和该CG进行通信。 
@@ -3180,7 +3180,7 @@ CG Profile就是计费网关（CG服务器）的工作组。
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3201,10 +3201,10 @@ CG Profile就是计费网关（CG服务器）的工作组。
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|CG Profile ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~7。|该参数是CG Profile的标示号，取值需全局唯一。
 CGSERVER|CG服务器|参数可选性:必选参数；参数类型:复合参数|该参数是以下三个参数的组合：CG服务器ID、优先级、权重。用于指定CG Profle中一个CG服务器的标识、优先级和权重。至少配置一个CG服务器，最多32个，每个CG服务器必须配置对应的优先级和权重。
@@ -3218,7 +3218,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增CG Profile，标识为1，CG服务器ID为2，CG服务器的优先级为3，CG服务器的权重为50，名称为Profile1。 
@@ -3233,7 +3233,7 @@ ADD CGPROFILE:PROFILEID=1,CGSERVER=2-3-50,NAME="Profile1";
 
 
 
-父主题： [CG Profile配置](../../zh-CN/tree/N_12624665.html)
+父主题： [CG Profile配置]
 
 
 
@@ -3256,12 +3256,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改CG Profile配置(SET CGPROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于建立CG Profile和CG服务器的关联，设置CG服务器的优先级和权重。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3278,10 +3278,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|CG Profile ID|参数可选性:必选参数；参数类型:整数；参数范围为:0~7。|该参数是CG Profile的标示号，取值需全局唯一。
 CGSERVER|CG服务器|参数可选性:任选参数；参数类型:复合参数|该参数是以下三个参数的组合：CG服务器ID、优先级、权重。用于指定CG Profle中一个CG服务器的标识、优先级和权重。至少配置一个CG服务器，最多32个，每个CG服务器必须配置对应的优先级和权重。
@@ -3295,7 +3295,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改标识为1的CG Profile中的CG服务器2，优先级改为5，权重改为100。 
@@ -3310,7 +3310,7 @@ SET CGPROFILE:PROFILEID=1,CGSERVER=2-5-100,NAME="Profile1";
 
 
 
-父主题： [CG Profile配置](../../zh-CN/tree/N_12624665.html)
+父主题： [CG Profile配置]
 
 
 
@@ -3333,23 +3333,23 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 增加CG Profile中的服务器(ADD CGSERVER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置CG服务器归属到CG Profile中，以及设置CG服务器在CG Profile中的优先级和权重。
 
 
-[](None)注意事项 
+注意事项 
 
 
-一个CG服务器只能归属到一个CG Profile，一个CG Profile可以包含多个CG服务器。增加CG服务器的命令，参见[ADD CGCFG](1262461.html)。
+一个CG服务器只能归属到一个CG Profile，一个CG Profile可以包含多个CG服务器。增加CG服务器的命令，参见[ADD CGCFG]。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|CG Profile ID|参数可选性:必选参数；参数类型:整数；参数范围为:0~7。|该参数是CG Profile的标识号，取值需全局唯一。
 CGINDEX|CG服务器ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~32。|该参数用于指定CG Profile关联的CG服务器的标识。CG服务器ID查询命令参见 SHOW CGCFG。
@@ -3361,7 +3361,7 @@ WEIGHT|权重|参数可选性:必选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加CG Profile中的CG Server配置，Profile标识为0，CG服务器标识为2，CG服务器优先级为5，CG服务器权重为100。 
@@ -3376,7 +3376,7 @@ ADD CGSERVER:PROFILEID=0,CGINDEX=2,PRIORITY=5,WEIGHT=100;
 
 
 
-父主题： [CG Profile配置](../../zh-CN/tree/N_12624665.html)
+父主题： [CG Profile配置]
 
 
 
@@ -3399,20 +3399,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改CG Profile中的服务器(SET CGSERVER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改CG Profile中CG服务器的优先级和权重。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CGINDEX|CG服务器ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~32。|该参数用于指定CG Profile关联的CG服务器的标识。CG服务器ID查询命令参见 SHOW CGCFG。
 PRIORITY|优先级|参数可选性:任选参数；参数类型:整数；参数范围为:1~5。|该参数用于指定CG服务器的优先级。优先级取值范围为1-5，数值越低级别越高。
@@ -3423,7 +3423,7 @@ WEIGHT|权重|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改标识为2的CG服务器配置，优先级改为4，权重改为90。 
@@ -3438,7 +3438,7 @@ SET CGSERVER:CGINDEX=2,PRIORITY=4,WEIGHT=90;
 
 
 
-父主题： [CG Profile配置](../../zh-CN/tree/N_12624665.html)
+父主题： [CG Profile配置]
 
 
 
@@ -3461,12 +3461,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除CG Profile配置(DEL CGPROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除一个CG Profile或者删除CG 服务器与它所在CG Profile的关联。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3484,10 +3484,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|CG Profile ID|参数可选性:必须单选参数；参数类型:整数；参数范围为:0~7。|该参数是CG Profile的标示号，取值需全局唯一。
 CGINDEX|CG服务器ID|参数可选性:必须单选参数；参数类型:整数；参数范围为:1~32。|该参数用于指定CG Profile关联的CG服务器的标识。CG服务器ID查询命令参见 SHOW CGCFG。
@@ -3497,7 +3497,7 @@ CGINDEX|CG服务器ID|参数可选性:必须单选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除标识为1的CG Profile。 
@@ -3512,7 +3512,7 @@ DEL CGPROFILE:PROFILEID=1;
 
 
 
-父主题： [CG Profile配置](../../zh-CN/tree/N_12624665.html)
+父主题： [CG Profile配置]
 
 
 
@@ -3535,20 +3535,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询CG Profile配置(SHOW CGPROFILE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询CG Profile配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|CG Profile ID|参数可选性:任选参数；参数类型:整数；参数范围为:0~7。|该参数是CG Profile的标示号，取值需全局唯一。
 CGINDEX|CG服务器ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~32。|该参数用于指定CG Profile关联的CG服务器的标识。CG服务器ID查询命令参见 SHOW CGCFG。
@@ -3558,10 +3558,10 @@ CGINDEX|CG服务器ID|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROFILEID|CG Profile ID|参数可选性:任选参数；参数类型:整数。|该参数是CG Profile的标示号，取值需全局唯一。
 PROPERTY|属性|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|是否为通用的CG Profile。该参数不需要指定，系统默认ID为零的CG Profile 就是通用的CG Profile。通用的CG Profile 只能有一个。当没有给PLMN话单指定CG Profile时，使用通用的CG Profile。查询命令参见SHOW CGPLMN。
@@ -3575,7 +3575,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|CG PR
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已配置的CG Profile。 
@@ -3605,7 +3605,7 @@ SHOW CGPROFILE;
 
 
 
-父主题： [CG Profile配置](../../zh-CN/tree/N_12624665.html)
+父主题： [CG Profile配置]
 
 
 
@@ -3628,7 +3628,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## CG PLMN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在现网中，存在多个运营商可以共用同一SGSN网元，但CG网关却各自独立的组网模式。此时SGSN在发送话单时，需基于用户的PLMN，将其话单发送到归属的CG网关。 
@@ -3636,7 +3636,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本模块为PLMN指定一个CG Profile ID，SGSN为发送话单时，使用用户的PLMN查找本模块配置数据得到CG Profile ID，通过CG Profile ID在“CG Profile配置”中可查找到一个CG服务器，向其发送话单请求消息。 
@@ -3644,7 +3644,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3677,7 +3677,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [Ga接口配置](../../zh-CN/tree/N_1254446.html)
+父主题： [Ga接口配置]
 
 
 
@@ -3700,7 +3700,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增CG PLMN配置(ADD CGPLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增一个CG PLMN配置。当需要为PLMN配置CG Profile ID来选择CG服务器时，使用该命令。成功后，对应PLMN产生的话单将发送到CG Profile ID对应的计费服务器上。 
@@ -3711,7 +3711,7 @@ PLMN网元标识由MCC+MNC共同确定。
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3732,10 +3732,10 @@ CG PLMN配置是为PLMN指定使用一个CG Profile，其优先级高于通用CG
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:必选参数；参数类型:复合参数|公共陆地移动网络PLMN由MCC+MNC共同确定。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|PLMN由MCC+MNC共同确定，移动终端IMSI号码中包含MCC，该参数用于设定PLMN中移动国家码。
@@ -3748,7 +3748,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增CG PLMN配置，移动国家码为460，移动网号是01，对应的CG Profile标识为0，用户别名是plmn_1。 
@@ -3763,7 +3763,7 @@ ADD CGPLMN:PLMN="460"-"01",PROFILEID=0,NAME="plmn_1";
 
 
 
-父主题： [CG PLMN配置](../../zh-CN/tree/N_12624715.html)
+父主题： [CG PLMN配置]
 
 
 
@@ -3786,12 +3786,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改CG PLMN配置(SET CGPLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改CG PLMN配置。可修改指定PLMN的CG Profile ID。修改后，该PLMN产生的话单将发送到新配置的CG Profile ID对应的计费服务器上。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3812,10 +3812,10 @@ CG PLMN配置是为PLMN指定使用一个CG Profile，其优先级高于通用CG
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:必选参数；参数类型:复合参数|公共陆地移动网络PLMN由MCC+MNC共同确定。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|PLMN由MCC+MNC共同确定，移动终端IMSI号码中包含MCC，该参数用于设定PLMN中移动国家码。
@@ -3828,7 +3828,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改移动国家码为460，移动网号是01对应的CG PLMN，将CG Profile标识修改为1。 
@@ -3843,7 +3843,7 @@ SET CGPLMN:PLMN="460"-"01",PROFILEID=1;
 
 
 
-父主题： [CG PLMN配置](../../zh-CN/tree/N_12624715.html)
+父主题： [CG PLMN配置]
 
 
 
@@ -3866,20 +3866,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除CG PLMN配置(DEL CGPLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除一个CG PLMN配置。删除后，解除PLMN与CG Profile的关联关系，该PLMN采用通用CG Profile进行计费业务处理 。
 
 
-[](None)注意事项 
+注意事项 
 
 直接删除由MCC+MNC共同确定的PLMN标识，就解除了PLMN与CG Profile ID的关联关系。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:必选参数；参数类型:复合参数|公共陆地移动网络PLMN由MCC+MNC共同确定。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|PLMN由MCC+MNC共同确定，移动终端IMSI号码中包含MCC，该参数用于设定PLMN中移动国家码。
@@ -3890,7 +3890,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除移动国家码为460，移动网号是01对应的CG PLMN配置。 
@@ -3905,7 +3905,7 @@ DEL CGPLMN:PLMN="460"-"01";
 
 
 
-父主题： [CG PLMN配置](../../zh-CN/tree/N_12624715.html)
+父主题： [CG PLMN配置]
 
 
 
@@ -3928,20 +3928,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询CG PLMN配置(SHOW CGPLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询一个CG PLMN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无.
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:任选参数；参数类型:复合参数|公共陆地移动网络PLMN由MCC+MNC共同确定。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|PLMN由MCC+MNC共同确定，移动终端IMSI号码中包含MCC，该参数用于设定PLMN中移动国家码。
@@ -3953,10 +3953,10 @@ PROFILEID|CG Profile ID|参数可选性:任选参数；参数类型:整数；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|网号标识|参数可选性:任选参数；参数类型:字符型。|公共陆地移动网络PLMN由MCC+MNC共同确定。
 PROFILEID|CG Profile ID|参数可选性:任选参数；参数类型:整数。|该参数用于获取CG Profile的标识号，其查询命令参见SHOW CGPROFILE。
@@ -3967,7 +3967,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|CG PL
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已配置的CG PLMN信息。 
@@ -3995,7 +3995,7 @@ SHOW CGPLMN;
 
 
 
-父主题： [CG PLMN配置](../../zh-CN/tree/N_12624715.html)
+父主题： [CG PLMN配置]
 
 
 
@@ -4018,7 +4018,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 本端单地址配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN网元与CG之间使用Ga接口连接，采用UDP协议，协议为Ga接口定义的UDP端口号为3868。 
@@ -4029,7 +4029,7 @@ SGSN网元与CG之间使用Ga接口连接，采用UDP协议，协议为Ga接口�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当SGSN在“Ga接口基本配置”选择为单地址模式，需对本模块配置。 
@@ -4040,7 +4040,7 @@ SGSN网元与CG之间使用Ga接口连接，采用UDP协议，协议为Ga接口�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4063,7 +4063,7 @@ SGSN网元与CG之间使用Ga接口连接，采用UDP协议，协议为Ga接口�
 
 
 
-父主题： [Ga接口配置](../../zh-CN/tree/N_1254446.html)
+父主题： [Ga接口配置]
 
 
 
@@ -4086,7 +4086,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置本端单地址配置(SET SINGLE ADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置本端单地址配置。当选择通信地址模式为单地址时，使用该命令配置Ga接口IP地址、VRF ID参数。 
@@ -4101,7 +4101,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -4130,10 +4130,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LOCALADDR|本端IPv4地址|参数可选性:任选参数；参数类型:地址|本端对应的IPv4格式的地址，其查询命令参见SHOW IPSTACK ALL。
 LOCALV6ADDR|本端IPv6地址|参数可选性:任选参数；参数类型:地址|本端对应的IPv6格式的地址，其查询命令参见SHOW IPSTACK ALL。
@@ -4144,7 +4144,7 @@ VRF|VRF标识|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置本端IPv4地址为192.168.0.1，VRF标识为0。 
@@ -4159,7 +4159,7 @@ SET SINGLE ADDR:LOCALADDR="192.168.0.1",VRF=0;
 
 
 
-父主题： [本端单地址配置](../../zh-CN/tree/N_1254449.html)
+父主题： [本端单地址配置]
 
 
 
@@ -4182,7 +4182,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询本端单地址配置(SHOW SINGLE ADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询本端单地址配置。 
@@ -4190,15 +4190,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无.
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LOCALADDR|本端IPv4地址|参数可选性:任选参数；参数类型:地址|本端对应的IPv4格式的地址，其查询命令参见SHOW IPSTACK ALL。
 LOCALV6ADDR|本端IPv6地址|参数可选性:任选参数；参数类型:地址|本端对应的IPv6格式的地址，其查询命令参见SHOW IPSTACK ALL。
@@ -4209,7 +4209,7 @@ VRF|VRF标识|参数可选性:任选参数；参数类型:整数。|当需要让
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本端单地址配置。 
@@ -4237,7 +4237,7 @@ SHOW SINGLE ADDR;
 
 
 
-父主题： [本端单地址配置](../../zh-CN/tree/N_1254449.html)
+父主题： [本端单地址配置]
 
 
 
@@ -4260,7 +4260,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 话单Node ID配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在3GPP 32.215协议中定义了CDR格式，其中CDR话单中包含格式为字符型的Node ID字段，CG网元使用此字段来识别当前话单由哪个网元上报。 
@@ -4268,7 +4268,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本模块配置本SGSN的Node ID，SGSN发出的话单CDR中包含此Node ID。组网时，需为网络中SGSN和MSC/VLR网元规划好Node ID，以便CG或计费中心通过此Node ID即可知道当前话单由哪个网元上报。 
@@ -4276,7 +4276,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4304,7 +4304,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [Ga接口配置](../../zh-CN/tree/N_1254446.html)
+父主题： [Ga接口配置]
 
 
 
@@ -4327,7 +4327,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置话单的Node ID(SET CDR NODEID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置话单的Node ID。当现网CDR格式需支持Node ID字段时，使用该命令进行配置。Node ID主要用于标识一个DNS主机名。 
@@ -4338,15 +4338,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 Node ID的有效长度为20个字节，超过20个字节的Node ID 字符串，系统将做截断处理为最大20个字节。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NODEID|话单Node ID|参数可选性:必选参数；参数类型:字符型；参数范围为:1~20个字符。|SGSN对携带Node ID字段的话单进行编解码处理。Node ID的有效长度为20个字节，以“\0”字符结尾。超过20个字节的Node ID 字符串，系统将做截断处理为最大20个字节。该参数默认值为空，其查询命令参见SHOW CDR NODEID。
 
@@ -4355,7 +4355,7 @@ NODEID|话单Node ID|参数可选性:必选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置话单的Node ID为1111。 
@@ -4370,7 +4370,7 @@ SET CDR NODEID:NODEID="1111";
 
 
 
-父主题： [话单Node ID配置](../../zh-CN/tree/N_1254458.html)
+父主题： [话单Node ID配置]
 
 
 
@@ -4393,17 +4393,17 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 重置话单的Node ID为空(RESET CDR NODEID) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于重置话单的Node ID为空。当运营商不需要SGSN网元对话单中的Node ID参数进行判断与处理时，使用该命令清除话单的Node ID参数。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后Node ID将被设置为空，执行前请确认后再执行。
 
 
-[](None)命令举例 
+命令举例 
 
 
 重置话单的Node ID为空。 
@@ -4418,7 +4418,7 @@ RESET CDR NODEID;
 
 
 
-父主题： [话单Node ID配置](../../zh-CN/tree/N_1254458.html)
+父主题： [话单Node ID配置]
 
 
 
@@ -4441,20 +4441,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询话单的Node ID(SHOW CDR NODEID) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询话单的Node ID。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NODEID|话单Node ID|参数可选性:任选参数；参数类型:字符型。|SGSN对携带Node ID字段的话单进行编解码处理。Node ID的有效长度为20个字节，以“\0”字符结尾。超过20个字节的Node ID 字符串，系统将做截断处理为最大20个字节。该参数默认值为空，其查询命令参见SHOW CDR NODEID。
 
@@ -4463,7 +4463,7 @@ NODEID|话单Node ID|参数可选性:任选参数；参数类型:字符型。|SG
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询话单的Node ID。 
@@ -4491,7 +4491,7 @@ SHOW CDR NODEID;
 
 
 
-父主题： [话单Node ID配置](../../zh-CN/tree/N_1254458.html)
+父主题： [话单Node ID配置]
 
 
 
@@ -4514,7 +4514,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # IMSI号段过滤CDR配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN话单分为会话管理话单S-CDR、移动性管理话单M-CDR、短消息MO话单SMS-SMO-CDR和短消息MT话单SMS-SMT-CDR。默认SGSN输出上述所有话单，但通常运营商只需要上述话单中的一部分用于计费，对于不用于计费的话单则要求能通过配置进行屏蔽。 
@@ -4528,7 +4528,7 @@ SGSN话单分为会话管理话单S-CDR、移动性管理话单M-CDR、短消息
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当运营商不需要SGSN出某种话单时，则配置过滤对应的IMSI号段对应的话单。 
@@ -4539,7 +4539,7 @@ SGSN话单分为会话管理话单S-CDR、移动性管理话单M-CDR、短消息
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4572,7 +4572,7 @@ SGSN话单分为会话管理话单S-CDR、移动性管理话单M-CDR、短消息
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -4595,7 +4595,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增IMSI号段过滤CDR配置(ADD IMSI CDR FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加IMSI号段过滤对应CDR配置。当用户的计费信息可以从本网的GGSN获取，而SGSN仅需要输出会话管理话单S-CDR，或SGSN对部分用户不需要输出会话管理话单S-CDR时（如本地用户），使用该命令。该命令可以控制此IMSI号码各类型话单部分或全部过滤，如只过滤S-CDR或过滤S-CDR和M-CDR或过滤全部。增加IMSI号段过滤CDR配置成功后，SGSN按照配置过滤对应类型话单，不再输出该IMSI号段用户对应话单。 
@@ -4603,7 +4603,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 一旦配置为不输出对应话单，则会对此IMSI号段的计费造成影响，请慎重配置。 
@@ -4611,10 +4611,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|表示对该IMSI号段用户的话单，按照配置过滤规则进行过滤。
 FILTER|是否过滤话单|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数为需要过滤的SGSN用户话单类型。取值含义如下：“MCDRFLT”：过滤M-CDR话单。“SMOCDRFLT”：过滤SMS-SMO-CDR话单。“SMTCDRFLT”：过滤SMS-SMT-CDR话单。“SCDRFLT”：过滤S-CDR话单。
@@ -4625,7 +4625,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加IMIS号段过滤CDR配置。增加的IMSI号段为445555，对应的过滤话单类型为MCDR和SMOCDR和SMTCDR类型。 
@@ -4640,7 +4640,7 @@ ADD IMSI CDR FILTER:IMSI="445555",FILTER="MCDRFLT"&"SMOCDRFLT"&"SMTCDRFLT";
 
 
 
-父主题： [IMSI号段过滤CDR配置](../../zh-CN/tree/N_1251498.html)
+父主题： [IMSI号段过滤CDR配置]
 
 
 
@@ -4663,7 +4663,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改IMSI号段过滤CDR配置(SET IMSI CDR FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改IMSI号段过滤CDR配置。当增加的IMSI号段过滤CDR配置不满足运营商要求时使用此命令，如多过滤该IMSI号段应该输出的话单，或少过滤该IMSI段不应该输出的话单，则通过此命令添加或减少该IMS号段对应的话单，以达到用户需求。 
@@ -4671,7 +4671,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 一旦配置为不输出对应话单，则会对此IMSI号段的计费造成影响，需要慎重配置。 
@@ -4679,10 +4679,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|表示对该IMSI号段用户的话单，按照配置过滤规则进行过滤。
 FILTER|是否过滤话单|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数为需要过滤的SGSN用户话单类型。取值含义如下：“MCDRFLT”：过滤M-CDR话单。“SMOCDRFLT”：过滤SMS-SMO-CDR话单。“SMTCDRFLT”：过滤SMS-SMT-CDR话单。“SCDRFLT”：过滤S-CDR话单。
@@ -4693,7 +4693,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMIS号段过滤CDR配置。修改的IMSI号段为445555，修改后的过滤话单类型为MCDR和SMOCDR类型。 
@@ -4708,7 +4708,7 @@ SET IMSI CDR FILTER:IMSI="445555",FILTER="MCDRFLT"&"SMOCDRFLT";
 
 
 
-父主题： [IMSI号段过滤CDR配置](../../zh-CN/tree/N_1251498.html)
+父主题： [IMSI号段过滤CDR配置]
 
 
 
@@ -4731,7 +4731,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除IMSI号段过滤CDR配置(DEL IMSI CDR FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除IMSI号段过滤CDR配置。删除后，不对该IMSI号段话单进行过滤，该IMSI号段所有话单SGSN正常输出。 
@@ -4739,7 +4739,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -4747,10 +4747,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|表示对该IMSI号段用户的话单，按照配置过滤规则进行过滤。
 
@@ -4759,7 +4759,7 @@ IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMIS号段为445555的过滤话单配置。 
@@ -4774,7 +4774,7 @@ DEL IMSI CDR FILTER:IMSI="445555";
 
 
 
-父主题： [IMSI号段过滤CDR配置](../../zh-CN/tree/N_1251498.html)
+父主题： [IMSI号段过滤CDR配置]
 
 
 
@@ -4797,7 +4797,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询IMSI号段过滤CDR配置(SHOW IMSI CDR FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询IMSI号段过滤CDR配置。 
@@ -4805,7 +4805,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -4813,10 +4813,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|表示对该IMSI号段用户的话单，按照配置过滤规则进行过滤。
 
@@ -4825,10 +4825,10 @@ IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|表示对该IMSI号段用户的话单，按照配置过滤规则进行过滤。
 FILTER|是否过滤话单|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数为需要过滤的SGSN用户话单类型。取值含义如下：“MCDRFLT”：过滤M-CDR话单。“SMOCDRFLT”：过滤SMS-SMO-CDR话单。“SMTCDRFLT”：过滤SMS-SMT-CDR话单。“SCDRFLT”：过滤S-CDR话单。
@@ -4839,7 +4839,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询IMIS过滤话单配置。 
@@ -4868,7 +4868,7 @@ SHOW IMSI CDR FILTER;
 
 
 
-父主题： [IMSI号段过滤CDR配置](../../zh-CN/tree/N_1251498.html)
+父主题： [IMSI号段过滤CDR配置]
 
 
 
@@ -4891,7 +4891,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 本地话单策略配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4914,7 +4914,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [计费配置](../../zh-CN/tree/N_1254440.html)
+父主题： [计费配置]
 
 
 
@@ -4937,7 +4937,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置本地话单策略配置(SET LOCAL CDR POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置当SGSN与CG服务器之间的链路异常时，SGSN将产生的话单信息写入到本地话单文件的策略，比如本地话单是否加密、以及加密所使用的秘钥。 
@@ -4945,7 +4945,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 话单加密开关由关闭到打开时，必须同步设置加密秘钥。若系统中存在加密的本地话单，则不能修改加密秘钥。 
@@ -4953,10 +4953,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CDRENCRYPTION|本地话单是否加密|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|
 CDRENCPWDKEY|本地话单加密秘钥|参数可选性:特殊任选参数；参数类型:字符型；参数范围为:8~32个字符。|
@@ -4967,7 +4967,7 @@ CDRENCPWDKEYCON|确认本地话单加密秘钥|参数可选性:特殊任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置本地话单策略配置。本地话单是否加密为否。 
@@ -4982,7 +4982,7 @@ SET LOCAL CDR POLICY:CDRENCRYPTION="NO"
 
 
 
-父主题： [本地话单策略配置](../../zh-CN/tree/N_12697360.html)
+父主题： [本地话单策略配置]
 
 
 
@@ -5005,7 +5005,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询本地话单策略配置(SHOW LOCAL CDR POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询当SGSN与CG服务器之间的链路异常时，SGSN将产生的话单信息写入到本地话单文件的策略。 
@@ -5013,15 +5013,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CDRENCRYPTION|本地话单是否加密|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|
 
@@ -5030,7 +5030,7 @@ CDRENCRYPTION|本地话单是否加密|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本地话单策略配置。 
@@ -5060,7 +5060,7 @@ SHOW LOCAL CDR POLICY
 
 
 
-父主题： [本地话单策略配置](../../zh-CN/tree/N_12697360.html)
+父主题： [本地话单策略配置]
 
 
 

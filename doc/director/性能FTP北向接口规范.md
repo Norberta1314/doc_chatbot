@@ -22,7 +22,7 @@ PVC部署：/glusterdata/volumedata/service/opcs/<卷集ID>/data/ztepm/PM
 ### 性能文件命名规则 
 命名格式为：  
 <Data Type>[-<NE Type>-<NE Mark>]-<Query Scope>-<Object Type>-<Measurement Period>-<Starting Time>-<Ending Time>.csv
-参数具体说明参见[表1](a6c8315c235140e4bb4679f9ceca387a.html#topicid9044541__08863728-3961-4948-a955-c6802aed0285)。
+参数具体说明参见[表1]。
 参数|含义|备注
 ---|---|---
 Data Type|数据类型|这里为性能管理"PM"
@@ -68,13 +68,13 @@ CSV文件特殊数据说明：
 ### 上报指标 
 包含基础指标和关键指标，可以根据需要在性能北向FTP服务器设置页面选择。
 ### 文件压缩 
-文件压缩格式为“zip”，zip文件命名规则为<Data Type>[-<NE Type>-<NE Mark>]-<Measurement Period>-<Starting Time>-<Ending Time>.zip，字段含义同[性能文件命名规则](a6c8315c235140e4bb4679f9ceca387a.html)。
+文件压缩格式为“zip”，zip文件命名规则为<Data Type>[-<NE Type>-<NE Mark>]-<Measurement Period>-<Starting Time>-<Ending Time>.zip，字段含义同[性能文件命名规则]。
 FTP服务器上的是zip文件，使用前需要解压。
 ### 配置页面 
 ## 参考 
 ### 文件示例 
-[PM-TECS-HOST-5-20210202095000-2.xls](files/PM-TECS-HOST-5-20210202095000-2.xls)
-[PM-PIM-FIREWALL-5-2021020209500.xls](files/PM-PIM-FIREWALL-5-2021020209500.xls)
+[PM-TECS-HOST-5-20210202095000-2.xls]
+[PM-PIM-FIREWALL-5-2021020209500.xls]
 ### 文件中Object Name拼接规则 
 
 ### 文件中Object Name拼接规则 

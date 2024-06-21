@@ -28,12 +28,12 @@ UE进行SMS over NAS初始注册时。
 周期注册流程发生的场景如下： 
 当UE在之前注册流程中协商的周期性注册更新定时器超时时，发起周期性注册更新流程。 
 ##### 普通注册流程 
-普通注册流程如[图1](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__875aa8a9-14ae-4b84-b2aa-36e5224450b2)所示。
+普通注册流程如[图1]所示。
 图1  普通注册
-[]images/%E6%B5%81%E7%A8%8B%E5%9B%BE(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE发送Registration Request
-到(R)AN，消息中包含注册类型、用户标识（SUCI或5G-GUTI或PEI）、UE的5GC能力及可选的Requested NSSAI等参数。Registration Request消息中的关键信元参见[表1](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__50633fa9-87a0-40fe-bf50-a398693e1782)。
+到(R)AN，消息中包含注册类型、用户标识（SUCI或5G-GUTI或PEI）、UE的5GC能力及可选的Requested NSSAI等参数。Registration Request消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 Registration Type|指示UE请求的注册类型，Bits 1/2/3组合取值代表注册类型，注册类型取值如下：1（0x01），初始注册。2（0x02），移动注册更新。3（0x03），周期注册更新。4（0x04），紧急注册。5（0x05），其他取值。|
@@ -41,7 +41,7 @@ Registration Type|指示UE请求的注册类型，Bits 1/2/3组合取值代表�
 (R)AN接收到消息，根据RAT或Requested NSSAI选择合适的AMF，如果(R)AN无法选择到合适的AMF，则将Registration Request
 发送给缺省AMF，由缺省AMF进行AMF选择过程。
 (R)AN将Registration Request
-消息放在N2 Message (Initial UE Message)消息中转发给AMF。N2 Message (Initial UE Message)消息中的关键信元参见[表2](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__9e592f88-9273-4b74-83a2-969956a98ada)。
+消息放在N2 Message (Initial UE Message)消息中转发给AMF。N2 Message (Initial UE Message)消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 PLMN Identity|PLMN标识，PLMN用于区分一个国家或地区不同的移动通信运营商。PLMN包含MCC和MNC，即PLMN=MCC + MNC。MCC和MNC说明如下：MCC由国际电信联盟（ITU）统一分配和管理，用于唯一识别移动用户所属的国家，一个国家可以被分配多个MCC。MCC由三位数字组成，中国的MCC为460，美国的MCC为310、311和316。MNC用于识别移动用户所属的移动网络，和MCC一起可以唯一识别所属运营商，MNC由2位或3位数字组成。|
@@ -68,7 +68,7 @@ AMF收到MM Context。
 （可选）如果第14步需要执行，则New AMF根据SUPI选择一个UDM实例。
 New AMF及Old AMF分别执行如下操作： 
 如果AMF改变，或者如果AMF没有用户的有效的上下文，AMF需要向UDM注册并获取签约数据。AMF调用UDM的服务化接口Nudm_UEContextManagement_Registration
-向UDM注册，以及订阅当UDM注销该AMF时，发送的用户通知。Nudm_UEContextManagement_Registration请求消息中的关键信元参见[表3](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__d8f362c1-152c-4988-89ad-71f389e3147d)。
+向UDM注册，以及订阅当UDM注销该AMF时，发送的用户通知。Nudm_UEContextManagement_Registration请求消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 deregCallbackUri|AMF提供的URI，用于接收去注册通知。|
@@ -76,19 +76,19 @@ guami|全球唯一AMF标识。|
 ratType|表示UE当前的RAT类型，包括3GPP接入技术和非3GPP接入技术。|
 imsVoPs|指示AMF是否支持IMS语音能力。|
 AMF调用UDM的服务化接口Nudm_SubscriberDataManagement_Get
-获取签约数据。Nudm_SubscriberDataManagement_Get响应消息中的关键信元参见[表4](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__0d6edcb6-084c-46b7-b35c-0b6aa8868734)。
+获取签约数据。Nudm_SubscriberDataManagement_Get响应消息中的关键信元参见[表4]。
 关键信元|信元解释|示例
 ---|---|---
 Data|请求的数据集，比如AM（接入和移动签约数据），SMF_SEL（SMF选择的签约数据）。|
 AMF获取签约数据成功后，通过Nudm_SubscriberDataManagement_Subscribe
-向UDM订阅签约数据变更通知。Nudm_SubscriberDataManagement_Subscribe请求消息中的关键信元参见[表5](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__b142cc7e-01ef-49c7-b51a-a017b9fc327f)。
+向UDM订阅签约数据变更通知。Nudm_SubscriberDataManagement_Subscribe请求消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 nfInstanceId|唯一标识NF实例的字符串。 NF实例ID的格式应为通用唯一标识符，此处为AMF的实例标识。|
 callbackReference|NF服务消费者（此处为AMF）提供的URI，用于接收通知。|
 monitoredResourceUris|一组URI，用于标识触发了变更通知的资源，如标识amData变更后通知AMF。|
 New AMF向UDM注册成功后，UDM向Old AMF发送Nudm_UEContextManagement_DeregistrationNotification
-通知，携带通知原因值。Nudm_UEContextManagement_DeregistrationNotification请求消息中的关键信元参见[表6](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__6524dcb7-03c2-412d-85b2-04dadab272c0)。
+通知，携带通知原因值。Nudm_UEContextManagement_DeregistrationNotification请求消息中的关键信元参见[表6]。
 关键信元|信元解释|示例
 ---|---|---
 accessType|表示用户注册的接入类型，包括：1（0x01），3GPP_Access。2（0x02），Non-3GPP_Access。3（0x03），3GPP_Access and non-3GPP_access。|
@@ -105,7 +105,7 @@ Old AMF调用UDM的服务化接口Nudm_SubscriberDataManagement_Unsubscribe
 （可选）如果Old AMF已与PCF建立关联且没有将PCF ID传递给New AMF，AMF发起策略关联终止过程，参见接入和移动性策略控制
 。
 New AMF向UE发送Registration Accept
-消息，接受UE发起的注册请求。如果New AMF为UE分配了新的5G-GUTI，则需要在本消息中携带。Registration Accept消息中的关键信元参见[表7](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__6b8e10ee-e9dc-4351-8117-43e820c1b8d9)。
+消息，接受UE发起的注册请求。如果New AMF为UE分配了新的5G-GUTI，则需要在本消息中携带。Registration Accept消息中的关键信元参见[表7]。
 关键信元|信元解释|示例
 ---|---|---
 5GS registration result|用于指示注册结果。Bits 1/2/3代表注册接入类型，包括：1（0x01），3GPP access。2（0x02），Non-3GPP access。3（0x03），3GPP access and non-3GPP access。|
@@ -119,18 +119,18 @@ T3512 value|周期性注册定时器T3512。当T3512超时时，根据UE是否�
 ##### AMF重分配流程业务场景 
 在注册流程中，(R)AN侧优先根据5G GUAMI查找目标AMF，其次根据Requested NSSAI查找目标AMF，如果(R)AN无法根据UE在AN消息中携带的5G GUAMI或Requested NSSAI查找到目标AMF，会选择一个缺省的AMF（也称为初始AMF）进行注册流程。因此当初始AMF接收到注册请求时，初始AMF可能需要将注册请求重路由到另一个AMF（因为初始AMF不是为UE服务的合适的AMF），因此要执行AMF重分配流程的注册流程，将UE的NAS消息重路由到目标AMF，由目标AMF继续为UE提供注册服务。 
 ##### AMF重分配流程 
-AMF重分配流程如[图2](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__221d12fd-1334-411e-940f-0dab9e3fd8d8)所示。
+AMF重分配流程如[图2]所示。
 图2  AMF重分配
-[]images/c48f3277d0024b23bb6565804f9b7d52(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
-对应[普通注册流程](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__5e19aad1-bd5e-40a7-be9c-2468065dd73d)的步骤1~3，Initial AMF已经收到Registration Request
-消息。Registration Request消息中的关键信元参见[表8](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__478a118c-94b7-49ea-b735-3c078398fe2c)。
+对应[普通注册流程]的步骤1~3，Initial AMF已经收到Registration Request
+消息。Registration Request消息中的关键信元参见[表8]。
 关键信元|信元解释|示例
 ---|---|---
 registration type|指示请求的注册类型，Bits 3 2 1组合取值代表注册类型，注册类型取值如下：Bits 3 2 10 0 1，初始注册。0 1 0，移动注册更新。0 1 1，周期注册更新。1 0 0，紧急注册。|
 Mobile identity|5GS mobile identity信元用于提供SUCI、5G-GUTI、IMEI、IMEISV或5G-S-TMSI。|
 Requested NSSAI|用于标识一个S-NSSAI集合。|
-（可选）如果需要执行安全流程，则对应[普通注册流程](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__5e19aad1-bd5e-40a7-be9c-2468065dd73d)的步骤4~9。
+（可选）如果需要执行安全流程，则对应[普通注册流程]的步骤4~9。
 （可选）如果Initial AMF需要根据UE签约数据判断是否需要重分配AMF，且Initial AMF没有从Old
 AMF获取到切片签约信息，但需要基于切片签约信息进行AMF切片选择，则： 
 Initial AMF选择一个合适的UDM。 
@@ -139,14 +139,14 @@ Initial AMF调用UDM的服务化接口Nudm_SubscriberDataManagement_Get
 UDM向AMF返回签约切片选择信息，包含签约的一组S-NSSAI。
 （可选）如果Initial AMF已获取到签约的切片信息，则： 
 Initial AMF调用NSSF的服务化接口Nnssf_NSSelection_Get
-进行切片选择。Nnssf_NSSelection_Get请求消息中的关键信元参见[表9](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__7c858130-a099-4fd0-a6b1-98d3481dee4e)。
+进行切片选择。Nnssf_NSSelection_Get请求消息中的关键信元参见[表9]。
 关键信元|信元解释|示例
 ---|---|---
 NF type|NF服务消费者的NF类型，比如AMF。|
 NF ID|NF服务消费者的NF ID。|
 slice-info-request-for-registration|表示在注册过程中向NSSF请求网络切片信息。|
 subscribedNssai|包含签约的S-NSSAI列表和每个S-NSSAI的指示。|
-NSSF向Intial AMF返回Allowed NSSAI及支持这些NSSAI的对应的AMF Set或AMF地址列表。Nnssf_NSSelection_Get响应消息中的关键信元参见[表10](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__81407b9d-26ef-4cf7-b593-ccf9e38d1ce1)。
+NSSF向Intial AMF返回Allowed NSSAI及支持这些NSSAI的对应的AMF Set或AMF地址列表。Nnssf_NSSelection_Get响应消息中的关键信元参见[表10]。
 关键信元|信元解释|示例
 ---|---|---
 allowedNssaiList|如果NSSF收到请求的NSSAI和签约的S-NSSAI，或者对应请求中的“requestmapping”标志为“true”，则该IE应包含NSSF在服务PLMN中授权的允许的S-NSSAI。|
@@ -168,7 +168,7 @@ AMF基于本地策略，分别执行如下操作：
 AMF的服务化接口Namf_Communication_N1MessageNotify将NAS消息传递给Target AMF，通过步骤8在Target
 AMF发送给(R)AN的第一条消息中更新N2端点信息。 
 (7B)：如果AMF基于本地策略决定将NAS消息通过(R)AN路由给Target AMF，则：Initial AMF向(R)AN发送Reroute NAS Request消息并包含NAS消息。(R)AN通过Initial UE Message将NAS消息传递给Target AMF。 
-如果Target AMF已经从Initial AMF获取到UE上下文，则继续执行[普通注册流程](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__5e19aad1-bd5e-40a7-be9c-2468065dd73d)的步骤9，11~21；如果Target AMF没有从Initial AMF获取到UE上下文，则继续执行[普通注册流程](1%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__5e19aad1-bd5e-40a7-be9c-2468065dd73d)的步骤4~21。
+如果Target AMF已经从Initial AMF获取到UE上下文，则继续执行[普通注册流程]的步骤9，11~21；如果Target AMF没有从Initial AMF获取到UE上下文，则继续执行[普通注册流程]的步骤4~21。
 #### 去注册 
 本节包括以下流程： 
 UE发起的去注册流程 
@@ -177,13 +177,13 @@ UE发起的去注册流程
 当UE不需要继续访问网络接受服务、或者UE无权限继续访问网络时，会发生去注册流程。如果是UE主动退出网络，UE会主动发起去注册流程通知网络，不再接入5GS。网络通知UE，它不再具有5GS的访问权限。 
 当UE无权限继续访问网络时，或者因为操作维护原因网络侧需要UE去注册、或者去注册定时器超时，会发生网络侧发起的去注册流程。 
 ##### UE发起的去注册流程 
-UE发起的去注册流程如[图1](2%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__44850683-22ac-4090-89ec-9732a46919b5)所示。
+UE发起的去注册流程如[图1]所示。
 图1  UE发起的去注册
-[]images/UE%E5%8F%91%E8%B5%B7%E7%9A%84%E5%8E%BB%E6%B3%A8%E5%86%8C(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE发送Deregistration Request (UE Originating Deregistration)
 消息给AMF，消息中携带5G-GUTI、Deregistration type、Access Type等信息。Deregistration
-type指示是否关机。Access Type指示是3GPP接入下去注册、非3GPP接入下去注册，或者两种接入方式下都去注册。Deregistration Request (UE Originating Deregistration)消息中的关键信元参见[表1](2%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__009a5122-7eff-49e7-92c8-3f3c69a729d9)。
+type指示是否关机。Access Type指示是3GPP接入下去注册、非3GPP接入下去注册，或者两种接入方式下都去注册。Deregistration Request (UE Originating Deregistration)消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 De-registration type|表示去注册类型。对于UE侧触发的去注册，该信元中的Switch off字段指示本次去注册流程是否由关机触发：Switch off（0x00），Normal de-registration，表示正常去注册。Switch off（0x01），Switch off，表示关机。对于网络侧触发的去注册，该信元中的Re-registration required指示终端是否在去注册后发起注册流程：Re-registration required（0x00）：Re-registration required，去注册后无需发起注册流程。Re-registration required（0x01）：Re-registration not required，去注册后需发起初始注册流程。|
@@ -216,15 +216,15 @@ type指示为关机，则AMF不会向UE发送Deregistration Accept(UE Originatin
 消息。
 AMF通知(R)AN释放N2 UE上下文。 
 ##### 网络侧发起的去注册流程 
-网络侧发起的去注册流程如[图2](2%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__e6160b87-728e-40df-bf98-ef991f757fdd)所示。
+网络侧发起的去注册流程如[图2]所示。
 图2  网络侧发起的去注册
-[]images/%E7%BD%91%E7%BB%9C%E4%BE%A7%E5%8F%91%E8%B5%B7%E7%9A%84%E5%8E%BB%E6%B3%A8%E5%86%8C(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UDM请求删除用户注册管理上下文和PDU会话，则UDM将发送Nudm_UEContextManagement_DeregistrationNotification
 消息给AMF，消息中携带SUPI，Access Type，Removal Reason等信息。
 Access Type指示是3GPP接入下去注册、非3GPP接入下去注册，或者两种接入方式下都去注册。Removal Reason指示销户。 
 如果是UDM触发的去注册，AMF执行去注册流程。AMF发起的去注册过程可以是显式去注册或隐式去注册。Deregistration Request(UE Terminated Deregistration)
-消息中携带的关键信元参见[表2](2%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__e26f8581-55a0-44de-b599-85221be140fa)。
+消息中携带的关键信元参见[表2]。
 对于隐式去注册，AMF不给UE发送Deregistration Request(UE Terminated Deregistration)消息。 
 如果UE处于连接态，AMF使用显式去注册方式，给UE发送Deregistration Request(UE Terminated Deregistration)消息，消息中携带Deregistration type，Access
 Type等信息。Deregistration type指示UE在去注册后是否需要重注册。 
@@ -259,9 +259,9 @@ Forbidden Area：在该区域禁止UE的接入，UE不能发任何消息给网�
 Service Area Restriction：分为Allowed Area和Non Allowed Area。UE在Allowed Area可正常接入网络，在Non Allowed Area可以发起周期性更新、注册请求，但不能发起SR和任何会话相关信令。 
 核心网类型限制：定义了UE是否可以在一个网络下接入5GC。 
 ##### 注册拒绝流程 
-注册拒绝流程如[图1](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__f260b3dd-3414-4fbb-929b-bf5484f0f53d)所示。
+注册拒绝流程如[图1]所示。
 图1  注册拒绝
-[]images/%E7%A7%BB%E5%8A%A8%E6%80%A7%E9%99%90%E5%88%B6%E6%B3%A8%E5%86%8C%E6%8B%92%E7%BB%9D(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE判断需要发起注册流程时，发送Registration Request
 消息。
@@ -273,7 +273,7 @@ AMF处理注册请求消息，包括获取用户信息，安全过程等。
 AMF为了向UDM获取用户签约数据，向UDM发送Nudm_SubscriberDataManagement_Get
 消息。
 UDM向AMF返回Nudm_SubscriberDataManagement_Get
-响应消息，消息中携带ratRestrictions、serviceAreaRestriction等用户签约信息。Nudm_SubscriberDataManagement_Get响应消息中的关键信元参见[表1](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__fa8cfd36-7c2b-4b56-98c3-f69aa393ec8f)。
+响应消息，消息中携带ratRestrictions、serviceAreaRestriction等用户签约信息。Nudm_SubscriberDataManagement_Get响应消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 ratRestrictions|被限制的RAT类型列表。|
@@ -284,9 +284,9 @@ AMF向UE发送Registration Reject
 消息，消息中携带5GMM Cause等信息。如果Core Network type为不允许接入5GC，则5GMM
 Cause值设置为“N1 mode not allowed”。
 ##### 注册流程 
-注册流程如[图2](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__8907661d-5c55-4015-a65e-f1cbee15c2f8)所示。
+注册流程如[图2]所示。
 图2  注册
-[]images/3b0cb4dd567d42b1a9f717a02352d17f(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE判断需要发起注册流程时，发送Registration Request
 消息给NG-RAN。
@@ -298,7 +298,7 @@ AMF处理注册请求消息，包括向Old AMF获取用户信息，向UE获取�
 AMF向UDM发送Nudm_SubscriberDataManagement_Get
 消息，向UDM获取用户签约数据。
 UDM向AMF返回Nudm_SubscriberDataManagement_Get
-响应消息，消息中携带用户签约信息。Nudm_SubscriberDataManagement_Get响应消息中的关键信元参见[表2](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__e37278be-649d-41fc-93ea-861596d55b4a)。
+响应消息，消息中携带用户签约信息。Nudm_SubscriberDataManagement_Get响应消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 ratRestrictions|被限制的RAT类型列表。|
@@ -309,7 +309,7 @@ coreNetworkTypeRestrictions|受限核心网类型列表。|
 AMF向PCF发送Npcf_AMPolicyControl_Create
 消息，获取用户接入和移动性策略。
 PCF向AMF返回Npcf_AMPolicyControl_Create
-响应消息。Npcf_AMPolicyControl_Create响应消息中的关键信元参见[表3](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__3ec6815a-d498-4d46-9bcf-99d4b2eb57a0)。
+响应消息。Npcf_AMPolicyControl_Create响应消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 serviceAreaRestriction|签约业务区限制。|
@@ -317,7 +317,7 @@ AMF根据用户签约数据、PCF提供的Service Area Restrictions数据以及�
 AMF继续处理注册流程，包括更新PDU会话等，直到AMF向UE发送注册接受消息。 
 AMF向UE发送Registration Accept
 消息，消息中携带Service Area List等信息。如果需要向(R)AN发送初始上下文建立请求消息，则在请求消息中携带Mobility
-Restriction List等信息。Registration Accept消息中的关键信元参见[表4](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__745d7f1f-0216-4661-9ff3-2baeb6cf40e8)。Initial Context Setup Request消息中的关键信元参见[表5](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__2727d230-9066-45c3-922f-1401523ae9cf)。
+Restriction List等信息。Registration Accept消息中的关键信元参见[表4]。Initial Context Setup Request消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 Service area list|表示将允许区域的允许跟踪区域列表或不允许区域的禁止跟踪区域列表从网络传输给UE。|
@@ -326,22 +326,22 @@ Service area list|表示将允许区域的允许跟踪区域列表或不允许�
 Mobility Restriction List|定义了后续移动动作的接入限制。其中，NG-RAN提供针对UE的移动性动作的目标信息，例如切换，或者在双连接中的SCG选择或分配合适的RNA。如果NG-RAN收到了移动性限制列表IE，它将覆盖以前接收到的移动性限制信息。|
 继续处理注册流程，直到注册流程结束。 
 ##### 配置更新流程 
-配置更新流程如[图3](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__a4998b02-621d-4c33-bb56-e10a8905be85)所示。
+配置更新流程如[图3]所示。
 图3  配置更新
-[]images/%E7%A7%BB%E5%8A%A8%E6%80%A7%E9%99%90%E5%88%B6%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%96%B0(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 由于用户签约数据改变、PCF提供的UE业务接入限制数据改变、本地策略改变，导致用户移动性限制策略改变，需要把新的用户移动性限制策略通知UE。 
 AMF向UE发送Configuration Update Command
-消息，消息中携带新的Service Area List等信息。Configuration Update Command消息中的关键信元参见[表6](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__0a4d23dc-7001-45bc-bf0b-dad8e38dc4db)。
+消息，消息中携带新的Service Area List等信息。Configuration Update Command消息中的关键信元参见[表6]。
 关键信元|信元解释|示例
 ---|---|---
 Service area list|将允许区域的允许跟踪区域列表或不允许区域的禁止跟踪区域列表从网络传输给UE。|
 UE更新Service Area List信息后，向AMF返回Configuration Update Complete
 消息。
 ##### 业务请求流程 
-业务请求流程如[图4](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__20a96db7-dfb5-42ef-a03c-084251ea4983)所示。
+业务请求流程如[图4]所示。
 图4  业务请求
-[]images/%E7%A7%BB%E5%8A%A8%E6%80%A7%E9%99%90%E5%88%B6%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE判断需要发起业务请求流程，向NG-RAN发送Service Request
 消息。
@@ -349,29 +349,29 @@ NG-RAN收到注册请求消息后，向AMF发送Service Request
 消息。
 AMF处理业务请求消息，包括安全过程、更新PDU会话等。 
 AMF向NG-RAN发送Initial Context Setup Request
-消息，在请求消息中携带Mobility Restriction List等信息。Initial Context Setup Request消息中的关键信元参见[表7](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__3514b8b0-6a07-4c48-bd4b-c27a5a2eb38b)。
+消息，在请求消息中携带Mobility Restriction List等信息。Initial Context Setup Request消息中的关键信元参见[表7]。
 关键信元|信元解释|示例
 ---|---|---
 Mobility Restriction List|定义了后续移动动作的接入限制，其中，NG-RAN提供针对UE的移动性动作的目标信息，例如切换，或者在双连接中的SCG选择或分配合适的RNA。如果NG-RAN收到了移动性限制列表IE，它将覆盖以前接收到的移动性限制信息。该数据结构中Mobility Restriction List只包含如下信息：RAT Restrictions：RAT限制相关信息。RAT Restrictions包含两部分，PLMN Identity和RAT Restriction Information。Forbidden Area Information：Forbidden Area相关信息。Forbidden Area Information包含两部分，PLMN Identity和Forbidden TACs。|
 AMF继续处理业务请求，直到流程结束。 
 ##### 基于N2的局内切换流程 
-基于N2的局内切换流程如[图5](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__e0c28f90-18ca-4278-9a80-753119ec0509)所示。
+基于N2的局内切换流程如[图5]所示。
 图5  基于N2的局内切换
-[]images/%E7%A7%BB%E5%8A%A8%E6%80%A7%E9%99%90%E5%88%B6N2%E5%B1%80%E5%86%85%E5%88%87%E6%8D%A2(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 Source NG-RAN判断需要发起基于N2的切换时，发送Handover Required
 消息。
 AMF处理切换需求消息，确定AMF不需改变。 
 AMF向NG-RAN发送Handover Request
-消息，在请求消息中携带Mobility Restriction List等信息。Handover Request消息中的关键信元参见[表8](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__d05f29c8-58ae-4454-934a-518d34c8c246)。
+消息，在请求消息中携带Mobility Restriction List等信息。Handover Request消息中的关键信元参见[表8]。
 关键信元|信元解释|示例
 ---|---|---
 Mobility Restriction List|定义了后续移动动作的接入限制，其中，NG-RAN提供针对UE的移动性动作的目标信息，例如切换，或者在双连接中的SCG选择或分配合适的RNA。如果NG-RAN收到了移动性限制列表IE，它将覆盖以前接收到的移动性限制信息。该数据结构中Mobility Restriction List只包含如下信息：RAT Restrictions：RAT限制相关信息。RAT Restrictions包含两部分，PLMN Identity和RAT Restriction Information。Forbidden Area Information：Forbidden Area相关信息。Forbidden Area Information包含两部分，PLMN Identity和Forbidden TACs。|
 AMF继续处理切换，直到流程结束。 
 ##### 基于N2的局间或跨RAT切换流程 
-基于N2的局间或跨RAT切换流程如[图6](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__145a73b6-0849-4124-8542-64bb7176de40)所示。
+基于N2的局间或跨RAT切换流程如[图6]所示。
 图6  基于N2的局间或跨RAT切换
-[]images/%E7%A7%BB%E5%8A%A8%E6%80%A7%E9%99%90%E5%88%B6%E5%9F%BA%E4%BA%8EN2%E7%9A%84%E5%B1%80%E9%97%B4%E6%88%96%E8%B7%A8RAT%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 基于N2的跨AMF的切换处理完成或垮RAT切换处理完成，且切换过程中Target AMF在Handover Request消息中不携带Mobility
 Restriction List信息。 
@@ -383,7 +383,7 @@ AMF处理注册请求消息，包括安全过程、获取签约数据、更新PC
 AMF根据用户签约数据、PCF提供的Service Area Restrictions数据以及本地策略，确定UE的移动性限制策略。 
 AMF返回Registration Accept
 消息，消息中携带Service Area List等信息。AMF向NG-RAN发送DNT消息，消息中携带Mobility
-Restriction List和注册接受等信息。DNT消息中的关键信元参见[表9](3%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__245ac083-b93e-459f-81d5-b2fe4793b543)。
+Restriction List和注册接受等信息。DNT消息中的关键信元参见[表9]。
 关键信元|信元解释|示例
 ---|---|---
 Mobility Restriction List|定义了后续移动动作的接入限制，其中，NG-RAN提供针对UE的移动性动作的目标信息，例如切换，或者在双连接中的SCG选择或分配合适的RNA。如果NG-RAN收到了移动性限制列表IE，它将覆盖以前接收到的移动性限制信息。该数据结构中Mobility Restriction List包含如下信息：RAT Restrictions：RAT限制相关信息。RAT Restrictions包含两部分，PLMN Identity和RAT Restriction Information。Forbidden Area Information：Forbidden Area相关信息。Forbidden Area Information包含两部分，PLMN Identity和Forbidden TACs。|
@@ -399,9 +399,9 @@ AMF决定和提供的接入和移动性管理相关参数，包括配置的NSSAI
 当AMF想改变UE的接入和移动性管理相关参数配置时，AMF会发起UE配置更新流程。 
 如果UE配置更新流程要求UE发起注册流程，AMF会显式地向UE做指示。 
 ##### AMF触发的UE配置更新业务流程 
-AMF触发的UE配置更新业务流程如[图1](4%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__228076c9-966b-4a9c-8ec7-2adf2f0cb35e)所示。
+AMF触发的UE配置更新业务流程如[图1]所示。
 图1  AMF触发的UE配置更新
-[]images/UE%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%96%B0-AMF%E8%A7%A6%E5%8F%91%E7%9A%84UE%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%96%B0(%E9%87%8D%E7%94%A81).png)
+
 由于各种原因（例如：UE移动性改变，来自UDM的用户数据更新通知的接收，网络切片配置的改变）或UE需要执行注册过程，AMF确定UE配置更新的必要性。如果UE处于CM-IDLE，则AMF将触发网络触发的业务请求。 
 AMF发送Configuration Update Command
 消息给UE。消息中携带相应的参数，主要包括：5G-GUTI
@@ -411,7 +411,7 @@ Mapping Of Allowed NSSAI, Configured NSSAI for the Serving PLMN, Mapping
 Of Configured NSSAI, rejected S-NSSAIs, NITZ, Mobility Restrictions,
 LADN Information, MICO,Configuration update indication
 等。其中Configuration update indication
-的作用是指示UE是否需要回复ACK或者重新注册。Configuration Update Command消息中的关键信元参见[表1](4%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__0239b7a7-2846-46fe-9a10-e73bdd73828c)。
+的作用是指示UE是否需要回复ACK或者重新注册。Configuration Update Command消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 Configuration update indication|表示与通用UE配置更新流程相关的附加信息，主要包括UE是否需要发起注册请求和是否需要确认命令消息。是否需要发起注册请求取值及含义如下：registration not requested (0x00)：UE不需要发起注册请求流程。registration requested (0x01)：UE需要发起注册请求流程。是否需要确认命令消息取值及含义如下：acknowledgement not requested (0x00)：UE不确认命令消息。acknowledgement requested (0x01)：UE应确认命令消息。|
@@ -430,9 +430,9 @@ NSSAI，而是指示UE在执行注册过程时不提供Access Stratum信令中�
 （可选）在UE进入CM-IDLE状态之后发起注册过程，并且根据从AMF接收的指示在接入层信令中包含5G-GUTI。 如果存在与紧急服务相关联的已建立的PDU会话并且UE已经接收到执行注册过程的指示，则UE将仅在与紧急服务相关联的PDU会话被释放之后才发起注册过程。 
 在UE成功完成所需的注册过程之前，AMF应拒绝来自UE的任何NAS消息（携带用于非紧急PDU会话的PDU会话建立请求）。 
 ##### PCF触发的UE配置更新业务流程 
-PCF触发的UE配置更新业务流程如[图2](4%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__7e2c424a-9af8-4b30-a635-3f0ab817328d)所示。
+PCF触发的UE配置更新业务流程如[图2]所示。
 图2  PCF触发的UE配置更新
-[]images/UE%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%96%B0-PCF%E8%A7%A6%E5%8F%91%E7%9A%84UE%E9%85%8D%E7%BD%AE%E6%9B%B4%E6%96%B0(%E9%87%8D%E7%94%A81).png)
+
 PCF触发UE配置更新： 
 AMF从PCF接收到Npcf_AMPolicyControl_Create
 响应消息（接入和移动性相关信息或UE策略容器（UE接入和PDU会话选择相关信息）或两者皆有）。
@@ -457,13 +457,13 @@ UE发起服务请求的主要目的有：
 激活一个PDU会话的用户面连接。 
 当UE处于CM-IDLE态，网络侧有数据或信令需要向UE发送时，触发该流程。当UE处于CM-CONNECT态时，也可通过该流程，激活指定的某些PDU会话，建立用户面连接，进行数据传输。 
 ##### UE触发业务请求流程 
-UE触发业务请求流程如[图1](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__b2cbd2fb-0e17-496c-acbd-7ed91691fc77)所示。
+UE触发业务请求流程如[图1]所示。
 图1  UE触发业务请求
-[]images/UE%E8%A7%A6%E5%8F%91%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE发送Service Request
 消息给RAN。如果仅用于建立信令连接，则不携带"Uplink data status"字段。如果用于数据连接恢复，则通过"Uplink
-data status"字段指示期望恢复的PDU Session。"PDU Session Status"指示UE侧可用的PDU Session。Service Request消息中的关键信元参见[表1](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__d0bf380d-9f7b-4f5f-bd32-6e3b3a89224b)。
+data status"字段指示期望恢复的PDU Session。"PDU Session Status"指示UE侧可用的PDU Session。Service Request消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 Service type|Service type信元用于明确业务请求流程的目的。0x00：信令触发的业务请求。0x01：上行数据触发的业务请求，消息中携带Uplink data status信元。0x02：寻呼触发的业务请求。|
@@ -472,7 +472,7 @@ RAN侧基于RRC流程中的5G-S-TMSI选择正确的AMF，将Service Request
 消息发送给AMF。
 AMF对业务请求消息进行合法性校验，如果该消息没有完整性保护或消息完整性保护校验失败，则AMF需要发起安全流程。如果业务请求流程仅用于信令连接建立，则后续步骤4~11及步骤15~22跳过。 
 如果Service Request包含"Uplink data status"，AMF调用SMF的服务化接口Nsmf_PDUSession_UpdateSMContext
-请求SMF为对应的PDU会话建立用户面连接。Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表2](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__34489ece-bc23-4483-aa68-1f9d36ef17c5)。
+请求SMF为对应的PDU会话建立用户面连接。Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 UpCnxState|请求激活或去激活PDU会话的用户面连接。SM上下文的UpCnxState属性表示PDU会话的用户面连接状态，取值如下：ACTIVATED：5G-和UPF之间建立N3隧道（上下行分配F-TEID）。DEACTIVATED：5G-和UPF之间没有建立N3隧道。ACTIVATING：正在建立N3隧道（5G-的下行Flow的F-TEID尚未分配）。|
@@ -491,28 +491,28 @@ I-UPF发送PFCP Session Modification Request
 如果I-UPF改变，且Old I-UPF有缓存数据，则Old I-UPF向new I-UPF前传数据。 
 如果I-UPF删除，且Old I-UPF有缓存数据，Old I-UPF向UPF(PSA)前传数据。 
 SMF向AMF发送Nsmf_PDUSession_UpdateSMContext
- Response响应消息，包含N2 SM信息用于通知RAN更新N3隧道信息。Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表3](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__ab473afc-2cf2-4ad9-acac-98cd4b28ffca)。
+ Response响应消息，包含N2 SM信息用于通知RAN更新N3隧道信息。Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 n2SmInfo|N2 SM信息，用于通知RAN更新N3隧道信息。|
-AMF向RAN发送N2 Request消息包含N2 SM信息用于RAN侧更新N3隧道信息。N2 Request消息中的关键信元参见[表4](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__4869605d-ec34-474f-b036-574afc6051e4)。
+AMF向RAN发送N2 Request消息包含N2 SM信息用于RAN侧更新N3隧道信息。N2 Request消息中的关键信元参见[表4]。
 关键信元|信元解释|示例
 ---|---|---
 PDUSessionResourceSetupListSUReq|PDU会话资源建立列表。|
 S-NSSAI|单网络切片标识。|
 pDUSessionAggregate MaximumBitrate|PDU会话聚合最大比特率。|
-RAN与UE交互重建用户面承载，在此过程中，AMF向UE发送的Service Accept消息中的关键信元参见[表5](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__42f83ce7-a56a-4fea-8593-a597fac7bdb5)。
+RAN与UE交互重建用户面承载，在此过程中，AMF向UE发送的Service Accept消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 PDU session reactivation result|PDU会话用户面资源建立的结果。|
-RAN向AMF发送N2 Request Ack消息包含N2 SM信息用于UPF更新N3隧道RAN侧端点信息，N2 Request Ack消息中的关键信元参见[表6](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__95438e15-eaa1-4406-95cb-8fb70ae894ef)。
+RAN向AMF发送N2 Request Ack消息包含N2 SM信息用于UPF更新N3隧道RAN侧端点信息，N2 Request Ack消息中的关键信元参见[表6]。
 关键信元|信元解释|示例
 ---|---|---
 RAN UE NGAP ID|唯一标识NG-RAN节点内NG接口的UE关联。|
 PDU Session ID|用于标识一个UE的PDU会话。|
 AMF调用SMF的服务化接口Nsmf_PDUSession_UpdateSMContext
  Request透传N2
-SM信息。Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表7](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__13fca491-9b83-42f9-9c2d-be4d22ddc0d2)。
+SM信息。Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表7]。
 关键信元|信元解释|示例
 ---|---|---
 n2SmInfo|N2 SM信息，用于恢复用户面相关的N2会话信息。|
@@ -536,29 +536,29 @@ SMF向AMF发送Nsmf_PDUSession_UpdateSMContext
 消息更新N3隧道RAN侧端点信息。如果SMF更新或删除I-UPF，SMF在资源保持定时器超时后向Old I-UPF发送PFCP Session Release Request消息请求释放用户面资源。Old I-UPF向SMF发送PFCP Session Modification Response
 /PFCP Session Release Response消息。
 ##### 网络触发业务请求流程 
-网络触发业务请求流程如[图2](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__6eede584-dd1a-493d-b133-15971f681c9e)所示。
+网络触发业务请求流程如[图2]所示。
 图2  网络触发业务请求
-[]images/%E7%BD%91%E7%BB%9C%E5%8F%91%E8%B5%B7%E7%9A%84%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UPF收到下行数据报文但没有建立N3隧道，UPF本地缓存下行数据报文。 
 UPF向SMF发送N4 Data Notification消息，携带下行数据报文对应的QoS Flow信息。SMF向UPF发送N4
 Data Notification Ack消息。 
 SMF调用AMF的服务化接口Namf_Communication_N1N2MessageTransfer
 携带对应的PDU
-Session ID及N2 SM信息。AMF响应SMF的服务化接口调用请求。Namf_Communication_N1N2MessageTransfer消息中的关键信元参见[表8](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__8a95a25f-cca3-4a7e-85b5-9e866db864ba)。
+Session ID及N2 SM信息。AMF响应SMF的服务化接口调用请求。Namf_Communication_N1N2MessageTransfer消息中的关键信元参见[表8]。
 关键信元|信元解释|示例
 ---|---|---
 AreaofVality|表示提供的N2信息有效的TA列表。|
 根据UE状态不同，AMF进行不同的处理： 
-如果UE处于连接状态，AMF不需要发起寻呼流程，后续流程同[UE触发业务请求流程](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__690ac4d9-2d2c-4e9d-92f4-360da7c3c561)步骤3及步骤12~22。
-如果UE处于空闲态，AMF向UE所在注册区域内的所有gNB发送Paging消息。Paging消息中的关键信元参见[表9](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__8320d7c1-1529-4e17-a4cc-55ca541aec09)。
+如果UE处于连接状态，AMF不需要发起寻呼流程，后续流程同[UE触发业务请求流程]步骤3及步骤12~22。
+如果UE处于空闲态，AMF向UE所在注册区域内的所有gNB发送Paging消息。Paging消息中的关键信元参见[表9]。
 关键信元|信元解释|示例
 ---|---|---
 UE Paging Identity|唯一标识正在发送的消息，所有消息都必须携带该IE。|
 TAI List for Paging|寻呼的TAI列表。|
 AMF启动寻呼流程定时器，如果超时未收到UE响应，AMF向SMF发送Namf_EventExposure_Notify
 消息通知寻呼失败，SMF通知UPF。
-UE收到寻呼请求后，发起业务请求流程，同[UE触发业务请求流程](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__690ac4d9-2d2c-4e9d-92f4-360da7c3c561)。Service Request消息中的关键信元参见[表10](9%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__c183063c-4ceb-428a-b6e4-9777ab9edd84)。
+UE收到寻呼请求后，发起业务请求流程，同[UE触发业务请求流程]。Service Request消息中的关键信元参见[表10]。
 关键信元|信元解释|示例
 ---|---|---
 Service type|Service type信元用于明确业务请求流程的目的。0x00：信令，如果是信令原因触发的业务请求，消息中携带PDU session status信元。0x01：数据，如果是上传数据触发的业务请求，UE有待发送的上行用户数据，消息中携带Uplink data status信元。0x02：移动终呼业务，如果是寻呼请求触发的业务请求，消息中携带mobile terminated services信元。|
@@ -567,12 +567,12 @@ UPF向RAN侧传送下行报文。
 #### AN释放UE上下文 
 业务场景 :当UE长时间不活动时，(R)AN上UE不活动定时器超时后，(R)AN会发起AN Rlease流程节省网络资源，AN Rlease流程可以释放UE逻辑上的NG-AP（NG Application Protocol）信令连接和关联的N3用户面连接，以及(R) AN的RRC信令和资源。但是当NG-AP信令连接因(R)AN或AMF故障而断开时，则AN Release由AMF或(R)AN在本地进行，不使用(R)AN和AMF之间的任何信令。AN Release会导致UE的所有UP连接都被去激活。 
 ##### AN释放UE上下文 
-AN释放UE上下文流程如[图1](10%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__aecd87c2-5ebc-4098-9e69-a711c3865b8a)所示。
+AN释放UE上下文流程如[图1]所示。
 图1  AN释放UE上下文
-[]images/1558059946454(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下。 
 （可选）(R)AN检测到需要释放UE上下文，则发送UE Context Release Request
-消息给AMF，携带释放原因值。UE Context Release Request消息中关键信元参见[表1](10%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__aa56a3bc-794c-49a5-a90a-66ca4dfa0c87)。
+消息给AMF，携带释放原因值。UE Context Release Request消息中关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 AMF UE NGAP ID|在AMF内唯一标识UE在NG接口上的关联。|
@@ -580,7 +580,7 @@ RAN UE NGAP ID|唯一标识(R)AN节点内NG接口的UE关联。|
 Cause|指示NGAP协议特定事件的原因。|
 AMF收到(R)AN的UE Context Release Request
 消息，或者AMF主动释放N2信令连接，则发送UE Context Release Command
-消息给(R)AN。UE Context Release Command消息中关键信元参见[表2](10%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__6f4c711a-3c31-4c39-8ec2-55d32284ca1d)。
+消息给(R)AN。UE Context Release Command消息中关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 AMF UE NGAP ID|在AMF内唯一标识UE在NG接口上的关联。|
@@ -588,13 +588,13 @@ RAN UE NGAP ID|唯一标识(R)AN节点内NG接口的UE关联。|
 Cause|指示NGAP协议特定事件的原因。|
 （可选）若UE和(R)AN间存在RRC连接，则(R)AN通知UE释放RRC连接。 
 (R)AN回复UE Context Release Complete
-给AMF进行响应。UE Context Release Complete消息中关键信元参见[表3](10%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__fead8506-4ba6-4e85-b94b-01dd1be64a6e)。
+给AMF进行响应。UE Context Release Complete消息中关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 AMF UE NGAP ID|在AMF内唯一标识UE在NG接口上的关联。|
 RAN UE NGAP ID|唯一标识(R)AN节点内NG接口的UE关联。|
 （可选）若用户已激活了PDU会话上下文，则AMF发送Nsmf_PDUSession_UpdateSMContext
- Request消息给SMF，携带PDU会话ID、导致AN释放UE上下文的原因。Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表4](10%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__a25b0c23-f48b-40c5-a7fe-d0f1f5ae569e)。
+ Request消息给SMF，携带PDU会话ID、导致AN释放UE上下文的原因。Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表4]。
 关键信元|信元解释|示例
 ---|---|---
 upCnxState|请求激活或去激活PDU会话的用户面连接。SM上下文的upcnxstate属性表示PDU会话的用户面连接状态，取值如下：ACTIVATED：5G-和UPF之间建立N3隧道（上下行分配F-TEID）。DEACTIVATED：5G-和UPF之间没有建立N3隧道。ACTIVATING：正在建立N3隧道（5G-的下行Flow的F-TEID尚未分配）。|
@@ -603,7 +603,7 @@ upCnxState|请求激活或去激活PDU会话的用户面连接。SM上下文的u
 （可选）UPF回复PFCP Session Modification Response
 消息给SMF。
 （可选）SMF回复Nsmf_PDUSession_UpdateSMContext
- Response消息给AMF进行响应。Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元为upCnxState，参见[表4](10%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__a25b0c23-f48b-40c5-a7fe-d0f1f5ae569e)。
+ Response消息给AMF进行响应。Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元为upCnxState，参见[表4]。
 #### 连接态下的UE可达性 
 本节包括以下流程： 
 RRC Inactive Assistance Information的下发 
@@ -618,33 +618,33 @@ Inactive Assistance Information由AMF下发给(R)AN，涉及流程如下：
 业务请求 
 基于Xn接口的切换 
 基于N2接口的切换 
-RRC Inactive Assistance Information下发给(R)AN的流程如[图1](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__2fb3fd97-89d7-4ae8-879b-cc0feadafd01)所示。
+RRC Inactive Assistance Information下发给(R)AN的流程如[图1]所示。
 图1  RRC Inactive Assistance Information下发给(R)AN
-[]images/1557400130560(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 业务请求流程中，AMF通过Initial Context Setup Request
 ，将RRC Inactive Assistance
-Information带给(R)AN。Initial Context Setup Request消息中的关键信元参见[表1](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__adbc532a-acd9-4434-94fb-c623e707a7a5)。
+Information带给(R)AN。Initial Context Setup Request消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 Core Network Assistance Information for Inactive|提供RRC_INACTIVE配置等辅助信息。|
 基于Xn接口的切换流程中，AMF通过Path Switch Request Acknowledge
 ，将RRC Inactive Assistance
-Information带给(R)AN。Path Switch Request Acknowledge消息中的关键信元为Core Network Assistance Information for Inactive，参见[表1](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__adbc532a-acd9-4434-94fb-c623e707a7a5)。
+Information带给(R)AN。Path Switch Request Acknowledge消息中的关键信元为Core Network Assistance Information for Inactive，参见[表1]。
 基于N2接口的切换流程中，AMF通过Handover Request
 ，将RRC Inactive Assistance
-Information带给(R)AN。Handover Request消息中的关键信元为Core Network Assistance Information for Inactive，参见[表1](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__adbc532a-acd9-4434-94fb-c623e707a7a5)。
+Information带给(R)AN。Handover Request消息中的关键信元为Core Network Assistance Information for Inactive，参见[表1]。
 ##### UE可达性通知请求 
-UE可达性通知请求流程如[图2](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__33f47adf-61ca-4531-8765-5b6d6bdcb8e3)所示。
+UE可达性通知请求流程如[图2]所示。
 图2  UE可达性通知请求
-[]images/1557400225143(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 在注册或者签约更新流程中，通过Nudm_UEContextManagement_Registration
 或者Nudm_UEContextManagement_Update
 两个服务操作，UDM将授权进行UE可达性请求的网络功能实体ID，通知给AMF。
 若一个业务相关的实体需要请求UE可达性，则发送请求消息给UDM。 
 UDM设置URRP_AMF标记，并下发Namf_EventExposure_Subscribe
-请求给AMF。Namf_EventExposure_Subscribe消息中的关键信元参见[表2](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__89c02276-21e6-4da2-b61a-810a0a06b7fa)。
+请求给AMF。Namf_EventExposure_Subscribe消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 Type|表示需要上报的AMF事件类型。|
@@ -653,9 +653,9 @@ Type|表示需要上报的AMF事件类型。|
 AMF收到UE可达性请求后，先校验请求UE可达性的网络功能实体是否被授权，再设置URRP_AMF标记。 
 若UE处于连接态，则AMF发起N2 Notification过程，向(R)AN查询UE可达性状态。 
 ##### UE活动通知 
-UE活动通知流程如[图3](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__d312114b-9739-4db2-908d-74f43490dd12)所示。
+UE活动通知流程如[图3]所示。
 图3  UE活动通知
-[]images/1557392477358(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 若AMF发起N2 Notification流程，则(R)AN回复UE Notification。或者UE移动到其他(R)AN，触发其他(R)AN发送Path
 Switch Request
@@ -666,14 +666,14 @@ AMF判断URRP_AMF标记有效，且UDM发起了UE可达性请求，则发送Namf
 给UDM，通知UDM
 UE可达，UDM将该通知转发给真正请求UE可达性状态的NF。
 若UE可达性请求为其他NF发起，则AMF直接发送Namf_EventExposure_Notify
-给NF，通知NF UE可达。Namf_EventExposure_Notify消息中的关键信元参见[表3](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__f44b8d0f-13d4-4015-a575-ea7bd60d7dd4)。
+给NF，通知NF UE可达。Namf_EventExposure_Notify消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 Reachability|UE可达性标识。REACHABLE：表示UE可达。UNREACHABLE：表示UE不可达。REGULATORY_ONLY：表示UE位于不允许区域，仅监管优先业务可访问UE。|
 ##### RRC连接恢复 
-RRC连接恢复流程如[图4](11%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__5e5021ae-aa7e-496b-9e2f-08ca66154547)所示。
+RRC连接恢复流程如[图4]所示。
 图4  RRC连接恢复
-[]images/1557400171869(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 处于RRC Inactive状态的UE，检测到存在上行数据或者信令需要发送，则发送RRC连接建立请求给(R)AN。 
 若当前接入的(R)AN与源(R)AN之间存在Xn接口，则当前接入的(R)AN通过Xn接口，向源(R)AN请求UE上下文。 
@@ -687,9 +687,9 @@ UE需要与外部网络进行业务交互。
 UE在3GPP与非3GPP接入方式中切换。 
 UE从4G PDN连接切换到5G PDU会话。 
 ##### PDU会话建立 
-非漫游PDU会话建立流程如[图1](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__6841e9db-b8fa-4857-8129-d00c6f6b0489)所示。
+非漫游PDU会话建立流程如[图1]所示。
 图1  非漫游PDU会话建立
-[]images/4c0dd2687c7547bca8a1f36262871a91(%E9%87%8D%E7%94%A81).png)
+
 UE向AMF发送NAS消息，该消息中包括：S-NSSAI、DNN、PDU Session ID、Request type、N1 SMF container（PDU Session Establishment Request
 ）等信息。
 关键信元|信元解释|示例
@@ -719,7 +719,7 @@ smContextStatusUri|smContextStatusUri信元用于指示接收短消息SM上下�
 epsInterworkingInd|epsInterworkingInd信元指示PDU会话是否可能移动到EPS，以及EPS互操作过程中是否使用N26接口。|
 SMF向UDM发起会话注册和获取签约信息。 
 签约信息包括：SSC mode、Session AMBR等，UDM返回：Nudm_SDM_Get UE Session Management Subscription Data Response给SMF。 
-Nudm_SDM_Get UE Session Management Subscription Data Response消息中的关键信元参见[表3](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__19411ce3-76ca-4e2c-a912-30481134344e)。
+Nudm_SDM_Get UE Session Management Subscription Data Response消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 singleNssai|singleNssai信元用于指示单个网络切片选择辅助信息。|
@@ -739,7 +739,7 @@ SMF向AMF返回Nsmf_PDUSession_CreateSMContext
 SMF执行PCF选择功能选择一个合适的PCF。 
 SMF发现是创建新PDU会话时，通过NRF来发现选择一个合适的PCF。 
 SMF向PCF发送建立PDU-CAN会话流程。PCF发送Npcf_SMPolicyControl_Create Response给SMF，携带QoS控制策略、计费控制策略、UPF选择策略等信息。 
-Npcf_SMPolicyControl_Create Response消息中的关键信元参见[表4](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__059b86cd-1e8e-4eb4-b0bb-829812c341da)。
+Npcf_SMPolicyControl_Create Response消息中的关键信元参见[表4]。
 关键信元|信元解释|示例
 ---|---|---
 sessRules|sessRules信元用于指示一组会话规则，是会话级QoS规则，用于进行PDU会话粒度的策略控制。|
@@ -755,14 +755,14 @@ SMF根据DNN、DNAI、用户的位置信息等进行UPF选择。
 SMF向PCF发起Session Management Policy Modification（Npcf_SMPolicyControl_Update
 ）消息。
 携带选择的UPF信息，给UE分配的IP地址，获取UPF所需要的控制计费策略。 
-Npcf_SMPolicyControl_Update消息中的关键信元参见[表5](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__e650bd99-3608-4603-ae83-558e05fdd9ab)。
+Npcf_SMPolicyControl_Update消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 repPolicyCtrlReqTriggers|repPolicyCtrlReqTriggers信元表示策略控制触发需要满足的触发器，比如UE_IP_CH表示使用IP地址变更触发的更新。|
 ipv4Address|ipv4Address信元表示用户终端的IPv4地址。|
 SMF向第8步选择的UPF发起PFCP会话建立过程。携带给UPF的各种规则，包括PDR、URR、QER、BAR、FAR。
 SMF向UPF发送PFCP Session Establishment Request
-消息，携带的关键信元参见[表6](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__9c6b9d37-45aa-4ffe-ad26-2d2605444e7b)。
+消息，携带的关键信元参见[表6]。
 关键信元|信元解释|示例
 ---|---|---
 T_FSEID|包含标识会话的控制面网元分配的唯一标识符。指示SMF控制面SEID，提供用户后续信令交互。|T_FSEID|
@@ -786,7 +786,7 @@ QER ID|Create QER|指示PFCP会话配置的QER标识。|
 Gate Status|Create QER|指示数据包是否允许在上行和/或下行方向被允许转发或丢弃。|
 QoS Flow Identifier|Create QER|指示QoS Flow标识。|
 UPF向SMF发送PFCP Session Establishment Response
-响应，携带的关键信元参见[表7](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__ba599ce2-196f-450f-aa82-93fab802f49d)。
+响应，携带的关键信元参见[表7]。
 关键信元|信元解释|示例
 ---|---|---
 Cause|Cause信元指示接受或拒绝相应的请求消息。|
@@ -795,13 +795,13 @@ SMF向AMF发送Namf_Communication_N1N2MessageTransfer
  Request消息请求传递N2资源的请求。
 携带N1 Container和N2 Container，其中N1 Container为SMF回复给UE的PDU会话建立响应，N2 Container为SMF向RAN发起的资源建立请求。 
 Namf_Communication_N1N2MessageTransfer
-Request消息中的关键信元参见[表8](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__8567cf69-ee44-4527-919f-102865517aaa)。
+Request消息中的关键信元参见[表8]。
 关键信元|信元解释|示例
 ---|---|---
 n1MessageContainer|n1MessageContainer信元用于传递N1 message。|
 n2InfoContainer|n2InfoContainer信元用于传递N2 information。|
 完成后AMF向SMF发送Namf_Communication_N1N2MessageTransfer
-  Response消息，消息中的关键信元参见[表9](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__f2bb4a08-e2a8-4fd3-8ab6-8d03f57c0804)。
+  Response消息，消息中的关键信元参见[表9]。
 关键信元|信元解释|示例
 ---|---|---
 Cause|用于提供AMF上N1/N2消息传输处理的结果。|
@@ -811,7 +811,7 @@ AMF向(R)AN发送N2 PDU Session Request（PDU Session Resource Setup Request
 PDU Session Establishment Accept中，携带QoS Rule规则。 
 AN-specific resource setup中，携带QoS Profile、UPF的媒体面隧道端点信息。 
 PDU Session Resource Setup Request
-消息中的关键信元参见[表10](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__f0feec0a-6d39-4d22-bb66-75fe1430fbc5)。
+消息中的关键信元参见[表10]。
 关键信元|信元解释|示例
 ---|---|---
 PDU Session Aggregate Maximum Bit Rate|用于指示会话的AMBR。|
@@ -820,7 +820,7 @@ PDU Session Type|用于指示PDU会话类型。|
 QoS Flow Identifier|用于指示Qos Flow标识。|
 QoS Flow Setup Request List|用于指示业务质量的索引，5QI对应4G的QCI。|
 PDU Session Establishment Accept
-消息中的关键信元参见[表11](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__5fc9b0ce-fa24-4546-af26-04ef22339186)。
+消息中的关键信元参见[表11]。
 关键信元|信元解释|示例
 ---|---|---
 Selected PDU session type|Selected PDU session type信元用于指示PDU会话类型。|
@@ -832,7 +832,7 @@ Session AMBR|Session-AMBR信元用于表示UE建立PDU会话时指示初始签�
 (R)AN和UE之间根据AN-specific resource setup消息建立资源连接。 
 (R)AN向AMF回复N2 PDU Session Request Ack（PDU Session Resource Setup Response
 ）消息，携带(R)AN侧下行媒体面隧道端点信息。
-PDU Session Resource Setup Response消息中的关键信元参见[表12](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__058c0750-94ca-40a8-9d1d-5bb8e039f159)。
+PDU Session Resource Setup Response消息中的关键信元参见[表12]。
 关键信元|信元解释|示例
 ---|---|---
 DL QoS Flow per TNL Information|指示GTP Tunnel信息，包含AN侧的隧道信息，即(R)AN侧IP地址和TEID。|
@@ -841,7 +841,7 @@ AMF向SMF发送Nsmf_PDUSession_UpdateSMContext
 SMF向UPF发起PFCP Session Modification Request
 消息，进行PFCP会话修改流程，协商(R)AN侧下行媒体面隧道信息。
 PFCP Session Modification Request
-消息中的关键信元参见[表13](13%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__4e30bb3c-0202-4b28-8d15-40a34d374ec7)。
+消息中的关键信元参见[表13]。
 关键信元|信元解释|示例
 ---|---|---
 Update FAR|如果需要修改先前为PFCP会话创建的FAR，则该信元应该出现。|如果需要修改先前为PFCP会话创建的FAR，则该信元应该出现。|如果需要修改先前为PFCP会话创建的FAR，则该信元应该出现。
@@ -857,14 +857,14 @@ SMF会话建立完成，向AMF发起Nsmf_PDUSession_SMContextStatusNotify（Nsmf
 #### PDU会话修改 
 业务场景 :在UE能力变更、QoS参数有修改等场景下，UE和网络侧都可以发起PDU会话修改流程。 
 ##### PDU会话修改 
-非漫游PDU会话修改流程如[图1](14%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__97711438-9590-40d4-bbd0-b2c99fb71895)所示。
+非漫游PDU会话修改流程如[图1]所示。
 图1  非漫游PDU会话修改
-[]images/1aef79587e7e4c098e1542c8d58d38ff(%E9%87%8D%E7%94%A81).png)
+
 PDU会话修改流程可能有多种方式触发，包括以下几种。 
 UE发送NAS message消息发起PDU Session Modification Request
 ，用以对UE使用的QoS策略请求更新。
 PDU Session Modification Request
-消息中的关键信元参见[表1](14%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__836c7661-e129-49f4-8686-406fb996e214)。
+消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 Requested QoS rules|Requested QoS rules信元用于指示UE需要修改的QoS规则：Create new QoS rule：增加QoS规则。Delete existing QoS rule：减少QoS规则。Modify existing QoS rule and add packet filters：增加packet filter。Modify existing QoS rule and delete packet filters：删除packet filter。|
@@ -878,7 +878,7 @@ PCF向SMF发送消息，通知SMF发起PCF initiated SM Policy Association Modif
 当(R)AN的资源发生变化时，(R)AN可以通过发送N2 Message消息触发一个会话修改流程。 
 SMF可能会发起SMF initiated SM Policy Association Modification（Npcf_SMPolicyControl_Update
 ）流程，通知订阅事件发生改变。但是如果会话修改流程是由1b或者1d触发，这步会被省略。
-Npcf_SMPolicyControl_Update消息中的关键信元参见[表2](14%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__e51e2141-0e59-4869-b6f8-49cfb3d008af)。
+Npcf_SMPolicyControl_Update消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 repPolicyCtrlReqTriggers|repPolicyCtrlReqTriggers信元用于指示SMF向PCF上报发生的事件。比如：RES_MO_RE表示SMF接收到UE发送的资源修改请求。|
@@ -889,7 +889,7 @@ ueInitResReq|ueInitResReq信元用于指示UE请求特定的QoS处理。|
 AMF可能会向(R)AN发送N2 Session Request（PDU Session Resource Modify Request
 ）消息。
 PDU Session Resource Modify Request
-消息中的关键信元参见[表3](14%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__870ac93a-7847-46b2-8c29-0d3c593c3e1b)。
+消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 qosFlowAddOrModifyRequestList|增加、删除、修改QoS flow场景携带该信元。||增加、删除、修改QoS flow场景携带该信元。
@@ -910,7 +910,7 @@ n2SmInfoType|指示N2 SM Information的类型，比如：PDU_RES_MOD_RSP表示�
 UE发送PDU Session Modification Command
  Ack，通知网络侧UE对会话修改命令的决策结果。
 PDU Session Modification Command
-消息中的关键信元参见[表5](14%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__d302c3aa-bd59-4267-a607-0d195d6bace7)。
+消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 Authorized QoS rules|QoS规则信元用于指示UE使用的一组QoS规则。|
@@ -924,7 +924,7 @@ SMF根据UE对于会话修改的决策信息通过N4 Session Modification Reques
 ）消息通知UPF更新隧道信息，UPF完成后返回N4 Session Modification Response（PFCP Session Modification Response
 ）消息。
 PFCP Session Modification Request
-消息中的关键信元参见[表6](14%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__d5304a15-b132-483e-903a-8618b53536cd)。
+消息中的关键信元参见[表6]。
 关键信元|信元解释|示例
 ---|---|---
 Update FAR|如果需要修改先前为PFCP会话创建的FAR，则该信元应该出现。FAR ID：标识要更新的FAR。Apply Action：指示对数据包适用的动作。Update Forwarding parameters：指示Apply Action为请求转发更新数据包，包含更新的用户面功能需要应用的信息，如gNodeB侧的N3接口地址 。|
@@ -944,14 +944,14 @@ UE不在LADN服务区。
 所有PDU会话的QoS Flow已经释放。 
 当UE与AMF的会话状态不匹配，或者UE的网络切片不可用时。 
 ##### UE发起的释放流程 
-UE发起的释放流程示意图如[图1](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__%E9%9D%9E%E6%BC%AB%E6%B8%B8UE%E5%8F%91%E8%B5%B7%E7%9A%84PDU%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B%E5%9B%BE-ADD08BB7)所示。
+UE发起的释放流程示意图如[图1]所示。
 图1  非漫游UE发起的PDU会话释放流程图
-[]images/%E9%9D%9E%E6%BC%AB%E6%B8%B8UE%E5%8F%91%E8%B5%B7%E7%9A%84PDU%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B%E5%9B%BE(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 当UE不再需要相关业务时，UE发送PDU Session Release Request
 消息请求释放PDU会话。AMF调用SMF的Nsmf_PDUSession_UpdateSMContext
  Request服务透传UE发起的会话释放申请。
-Nsmf_PDUSession_UpdateSMContext消息的关键信元参见[表1](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__a22f2fce-e4a8-43e7-b265-31f7ccaeb7f9)。
+Nsmf_PDUSession_UpdateSMContext消息的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 servingNetwork|servingNetwork信元中包括服务核心网运营商PLMN ID。|
@@ -995,14 +995,14 @@ SMF发起Session Management Policy Termination（Npcf_SMPolicyControl_Delete
 ）流程，通知PCF释放与UE会话相关的所有资源。
 SMF向UDM发起Deregistration/Unsubscription流程，通知UDM释放与UE会话相关的所有资源。 
 ##### AMF发起的会话释放流程 
-AMF发起的会话释放流程示意图如[图2](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__%E9%9D%9E%E6%BC%AB%E6%B8%B8AMF%E5%8F%91%E8%B5%B7%E7%9A%84PDU%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B%E5%9B%BE-ADD0A8A8)所示。
+AMF发起的会话释放流程示意图如[图2]所示。
 图2  非漫游AMF发起的PDU会话释放流程图
-[]images/%E9%9D%9E%E6%BC%AB%E6%B8%B8AMF%E5%8F%91%E8%B5%B7%E7%9A%84PDU%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B%E5%9B%BE(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 AMF调用SMF的Nsmf_PDUSession_ReleaseSMContext
  Request服务发起会话释放请求。
 
-Nsmf_PDUSession_ReleaseSMContext Request关键信元参见[表3](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__383df6c4-d5f8-47c3-a878-a1197baba0aa)。
+Nsmf_PDUSession_ReleaseSMContext Request关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 Cause|Cause信元用于指示SM上下文释放的原因。|
@@ -1017,9 +1017,9 @@ SMF发起Session Management Policy Termination（Npcf_SMPolicyControl_Delete
 ）流程，通知PCF释放与UE会话相关的所有资源。
 SMF向UDM发起Deregistration/Unsubscription流程，通知UDM释放与UE会话相关的所有资源。 
 ##### 网络侧发起的会话释放流程 
-网络侧发起的会话释放流程示意图如[图3](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__%E9%9D%9E%E6%BC%AB%E6%B8%B8%E7%BD%91%E7%BB%9C%E4%BE%A7%E5%8F%91%E8%B5%B7%E7%9A%84PDU%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B%E5%9B%BE-ADD39DDD)所示。
+网络侧发起的会话释放流程示意图如[图3]所示。
 图3  非漫游网络侧发起的PDU会话释放流程图
-[]images/%E9%9D%9E%E6%BC%AB%E6%B8%B8%E7%BD%91%E7%BB%9C%E4%BE%A7%E5%8F%91%E8%B5%B7%E7%9A%84PDU%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B%E5%9B%BE(%E9%87%8D%E7%94%A81).png)
+
 由PCF、UDM或SMF本地策略触发SMF决策发起会话释放流程。 
 SMF释放在会话创建时给UE分配的IP地址，并向UPF发送N4 Session Release Request（PFCP Session Deletion Request
 ）消息，通知用户面释放会话用户面相关的资源。
@@ -1030,7 +1030,7 @@ SMF向AMF发送Namf_Communication_N1N2MessageTransfer
  Request消息，携带N1 Container和N2
 Container，其中N1 Container携带的是需要发送给UE的释放请求，N2 Container携带的是需要发送给(R)AN的资源释放请求。
 Namf_Communication_N1N2MessageTransfer
- Request消息中的关键信元参见[表4](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__7d546ab4-0866-46a9-aa88-99d997075a01)。
+ Request消息中的关键信元参见[表4]。
 关键信元|信元解释|示例
 ---|---|---
 authority|authority信元用于指示AMF的主机名。|
@@ -1039,7 +1039,7 @@ n1MessageContainer|n1MessageContainer信元用于指示发送给UE的N1 SM Conta
 n2SmInfo|n2SmInfo信元用于指示发送给(R)AN的N2 SM Information。传递的消息是PDU SESSION RESOURCE RELEASE COMMAND。|
 AMF回复Namf_Communication_N1N2MessageTransfer
  Response消息。
-AMF通过N2 Resource Release Request消息透传SMF发起的释放(R)AN侧N2资源的请求及释放UE会话的请求。N2 Resource Release Request消息中的关键信元参见[表5](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__c3307619-228d-489c-a207-e1742ffd0f23)。
+AMF通过N2 Resource Release Request消息透传SMF发起的释放(R)AN侧N2资源的请求及释放UE会话的请求。N2 Resource Release Request消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 Cause|Cause信元用于指示会话释放原因。|
@@ -1047,7 +1047,7 @@ Cause|Cause信元用于指示会话释放原因。|
 (R)AN向AMF回复N2 Resource Release Ack。 
 AMF和SMF之间处理更新会话流程。 
 AMF发送Nsmf_PDUSession_UpdateSMContext
- Request消息，携带N2 Container向SMF传递(R)AN回复的N2 Resource Release Ack消息。Nsmf_PDUSession_UpdateSMContext Request（PDU SESSION RESOURCE RELEASE RESPONSE）消息中的关键信元参见[表6](15%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199539__4ffcdc27-a935-44f2-98cd-0998e8e959b1)。
+ Request消息，携带N2 Container向SMF传递(R)AN回复的N2 Resource Release Ack消息。Nsmf_PDUSession_UpdateSMContext Request（PDU SESSION RESOURCE RELEASE RESPONSE）消息中的关键信元参见[表6]。
 关键信元|信元解释|示例
 ---|---|---
 UE location|UE location信元用于指示UE的位置信息。|
@@ -1091,8 +1091,8 @@ PCF发起的QoS Flow释放PCF发起的QoS Flow释放流程是通过PDU Session�
 #### 业务连续性模式 
 ##### 会话和业务的连续性模式类别 
 5G系统支持会话和业务的连续性SSC。
-4G网络提供[SSC Mode1](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__7313310f-26a6-48fa-bcec-c0c3bf362a58)（IP连续性）。在5G网络中，业务场景更加多样，为了满足不同业务对连续性的不同要求，5G网络支持不同类型的SSC
-Mode，在4G网络提供的[SSC Mode1](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__7313310f-26a6-48fa-bcec-c0c3bf362a58)基础上增加了[SSC Mode2](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__6aef3fb6-f41d-4f11-ae9f-283747745ca4)和[SSC Mode3](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__995d0671-a90f-4cd7-85bf-142f32f6ff75)，一个PDU会话的SSC Mode在该会话的生命周期里保持不变。当已有PDU会话的SSC
+4G网络提供[SSC Mode1]（IP连续性）。在5G网络中，业务场景更加多样，为了满足不同业务对连续性的不同要求，5G网络支持不同类型的SSC
+Mode，在4G网络提供的[SSC Mode1]基础上增加了[SSC Mode2]和[SSC Mode3]，一个PDU会话的SSC Mode在该会话的生命周期里保持不变。当已有PDU会话的SSC
 Mode不满足应用要求时，UE会为应用建立新的PDU会话。
 业务连续性模式有三种流程。 
 SSC Mode1提供IP连续性，对于SSC Mode1的PDU会话，网络提供给UE的IP地址与为UE选择的UPF保持不变。 
@@ -1108,9 +1108,9 @@ UDM在Nudm_SDM_Get Response消息中，会返回allowed sscmode=1。
 SMF通过Namf_Communication_N1N2MessageTransfer Request消息发送给AMF，其中PDU
 session establishment accept消息中的Selected SSC mode =1，把选择的sscmode携带给UE。 
 ##### SSC Mode2 
-SSC Mode2情况下，锚点变化流程示意图如[图1](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__fe0ca9b6-2f5c-4459-9e88-6c94d8b48c7c)所示。
+SSC Mode2情况下，锚点变化流程示意图如[图1]所示。
 图1  SSC Mode2会话的锚点变化
-[]images/SSC%20Mode2%E4%BC%9A%E8%AF%9D%E7%9A%84%E9%94%9A%E7%82%B9%E5%8F%98%E5%8C%96(%E9%87%8D%E7%94%A81).png)
+
 当UE位置变化/AF/PCF触发锚点变化时，SMF决策服务的UPF是否发生变化。 
 如果可以应用UL分类器或者Multi-homing，则使用相应的特性功能执行。 
 如果不可以应用UL分类器或者Multi-homing，则执行后续流程。 
@@ -1120,15 +1120,15 @@ SMF发送Namf_Communication_N1N2MessageTransfer
 消息，通过AMF将N1
 Container信息发给UE，包含PDU Session ID及指示需要PDU会话重建到相同的DN。其中包括PDU Session
 Release Command消息。PDU Session Release Command
-消息中的关键信元参见[表1](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__31482005-8693-43d4-bd08-12b19a268be5)。
+消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 5GSM cause|5GSM cause信元用于指示5GSM请求被拒绝的原因。5GSM cause固定值为#Reactivationrequested(0027)。|
-UE从第2步接收到指示需要重建PDU会话到相同DN，UE发起新的PDU会话建立流程，SMF为SSC Mode2重建PDU会话选择新的UPF（如[图1](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__fe0ca9b6-2f5c-4459-9e88-6c94d8b48c7c)所示的UPF2）。
+UE从第2步接收到指示需要重建PDU会话到相同DN，UE发起新的PDU会话建立流程，SMF为SSC Mode2重建PDU会话选择新的UPF（如[图1]所示的UPF2）。
 ##### SSC Mode3 
-SSC Mode3情况下，锚点变化流程示意图如[图2](17%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__3593ce44-5270-446a-8f5b-7bd397c3e1b1)所示。
+SSC Mode3情况下，锚点变化流程示意图如[图2]所示。
 图2  SSC Mode3会话的锚点变化
-[]images/SSC%20Mode3%E4%BC%9A%E8%AF%9D%E7%9A%84%E9%94%9A%E7%82%B9%E5%8F%98%E5%8C%96(%E9%87%8D%E7%94%A81).png)
+
 当UE位置变化/AF/PCF触发锚点变化时，SMF决策服务的UPF是否发生变化。 
 如果可以应用UL分类器或者Multi-homing，则使用相应的特性功能执行。 
 如果不可以应用UL分类器或者Multi-homing，则执行后续流程。 
@@ -1154,9 +1154,9 @@ Session ID。SMF保存新的PDU Session ID，为新的PDU会话选择新的会�
 新的PDU会话建立后，UE将所有新业务关联到新PDU会话的IP地址，也可能提前将现存的业务流从原PDU会话移到新的PDU会话。 
 第3步提供的定时器超时之前（一旦UE统一所有业务使用新的PDU会话或不再需要会话），UE发起原PDU会话释放流程，或定时器超时，SMF发起原PDU会话释放流程。 
 #### PDU会话支持Uplink Classifier 
-PDU会话支持Uplink Classifier的建立流程如[图1](18%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__389824f2-496a-4652-911a-ea99232fed12)所示。
+PDU会话支持Uplink Classifier的建立流程如[图1]所示。
 图1  PDU会话支持Uplink Classifier的建立
-[]images/PDU%E4%BC%9A%E8%AF%9D%E6%94%AF%E6%8C%81Uplink%20Classifier%E7%9A%84%E5%BB%BA%E7%AB%8B(%E9%87%8D%E7%94%A81).png)
+
 UE注册到网络中，建立PDU会话，会话锚点是UPF1。 
 AF向PCF请求影响业务路由。
 PCF向SMF发送Npcf_SMPolicyControl_UpdateNotify
@@ -1166,7 +1166,7 @@ Classifier，UPF2为业务App2数据的锚点，UPF1为业务App1数据的锚点
 SMF向UPF2发送N4 Session Establish Request（PFCP Session Establishment Request
 ）消息，消息中携带PDR、URR、FAR、QER，通知其建立N4会话。
 PFCP Session Establishment
-Request消息中的关键信元参见[表1](18%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__304d9373-c3c9-45a8-9a61-31836f0928a7)。
+Request消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 T_FSEID|指示SMF控制面SEID，提供用户后续信令交互。|
@@ -1177,7 +1177,7 @@ UPF2完成会话建立，向SMF发送N4 Session Establish Response（PFCP Sessio
 TunnelInfo等。
 SMF向UPF3（ULCL UPF）发送N4 Session Establish Request（PFCP Session Establishment Request
 ）消息，消息中携带PDR、URR、FAR、QER，通知其建立N4会话。
-PFCP Session Establishment Request消息中的关键信元参见[表2](18%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__b2b250dd-b3bb-4dce-aab3-886738010777)。
+PFCP Session Establishment Request消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 CP F-SEID|指示SMF控制面SEID，提供用户后续信令交互。|
@@ -1210,9 +1210,9 @@ Downlink data（App1）：DN->UPF1（PSA1）->UPF3（Uplink Classifier）->RAN->
 Uplink data（App2）：UE->RAN->UPF3（Uplink Classifier）->UPF2（PSA2）->DN 
 Downlink data（App2）：DN->UPF2（PSA2）->UPF3（Uplink Classifier）->RAN->UE 
 #### PDU会话支持Multi-homing 
-PDU会话支持Multi-homing的建立流程如[图1](19%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__c0bcfaa5-c5da-4116-9f26-b3107f5dac07)所示。
+PDU会话支持Multi-homing的建立流程如[图1]所示。
 图1  PDU会话支持Multi-homing的建立
-[]images/PDU%E4%BC%9A%E8%AF%9D%E6%94%AF%E6%8C%81Multi-homing%E7%9A%84%E5%BB%BA%E7%AB%8B(%E9%87%8D%E7%94%A81).png)
+
 UE注册到网络中，建立PDU会话，会话锚点是UPF1。 
 AF向PCF请求影响业务路由。
 PCF向SMF发送Npcf_SMPolicyControl_UpdateNotify
@@ -1247,9 +1247,9 @@ Uplink data（App2）：UE->RAN->UPF3（Branching Point）->UPF2（PSA2）->DN
 Downlink data（App2）：DN->UPF2（PSA2）->UPF3（Branching Point）->RAN->UE 
 其中Data（App1）代表经过IP锚点UPF1（PSA1）接入DN的数据；Data（App2）代表经过分支锚点UPF2（PSA2）接入DN的数据，典型的是Local DN的数据。 
 #### 支持Local Area Data Network 
-支持LADN业务流程如[图1](20%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__b9254c65-f014-453f-a5e3-e2fc70b1e27e)所示。
+支持LADN业务流程如[图1]所示。
 图1  支持LADN业务
-[]images/%E6%94%AF%E6%8C%81LAND%E4%B8%9A%E5%8A%A1(%E9%87%8D%E7%94%A81).png)
+
 UE检测需要发起注册流程，发送Registration Request
 消息，经过(R)AN给AMF。
 执行注册接受前的鉴权、PEI检查、向UDM请求签约数据等过程。 
@@ -1267,7 +1267,7 @@ AMF根据步骤5订阅回复消息中的LADN DNN查询本地配置，生成Area 
 消息给AMF，携带最新的UE presence in Area of Inerest和UE位置信息。
 AMF发送Namf_EventExposure_Notify
 消息给SMF，携带(R)AN上报的UE Presence in Area of Interest和UE位置信息。
-Namf_EventExposure_Notify消息中的关键信元参见[表1](20%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#T_1554257199554__04fa83ee-0dfb-454e-882b-78767c126dc5)。
+Namf_EventExposure_Notify消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 areaList|areaList信元用于指示地区信息。|
@@ -1284,13 +1284,13 @@ location|location信元用于指示UE位置信息。|
 基于Xn口的切换，移除I-UPF 
 业务场景 :切换流程用于将UE从一个源NG-RAN节点切换到一个目标NG-RAN节点，切换过程中使用Xn接口。新的无线条件、负载均衡或特定的服务都可能触发切换流程。 
 ##### 基于Xn口的切换，无UPF变化 
-基于Xn口的切换，无I-UPF变化的流程如[图1](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__c2927583-4d71-4db1-984a-1cda3bd4ee61)所示。
+基于Xn口的切换，无I-UPF变化的流程如[图1]所示。
 图1  基于Xn口的切换，无I-UPF变化
-[]images/%E5%88%87%E6%8D%A2-%E5%9F%BA%E4%BA%8EXn%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%8C%E6%97%A0I-UPF%E5%8F%98%E5%8C%96(%E9%87%8D%E7%94%A81).png)
+
 Target NR发送Path Switch Request
 消息给AMF，携带Source AMF UE NGAP ID、UE Location
 Information、UE Security Capabilities、PDU Session To Be Switched in
-Downlink List等信息。Path Switch Request消息中的关键信元参见[表1](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__4e5bfa93-ff3e-45c1-936c-e0cb3e706f49)。
+Downlink List等信息。Path Switch Request消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 User Location Information|用于提供UE的位置信息。|
@@ -1302,7 +1302,7 @@ Session To Be Switched in Downlink List的每一个会话，发送Nsmf_PDUSessio
 SMF根据ueLocation判断UPF可以继续服务于UE，发送PFCP Session
 Modification Request
 消息给UPF，携带Target NR N3隧道信息。PFCP Session Modification
-Request消息中的关键信元参见[表2](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__7e79ec04-aae8-49de-950d-d22a90db9eff)。
+Request消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 Update FAR|用于更新下行PDR关联的FAR。|
@@ -1314,13 +1314,13 @@ AMF收到SMF响应后，回复Path Switch Request Acknowledge
 消息给Target NR，携带AMF UE NGAP ID、RAN UE NGAP ID、Security Context、PDU
 Session To Be Switched in Uplink List等信息。
 ##### 基于Xn口的切换，重选I-UPF 
-基于Xn口的切换，重选I-UPF的流程如[图2](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__edf2ed0f-bdbf-48c8-956d-9bb62d8dc37c)所示。当切换前PDU会话的用户面路径中有I-UPF，此I-UPF就是Source I-UPF。
+基于Xn口的切换，重选I-UPF的流程如[图2]所示。当切换前PDU会话的用户面路径中有I-UPF，此I-UPF就是Source I-UPF。
 图2  基于Xn口的切换，重选I-UPF
-[]images/%E5%9F%BA%E4%BA%8EXn%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%8C%E9%87%8D%E9%80%89I-UPF(%E9%87%8D%E7%94%A81).png)
+
 Target NR发送Path Switch Request
 消息给AMF，携带Source
 AMF UE NGAP ID、UE Location Information、UE Security Capabilities、PDU
-Session To Be Switched in Downlink List等信息。Path Switch Request消息中的关键信元参见[表3](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__89e01821-7324-41cb-b9a4-2c19dd07b15e)。
+Session To Be Switched in Downlink List等信息。Path Switch Request消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 user Location Information|提供UE的位置信息。|
@@ -1333,7 +1333,7 @@ SMF收到Nsmf_PDUSession_UpdateSMContext
  Request后，根据ueLocation检测到用户位置发生变化，调用UPF选择功能重新选择I-UPF，最终选择的I-UPF与原有的I-UPF不同。SMF发送PFCP Session Establishment Request
 消息给新选择的Target
 I-UPF，携带Target NR N3隧道信息以及UPF（PSA）N9隧道信息。PFCP Session Establishment
-Request消息中的关键信元参见[表4](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__caa7b1ff-905b-48b8-8b18-d7888ff7a8d8)。
+Request消息中的关键信元参见[表4]。
 关键信元|信元解释|示例
 ---|---|---
 Create FAR|用于建立下行PDR关联的FAR。|
@@ -1341,7 +1341,7 @@ Target I-UPF回复PFCP Session Establishment
 Response
 消息给SMF，携带Target I-UPF N3隧道信息以及N9隧道信息。
 SMF发送PFCP Session Modification Request
-消息给UPF（PSA），携带Target I-UPF N9隧道信息。PFCP Session Modification Request消息中的关键信元参见[表5](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__fe99ca61-6a44-413a-a75c-49c37e49105b)。
+消息给UPF（PSA），携带Target I-UPF N9隧道信息。PFCP Session Modification Request消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 Update FAR|用于更新下行PDR关联的FAR。|
@@ -1350,7 +1350,7 @@ Response
 消息给SMF，携带UPF（PSA） N9隧道信息。
 SMF回复Nsmf_PDUSession_UpdateSMContext
  Response消息给AMF，携带Target I-UPF N3隧道信息，并启动资源保护定时器。Nsmf_PDUSession_UpdateSMContext
-Response消息中的关键信元参见[表6](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__995741a9-c581-4d29-bd7c-1d7f75105485)。 
+Response消息中的关键信元参见[表6]。 
 关键信元|信元解释|示例
 ---|---|---
 UL NG-U UP TNL Information|用于通知基站Target I-UPF N3隧道信息。|
@@ -1362,13 +1362,13 @@ I-UPF，通知Source I-UPF释放用户上下文。Source I-UPF释放用户上下
 Response给SMF。 
 （可选）Source I-UPF释放用户上下文，回复PFCP Session Release Response给SMF。 
 ##### 基于Xn口的切换，移除I-UPF 
-基于Xn口的切换，移除I-UPF的流程如[图3](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__0b2b601f-0260-4af7-9b7c-c78bccfb836e)所示。
+基于Xn口的切换，移除I-UPF的流程如[图3]所示。
 图3  基于Xn口的切换，移除I-UPF
-[]images/%E5%9F%BA%E4%BA%8EXn%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%8C%E7%A7%BB%E5%87%BAI-UPF(%E9%87%8D%E7%94%A81).png)
+
 Target NR发送Path Switch Request
 消息给AMF，携带Source
 AMF UE NGAP ID、UE Location Information、UE Security Capabilities、PDU
-Session To Be Switched in Downlink List等信息。Path Switch Request消息中的关键信元参见[表7](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__6dec9076-83be-4e2b-ac49-f05554e5434b)。
+Session To Be Switched in Downlink List等信息。Path Switch Request消息中的关键信元参见[表7]。
 关键信元|信元解释|示例
 ---|---|---
 UE Location Information|提供UE的位置信息。|
@@ -1381,7 +1381,7 @@ SMF收到Nsmf_PDUSession_UpdateSMContext
  Request消息后，根据ueLocation检测到用户位置发生改变，调用UPF选择功能重新选择I-UPF，最终选择的I-UPF为UPF（PSA）。SMF发送PFCP Session Modification Request
 消息给UPF（PSA），携带Target
 NR的N3隧道信息。启动定时器，该定时器超时后通知Source I-UPF释放资源。PFCP Session Modification
-Request消息中的关键信元参见[表8](1601430396095%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#z783df6c13b1341b38f6e1f182eb4eb29__2212fdf8-c757-4fca-81ae-4b740cee3ab9)。
+Request消息中的关键信元参见[表8]。
 关键信元|信元解释|示例
 ---|---|---
 Update FAR|用于建立下行PDR关联的FAR。|
@@ -1393,7 +1393,7 @@ SMF回复Nsmf_PDUSession_UpdateSMContext
 AMF收到SMF响应后，回复Path Switch Request Acknowledge
 消息给Target NR，携带AMF UE NGAP ID、RAN UE NGAP ID、Security Context、PDU
 Session To Be Switched in Uplink List等信息。
-SMF发送[PFCP Session Modification](None)消息给UPF（PSA），通知UPF（PSA）释放N9隧道信息。
+SMF发送[PFCP Session Modification]消息给UPF（PSA），通知UPF（PSA）释放N9隧道信息。
 （可选）步骤3启动的定时器超时后，SMF发送PFCP Session Release Request消息给Source
 I-UPF，通知Source I-UPF释放用户上下文。 
 （可选）Source I-UPF释放用户上下文，回复PFCP Session Release Response给SMF。 
@@ -1408,9 +1408,9 @@ I-UPF，通知Source I-UPF释放用户上下文。
 执行阶段：源NG-RAN节点通知UE切换，UE切换后，目标NG-RAN通知目标AMF， 目标AMF通知源AMF，源AMF释放被拒绝切换的会话。目标SMF将目标UPF的信息通知UPF（PSA
 ），完成下行数据通道的切换。切换完成后，一般后续还有跟随有注册流程，释放源UPF和源NG-RAN上面的资源，并释放间接数据转发隧道的资源。 
 ##### 基于N2接口的切换，无I-UPF变化 
-基于N2接口的切换，无I-UPF变化的流程如[图1](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__e3058f9a-ac17-482b-bea7-e066c2a39640)所示。
+基于N2接口的切换，无I-UPF变化的流程如[图1]所示。
 图1  基于N2接口的切换，无I-UPF变化
-[]images/%E5%9F%BA%E4%BA%8EN2%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%8C%E6%97%A0I-UPF%E5%8F%98%E5%8C%96(%E9%87%8D%E7%94%A81).png)
+
  说明： 
 若用户面路径中不存在I-UPF，则UPF指UPF（PSA）。 
 若用户面路径中存在I-UPF，则UPF指I-UPF。 
@@ -1420,7 +1420,7 @@ Source NR检测到用户需要切换到Target NR，发送Handover
 Required
 消息给Source AMF，携带Handover
 Type、Target ID、Source To Target Transparent Container等信息。
-Handover Required消息中的关键信元参见[表1](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__0c188efa-d630-451f-bb29-0e9489d0ecc7)。
+Handover Required消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|表示源侧触发了哪种切换，切换类型包括如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1436,7 +1436,7 @@ AMF。
  Request消息给Target
 AMF，携带SUPI、Handover Type、Target ID以及PDU会话列表、Source To Target Transparent
 Container等信息。
-Namf_Communication_CreateUEContext消息中的关键信元参见[表2](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__6e70d119-e3eb-4f8e-9db9-f323d56aca79)。
+Namf_Communication_CreateUEContext消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 UeContext|表示要创建的单个UeContext资源，包括SUPI、PEI、groupList等。|
@@ -1445,7 +1445,7 @@ sourceToTargetData|包含Source to Target Transparent Container。Source to Targ
 pduSessionList|包含N2SmInformation的列表，其中每个N2SmInformation包含每个PDU会话ID从源RAN接收的HandoverRequired Transfer。|
 Target AMF发送Nsmf_PDUSession_UpdateSMContext
  Request消息给SMF，携带用户位置、Target AMF ID、切换准备状态等信息。
-Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表3](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__d5f0368a-6191-4105-a3f0-816a72a69d21)。
+Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
 hoState|用于请求PDU会话的切换的准备、执行或取消。SM上下文的hoState属性表示PDU会话的切换状态，hoState属性可以取值如下：NONE：PDU会话没有发生切换。PREPARING：正在为PDU会话做切换准备。SMF正在准备目标5G和UPF之间的N3隧道，即为上行流量分配UPF的F-TEID。PREPARED：PDU会话切换已经准备完成。目标5G和UPF之间的N3隧道更新SMF，目标5G为切换执行时下行流量分配的F-TEID。COMPLETED：切换完成（成功）。CANCELLED：表示切换取消。|
@@ -1454,14 +1454,14 @@ targetId|目标RAN的标识。|
 （可选）SMF若检测到用户位置发生变化，则调用UPF选择功能重新选择UPF，本场景中选择的UPF仍旧为切换前的UPF。 
 SMF回复Nsmf_PDUSession_UpdateSMContext
  Response消息给Target AMF，携带PDU会话ID、SM N2 Information。
-Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表4](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__72a6192c-dd53-4fdb-9a90-abd36ed2067f)。
+Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表4]。
 关键信元|信元解释|示例
 ---|---|---
 n2SmInfo|如果需要向AN发送的N2 SM信息，则该信元必须存在。当出现时，该信元将引用N2 SM信息二进制数据。|
 Target AMF下发Handover Request
 消息给Target NR，携带Handover
 Type、SM N2 Information List、UE AMBR、Security Context、UE Security Capabilities。
-Handover Request消息中的关键信元参见[表5](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__ef2e3013-0a26-4fc4-acff-bba9490e4cba)。
+Handover Request消息中的关键信元参见[表5]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|表示源侧触发了哪种切换。切换类型包括如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1473,7 +1473,7 @@ Target NR回复Handover Request Acknowledge
 消息给Target AMF，携带PDU Session Admitted List、Target
 To Source Transparent Container等信息，其中PDU Session Admmitted List包含了PDU会话ID、SM
 N2 Information等信息。
-Handover Request Acknowledge消息中的关键信元参见[表6](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__a482b2ca-9080-4b3e-8e0a-a957e083970b)。
+Handover Request Acknowledge消息中的关键信元参见[表6]。
 关键信元|信元解释|示例
 ---|---|---
 PDU Session Resource Admitted List|PDU会话资源准入列表。|
@@ -1482,7 +1482,7 @@ Handover Request Acknowledge Transfer|NG-RAN通过AMF透传给SMF的Handover Req
 Target to Source Transparent Container|用于通过核心网将无线相关信息从切换目标侧透传给切换源侧。由目标侧RAN节点产生，并发送到源侧RAN节点。|
 Target AMF发送Nsmf_PDUSession_UpdateSMContext
  Request消息给SMF，携带PDU会话ID、SM N2 Information。
-Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表7](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__4f373255-6b1c-4556-a708-f9b34df6cacf)。
+Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表7]。
 关键信元|信元解释|示例
 ---|---|---
 hoState|用于请求PDU会话的切换的准备、执行或取消。SM上下文的hoState属性表示PDU会话的切换状态，hoState属性可以取值如下：NONE：PDU会话没有发生切换。PREPARING：正在为PDU会话做切换准备。SMF正在准备目标5G和UPF之间的N3隧道，即为上行流量分配UPF的F-TEID。PREPARED：PDU会话切换已经准备完成。目标5G和UPF之间的N3隧道更新SMF，目标5G为切换执行时下行流量分配的F-TEID。COMPLETED：切换完成（成功）。CANCELLED：表示切换取消。|
@@ -1490,7 +1490,7 @@ n2SmInfo|如果收到AN发送的N2 SM信息，则该信元应该存在。当出�
 Handover Request Acknowledge Transfer|NG-RAN通过AMF透传给SMF的Handover Request Acknowledge Transfer IE。|
 SMF回复Nsmf_PDUSession_UpdateSMContext
  Response消息给Target AMF。
-Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表8](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__c8644e32-527c-431c-b7cd-43f6d59d8b68)。
+Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表8]。
 关键信元|信元解释|示例
 ---|---|---
 n2SmInfo|如果需要向AN发送N2 SM信息，则该信元必须存在。当出现时，该IE将引用N2 SM信息二进制数据。|
@@ -1498,7 +1498,7 @@ Handover Command Transfer|SMF通过AMF透传给NG-RAN的Handover Command Transfe
 （可选）Target AMF发送Namf_Communication_CreateUEContext
  Response消息给Source
 AMF，携带Target To Source Transparent Container。
-Namf_Communication_CreateUEContext Response消息中的关键信元参见[表9](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__46334dc2-ef56-4711-bd53-8967c23b2c24)。
+Namf_Communication_CreateUEContext Response消息中的关键信元参见[表9]。
 关键信元|信元解释|示例
 ---|---|---
 UeContex|表示要创建的单个UeContext资源。|
@@ -1507,7 +1507,7 @@ pduSessionList|包含N2SmInformation的列表，其中每个N2SmInformation包�
 Source AMF发送Handover Command
 消息给Source NR，携带Target To Source Transparent Container。Source NR收到Handover Command
 消息后，通过空口通知UE向目标小区切换。
-Handover Command消息中的关键信元参见[表10](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__b47873b3-0466-47d6-bc56-bdf3cb53a878)。
+Handover Command消息中的关键信元参见[表10]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|表示源侧触发了哪种切换。切换类型包括如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1522,7 +1522,7 @@ Notify
 消息后，发送Namf_Communication_N2InfoNotify
 消息给Source AMF，通知Source
 AMF用户已经切换成功。
-Handover Notify消息中的关键信元参见[表11](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__29295fec-59cd-409d-8e3a-2a61a49db0f7)。
+Handover Notify消息中的关键信元参见[表11]。
 关键信元|信元解释|示例
 ---|---|---
 User Location Information|用于提供UE的位置信息。|
@@ -1531,7 +1531,7 @@ User Location Information|用于提供UE的位置信息。|
 AMF。
 Target AMF发送Nsmf_PDUSession_UpdateSMContext
  Request消息给SMF，携带PDU会话ID、切换完成指示。
-Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表12](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__e6eb5d8e-1d40-4e47-9dd5-5f3b2cc0e292)。
+Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表12]。
 关键信元|信元解释|示例
 ---|---|---
 hoState|用于请求PDU会话的切换的准备、执行或取消。SM上下文的hoState属性表示PDU会话的切换状态，hoState属性可以取值如下：NONE：PDU会话没有发生切换。PREPARING：正在为PDU会话做切换准备。SMF正在准备目标5G和UPF之间的N3隧道，即为上行流量分配UPF的F-TEID。PREPARED：PDU会话切换已经准备完成。目标5G和UPF之间的N3隧道更新SMF，目标5G为切换执行时下行流量分配的F-TEID。COMPLETED：切换完成（成功）。CANCELLED：表示切换取消。|
@@ -1548,9 +1548,9 @@ Source NR释放用户上下文，回复UE Context Release
 Complete
 消息给Source AMF。
 ##### 基于N2接口的切换，重选I-UPF 
-基于N2接口的切换，重选I-UPF的流程如[图2](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__bf8fd866-855c-4d83-9cbe-82281d8e6aab)所示。
+基于N2接口的切换，重选I-UPF的流程如[图2]所示。
 图2  基于N2接口的切换，重选I-UPF
-[]images/%E5%9F%BA%E4%BA%8EN2%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%8C%E9%87%8D%E9%80%89I-UPF(%E9%87%8D%E7%94%A81).png)
+
  说明： 
 若切换前，用户面路径中不存在I-UPF，则Source I-UPF就是UPF（PSA）。 
 若Source NR与Target NR归属同一个AMF管理，则Target AMF和Source AMF指同一个AMF。 
@@ -1558,7 +1558,7 @@ Complete
 Source NR检测到用户需要切换到Target NR，发送Handover
 Required
 消息给Source AMF，携带Handover Type、Target ID、Source To Target
-Transparent Container等信息。Handover Required消息中的关键信元参见[表13](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__c480ad13-e0ce-4854-a816-4eb0a965f6bc)。
+Transparent Container等信息。Handover Required消息中的关键信元参见[表13]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|该IE表示源侧触发的是哪种切换。切换类型有如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1584,7 +1584,7 @@ SMF回复Nsmf_PDUSession_UpdateSMContext
 Target AMF下发Handover Request
 消息给Target
 NR，携带Handover Type、SM N2 Information List、UE AMBR、Security Context、UE
-Security Capabilities。Handover Request消息中的关键信元参见[表14](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__6fd5dc3f-4bb5-4ad6-8f16-d2b581515fa5)。
+Security Capabilities。Handover Request消息中的关键信元参见[表14]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|该IE表示源侧触发的是哪种切换。切换类型包括如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1592,7 +1592,7 @@ Cause|该IE的目的是为了指示NGAP协议特定事件的原因。|
 Target NR回复Handover Request Acknowledge
 消息给Target AMF，携带PDU Session Admitted List、Target To Source Transparent
 Container等信息，其中PDU Session Admmitted List包含了PDU会话ID、SM N2 Information等信息。
-Handover Request Acknowledge消息中的关键信元参见[表15](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__a5d7b859-206e-4fc0-a155-9f02fddb31fd)。
+Handover Request Acknowledge消息中的关键信元参见[表15]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Request Acknowledge Transfer|NG-RAN通过AMF透传给SMF的Handover Request Acknowledge Transfer IE。|
@@ -1634,9 +1634,9 @@ Complete
 I-UPF，通知Source I-UPF释放PDU会话。 
 （可选）Source I-UPF回复PFCP Session Release Response消息给SMF。 
 ##### 基于N2接口的切换，移除I-UPF 
-基于N2接口的切换，移除I-UPF的流程如[图3](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__3a8f34c5-18fd-4242-96a8-9a764246ecfb)所示。
+基于N2接口的切换，移除I-UPF的流程如[图3]所示。
 图3  基于N2接口的切换，移除I-UPF
-[]images/%E5%9F%BA%E4%BA%8EN2%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2%EF%BC%8C%E7%A7%BB%E5%87%BAI-UPF(%E9%87%8D%E7%94%A81).png)
+
  说明： 
 若Source NR与Target NR归属同一个AMF管理，则Target
 AMF和Source AMF指同一个AMF。 
@@ -1646,7 +1646,7 @@ Required
 消息给Source AMF，携带Handover Type、Target ID、Source To Target
 Transparent Container等信息。
 Handover Required
-消息中的关键信元参见[表16](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__92cb9bf4-f814-46a7-8ed0-1e15c50aff58)。
+消息中的关键信元参见[表16]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|表示源侧触发了哪种切换，切换类型包括如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1662,7 +1662,7 @@ AMF。
  Request消息给Target AMF，携带SUPI、Handover
 Type、Target ID以及PDU会话列表、Source To Target Transparent Container等信息。
 Namf_Communication_CreateUEContext
- Request消息中的关键信元参见[表17](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__ea867272-d49f-4c7f-87c9-cb2354db0cc1)。
+ Request消息中的关键信元参见[表17]。
 关键信元|信元解释|示例
 ---|---|---
 UeContext|表示要创建的单个UeContext资源，包括SUPI、PEI、groupList等。|
@@ -1671,7 +1671,7 @@ sourceToTargetData|包含Source to Target Transparent Container。Source to Targ
 pduSessionList|包含N2SmInformation的列表，其中每个N2SmInformation包含每个PDU会话ID从源RAN接收的HandoverRequired Transfer。|
 Target AMF发送Nsmf_PDUSession_UpdateSMContext
  Request消息给SMF，携带用户位置、Target AMF ID、切换准备状态等信息。
-Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表18](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__9780a524-37bf-4561-87de-a89a4f35c30b)。
+Nsmf_PDUSession_UpdateSMContext消息中的关键信元参见[表18]。
 关键信元|信元解释|示例
 ---|---|---
 hoState|用于请求PDU会话的切换的准备、执行或取消。SM上下文的hoState属性表示PDU会话的切换状态，hoState属性可以取值如下：NONE：PDU会话没有发生切换。PREPARING：正在为PDU会话做切换准备。SMF正在准备目标5G和UPF之间的N3隧道，即为上行流量分配UPF的F-TEID。PREPARED：PDU会话切换已经准备完成。目标5G和UPF之间的N3隧道更新SMF，目标5G为切换执行时下行流量分配的F-TEID。COMPLETED：切换完成（成功）。CANCELLED：表示切换取消。|
@@ -1680,7 +1680,7 @@ targetId|目标RAN的标识。|
 （可选）SMF若检测到用户位置发生变化，则调用UPF选择功能重新选择UPF，本场景中选择的UPF为UPF（PSA）。 
 SMF回复Nsmf_PDUSession_UpdateSMContext
  Response消息给Target AMF，携带SM N2 Information。
-Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表19](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__887e13e6-58ba-4627-a837-699c18860cc7)。
+Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表19]。
 关键信元|信元解释|示例
 ---|---|---
 n2SmInfo|如果需要向AN发送的N2 SM信息，则该信元必须存在。当出现时，该信元将引用N2 SM信息二进制数据。|
@@ -1688,7 +1688,7 @@ Target AMF下发Handover Request
 消息给Target
 NR，携带Handover Type、SM N2 Information List、UE AMBR、Security Context、UE
 Security Capabilities。
-Handover Request消息中的关键信元参见[表20](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__48330ff0-f575-4b0f-8cf3-bb2d75ac2d16)。
+Handover Request消息中的关键信元参见[表20]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|表示源侧触发了哪种切换。切换类型包括如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1699,7 +1699,7 @@ Handover Request Transfer|SMF通过AMF透传给NG-RAN的Handover Request Transfe
 Target NR回复Handover Request Acknowledge
 消息给Target AMF，携带PDU Session Admitted List、Target To Source Transparent
 Container等信息，其中PDU Session Admmitted List包含了PDU会话ID、SM N2 Information等信息。
-Handover Request Acknowledge消息中的关键信元参见[表21](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__701a1f7e-1974-4dff-a15a-8dacbf887047)。
+Handover Request Acknowledge消息中的关键信元参见[表21]。
 关键信元|信元解释|示例
 ---|---|---
 PDU Session Resource Admitted List|PDU会话资源准入列表。|
@@ -1708,7 +1708,7 @@ Handover Request Acknowledge Transfer|NG-RAN通过AMF透传给SMF的Handover Req
 Target to Source Transparent Container|用于通过核心网将无线相关信息从切换目标侧透传给切换源侧。由目标侧RAN节点产生，并发送到源侧RAN节点。|
 Target AMF发送Nsmf_PDUSession_UpdateSMContext
  Request消息给SMF，携带PDU会话ID、SM N2 Information。
-Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表22](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__c0ef16f1-581a-4a5f-9c45-474ea6e87d9d)。
+Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表22]。
 关键信元|信元解释|示例
 ---|---|---
 hoState|用于请求PDU会话的切换的准备、执行或取消。SM上下文的hoState属性表示PDU会话的切换状态，hoState属性可以取值如下：NONE：PDU会话没有发生切换。PREPARING：正在为PDU会话做切换准备。SMF正在准备目标5G和UPF之间的N3隧道，即为上行流量分配UPF的F-TEID。PREPARED：PDU会话切换已经准备完成。目标5G和UPF之间的N3隧道更新SMF，目标5G为切换执行时下行流量分配的F-TEID。COMPLETED：切换完成（成功）。CANCELLED：表示切换取消。|
@@ -1716,14 +1716,14 @@ n2SmInfo|如果收到AN发送的N2 SM信息，则该信元应该存在。当出�
 Handover Request Acknowledge Transfer|NG-RAN通过AMF透传给SMF的Handover Request Acknowledge Transfer IE。|
 SMF回复Nsmf_PDUSession_UpdateSMContext
  Response消息给Target AMF。
-Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表23](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__1c8514cc-7d67-4331-90f9-a620e0beaee6)。
+Nsmf_PDUSession_UpdateSMContext Response消息中的关键信元参见[表23]。
 关键信元|信元解释|示例
 ---|---|---
 n2SmInfo|如果需要向AN发送N2 SM信息，则该信元必须存在。当出现时，该IE将引用N2 SM信息二进制数据。|
 Handover Command Transfer|SMF通过AMF透传给NG-RAN的Handover Command Transfer IE。|
 （可选）Target AMF发送Namf_Communication_CreateUEContext
  Response消息给Source AMF，携带Target To Source Transparent Container。
-Namf_Communication_CreateUEContext Response消息中的关键信元参见[表24](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__692db443-d584-4d20-a1c0-b42fa2e405d3)。
+Namf_Communication_CreateUEContext Response消息中的关键信元参见[表24]。
 关键信元|信元解释|示例
 ---|---|---
 UeContex|表示要创建的单个UeContext资源。|
@@ -1733,7 +1733,7 @@ Source AMF发送Handover Command
 消息给Source
 NR，携带Target To Source Transparent Container。Source NR收到Handover Command
 消息后，通过空口通知UE向目标小区切换。
-Handover Command消息中的关键信元参见[表25](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__7902922e-9129-4ada-b766-f7b7c3f5f569)。
+Handover Command消息中的关键信元参见[表25]。
 关键信元|信元解释|示例
 ---|---|---
 Handover Type|表示源侧触发了哪种切换。切换类型包括如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node|
@@ -1747,7 +1747,7 @@ Notify
 （可选）Target AMF收到Handover Notify
 消息后，发送Namf_Communication_N2InfoNotify
 消息给Source AMF，通知Source AMF用户已经切换成功。
-Handover Notify消息中的关键信元参见[表26](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__08753752-5a70-4531-9f52-dc38737bb4ba)。
+Handover Notify消息中的关键信元参见[表26]。
 关键信元|信元解释|示例
 ---|---|---
 User Location Information|用于提供UE的位置信息。|
@@ -1756,7 +1756,7 @@ User Location Information|用于提供UE的位置信息。|
 AMF。
 Target AMF发送Nsmf_PDUSession_UpdateSMContext
  Request消息给SMF，携带PDU会话ID、切换完成指示。
-Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表27](1601430399446%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#zfc4911990b6b489e9db27da8e64f29b5__efb8e7f7-9bcd-4410-9db3-30511a94996d)。
+Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表27]。
 关键信元|信元解释|示例
 ---|---|---
 hoState|用于请求PDU会话的切换的准备、执行或取消。SM上下文的hoState属性表示PDU会话的切换状态，hoState属性可以取值如下：NONE：PDU会话没有发生切换。PREPARING：正在为PDU会话做切换准备。SMF正在准备目标5G和UPF之间的N3隧道，即为上行流量分配UPF的F-TEID。PREPARED：PDU会话切换已经准备完成。目标5G和UPF之间的N3隧道更新SMF，目标5G为切换执行时下行流量分配的F-TEID。COMPLETED：切换完成（成功）。CANCELLED：表示切换取消。|
@@ -1776,21 +1776,21 @@ Complete
 I-UPF，通知Source I-UPF释放PDU会话。 
 （可选）Source I-UPF回复PFCP Session Release Response消息给SMF。 
 #### 基于N2接口的切换取消 
-基于N2接口的切换取消流程如[图1](1601430090231%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#ze48cfd8f3dd4434fa7d1d9dc602ee12e__6c4253e0-1aa8-4aba-84f3-58d23f67dc55)所示。
+基于N2接口的切换取消流程如[图1]所示。
 图1  基于N2接口的切换取消
-[]images/%E5%9F%BA%E4%BA%8EN2%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%88%87%E6%8D%A2%E5%8F%96%E6%B6%88(%E9%87%8D%E7%94%A81).png)
+
  说明： 
 若Source NR与Target NR归属同一个AMF管理，则Target
 AMF和Source AMF指同一个AMF。 
 流程说明如下： 
 在N2切换过程中，Source NR检测到需要取消切换，发送Handover Cancel
 消息给Source
-AMF，携带切换取消原因。Handover Cancel消息中的关键信元参见[表1](1601430090231%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#ze48cfd8f3dd4434fa7d1d9dc602ee12e__e9d288cf-7a82-4852-8f34-a8645f248233)。
+AMF，携带切换取消原因。Handover Cancel消息中的关键信元参见[表1]。
 关键信元|信元解释|示例
 ---|---|---
 Cause|指示NGAP协议特定事件的原因。|
 （可选）若Target NR归属Target AMF管理，则Source AMF发送Namf_Communication_ReleaseUEContext
- Request消息给Target AMF，通知Target AMF终止切换。Namf_Communication_ReleaseUEContext消息中的关键信元参见[表2](1601430090231%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#ze48cfd8f3dd4434fa7d1d9dc602ee12e__490a073c-8c2e-411f-9f88-f28d38de14a1)。
+ Request消息给Target AMF，通知Target AMF终止切换。Namf_Communication_ReleaseUEContext消息中的关键信元参见[表2]。
 关键信元|信元解释|示例
 ---|---|---
 ngapCause|表示从RAN接收的NGAP原因。|
@@ -1801,7 +1801,7 @@ ngapCause|表示从RAN接收的NGAP原因。|
 消息给Target
 AMF。
 Target AMF发送Nsmf_PDUSession_UpdateSMContext
- Request消息给SMF，携带PDU会话ID、切换取消指示。Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表3](1601430090231%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#ze48cfd8f3dd4434fa7d1d9dc602ee12e__3552d3d0-c0ef-4536-bd68-06cc737ba27c)，
+ Request消息给SMF，携带PDU会话ID、切换取消指示。Nsmf_PDUSession_UpdateSMContext Request消息中的关键信元参见[表3]，
 关键信元|信元解释|示例
 ---|---|---
 hoState|用于请求PDU会话的切换的准备、执行或取消。SM上下文的hoState属性表示PDU会话的切换状态，hoState属性可以取值如下：NONE：PDU会话没有发生切换。PREPARING：正在为PDU会话做切换准备。SMF正在准备目标5G和UPF之间的N3隧道，即为上行流量分配UPF的F-TEID。PREPARED：PDU会话切换已经准备完成。目标5G和UPF之间的N3隧道更新SMF，目标5G为切换执行时下行流量分配的F-TEID。COMPLETED：切换完成（成功）。CANCELLED：表示切换取消。|
@@ -1824,10 +1824,10 @@ Source AMF回复Handover Cancel Acknowledge
 NSA组网：利用4G现网，成本低、周期短，但是4/5G互操作主要发生在4/5G基站之间，操作复杂。 
 SA组网：需要新建5G核心网，成本高、周期长，但是支持eMBB（增强型移动宽带）、uRLLC（超可靠低时延通信）和mMTC（大规模机器通信）等网络切片以及MEC（移动边缘计算），这是5G网络的核心价值。在该组网架构下，4/5G互操作主要发生在4/5G核心网之间。 
 用户在5G SA和4G EPS系统之间移动，相关的流程统称为4/5G互操作。包括4/5G用户接入EPC、4/5G用户接入5GC、基于N26接口的跨系统移动和无N26接口的跨系统移动。其中基于N26接口的跨系统移动包括了空闲态和连接态下，4/5G跨系统的注册更新、切换、TAU、切换取消等流程。 
-系统架构 :3GPP定义的4/5G互操作的系统架构如[图1](7.html#T_1554257199539__ba784754-237e-4108-b270-daa1efca9b92)所示。
+系统架构 :3GPP定义的4/5G互操作的系统架构如[图1]所示。
 图1  4/5G互操作系统架构
-[]images/1604478095511.png)
-4/5G互操作涉及4G和5G网络中的多个网元或NF。为了支持4/5G互操作，保证用户的业务连续性，3GPP定义了4个融合网元，包括：HSS+UDM、PCF+PCRF、SMF+PGW-C和UPF+PGW-U，网元功能参见[表1](7.html#T_1554257199539__b4220265-b351-4254-86c5-6fe618b92f40)。
+
+4/5G互操作涉及4G和5G网络中的多个网元或NF。为了支持4/5G互操作，保证用户的业务连续性，3GPP定义了4个融合网元，包括：HSS+UDM、PCF+PCRF、SMF+PGW-C和UPF+PGW-U，网元功能参见[表1]。
 网元/NF名称|功能
 ---|---
 AMF|EBI管理，包括分配、回收等。支持DNS NAPTR查询 。支持节点选择，包括MME选择、SMF+PGW-C选择。支持N26接口。支持将5G MM上下文转化为4G MM上下文。支持无N26接口下，从4G移动到5G时，通知UDM+HSS用户已经在MME注册。SMC（Security Mode Control，安全模式控制）过程中选择EPS NAS算法。支持N11接口已有信令适配4/5G互操作的改造。
@@ -1837,9 +1837,9 @@ HSS+UDM|管理用户4G和5G签约数据。支持用户同时在MME和AMF注册�
 UPF+PGW-U|维护QFI与EPC数据前转通道的关联关系。支持从QoS Flow到EPC承载的转换。
 PCF+PCRF|通过N7接口为4/5G用户下发4G和5G控制策略。
 #### 4/5G用户接入EPC 
-4/5G用户接入EPC的流程如[图1](1601433782320.html#z5fbcebb0933c4747a57966ad052bcb1c__f72be21d-e840-4f1b-8b5d-bd06bbe95e8b)所示。
+4/5G用户接入EPC的流程如[图1]所示。
 图1  4/5G用户接入EPC
-[]images/%E7%94%A8%E6%88%B7%E6%8E%A5%E5%85%A5EPC.png)
+
  说明： 
 此处仅描述4/5G互操作引入的变化部分，对于EPC通用业务交互，不再赘述。 
 流程说明如下： 
@@ -1857,9 +1857,9 @@ SMF+PGW-C通知UPF+PGW-U建立N4会话，仅仅下发EPC的数据处理策略及
 SMF+PGW-C向MME响应Create Session Response消息，其中，PCO中携带S_NSSAI；若支持with N26互操作，PCO还需携带5G QoS Rules。 
 MME接收到Create Session Response消息，构造NAS信令响应UE的会话建立请求，并将来自SMF+PGW-C的PCO透传给UE。 
 #### 4/5G用户接入5GC 
-4/5G用户接入5GC的流程如[图1](1601433828549.html#zb1ee5d9cb92f4b54a0cf3dbf304c67f6__dc584bee-0b3a-4e09-b90f-372e2ef3f377)所示。
+4/5G用户接入5GC的流程如[图1]所示。
 图1  4/5G用户接入5GC
-[]images/%E7%94%A8%E6%88%B7%E6%8E%A5%E5%85%A55GC.png)
+
  说明： 
 此处仅描述4/5G互操作引入的变化部分，对于5GC通用业务交互，不再赘述。 
 流程说明如下： 
@@ -1898,9 +1898,9 @@ RAN向AMF返回N2 Session Response响应消息。
 连接态下基于N26接口，5G跨系统移动到4G进行切换 
 连接态下基于N26接口，5G跨系统移动到4G，切换取消 
 ##### 空闲态下基于N26接口，4G跨系统移动到5G进行注册更新 
-空闲态下基于N26接口4G到5G注册更新流程如[图1](1601433938753.html#z8af3de5b3bc24b5790dcdd9a148f66d4__db5028b5-1314-4e67-a7c5-ec604a23659e)所示。
+空闲态下基于N26接口4G到5G注册更新流程如[图1]所示。
 图1  空闲态下基于N26接口4G到5G注册更新
-[]images/%E7%A9%BA%E9%97%B2%E6%80%814G%E5%88%B05G%E6%B3%A8%E5%86%8C%E6%9B%B4%E6%96%B0.png)
+
 流程说明如下： 
 UE检测需要发起注册流程（比如从4G覆盖区域进入5G覆盖区域），则发起Registration Request
 给AMF，携带由4G的GUTI映射为5G的GUTI、UE从EPC移入指示（UE Status）、请求的NSSAI（包含全部PDN连接的S-NSSAI）、PDU会话ID列表（包含全部PDN连接的PDU会话ID）、TAU请求（经过4G安全上下文校验处理）、注册类型（Mobility Registration
@@ -1943,9 +1943,9 @@ UE回复Registration Complete
 （可选）当资源保护定时器超时后，MME对于步骤4未迁移到5GC的PDN连接，发送Delete Session Request给SGW，携带OI（Operation
 Indication）标记，通知SGW释放用户信息，本地删除承载信息。 
 ##### 连接态下基于N26接口，4G跨系统移动到5G进行切换 
-连接态下基于N26接口4G跨系统移动到5G流程如[图2](1601433938753.html#z8af3de5b3bc24b5790dcdd9a148f66d4__abf5f3e4-5bc8-49b5-b687-8c9fc685555c)所示。
+连接态下基于N26接口4G跨系统移动到5G流程如[图2]所示。
 图2  连接态下基于N26接口4G跨系统移动到5G
-[]images/%E8%BF%9E%E6%8E%A5%E6%80%814G%E5%88%B05G%E5%88%87%E6%8D%A2.png)
+
 流程说明如下： 
 Source eNodeB检测到UE需要切换到目标NR，则发送Handover Required给Source MME，携带Handover
 Type、Target ID、Source to Target Container。 
@@ -2007,9 +2007,9 @@ SMF+PGW-C构造Nsmf_PDUSession_UpdateSMContext
 （可选）资源保护定时器超时后，MME对于步骤3未迁移到5GC的PDN连接，发送Delete Session Request给SGW，携带OI标记，然后通知Source
 eNodeB以及SGW，删除用户信息，本地删除承载信息。 
 ##### 连接态下基于N26接口，4G跨系统移动到5G，切换取消 
-连接态下基于N26接口4G到5G切换取消流程如[图3](1601433938753.html#z8af3de5b3bc24b5790dcdd9a148f66d4__effa8d39-922b-4bc8-ba9c-bd3e0bc1cb3a)所示。
+连接态下基于N26接口4G到5G切换取消流程如[图3]所示。
 图3  连接态下基于N26接口4G到5G切换取消
-[]images/%E8%BF%9E%E6%8E%A5%E6%80%814G%E5%88%B05G%E5%88%87%E6%8D%A2%E5%8F%96%E6%B6%88.png)
+
 流程说明如下： 
 切换准备阶段，源eNodeB由于某些原因，比如UE重新选择源eNodeB下的小区，发送Handover Cancel给MME，取消切换。 
 MME发送Relocation Cancel Request
@@ -2032,9 +2032,9 @@ Request给SGW。
 （可选）SGW回复Delete Indirect Data Forwarding Tunnel Response。 
 MME回复Handover Cancel Acknowledge。 
 ##### 空闲态下基于N26接口，5G跨系统移动到4G进行TAU切换 
-空闲态下基于N26接口5G跨系统移动到4G进行TAU切换的流程如[图4](1601433938753.html#z8af3de5b3bc24b5790dcdd9a148f66d4__d532e0a5-7771-44b5-af6b-bb6f2c302e16)所示。
+空闲态下基于N26接口5G跨系统移动到4G进行TAU切换的流程如[图4]所示。
 图4  空闲态下基于N26接口5G跨系统移动到4G进行TAU切换
-[]images/1601434302889.png)
+
 流程说明如下： 
 UE检测到需要切换到4G，比如进入4G网络覆盖的小区，则Source eNodeB发送TAU Request消息给Target
 MME，携带5G-GUTI映射的GUTI以及UE从5GC移入指示。 
@@ -2083,9 +2083,9 @@ Request经eNodeB发送给UE。
 UE回复TAU Complete。 
 核心网可以发起专有承载建立过程，若部署了PCC，则由PCF+PCRF触发。 
 ##### 连接态下基于N26接口，5G跨系统移动到4G进行切换 
-连接态下基于N26接口5G跨系统移动到4G进行切换的流程如[图5](1601433938753.html#z8af3de5b3bc24b5790dcdd9a148f66d4__2e2f5603-0fc6-49ad-952a-44e9c2cf9bfc)所示。
+连接态下基于N26接口5G跨系统移动到4G进行切换的流程如[图5]所示。
 图5  连接态下基于N26接口5G跨系统移动到4G进行切换
-[]images/%E8%BF%9E%E6%8E%A5%E6%80%815G%E5%88%B04G%E5%88%87%E6%8D%A2.png)
+
 流程说明如下： 
 Source NR检测到需要切换UE到目标小区，则发送Handover Required
 给Source AMF，携带Handover
@@ -2144,9 +2144,9 @@ UE检测到需要接入方式发生变化，则发起TAU流程，EPC核心网（
 资源保护定时器超时，AMF通过Npcf_AMPolicyControl_Delete
  Request通知PCF+PCRF删除策略会话。若在资源保护定时器未超时前，收到HSS+UDM去注册通知，或者资源保护定时器超时，AMF存在未迁移的PDU会话，则通知SMF释放这些PDU会话，携带原因为“REL_DUE_TO_HO”，SMF无需通知UE和RAN释放资源。
 ##### 连接态下基于N26接口，5G跨系统移动到4G，切换取消 
-连接态下基于N26接口5G到4G切换取消流程如[图6](1601433938753.html#z8af3de5b3bc24b5790dcdd9a148f66d4__1b17b497-2033-4e0f-a2e7-c4d372476317)所示。
+连接态下基于N26接口5G到4G切换取消流程如[图6]所示。
 图6  连接态下基于N26接口5G到4G切换取消
-[]images/%E8%BF%9E%E6%8E%A5%E6%80%815G%E5%88%B04G%E5%88%87%E6%8D%A2%E5%8F%96%E6%B6%88.png)
+
 流程说明如下： 
 由于某些原因，比如UE重新选择到源NR的小区，源NR发送Handover Cancel
 给AMF，通知AMF取消切换。
@@ -2174,9 +2174,9 @@ AMF回复Handover Cancel Acknowledge
 无N26接口的4G跨系统移动到5G 
 无N26接口的5G跨系统移动到4G 
 ##### 无N26接口的4G跨系统移动到5G 
-无N26接口的4G跨系统移动到5G流程如[图1](1601434801194.html#zd6a93300b9d042df965de62c556cd9b6__349bef53-224c-4f3c-9e13-0252bbdfcaa1)所示。
+无N26接口的4G跨系统移动到5G流程如[图1]所示。
 图1  无N26接口的4G跨系统移动到5G
-[]images/4G%E5%88%B05G%E7%A7%BB%E5%8A%A8%E6%80%A7.png)
+
 流程说明如下： 
 UE已经注册到EPS系统，并激活了PDN连接。 
 UE检测到需要切换到5G网络，比如进入5G覆盖区域，则发起Registration Request
@@ -2198,9 +2198,9 @@ UE回复Registration Complete
 针对需要切换的PDU会话，UE触发已存在的PDU会话的激活流程，将4G PDN连接切换为5G PDU会话。AMF进行SMF选择，向SMF转发会话建立请求，携带"Existing PDU Session”指示。 
 针对已切换为PDU会话的PDN连接，SMF+PGW-C向MME触发承载去活过程，但不通知UE。 
 ##### 无N26接口的5G跨系统移动到4G 
-无N26接口的5G跨系统移动到4G流程如[图2](1601434801194.html#zd6a93300b9d042df965de62c556cd9b6__9c4756c9-94c7-4fea-9c2e-4b99e52a2a65)所示。
+无N26接口的5G跨系统移动到4G流程如[图2]所示。
 图2  无N26接口的5G跨系统移动到4G
-[]images/1600398491059.png)
+
 流程说明如下： 
 UE注册到5GC并激活了PDU会话。 
 UE检测到需要切换到4GS，比如进入4G网络覆盖区域，则根据网络指示“支持无N26互操作”，UE发送Attach Request给MME，携带4G GUTI（native GUTI或者mapped GUTI）和UE从5GC移入指示。若存在5G激活的PDU会话，则附着请求中包含PDN连接激活请求，请求类型为“Handover”，并携带包含该PDU会话ID的PCO。
@@ -2215,13 +2215,13 @@ HSS+UDM返回Update Location Acknowledge给MME，携带SMF+PGW-C地址、APN等�
 ### VoNR/EPS Fallback 
 VoNR :##### VoNR注册 
 VoNR注册可分为以下3个流程，3个流程必须按顺序进行。 
-[5G注册及数据DNN的PDU会话建立流程](1607333999903.html#zad8ecd73111d4b4c8f9848c165a171a7__ca889102-bd54-42c9-ac30-f6d0231a637b)
-[IMS DNN的PDU会话建立与P-CSCF发现流程](1607333999903.html#zad8ecd73111d4b4c8f9848c165a171a7__c58dfdd6-44ae-436e-926f-5da547eba0c1)
-[IMS注册流程](1607333999903.html#zad8ecd73111d4b4c8f9848c165a171a7__ac425815-7f66-4829-a104-81baa8ff33b9)
+[5G注册及数据DNN的PDU会话建立流程]
+[IMS DNN的PDU会话建立与P-CSCF发现流程]
+[IMS注册流程]
 ###### 5G注册及数据DNN的PDU会话建立流程 
-5G注册及数据DNN的PDU会话建立流程如[图1](1607333999903.html#zad8ecd73111d4b4c8f9848c165a171a7__a95902fb-ffab-470a-bbdc-0ae9e16d1cf5)所示。
+5G注册及数据DNN的PDU会话建立流程如[图1]所示。
 图1  5G注册及数据DNN的PDU会话建立流程
-[]images/1607333999626.png)
+
 流程说明： 
 UE发送Registration Request
 到(R)AN，消息中包含注册类型、用户标识、UE的5GC能力及可选的Requested NSSAI等参数。另外还包括VoNR关键信元： UE's usage setting。UE's usage setting包括以下两种取值：
@@ -2267,9 +2267,9 @@ New AMF向UE发送Registration Accept
 消息。
 （可选）Vo5G用户先进行数据DNN会话建立过程，其中5QI取8或9，表示数据DNN缺省承载。 
 ###### IMS DNN的PDU会话建立与P-CSCF发现流程 
-IMS DNN的PDU会话建立与P-CSCF发现流程如[图2](1607333999903.html#zad8ecd73111d4b4c8f9848c165a171a7__6f1d33de-7b01-481a-ba8c-f6fb8cfd5942)所示。
+IMS DNN的PDU会话建立与P-CSCF发现流程如[图2]所示。
 图2  IMS DNN的PDU会话建立与P-CSCF发现流程
-[]images/1607333999736.png)
+
 流程说明： 
 UE向AMF发送PDU Session Establishment Request
 消息。消息中包括：S-NSSAI(s)、DNN、PDU Session ID、Request type、N1 SMF container（PDU Session Establishment Request
@@ -2307,9 +2307,9 @@ SMF向AMF回复Nsmf_PDUSession_UpdateSMContext
 （可选）如果UE申请的是IPv6类型的PDU会话，SMF还需要通过UPF向UE发布IPv6路由公告。 
 （可选）如果会话建立在第4步之后失败了，SMF需要向UDM发起去注册和去订阅的流程，UDM返回响应消息。 
 ###### IMS注册流程 
-IMS注册流程如[图3](1607333999903.html#zad8ecd73111d4b4c8f9848c165a171a7__06150180-ce93-4691-8628-a2d906768d8b)所示。
+IMS注册流程如[图3]所示。
 图3  IMS注册流程
-[]images/1607333999846.png)
+
 流程说明： 
 UE向IMS拜访网络入口P-CSCF发送REGISTER消息请求注册。 
 P-CSCF收到REGISTER消息后，解析出用户的PANI（P-Access-Network-Info），识别出5G信息，确认VoNR用户的PANI头域增加了NR相关接入信息如“3GPP-NR”、“3GPP-NR-FDD”或“3GPP-NR-TDD”， 即可使用VoLTE的所有功能。 
@@ -2345,9 +2345,9 @@ AS根据收到的用户数据对用户进行鉴权。鉴权通过后，向S-CSCF
 VoNR语音呼叫主叫流程 
 VoNR语音呼叫被叫流程 
 ###### VoNR语音呼叫主叫流程 
-VoNR语音呼叫主叫流程如[图1](1600310204625.html#T_1554257199539__b2cbd2fb-0e17-496c-acbd-7ed91691fc77)所示。
+VoNR语音呼叫主叫流程如[图1]所示。
 图1  VoNR语音呼叫主叫流程
-[]images/1600310204455.png)
+
 流程说明如下： 
 5G和IMS注册过程。 
 5G注册过程。 
@@ -2389,9 +2389,9 @@ P-CSCF从RAR消息中提取UE位置信息更新到PANI头域中，增加Network-
 AS收到BYE消息后，根据消息中的PANI头域将用户位置信息填写到Finish/Last PANI中，再将BYE消息路由到被叫侧。 
 拆线成功后，被叫侧返回200 OK响应消息，表示主被叫之间的呼叫链路已拆除。 
 ###### VoNR语音呼叫被叫流程 
-VoNR语音呼叫被叫流程如[图2](1600310204625.html#T_1554257199539__6eede584-dd1a-493d-b133-15971f681c9e)所示。
+VoNR语音呼叫被叫流程如[图2]所示。
 图2  VoNR语音呼叫被叫流程
-[]images/1600310204575.png)
+
 流程说明如下： 
 5G注册和IMS注册过程。 
 5G注册过程。 
@@ -2430,15 +2430,15 @@ AS经I/S-CSCF向主叫侧返回183消息。
 挂机释放流程。 
 #### EPS Fallback 
 ##### EPS Fallback注册 
-EPS Fallback注册流程同[VoNR注册](1607333999903.html)。
+EPS Fallback注册流程同[VoNR注册]。
 ##### EPS Fallback语音呼叫 
 本节包括以下流程： 
 EPS Fallback语音呼叫主叫流程 
 EPS Fallback语音呼叫被叫流程 
 ###### EPS Fallback语音呼叫主叫流程 
-EPS Fallback语音呼叫主叫流程如[图1](1600310161033.html#T_1554257199539__6afdc832-f91f-4192-b4a5-decc631909f7)所示。
+EPS Fallback语音呼叫主叫流程如[图1]所示。
 图1  EPS Fallback语音呼叫主叫流程
-[]images/1657675641745.png)流程说明如下：5G注册及IMS注册过程。 
+流程说明如下：5G注册及IMS注册过程。 
 5G注册过程。 
 IMS DNN的PDU会话建立过程(5QI=5)与P-CSCF发现。
 IMS注册过程。 
@@ -2479,9 +2479,9 @@ P-CSCF从RAR消息中提取UE位置信息更新到PANI头域中，增加Network-
 AS收到BYE消息后，根据消息中的PANI头域将用户位置信息填写到Finish/Last PANI中，再将BYE消息路由到被叫侧。 
 拆线成功后，被叫侧返回200 OK响应消息，表示主被叫之间的呼叫链路已拆除。 
 ###### EPS Fallback语音呼叫被叫流程 
-EPS Fallback语音呼叫被叫流程如[图2](1600310161033.html#T_1554257199539__59b80d93-d456-4652-923b-43b9f26dfe1e)所示。
+EPS Fallback语音呼叫被叫流程如[图2]所示。
 图2  EPS Fallback语音呼叫被叫流程
-[]images/1657676959608.png)流程说明如下： 
+流程说明如下： 
 5G注册和IMS注册过程。 
 5G注册过程。 
 IMS DNN的PDU会话建立过程(5QI=5)与P-CSCF发现。 
@@ -2535,9 +2535,9 @@ I-SMF插入的注册更新
 I-SMF删除的注册更新 
 I-SMF不变的注册更新 
 ###### I-SMF更换的注册更新 
-I-SMF更换的注册更新流程如[图1](1600152917702.html#z23668bc9cfea437ab888a2a2145fe920__92b9d1bf-6574-45c9-aed5-0a0e8128628b)所示。
+I-SMF更换的注册更新流程如[图1]所示。
 图1  I-SMF更换的注册更新
-[]images/1603099251443.png)
+
 流程说明： 
 UE发起移动性注册更新流程，向(R)AN发送AN消息，包括AN parameters和Registration Request
 消息。(R)AN将Registration Request
@@ -2582,9 +2582,9 @@ AMF向Target I-SMF发送Nsmf_PDUSession_UpdateSMContext
 （可选）Target I-SMF向Target I-UPF发起转发隧道删除流程。 
 （可选）Source I-SMF向Source I-UPF发起会话释放流程，释放PDU会话相关资源。 
 ###### I-SMF插入的注册更新 
-I-SMF插入的注册更新流程如[图2](1600152917702.html#z23668bc9cfea437ab888a2a2145fe920__914a56a9-1d30-40f0-a50c-431ea7908a58)所示。
+I-SMF插入的注册更新流程如[图2]所示。
 图2  I-SMF插入的注册更新
-[]images/%E4%B8%8B%E8%BD%BD.png)
+
 流程说明： 
 UE发起移动性注册更新流程，向(R)AN发送AN消息包括AN parameters和Registration Request
 消息。(R)AN将Registration Request
@@ -2625,9 +2625,9 @@ AMF向Target I-SMF发送Nsmf_PDUSession_UpdateSMContext
 （可选）Target I-SMF向Target I-UPF发起转发隧道删除流程。 
 （可选）A-SMF向Source I-UPF发起会话释放流程，释放PDU会话相关资源。 
 ###### I-SMF删除的注册更新 
-I-SMF删除的注册更新如[图3](1600152917702.html#z23668bc9cfea437ab888a2a2145fe920__d2f4531e-4b74-49eb-be34-0b5a6a59e03b)所示。
+I-SMF删除的注册更新如[图3]所示。
 图3  I-SMF删除的注册更新
-[]images/1603332688643.png)
+
 流程说明： 
 UE发起移动性注册更新流程，向(R)AN发送AN消息包括AN parameters和Registration Request
 消息。(R)AN将Registration Request
@@ -2663,11 +2663,11 @@ AMF向A-SMF发送Nsmf_PDUSession_UpdateSMContext
 （可选）A-SMF向Target I-UPF发起转发隧道删除流程。 
 （可选）Source I-SMF向Source I-UPF发起N4会话释放流程，释放PDU会话相关资源。 
 ###### I-SMF不变的注册更新 
-I-SMF不变的注册更新流程同普通注册流程。流程说明参见[普通注册流程](1.html#T_1554257199539__5e19aad1-bd5e-40a7-be9c-2468065dd73d)，其中SMF替换成I-SMF。
+I-SMF不变的注册更新流程同普通注册流程。流程说明参见[普通注册流程]，其中SMF替换成I-SMF。
 ##### UE发起的去注册 
-I-SMF侧由UE发起的去注册流程同通用的由UE发起的去注册流程。流程说明参见[UE发起的去注册流程](2.html#T_1554257199539__7b01f714-56cb-4aaf-b051-0b05a498d6ae)。其中SMF替换成I-SMF，UPF替换成I-UPF。
+I-SMF侧由UE发起的去注册流程同通用的由UE发起的去注册流程。流程说明参见[UE发起的去注册流程]。其中SMF替换成I-SMF，UPF替换成I-UPF。
 ##### 网络侧发起的去注册 
-I-SMF侧由网络侧发起的去注册流程同通用的由网络侧发起的去注册流程。流程说明参见[网络侧发起的去注册流程](2.html#T_1554257199539__e908b5af-25a6-4cdf-9949-0354a5126255)。其中SMF替换成I-SMF，UPF替换成I-UPF。
+I-SMF侧由网络侧发起的去注册流程同通用的由网络侧发起的去注册流程。流程说明参见[网络侧发起的去注册流程]。其中SMF替换成I-SMF，UPF替换成I-UPF。
 #### 连接管理 
 ##### AN释放 
 I-SMF侧的AN释放流程同通用的AN释放流程。流程说明参见AN释放UE上下文
@@ -2679,9 +2679,9 @@ I-SMF侧的AN释放流程同通用的AN释放流程。流程说明参见AN释放
 终端发起的业务请求触发I-SMF删除 
 终端发起的业务请求触发I-SMF不变（I-UPF变化） 
 ###### 终端发起的业务请求触发I-SMF更新 
-终端发起的业务请求触发I-SMF更新的业务流程如[图1](1600153330289.html#z402bc721892442e28f0dc830d729f77b__b53c9e74-b250-40ef-a23e-9859985f40e0)所示。
+终端发起的业务请求触发I-SMF更新的业务流程如[图1]所示。
 图1  终端发起的业务请求触发I-SMF更新
-[]images/1603250569169.png)
+
 流程说明如下： 
 UE发起业务请求。 
 
@@ -2751,12 +2751,12 @@ A-SMF返回Nsmf_PDUSession_Update
 
 new I-SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应。
-（可选）[步骤9](1600153330289.html#z402bc721892442e28f0dc830d729f77b__210a1872-c1da-4907-8f6d-7af1df728bea)定时器超时后，new I-SMF与I-UPF交互。
+（可选）[步骤9]定时器超时后，new I-SMF与I-UPF交互。
 new I-SMF向I-UPF发送N4 Session Modification Request
 ，要求删除转发隧道。
 new I-UPF向I-SMF返回N4 Session Modification Response
 ，转发隧道删除响应。
-（可选）[步骤13](1600153330289.html#z402bc721892442e28f0dc830d729f77b__2674e679-31e6-41fb-bdb6-a4c0b2868836)中定时器超时后，old I-SMF和old I-UPF交互。
+（可选）[步骤13]中定时器超时后，old I-SMF和old I-UPF交互。
 old I-SMF向old I-UPF发送N4 Session Release Request（即 PFCP Session Deletion Request
 ）消息，old I-SMF和old I-UPF释放PDU会话相关资源。
  说明： 
@@ -2764,9 +2764,9 @@ old I-SMF向old I-UPF发送N4 Session Release Request（即 PFCP Session Deletio
 old I-UPF向old I-SMF返回N4 Session Release Response（即PFCP Session Deletion Response
 ）消息。
 ###### 终端发起的业务请求触发I-SMF插入 
-终端发起的业务请求触发I-SMF插入流程如[图2](1600153330289.html#z402bc721892442e28f0dc830d729f77b__82f04598-1900-4ff9-a859-da08e6a37e2c)所示。
+终端发起的业务请求触发I-SMF插入流程如[图2]所示。
 图2  终端发起的业务请求触发I-SMF插入
-[]images/2.1%20%20%E7%BB%88%E7%AB%AF%E5%8F%91%E8%B5%B7%E7%9A%84%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82%E8%A7%A6%E5%8F%91I-SMF%E6%8F%92%E5%85%A5.png)
+
 流程说明如下： 
 UE发起业务请求。 
 UE向RAN发送Service Request
@@ -2832,15 +2832,15 @@ A-SMF返回Nsmf_PDUSession_Update
 
 I-SMF向AMF发送Nsmf_PDUSession_UpdateSMContext
  Response响应。
-（可选）[步骤9](1600153330289.html#z402bc721892442e28f0dc830d729f77b__11348994-1007-4fb4-ba83-3e0953ddbb32)中定时器超时后，old I-SMF和old I-UPF交互。
+（可选）[步骤9]中定时器超时后，old I-SMF和old I-UPF交互。
 old I-SMF向old I-UPF发送N4 Session Release Request（即PFCP Session Deletion Request
 ）消息，old I-SMF和old I-UPF释放PDU会话相关资源。
 old I-UPF向old I-SMF返回N4 Session Release Response（即PFCP Session Deletion Response
 ）消息。
 ###### 终端发起的业务请求触发I-SMF删除 
-终端发起的业务请求触发I-SMF删除流程如[图3](1600153330289.html#z402bc721892442e28f0dc830d729f77b__ad5924cd-442b-4a9f-815a-a549258f50c5)所示。
+终端发起的业务请求触发I-SMF删除流程如[图3]所示。
 图3  终端发起的业务请求触发I-SMF删除
-[]images/3%E7%BB%88%E7%AB%AF%E5%8F%91%E8%B5%B7%E7%9A%84%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82%E8%A7%A6%E5%8F%91I-SMF%E5%88%A0%E9%99%A4.png)
+
 流程说明如下： 
 UE发起业务请求。 
 UE向RAN发送Service Request
@@ -2893,18 +2893,18 @@ I-UPF向SMF返回N4 Session Modification Response
 SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应。
 （可选）定时器超时。 
-[步骤9](1600153330289.html#z402bc721892442e28f0dc830d729f77b__3ee8d172-07b6-43cb-a70f-43249193c72e)定时器超时后，SMF向new I-UPF发送N4 Session Modification Request
+[步骤9]定时器超时后，SMF向new I-UPF发送N4 Session Modification Request
 ，请求删除转发隧道。
 old I-UPF向SMF返回N4 Session Modification Response
 。
-[步骤10](1600153330289.html#z402bc721892442e28f0dc830d729f77b__839ca32e-764d-4d6c-8209-adb5644f4a2d)中定时器超时后，I-SMF向old I-UPF发送N4 Session Release Request（即PFCP Session Deletion Request
+[步骤10]中定时器超时后，I-SMF向old I-UPF发送N4 Session Release Request（即PFCP Session Deletion Request
 ）消息，I-SMF和I-UPF释放PDU会话相关资源。
 old I-UPF向I-SMF返回N4 Session Release Response（即PFCP Session Deletion Response
 ）消息。
 ###### 终端发起的业务请求触发I-SMF不变（I-UPF变化） 
-终端发起的业务请求触发I-SMF不变（I-UPF变化）的流程如[图4](1600153330289.html#z402bc721892442e28f0dc830d729f77b__1b0f836f-2953-40db-b06c-17afd1498949)所示。
+终端发起的业务请求触发I-SMF不变（I-UPF变化）的流程如[图4]所示。
 图4  终端发起的业务请求触发I-SMF不变（I-UPF变化）
-[]images/4%E7%BB%88%E7%AB%AF%E5%8F%91%E8%B5%B7%E7%9A%84%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82%E8%A7%A6%E5%8F%91I-SMF%E4%B8%8D%E5%8F%98%EF%BC%88I-UPF%E5%8F%98%E5%8C%96%EF%BC%89.png)
+
 流程说明如下： 
 UE向RAN发送Service Request
 请求，其中携带要激活的PDU会话列表、允许的PDU会话列表、PDU会话状态等信息。
@@ -2945,7 +2945,7 @@ RAN向AMF返回PDU Session Resource Setup Response
 接收到N2 SM信息后，AMF向I-SMF发出Nsmf_PDUSession_UpdateSMContext
 请求消息，其中携带N2 SM信息。
 （可选）A-SMF从I-SMF获取UE位置信息。如果部署了动态PCC，则SMF可以将UE位置信息通知给PCF，并获取更新后的策略。 
-（可选）如果[步骤5](1600153330289.html#z402bc721892442e28f0dc830d729f77b__f03b89f4-b871-4afa-95c5-b2b0bd8925bd)中选择了新的I-UPF，则执行以下流程。
+（可选）如果[步骤5]中选择了新的I-UPF，则执行以下流程。
 SMF向new I-UPF发送N4 Session Modification Request
 消息，以更新AN隧道信息和接受的QFI列表。
 UPF返回N4 Session Modification Response
@@ -2957,15 +2957,15 @@ I-SMF向new I-UPF发送N4 Session Modification Request
 消息以释放转发隧道。
 new I-UPF返回N4 Session Modification Response
 消息。
-（可选）如果[步骤5](1600153330289.html#z402bc721892442e28f0dc830d729f77b__f03b89f4-b871-4afa-95c5-b2b0bd8925bd)中选择了继续使用旧的I-UPF，则执行以下流程。
+（可选）如果[步骤5]中选择了继续使用旧的I-UPF，则执行以下流程。
 I-SMF向old I-UPF发送N4 Session Release Request（即PFCP Session Deletion Request
 ）消息。
 old I-UPF返回N4 Session Release Response（即PFCP Session Deletion Response
 ）消息。
 ##### 网络侧触发业务请求 
-网络发起的业务请求流程如[图1](1600153370282.html#z42da4bb63d4a4dec8193a30e774755c1__c4691b7f-a364-4f20-b07e-bf1342906b3d)所示。
+网络发起的业务请求流程如[图1]所示。
 图1  网络发起的业务请求（带I-SMF）
-[]images/1603960642581.png)
+
 流程说明如下： 
 UE向I-UPF发送PDU会话的下行数据。 
 I-UPF与I-SMF交互。 
@@ -2998,9 +2998,9 @@ SMF通知UPF用户面恢复失败。如果SMF从AMF接收到UE不可及或仅可
 UPF通过在业务请求流程中建立的N3隧道向UE发送缓冲的下行数据。 
 #### 会话管理 
 ##### PDU会话建立 
-UE发起的带I-SMF的会话建立流程如[图1](1600153608623.html#z3dfba7a1890a4d22a005747935fb3732__fcc5bcaf-7732-4ddf-ae37-9506a6548c45)所示。
+UE发起的带I-SMF的会话建立流程如[图1]所示。
 图1  UE发起的带I-SMF的会话建立流程
-[]images/1603962019252.png)
+
 流程说明如下： 
 UE向AMF发送PDU Session Establishment Request
 （NAS）消息，消息中包含：S-NSSAI(s)、DNN、PDU Session ID、Request type、Old PDU Session ID、SM container等信息。
@@ -3011,7 +3011,7 @@ I-SMF收到AMF的会话创建请求消息后，判断是新建PDU会话，并且
  Response消息，消息中包含：Cause，SM Context ID or N1 SM container等信息。Nsmf_PDUSession_CreateSMContext Response消息中携带supportedFeatures指示支持DTSSA（I-SMF）功能。此时尚未与A-SMF交互，无QoS Flow信息，响应消息中不携带N1N2参数。
 I-SMF根据UE位置和S-NSSAI等信息选择I-UPF。 
 I-SMF向I-UPF发起N4会话建立流程，向I-UPF发送N4 Session Establishment Request
-消息，请求分配I-UPF左侧N3端点和右侧N9端点。此时建立N4会话，可以避免PDU会话建立过程中I-UPF收到上下行数据时返回错误提示。如果会话建立失败，则直接执行[第21步](1600153608623.html#z3dfba7a1890a4d22a005747935fb3732__ba350d9c-4378-46c1-b353-fe0c384dbcbb)。
+消息，请求分配I-UPF左侧N3端点和右侧N9端点。此时建立N4会话，可以避免PDU会话建立过程中I-UPF收到上下行数据时返回错误提示。如果会话建立失败，则直接执行[第21步]。
 I-SMF向A-SMF发送Nsmf_PDUSession_Create
  Request消息，消息中携带SUPI、DNN、S-NSSAI、PDU Session ID、Request Type、pgwS8cFteid、ismfId、ismfPduSessionUri、cnTunnelInfo、n1SmInfoFromUe、unknownN1SmInfo、iSmfServiceInstanceId、roamingChargingProfilechargingIdUser location information、Access Type、PEI、GPSI、Subscription For PDU Session Status Notification等信息。
 （可选）如果A-SMF没有获取过签约信息，A-SMF与UDM交互，在UDM上完成会话注册并获取会话签约数据。 
@@ -3047,9 +3047,9 @@ I-SMF向AMF发送Nsmf_PDUSession_UpdateSMContext
 消息（携带SUPI，DNN，PDU会话ID）注销指定的PDU会话。
 ##### PDU会话修改 
 ###### UE发起的PDU会话修改 
-UE发起的带I-SMF的会话修改流程如[图1](1600153625204.html#z6e820de48d294e3d82d247106043fa2e__fc0feb09-a818-4040-a01f-6c50c7d3cf54)所示。
+UE发起的带I-SMF的会话修改流程如[图1]所示。
 图1  UE发起的带I-SMF的会话修改
-[]images/1603964291522.png)
+
 流程说明如下： 
 UE发起会话修改。 
 UE向AMF发送PDU会话修改请求PDU Session Modification Request
@@ -3092,7 +3092,7 @@ UDM发起的带I-SMF的会话修改
 NR发起的带I-SMF的会话修改 
 ####### PCF发起的带I-SMF的会话修改 
 图1  PCF发起的带I-SMF的会话修改
-[]images/2.%20PCF%E5%8F%91%E8%B5%B7%E7%9A%84%E5%B8%A6I-SMF%E7%9A%84%E4%BC%9A%E8%AF%9D%E6%9B%B4%E6%96%B0.png)
+
 流程说明如下： 
 A-SMF收到PCF的Npcf_SMPolicyControl_UpdateNotify
 消息，需要新建或更新QoS Flow。
@@ -3126,7 +3126,7 @@ I-SMF向A-SMF发送Nsmf_PDUSession_Update
  ），通知会话修改结果。
 ####### UDM发起的带I-SMF的会话修改 
 图2  UDM发起的带I-SMF的会话修改
-[]images/3.%20UDM%E5%8F%91%E8%B5%B7%E7%9A%84%E5%B8%A6I-SMF%E7%9A%84%E4%BC%9A%E8%AF%9D%E6%9B%B4%E6%96%B0.png)
+
 流程说明如下： 
 UDM向A-SMF发Nudm_SubscriberDataManagement_Notification
 消息，携带SUPI和会话管理订阅数据。A-SMF更新会话管理订阅数据后向UDM返回Nudm_SubscriberDataManagement_Notification
@@ -3157,7 +3157,7 @@ AMF向I-SMF发送Nsmf_PDUSession_UpdateSMContext
 I-SMF通过向I-UPF发送N4会话修改请求消息（Session Modification Request
 /Session Modification Response
 ），通知I-UPF更新New QoS Flow的上行PDR和下行PDR。
-I-SMF向A-SMF返回[Nsmf_PDUSession_Update](../../Nsmf\topics\9.html) Response消息，该响应消息中携带UE向I-SMF发送的PDU会话修改命令Ack消息。
+I-SMF向A-SMF返回[Nsmf_PDUSession_Update] Response消息，该响应消息中携带UE向I-SMF发送的PDU会话修改命令Ack消息。
 （可选）如果(R)AN带了新的参数，A-SMF通知A-UPF修改N4会话流程（Session Modification Request
 /Session Modification Response
 ）。
@@ -3165,7 +3165,7 @@ I-SMF向A-SMF返回[Nsmf_PDUSession_Update](../../Nsmf\topics\9.html) Response�
  ），通知会话修改结果。
 ####### NR发起的带I-SMF的会话修改 
 图3  NR发起的带I-SMF的会话修改
-[]images/4.%20NR%E5%8F%91%E8%B5%B7%E7%9A%84%E5%B8%A6I-SMF%E7%9A%84%E4%BC%9A%E8%AF%9D%E6%9B%B4%E6%96%B0.png)
+
 步骤说明如下： 
 (R)AN发起会话修改流程。 
 (R)AN向AMF发送会话修改请求（PDU Session Resource Modify Indication
@@ -3204,9 +3204,9 @@ I-SMF向A-SMF返回Nsmf_PDUSession_Update
  Request消息，通知会话修改结果。
 ##### PDU会话释放 
 ###### UE发起的PDU会话释放 
-UE发起的PDU会话释放流程如[图1](1600153671745.html#z56567e633a234f528c4d7aafbd2c4eea__9b39dfc2-fbfd-4ca2-8519-e2f71e41c5f3)所示。
+UE发起的PDU会话释放流程如[图1]所示。
 图1  AMF通过UpdateSMContext通知释放
-[]images/1603960971086.png)
+
 流程说明如下： 
 I-SMF发起请求。 
 I-SMF收到AMF发起Nsmf_PDUSession_UpdateSMContext
@@ -3243,7 +3243,7 @@ I-SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
 UE释放会话流程。 
 AMF向I-SMF发送Nsmf_PDUSession_UpdateSMContext
  Request(包含N1 SM container (PDU Session Release Ack, User Location Information)。
-I-SMF向AMF返回[Nsmf_PDUSession_UpdateSMContext](../../Nsmf\topics\4.html) Response响应。
+I-SMF向AMF返回[Nsmf_PDUSession_UpdateSMContext] Response响应。
 I-SMF向A-SMF返回Nsmf_PDUSession_Update
  Response响应，携带释放结果。
 A-SMF启动SM策略关联终止过程来释放与PCF的SM策略控制关联。 
@@ -3270,7 +3270,7 @@ UDM发起的带I-SMF的会话释放
 RAN发起的带I-SMF的会话释放 
 ####### AMF通过ReleaseSMContext 通知释放 
 图1  AMF通过ReleaseSMContext 通知释放
-[]images/1.2%20AMF%E9%80%9A%E8%BF%87ReleaseSMContext%20%E9%80%9A%E7%9F%A5%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 （可选）AMF在UE或网络发起的去注册过程中发起PDU会话释放。在这种情况下，UE和I-SMF之间没有NAS消息，I-SMF收到AMF发起的Nsmf_PDUSession_ReleaseSMContext
 服务操作。
@@ -3299,7 +3299,7 @@ A-SMF向I-SMF返回Nsmf_PDUSession_Release
  Response响应，并清除本地资源。
 ####### SMF发起的带I-SMF的会话释放 
 图2  SMF发起的带I-SMF的会话释放
-[]images/2.%20SMF%E5%8F%91%E8%B5%B7%E7%9A%84%E5%B8%A6I-SMF%E7%9A%84%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 由于动态命令或本地策略，A-SMF决定需要释放会话。 
 N4会话释放。 
@@ -3330,7 +3330,7 @@ AMF向I-SMF发起Nsmf_PDUSession_UpdateSMContext
 I-SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应。
 UE返回会话释放确认给RAN，RAN携带给AMF。 
-AMF向I-SMF发起[Nsmf_PDUSession_UpdateSMContext](../../Nsmf\topics\4.html) Request请求，携带N2 SM Resource Release Ack , User Location Information。
+AMF向I-SMF发起[Nsmf_PDUSession_UpdateSMContext] Request请求，携带N2 SM Resource Release Ack , User Location Information。
 I-SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应。
 I-SMF向A-SMF发送Nsmf_PDUSession_Update
@@ -3350,7 +3350,7 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### I-SMF主动发起的会话释放 
 图3  I-SMF主动发起的会话释放
-[]images/3%E3%80%81%20I-SMF%E4%B8%BB%E5%8A%A8%E5%8F%91%E8%B5%B7%E7%9A%84%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 I-UPF检测idle态的会话有效性到期或收到A-UPF的error ind指示，上报给I-SMF。 
 I-SMF向A-SMF发送Nsmf_PDUSession_Update
@@ -3382,7 +3382,7 @@ RAN向AMF返回会话释放响应（即PDU Session Resource Release Response
 ）。
 AMF向I-SMF发起Nsmf_PDUSession_UpdateSMContext
  Request请求，携带N2 SM Resource Release Ack , User Location Information。
-I-SMF向AMF返回[Nsmf_PDUSession_UpdateSMContext](../../Nsmf\topics\4.html) Response响应。
+I-SMF向AMF返回[Nsmf_PDUSession_UpdateSMContext] Response响应。
 UE返回会话释放确认给RAN，RAN携带给AMF。 
 AMF向I-SMF发起Nsmf_PDUSession_UpdateSMContext
  Request请求，携带N2 SM Resource Release Ack , User Location Information。
@@ -3405,7 +3405,7 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### PCF发起的带I-SMF的会话释放 
 图4  PCF发起的带I-SMF的会话释放
-[]images/4%E3%80%81PCF%E5%8F%91%E8%B5%B7%E7%9A%84%E5%B8%A6I-SMF%E7%9A%84%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 PCF向A-SMF下发会话释放指示。 
 PCF向A-SMF发送Npcf_SMPolicyControl_UpdateNotify
@@ -3440,7 +3440,7 @@ AMF向I-SMF发起Nsmf_PDUSession_UpdateSMContext
 I-SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应。
 UE返回会话释放确认给RAN，RAN携带给AMF。 
-AMF向I-SMF发起[Nsmf_PDUSession_UpdateSMContext](../../Nsmf\topics\4.html) Request请求，携带N2 SM Resource Release Ack , User Location Information。
+AMF向I-SMF发起[Nsmf_PDUSession_UpdateSMContext] Request请求，携带N2 SM Resource Release Ack , User Location Information。
 I-SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应。
 I-SMF向A-SMF发起Nsmf_PDUSession_Update
@@ -3460,7 +3460,7 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### UDM发起的带I-SMF的会话释放 
 图5  UDM发起的带I-SMF的会话释放
-[]images/5%E3%80%81UDM%E5%8F%91%E8%B5%B7%E7%9A%84%E5%B8%A6I-SMF%E7%9A%84%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 A-SMF收到UDM的签约数据变化通知Nudm_SubscriberDataManagement_Notification
 。
@@ -3513,7 +3513,7 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### RAN发起的带I-SMF的会话释放 
 图6  RAN发起的带I-SMF的会话释放
-[]images/6%E3%80%81%20RAN%E5%8F%91%E8%B5%B7%E7%9A%84%E5%B8%A6I-SMF%E7%9A%84%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 发起请求。 
 RAN向I-SMF发送N2 Message。 
@@ -3577,11 +3577,11 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
 I-SMF不变的Xn切换 
 ###### 插入I-SMF的Xn切换 
 图1  插入I-SMF的Xn切换
-[]images/1.%E6%8F%92%E5%85%A5I-SMF%E7%9A%84Xn%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 源基站与目的基站进行切换准备以及执行过程，Target NG-RAN向AMF发起N2 Path Switch Request
 请求。
-（可选）在N2路径切换请求中接收到的PDU会话列表，对于其中每个被拒绝的PDU会话，AMF都需要发起释放操作，携带以下参数：failedToBeSwitched、Path Switch Request Setup Failed Transfer ，同[RAN发起的带I-SMF的会话释放](1600153682248.html#z15e0fa4b895845bca5cf01ee10dff1fc__ae41ac37-3d98-4cf0-8395-7d6af5d5b62d)。
+（可选）在N2路径切换请求中接收到的PDU会话列表，对于其中每个被拒绝的PDU会话，AMF都需要发起释放操作，携带以下参数：failedToBeSwitched、Path Switch Request Setup Failed Transfer ，同[RAN发起的带I-SMF的会话释放]。
 AMF选择I-SMF。 
 如果根据SMF的服务区信息，发现新的位置无法服务，则AMF选择I-SMF插入会话。 
 如果选择了新的I-SMF，则AMF发送Nsmf_PDUSession_CreateSMContext
@@ -3612,11 +3612,11 @@ Target NG- RAN 向Source NG-RAN发起资源释放请求。
 后续流程同现有处理。 
 ###### 更换I-SMF的Xn切换 
 图2  更换I-SMF的Xn切换
-[]images/2.%20%E6%9B%B4%E6%8D%A2I-SMF%E7%9A%84Xn%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE通过Source NG-RAN与Target NG-RAN间的Xn接口切换到Target NG-RAN下，TargetNG-RAN发送N2 Path Switch Request
 消息给AMF，携带需要切换的PDU会话列表、用户位置信息。
-（可选）在N2路径切换请求中接收到的PDU会话列表，对于其中每个被拒绝的PDU会话，AMF都需要发起释放操作，携带以下参数：failedToBeSwitched、Path Switch Request Setup Failed Transfer ，同[RAN发起的带I-SMF的会话释放](1600153682248.html#z15e0fa4b895845bca5cf01ee10dff1fc__ae41ac37-3d98-4cf0-8395-7d6af5d5b62d)。
+（可选）在N2路径切换请求中接收到的PDU会话列表，对于其中每个被拒绝的PDU会话，AMF都需要发起释放操作，携带以下参数：failedToBeSwitched、Path Switch Request Setup Failed Transfer ，同[RAN发起的带I-SMF的会话释放]。
 AMF选择I-SMF。 
 如果根据用户TA服务区信息，发现老的I-SMF无法继续服务，则选择新的I-SMF。 
 如果选择了新的I-SMF，则AMF发送Nsmf_PDUSession_CreateSMContext
@@ -3647,16 +3647,16 @@ AMF给基站发送 N2 Path Switch Request Acknowledge
 AMF将Nsmf_PDUSession_ReleaseSMContext
  Request请求（包含I-SMF only indication）发送到旧I-SMF以释放旧I-SMF中的资源。I-SMF only indication指示旧I-SMF不去释放A-SMF的资源。
 N4会话释放。 
-Old I-SMF向AMF返回[Nsmf_PDUSession_ReleaseSMContext](../../Nsmf\topics\5.html) Response响应。
+Old I-SMF向AMF返回[Nsmf_PDUSession_ReleaseSMContext] Response响应。
 TARGET RAN 向Source RAN发起资源释放请求。 
 后续流程同现有处理。 
 ###### 删除I-SMF的Xn切换 
 图3  删除I-SMF的Xn切换
-[]images/3.%20%E5%88%A0%E9%99%A4I-SMF%E7%9A%84Xn%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 UE通过Source NG-RAN与Target NG-RAN间的Xn接口切换到Target NG-RAN下，Target NG-RAN发送N2 Path Switch Request
 消息给AMF，携带需要切换的PDU会话列表、用户位置信息。
-（可选）在N2路径切换请求中接收到的PDU会话列表，对于其中每个被拒绝的PDU会话，AMF都需要发起释放操作，携带以下参数：failedToBeSwitched、Path Switch Request Setup Failed Transfer ，同[RAN发起的带I-SMF的会话释放](1600153682248.html#z15e0fa4b895845bca5cf01ee10dff1fc__ae41ac37-3d98-4cf0-8395-7d6af5d5b62d)。
+（可选）在N2路径切换请求中接收到的PDU会话列表，对于其中每个被拒绝的PDU会话，AMF都需要发起释放操作，携带以下参数：failedToBeSwitched、Path Switch Request Setup Failed Transfer ，同[RAN发起的带I-SMF的会话释放]。
 AMF选择I-SMF。 
 如果根据用户TA服务区信息，发现老的I-SMF无法继续服务，则选择新的I-SMF。 
 根据无smContextRef，判断是I-SMF删除的Xn切换流程。如果选择了新的I-SMF，则AMF发送Nsmf_PDUSession_CreateSMContext
@@ -3691,7 +3691,7 @@ TARGET RAN 向Source RAN发起资源释放请求。
 后续流程同现有处理。 
 ###### I-SMF不变的Xn切换 
 图4  I-SMF不变的Xn切换
-[]images/4.%20I-SMF%E4%B8%8D%E5%8F%98%E7%9A%84Xn%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B(%E9%87%8D%E7%94%A81).png)
+
 该流程场景不做描述，相较于无I-SMF的基于Xn接口NG-RAN间的Handover流程，主要存在如下差异点： 
 步骤1中，AMF收到Path Switch Request
 后，根据N2消息中携带的信元，分别识别需要激活和去激活的PDU。
@@ -3705,7 +3705,7 @@ I-SMF删除的N2切换
 I-SMF不变的N2切换 
 ###### I-SMF更新的N2切换 
 图1  I-SMF更新的N2切换
-[]images/1.1%20%20I-SMF%E6%9B%B4%E6%96%B0%E7%9A%84N2%E5%88%87%E6%8D%A2%E6%89%A7%E8%A1%8C.png)
+
 流程说明如下： 
 准备T测业务资源
 
@@ -3815,14 +3815,14 @@ Target I-SMF向Target I-UPF发送N4 PFCP Session Modification Request
 请求，删除间接转发隧道信息。
 Target I-UPF向Target I-SMF返回N4 PFCP Session Modification Response
 响应。
-（可选）[步骤29](1600153452074.html#z101bf2fd180a402db9ccffe221fc28f5__48c72a6f-1f32-47f0-b9be-6d8f7f3d86f8)中的定时器超时，进行N4会话释放。
+（可选）[步骤29]中的定时器超时，进行N4会话释放。
 Source I-SMF向Source I-UPF发送N4 PFCP Session Deletion Request
 ，删除间接转发隧道信息及释放PDU资源。
 Source I-UPF向Source I-SMF返回N4 PFCP Session Deletion Response
 响应。
 ###### I-SMF插入的N2切换 
 图2  I-SMF插入的N2切换
-[]images/2.1%20%20I-SMF%E6%8F%92%E5%85%A5%E7%9A%84N2%E5%88%87%E6%8D%A2%E6%89%A7%E8%A1%8C.png)
+
 流程说明如下： 
 准备T测业务资源
 Source NG-RAN检测到UE需要切换到目标小区，发送Handover Required
@@ -3899,7 +3899,7 @@ Target AMF向Source AMF返回Namf_Communication_CreateUEContext
 Source AMF下发Handover Command
 给Source NG-RAN，携带Target to Source
 transparent container。
-Source NG-RAN将[Handover Command](../../N2接口\topics\21.html)发送给UE。
+Source NG-RAN将[Handover Command]发送给UE。
 UE切换到Target NG-RAN后，发送Handover Confirm。 
 Target NG-RAN发送Handover Notify
 给Target AMF。
@@ -3924,7 +3924,7 @@ A-UPF向A-SMF返回N4 PFCP Session Modification Response
 响应。
 A-SMF向Target I-SMF返回Nsmf_PDUSession_Update
  Response响应。
-Target I-SMF向Target AMF返回[Nsmf_PDUSession_UpdateSMContext](../../Nsmf\topics\4.html) Response响应。
+Target I-SMF向Target AMF返回[Nsmf_PDUSession_UpdateSMContext] Response响应。
 切换执行阶段2：删除老资源
 UE发起移动性注册更新过程。 
 上下文释放。 
@@ -3944,7 +3944,7 @@ PSA UPF向A-SMF返回N4 PFCP Session Modification Response
 响应。
 ###### I-SMF删除的N2切换 
 图3  I-SMF删除的N2切换
-[]images/3.1%20%20I-SMF%E5%88%A0%E9%99%A4%E7%9A%84N2%E5%88%87%E6%8D%A2%E6%89%A7%E8%A1%8C.png)
+
 流程说明如下： 
 准备T侧业务资源
 Source NG-RAN检测到UE需要切换到目标小区，发送Handover Required
@@ -4067,7 +4067,7 @@ Source AMF下发UE Context Release Command
 给Source-RAN。
 Source-RAN返回UE Context Release Complete
 给Source AMF。
-（可选）如果[步骤31](1600153452074.html#z101bf2fd180a402db9ccffe221fc28f5__a745eae6-74a4-4412-a349-45e510026b04)中的定时器超时，N4会话释放。
+（可选）如果[步骤31]中的定时器超时，N4会话释放。
 Source I-SMF向Source I-UPF发送N4 PFCP Session Deletion Request
 请求，删除间接转发隧道信息及释放PDU资源。
 Source I-UPF向Source I-SMF返回N4 PFCP Session Deletion Response
@@ -4080,7 +4080,7 @@ Target I-UPF向A-SMF返回N4 PFCP Session Modification Response
 响应。
 ###### I-SMF不变的N2切换 
 图4  I-SMF不变的N2切换
-[]images/4.1%20I-SMF%E4%B8%8D%E5%8F%98%E7%9A%84N2%E5%88%87%E6%8D%A2%E6%89%A7%E8%A1%8C.png)
+
 流程说明如下： 
 在切换准备阶段，相较于无I-SMF的基于N2接口NG-RAN间的Handover流程，主要存在如下差异： 
 目标AMF收到源侧AMF的Namf_Communication_CreateUEContext Request消息后，目标AMF会直接向I-SMF发送Nsmf_PDUSession_UpdateSMContext
@@ -4098,7 +4098,7 @@ I-SMF删除的N2切换取消
 I-SMF不变的N2切换取消 
 ###### I-SMF变化的N2切换取消 
 图1  I-SMF变化的N2切换取消
-[]images/1.2%20%20I-SMF%E5%8F%98%E5%8C%96%E7%9A%84N2%E5%88%87%E6%8D%A2%E5%8F%96%E6%B6%88.png)
+
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给Source AMF，携带切换取消原因值。
@@ -4126,20 +4126,20 @@ Source I-UPF向Source I-SMF返回N4会话修改响应PFCP Session Modification R
 响应。
 Target I-SMF向Target AMF返回：Nsmf_PDUSession_UpdateSMContext
  Response，指示切换取消完成。
-（可选）Target AMF返回[Namf_Communication_ReleaseUEContext](../../Namf\topics\6.html) Response给Source AMF。
+（可选）Target AMF返回[Namf_Communication_ReleaseUEContext] Response给Source AMF。
 Source AMF向Source RAN返回Handover Cancel Acknowledge
 。
 ###### I-SMF插入的N2切换取消 
 图2  
 I-SMF插入的N2切换取消
-[]images/2.2%20%20I-SMF%E6%8F%92%E5%85%A5%E7%9A%84N2%E5%88%87%E6%8D%A2%E5%8F%96%E6%B6%88.png)
+
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给AMF，携带切换取消原因值。
 （可选）Source AMF若已经通知Target AMF切换，则调用Target AMF的Namf_Communication_ReleaseUEContext
 服务，通知Target AMF取消切换，携带UE Context ID, Relocation Cancel Indication。
 （可选）Target AMF收到Namf_Communication_ReleaseUEContext
- Request消息后，若已经建立Target AMF与Target RAN间的N2连接，则发送[UE Context Release Command](../../N2接口\topics\14.html)给Target RAN，通知Target RAN释放为切换分配的AN资源。
+ Request消息后，若已经建立Target AMF与Target RAN间的N2连接，则发送[UE Context Release Command]给Target RAN，通知Target RAN释放为切换分配的AN资源。
 针对每一个PDU会话，Target AMF调用对应new I-SMF的Nsmf_PDUSession_UpdateSMContext
 服务，携带PDU会话ID、切换取消指示，以释放SM上下文和在Target I-SMF上分配的所有资源。
 N4会话释放。 
@@ -4173,7 +4173,7 @@ Source AMF给Source RAN返回Handover Cancel Acknowledge
 。
 ###### I-SMF删除的N2切换取消 
 图3  I-SMF删除的N2切换取消
-[]images/3.2%20I-SMF%E5%88%A0%E9%99%A4%E7%9A%84N2%E5%88%87%E6%8D%A2%E5%8F%96%E6%B6%88.png)
+
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给AMF，携带切换取消原因值。
@@ -4206,7 +4206,7 @@ Source AMF给Source RAN返回Handover Cancel Acknowledge
 。
 ###### I-SMF不变的N2切换取消 
 图4  I-SMF不变的N2切换取消
-[]images/4.2%20%20I-SMF%E4%B8%8D%E5%8F%98%E7%9A%84N2%E5%88%87%E6%8D%A2%E5%8F%96%E6%B6%88.png)
+
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给AMF，携带切换取消原因值。
@@ -4230,9 +4230,9 @@ Source AMF给Source RAN返回Handover Cancel Acknowledge
 。
 #### 4G 5G互操作 
 ##### 连接态下基于N26接口，5G跨系统移动到4G进行切换 
-连接态下基于N26接口，5G跨系统移动到4G进行切换的流程如[图1](1600153524434.html#z7724352136ab4770bc9b3d7ca17e2dda__69010d0e-0070-4d04-8c71-fc98e9f49466)所示。
+连接态下基于N26接口，5G跨系统移动到4G进行切换的流程如[图1]所示。
 图1  连接态5G到4G的切换
-[]images/1603963993759.png)
+
 流程说明如下： 
 NG-RAN决定将UE切换到E-UTRAN，例如IMS语音回落EPS网络场景。NG-RAN发送Handover Required
 消息到AMF，通知有用户要进行切换。
@@ -4277,9 +4277,9 @@ UE发起TAU流程。
 在切换完成后，A-SMF+PGW-C可决定将映射到缺省承载中的部分数据流映射为专有承载，A-SMF+PGW-C可发起专有承载建立。 
 （可选）如果使用了间接转发，AMF和MME分别发起间接转发隧道删除流程。 
 ##### 连接态下基于N26接口，4G跨系统移动到5G进行切换 
-连接态下基于N26接口，4G跨系统移动到5G进行切换的流程图如[图1](1600153539138.html#zdff47f287c2245558b3b1374c37fcef5__30bbc191-839d-4738-823f-ed42a2c9505e)所示。
+连接态下基于N26接口，4G跨系统移动到5G进行切换的流程图如[图1]所示。
 图1  4G到5G的切换
-[]images/1603961746775.png)
+
 流程说明如下： 
 E-UTRAN决定将UE切换到NG-RAN。 
 获取EPS上下文（准备阶段）
@@ -4360,9 +4360,9 @@ Complete。
 UE执行EPS到5GS的移动性注册流程。 
 删除建立的转发通道和资源。流程结束。 
 ##### 空闲态下基于N26接口，5G跨系统移动到4G进行TAU 
-空闲态下基于N26接口，5G跨系统移动到4G进行TAU的流程如[图1](1600153575794.html#zd2652df5029f4accaf0deeab04032552__48bce7eb-7084-4ab3-90d7-8fbf8cec6444)所示。
+空闲态下基于N26接口，5G跨系统移动到4G进行TAU的流程如[图1]所示。
 图1  5G到4G的TAU
-[]images/1603962118648.png)
+
 流程说明如下： 
 UE从5GS覆盖区移动到EPS覆盖区，触发TAU流程。 
 UE发送向E-UTRAN发送TAU Request消息，消息中EPS mobile identity IE携带5G-GUTI映射出的4G-GUTI，接入层信令中包含由5G-GUTI映射出GUMMEI。TAU Request消息使用5G的安全上下文进行完整性保护。消息中携带UE status信元，向网络提供与EPS交互的当前UE注册状态的相关信息，取值为UE is in 5GMM-REGISTERED state。 
@@ -4383,7 +4383,7 @@ MME向AMF发送Context Acknowledge
 消息，消息中包含Cause和SGW Change Indication。
 MME根据Context Response
 消息中各PDN Connection的PGW-C Node Name信息，优选与其中某一个PGW-C合建的SGW-C，向选中的SGW-C发送Create Session Request消息。SGW-C根据TAI、DNN等因素为每个PDN Connection选择作为SGW-U的UPF，并向该UPF发送PFCP Session Establishment Request消息。该消息中，为PDN Connection中的每个EPS Bearer建立Uplink和Downlink方向的PDR，并分配不同的SGW-U S1-U接口的F-TEID用于上行数据转发，SGW-U S5/S8-U接口的F-TEID用于下行数据转发。
-SGW-C向PGW-C发送Modify Bearer Request消息，通知SGW-C的S5/S8-C接口的F-TEID，以及SGW-U S5/S8-U接口的F-TEID。SMF+PGW-C根据PCF+PCRF之前下发的Policy Control Request Trigger，向PCF+PCRF上报RAT变化、UE位置变化等事件。PCF+PCRF下发更新后的策略。更新后的策略如果需要触发EPS Bearer操作，如承载激活、修改、删除等，在[步骤19](1600153575794.html#zd2652df5029f4accaf0deeab04032552__59866237-2e01-417e-a0e8-4e0cb74d2d1b)中执行。
+SGW-C向PGW-C发送Modify Bearer Request消息，通知SGW-C的S5/S8-C接口的F-TEID，以及SGW-U S5/S8-U接口的F-TEID。SMF+PGW-C根据PCF+PCRF之前下发的Policy Control Request Trigger，向PCF+PCRF上报RAT变化、UE位置变化等事件。PCF+PCRF下发更新后的策略。更新后的策略如果需要触发EPS Bearer操作，如承载激活、修改、删除等，在[步骤19]中执行。
 PGW-C通知UPF+PGW-U将Downlink数据隧道切换到SGW-U。 
 PGW-C向SGW-C返回Modify Bearer Response消息，该消息中主要包含各EPS Bearer的Charging ID信息。 
 （可选）PGW-C+A-SMF向PCF+PCRF获取策略信息。 
@@ -4398,9 +4398,9 @@ MME向UE发送TAU Accept消息，如果TAU Request消息中的Active Flag置位�
 （可选）如果新分配了4G-GUTI，UE向MME返回TAU Complete消息。 
 （可选）PCF+PCRF可能因为RAT变化发起专有承载建立/修改/删除流程，通过发起这些流程将相关修改同步给UE。 
 ##### 空闲态下基于N26接口，4G跨系统移动到5G进行注册更新 
-空闲态下基于N26接口，4G跨系统移动到5G进行注册更新的流程如[图1](1600153589845.html#z3f8b33d06aef4c6b8c309338554edeff__4ec46fac-8f72-4780-bbf1-b49440c85bca)所示。
+空闲态下基于N26接口，4G跨系统移动到5G进行注册更新的流程如[图1]所示。
 图1  4G到5G的注册更新
-[]images/1603962216759.png)
+
 流程说明如下： 
 UE触发注册流程。 
 获取EPS上下文
@@ -4462,9 +4462,9 @@ EAP-AKA'鉴权
 同4G鉴权一样，5G鉴权支持UE和网络侧的双向认证。同时，5G统一了3GPP和非3GPP的鉴权方式，支持5G AKA和EAP-AKA‘两种鉴权方式。 
 当UE触发注册、业务请求等流程时，若AMF安全校验失败或者AMF配置强制鉴权，则触发鉴权流程。采用的鉴权方式由AUSF根据用户签约或配置确定。 
 ##### 5G AKA鉴权 
-5G AKA为4G鉴权EPS AKA的演进，增加了归属网络对于服务网络的认证。完整的5G AKA鉴权流程如[图1](1598961474723.html#z18282a75705b4bdf9deb950a676cc681__eab6f501-ec7b-40ac-97c7-7c7c14d0176f)所示。
+5G AKA为4G鉴权EPS AKA的演进，增加了归属网络对于服务网络的认证。完整的5G AKA鉴权流程如[图1]所示。
 图1  5G AKA鉴权
-[]images/5GAKA%E9%89%B4%E6%9D%83.png)
+
 流程说明如下： 
 UE触发注册、业务请求，或者去注册请求等NAS请求消息给AMF，携带5G GUTI或者SUCI。 
 （可选）若NAS请求消息中携带5G GUTI，但AMF根据5G GUTI查找用户上下文失败，则向UE发送Identity
@@ -4497,9 +4497,9 @@ AUSF执行RES*的校验，比如比较RES*与本地保存的XRES*是否一致。
 
 AUSF回复Nausf_UEAuthentication_Authenticate Response给AMF，携带最终的鉴权结果。若鉴权结果为成功，响应消息中携带Kseaf。若步骤4中携带SUCI，则响应消息中携带SUPI。 
 ##### EAP-AKA'鉴权 
-EAP-AKA'鉴权方式中，网络侧鉴权功能由AUSF负责，AMF只参与AUSF和UE之间鉴权信息的传递，以及最终KAMF密钥的推演。完整的EAP-AKA‘认证流程如[图2](1598961474723.html#z18282a75705b4bdf9deb950a676cc681__db6810ae-06c8-490f-96a2-10be343a49e4)所示。
+EAP-AKA'鉴权方式中，网络侧鉴权功能由AUSF负责，AMF只参与AUSF和UE之间鉴权信息的传递，以及最终KAMF密钥的推演。完整的EAP-AKA‘认证流程如[图2]所示。
 图2  EAP-AKA'鉴权
-[]images/5GAKA%E2%80%98%E9%89%B4%E6%9D%83.png)
+
 流程说明如下： 
 UE触发注册、业务请求，或者去注册请求等NAS请求消息给AMF，携带5G GUTI或者SUCI。 
 若NAS请求消息中携带5G GUTI，但AMF根据5G GUTI查找用户上下文失败，则向UE发送Identity Request
@@ -4532,9 +4532,9 @@ AMF通过N1消息将EAP Success透传给UE，EAP-AKA'鉴权完成。
 用户支持的安全算法发生变化，导致原有协商的安全算法已不支持。 
 AMF支持的安全算法发生变化，导致原有协商的安全算法已不支持。 
 ##### 流程描述 
-当原有协商的安全算法已不适用，则触发算法协商流程。算法协商流程如[图1](1598961480754.html#zfa2b542a3d6d4458a7876c63109c2bde__7d0879ce-96ad-4bf2-b308-c060acb171ed)所示。
+当原有协商的安全算法已不适用，则触发算法协商流程。算法协商流程如[图1]所示。
 图1  NAS安全算法协商流程
-[]images/1599115805881.png)
+
 流程说明如下： 
 AMF根据UE安全能力中指示UE所支持的安全算法，AMF本地配置所支持的安全算法，以及本地配置的各个安全算法的优先级，分别为加密和完整性保护，协商一个安全算法，并发送Security Mode Command
 消息到UE，消息中携带协商的安全算法，UE安全能力等，用于UE与本地的UE安全能力进行校验，防止被降维攻击。AMF在发送消息之前，采用新协商的完整性保护算法，对该NAS消息进行完整性保护。
@@ -4546,15 +4546,15 @@ UE执行Security Mode Command
 #### 5G用户临时标识分配 
 概述 :同4G一样，5G也支持为用户分配临时标识5G GUTI，用于后续终端与核心网交互时标识用户。5G
 GUTI包含GUAMI和5G-TMSI两部分，GUAMI用于标识5G GUTI归属哪个AMF，5G-TMSI用于AMF标识用户。为了支持用户在4G/5G之间移动，4G
-GUTI与5G GUTI之间需要相互转化，转化规则如[图1](1598961484484.html#zc7dabdd5a1a642eb94758f68c154df60__%E8%BD%AC%E5%8C%96%E8%A7%84%E5%88%99-48C1B235)所示。
+GUTI与5G GUTI之间需要相互转化，转化规则如[图1]所示。
 图1  转化规则
-[]images/1599125911113.png)
+
 ##### 流程描述 
 当用户注册时，AMF根据本地策略，为用户分配5G GUTI，Registration
 Accept
-消息携带5G GUTI并通知到UE。具体流程如[图2](1598961484484.html#zc7dabdd5a1a642eb94758f68c154df60__aa946224-82d5-476c-9a98-32eae54553c5)所示。
+消息携带5G GUTI并通知到UE。具体流程如[图2]所示。
 图2  5G用户临时标识分配流程
-[]images/1599115773669.png)
+
 流程说明如下： 
 UE发送Registration Request
 消息触发注册请求，携带注册类型、SUCI或5G GUTI。
@@ -4575,27 +4575,27 @@ GUTI。
 节点检测 
 UPF选择 
 ##### 节点关联建立 
-UPF发起的节点关联建立流程如[图1](22.html#T_1554257199554__UPF%E5%8F%91%E8%B5%B7%E8%8A%82%E7%82%B9%E5%85%B3%E8%81%94%E5%BB%BA%E7%AB%8B%E6%B5%81%E7%A8%8B%E7%A4%BA%E6%84%8F%E5%9B%BE-47D9CBF4)所示。
+UPF发起的节点关联建立流程如[图1]所示。
 图1  UPF发起节点关联建立流程示意图
-[]images/UPF%E5%8F%91%E8%B5%B7%E8%8A%82%E7%82%B9%E5%85%B3%E8%81%94%E5%BB%BA%E7%AB%8B.png)
+
 流程说明如下： 
 UPF向SMF发送PFCP Association Setup Request
 消息请求关联建立，消息中携带UPF的Node ID、UPF能力、UPF N3/N9口的GTPU地址与UPF可支持的TEID范围。
 SMF向UPF发送PFCP Association Setup Response
 响应消息，消息中携带SMF的能力。
 ##### 节点关联更新 
-UPF发起的节点关联更新流程如[图2](22.html#T_1554257199554__UPF%E5%8F%91%E8%B5%B7%E8%8A%82%E7%82%B9%E5%85%B3%E8%81%94%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B%E7%A4%BA%E6%84%8F%E5%9B%BE-47D9CE3E)所示。
+UPF发起的节点关联更新流程如[图2]所示。
 图2  UPF发起节点关联更新流程示意图
-[]images/UPF%E5%8F%91%E8%B5%B7%E8%8A%82%E7%82%B9%E5%85%B3%E8%81%94%E6%9B%B4%E6%96%B0.png)
+
 流程说明如下： 
 UPF向SMF发送PFCP Association Update Request
 消息请求关联更新，消息中携带UPF的Node ID、UPF能力，可能携带UPF N3/N9口的GTPU地址与UPF可支持的TEID范围。
 SMF向UPF发送PFCP Association Update Response
 响应消息。
 ##### 节点关联关系删除 
-节点关联关系删除流程如[图3](22.html#T_1554257199554__%E8%8A%82%E7%82%B9%E5%85%B3%E8%81%94%E5%85%B3%E7%B3%BB%E5%88%A0%E9%99%A4%E6%B5%81%E7%A8%8B%E7%A4%BA%E6%84%8F%E5%9B%BE-47D9D066)所示。
+节点关联关系删除流程如[图3]所示。
 图3  节点关联关系删除流程示意图
-[]images/%E8%8A%82%E7%82%B9%E5%85%B3%E8%81%94%E5%88%A0%E9%99%A4.png)
+
 流程说明如下： 
 UPF收到OAM发来的释放消息，给SMF发送PFCP Association Update Request
 消息，通知SMF需要进行关联关系的删除操作，同时携带优雅退出时长T。
@@ -4607,9 +4607,9 @@ UPF收到请求消息后，释放相关会话、删除该SMF的关联关系，�
 响应消息。
 SMF收到响应消息后，会释放相关会话、删除关联关系。 
 ##### 节点检测 
-UPF发起的节点检测流程如[图4](22.html#T_1554257199554__%E8%8A%82%E7%82%B9%E6%A3%80%E6%B5%8B-AF91832C)所示。
+UPF发起的节点检测流程如[图4]所示。
 图4  节点检测
-[]images/%E8%8A%82%E7%82%B9%E6%A3%80%E6%B5%8B.png)
+
 流程说明如下： 
 UPF向SMF发送PFCP Heartbeat Request
 心跳检测消息。
@@ -4618,9 +4618,9 @@ SMF向UPF返回PFCP Heartbeat Response
 如果UPF在配置的重发次数范围内未收到PFCP Heartbeat Response
 心跳响应，UPF会删除与该SMF的节点关联，并释放相关会话。
 ##### UPF选择 
-UPF选择的业务流程如[图5](22.html#T_1554257199554__%E6%A0%B9%E6%8D%AEDNN%E9%80%89%E6%8B%A9UPF-B117B48E)所示。
+UPF选择的业务流程如[图5]所示。
 图5  根据DNN或负荷选择UPF
-[]images/%E6%A0%B9%E6%8D%AEDNN%E9%80%89%E6%8B%A9UPF.png)
+
 流程说明如下： 
 UPF上电成功后向SMF发起PFCP Association Setup Request
 消息请求关联注册，在请求消息中携带支持的DNN。
@@ -4638,54 +4638,54 @@ UPF发起N4连接更新流程
 SMF发起的N4连接释放流程 
 UPF发起的N4连接释放流程 
 ###### SMF发起N4连接建立流程 
-SMF发起N4连接建立流程如[图1](25.html#T_1554257199554__09e75a63-41bc-4de5-99e5-18ab08c7be12)所示。
+SMF发起N4连接建立流程如[图1]所示。
 图1  SMF发起N4连接建立流程
-[]images/SMF%E5%8F%91%E8%B5%B7%E5%81%B6%E8%81%94%E5%BB%BA%E7%AB%8B.png)
+
 流程说明如下： 
 SMF向UPF发起N4连接建立请求消息（N4 Association Setup Request
 ），携带自己支持的特性和可用资源。
 UPF向SMF回复N4连接建立应答消息（N4 Association Setup Response
 ），携带自己支持的特性和可用资源。
 ###### UPF发起N4连接建立流程 
-UPF发起N4连接建立流程如[图2](25.html#T_1554257199554__dc83d045-43b0-4dba-a47b-30e5c04195c2)所示。
+UPF发起N4连接建立流程如[图2]所示。
 图2  UPF发起N4连接建立流程
-[]images/UPF%E5%8F%91%E8%B5%B7%E5%81%B6%E8%81%94%E5%BB%BA%E7%AB%8B.png)
+
 流程说明如下： 
 UPF向SMF发起N4连接建立请求消息（N4 Association Setup Request
 ），携带自己支持的特性和可用资源。
 SMF向UPF回复N4连接建立应答消息（N4 Association Setup Response
 ），携带自己支持的特性和可用资源。
 ###### SMF发起N4连接更新流程 
-SMF发起N4连接更新流程如[图3](25.html#T_1554257199554__2836c833-3f56-4b00-98d9-0a15eb41680b)所示。
+SMF发起N4连接更新流程如[图3]所示。
 图3  SMF发起N4连接更新流程
-[]images/SMF%E5%8F%91%E8%B5%B7%E5%81%B6%E8%81%94%E6%9B%B4%E6%96%B0.png)
+
 流程说明如下： 
 当SMF需要更新自己支持的特性时，SMF向UPF发起N4连接更新请求消息（N4 Association Update Request
 ），携带自己支持的特性和可用资源。
 UPF向SMF回复N4连接更新应答消息（N4 Association Update Response
 ），确认更新是否成功。
 ###### UPF发起N4连接更新流程 
-UPF发起N4连接更新流程如[图4](25.html#T_1554257199554__bdfd16b2-968a-440d-b82d-34753f3e6551)所示。
+UPF发起N4连接更新流程如[图4]所示。
 图4  UPF发起的连接更新流程
-[]images/UPF%E5%8F%91%E8%B5%B7%E5%81%B6%E8%81%94%E6%9B%B4%E6%96%B0.png)
+
 流程说明如下： 
 当UPF需要更新自己支持的特性或用户面IP资源时，UPF向SMF发起N4连接更新请求消息（N4 Association Update Request
 ），携带自己支持的特性和可用资源。
 SMF向UPF回复N4连接更新应答消息（N4 Association Update Response
 ），确认更新是否成功。
 ###### SMF发起的N4连接释放流程 
-SMF发起的N4连接释放流程如[图5](25.html#T_1554257199554__1e051bf6-63ea-4efc-9c51-a4e8cbf4de9b)所示。
+SMF发起的N4连接释放流程如[图5]所示。
 图5  SMF发起的N4连接释放流程
-[]images/SMF%E5%8F%91%E8%B5%B7%E5%81%B6%E8%81%94%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 当SMF需要终结N4连接时（比如OAM，异常等），SMF向UPF发起N4连接释放请求消息（N4 Association Release Request
 ）。
 UPF释放相关资源，并向SMF回复N4连接释放应答消息（N4 Association Release Response
 ）。
 ###### UPF发起的N4连接释放流程 
-UPF发起的N4连接释放流程如[图6](25.html#T_1554257199554__28ae7975-9680-42c6-8cc4-e484cac3a52b)所示。
+UPF发起的N4连接释放流程如[图6]所示。
 图6  UPF发起的N4连接释放流程
-[]images/UPF%E5%8F%91%E8%B5%B7%E5%81%B6%E8%81%94%E9%87%8A%E6%94%BE.png)
+
 流程说明如下： 
 当需要终结N4连接时（比如OAM，异常等），UPF发起释放流程，UPF发起N4连接更新请求消息（N4 Association Update Request
 ），携带优雅退出时长。
@@ -4701,9 +4701,9 @@ N4会话建立流程
 N4会话修改流程 
 N4会话删除流程 
 ###### N4会话建立流程 
-N4会话建立流程如[图1](26.html#T_1554257199554__a0088d7f-e64b-4411-965b-1dc8f15477c6)所示。
+N4会话建立流程如[图1]所示。
 图1  N4会话建立流程
-[]images/%E4%BC%9A%E8%AF%9D%E5%BB%BA%E7%AB%8B%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 触发请求方（比如AMF或PCF）触发SMF建立一个新的PDU会话或对后续的PDU会话重分配PDU会话。
 SMF向UPF下发N4会话建立请求消息（N4 Session Establishment Request
@@ -4712,9 +4712,9 @@ UPF创建N4会话上下文，并回复应答消息（N4 Session Establishment Re
 ），在应答消息中携带需要回复给SMF的控制信息。
 SMF与触发请求方交互（比如AMF或PCF）。
 ###### N4会话修改流程 
-N4会话修改流程如[图2](26.html#T_1554257199554__e53bf2b4-052a-40c3-ab14-c8e3ed4de0f9)所示。
+N4会话修改流程如[图2]所示。
 图2  N4会话修改流程
-[]images/%E4%BC%9A%E8%AF%9D%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 触发请求方（比如AMF或PCF）触发SMF修改一个PDU会话。 
 SMF向UPF下发N4会话修改请求消息（N4 Session Modification Request
@@ -4723,18 +4723,18 @@ UPF验证会话ID，更新N4会话上下文的参数，并回复应答消息（N
 ），在应答消息中携带需要回复给SMF的控制信息。
 SMF与触发请求方交互（比如AMF或PCF）。
 ###### N4会话删除流程 
-N4会话删除流程如[图3](26.html#T_1554257199554__de338d69-7d88-45d0-8ddb-93cc883692f7)所示。
+N4会话删除流程如[图3]所示。
 图3  N4会话删除流程
-[]images/%E4%BC%9A%E8%AF%9D%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 触发请求方（比如AMF或PCF）触发SMF释放一个PDU会话。
 SMF向UPF下发N4会话释放请求消息（N4 Session Release Request）。 
 UPF验证会话ID，删除N4会话上下文，并回复应答消息（N4 Session Release Response），在应答消息中携带用量信息给SMF。 
 SMF与触发请求方交互（比如AMF或PCF）。
 ##### 报文转发 
-报文转发的业务流程图如[图1](27.html#T_1554257199554__fb6b6c9f-5f28-4336-8e60-cd872d354ab9)所示。
+报文转发的业务流程图如[图1]所示。
 图1  报文转发
-[]images/%E6%8A%A5%E6%96%87%E8%BD%AC%E5%8F%91.png)
+
 流程说明如下： 
 UPF收到报文后，根据隧道信息或UE IP查找PFCP会话上下文。
 UPF找到上下文后，根据L3/4或L7信息，按优先级依次匹配PDR。
@@ -4744,9 +4744,9 @@ UPF根据QER规则，执行QoS策略、门控等操作。
 UPF根据URR规则，执行用量统计操作，并按门限定时定量上报用量统计。 
 UPF发送报文。 
 ##### 用量上报 
-用量上报流程图如[图1](28.html#T_1554257199554__7c34440f-a7db-4764-b056-87950a400473)所示。
+用量上报流程图如[图1]所示。
 图1  用量上报流程图
-[]images/%E7%94%A8%E9%87%8F%E4%B8%8A%E6%8A%A5%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 UPF探测到事件门限、用量门限或某个事件，触发用量上报。 
 UPF向SMF发送N4会话用量上报消息，携带触发条件和具体的用量。 
@@ -4758,9 +4758,9 @@ UPF缓存流程
 GW-C缓存流程 
 GW-U缓存流程 
 ###### SMF缓存流程 
-配置下行报文缓存在SMF时，流程如[图1](29.html#T_1554257199554__6c06ac48-42cd-41d9-b71a-0b609c0a78ce)所示。
+配置下行报文缓存在SMF时，流程如[图1]所示。
 图1  SMF缓存流程
-[]images/SMF%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 UE进入IDLE态，去活PDU会话。 
 SMF发送N4会话修改请求（N4 Session Modification Request
@@ -4779,9 +4779,9 @@ UPF将下行报文发送给UE。
 UPF回复N4会话修改应答（N4 Session Modification Response
 ）消息。
 ###### UPF缓存流程 
-配置下行报文缓存在UPF时，流程如[图2](29.html#T_1554257199554__d1e60066-6291-493b-b3f1-102cd7a3431e)所示。
+配置下行报文缓存在UPF时，流程如[图2]所示。
 图2  UPF缓存流程
-[]images/UPF%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 UE进入IDLE态，去活PDU会话。 
 SMF发送N4会话修改请求（N4 Session Modification Request
@@ -4798,9 +4798,9 @@ UPF回复N4会话修改应答（N4 Session Modification Response
 UPF开始发送还在缓存周期内的报文。 
 UPF将下行报文发送给UE。 
 ###### GW-C缓存流程 
-配置下行报文缓存在GW-C时，流程如[图3](29.html#T_1554257199554__9647cd95-2d9f-4726-999b-39cff7cf4979)所示。
+配置下行报文缓存在GW-C时，流程如[图3]所示。
 图3  GW-C缓存流程
-[]images/GW-C%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 UE进入IDLE态，去活PDN连接。 
 GW-C发送Sx会话修改请求（Sx Session Modification Request）消息给GW-U，修改FAR，建立CP-UP通道。
@@ -4815,9 +4815,9 @@ GW-U将下行报文发送给UE。
 报文发送结束后，GW-C发送Sx会话修改请求（Sx Session Modification Request）消息给GW-U，修改FAR，删除CP-UP通道。
 GW-U回复Sx会话修改应答（Sx Session Modification Response）消息。 
 ###### GW-U缓存流程 
-配置下行报文缓存在GW-U时，流程如[图4](29.html#T_1554257199554__b615b453-340f-4759-81e6-9ec59c375f98)所示。
+配置下行报文缓存在GW-U时，流程如[图4]所示。
 图4  GW-U缓存流程
-[]images/GW-U%E7%BC%93%E5%AD%98%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 UE进入IDLE态，去活PDN连接。 
 GW-C发送Sx会话修改请求（Sx Session Modification Request）消息给GW-U，修改FAR，通知GW-U缓存报文以及相应的缓存周期。
@@ -4838,9 +4838,9 @@ QoS流程包括以下业务流程：
 SMF和UPF之间的QoS执行流程 
 GW-C和GW-U之间的QoS执行流程 
 SMF和UPF之间的QoS执行流程
-SMF和UPF之间的QoS执行流程如[图1](30.html#T_1554257199554__1430c81f-1b03-4b42-9048-1d5a68ec858e)所示。
+SMF和UPF之间的QoS执行流程如[图1]所示。
 图1  QoS执行流程
-[]images/QoS%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 AMF或PCF触发SMF发起PDU会话建立/修改流程。
 SMF向UPF发送N4会话建立/修改请求（N4 Session Establishment Request
@@ -4851,9 +4851,9 @@ UPF向SMF回复N4会话建立/修改应答（N4 Session Establishment Response
 ）消息。
 UPF收到报文，匹配PDR，选择相应级别的QoS策略，执行QoS策略。 
 GW-C和GW-U之间的QoS执行流程
-GW-C和GW-U之间的QoS执行流程如[图2](30.html#T_1554257199554__e099d089-7063-42c9-ad49-9d4c429b9db5)所示。
+GW-C和GW-U之间的QoS执行流程如[图2]所示。
 图2  QoS执行流程
-[]images/QoS%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B2.png)
+
 流程说明如下： 
 MME或PCRF触发GW-C发起PDN连接建立/修改流程。 
 GW-C向GW-U发送Sx会话建立/修改请求（Sx Session Establishment/Modification Request）消息，下发QoS策略，通过PDR区分策略是会话级、承载级还是业务/应用级QoS。
@@ -4864,9 +4864,9 @@ GW-U收到报文，匹配PDR，选择相应级别的QoS策略，执行QoS策略�
 SMF和UPF之间的门控流程 
 GW-C和GW-U之间的门控流程 
 SMF和UPF之间的门控流程
-SMF和UPF之间的门控流程如[图3](30.html#T_1554257199554__b4c32540-d966-4e27-9bbb-f5696d7b10ee)所示。
+SMF和UPF之间的门控流程如[图3]所示。
 图3  门控流程
-[]images/%E9%97%A8%E6%8E%A7%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 AMF或PCF触发SMF发起PDU会话建立/修改流程。 
 SMF向UPF发送N4会话建立/修改请求（N4 Session Establishment Request
@@ -4877,9 +4877,9 @@ UPF向SMF回复N4会话建立/修改应答（N4 Session Establishment Response
 ）消息。
 UPF收到报文，匹配PDR，执行相应级别的门控策略。
 GW-C和GW-U之间的门控流程
-GW-C和GW-U之间的门控流程如[图4](30.html#T_1554257199554__bb309753-6d0b-4725-bf59-4281f3ed35fb)所示。
+GW-C和GW-U之间的门控流程如[图4]所示。
 图4  门控流程
-[]images/%E9%97%A8%E6%8E%A7%E6%B5%81%E7%A8%8B2.png)
+
 流程说明如下： 
 MME或PCRF触发GW-C发起PDN连接建立/修改流程。 
 GW-C向GW-U发送Sx会话建立/修改请求（Sx Session Establishment/Modification Request）消息，下发门控策略，通过PDR区分策略是会话级、承载级还是业务/应用级门控。 
@@ -4894,9 +4894,9 @@ GW-U收到报文，匹配PDR，执行相应级别的门控策略。
 SMF和UPF之间的策略下发 
 GW-C和GW-U之间的策略下发 
 SMF和UPF之间的策略下发
-SMF和UPF之间的策略下发流程如[图1](31.html#T_1554257199554__87f56200-da2b-4ef4-b917-fb05aa8765bd)所示。
+SMF和UPF之间的策略下发流程如[图1]所示。
 图1  SMF和UPF之间的策略下发流程
-[]images/%E7%AD%96%E7%95%A5%E4%B8%8B%E5%8F%91%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 会话建立时，触发请求方（比如AMF或PCF）触发SMF建立或重定位一个PDU会话，消息中携带业务策略信息，包括业务匹配规则和策略执行规则。
 SMF向UPF下发N4会话建立请求（N4 Session Establishment Request
@@ -4905,9 +4905,9 @@ UPF创建N4会话上下文，并回复N4会话建立应答（N4 Session Establis
 ）消息。
 SMF与触发请求方交互（比如AMF或PCF），触发下一步流程。
 GW-C和GW-U之间的策略下发
-GW-C和GW-U之间的策略下发流程如[图2](31.html#T_1554257199554__a55f79ed-ff7a-476b-a55d-7bf64a71022a)所示。
+GW-C和GW-U之间的策略下发流程如[图2]所示。
 图2  GW-C和GW-U之间的策略下发流程
-[]images/%E7%AD%96%E7%95%A5%E4%B8%8B%E5%8F%91%E6%B5%81%E7%A8%8B2.png)
+
 流程说明如下： 
 会话建立时，触发请求方（比如MME或PCRF）触发GW-C建立或重定位一个PDN连接，消息中携带业务策略信息，包括业务匹配规则和策略执行规则。 
 GW-C向GW-U下发Sx会话建立请求（Sx Session Establishment Request）消息，携带业务策略信息。 
@@ -4918,9 +4918,9 @@ GW-C与触发请求方交互（比如MME或PCRF），触发下一步流程。
 SMF和UPF之间的策略更新 
 GW-C和GW-U之间的策略更新 
 SMF和UPF之间的策略更新
-SMF和UPF之间的策略更新流程如[图3](31.html#T_1554257199554__88def839-31aa-4c85-b2d9-57bcd5c97018)所示。
+SMF和UPF之间的策略更新流程如[图3]所示。
 图3  SMF和UPF之间的策略更新流程
-[]images/%E7%AD%96%E7%95%A5%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 业务策略有变更，或有新的业务策略需要下发时，触发请求方（比如AMF或PCF）触发SMF下发PDU会话修改消息。
 SMF向UPF下发N4会话修改请求（N4 Session Modification Request
@@ -4929,9 +4929,9 @@ UPF验证会话ID，更新N4会话上下文中的业务策略参数，并回复N
 ）消息。
 SMF与触发请求方交互（比如AMF或PCF），触发下一步流程。
 GW-C和GW-U之间的策略更新
-GW-C和GW-U之间的策略更新流程如[图4](31.html#T_1554257199554__bc8ba6b6-16af-41bb-9a34-a8702e774208)所示。
+GW-C和GW-U之间的策略更新流程如[图4]所示。
 图4  GW-C和GW-U之间的策略更新流程
-[]images/%E7%AD%96%E7%95%A5%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B2.png)
+
 流程说明如下： 
 业务策略有变更，或有新的业务策略需要下发时，触发请求方（比如MME或PCRF）触发GW-C下发PDN连接修改消息。 
 GW-C向GW-U下发Sx会话修改请求（Sx Session Modification Request）消息，携带业务策略信息。 
@@ -4946,9 +4946,9 @@ PCF发起的SM策略关联修改流程
 SMF发起的SM策略关联终止流程 
 PCF发起的SM策略关联终止流程 
 ##### SM策略关联建立流程 
-SM策略关联建立流程如[图1](36.html#T_1554257199570__08b633d4-f7eb-403d-a1a4-40917a0c0b81)所示。
+SM策略关联建立流程如[图1]所示。
 图1  SM策略关联建立流程
-[]images/SM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E5%BB%BA%E7%AB%8B%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 在PDU会话建立流程中，如果SMF确定需要向PCF请求PDU会话策略控制，SMF需要先为该PDU会话向PCF请求建立SM策略关联。为此SMF向PCF发送Npcf_SMPolicyControl_Create
  Request请求，请求中包含SUPI、PDU会话标识、DNN、S-NSSAI、订阅通知指示（即SMF后续接收PCF为该SM策略关联下发的策略更新通知的URI地址），可选包含UE的IPv4地址和（或）IPv6地址前缀、GPSI、PEI、签约的会话聚合带宽（Subscribed Session AMBR）和签约的缺省QoS（Subscribed Default QoS）等信息。
@@ -4958,9 +4958,9 @@ PCF基于运营商配置的策略规则和各NF的输入信息进行策略决策
 PCF向SMF发送Npcf_SMPolicyControl_Create
  Response消息，其中包含PCF生成的SM策略关联ID、SM策略、订阅的事件列表。
 ##### SMF发起的SM策略关联修改流程 
-SMF发起的SM策略关联修改流程如[图2](36.html#T_1554257199570__f967fea6-4b93-4301-b071-40cba4bd381d)所示。
+SMF发起的SM策略关联修改流程如[图2]所示。
 图2  SM策略关联修改流程(SMF发起)
-[]images/SM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E4%BF%AE%E6%94%B9%E6%B5%81%E7%A8%8B(SMF%E5%8F%91%E8%B5%B7).png)
+
 流程说明如下： 
 当PCF订阅的事件发生时（例如PCF向SMF订阅了PLMN change事件后，UE移动导致用户接入的PLMN发生了变化），SMF向PCF发送Npcf_SMPolicyControl_Update
  Request消息，携带SM策略关联ID、事件号及事件相关信息。
@@ -4969,9 +4969,9 @@ PCF重新进行策略决策，可能更新SM策略。
 PCF向SMF发送Npcf_SMPolicyControl_Update
  Response消息，如果PCF更新了SM策略，则将最新的SM策略包含在响应消息中。
 ##### PCF发起的SM策略关联修改流程 
-PCF发起的SM策略关联修改流程如[图3](36.html#T_1554257199570__aaf344bc-2f9a-43cb-af62-0346612f330f)所示。
+PCF发起的SM策略关联修改流程如[图3]所示。
 图3  SM策略关联修改流程(PCF发起)
-[]images/SM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E4%BF%AE%E6%94%B9%E6%B5%81%E7%A8%8B(PCF%E5%8F%91%E8%B5%B7).png)
+
 流程说明如下： 
 PCF收到内部事件触发（如时段切换）或外部事件触发（如UDR通知PCF某用户的策略签约信息发生了变更）。 
 PCF重新进行策略决策。 
@@ -4980,9 +4980,9 @@ PCF重新进行策略决策。
 SMF执行最新的SM策略，向PCF发送Npcf_SMPolicyControl_UpdateNotify
  Ack消息。
 ##### SMF发起的SM策略关联终止流程 
-SMF发起的SM策略关联终止流程如[图4](36.html#T_1554257199570__75aee14b-afbf-4dc9-9f2b-d657d6c7df37)所示。
+SMF发起的SM策略关联终止流程如[图4]所示。
 图4  SM策略关联终止流程(SMF发起)
-[]images/SM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E7%BB%88%E6%AD%A2%E6%B5%81%E7%A8%8B(SMF%E5%8F%91%E8%B5%B7).png)
+
 流程说明如下： 
 在UE或SMF发起的PDU会话释放流程中，SMF查找到某PDU会话有相关的SM策略关联，向PCF发送Npcf_SMPolicyControl_Delete
  Request消息，请求PCF删除SM策略关联。请求中携带SM策略关联ID，可能还包含最后用量上报（即SM策略关联删除前SMF统计到用户已使用但SMF但还未上报的用量）。
@@ -4992,9 +4992,9 @@ PCF收到Npcf_SMPolicyControl_Delete
 PCF向SMF发送Npcf_SMPolicyControl_Delete
  Response消息。
 ##### PCF发起的SM策略关联终止流程 
-PCF发起的SM策略关联终止流程如[图5](36.html#T_1554257199570__2aa52711-64d8-4429-bdcd-80ca6344fb06)所示。
+PCF发起的SM策略关联终止流程如[图5]所示。
 图5  SM策略关联终止流程(PCF发起)
-[]images/SM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E7%BB%88%E6%AD%A2%E6%B5%81%E7%A8%8B(PCF%E5%8F%91%E8%B5%B7).png)
+
 流程说明如下： 
 PCF收到内部事件（如套餐过期）或外部事件（如UDR注销用户通知）。 
 PCF进行策略决策，确定需要删除某个PDU会话的SM策略。 
@@ -5002,7 +5002,7 @@ PCF向SMF发送Npcf_SMPolicyControl_UpdateNotify
 消息，其中包含SM策略关联删除指示。
 SMF向PCF回复Npcf_SMPolicyControl_UpdateNotify
  Ack消息。
-后续流程同[SMF发起的SM策略关联终止流程](36.html#T_1554257199570__e2bf2894-f83d-437a-bc2f-2a050dfc8194)。
+后续流程同[SMF发起的SM策略关联终止流程]。
 #### 接入和移动性策略控制 
 本节包含以下流程： 
 AM策略关联建立流程 
@@ -5011,9 +5011,9 @@ PCF发起的AM策略关联修改流程
 AMF发起的AM策略关联终止流程 
 PCF发起的AM策略关联终止流程 
 ##### AM策略关联建立流程 
-AM策略关联建立流程如[图1](37.html#T_1554257199570__AM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E5%BB%BA%E7%AB%8B%E6%B5%81%E7%A8%8B-BF506F23)所示。
+AM策略关联建立流程如[图1]所示。
 图1  AM策略关联建立流程
-[]images/AM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E5%BB%BA%E7%AB%8B%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 在UE注册或切换到某个AMF的过程中，如果该AMF确定需要为该UE向PCF请求接入和移动性策略控制，该AMF需要向PCF请求建立AM策略关联。为此该AMF向PCF发送Npcf_AMPolicyControl_Create
  Request消息，请求中包含用户永久标识（SUPI）、订阅通知指示（NotificationURI，即AMF后续接收PCF为该AM策略关联下发的策略更新通知的URI地址）。
@@ -5029,9 +5029,9 @@ Area Restrictions）和RFSP Index；PCF同时还确定需要为此AM策略关联
 PCF向AMF发送Npcf_AMPolicyControl_Create
  Response消息，其中包含PCF生成的AM策略关联ID、AM策略、订阅的事件列表。
 ##### AMF发起的AM策略关联修改流程 
-AMF发起的AM策略关联修改流程如[图2](37.html#T_1554257199570__4b280cd8-89c4-4217-8f1e-be9416baa37f)所示。
+AMF发起的AM策略关联修改流程如[图2]所示。
 图2  AM策略关联修改流程（AMF发起）
-[]images/1526880452149.png)
+
 流程说明如下： 
 当PCF订阅的事件发生时（如UDM通知AMF某用户签约的业务区域限制或RFSP
 Index发生了改变），AMF向PCF发送Npcf_AMPolicyControl_Update
@@ -5040,9 +5040,9 @@ PCF重新进行策略决策，可能更新AM策略。
 PCF向AMF发送Npcf_AMPolicyControl_Update
  Response消息，如果PCF更新了AM策略，则此响应消息中包含最新的AM策略。
 ##### PCF发起的AM策略关联修改流程 
-PCF发起的AM策略关联修改流程如[图3](37.html#T_1554257199570__e1ba1692-cc5a-4026-a686-7fa2e2faec6f)所示。
+PCF发起的AM策略关联修改流程如[图3]所示。
 图3  AM策略关联修改流程（PCF发起）
-[]images/1526880537149.png)
+
 流程说明如下： 
 PCF收到内外部事件触发（内部事件例如时段变更通知，外部事件例如UDR策略签约信息变更通知）。 
 PCF重新进行策略决策，确定需要调整某UE的AM策略。 
@@ -5051,9 +5051,9 @@ PCF向AMF发送Npcf_AMPolicyControl_UpdateNotify
 AMF回复Npcf_AMPolicyControl_UpdateNotify
  Ack消息。
 ##### AMF发起的AM策略关联终止流程 
-AMF发起的AM策略关联终止流程如[图4](37.html#T_1554257199570__AM%E7%AD%96%E7%95%A5%E5%85%B3%E8%81%94%E7%BB%88%E6%AD%A2%E6%B5%81%E7%A8%8BAMF%E5%8F%91%E8%B5%B7-BF507DBF)所示。
+AMF发起的AM策略关联终止流程如[图4]所示。
 图4  AM策略关联终止流程(AMF发起)
-[]images/1535335644136.png)
+
 流程说明如下： 
 在UE去注册流程中，或AMF重选伴随PCF重选流程中，源AMF需要向PCF终止AM策略关联。AMF向PCF发送Npcf_AMPolicyControl_Delete
  Request消息，携带AM策略关联ID。
@@ -5062,9 +5062,9 @@ AMF发起的AM策略关联终止流程如[图4](37.html#T_1554257199570__AM%E7%A
 PCF删除本地保存的该AM策略关联的相关信息，向AMF发送Npcf_AMPolicyControl_Delete
  Response消息。
 ##### PCF发起的AM策略关联终止流程 
-PCF发起的AM策略关联终止流程如[图5](37.html#T_1554257199570__08164619-600f-4305-b809-cb0b2c2e6136)所示。
+PCF发起的AM策略关联终止流程如[图5]所示。
 图5  AM策略关联终止流程（PCF发起）
-[]images/1526880664149.png)
+
 流程说明如下： 
 PCF收到内外部事件触发（内部事件例如时段变更通知，外部事件例如UDR通知PCF已删除了某用户的策略签约）。 
 PCF重新进行策略决策，确定需要删除相关的AM策略关联。 
@@ -5072,14 +5072,14 @@ PCF向AMF发送Npcf_AMPolicyControl_UpdateNotify
 消息，携带AM策略关联ID及删除AM策略关联指示。
 AMF回复Npcf_AMPolicyControl_UpdateNotify
  Ack消息。
-后续流程同[AMF发起的AM策略关联终止流程](37.html#T_1554257199570__e3ec87a9-be10-4c65-a6e7-658d5578f2ee)。
+后续流程同[AMF发起的AM策略关联终止流程]。
 ### NG-RAN位置上报 
 概述 :位置上报流程是指其它NF（例如：SMF、PCF等）向AMF订阅位置上报服务时，AMF向NG-RAN发送位置上报请求，要求NG-RAN上报CM-CONNECTED状态UE的当前位置，或者UE处于AOI（Area Of Interest，兴趣区域）的IN/OUT/UNKNOW等状态。
 当UE迁移到CM-IDLE状态或者AMF发送取消指示时NG-RAN停止上报。当UE发生基于Xn的切换时，NG-RAN节点的位置上报相关信息会传递给目的NG-RAN节点。 
 #### NG-RAN位置上报流程 
-NG-RAN位置上报流程如[图1](1600073971102.html#zb33604f12d0849539fd356908e237837__8aa89e25-3a46-4a81-aa51-98b44a7afc95)所示。
+NG-RAN位置上报流程如[图1]所示。
 图1  NG-RAN位置上报流程
-[]images/1600074695554.png)
+
 流程说明如下： 
 AMF发送Location Reporting Control
 消息给NG-RAN。Location Reporting Control
@@ -5104,9 +5104,9 @@ SBI计费会话创建流程
 SBI计费会话更新流程 
 SBI计费会话终止流程 
 #### CHF服务发现流程 
-SMF支持通过NRF查询CHF的服务，获取CHF的计费服务IP地址和端口。如[图1](42.html#T_1554257199570__a71b61bb-fe13-49b8-87bc-6d636b81ebc2)所示。
+SMF支持通过NRF查询CHF的服务，获取CHF的计费服务IP地址和端口。如[图1]所示。
 图1  CHF服务的NRF发现流程
-[]images/1599034171429.png)
+
 流程说明如下： 
 SMF作为服务消费者，发起NF Discovery Request（Nnrf_NFDiscovery
  Request）到NRF，请求CHF融合计费功能服务。NRF决定是否允许SMF发现所请求的服务，并授权服务发现请求，根据请求中的信息发现对应的融合计费功能实例。
@@ -5116,9 +5116,9 @@ NRF返回NF Discovery Response（Nnrf_NFDiscovery
 用户激活或者首业务报文到达时会触发SMF创建SBI计费会话。 
 用户激活时，创建SBI计费会话，预申请配额，可以避免用户访问业务时才申请配额导致用户访问业务有延迟，提升用户体验。 
 业务触发时，创建SBI计费会话，不申请配额，而是在用户使用业务时申请配额，可避免用户长期占用配额不使用的情况。 
-用户激活时创建SBI计费会话流程如[图2](42.html#T_1554257199570__eedca363-caff-4724-a879-4eb2be64d9b5)所示。
+用户激活时创建SBI计费会话流程如[图2]所示。
 图2  PDU会话触发计费开始流程
-[]images/1599034539793.png)
+
 流程说明如下： 
 UE发起PDU Session Establishment Request
 ，SMF收到PDU Session Establishment Request
@@ -5137,9 +5137,9 @@ UPF创建用户面隧道成功，发送N4 Session Establish Response（PFCP Sess
 SMF响应PDU Session Establishment Accept
 消息。
 用户正常使用业务。 
-业务触发创建SBI计费会话流程如[图3](42.html#T_1554257199570__1edbdb1f-bf12-4342-a990-d956f6bc677f)所示。
+业务触发创建SBI计费会话流程如[图3]所示。
 图3  业务触发SBI计费开始流程
-[]images/1599037158784.png)
+
 流程说明如下： 
 UE发起PDU Session Establishment Request
 ，SMF收到PDU Session Establishment Request
@@ -5182,9 +5182,9 @@ NF服务去注册流程
 NF或NF服务的发现流程 
 NF或NF服务的状态订阅通知流程 
 #### NF服务注册流程 
-NF服务注册流程如[图1](44.html#T_1554257199570__4c2cdefc-5353-4e92-a995-a5e1029ee68a)所示。
+NF服务注册流程如[图1]所示。
 图1  NF服务注册流程
-[]images/ZUF-90-11-001-NF%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 NF向NRF发送Nnrf_NFManagement_NFRegister
  Request消息，请求注册本NF实例信息及支持的NF服务实例。
@@ -5192,9 +5192,9 @@ NRF保存NF实例信息及支持的NF服务实例信息，并标识该NF可用�
 NRF向NF发送Nnrf_NFManagement_NFRegister
  Response消息。
 #### NF服务更新流程 
-NF服务更新流程如[图2](44.html#T_1554257199570__f27f9046-e3e1-4a06-a32e-97f5f931fd8d)所示。
+NF服务更新流程如[图2]所示。
 图2  NF服务更新流程
-[]images/ZUF-90-11-001-NF%E6%9C%8D%E5%8A%A1%E6%9B%B4%E6%96%B0%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 NF向NRF发送Nnrf_NFManagement_NFUpdate
  Request消息，请求服务信息更新。
@@ -5202,9 +5202,9 @@ NRF更新保存的NF实例信息。
 NRF向NF发送Nnrf_NFManagement_NFUpdate
  Response消息，接受本次更新。
 #### NF服务去注册流程 
-NF服务去注册流程如[图3](44.html#T_1554257199570__d8fb79cb-8c59-4502-9cb9-8e9a81e34a2d)所示。
+NF服务去注册流程如[图3]所示。
 图3  NF服务去注册流程
-[]images/ZUF-90-11-001-NF%E6%9C%8D%E5%8A%A1%E5%8E%BB%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 NF实例准备退出服务，向NRF发送Nnrf_NFManagement_NFDeregister
  Request消息，请求去注册。
@@ -5212,9 +5212,9 @@ NRF接受NF退出服务的请求，标记该NF不可用。
 NRF向NF发送Nnrf_NFManagement_NFDeregister
  Response消息，NF退出服务。
 #### NF或NF服务的发现流程 
-NF或NF服务的发现流程如[图4](44.html#T_1554257199570__435ac19a-df92-456c-977e-34c4c077591b)所示。
+NF或NF服务的发现流程如[图4]所示。
 图4  NF或NF服务发现流程
-[]images/ZUF-90-11-001-NF%E6%9C%8D%E5%8A%A1%E5%8F%91%E7%8E%B0%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 NF服务消费者需要发现目标NF服务，向NRF发送Nnrf_NFDiscovery
  Request消息，请求发现目标NF服务。
@@ -5227,9 +5227,9 @@ NF或NF服务的状态订阅通知流程包括如下业务流程：
 当NRF的服务PLMN即为归属PLMN时的NF或NF服务状态订阅通知流程 
 当NRF的服务PLMN与归属PLMN不一致时的NF或NF服务状态订阅通知流程 
 当NRF的服务PLMN即为归属PLMN时
-当NRF的服务PLMN即为归属PLMN时的状态订阅通知流程如[图5](44.html#T_1554257199570__16452fd3-f175-4a91-adde-703503117ca8)所示。
+当NRF的服务PLMN即为归属PLMN时的状态订阅通知流程如[图5]所示。
 图5  服务PLMN即为归属PLMN时的状态订阅通知流程
-[]images/NF%E6%88%96NF%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5%E6%B5%81%E7%A8%8BPLMN%E4%B8%80%E8%87%B4.png)
+
 流程说明如下： 
 NF服务消费者向NRF发送Nnrf_NFManagement_NFStatusSubscribe
  Request消息，请求订阅NF实例及包含服务的注册/更新/去注册。
@@ -5239,9 +5239,9 @@ NRF向NF服务消费者发送Nnrf_NFManagement_NFStatusSubscribe
 被订阅的NF实例及包含服务信息发生变更，NRF向NF服务消费者发送Nnrf_NFManagement_NFStatusNotify
  Request消息。
 当NRF的服务PLMN与归属PLMN不一致时
-当NRF的服务PLMN与归属PLMN不一致时的状态订阅通知流程如[图6](44.html#T_1554257199570__fe68e134-cc9d-4155-8694-f8d84262aed4)所示。
+当NRF的服务PLMN与归属PLMN不一致时的状态订阅通知流程如[图6]所示。
 图6  服务PLMN与归属PLMN不一致时的状态订阅通知流程
-[]images/ZUF-90-11-001-NF%E6%88%96NF%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%8A%B6%E6%80%81%E8%AE%A2%E9%98%85%E9%80%9A%E7%9F%A5%E6%B5%81%E7%A8%8B.png)
+
 流程说明如下： 
 服务PLMN中的NF服务消费者向NRF发送Nnrf_NFManagement_NFStatusSubscribe
  Reques消息，请求订阅NF实例及包含服务的注册/更新/去注册。
@@ -5253,9 +5253,9 @@ NRF向NF服务消费者发送Nnrf_NFManagement_NFStatusSubscribe
  Request消息。
 ### 网络切片 
 #### 支持用户接入网络切片 
-注册流程中切片信息处理如[图1](39.html#T_1554257199570__d7702d38-6a47-4cae-ac2d-af72f9b8a631)所示。
+注册流程中切片信息处理如[图1]所示。
 图1  注册过程中切片信息处理
-[]images/%E6%94%AF%E6%8C%81%E7%94%A8%E6%88%B7%E6%8E%A5%E5%85%A5%E7%BD%91%E7%BB%9C%E5%88%87%E7%89%87.png)
+
 流程说明如下： 
 UE判断需要发起注册流程时，发送注册请求消息（Registration Request
 ），消息中携带Requested NSSAI。
@@ -5287,9 +5287,9 @@ AMF向UE发送注册接受消息Registration Accept
 ，消息中携带Allowed NSSAI、Rejected NSSAI、URSP等信息。
 继续处理注册流程，直到注册流程结束。 
 #### 网络切片的PDU连接创建 
-PDU会话建立过程中的切片信息处理流程如[图1](40.html#T_1554257199570__02c528dd-125c-4925-8cd2-ab2e455c3266)所示。
+PDU会话建立过程中的切片信息处理流程如[图1]所示。
 图1  PDU会话建立过程中的切片信息处理
-[]images/%E7%BD%91%E7%BB%9C%E5%88%87%E7%89%87%E5%9C%B0PDU%E8%BF%9E%E6%8E%A5%E5%88%9B%E7%AB%8B.png)
+
 UE判断需要发起PDU会话建立流程时，发送PDU Session Establishment Request
 消息，消息中携带请求的S-NSSAI、DNN、PDU会话ID等信息。
 AMF向NSSF发送Nnssf_NSSelection_Get
@@ -5303,7 +5303,9 @@ _Response消息，在消息中携带SMF
 Candidate列表等信息。
 AMF根据SMF Candidate列表等信息，选择一个SMF。 
 继续处理PDU会话建立流程，如通知SMF创建会话上下文，创建用户面上下文等，直到PDU会话建立流程结束。 
-缩略语 :缩略语 :### 5G-GUTI 
+## 缩略语 
+## 缩略语 
+### 5G-GUTI 
 5G Globally Unique Temporary Identity5G全球唯一临时标识
 5GC :5G Core Network5G核心网
 ### 5GS 
@@ -5452,11 +5454,11 @@ Expected User Response预期的用户响应
 #### Namf接口协议简介 
 场景描述 :Namf是AMF为其他NF提供服务的接口。 
 图1  Namf接口示意图
-[]images/1.PNG)
+
  说明： 
 目前，AMF还不支持向LMF、GMLC、CBCF、PWS、NEF提供服务。 
 协议栈 :图2  服务化接口协议栈
-[]images/3.PNG)
+
 Namf和其他所有服务化接口一样，都采用如上图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 AMF通过Namf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -5901,12 +5903,12 @@ reachability|Mandatory|指示用户当前的可达性状态。
 #### Nsmf接口协议简介 
 场景描述 :Nsmf是SMF为其他NF提供服务的接口。 
 图1  Nsmf接口示意图
-[]images/1.PNG)
+
 N16a是SMF与I-SMF之间的参考点，N38是I-SMF与I-SMF之间的参考点。 
  说明： 
 目前，SMF还不支持向NEF提供服务。 
 协议栈 :图2  服务化接口协议栈
-[]images/3.PNG)
+
 Nsmf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 SMF通过Nsmf接口向其他NF提供多种服务（NFS，Network Function Service），具体服务参见下表。 
@@ -5927,15 +5929,15 @@ Nsmf_PDUSession|Create|在涉及I-SMF的场景中创建一个单独的PDU会话�
 Nsmf_PDUSession|Update|更新I-SMF中的单个PDU会话和/或提供所述I-SMF向所述UE发送N1 SM信令所需的信息。使用场景有：UE或者I-SMF发去的PDU会话修改UE或者I-SMF请求的PDU会话释放增加/删除/修改由I-SMF控制的PDU会话的锚点和分流节点I-SMF发送的N4流量使用报告相关通知
 Nsmf_PDUSession|Release|在PDU会话释放流程下，I-SMF释放SM上下文服务操作用于释放指定PDU会话的SM上下文。
 Nsmf_PDUSession|Notify Status|通知SM上下文状态服务操作用于I-SMF通知NF服务消费者SMF中与PDU会话相关的SM上下文状态（如，当SM上下文释放时）。用于带有I-SMF的PDU会话流程。
-[Nsmf_PDUSession_CreateSMContext](3.html)
-[Nsmf_PDUSession_UpdateSMContext](4.html)
-[Nsmf_PDUSession_ReleaseSMContext](5.html)
-[Nsmf_PDUSession_NotifySMContextStatus](6.html)
-[Nsmf_PDUSession_RetrieveSMContext](7.html)
-[Nsmf_PDUSession_Create](8.html)
-[Nsmf_PDUSession_Update](9.html)
-[Nsmf_PDUSession_Release](10.html)
-[Nsmf_PDUSession_NotifyStatus](11.html)
+[Nsmf_PDUSession_CreateSMContext]
+[Nsmf_PDUSession_UpdateSMContext]
+[Nsmf_PDUSession_ReleaseSMContext]
+[Nsmf_PDUSession_NotifySMContextStatus]
+[Nsmf_PDUSession_RetrieveSMContext]
+[Nsmf_PDUSession_Create]
+[Nsmf_PDUSession_Update]
+[Nsmf_PDUSession_Release]
+[Nsmf_PDUSession_NotifyStatus]
 ##### Nsmf_PDUSession_CreateSMContext 
 服务操作|操作语义|服务操作的解释
 ---|---|---
@@ -6336,9 +6338,9 @@ statusInfo|Mandatory|该IE应包含PDU会话的状态信息。
 #### Nnssf接口协议简介 
 场景描述 :Nnssf是NSSF为其他NF提供服务的接口。 
 图1  Nnssf接口示意图
-[]images/1.png)
+
 协议栈 :图2  服务化接口协议栈
-[]images/2.png)
+
 Nnssf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 NSSF通过Nnssf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -6482,9 +6484,9 @@ authorizedNssaiAvailabilityData|Mandatory|包含授权的NSSAI可用性信息，
 #### Nnrf接口协议简介 
 场景描述 :Nnrf是NRF为其他NF提供服务的接口。（下图参考协议29.510中的Figure 4-1: 5G System architecture） 
 图1  Nnrf接口示意图
-[]images/1.png)
+
 协议栈 :图2  服务化接口协议栈
-[]images/2.png)
+
 Nnrf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 NRF通过Nnrf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -7235,10 +7237,10 @@ array(NfInstanceId)|NF实例ID数组。
 #### Nudm接口协议简介 
 场景描述 :Nudm是UDM为其他NF提供服务的接口如下图所示。 
 图1  Nudm接口示意图
-[]images/1.png)
+
 协议栈 :Nudm和其他所有服务化接口一样，都采用如下图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 图2  服务化接口协议栈
-[]images/2.png)
+
 ##### 网络功能服务列表 
 UDM通过Nudm接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括表1所定义的各种。 
 NF|NFS|NFS的解释
@@ -7447,7 +7449,7 @@ gpsi|可选|取值为MSISDN。|《3GPP TS 29.503》协议6.1.6.2.18章节
 ipv4Addr|条件可选|表示IPv4地址。|《3GPP TS 29.503》协议6.1.6.2.22章节
 ipv6Addr|条件可选|表示IPv6地址。|《3GPP TS 29.503》协议6.1.6.2.22章节
 ipv6Prefix|条件可选|表示IPv6地址前缀。|《3GPP TS 29.503》协议6.1.6.2.22章节
-[]images/1608609046658.PNG)携带ipv4Addr， ipv6Addr，和ipv6Prefix其中一个信元。 
+携带ipv4Addr， ipv6Addr，和ipv6Prefix其中一个信元。 
 ##### ModificationNotification 
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
@@ -7505,10 +7507,10 @@ supi|必选|故障P-CSCF服务的SUPI。|《3GPP TS 29.503》协议6.2.6.2.9章�
 #### Nausf接口协议简介 
 场景描述 :Nausf是AUSF为其他NF提供服务的接口如下图所示。 
 图1  Nausf接口示意图
-[]images/1.PNG)
+
 协议栈 :Nausf和其他所有服务化接口一样，都采用如下图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 图2  服务化接口协议栈
-[]images/3.PNG)
+
 ##### 网络功能服务列表 
 AUSF通过Nausf接口向其他NF提供多种服务（NFS，Network Function Service），具体服务包括下表所定义的各种： 
 NF|NFS|NFS的解释
@@ -7573,9 +7575,9 @@ kseaf|条件可选|如果鉴权成功，则携带Kseaf。|《3GPP TS 29.509》�
 #### Npcf接口协议简介 
 场景描述 :Npcf是PCF为其他NF提供服务的接口。 
 图1   Npcf接口示意图
-[]images/1.PNG)
+
 协议栈 :图2  服务化接口协议栈
-[]images/33.png)
+
 Npcf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 PCF通过Npcf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -7650,40 +7652,40 @@ Npcf_UEPolicyControl_Delete|Request/Response|当AMF收到UE用户发起的去注
 Npcf_UEPolicyControl_Update|Request/Response|当策略控制请求触发器满足预置条件，AMF调用Npcf_UEPolicyControl_Update，向PCF上报策略执行情况，或者更新AMF信息，PCF根据AMF新上报的信息更新UE策略关联，并将其下发给AMF。AMF发送POST请求消息中包含PolicyAssociationUpdateRequest数据类型的对象。如果成功，PCF应响应状态码“200 OK”，并且PUT响应消息体应包含PolicyUpdate数据类型的对象。如果失败，PCF应返回400/404/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 #### 数据类型解释 
 ##### Npcf_SMPolicyControl 
-[SmPolicyControl](17.html)
-[SmPolicyContextData](18.html)
-[SmPolicyDecision](19.html)
-[SmPolicyNotification](20.html)
-[PccRule](21.html)
-[SessionRule](22.html)
-[QoSData](23.html)
-[ConditionData](24.html)
-[TrafficControlData](25.html)
-[ChargingData](26.html)
-[UsageMonitoringData](27.html)
-[RedirectInformation](28.html)
-[FlowInformation](29.html)
-[SmPolicyDeleteData](30.html)
-[QosCharacteristics](31.html)
-[ChargingInformation](32.html)
-[AccuUsageReport](33.html)
-[SmPolicyUpdateContextData](34.html)
-[UpPathChgEvent](35.html)
-[TerminationNotification](36.html)
-[AppDetectionInfo](37.html)
-[AccNetChId](38.html)
-[RequestedRuleData](39.html)
-[RequestedUsageData](40.html)
-[RuleReport](41.html)
-[AuthorizedDefaultQos](42.html)
-[servNfId](43.html)
-[Guami](44.html)
-[PlmnId](45.html)
-[AmfId](46.html)
-[Mcc](47.html)
-[Mnc](48.html)
-[AnGwAddress](49.html)
-[SmfId](50.html)
+[SmPolicyControl]
+[SmPolicyContextData]
+[SmPolicyDecision]
+[SmPolicyNotification]
+[PccRule]
+[SessionRule]
+[QoSData]
+[ConditionData]
+[TrafficControlData]
+[ChargingData]
+[UsageMonitoringData]
+[RedirectInformation]
+[FlowInformation]
+[SmPolicyDeleteData]
+[QosCharacteristics]
+[ChargingInformation]
+[AccuUsageReport]
+[SmPolicyUpdateContextData]
+[UpPathChgEvent]
+[TerminationNotification]
+[AppDetectionInfo]
+[AccNetChId]
+[RequestedRuleData]
+[RequestedUsageData]
+[RuleReport]
+[AuthorizedDefaultQos]
+[servNfId]
+[Guami]
+[PlmnId]
+[AmfId]
+[Mcc]
+[Mnc]
+[AnGwAddress]
+[SmfId]
 ###### SmPolicyControl 
 SmPolicyControl的数据结构参见下表： 
 属性名称|Presence requirement|描述
@@ -8048,11 +8050,11 @@ SmfId的数据结构参见下表：属性名称|Presence requirement|描述
 ---|---|---
 smfId|Optional|用于标识SMF网元实例。
 ##### Npcf_AMPolicyControl 
-[PolicyAssociation](52.html)
-[PolicyAssociationRequest](53.html)
-[PolicyAssociationUpdateRequest](54.html)
-[PolicyUpdate](55.html)
-[TerminationNotification](56.html)
+[PolicyAssociation]
+[PolicyAssociationRequest]
+[PolicyAssociationUpdateRequest]
+[PolicyUpdate]
+[TerminationNotification]
 ###### PolicyAssociation 
 PolicyAssociation的数据结构参见下表： 
 属性名称|Presence requirement|描述
@@ -8114,11 +8116,11 @@ TerminationNotification的数据结构参见下表：
 resourceUri|Mandatory|表示通知有关的单个AM策略的资源URI。
 cause|Mandatory|表示PCF请求终止策略关联的原因。取值如下：UNSPECIFIED ：未知原因。UE_SUBSCRIPTION：用户签约改变。INSUFFICIENT_RES：系统过载。
 ##### Npcf_UEPolicyControl 
-[PolicyAssociation](58.html)
-[PolicyAssociationRequest](59.html)
-[PolicyAssociationUpdateRequest](60.html)
-[PolicyUpdate](61.html)
-[TerminationNotification](62.html)
+[PolicyAssociation]
+[PolicyAssociationRequest]
+[PolicyAssociationUpdateRequest]
+[PolicyUpdate]
+[TerminationNotification]
 ###### PolicyAssociation 
 PolicyAssociation的数据结构参见下表： 
 属性名称|Presence requirement|描述
@@ -8175,16 +8177,16 @@ TerminationNotification的数据结构参见下表：
 resourceUri|Mandatory|表示通知有关的单个UE策略关联的资源URI。
 cause|Mandatory|表示PCF请求终止策略关联的原因。取值如下：UNSPECIFIED ：未知原因。UE_SUBSCRIPTION：用户签约改变。INSUFFICIENT_RES：系统过载。
 ##### 通用数据类型 
-[SubscribedDefaultQos](64.html)
-[Snssai](65.html)
-[UserLocation](66.html)
-[RouteToLocation](67.html)
-[RouteInformation](68.html)
-[ServiceAreaRestriction](69.html)
-[PresenceInfo](70.html)
-[Arp](71.html)
-[Ambr](72.html)
-[TraceData](73.html)
+[SubscribedDefaultQos]
+[Snssai]
+[UserLocation]
+[RouteToLocation]
+[RouteInformation]
+[ServiceAreaRestriction]
+[PresenceInfo]
+[Arp]
+[Ambr]
+[TraceData]
 ###### SubscribedDefaultQos 
 SubscribedDefaultQos的数据结构参见下表： 
 属性名称|Presence requirement|描述
@@ -8267,9 +8269,9 @@ interfaceList|Optional|接口列表。如果此属性不存在，则应跟踪适
 #### Nbsf接口协议简介 
 场景描述 :Nbsf业务用于BSF提供PDU会话绑定功能，保证某个PDU会话的AF请求到达保持PDU会话信息的相关PCF。 
 图1  Nbsf接口示意图
-[]images/1.PNG)
+
 协议栈 :图2  服务化接口协议栈
-[]images/3.PNG)
+
 Nbsf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 #### 服务操作解释 
 ##### Nbsf_Management_Register 
@@ -8373,10 +8375,10 @@ DiameterIdentity|包含Diameter标识的字符串。模式：'^（[A-Za-z0-9] +�
 #### Nchf接口协议简介 
 场景描述 :Nchf是CHF为其他NF提供服务的接口。 
 图1  Nchf接口示意图
-[]images/1.PNG)
+
 协议栈 :Nchf和其他所有服务化接口一样，都采用如下图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 图2  服务化接口协议栈
-[]images/3.PNG)
+
 ##### 网络功能服务列表 
 CHF通过Nchf接口向其他NF提供多种服务（NFS，Network Function Service），具体服务包括下表所定义的各种。 
 NF|NFS|NFS的解释
@@ -8658,10 +8660,10 @@ qosFlowsUsage Reports|OM|该参数表示每个QFI的容器清单，包含上报�
 #### Nsmsf接口协议简介 
 场景描述 :Nsmsf是SMSF为其他NF提供服务的接口。 
 图1  Nsmsf接口示意图
-[]images/1.PNG)
+
 协议栈 :Nsmsf和其他所有服务化接口一样，都采用如下图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。 
 图2  服务化接口协议栈
-[]images/3.PNG)
+
 ##### 网络功能服务列表/NFS List 
 NF|NFS|NFS的解释
 ---|---|---
@@ -8710,9 +8712,9 @@ deliveryStatus|Mandatory|指示SMS在SMSF和其他服务化接口间的传输状
 ### N1接口 
 #### N1接口协议简介 
 场景描述 :N1接口为UE和AMF间的信令面接口。 
-协议栈 :N1接口协议栈如[图1](#T_1607674074967__e53e590b-a132-4cd8-bb89-fc6d4a349e07)所示。
+协议栈 :N1接口协议栈如[图1]所示。
 图1  N1接口协议栈
-[]images/image.png)
+
 ##### 消息列表 
 N1接口上支持的消息参见下表。 
 消息|方向|作用
@@ -10060,9 +10062,9 @@ Uplink data status|Uplink data status信元用于向网络指示有上行数据�
 ### N2接口 
 #### N2接口协议简介 
 场景描述 :N2接口为(R)AN和AMF间的信令面接口。 
-协议栈 :N2接口协议栈如[图1](#T_1608024222398__ab39133a-611f-4d71-abb8-d60f2eaaf5e6)所示。
+协议栈 :N2接口协议栈如[图1]所示。
 图1  N2接口协议栈
-[]images/image.png)
+
 ##### 消息列表 
 N2接口上支持的消息参见下表。 
 消息|方向|作用
@@ -11773,9 +11775,9 @@ Path Switch Request Unsuccessful Transfer|SMF通过AMF透传给NG-RAN的Path Swi
 #### N3接口协议简介 
 场景描述 :N3接口是5G (R)AN与UPF之间的接口，主要用于传递5G (R)AN与UPF之间的上下行用户面数据。
 协议栈 :N3接口采用GTPv1-U协议，支持3GPP TS 29.281协议。 
-对应的用户面接口协议栈如[图1](#T_1608519690208__bc024873-15c7-4d09-8931-6f2a5704a653)所示。
+对应的用户面接口协议栈如[图1]所示。
 图1  N3接口协议栈
-[]images/image.png)
+
 ##### 消息列表 
 N3接口上支持的消息参见下表。 
 消息|方向|作用
@@ -11852,12 +11854,12 @@ Private Extension|该信元包含厂商的特定信息。扩展标识是在最�
 ### N4接口 
 #### N4接口协议简介 
 场景描述 :N4接口为SMF和UPF之间的接口，用于传输SMF和UPF之间的控制面和用户面信息。 
-协议栈 :N4接口的控制面协议栈如[图1](#T_1608621566644__c8ee312c-e211-4651-babe-7005b224bfd2)所示。
+协议栈 :N4接口的控制面协议栈如[图1]所示。
 图1  N4接口控制面协议栈
-[]images/1610003898523.png)
-N4接口的用户面协议栈如[图2](#T_1608621566644__92b3b744-a4b3-442d-8e94-d1bebeca27f2)所示。
+
+N4接口的用户面协议栈如[图2]所示。
 图2  N4接口用户面协议栈
-[]images/1559639405031.png)
+
 ##### 消息列表 
 N4接口上支持的消息参见下表。 
 消息|方向|作用
@@ -12421,9 +12423,9 @@ IE|说明
 ### N9接口 
 #### N9接口协议简介 
 场景描述 :N9接口为UPF和UPF之间的用户面接口，用于传递UPF间的上行、下行用户数据流。
-协议栈 :N9接口采用GTPv1-U协议，支持3GPP TS 29.281协议。对应的用户面接口协议栈如[图1](#T_1608620810490__42304476-af57-491e-8797-f7038c12418e)所示。
+协议栈 :N9接口采用GTPv1-U协议，支持3GPP TS 29.281协议。对应的用户面接口协议栈如[图1]所示。
 图1  N9接口协议栈
-[]images/image.png)
+
 ##### 消息列表 
 N9接口上支持的消息参见下表。 
 消息|方向|作用
@@ -12500,9 +12502,9 @@ Private Extension|该信元包含厂商的特定信息。扩展标识是在最�
 ### N26接口 
 #### N26接口协议简介 
 场景描述 :N26接口为MME和AMF间的信令面接口。 
-协议栈 :N26接口协议栈如[图1](#T_1608520734601__599755fb-1585-4813-8c70-b9eb88de7f70)所示。
+协议栈 :N26接口协议栈如[图1]所示。
 图1  N26接口协议栈
-[]images/image.png)
+
 ##### 消息列表 
 N26接口上支持的消息参见下表。 
 消息|方向|作用
@@ -12888,9 +12890,9 @@ Bearer Quality of Service (Bearer QoS)|Bearer Quality of Service (Bearer QoS)通
 #### N32接口协议简介 
 场景描述 :N32接口为SEPP和SEPP间的信令面接口。
 协议栈 :N32接口（N32-c和N32-f）采用HTTP 2协议，并将JSON作为应用层串行协议。对于传输层安全保护，SEPP应支持3GPP TS 33.501规定的TLS。 
-N32接口协议栈如[图1](#T_1608620810490__42304476-af57-491e-8797-f7038c12418e)所示。
+N32接口协议栈如[图1]所示。
 图1  N32接口协议栈
-[]images/image.png)
+
 ##### 消息列表 
 N32接口上支持的消息参见下表。 
 消息|方向|作用
@@ -12944,11 +12946,11 @@ plmnIdList|SEPP关联的PLMN ID列表。
 业务模型 :附着流程是用户注册到EPS网络上的流程，是用户开机后的第一个过程，是后续所有的流程的基础。在附着过程中，EPC网络会为用户建立一个默认承载，也可以对用户进行鉴权（用户首次附着到EPS网络上必须鉴权）。 
 
 
-信令流程 :EPC信令流程-Attach信令流程图如[图1](01%20Attach.html#concept1__EPC%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-Attachv-28F95F8F)所示。
+信令流程 :EPC信令流程-Attach信令流程图如[图1]所示。
 图1  EPC信令流程-Attach
 
 
-[]images/EPC%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-Attachv.png)
+
 
 
 
@@ -13087,10 +13089,10 @@ SGW向New MME发送Modify Bearer Response消息。SGW可以发送缓存的下行
 业务模型 :UE主动发起的分离流程，用于UE通知网络该UE不再使用EPC网络，网络侧可以释放该UE相关资源。 
 
 
-信令流程 :UE发起的Detach信令流程如[图1](02%20UE%E5%8F%91%E8%B5%B7%E7%9A%84Detach.html#concept1__UE%E5%8F%91%E8%B5%B7%E7%9A%84Detach%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-28FA61C9)所示。
+信令流程 :UE发起的Detach信令流程如[图1]所示。
 图1  UE发起的Detach信令流程
 
-[]images/UE%E5%8F%91%E8%B5%B7%E7%9A%84Detach.png)
+
 
 
 流程说明 :
@@ -13128,10 +13130,10 @@ SGW向MME发送Delete Session Response消息。
 业务模型 :MME发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。 
 
 
-信令流程 :MME发起的Detach信令流程如[图1](03%20MME%E5%8F%91%E8%B5%B7%E7%9A%84Detach.html#concept1__MME%E5%8F%91%E8%B5%B7%E7%9A%84Detach%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-28FAD524)所示。
+信令流程 :MME发起的Detach信令流程如[图1]所示。
 图1  MME发起的Detach信令流程
 
-[]images/MME%E5%8F%91%E8%B5%B7%E7%9A%84Detach.png)
+
 
 
 #### 流程描述 
@@ -13182,10 +13184,10 @@ Type指示UE重新Attach，UE可以在RRC连接释放完成后重新附着。
 业务模型 :HSS发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。 
 
 
-信令流程 :HSS发起的Detach信令流程如[图1](04%20HSS%E5%8F%91%E8%B5%B7%E7%9A%84Detach.html#concept1__HSS%E5%8F%91%E8%B5%B7%E7%9A%84Detach%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-28FB86A2)所示。
+信令流程 :HSS发起的Detach信令流程如[图1]所示。
 图1  HSS发起的Detach信令流程
 
-[]images/HSS%E5%8F%91%E8%B5%B7%E7%9A%84Detach%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B.png)
+
 
 
 流程说明 :
@@ -13234,10 +13236,10 @@ Connection Release命令给eNodeB释放UE的S1-MME信令连接。
 该业务使用于用户在同一个MME内移动，发起TAU过程，同时SGW未发生变化的场景。 
 
 
-信令流程 :MME和SGW均未变更的E-UTRAN内部TAU流程如[图1](05%20MME%E5%92%8CSGW%E5%9D%87%E6%9C%AA%E5%8F%98%E6%9B%B4%E7%9A%84E-UTRAN%E5%86%85%E9%83%A8TAU%E6%B5%81%E7%A8%8B.html#concept1__TAUIntra-MMEWithoutS-GWChange%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-28FEBFB1)所示、
+信令流程 :MME和SGW均未变更的E-UTRAN内部TAU流程如[图1]所示、
 图1  MME和SGW均未变更的E-UTRAN内部TAU流程
 
-[]images/TAU,%20intra-MME,%20without%20S-GW%20change.png)
+
 
 
 流程说明 :
@@ -13273,10 +13275,10 @@ Update Complete消息确认接收到了Tracking Area Update Accept消息。
 该业务使用于用户在同一个MME内移动，发起TAU过程，同时SGW发生变化的场景。 
 
 
-信令流程 :MME不变、SGW改变的E-UTRAN内部TAU流程如[图1](06%20MME%E4%B8%8D%E5%8F%98%E3%80%81SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%86%85%E9%83%A8TAU%E6%B5%81%E7%A8%8B.html#concept1__TAUIntra-MMEWithS-GWChange%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-28FF4546)所示。
+信令流程 :MME不变、SGW改变的E-UTRAN内部TAU流程如[图1]所示。
 图1  MME不变、SGW改变的E-UTRAN内部TAU流程
 
-[]images/TAU,%20intra-MME,%20with%20S-GW%20change.png)
+
 
 
 流程说明 :
@@ -13337,11 +13339,11 @@ Update Complete消息确认接收到了Tracking Area Update Accept消息。
 该业务使用于用户从一个MME移动到另外一个MME，发起TAU过程，但SGW未发生变化的场景。 
 
 
-信令流程 :MME改变、SGW不变的E-UTRAN内部TAU流程如[图1](07%20MME%E6%94%B9%E5%8F%98%E3%80%81SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%86%85%E9%83%A8TAU%E6%B5%81%E7%A8%8B.html#concept1__TAUInter-MMEWithoutS-GWChange%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-2901E788)所示。
+信令流程 :MME改变、SGW不变的E-UTRAN内部TAU流程如[图1]所示。
 图1  MME改变、SGW不变的E-UTRAN内部TAU流程
 
 
-[]images/TAU,%20inter-MME,%20without%20S-GW%20change.png)
+
 
 
 
@@ -13425,11 +13427,11 @@ Update Complete消息确认接收到了Tracking Area Update Accept消息。
 该业务使用于用户从一个MME移动到另外一个MME，发起TAU过程，同时SGW也发生变化的场景。 
 
 
-信令流程 :MME和SGW均改变的E-UTRAN内部TAU流程如[图1](08%20MME%E5%92%8CSGW%E5%9D%87%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%86%85%E9%83%A8TAU%E6%B5%81%E7%A8%8B.html#concept1__TAUInter-MMEWithS-GWChange%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-2902824F)所示。
+信令流程 :MME和SGW均改变的E-UTRAN内部TAU流程如[图1]所示。
 图1  MME和SGW均改变的E-UTRAN内部TAU流程
 
 
-[]images/TAU,%20inter-MME,%20with%20S-GW%20change.png)
+
 
 
 
@@ -13536,11 +13538,11 @@ UE的接入类型即RAT type(GSM、UTRAN、E-UTRAN)发生改变
  
 
 
-信令流程 :UTRAN到E-UTRAN的TAU流程如[图1](09%20UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.html#concept1__UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B-DE441FC2)所示。
+信令流程 :UTRAN到E-UTRAN的TAU流程如[图1]所示。
 图1  UTRAN到E-UTRAN的TAU流程
 
 
-[]images/UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -13643,11 +13645,11 @@ MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，�
 业务模型 :从GERAN向E-UTRAN的TAU是指UE通过小区重选或重定向等GERAN接入改为E-UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。SGSN和MME间使用Gn接口。 
 
 
-信令流程 :GERAN到E-UTRAN的TAU流程如[图1](10%20GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.html#concept1__GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B-29A0796C)所示。
+信令流程 :GERAN到E-UTRAN的TAU流程如[图1]所示。
 图1  GERAN到E-UTRAN的TAU流程
 
 
-[]images/GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -13744,11 +13746,11 @@ MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，�
 业务模型 :从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
 
 
-信令流程 :E-UTRAN到UTRAN的RAU流程如[图1](11%20E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.html#concept1__E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B-29A1E068)所示。
+信令流程 :E-UTRAN到UTRAN的RAU流程如[图1]所示。
 图1  E-UTRAN到UTRAN的RAU流程
 
 
-[]images/E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -13830,11 +13832,11 @@ MME执行S1-AP Release。
 业务模型 :从E-UTRAN向GERAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为GERAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
 
 
-信令流程 :E-UTRAN到GERAN的RAU流程如[图1](12%20E-UTRAN%E5%88%B0GERAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.html#concept1__E-UTRAN%E5%88%B0GERAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B-299A75C2)所示。
+信令流程 :E-UTRAN到GERAN的RAU流程如[图1]所示。
 图1  E-UTRAN到GERAN的RAU流程
 
 
-[]images/E-UTRAN%E5%88%B0GERAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -13915,11 +13917,11 @@ SGW向old MME响应Delete Session Response消息。
 MME与SGSN之间采用S3接口互通，从UTRAN向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变的情况。 
 
 
-信令流程 :SGW不变的UTRAN到E-UTRAN的TAU流程如[图1](13%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E4%B8%8D%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B-290327BD)所示。
+信令流程 :SGW不变的UTRAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW不变的UTRAN到E-UTRAN的TAU流程
 
 
-[]images/SGW%E4%B8%8D%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14000,11 +14002,11 @@ Area Update Complete消息确认接收到了TAU接受消息。如果在Tracking 
 MME与SGSN之间采用S3接口互通，从UTRAN向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变的情况。 
 
 
-信令流程 :SGW改变的UTRAN到E-UTRAN的TAU流程如[图1](14%20SGW%E6%94%B9%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E6%94%B9%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B-2903CACE)所示。
+信令流程 :SGW改变的UTRAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW改变的UTRAN到E-UTRAN的TAU流程
 
 
-[]images/SGW%E6%94%B9%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14092,11 +14094,11 @@ Area Update Complete消息，确认接收到了TAU接受消息。如果在Tracki
 MME与SGSN之间采用S3接口互通，从GERAN向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变情况。 
 
 
-信令流程 :SGW不变的GERAN到E-UTRAN的TAU流程如[图1](15%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E4%B8%8D%E5%8F%98%E7%9A%84GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B-2904A11D)所示。
+信令流程 :SGW不变的GERAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW不变的GERAN到E-UTRAN的TAU流程
 
 
-[]images/SGW%E4%B8%8D%E5%8F%98%E7%9A%84GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14171,11 +14173,11 @@ Area Update Complete消息确认接收到了TAU接受消息。如果在Tracking 
 MME与SGSN之间采用S3接口互通，从GERAN 向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变情况。 
 
 
-信令流程 :SGW改变的GERAN到E-UTRAN的TAU流程如[图1](16%20SGW%E6%94%B9%E5%8F%98%E7%9A%84GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E6%94%B9%E5%8F%98%E7%9A%84GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B-2905A215)所示。
+信令流程 :SGW改变的GERAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW改变的GERAN到E-UTRAN的TAU流程
 
 
-[]images/SGW%E6%94%B9%E5%8F%98%E7%9A%84GERAN%E5%88%B0E-UTRAN%E7%9A%84TAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14256,11 +14258,11 @@ Area Update Complete消息，确认接收到了TAU接受消息。如果在Tracki
 MME与SGSN之间采用S3接口互通，从E-UTRAN向UTRAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变情况。 
 
 
-信令流程 :SGW不变的E-UTRAN到UTRAN的RAU流程如[图1](17%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B-2915A4D8)所示。
+信令流程 :SGW不变的E-UTRAN到UTRAN的RAU流程如[图1]所示。
 图1  SGW不变的E-UTRAN到UTRAN的RAU流程
 
 
-[]images/SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14388,11 +14390,11 @@ SGW更新下行数据的用户面地址及TEID，并向new SGSN返回Modify Bear
 MME与SGSN之间采用S3接口互通，从E-UTRAN向UTRAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变情况。 
 
 
-信令流程 :SGW改变的E-UTRAN到UTRAN的RAU流程如[图1](18%20SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B-2915FB8D)所示。
+信令流程 :SGW改变的E-UTRAN到UTRAN的RAU流程如[图1]所示。
 图1  SGW改变的E-UTRAN到UTRAN的RAU流程
 
 
-[]images/SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14526,11 +14528,11 @@ SGW更新下行数据的用户面地址及TEID，并向new SGSN返回修改承�
 MME与SGSN之间采用S3接口互通，从E-UTRAN向GERAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变情况。 
 
 
-信令流程 :SGW不变的E-UTRAN到GEARN的RAU流程如[图1](19%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0GEARN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0GEARN%E7%9A%84RAU%E6%B5%81%E7%A8%8B-2918DC42)所示。
+信令流程 :SGW不变的E-UTRAN到GEARN的RAU流程如[图1]所示。
 图1  SGW不变的E-UTRAN到GEARN的RAU流程
 
 
-[]images/SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0GEARN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14638,11 +14640,11 @@ SGSN发送Routing Area Update Complete消息进行确认新的P-TMSI被UE接受�
 MME与SGSN之间采用S3接口互通，从E-UTRAN向GERAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变情况。 
 
 
-信令流程 :SGW改变的E-UTRAN到GEARN的RAU流程如[图1](20%20SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0GEARN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.html#concept1__SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0GEARN%E7%9A%84RAU%E6%B5%81%E7%A8%8B-291A1378)所示。
+信令流程 :SGW改变的E-UTRAN到GEARN的RAU流程如[图1]所示。
 图1  SGW改变的E-UTRAN到GEARN的RAU流程
 
 
-[]images/SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0GEARN%E7%9A%84RAU%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14759,11 +14761,11 @@ SGSN发送Routing Area Update Complete消息进行确认新的P-TMSI被UE接受�
 业务请求流程完成之后，用户能继续通过EPS网络访问数据业务和其他业务。 
 
 
-信令流程 :业务请求流程如[图1](21-%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.html#e__%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B-4DB73542)所示。
+信令流程 :业务请求流程如[图1]所示。
 图1  业务请求流程
 
 
-[]images/%E7%BC%96%E5%8F%B721%20%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+
 
 
 
@@ -14819,11 +14821,11 @@ SGW向MME响应Modify Bearer Response消息。
 口S1信令连接和S1-U口所有承载的E-RAB连接，业务请求流程完成之后，用户就能继续通过EPS网络访问数据业务和其他业务。 
 
 
-信令流程 :寻呼流程如[图1](22-%E5%AF%BB%E5%91%BC%E6%B5%81%E7%A8%8B.html#f__%E5%AF%BB%E5%91%BC%E6%B5%81%E7%A8%8B-4DB765E3)所示。
+信令流程 :寻呼流程如[图1]所示。
 图1  寻呼流程
 
 
-[]images/%E7%BC%96%E5%8F%B722%20%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+
 
 
 
@@ -14845,7 +14847,7 @@ MME发送Paging消息给用户所在的TA /TA List对应的每一个eNodeB。
 eNodeB向UE发起寻呼。 
 
 
-UE收到eNodeB发送的Paging消息后，触发业务请求流程，详细流程参见“[业务请求流程](21-%E4%B8%9A%E5%8A%A1%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B.html)”
+UE收到eNodeB发送的Paging消息后，触发业务请求流程，详细流程参见“[业务请求流程]”
 。
 
 
@@ -14858,11 +14860,11 @@ UE收到eNodeB发送的Paging消息后，触发业务请求流程，详细流程
 在S1释放流程中，用户的S1连接和E-RAB连接都被释放，空口的RRC连接和RB连接也会一并被释放。eNodeB不再保存用户的任何信息，UE和MME中用户的ECM状态从连接态变为空闲态。Non-GBR承载会被保留，GBR承载根据运营商策略，可以被保留或去激活。如果去激活GBR承载，触发MME发起的专有承载释放流程。 
 
 
-信令流程 :S1释放流程如[图1](23-S1%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B.html#g__S1%E9%87%8A%E6%94%BE%E6%B5%81%E7%A8%8B-4DB79423)所示。
+信令流程 :S1释放流程如[图1]所示。
 图1  S1释放流程
 
 
-[]images/%E7%BC%96%E5%8F%B723%20%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+
 
 
 
@@ -14898,11 +14900,11 @@ EPS承载被保存在MME和SGW内。
 本流程是在MME和SGW均不改变的情况下，UE从源eNodeB切换到目标eNodeB的流程。 
 
 
-信令流程 :SGW不变的X2-based切换流程，如[图1](24%20X2-based%20handover,%20intra-MME,%20without%20SGW%20change%20CN.html#SGW%E4%B8%8D%E5%8F%98%E7%9A%84X2-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-4E11CB49__SGW%E4%B8%8D%E5%8F%98%E7%9A%84X2-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-4E123339)示。
+信令流程 :SGW不变的X2-based切换流程，如[图1]示。
 图1  SGW不变的X2-based切换流程
 
 
-[]images/24%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84X2-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14948,11 +14950,11 @@ Target eNodeB发送Release Resource消息给Source eNodeB，通知切换成功�
 本流程是在MME不变，但SGW发生改变的情况下，UE从源 eNodeB切换到目标eNodeB的流程。 
 
 
-信令流程 :SGW改变的X2-based切换流程，如[图1](25%20X2-based%20handover,%20intra-MME,%20with%20SGW%20change%20CN.html#SGW%E6%94%B9%E5%8F%98%E7%9A%84X2-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-4E12B949__SGW%E6%94%B9%E5%8F%98%E7%9A%84X2-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-4E12BF10)所示。
+信令流程 :SGW改变的X2-based切换流程，如[图1]所示。
 图1  SGW改变的X2-based切换流程
 
 
-[]images/25%20SGW%E6%94%B9%E5%8F%98%E7%9A%84X2-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -14985,7 +14987,7 @@ Target eNodeB发送Release Resource消息给Source eNodeB，通知切换成功�
 eNodeB资源释放。
 
 
-MME在步骤[5](25%20X2-based%20handover,%20intra-MME,%20with%20SGW%20change%20CN.html#SGW%E6%94%B9%E5%8F%98%E7%9A%84X2-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-4E12B949__TargetSGW%E5%8F%91%E9%80%81CreateSessionResponse%E6%B6%88%E6%81%AF%E7%BB%99-4E1336FD)设置的释放SGW资源的定时器超时了，MME给Source SGW发送Delete Session Request消息通知Source SGW释放承载资源。
+MME在步骤[5]设置的释放SGW资源的定时器超时了，MME给Source SGW发送Delete Session Request消息通知Source SGW释放承载资源。
 
 
 Source SGW给MME回Delete Session Response消息确认承载资源释放。
@@ -15004,11 +15006,11 @@ Source SGW给MME回Delete Session Response消息确认承载资源释放。
 该业务使用于MME和SGW均不改变的情况下，UE从Source eNodeB切换到Target eNodeB的基于S1接口的切换流程。 
 
 
-信令流程 :MME、SGW均不改变的S1-based切换流程，如[图1](26%20S1-based%20handover,%20intra-MME,%20without%20SGW%20change%20CN.html#concept1__MMESGW%E5%9D%87%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84S1-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-49FAAA90)所示。
+信令流程 :MME、SGW均不改变的S1-based切换流程，如[图1]所示。
 图1  MME、SGW均不改变的S1-based切换流程
 
 
-[]images/26%20MME%E3%80%81SGW%E5%9D%87%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84S1-based%E5%88%87%E6%8D%A2.png)
+
 
 
 
@@ -15102,7 +15104,7 @@ eNodeB。
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
 
 
-当步骤[12](26%20S1-based%20handover,%20intra-MME,%20without%20SGW%20change%20CN.html#concept1__TargetENodeB%E5%90%91MME%E5%8F%91%E9%80%81HandoverNotify%E6%B6%88%E6%81%AF%E9%80%9A-4A910657)中的定时器T1超时，MME向Source eNodeB发送UE
+当步骤[12]中的定时器T1超时，MME向Source eNodeB发送UE
 Context Release Command消息通知释放用户上下文。
 
 
@@ -15122,9 +15124,9 @@ Response消息。
 ### MME不变、SGW改变的S1-based切换流程 
 业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
 该业务使用于MME不变、SGW改变的情况下，UE从源eNodeB切换到目标eNodeB的基于S1接口的切换流程。 
-信令流程 :MME不变、SGW改变的S1-based切换流程，如[图1](27%20S1-based%20handover,%20intra-MME,%20with%20SGW%20change%20CN.html#concept1__MMESGW%E5%9D%87%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84S1-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-49FAAA90)所示。
+信令流程 :MME不变、SGW改变的S1-based切换流程，如[图1]所示。
 图1  MME不变、SGW改变的S1-based切换流程
-[]images/27%20MME%E4%B8%8D%E5%8F%98%E3%80%81S-GW%E6%94%B9%E5%8F%98%E7%9A%84S1-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.png)
+
 流程说明 :在以下情况，会导致Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
 到Target eNodeB没有X2连接。 
 目标侧eNodeB告知Source eNodeB之前的X2-based handover失败。 
@@ -15186,17 +15188,17 @@ Target SGW向MME发送Modify Bearer Response消息，消息中包含：PDN GW
 addresses and TEIDs (for GTP-based S5/S8) at the PDN GW(s) for uplink
 traffic参数。
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
-当步骤[16](27%20S1-based%20handover,%20intra-MME,%20with%20SGW%20change%20CN.html#concept1__TargetENodeB%E5%90%91MME%E5%8F%91%E9%80%81HandoverNotify%E6%B6%88%E6%81%AF%E9%80%9A-4A90F457)中的定时器T2超时，MME向Source eNodeB发送UE
+当步骤[16]中的定时器T2超时，MME向Source eNodeB发送UE
 Context Release Command消息通知释放用户上下文。
 Source eNodeB释放用户相关的所有资源，向MME回响应UE Context Release Complete消息。
-当步骤[16](27%20S1-based%20handover,%20intra-MME,%20with%20SGW%20change%20CN.html#concept1__TargetENodeB%E5%90%91MME%E5%8F%91%E9%80%81HandoverNotify%E6%B6%88%E6%81%AF%E9%80%9A-4A90F457)中的定时器T2超时，且MME在Forward Relocation
+当步骤[16]中的定时器T2超时，且MME在Forward Relocation
 Response消息中收到SGW改变指示，则MME向Source SGW发送Delete Session Request消息通知Source SGW释放承载资源，消息中包含：Cause，LBI参数。
 Source SGW向MME回响应Delete Session Response消息确认承载资源释放。
 可选：MME的资源释放定时器超时，如果间接转发被使用，MME向Source SGW发送Delete
 Indirect Data Forwarding Tunnel Request消息，释放间接数据前转隧道资源。
 可选：Source SGW向MME回响应Delete Indirect Data Forwarding
 Tunnel Response消息。
-可选：当步骤[16](27%20S1-based%20handover,%20intra-MME,%20with%20SGW%20change%20CN.html#concept1__TargetENodeB%E5%90%91MME%E5%8F%91%E9%80%81HandoverNotify%E6%B6%88%E6%81%AF%E9%80%9A-4A90F457)中的定时器T2超时，如果间接转发被使用，MME向Target SGW发送Delete Indirect Data Forwarding Tunnel Request消息，释放间接数据前转隧道资源。
+可选：当步骤[16]中的定时器T2超时，如果间接转发被使用，MME向Target SGW发送Delete Indirect Data Forwarding Tunnel Request消息，释放间接数据前转隧道资源。
 ### MME重选、SGW不变的S1-based切换流程 
 ### MME重选、SGW不变的S1-based切换流程 
 
@@ -15205,11 +15207,11 @@ Tunnel Response消息。
 该业务使用于MME改变、SGW不变的情况下，UE从源eNodeB切换到目标eNodeB的基于S1接口的切换流程。 
 
 
-信令流程 :MME重选、SGW不变的S1-based切换流程，如[图1](28%20%20S1-based%20handover,%20inter-MME,%20without%20SGW%20change%20CN.html#concept1__MMESGW%E5%9D%87%E4%B8%8D%E6%94%B9%E5%8F%98%E7%9A%84S1-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-49FAAA90)所示。
+信令流程 :MME重选、SGW不变的S1-based切换流程，如[图1]所示。
 图1  MME重选、SGW不变的S1-based切换流程
 
 
-[]images/28%20MME%E9%87%8D%E9%80%89%E3%80%81SGW%E4%B8%8D%E5%8F%98%E7%9A%84S1-based%E5%88%87%E6%8D%A2.png)
+
 
 
 
@@ -15329,14 +15331,14 @@ SGW向Target MME发送Modify Bearer Response消息。
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
 
 
-当[16](28%20%20S1-based%20handover,%20inter-MME,%20without%20SGW%20change%20CN.html#concept1__SourceMME%E5%90%91TargetMME%E5%93%8D%E5%BA%94ForwardRelocat-4C23781F)中的定时器T3超时，Source MME向Source eNodeB发送UE Context Release Command消息。
+当[16]中的定时器T3超时，Source MME向Source eNodeB发送UE Context Release Command消息。
 
 
 Source eNodeB释放与UE相关的资源并向Source MME响应UE Context Release
 Complete消息。
 
 
-可选：如果使用间接转发且[16](28%20%20S1-based%20handover,%20inter-MME,%20without%20SGW%20change%20CN.html#concept1__SourceMME%E5%90%91TargetMME%E5%93%8D%E5%BA%94ForwardRelocat-4C23781F)中的定时器T3超时，源MME向SGW发送Delete Indirect
+可选：如果使用间接转发且[16]中的定时器T3超时，源MME向SGW发送Delete Indirect
 Data Forwarding Tunnel Request消息，释放为间接转发分配的临时资源。
 
 
@@ -15349,9 +15351,9 @@ Tunnel Session Response消息。
 ### MME和SGW均重选的S1-based切换流程 
 业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
 该业务使用于MME改变、SGW改变的情况下，UE从源eNodeB切换到目标eNodeB的基于S1接口的切换流程。 
-信令流程 :MME和SGW均重选的S1-based切换流程，如[图1](29%20%20S1-based%20handover,%20inter-MME,%20with%20SGW%20change%20CN.html#concept1__MME%E5%92%8CSGW%E5%9D%87%E9%87%8D%E9%80%89%E7%9A%84S1-based%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-4C2A8AEB)所示。
+信令流程 :MME和SGW均重选的S1-based切换流程，如[图1]所示。
 图1  MME和SGW均重选的S1-based切换流程
-[]images/29%20MME%E5%92%8CSGW%E5%9D%87%E9%87%8D%E9%80%89%E7%9A%84S1-based%E5%88%87%E6%8D%A2.png)
+
 流程说明 :基于如下原因，Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
 到Target eNodeB没有X2连接。 
 Target eNodeB告知Source eNodeB之前的X2-based handover失败。 
@@ -15424,29 +15426,29 @@ information（由UE上下文判断），MME也会在这条信息中包含这两�
 Time Zone信元。 
 Target SGW为来自PGW的下行通道分配地址和TEIDs，并为每个PDN连接向PGW发送Modify bearer
 request消息，消息包含：Serving GW addresses for user plane and TEID(s)、Serving
-Network等参数。如果步骤[21](29%20%20S1-based%20handover,%20inter-MME,%20with%20SGW%20change%20CN.html#concept1__TargetMME%E4%B8%BA%E6%AF%8F%E4%B8%AAPDN%E8%BF%9E%E6%8E%A5%E5%90%91TargetSGW%E5%8F%91%E9%80%81Modify-4C2C1802)包含了User Location Information 信元、UE
+Network等参数。如果步骤[21]包含了User Location Information 信元、UE
 Time Zone信元或者User CSG Information信元，SGW也会在此信息中包含。
 PGW更新本地上下文并向Target SGW返回Modify Bearer Response消息。
 Target SGW向Target MME发送Modify Bearer Response消息。
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
-当[20](29%20%20S1-based%20handover,%20inter-MME,%20with%20SGW%20change%20CN.html#concept1__SourceMME%E5%90%91TargetMME%E5%93%8D%E5%BA%94ForwardRelocat-4C23781F)中的定时器T4超时，Source MME向Source eNodeB发送UE Context Release Command消息。
+当[20]中的定时器T4超时，Source MME向Source eNodeB发送UE Context Release Command消息。
 Source eNodeB释放与UE相关的资源并向Source MME响应UE Context Release
 Complete消息。
-当[20](29%20%20S1-based%20handover,%20inter-MME,%20with%20SGW%20change%20CN.html#concept1__SourceMME%E5%90%91TargetMME%E5%93%8D%E5%BA%94ForwardRelocat-4C23781F)中的定时器超时，且Source MME在Forward Relocation
+当[20]中的定时器超时，且Source MME在Forward Relocation
 Response消息中收到SGW改变指示，则Source MME向Source SGW发送Delete Session
 Request消息删除EPS承载资源，消息包含：Cause, LBI。Cause指示SGW变更及SGW不要向PGW发起承载删除流程。
 Source SGW向Source MME响应Delete Session Response消息。
-可选：如果使用间接转发且[20](29%20%20S1-based%20handover,%20inter-MME,%20with%20SGW%20change%20CN.html#concept1__SourceMME%E5%90%91TargetMME%E5%93%8D%E5%BA%94ForwardRelocat-4C23781F)中的定时器T4超时，Source MME向Source SGW发送Delete Indirect Data Forwarding Tunnel Request消息，释放为间接转发分配的临时资源。
+可选：如果使用间接转发且[20]中的定时器T4超时，Source MME向Source SGW发送Delete Indirect Data Forwarding Tunnel Request消息，释放为间接转发分配的临时资源。
 可选：Source SGW向Source MME响应Delete Indirect Data Forwarding
 Tunnel Session Response消息。
-可选：如果使用间接转发且[20](29%20%20S1-based%20handover,%20inter-MME,%20with%20SGW%20change%20CN.html#concept1__SourceMME%E5%90%91TargetMME%E5%93%8D%E5%BA%94ForwardRelocat-4C23781F)中的定时器T4超时，Target MME向Target SGW发送Delete Indirect Data Forwarding Tunnel Request消息，释放为间接转发分配的临时资源。
+可选：如果使用间接转发且[20]中的定时器T4超时，Target MME向Target SGW发送Delete Indirect Data Forwarding Tunnel Request消息，释放为间接转发分配的临时资源。
 可选：Target SGW向Target MME响应Delete Indirect Data Forwarding
 Tunnel Session Response消息。
 ### MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程 
 业务模型 :用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。MME和SGSN间使用Gn接口。 
-信令流程 :MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程，如[图1](30%20MME%E5%92%8CSGSN%E9%87%87%E7%94%A8Gn%E5%8F%A3%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#concept1__MME%E5%92%8CSGSN%E9%87%87%E7%94%A8Gn%E5%8F%A3%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-3F3B9CB4)所示。
+信令流程 :MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程，如[图1]所示。
 图1  MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程
-[]images/30%20MME%E5%92%8CSGSN%E9%87%87%E7%94%A8Gn%E5%8F%A3%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.png)
+
 流程说明 :源RNC决策发起向E-UTRAN的切换。 
 源RNC向old Gn/Gp SGSN发送重定位申请消息Relocation Required，触发重定位流程，消息中携带Relocation
 Type、Cause、Source ID、Target ID、Source RNC To target eNodeB Transparent
@@ -15519,9 +15521,9 @@ Tunnel Response。
 ### MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程 
 业务模型 :用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱，但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
 MME和SGSN间使用Gn接口。 
-信令流程 :MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程，如[图1](31%20MME%E5%92%8CSGSN%E9%87%87%E7%94%A8Gn%E5%8F%A3%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#concept1__MME%E5%92%8CSGSN%E9%87%87%E7%94%A8Gn%E5%8F%A3%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-3F3D12EB)所示。
+信令流程 :MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程，如[图1]所示。
 图1  MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程
-[]images/31%20MME%E5%92%8CSGSN%E9%87%87%E7%94%A8Gn%E5%8F%A3%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.png)
+
 流程说明 :源eNodeB决策发起向UTRAN的切换。此时，上下行用户数据通过如下承载进行传输：Bearer(s) between
 UE and source eNodeB、 GTP tunnel(s) between source eNodeB and SGW
 、GTP tunnel(s) between SGW and PGW。 
@@ -15589,12 +15591,12 @@ old MME通知源eNodeB释放资源。old MME向源eNodeB发送释放资源消息
 业务模型 :用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。 
 MME和SGSN间使用S3接口，且SGW不改变。 
 信令流程 :该流程分为准备阶段和执行阶段。 
-SGW不变的UTRAN到E-UTRAN的切换流程的准备阶段的流程图如[图1](32%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__04ae77ef-f2de-497e-b593-68983fbf0f42)所示。
+SGW不变的UTRAN到E-UTRAN的切换流程的准备阶段的流程图如[图1]所示。
 图1  SGW不变的UTRAN到E-UTRAN的切换流程-准备阶段
-[]images/6227ce7284b746b5865daf10570fa99e.png)
-SGW不变的UTRAN到E-UTRAN的切换流程的执行阶段的流程图如[图2](32%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__83954b69-54bd-4b91-a605-46230261d302)所示。
+
+SGW不变的UTRAN到E-UTRAN的切换流程的执行阶段的流程图如[图2]所示。
 图2  SGW不变的UTRAN到E-UTRAN的切换流程-执行阶段
-[]images/24c3d296c74b4a7fbf9d579f2bbf9f54.png)
+
 流程说明 :准备阶段：
 源RNC决策发起向E-UTRAN的切换。 
 源RNC向源S3/S4 SGSN发送重定位申请消息Relocation Required，触发重定位流程，消息中携带Relocation
@@ -15661,12 +15663,12 @@ Data Forwarding Tunnel Response。
 业务模型 :用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。 
 MME和SGSN间使用S3接口，SGW发生改变。 
 信令流程 :该流程分为准备阶段和执行阶段。 
-SGW改变的UTRAN到E-UTRAN的切换流程的准备阶段的流程图如[图1](33%20SGW%E6%94%B9%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__a88d43a7-3e10-413e-b77c-3ba4792ef810)所示。
+SGW改变的UTRAN到E-UTRAN的切换流程的准备阶段的流程图如[图1]所示。
 图1  SGW改变的UTRAN到E-UTRAN的切换流程-准备阶段
-[]images/a5cbbc7297d64b85a3fe618dfe7f35bb.png)
-SGW改变的UTRAN到E-UTRAN的切换流程的执行阶段的流程图[图2](33%20SGW%E6%94%B9%E5%8F%98%E7%9A%84UTRAN%E5%88%B0E-UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__1662de75-0f39-42ca-a3e9-66ec995305e4)所示。
+
+SGW改变的UTRAN到E-UTRAN的切换流程的执行阶段的流程图[图2]所示。
 图2  SGW改变的UTRAN到E-UTRAN的切换流程-执行阶段
-[]images/4ed6e57514534ca9881d063af695bf6f.png)
+
 流程说明 :准备阶段：
 源RNC决策发起向E-UTRAN的切换。 
 源RNC向源S3/S4 SGSN发送重定位申请消息Relocation Required，触发重定位流程，消息中携带Relocation
@@ -15750,12 +15752,12 @@ Tunnel Response。
 业务模型 :用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
 MME和SGSN间使用S3接口，且SGW不改变。 
 信令流程 :该流程分为准备阶段和执行阶段。 
-SGW不变的E-UTRAN到UTRAN的切换流程的流程图如[图1](34%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__30738e8c-c04c-4517-97af-3d3793951d6a)所示。
+SGW不变的E-UTRAN到UTRAN的切换流程的流程图如[图1]所示。
 图1  SGW不变的E-UTRAN到UTRAN的切换流程-准备阶段
-[]images/e3f400a914334aa08a790ffe84a96d6f.png)
-SGW不变的E-UTRAN到UTRAN的切换流程的执行阶段的流程图如[图2](34%20SGW%E4%B8%8D%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__8a3cd154-ebcf-4ebe-a0be-b52e1d2270e8)所示。
+
+SGW不变的E-UTRAN到UTRAN的切换流程的执行阶段的流程图如[图2]所示。
 图2  SGW不变的E-UTRAN到UTRAN的切换流程-执行阶段
-[]images/2825e031aba24008a6aa227855e99e03.png)
+
 流程说明 :准备阶段：
 源eNodeB决策发起向UTRAN的切换。此时，上下行用户数据通过如下承载进行传输：Bearer(s) between
 UE and source eNodeB、 GTP tunnel(s) between source eNodeB and SGW
@@ -15838,12 +15840,12 @@ Forwarding Tunnel Response。
 业务模型 :用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
 MME和SGSN间使用S3接口，且SGW发送改变。 
 信令流程 :该流程分为准备阶段和执行阶段。 
-SGW改变的E-UTRAN到UTRAN的切换流程的准备阶段的流程图如[35%20SGW改变的E-UTRAN到UTRAN的切换流程.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__SGW改变的E-UTRAN到UTRAN的切换流程-准备阶段-54374ED5](35%20SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B-%E5%87%86%E5%A4%87%E9%98%B6%E6%AE%B5-54374ED5)所示。
+SGW改变的E-UTRAN到UTRAN的切换流程的准备阶段的流程图如[35%20SGW改变的E-UTRAN到UTRAN的切换流程.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__SGW改变的E-UTRAN到UTRAN的切换流程-准备阶段-54374ED5]所示。
 图1  SGW改变的E-UTRAN到UTRAN的切换流程-准备阶段
-[]images/0456a34e5c284c7bb010645d52c0f356.png)
-SGW改变的E-UTRAN到UTRAN的切换流程的执行阶段的流程图如[图2](35%20SGW%E6%94%B9%E5%8F%98%E7%9A%84E-UTRAN%E5%88%B0UTRAN%E7%9A%84%E5%88%87%E6%8D%A2%E6%B5%81%E7%A8%8B.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__02a81026-da8c-4e34-a64a-a3c501f69ea2)所示。
+
+SGW改变的E-UTRAN到UTRAN的切换流程的执行阶段的流程图如[图2]所示。
 图2  SGW改变的E-UTRAN到UTRAN的切换流程-执行阶段
-[]images/3efc24bcfb7d4144a75e6a5a4c428014.png)
+
 流程说明 :准备阶段：
 源eNodeB决策发起向UTRAN的切换。此时，上下行用户数据通过如下承载进行传输：Bearer(s) between
 UE and source eNodeB、 GTP tunnel(s) between source eNodeB and S-GW
@@ -15944,11 +15946,11 @@ Forwarding Tunnel Response。
 PDN连接建立的流程与Attach过程中的默认承载建立过程类似，MME为UE选择接入的PGW，建立UE到PGW的PDN连接。多PDN连接流程完成之后，用户可以通过EPS网络申请多个IP地址，建立到不同PGW或相同PGW的多个PDN连接，访问数据业务和其他业务，当UE不再需要通过这个PDN连接访问数据业务和其他业务时，也可以通过去激活PDN连接，释放已申请的IP地址。 
 
 
-信令流程 :UE请求PDN连接的流程如[图1](36%20UE%E8%AF%B7%E6%B1%82PDN%E8%BF%9E%E6%8E%A5.html#concept1__UE%E8%AF%B7%E6%B1%82PDN%E8%BF%9E%E6%8E%A5-291B2885)所示。
+信令流程 :UE请求PDN连接的流程如[图1]所示。
 图1  UE请求PDN连接
 
 
-[]images/UE%E8%AF%B7%E6%B1%82PDN%E8%BF%9E%E6%8E%A5.png)
+
 
 
 
@@ -16059,11 +16061,11 @@ Request消息给HSS，消息中携带APN和PGW Identity，还需携带PGW所属P
 在由网络侧触发专有承载建立过程中，MME为承载分配EPS承载标识，通知eNodeB，UE建立专有承载，并通知SGW专有承载建立响应，配合完成eNodeB和SGW的用户面隧道建立。专有承载建立完成之后，UE可以通过EPS网络建立的专有承载访问数据业务和其他业务。 
 
 
-信令流程 :专有承载激活流程如[图1](37%20%E4%B8%93%E6%9C%89%E6%89%BF%E8%BD%BD%E6%BF%80%E6%B4%BB.html#concept1__%E4%B8%93%E6%9C%89%E6%89%BF%E8%BD%BD%E6%BF%80%E6%B4%BB%E6%B5%81%E7%A8%8B-291C3461)所示。
+信令流程 :专有承载激活流程如[图1]所示。
 图1  专有承载激活流程
 
 
-[]images/%E4%B8%93%E6%9C%89%E6%89%BF%E8%BD%BD%E6%BF%80%E6%B4%BB.png)
+
 
 
 
@@ -16128,10 +16130,10 @@ SGW向PGW发送Create Bearer Response消息，告知PGW专有承载建立成功�
 被修改的承载可以是默认承载或专有承载，承载修改完成之后，UE可以通过EPS网络修改之后的承载访问数据业务和其他业务。该流程不支持QCI资源类型的修改，即不支持GBR承载和Non-GBR承载的相互转化。 
 
 
-信令流程 :PGW发起承载修改，QoS更新，流程如[图1](38%20PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9%EF%BC%8CQoS%E6%9B%B4%E6%96%B0.html#concept1__PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9QoS%E6%9B%B4%E6%96%B0-291D1631)所示。
+信令流程 :PGW发起承载修改，QoS更新，流程如[图1]所示。
 图1  PGW发起承载修改，QoS更新
 
-[]images/PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9%EF%BC%8CQoS%E6%9B%B4%E6%96%B0.png)
+
 
 
 流程说明 :
@@ -16192,10 +16194,10 @@ Identity。
 业务模型 :PGW发起的QoS未更新的承载修改流程用于更新激活默认或专有承载的TFT，或修改APN-AMBR，或从MME获取用户位置信息，或将PCO信息通知给UE，或指示MME激活或去活位置报告。 
 
 
-信令流程 :PGW发起承载修改，QoS未更新，流程如[图1](39%20PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9%EF%BC%8CQoS%E6%9C%AA%E6%9B%B4%E6%96%B0.html#concept1__PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9QoS%E6%9C%AA%E6%9B%B4%E6%96%B0-291FBE64)所示。
+信令流程 :PGW发起承载修改，QoS未更新，流程如[图1]所示。
 图1  PGW发起承载修改，QoS未更新
 
-[]images/PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9%EF%BC%8CQoS%E6%9C%AA%E6%9B%B4%E6%96%B0.png)
+
 
 
 流程说明 :
@@ -16249,11 +16251,11 @@ S-GW向P-GW响应Update Bearer Response消息确认承载修改，消息包含�
 被修改的承载可以是默认承载或专有承载，承载修改完成之后，UE可以通过EPS网络修改之后的承载访问数据业务和其他业务。该流程不支持QCI资源类型的修改，即不支持GBR承载和Non-GBR承载的相互转化。 
 
 
-信令流程 :HSS发起承载修改，QoS更新，流程如[图1](40%20HSS%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9%EF%BC%8CQoS%E6%9B%B4%E6%96%B0.html#concept1__HSS%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9QoS%E6%9B%B4%E6%96%B0-291DEB15)所示。
+信令流程 :HSS发起承载修改，QoS更新，流程如[图1]所示。
 图1  HSS发起承载修改，QoS更新
 
 
-[]images/HSS%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9%EF%BC%8CQoS%E6%9B%B4%E6%96%B0.png)
+
 
 
 
@@ -16330,11 +16332,11 @@ Identity。
 业务模型 :MME发起的承载去激活只用于去激活专有承载，如果是释放PDN连接，包括默认承载，则发起PDN去连接过程。 
 
 
-信令流程 :MME发起承载去激活的流程如[图1](41%20MME%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E5%8E%BB%E6%BF%80%E6%B4%BB.html#concept1__MME%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E5%8E%BB%E6%BF%80%E6%B4%BB%E6%B5%81%E7%A8%8B-2923FCED)所示。
+信令流程 :MME发起承载去激活的流程如[图1]所示。
 图1  MME发起承载去激活流程
 
 
-[]images/MME%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E5%8E%BB%E6%BF%80%E6%B4%BB.png)
+
 
 
 
@@ -16432,11 +16434,11 @@ SGW删除承载上下文，给PGW发送删除承载上下文消息Delete Bearer 
 业务模型 :PGW可以去激活某一个PDN地址的一个专有承载或所有承载。如果是要去激活默认承载，则去激活该PDN连接的所有承载。 
 
 
-信令流程 :PGW发起承载去激活的流程如[图1](42%20PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E5%8E%BB%E6%BF%80%E6%B4%BB.html#concept1__PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E5%8E%BB%E6%BF%80%E6%B4%BB-292561AD)所示。
+信令流程 :PGW发起承载去激活的流程如[图1]所示。
 图1  PGW发起承载去激活
 
 
-[]images/PGW%E5%8F%91%E8%B5%B7%E6%89%BF%E8%BD%BD%E5%8E%BB%E6%BF%80%E6%B4%BB.png)
+
 
 
 
@@ -16519,11 +16521,11 @@ SGW删除承载上下文，给PGW发送删除承载上下文消息Delete Bearer 
 业务模型 :MME向HSS请求获取一组或多组鉴权向量（RAND，AUTN，XRES，KASME）用于用户鉴权过程。每一组EPS鉴权向量均能用于用户鉴权。 
 
 
-信令流程 :鉴权集获取信令流程如[图1](43%20%E9%89%B4%E6%9D%83%E9%9B%86%E8%8E%B7%E5%8F%96.html#concept1__%E9%89%B4%E6%9D%83%E9%9B%86%E8%8E%B7%E5%8F%96%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-4F9DD625)所示、
+信令流程 :鉴权集获取信令流程如[图1]所示、
 图1  鉴权集获取信令流程
 
 
-[]images/43-%E9%89%B4%E6%9D%83%E9%9B%86%E8%8E%B7%E5%8F%96.png)
+
 
 
 
@@ -16545,11 +16547,11 @@ HSS向MME响应Authentication Information Answer消息返回鉴权向量。
 AKA将为UP（User Plane）、RRC（Radio Resource Control）、NAS（Non-Access-Stratum）加密密钥及RRC和NAS完整性保护密钥提供基础的密钥信息。 
 
 
-信令流程 :鉴权信令流程如[图1](44%20%E9%89%B4%E6%9D%83.html#concept1__%E9%89%B4%E6%9D%83%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-54BEF728)所示、
+信令流程 :鉴权信令流程如[图1]所示、
 图1  鉴权信令流程
 
 
-[]images/44-%E9%89%B4%E6%9D%83.png)
+
 
 
 
@@ -16570,11 +16572,11 @@ UE向MME响应Authentication Response消息。
 业务模型 :用户鉴权过程中，用户对网络鉴权或网络对用户鉴权失败。 
 
 
-信令流程 :鉴权失败流程如[图1](45%20%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5.html#concept1__%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5-54C405D5)所示、
+信令流程 :鉴权失败流程如[图1]所示、
 图1  鉴权失败
 
 
-[]images/45-%E9%89%B4%E6%9D%83%E5%A4%B1%E8%B4%A5.png)
+
 
 
 
@@ -16600,11 +16602,11 @@ Reject消息。
 Unique Temporary UE Identity）重分配流程，为UE重分配一个新的GUTI和/或TAI列表。GUTI和/或TAI列表可以在附着或TAU流程中进行重分配。 
 
 
-信令流程 :显式GUTI重分配流程如[图1](46%20%E6%98%BE%E5%BC%8FGUTI%E9%87%8D%E5%88%86%E9%85%8D.html#concept1__%E6%98%BE%E5%BC%8FGUTI%E9%87%8D%E5%88%86%E9%85%8D-54CC2C2C)所示、
+信令流程 :显式GUTI重分配流程如[图1]所示、
 图1  显式GUTI重分配
 
 
-[]images/46-%E6%98%BE%E5%BC%8FGUTI%E9%87%8D%E5%88%86%E9%85%8D.png)
+
 
 
 
@@ -16625,11 +16627,11 @@ UE向MME响应GUTI Reallocation Complete消息。
 业务模型 :当用户使用临时身份标识GUTI鉴权失败时，网络侧将发起用户的身份识别流程。当网络侧无法根据GUTI重新获取IMSI用于用户鉴权时，也将使用本流程。 
 
 
-信令流程 :身份识别流程如[图1](47%20%E8%BA%AB%E4%BB%BD%E8%AF%86%E5%88%AB%E6%B5%81%E7%A8%8B.html#concept1__%E6%98%BE%E5%BC%8FGUTI%E9%87%8D%E5%88%86%E9%85%8D-54CC2C2C)所示、
+信令流程 :身份识别流程如[图1]所示、
 图1  身份识别流程
 
 
-[]images/47-%20Identification%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -16650,11 +16652,11 @@ UE向MME响应Identity Response消息，消息包含：IMSI。
 业务模型 :MME支持UE终端NAS信令的加密，MME在接收NAS信令时进行解密，下发NAS信令时进行加密，MME在用户接入完成鉴权后，将使用的秘钥序号与加密/解密算法下发给UE终端。 
 
 
-信令流程 :加密流程如[图1](48%20%E5%8A%A0%E5%AF%86.html#concept1__%E6%98%BE%E5%BC%8FGUTI%E9%87%8D%E5%88%86%E9%85%8D-54CC2C2C)所示、
+信令流程 :加密流程如[图1]所示、
 图1  加密
 
 
-[]images/48-%E5%8A%A0%E5%AF%86%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -16676,11 +16678,11 @@ UE向MME响应Security Mode Complete消息，如MME在Security mode command消�
 业务模型 :MME支持UE终端NAS信令的完整性保护，MME在接收NAS信令时进行完整性保护检查，下发NAS信令时生成并携带完整性保护头，MME在用户接入完成鉴权后，将使用的秘钥序号与完整性保护算法下发给UE终端。 
 
 
-信令流程 :数据完整性流程如[图1](49%20%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7.html#concept1__%E6%98%BE%E5%BC%8FGUTI%E9%87%8D%E5%88%86%E9%85%8D-54CC2C2C)所示、
+信令流程 :数据完整性流程如[图1]所示、
 图1  数据完整性
 
 
-[]images/49-%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -16716,11 +16718,11 @@ Command消息后使用该安全上下文对NAS上行数据进行解密。
 业务模型 :用户接入MME时，MME通过EIR设备可以检查用户终端IMEI是否合法，当IMEI非法时，MME将拒绝为用户提供业务。 
 
 
-信令流程 :IMEI检查流程如[图1](50%20IMEI%E6%A3%80%E6%9F%A5.html#concept1__%E6%98%BE%E5%BC%8FGUTI%E9%87%8D%E5%88%86%E9%85%8D-54CC2C2C)所示。
+信令流程 :IMEI检查流程如[图1]所示。
 图1  IMEI检查
 
 
-[]images/50-IMEI%E6%A3%80%E6%9F%A5%E6%B5%81%E7%A8%8B.png)
+
 
 
 
@@ -16748,11 +16750,11 @@ EIR向MME响应ME Identity Check Request消息，携带IMEISV验证结果。
 业务模型 :MME允许UE请求断开与某个PDN的连接，在这个过程中，MME通知SGW、PGW、无线侧和UE删除PDN连接，包括缺省承载在内的全部承载都将被释放，已申请的IP地址也被释放。
 
 
-信令流程 :HSS修改签约数据，导致MME请求PDN断开的流程如[图1](51%20HSS%E4%BF%AE%E6%94%B9%E7%AD%BE%E7%BA%A6%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%AF%BC%E8%87%B4MME%E8%AF%B7%E6%B1%82PDN%E6%96%AD%E5%BC%80.html#concept1__HSS%E4%BF%AE%E6%94%B9%E7%AD%BE%E7%BA%A6%E6%95%B0%E6%8D%AE%E5%AF%BC%E8%87%B4MME%E8%AF%B7%E6%B1%82PDN%E6%96%AD%E5%BC%80-4FA56128)所示。
+信令流程 :HSS修改签约数据，导致MME请求PDN断开的流程如[图1]所示。
 图1  HSS修改签约数据，导致MME请求PDN断开
 
 
-[]images/51%20HSS%E4%BF%AE%E6%94%B9%E7%AD%BE%E7%BA%A6%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%AF%BC%E8%87%B4MME%E8%AF%B7%E6%B1%82PDN%E6%96%AD%E5%BC%80.png)
+
 
 
 
@@ -16829,11 +16831,11 @@ Context Accept消息。
 该流程不支持QCI资源类型的修改，即不支持GBR承载和Non-GBR承载的相互转化。
 
 
-信令流程 :HSS发起的签约QoS修改流程如[图1](52%20HSS%E4%BF%AE%E6%94%B9%E7%AD%BE%E7%BA%A6QoS%EF%BC%8C%E5%AF%BC%E8%87%B4%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9.html#concept1__HSS%E4%BF%AE%E6%94%B9%E7%AD%BE%E7%BA%A6QoS%E5%AF%BC%E8%87%B4%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9-4FBC1465)所示。
+信令流程 :HSS发起的签约QoS修改流程如[图1]所示。
 图1  HSS修改签约QoS，导致承载修改
 
 
-[]images/52%20HSS%E4%BF%AE%E6%94%B9%E7%AD%BE%E7%BA%A6QoS%EF%BC%8C%E5%AF%BC%E8%87%B4%E6%89%BF%E8%BD%BD%E4%BF%AE%E6%94%B9.png)
+
 
 
 
@@ -16918,11 +16920,11 @@ Identity。
 业务模型 :MME和HSS之间S6a接口上的Delete Subscriber Data流程用于删除MME上存储的HSS用户签约数据，该流程由HSS触发，用于删除指定用户存储在MME上的部分或全部签约数据。
 
 
-信令流程 :HSS删除签约数据信令流程如[图1](53%20HSS%E5%88%A0%E9%99%A4%E7%AD%BE%E7%BA%A6%E6%95%B0%E6%8D%AE.html#concept1__HSS%E5%88%A0%E9%99%A4%E7%AD%BE%E7%BA%A6%E6%95%B0%E6%8D%AE%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-4FBFA96D)所示。
+信令流程 :HSS删除签约数据信令流程如[图1]所示。
 图1  HSS删除签约数据信令流程
 
 
-[]images/53%20HSS%E5%88%A0%E9%99%A4%E7%AD%BE%E7%BA%A6%E6%95%B0%E6%8D%AE.png)
+
 
 
 
@@ -16943,11 +16945,11 @@ MME根据请求指示删除部分或全部签约数据，并向HSS响应Delete S
 业务模型 :当运营商决定删除签约用户在MME上的MM上下文和EPS承载时，能过HSS发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。
 
 
-信令流程 :HSS取消位置记录信令流程如[图1](54%20HSS%E5%8F%96%E6%B6%88%E4%BD%8D%E7%BD%AE%E8%AE%B0%E5%BD%95.html#concept1__HSS%E5%8F%96%E6%B6%88%E4%BD%8D%E7%BD%AE%E8%AE%B0%E5%BD%95%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-4FBCACFD)所示。
+信令流程 :HSS取消位置记录信令流程如[图1]所示。
 图1  HSS取消位置记录信令流程
 
 
-[]images/54%20HSS%E5%8F%96%E6%B6%88%E4%BD%8D%E7%BD%AE%E8%AE%B0%E5%BD%95.png)
+
 
 
 
@@ -17009,11 +17011,11 @@ Connection Release消息，用于释放UE的S1-MME信令连接。消息包含：
 MME可以在用户隐式或显式分离后立即删除签约数据及MM上下文，也可以在用户分离后保留一段时间，这样用户稍后附着时可以重用这些签约数据，而不需要向HSS重新获取。 
 
 
-信令流程 :清除功能信令流程如[图1](55%20%E6%B8%85%E9%99%A4%E5%8A%9F%E8%83%BD.html#concept1__%E6%B8%85%E9%99%A4%E5%8A%9F%E8%83%BD%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-4FC124FF)所示。
+信令流程 :清除功能信令流程如[图1]所示。
 图1  清除功能信令流程
 
 
-[]images/55%20%E6%B8%85%E9%99%A4%E5%8A%9F%E8%83%BD.png)
+
 
 
 
@@ -17027,7 +17029,9 @@ HSS设置“UE Purged for E-UTRAN”标识，并向MME回送Purge UE Answer消�
 
 
 
-缩略语 :缩略语 :## ARP 
+# 缩略语 
+# 缩略语 
+## ARP 
 Allocation and Retention Priority分配保持优先级
 ## ECGI 
 E-UTRAN Cell Global IdentifierE-UTRAN小区全球标识
@@ -17083,11 +17087,11 @@ UE注册到IMS网络UE注册到IMS网络包括基本注册和第三方注册。�
  
 
 
-信令流程 :注册流程（融合HLR/HSS）如[图1](1-%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B%EF%BC%88%E8%9E%8D%E5%90%88HLR%20HSS%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B%E8%9E%8D%E5%90%88HLRHSS-B6522CEC)所示。
+信令流程 :注册流程（融合HLR/HSS）如[图1]所示。
 图1  注册流程（融合HLR/HSS）
 
 
-[]images/img-0013377820(%E9%87%8D%E7%94%A81).png)
+
 
 EPC附着信令流程
 
@@ -17267,10 +17271,10 @@ APN默认承载，释放无线资源，删除移动性管理上下文或把移�
  
 
 
-信令流程 :终端发起的注销消息流程如图[图1](2-%E7%BB%88%E7%AB%AF%E5%8F%91%E8%B5%B7%E7%9A%84%E6%B3%A8%E9%94%80%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E8%AF%AD%E9%9F%B3%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%B8%BB%E5%8F%ABVolte%E7%94%A8%E6%88%B7%E9%99%84%E7%9D%80%E5%9C%A8LTE%E8%A2%AB%E5%8F%ABVolte%E7%94%A8%E6%88%B7%E9%99%84%E7%9D%80%E5%9C%A82G-B6B3D743)所示。
+信令流程 :终端发起的注销消息流程如图[图1]所示。
 图1  语音业务流程（主叫VoLTE用户附着在LTE 被叫VoLTE用户附着在2G 3G）
 
-[]images/img-0013374144(%E9%87%8D%E7%94%A81).png)
+
 IMS注销流程
 
 
@@ -17356,11 +17360,11 @@ APN默认承载，释放无线资源，删除移动性管理上下文或把移�
  
 
 
-信令流程 :网络侧发起的注销流程如[图1](3-%E7%BD%91%E7%BB%9C%E4%BE%A7%E5%8F%91%E8%B5%B7%E7%9A%84%E6%B3%A8%E9%94%80%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E7%BD%91%E7%BB%9C%E4%BE%A7%E5%8F%91%E8%B5%B7%E7%9A%84%E6%B3%A8%E9%94%80%E6%B5%81%E7%A8%8B-C72AB4D5)所示。
+信令流程 :网络侧发起的注销流程如[图1]所示。
 图1  网络侧发起的注销流程
 
 
-[]images/img-0013541648(%E9%87%8D%E7%94%A81).png)
+
 
 IMS注销流程
 
@@ -17466,10 +17470,10 @@ OK时，通过PCRF要求P-GW释放LTE域专用承载。
  
 
 
-信令流程 :呼叫流程如[图1](4-%E8%AF%AD%E9%9F%B3%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%EF%BC%88%E4%B8%BB%E8%A2%AB%E5%8F%ABVoLTE%E7%94%A8%E6%88%B7%E5%9D%87%E9%99%84%E7%9D%80%E5%9C%A8LTE%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__VoLTE%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABVoLTE%E7%94%A8%E6%88%B7%E9%83%BD%E6%98%AFLTE%E5%9F%9F%E9%99%84%E7%9D%80-B6AE67C6)所示。
+信令流程 :呼叫流程如[图1]所示。
 图1  VoLTE用户呼叫VoLTE用户(都是LTE域附着)
 
-[]images/img-0013409684(%E9%87%8D%E7%94%A81).png)
+
 主叫信令面流程
 
 
@@ -17795,10 +17799,10 @@ HLR/SAE-HSS/IMS-HSS合一部署，HSS\ENUM\DNS也合一部署。
  
 
 
-信令流程 :主叫LTE用户通过LTE网络向被叫域选CS网络的LTE用户发起呼叫，具体的语音流程如[图1](5-%E8%AF%AD%E9%9F%B3%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%EF%BC%88%E4%B8%BB%E5%8F%ABVoLTE%E7%94%A8%E6%88%B7%E9%99%84%E7%9D%80%E5%9C%A8LTE%EF%BC%8C%E8%A2%AB%E5%8F%ABVoLTE%E7%94%A8%E6%88%B7%E9%99%84%E7%9D%80%E5%9C%A82G%203G%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E8%AF%AD%E9%9F%B3%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%B8%BB%E5%8F%ABVoLTE%E7%94%A8%E6%88%B7%E9%99%84%E7%9D%80%E5%9C%A8LTE%E8%A2%AB%E5%8F%ABVoLTE%E7%94%A8%E6%88%B7%E9%99%84%E7%9D%80%E5%9C%A82G-BA61798E)所示。
+信令流程 :主叫LTE用户通过LTE网络向被叫域选CS网络的LTE用户发起呼叫，具体的语音流程如[图1]所示。
 图1  语音业务流程（主叫VoLTE用户附着在LTE， 被叫VoLTE用户附着在2G/3G）
 
-[]images/img-0013405706(%E9%87%8D%E7%94%A81).png)
+
 主叫信令面流程
 
 
@@ -18260,11 +18264,11 @@ CS用户呼叫LTE用户流程（被叫号码为连续号段）的呼叫过程可
  
 
 
-信令流程 :CS用户呼叫LTE用户流程（被叫号码为连续号段）的信令流程如[图1](6-CS%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABLTE%E7%94%A8%E6%88%B7%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__CS%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABLTE%E7%94%A8%E6%88%B7%E6%B5%81%E7%A8%8B%E8%A2%AB%E5%8F%AB%E5%8F%B7%E7%A0%81%E4%B8%BA%E8%BF%9E%E7%BB%AD%E5%8F%B7%E6%AE%B5-C6B6621B)所示。
+信令流程 :CS用户呼叫LTE用户流程（被叫号码为连续号段）的信令流程如[图1]所示。
 图1  CS用户呼叫LTE用户流程（被叫号码为连续号段）
 
 
-[]images/img-0013541688(%E9%87%8D%E7%94%A81).png)
+
 
 主叫流程
 
@@ -18661,11 +18665,11 @@ LTE用户呼叫CS用户流程具体有以下几个阶段。
  
 
 
-信令流程 :LTE用户呼叫CS用户信令流程如[图1](7-LTE%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABCS%E7%94%A8%E6%88%B7%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__LTE%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABCS%E7%94%A8%E6%88%B7-C6C1E07B)所示。
+信令流程 :LTE用户呼叫CS用户信令流程如[图1]所示。
 图1  LTE用户呼叫CS用户
 
 
-[]images/img-0013541691(%E9%87%8D%E7%94%A81).png)
+
 
 主叫信令面流程
 
@@ -19131,11 +19135,11 @@ MGW返回SUB REPLY消息。
  
 
 
-信令流程 :主叫UE_A呼叫被叫UE_B后，视频通话成功。主叫用户UE_A发起媒体切换操作，要求切换为语音操作，具体的流程如[图1](8-LTE%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABLTE%E7%94%A8%E6%88%B7%E8%A7%86%E9%A2%91%E5%9B%9E%E8%90%BD%E8%AF%AD%E9%9F%B3%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__LTE%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABLTE%E7%94%A8%E6%88%B7%E8%A7%86%E9%A2%91%E5%9B%9E%E8%90%BD%E8%AF%AD%E9%9F%B3%E6%B5%81%E7%A8%8B-C720F507)所示。
+信令流程 :主叫UE_A呼叫被叫UE_B后，视频通话成功。主叫用户UE_A发起媒体切换操作，要求切换为语音操作，具体的流程如[图1]所示。
 图1  LTE用户呼叫LTE用户视频回落语音流程
 
 
-[]images/img-0013541694(%E9%87%8D%E7%94%A81).png)
+
 
 信令面流程
 
@@ -19277,11 +19281,11 @@ LTE用户呼叫LTE用户视频流程 可以分为如下几个阶段。
  
 
 
-信令流程 :LTE用户呼叫LTE用户视频流程如[图1](9-LTE%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABLTE%E7%94%A8%E6%88%B7%E8%A7%86%E9%A2%91%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__LTE%E7%94%A8%E6%88%B7%E5%91%BC%E5%8F%ABLTE%E7%94%A8%E6%88%B7%E8%A7%86%E9%A2%91%E6%B5%81%E7%A8%8B-C724E32E)所示。
+信令流程 :LTE用户呼叫LTE用户视频流程如[图1]所示。
 图1  LTE用户呼叫LTE用户视频流程
 
 
-[]images/img-0013541697(%E9%87%8D%E7%94%A81).png)
+
 
 主叫信令面流程
 
@@ -19572,14 +19576,14 @@ P-CSCF_A发送BYE的200 OK应答给UE_A，通话结束。
 ### Anchor AS被叫锚定流程 
 
 
-业务模型 :CS网络的主叫用户呼叫VoLTE被叫用户时，Anchor AS通过在被叫号码前插前缀的方式，将呼叫锚定到IMS网络，在IMS网络触发用户的被叫侧业务。具体流程如[图1](10-Anchor%20AS%E8%A2%AB%E5%8F%AB%E9%94%9A%E5%AE%9A%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E8%A2%AB%E5%8F%AB%E9%94%9A%E5%AE%9A%E6%B5%81%E7%A8%8B-C6A68E5F)所示。
+业务模型 :CS网络的主叫用户呼叫VoLTE被叫用户时，Anchor AS通过在被叫号码前插前缀的方式，将呼叫锚定到IMS网络，在IMS网络触发用户的被叫侧业务。具体流程如[图1]所示。
 
 
-信令流程 :被叫锚定流程的信令流程如[图1](10-Anchor%20AS%E8%A2%AB%E5%8F%AB%E9%94%9A%E5%AE%9A%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E8%A2%AB%E5%8F%AB%E9%94%9A%E5%AE%9A%E6%B5%81%E7%A8%8B-C6A68E5F)所示。
+信令流程 :被叫锚定流程的信令流程如[图1]所示。
 图1  被叫锚定流程
 
 
-[]images/img-0013541700(%E9%87%8D%E7%94%A81).png)
+
 
 主叫流程
 
@@ -20083,11 +20087,11 @@ HSS下载到UE的业务数据后，第三方注册完成。eSRVCC中引入了ATC
  
 
 
-信令流程 :SRVCC/eSRVCC注册流程如[图1](11-%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__SRVCCeSRVCC%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B-C6B587F1)所示。
+信令流程 :SRVCC/eSRVCC注册流程如[图1]所示。
 图1  SRVCC/eSRVCC注册流程
 
 
-[]images/img-0013541651(%E9%87%8D%E7%94%A81).png)
+
 
 EPC附着流程
 
@@ -20305,11 +20309,11 @@ MME更新本地的STN-SR号码后，向融合HLR/HSS返回成功更新Insert Sub
  
 
 
-信令流程 :SRVCC/eSRVCC呼叫流程如[图1](12-%E5%91%BC%E5%8F%AB%E6%B5%81%E7%A8%8B%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__SRVCCeSRVCC%E5%91%BC%E5%8F%AB%E6%B5%81%E7%A8%8B-C6BEA214)所示。
+信令流程 :SRVCC/eSRVCC呼叫流程如[图1]所示。
 图1  SRVCC/eSRVCC呼叫流程
 
 
-[]images/img-0013541703(%E9%87%8D%E7%94%A81).png)
+
 
 主叫信令面流程
 
@@ -20621,11 +20625,11 @@ VoLTE AS已支持SRVCC/eSRVCC功能。
  
 
 
-信令流程 :签约eSRVCC业务的主叫LTE用户通过LTE网络发起呼叫，被叫域选网络为LTE网络，当主叫用户和被叫用户正在进行通话时，主叫用户从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换，具体的语音切换流程如[图1](13-%E5%8D%95%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88Active%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E5%8D%95%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Active%E7%8A%B6%E6%80%81-B6BF2153)所示。
+信令流程 :签约eSRVCC业务的主叫LTE用户通过LTE网络发起呼叫，被叫域选网络为LTE网络，当主叫用户和被叫用户正在进行通话时，主叫用户从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换，具体的语音切换流程如[图1]所示。
 图1  单路语音呼叫切换（Active状态）
 
 
-[]images/img-0013378151(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -20879,10 +20883,10 @@ VoLTE SBC兼做P-CSCF/ATCF/ATGW网元。
 
 
 信令流程 :当UE_A和UE_B通话过程中，UE_A
-Hold UE_B。UE_A为Hold业务方，当前仅有这一个Hold状态会话。此时，UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。具体的语音切换流程如[图1](14-%E5%8D%95%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88Hold%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E5%8D%95%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Hold%E7%8A%B6%E6%80%81-B6C5BD97)所示。图1  单路语音呼叫切换（Hold状态）
+Hold UE_B。UE_A为Hold业务方，当前仅有这一个Hold状态会话。此时，UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。具体的语音切换流程如[图1]所示。图1  单路语音呼叫切换（Hold状态）
 
 
-[]images/img-0013375457(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -21225,11 +21229,11 @@ UE_A呼叫UE_B，UE_B处于振铃态。UE_A从LTE网络移动到3G网络，发�
  
 
 
-信令流程 :单路语音呼叫切换（呼出Alerting状态）的信令流程如[图1](15-%E5%8D%95%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88%E5%91%BC%E5%87%BAAlerting%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__fig_-1333-C6B8F69A)所示。
+信令流程 :单路语音呼叫切换（呼出Alerting状态）的信令流程如[图1]所示。
 图1  单路语音呼叫切换（呼出Alerting状态）
 
 
-[]images/img-0013541654(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -21445,11 +21449,11 @@ UE_B呼叫UE_A，UE_A处于振铃态。UE_A从E-UTRAN网络移动到UTRAN/GERAN�
  
 
 
-信令流程 :单路语音呼叫切换（呼入Alerting状态）的信令流程如[图1](16-%E5%8D%95%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88%E5%91%BC%E5%85%A5Alerting%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E5%8D%95%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%E5%91%BC%E5%85%A5Alerting%E7%8A%B6%E6%80%81-C71BF4EB)所示。
+信令流程 :单路语音呼叫切换（呼入Alerting状态）的信令流程如[图1]所示。
 图1  单路语音呼叫切换（呼入Alerting状态）
 
 
-[]images/img-0013541657(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -21669,11 +21673,11 @@ ATCF再将该消息转发给VoLTE AS_A。
 业务模型 :UE_A呼叫UE_B，通话后，UE_A保持UE_B，UE_A再呼叫UE_C，进入通话。UE_A有一路Active状态的会话和一路Hold状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
 
 
-信令流程 :两路语音呼叫切换（Active状态和Hold状态）的流程如[图1](17-%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88Active%E7%8A%B6%E6%80%81%E5%92%8CHold%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Active%E7%8A%B6%E6%80%81%E5%92%8CHold%E7%8A%B6%E6%80%81-B6A34AA2__%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Active%E7%8A%B6%E6%80%81%E5%92%8CHold%E7%8A%B6%E6%80%81-BBCE1589)所示。
+信令流程 :两路语音呼叫切换（Active状态和Hold状态）的流程如[图1]所示。
 图1  两路语音呼叫切换（Active状态和Hold状态）
 
 
-[]images/img-0013409736(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -21934,11 +21938,11 @@ UE-A向ATCF_A发送200 OK消息。
 业务模型 :UE_A呼叫UE_B，通话后，UE_C呼叫UE_A，UE_A振铃。UE_A有一路Active状态的会话和一路呼入Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
 
 
-信令流程 :两路语音呼叫切换（Active状态和Alerting状态）的流程如[图1](18-%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88Active%E7%8A%B6%E6%80%81%E5%92%8CAlerting%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Active%E7%8A%B6%E6%80%81%E5%92%8CAlerting%E7%8A%B6%E6%80%81-B6A35960__%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Active%E7%8A%B6%E6%80%81%E5%92%8CAlerting%E7%8A%B6%E6%80%81-BBCDCBC6)所示。
+信令流程 :两路语音呼叫切换（Active状态和Alerting状态）的流程如[图1]所示。
 图1  两路语音呼叫切换（Active状态和Alerting状态）
 
 
-[]images/img-0013409734(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -22189,11 +22193,11 @@ AS_A，指示UE_A应答。VoLTE AS_A收到INFO消息后，向UE-C发送200 OK，
 业务模型 :UE_A呼叫UE_B，通话后，UE_A 保持UE_B，UE_C呼叫UE_A，UE_A振铃。UE_A有一路hold状态的会话和一路呼入Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
 
 
-信令流程 :两路语音呼叫切换（Hold状态和呼入Alerting状态）的信令流程如[图1](19-%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88Hold%E7%8A%B6%E6%80%81%E5%92%8C%E5%91%BC%E5%85%A5Alerting%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Hold%E7%8A%B6%E6%80%81%E5%92%8C%E5%91%BC%E5%85%A5Alerting%E7%8A%B6%E6%80%81-C727EC09)所示。
+信令流程 :两路语音呼叫切换（Hold状态和呼入Alerting状态）的信令流程如[图1]所示。
 图1  两路语音呼叫切换（Hold状态和呼入Alerting状态）
 
 
-[]images/img-0013541660(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -22441,11 +22445,11 @@ AS_A，指示UE_A应答。VoLTE AS_A收到INFO消息后，向UE-C发送200 OK，
 业务模型 :UE_A呼叫UE_B，通话后，UE_A 保持UE_B，UE_A再呼叫UE_C，UE_C振铃。UE_A有一路Active状态的会话和一路呼出Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
 
 
-信令流程 :两路语音呼叫切换（Hold状态和呼出Alerting状态）的信令流程如[图1](20-%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88Hold%E7%8A%B6%E6%80%81%E5%92%8C%E5%91%BC%E5%87%BAAlerting%E7%8A%B6%E6%80%81%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E4%B8%A4%E8%B7%AF%E8%AF%AD%E9%9F%B3%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2Hold%E7%8A%B6%E6%80%81%E5%92%8C%E5%91%BC%E5%87%BAAlerting%E7%8A%B6%E6%80%81-C726543F)所示。
+信令流程 :两路语音呼叫切换（Hold状态和呼出Alerting状态）的信令流程如[图1]所示。
 图1  两路语音呼叫切换（Hold状态和呼出Alerting状态）
 
 
-[]images/img-0013541663(%E9%87%8D%E7%94%A81).png)
+
 
 CS网络媒体资源建立流程
 
@@ -22691,9 +22695,9 @@ UE_A向ATCF_A发送200 OK消息。
 数据库部署形态为融合HLR/HSS，即HLR，SAE-HSS和IMS-HSS合一部署。 
 采用四合一设备ZXUN B200（A04）支持A-SBC/P-CSCF/ATCF/ATGW功能。 
 信令流程 :签约SRVCC/eSRVCC的主叫LTE用户发起视频呼叫，呼叫被叫VoLTE用户，被叫选择视频接通。视频通话一段时间后，主叫用户移出4G覆盖区域进入2G/3G覆盖区，发生eSRVCC切换，同时呼叫回落为语音通话。
-具体流程如[图1](21-%E8%A7%86%E9%A2%91%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E8%A7%86%E9%A2%91%E5%91%BC%E5%8F%AB%E5%88%87%E6%8D%A2%E8%AF%AD%E9%9F%B3%E5%9B%9E%E8%90%BD-B6C80A93)所示。
+具体流程如[图1]所示。
 图1  视频呼叫切换（语音回落）
-[]images/img-0013406780(%E9%87%8D%E7%94%A81).png)
+
 签约SRVCC/eSRVCC的主叫LTE用户发起视频呼叫，呼叫被叫VoLTE用户，被叫选择视频接通，主被叫UE_A和UE_B通话中。
 CS网络媒体资源建立流程
 UE_A通话过程中移动至4 G信号强度低于门限值地区，检测领区3G网络信息强度满足门限要求，上报系统测量报告至eNodeB_A；基于UE_A的测量报告，eNodeB_A决定触发到UTRAN的SRVCC切换，eNodeB_A发送Handover
@@ -22794,11 +22798,11 @@ UE_A向VoLTE AS_A返回200响应消息。
 
 
 ##### 信令描述 
-通话状态下由于E-UTRAN信号增强回切至4G，具体的信令流程如[图1](22-%E9%80%9A%E8%AF%9D%E7%8A%B6%E6%80%81%E4%B8%8B%E5%9B%9E%E5%88%87%EF%BC%88E-UTRAN%E7%BD%91%E7%BB%9C%E4%BF%A1%E5%8F%B7%E5%A2%9E%E5%BC%BA%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E9%80%9A%E8%AF%9D%E7%8A%B6%E6%80%81%E4%B8%8B%E5%9B%9E%E5%88%87E-UTRAN%E7%BD%91%E7%BB%9C%E4%BF%A1%E5%8F%B7%E5%A2%9E%E5%BC%BA-C729ECA3)所示。
+通话状态下由于E-UTRAN信号增强回切至4G，具体的信令流程如[图1]所示。
 图1  通话状态下回切（E-UTRAN网络信号增强）
 
 
-[]images/img-0013541666(%E9%87%8D%E7%94%A81).png)
+
 
 
 
@@ -22850,10 +22854,10 @@ MME发送Handover Cancel ACK消息到eNodeB，通知其切换已取消。
 业务模型 :在主叫LTE用户A在接入E-UTRAN通话过程中，UE由于4 G网络信号不足导致eSRVCC切换请求，在收到切换指示后，UTRAN/GERAN减弱导致接入失败，从而UE向eNodeB请求取消切换并重新接入E-UTRAN。
 
 
-信令流程 :通话状态下回切至4G具体的信令流程如[图1](23-%E9%80%9A%E8%AF%9D%E7%8A%B6%E6%80%81%E4%B8%8B%E5%9B%9E%E5%88%87%EF%BC%88UTRAN%20GERAN%E7%BD%91%E7%BB%9C%E4%BF%A1%E5%8F%B7%E5%87%8F%E5%BC%B1%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__%E9%80%9A%E8%AF%9D%E7%8A%B6%E6%80%81%E4%B8%8B%E5%9B%9E%E5%88%87UTRANGERAN%E7%BD%91%E7%BB%9C%E4%BF%A1%E5%8F%B7%E5%87%8F%E5%BC%B1-B6C92EA1)所示。
+信令流程 :通话状态下回切至4G具体的信令流程如[图1]所示。
 图1  通话状态下回切（UTRAN/GERAN网络信号减弱）
 
-[]images/img-0013377691(%E9%87%8D%E7%94%A81).png)
+
 流程说明如下： 
 
 
@@ -22944,11 +22948,11 @@ eMSC向VoLTE AS返回BYE消息的200 OK响应，通知会话资源释放已完�
 业务模型 :UE在E-UTRAN网络中处于Alerting状态。UE从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。UE收到切换指示后，由于UTRAN/GERAN网络信号减弱，接入UTRAN/GERAN失败，UE取消切换并重新接入E-UTRAN网络。 
 
 
-信令流程 :Alerting状态下回切（UTRAN/GERAN网络信号减弱）的信令流程如[图1](24-Alerting%E7%8A%B6%E6%80%81%E4%B8%8B%E5%9B%9E%E5%88%87%EF%BC%88UTRAN%20GERAN%E7%BD%91%E7%BB%9C%E4%BF%A1%E5%8F%B7%E5%87%8F%E5%BC%B1%EF%BC%89%EF%BC%88%E9%87%8D%E7%94%A81%EF%BC%89.html#concept1__Alerting%E7%8A%B6%E6%80%81%E4%B8%8B%E5%9B%9E%E5%88%87UTRANGERAN%E7%BD%91%E7%BB%9C%E4%BF%A1%E5%8F%B7%E5%87%8F%E5%BC%B1%E7%9A%84%E4%BF%A1%E4%BB%A4%E6%B5%81%E7%A8%8B-C6BC308B)所示。
+信令流程 :Alerting状态下回切（UTRAN/GERAN网络信号减弱）的信令流程如[图1]所示。
 图1  Alerting状态下回切（UTRAN/GERAN网络信号减弱）的信令流程
 
 
-[]images/img-0013541706(%E9%87%8D%E7%94%A81).png)
+
 
 
 
@@ -23029,7 +23033,9 @@ ATCF发送ACK消息给VoLTE AS。
 
 
 
-缩略语 :缩略语 :AAA :Authentication, Authorization and Accounting鉴权、授权及计费
+# 缩略语 
+# 缩略语 
+AAA :Authentication, Authorization and Accounting鉴权、授权及计费
 ## AAR 
 Answer-Auth-Request应答鉴权请求
 ## AIA 

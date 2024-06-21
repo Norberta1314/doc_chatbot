@@ -1,7 +1,7 @@
  服务管理配置 
 
 
-[](None)
+
 
 
 
@@ -9,21 +9,21 @@
 # 服务基础配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 PCF服务包括SM（Session Management，会话管理）策略服务、AM（Access and Mobility Management，接入移动管理）策略服务、UE策略服务和策略授权服务。配置PCF服务的目的是其他NF发现PCF服务并请求PCF下发相关策略。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 本配置用于配置PCF服务，包括服务类型、服务版本、FQDN（Fully Qualified Domain Name，全称域名）和优先级等。PCF需对外提供服务，因此必须执行本配置。PCF服务配置后，其它NF从NRF发现PCF服务后，可请求相应的服务策略。若不配置，其他NF无法从NRF发现相应的PCF服务。 
 
 
 
 
-[](None)
+
 
 
 
@@ -31,7 +31,7 @@ PCF服务包括SM（Session Management，会话管理）策略服务、AM（Acce
 ## ADD PCFSERVICE 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF支持的服务信息。 
 
@@ -41,7 +41,7 @@ PCF服务包括SM（Session Management，会话管理）策略服务、AM（Acce
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 需要根据实际规划要求填写地址、端口和版本等信息。如果配置错误，PCF无法向NRF注册服务。 
 
@@ -51,9 +51,9 @@ HTTP服务端模板ID需要在“服务端模板配置（ADD SERVERPROFILE）”
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数标识PCF进行信令路由时所支持的服务类型。数据来源：本端规划。配置原则：可以从以下给出的枚举选择。Npcf_SMPolicyControl：表示可以根据服务类型Npcf_SMPolicyControl选择基础的服务配置。Npcf_AMPolicyControl：表示可以根据服务类型Npcf_AMPolicyControl选择基础的服务配置。Npcf_UEPolicyControl：表示可以根据服务类型Npcf_UEPolicyControl选择基础的服务配置。Npcf_PolicyAuthorization：表示可以根据服务类型Npcf_PolicyAuthorization选择基础的服务配置。Npcf_EventExposure：表示可以根据服务类型Npcf_EventExposure选择基础的服务配置。Npcf_BDTPolicyControl：表示可以根据服务类型Npcf_BDTPolicyControl选择基础的服务配置。Npcf：表示上面具体的服务类型不存在时，可以使用该通配的服务类型选择基础的服务配置。
 VERSION|版本|参数可选性:必选参数；参数类型:字符型；参数范围为:1~7个字符。|参数作用：本参数指定该服务的版本。数据来源：本端规划。配置原则：根据本端规划填写，例如：v1。
@@ -73,9 +73,9 @@ PXYPORT|Proxy端口|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数标识PCF进行信令路由时所支持的服务类型。数据来源：本端规划。配置原则：可以从以下给出的枚举选择。Npcf_SMPolicyControl：表示可以根据服务类型Npcf_SMPolicyControl选择基础的服务配置。Npcf_AMPolicyControl：表示可以根据服务类型Npcf_AMPolicyControl选择基础的服务配置。Npcf_UEPolicyControl：表示可以根据服务类型Npcf_UEPolicyControl选择基础的服务配置。Npcf_PolicyAuthorization：表示可以根据服务类型Npcf_PolicyAuthorization选择基础的服务配置。Npcf_EventExposure：表示可以根据服务类型Npcf_EventExposure选择基础的服务配置。Npcf_BDTPolicyControl：表示可以根据服务类型Npcf_BDTPolicyControl选择基础的服务配置。Npcf：表示上面具体的服务类型不存在时，可以使用该通配的服务类型选择基础的服务配置。
 VERSION|版本|参数可选性:任选参数；参数类型:字符型；参数范围为:1~7个字符。|参数作用：本参数指定该服务的版本。数据来源：本端规划。配置原则：根据本端规划填写，例如：v1。
@@ -93,7 +93,7 @@ PXYIPPORT|Proxy地址端口|参数可选性:任选参数；参数类型:字符�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF的服务基础配置信息，服务类型为Npcf_SMPolicyControl服务，版本为1，FQDN为A，优先级为1，容量为100，支持特性为A，HTTP服务端模板ID为1，拓扑隐藏属性为隐藏，模式为HTTP，代理IP为“10.10.10.10”，代理端口为8080。 
 
@@ -109,7 +109,7 @@ ADD PCFSERVICE:SERVICETYPE="NPCF_SMPOLICYCONTROL",VERSION="1",FQDN="A",PRIORITY=
 ## SET PCFSERVICE 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改PCF支持的服务信息。 
 
@@ -119,16 +119,16 @@ ADD PCFSERVICE:SERVICETYPE="NPCF_SMPOLICYCONTROL",VERSION="1",FQDN="A",PRIORITY=
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 需要根据实际规划要求填写地址、端口和版本等信息。如果配置错误，PCF无法向NRF注册服务。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数标识PCF进行信令路由时所支持的服务类型。数据来源：本端规划。配置原则：可以从以下给出的枚举选择。Npcf_SMPolicyControl：表示可以根据服务类型Npcf_SMPolicyControl选择基础的服务配置。Npcf_AMPolicyControl：表示可以根据服务类型Npcf_AMPolicyControl选择基础的服务配置。Npcf_UEPolicyControl：表示可以根据服务类型Npcf_UEPolicyControl选择基础的服务配置。Npcf_PolicyAuthorization：表示可以根据服务类型Npcf_PolicyAuthorization选择基础的服务配置。Npcf_EventExposure：表示可以根据服务类型Npcf_EventExposure选择基础的服务配置。Npcf_BDTPolicyControl：表示可以根据服务类型Npcf_BDTPolicyControl选择基础的服务配置。Npcf：表示上面具体的服务类型不存在时，可以使用该通配的服务类型选择基础的服务配置。
 VERSION|版本|参数可选性:任选参数；参数类型:字符型；参数范围为:1~7个字符。|参数作用：本参数指定该服务的版本。数据来源：本端规划。配置原则：根据本端规划填写，例如：v1。
@@ -148,9 +148,9 @@ PXYPORT|Proxy端口|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数标识PCF进行信令路由时所支持的服务类型。数据来源：本端规划。配置原则：可以从以下给出的枚举选择。Npcf_SMPolicyControl：表示可以根据服务类型Npcf_SMPolicyControl选择基础的服务配置。Npcf_AMPolicyControl：表示可以根据服务类型Npcf_AMPolicyControl选择基础的服务配置。Npcf_UEPolicyControl：表示可以根据服务类型Npcf_UEPolicyControl选择基础的服务配置。Npcf_PolicyAuthorization：表示可以根据服务类型Npcf_PolicyAuthorization选择基础的服务配置。Npcf_EventExposure：表示可以根据服务类型Npcf_EventExposure选择基础的服务配置。Npcf_BDTPolicyControl：表示可以根据服务类型Npcf_BDTPolicyControl选择基础的服务配置。Npcf：表示上面具体的服务类型不存在时，可以使用该通配的服务类型选择基础的服务配置。
 VERSION|版本|参数可选性:任选参数；参数类型:字符型；参数范围为:1~7个字符。|参数作用：本参数指定该服务的版本。数据来源：本端规划。配置原则：根据本端规划填写，例如：v1。
@@ -168,7 +168,7 @@ PXYIPPORT|Proxy地址端口|参数可选性:任选参数；参数类型:字符�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改PCF的服务基础配置信息，服务类型为Npcf_SMPolicyControl服务，版本为1，FQDN为A，优先级为1。 
 
@@ -184,7 +184,7 @@ SET PCFSERVICE:SERVICETYPE="NPCF_SMPOLICYCONTROL",VERSION="1",FQDN="A",PRIORITY=
 ## DEL PCFSERVICE 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF支持的服务信息。 
 
@@ -194,16 +194,16 @@ SET PCFSERVICE:SERVICETYPE="NPCF_SMPOLICYCONTROL",VERSION="1",FQDN="A",PRIORITY=
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 执行本命令后，对于后续的PCF服务不会被其他NF发现，请谨慎执行删除操作。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数标识PCF进行信令路由时所支持的服务类型。数据来源：本端规划。配置原则：可以从以下给出的枚举选择。Npcf_SMPolicyControl：表示可以根据服务类型Npcf_SMPolicyControl选择基础的服务配置。Npcf_AMPolicyControl：表示可以根据服务类型Npcf_AMPolicyControl选择基础的服务配置。Npcf_UEPolicyControl：表示可以根据服务类型Npcf_UEPolicyControl选择基础的服务配置。Npcf_PolicyAuthorization：表示可以根据服务类型Npcf_PolicyAuthorization选择基础的服务配置。Npcf_EventExposure：表示可以根据服务类型Npcf_EventExposure选择基础的服务配置。Npcf_BDTPolicyControl：表示可以根据服务类型Npcf_BDTPolicyControl选择基础的服务配置。Npcf：表示上面具体的服务类型不存在时，可以使用该通配的服务类型选择基础的服务配置。
 
@@ -212,7 +212,7 @@ SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除PCF的Npcf_SMPolicyControl服务的基础配置信息。 
 
@@ -228,7 +228,7 @@ DEL PCFSERVICE:SERVICETYPE="NPCF_SMPOLICYCONTROL"
 ## SHOW PCFSERVICE 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF支持的服务信息。 
 
@@ -238,16 +238,16 @@ DEL PCFSERVICE:SERVICETYPE="NPCF_SMPOLICYCONTROL"
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数标识PCF进行信令路由时所支持的服务类型。数据来源：本端规划。配置原则：可以从以下给出的枚举选择。Npcf_SMPolicyControl：表示可以根据服务类型Npcf_SMPolicyControl选择基础的服务配置。Npcf_AMPolicyControl：表示可以根据服务类型Npcf_AMPolicyControl选择基础的服务配置。Npcf_UEPolicyControl：表示可以根据服务类型Npcf_UEPolicyControl选择基础的服务配置。Npcf_PolicyAuthorization：表示可以根据服务类型Npcf_PolicyAuthorization选择基础的服务配置。Npcf_EventExposure：表示可以根据服务类型Npcf_EventExposure选择基础的服务配置。Npcf_BDTPolicyControl：表示可以根据服务类型Npcf_BDTPolicyControl选择基础的服务配置。Npcf：表示上面具体的服务类型不存在时，可以使用该通配的服务类型选择基础的服务配置。
 
@@ -256,9 +256,9 @@ SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数标识PCF进行信令路由时所支持的服务类型。数据来源：本端规划。配置原则：可以从以下给出的枚举选择。Npcf_SMPolicyControl：表示可以根据服务类型Npcf_SMPolicyControl选择基础的服务配置。Npcf_AMPolicyControl：表示可以根据服务类型Npcf_AMPolicyControl选择基础的服务配置。Npcf_UEPolicyControl：表示可以根据服务类型Npcf_UEPolicyControl选择基础的服务配置。Npcf_PolicyAuthorization：表示可以根据服务类型Npcf_PolicyAuthorization选择基础的服务配置。Npcf_EventExposure：表示可以根据服务类型Npcf_EventExposure选择基础的服务配置。Npcf_BDTPolicyControl：表示可以根据服务类型Npcf_BDTPolicyControl选择基础的服务配置。Npcf：表示上面具体的服务类型不存在时，可以使用该通配的服务类型选择基础的服务配置。
 VERSION|版本|参数可选性:任选参数；参数类型:字符型；参数范围为:1~7个字符。|参数作用：本参数指定该服务的版本。数据来源：本端规划。配置原则：根据本端规划填写，例如：v1。
@@ -276,7 +276,7 @@ PXYIPPORT|Proxy地址端口|参数可选性:任选参数；参数类型:字符�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询PCF的服务基础配置信息。 
 
@@ -304,7 +304,7 @@ Npcf_SMPolicyControl  1    A    1      100  A        1&0              隐藏    
 # 服务号段配置 
 
 
-[](None)
+
 
 
 
@@ -312,14 +312,14 @@ Npcf_SMPolicyControl  1    A    1      100  A        1&0              隐藏    
 ## 服务号段配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 PCF在向NRF注册时，会携带pcfinfo信息，该信息描述了PCF支持的号段。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 此配置用于配置PCF支持的号段信息。 
 
@@ -330,12 +330,12 @@ PCF支持的号段信息是PCF的基础配置，PCF向NRF注册时会携带号�
 该配置为可选配置，如果不配置，则其他NF通过NRF发现PCF时就无法通过号段对PCF进行筛选。 
 
 
-在拨测流程中，PCF从普通升级后拨测号段配置（[查询普通升级后拨测号段](../mml/1788222.html)））中获取号段信息，在非拨测流程中，PCF从服务号段配置中获取号段信息。
+在拨测流程中，PCF从普通升级后拨测号段配置（[查询普通升级后拨测号段]））中获取号段信息，在非拨测流程中，PCF从服务号段配置中获取号段信息。
 
 
 
 
-[](None)
+
 
 
 
@@ -343,7 +343,7 @@ PCF支持的号段信息是PCF的基础配置，PCF向NRF注册时会携带号�
 ### ADD SERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF支持的号段信息。 
 
@@ -353,16 +353,16 @@ PCF支持的号段信息是PCF的基础配置，PCF向NRF注册时会携带号�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
-在拨测流程中，PCF从普通升级后拨测号段配置（[查询普通升级后拨测号段](1788222.html)））中获取号段信息，在非拨测流程中，PCF从此配置中获取号段信息。
-
-
+在拨测流程中，PCF从普通升级后拨测号段配置（[查询普通升级后拨测号段]））中获取号段信息，在非拨测流程中，PCF从此配置中获取号段信息。
 
 
-[](None)输入参数说明 :
 
-[](None)标识|名称|类型|说明
+
+输入参数说明 :
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务号段配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数用于配置服务号段配置的编号。数据来源：本端规划。配置原则：全局唯一，如果不配置，系统会自动生成此ID。
 ANATYPE|号码段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数表示服务号段的号码段类型。数据来源：全网规划。配置原则：必须和运营商规划的用户号码类型一致，取值含义如下。SUPI：表示使用SUPI号段作为号码段类型，目前PCF支持向NRF注册17000个SUPI号段。GPSI：表示使用GPSI号段作为号码段类型，目前PCF支持向NRF注册17000个GPSI号段。
@@ -375,9 +375,9 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务号段配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数用于配置服务号段配置的编号。数据来源：本端规划。配置原则：全局唯一，如果不配置，系统会自动生成此ID。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数表示服务号段的号码段类型。数据来源：全网规划。配置原则：必须和运营商规划的用户号码类型一致，取值含义如下。SUPI：表示使用SUPI号段作为号码段类型，目前PCF支持向NRF注册17000个SUPI号段。GPSI：表示使用GPSI号段作为号码段类型，目前PCF支持向NRF注册17000个GPSI号段。
@@ -390,7 +390,7 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF支持的服务号段信息，编号为1，号码段类型为SUPI，起始号码为460119000000000，结束号码为460119000000099。 
 
@@ -406,7 +406,7 @@ ADD SERVNUM:ID=1,ANATYPE="SUPI",NUMBEGIN="460119000000000",NUMEND="4601190000000
 ### SET SERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改PCF支持的号段信息。 
 
@@ -416,16 +416,16 @@ ADD SERVNUM:ID=1,ANATYPE="SUPI",NUMBEGIN="460119000000000",NUMEND="4601190000000
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务号段配置编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数用于配置服务号段配置的编号。数据来源：本端规划。配置原则：全局唯一，如果不配置，系统会自动生成此ID。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数表示服务号段的号码段类型。数据来源：全网规划。配置原则：必须和运营商规划的用户号码类型一致，取值含义如下。SUPI：表示使用SUPI号段作为号码段类型，目前PCF支持向NRF注册17000个SUPI号段。GPSI：表示使用GPSI号段作为号码段类型，目前PCF支持向NRF注册17000个GPSI号段。
@@ -438,9 +438,9 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务号段配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数用于配置服务号段配置的编号。数据来源：本端规划。配置原则：全局唯一，如果不配置，系统会自动生成此ID。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数表示服务号段的号码段类型。数据来源：全网规划。配置原则：必须和运营商规划的用户号码类型一致，取值含义如下。SUPI：表示使用SUPI号段作为号码段类型，目前PCF支持向NRF注册17000个SUPI号段。GPSI：表示使用GPSI号段作为号码段类型，目前PCF支持向NRF注册17000个GPSI号段。
@@ -453,7 +453,7 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改PCF支持的服务号段信息，编号为1，号码段类型为SUPI，起始号码为460119000000000，结束号码为460119000000099。 
 
@@ -469,7 +469,7 @@ SET SERVNUM:ID=1,ANATYPE="SUPI",NUMBEGIN="460119000000000",NUMEND="4601190000000
 ### DEL SERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF支持的号段信息。 
 
@@ -479,16 +479,16 @@ SET SERVNUM:ID=1,ANATYPE="SUPI",NUMBEGIN="460119000000000",NUMEND="4601190000000
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务号段配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数用于配置服务号段配置的编号。数据来源：本端规划。配置原则：全局唯一，如果不配置，系统会自动生成此ID。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数表示服务号段的号码段类型。数据来源：全网规划。配置原则：必须和运营商规划的用户号码类型一致，取值含义如下。SUPI：表示使用SUPI号段作为号码段类型，目前PCF支持向NRF注册17000个SUPI号段。GPSI：表示使用GPSI号段作为号码段类型，目前PCF支持向NRF注册17000个GPSI号段。
@@ -500,7 +500,7 @@ NUMEND|结束号码|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除编号为1的服务号段信息。 
 
@@ -522,7 +522,7 @@ DEL SERVNUM:ANATYPE="SUPI",NUMBEGIN="460119000000000",NUMEND="460119000000099"
 ### SHOW SERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF支持的号段信息。 
 
@@ -532,16 +532,16 @@ DEL SERVNUM:ANATYPE="SUPI",NUMBEGIN="460119000000000",NUMEND="460119000000099"
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 BEGIN|起始服务号段配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数表示想要查询的起始服务号码段配置编号。数据来源：本端规划。配置原则：无。
 END|结束服务号段配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数表示想要查询的结束服务号码段配置编号。数据来源：本端规划。配置原则：无。
@@ -552,9 +552,9 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务号段配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|参数作用：该参数用于配置服务号段配置的编号。数据来源：本端规划。配置原则：全局唯一，如果不配置，系统会自动生成此ID。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数表示服务号段的号码段类型。数据来源：全网规划。配置原则：必须和运营商规划的用户号码类型一致，取值含义如下。SUPI：表示使用SUPI号段作为号码段类型，目前PCF支持向NRF注册17000个SUPI号段。GPSI：表示使用GPSI号段作为号码段类型，目前PCF支持向NRF注册17000个GPSI号段。
@@ -567,7 +567,7 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查看服务号段信息。 
 
@@ -595,7 +595,7 @@ SHOW SERVNUM
 ## 普通升级后拨测号段配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 一个RCP Pool中某个RCP做普通升级时，这个RCP会停止服务，卸载用户并升级版本。升级后需要对此RCP做用户拨测，确认功能正常后，才能使这个RCP正常提供服务。 
 
@@ -608,7 +608,7 @@ AMF根据号段和网元优先级发现PCF。针对数据DNN的PDU会话，SMF�
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 一个RCP Pool中某个RCP普通升级后，在做用户拨测之前，需要在Pool内每个RCP上增加此配置，确定拨测用户所属号段，以及拨测目标RCP的FQDN和Diameter主机名。 
 
@@ -633,7 +633,7 @@ AMF根据号段和网元优先级发现PCF。针对数据DNN的PDU会话，SMF�
 
 
 
-[](None)
+
 
 
 
@@ -641,7 +641,7 @@ AMF根据号段和网元优先级发现PCF。针对数据DNN的PDU会话，SMF�
 ### ADD DIALTESTSERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加RCP支持的拨测号段信息，包括拨测号段及拨测目标RCP的FQDN和Diameter主机名。 
 
@@ -651,16 +651,16 @@ AMF根据号段和网元优先级发现PCF。针对数据DNN的PDU会话，SMF�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 拨测目标RCP所在RCP Pool内每个RCP都要执行该配置命令，并且要关注“普通升级后拨测开关”设置，详见背景知识及功能说明。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|该参数用于配置普通升级后拨测号段配置的编号。
 ANATYPE|号码段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数表示普通升级后拨测号段配置的号码段类型。SUPI：表示使用SUPI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个SUPI拨测号段。GPSI：表示使用GPSI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个GPSI拨测号段。
@@ -677,9 +677,9 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于配置普通升级后拨测号段配置的编号。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示普通升级后拨测号段配置的号码段类型。SUPI：表示使用SUPI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个SUPI拨测号段。GPSI：表示使用GPSI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个GPSI拨测号段。
@@ -696,7 +696,7 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF支持的拨测号段信息，编号为1，号码段类型为SUPI，起始号码为1，结束号码为2，FQDN为pcf，Diameter主机名为rcp.zte.com.cn。 
 
@@ -712,7 +712,7 @@ ADD DIALTESTSERVNUM:ID=1,ANATYPE="SUPI",NUMBEGIN="1",NUMEND="2",FQDN="pcf",HOSTN
 ### SET DIALTESTSERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改RCP支持的拨测号段信息，包括拨测号段及拨测目标RCP的FQDN和Diameter主机名。 
 
@@ -722,16 +722,16 @@ ADD DIALTESTSERVNUM:ID=1,ANATYPE="SUPI",NUMBEGIN="1",NUMEND="2",FQDN="pcf",HOSTN
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 拨测目标RCP所在RCP Pool内每个RCP都要执行该配置命令，并且要关注“普通升级后拨测开关”设置，详见背景知识及功能说明。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|该参数用于配置普通升级后拨测号段配置的编号。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示普通升级后拨测号段配置的号码段类型。SUPI：表示使用SUPI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个SUPI拨测号段。GPSI：表示使用GPSI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个GPSI拨测号段。
@@ -748,9 +748,9 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于配置普通升级后拨测号段配置的编号。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示普通升级后拨测号段配置的号码段类型。SUPI：表示使用SUPI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个SUPI拨测号段。GPSI：表示使用GPSI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个GPSI拨测号段。
@@ -767,7 +767,7 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改PCF支持的拨测号段信息，编号为1，号码段类型为GPSI，起始号码为10，结束号码为10。 
 
@@ -783,7 +783,7 @@ SET DIALTESTSERVNUM:ID=1,ANATYPE="GPSI",NUMBEGIN="10",NUMEND="10"
 ### DEL DIALTESTSERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除RCP支持的拨测号段信息。 
 
@@ -793,16 +793,16 @@ SET DIALTESTSERVNUM:ID=1,ANATYPE="GPSI",NUMBEGIN="10",NUMEND="10"
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 拨测目标RCP所在RCP Pool内每个RCP都要执行该配置命令，并且要关注“普通升级后拨测开关”设置，详见背景知识及功能说明。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|该参数用于配置普通升级后拨测号段配置的编号。
 
@@ -811,7 +811,7 @@ ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除编号为1的拨测号段信息。 
 
@@ -827,7 +827,7 @@ DEL DIALTESTSERVNUM:ID=1
 ### SHOW DIALTESTSERVNUM 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF支持的拨测号段信息。 
 
@@ -837,16 +837,16 @@ DEL DIALTESTSERVNUM:ID=1
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示普通升级后拨测号段配置的号码段类型。SUPI：表示使用SUPI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个SUPI拨测号段。GPSI：表示使用GPSI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个GPSI拨测号段。
 NUMBEGIN|起始号码|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示该号码段的起始号码。
@@ -858,9 +858,9 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于配置普通升级后拨测号段配置的编号。
 ANATYPE|号码段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数表示普通升级后拨测号段配置的号码段类型。SUPI：表示使用SUPI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个SUPI拨测号段。GPSI：表示使用GPSI号段作为拨测号码段类型，目前PCF支持向NRF注册17000个GPSI拨测号段。
@@ -877,7 +877,7 @@ NOTE|备注|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查看拨测号段信息。 
 
@@ -893,21 +893,21 @@ SHOW DIALTESTSERVNUM
 ## 号段维护 
 
 
-[](None)背景知识 :
+背景知识 :
 
  号段维护用于快速导入或清空服务号段配置或普通升级后拨测号段配置。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
  号段维护功能用于将指定号段文件导入服务号段配置或普通升级后拨测号段配置，或用于清空服务号段配置或普通升级后拨测号段配置。 
 
 
 
 
-[](None)
+
 
 
 
@@ -915,23 +915,23 @@ SHOW DIALTESTSERVNUM
 ### IMP NUMSEG 
 
 
-[](None)命令功能 :
+命令功能 :
 
  该命令用于将指定号段文件中的号段批量导入服务号段配置或普通升级后拨测号段配置。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 执行该命令前要先将指定号段文件上传到OAM的FTP服务器。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMCONFTYPE|号段配置类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于表示号段配置类型。Serv Number Configuration：表示服务号段配置。Dialtest Number Configuration After Common Upgrade：表示普通升级后拨测号段配置。
 USERNAME|FTP用户名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~64个字符。|该参数表示FTP用户名，执行本命令前，号段文件应先通过SFTP上传到OAM的FTP服务器上。
@@ -944,7 +944,7 @@ FILENAME|文件名|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 将号段文件GPSI_BJ20200824214326.txt中的号段批量导入服务号段配置。号段文件GPSI_BJ20200824214326.txt在执行本命令前要先使用用户名cn-5g-inner-oper，密码***通过SFTP上传到OAM的 FTP服务的/Oamdata目录下。 
 
@@ -960,23 +960,23 @@ IMP NUMSEG:NUMCONFTYPE="Serv Number Configuration",USERNAME="cn-5g-inner-oper",P
 ### CLEAR NUMSEG 
 
 
-[](None)命令功能 :
+命令功能 :
 
  该命令用于清空服务号段配置或普通升级后拨测号段配置。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMCONFTYPE|号段配置类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于表示号段配置类型。Serv Number Configuration：表示服务号段配置。Dialtest Number Configuration After Common Upgrade：表示普通升级后拨测号段配置。
 
@@ -985,7 +985,7 @@ NUMCONFTYPE|号段配置类型|参数可选性:必选参数；参数类型:枚�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 清空服务号段配置。 
 
@@ -1001,21 +1001,21 @@ CLEAR NUMSEG:NUMCONFTYPE=0
 # 服务授权配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 根据3GPP TS 29.510协议，PCF向NRF注册时可以携带服务授权信息，包括允许的NF域、允许的切片、允许的PLMN，只有符合服务授权信息的网元才能访问PCF。如果PCF向NRF注册时不携带服务授权信息，则任何网元都可以访问PCF。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 本模块配置用于配置服务授权信息，包括允许的NF域、允许的切片、允许的PLMN。如果运营商有服务授权信息规划，则需要执行配置，配置完成后，PCF向NRF注册将会携带服务授权信息。 
 
 
 
 
-[](None)
+
 
 
 
@@ -1023,14 +1023,14 @@ CLEAR NUMSEG:NUMCONFTYPE=0
 ## 允许的NF域配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 同一个PLMN（Public Land Mobile Network，公共陆地移动网络）存在多个不同的IP地址域。在PCF向NRF注册时，有可能需要携带允许的域信息，用于其他NF向NRF发现PCF时，NRF对服务发现者进行鉴权。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 该配置用于配置PCF允许的域列表。 
 
@@ -1043,7 +1043,7 @@ PCF允许的域列表信息是PCF的可选配置，按现场规划进行可选�
 
 
 
-[](None)
+
 
 
 
@@ -1051,7 +1051,7 @@ PCF允许的域列表信息是PCF的可选配置，按现场规划进行可选�
 ### ADD ALLOWEDDOMAINS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF允许的NF域信息。 
 
@@ -1061,16 +1061,16 @@ PCF允许的域列表信息是PCF的可选配置，按现场规划进行可选�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的NF域配置编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的NF域配置信息。
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1081,9 +1081,9 @@ DOMAIN|NF域|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的NF域配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的NF域配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1094,7 +1094,7 @@ DOMAIN|NF域|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF允许的NF域配置信息，编号为1，服务类型为Npcf_SMPolicyControl服务，NF域为A。 
 
@@ -1110,7 +1110,7 @@ ADD ALLOWEDDOMAINS:ID=1,SERVICETYPE="NPCF_SMPOLICYCONTROL",DOMAIN="A"
 ### SET ALLOWEDDOMAINS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改PCF允许的NF域信息。 
 
@@ -1120,16 +1120,16 @@ ADD ALLOWEDDOMAINS:ID=1,SERVICETYPE="NPCF_SMPOLICYCONTROL",DOMAIN="A"
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的NF域配置编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的NF域配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1140,9 +1140,9 @@ DOMAIN|NF域|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的NF域配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的NF域配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1153,7 +1153,7 @@ DOMAIN|NF域|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改编号为1的允许的NF域配置信息，服务类型为Npcf_SMPolicyControl服务，NF域为A。 
 
@@ -1169,7 +1169,7 @@ SET ALLOWEDDOMAINS:ID=1,SERVICETYPE="NPCF_SMPOLICYCONTROL",DOMAIN="A"
 ### DEL ALLOWEDDOMAINS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF允许的NF域信息。 
 
@@ -1179,16 +1179,16 @@ SET ALLOWEDDOMAINS:ID=1,SERVICETYPE="NPCF_SMPOLICYCONTROL",DOMAIN="A"
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的NF域配置编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的NF域配置信息。
 
@@ -1197,7 +1197,7 @@ ID|允许的NF域配置编号|参数可选性:必选参数；参数类型:整数
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除允许的NF域配置中编号为1的配置信息。 
 
@@ -1213,23 +1213,23 @@ DEL ALLOWEDDOMAINS:ID=1
 ### SHOW ALLOWEDDOMAINS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF允许的NF域信息。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 BEGIN|起始允许的NF域配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~100000。|本参数用于设置NF域配置信息的起始编号。
 END|结束允许的NF域配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~100000。|本参数用于设置NF域配置信息的起始编号。
@@ -1239,9 +1239,9 @@ END|结束允许的NF域配置编号|参数可选性:任选参数；参数类型
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的NF域配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的NF域配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1252,7 +1252,7 @@ DOMAIN|NF域|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 显示允许的NF域配置信息。 
 
@@ -1280,14 +1280,14 @@ SHOW ALLOWEDDOMAINS:
 ## 允许的切片配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息） 可用于标识网络切片，由SST（Slice/Service Type，切片/服务类型）和SD（Slice Differentiator，切片区分信息）组成。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 该配置用于配置PCF允许的网络切片列表。 
 
@@ -1300,7 +1300,7 @@ PCF允许的网络切片列表是PCF的可选配置，按现场规划进行可�
 
 
 
-[](None)
+
 
 
 
@@ -1308,7 +1308,7 @@ PCF允许的网络切片列表是PCF的可选配置，按现场规划进行可�
 ### ADD ALLOWEDNSSAIS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF允许的网络切片信息。 
 
@@ -1318,16 +1318,16 @@ PCF允许的网络切片列表是PCF的可选配置，按现场规划进行可�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_UEPOLICYCONTROL：表示使用PCF提供的Npcf_UEPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。NPCF_EVENTEXPOSURE：表示使用PCF提供的Npcf_EventExposure服务。NPCF_BDTPOLICYCONTROL：表示使用PCF提供的Npcf_BDTPolicyControl服务。NPCF：表示使用PCF提供的NPcf服务。
 SST|Sst|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
@@ -1338,9 +1338,9 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_UEPOLICYCONTROL：表示使用PCF提供的Npcf_UEPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。NPCF_EVENTEXPOSURE：表示使用PCF提供的Npcf_EventExposure服务。NPCF_BDTPOLICYCONTROL：表示使用PCF提供的Npcf_BDTPolicyControl服务。NPCF：表示使用PCF提供的NPcf服务。
 SST|Sst|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
@@ -1351,7 +1351,7 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF允许的切片配置信息，服务类型为Npcf_SMPolicyControl服务，切片类型为0，切片区分信息为AAAAAA。 
 
@@ -1367,7 +1367,7 @@ ADD ALLOWEDNSSAIS:SERVICETYPE="NPCF_SMPOLICYCONTROL",SST=0,SD="AAAAAA"
 ### DEL ALLOWEDNSSAIS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF允许的网络切片信息。 
 
@@ -1377,16 +1377,16 @@ ADD ALLOWEDNSSAIS:SERVICETYPE="NPCF_SMPOLICYCONTROL",SST=0,SD="AAAAAA"
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_UEPOLICYCONTROL：表示使用PCF提供的Npcf_UEPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。NPCF_EVENTEXPOSURE：表示使用PCF提供的Npcf_EventExposure服务。NPCF_BDTPOLICYCONTROL：表示使用PCF提供的Npcf_BDTPolicyControl服务。NPCF：表示使用PCF提供的NPcf服务。
 SST|Sst|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
@@ -1397,7 +1397,7 @@ SD|Sd|参数可选性:必选参数；参数类型:字符型；参数范围为:1~
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除允许的切片配置，服务类型为Npcf_SMPolicyControl服务，切片类型为0，切片区分信息为AAAAAA。 
 
@@ -1413,23 +1413,23 @@ DEL ALLOWEDNSSAIS:SERVICETYPE="NPCF_SMPOLICYCONTROL",SST=0,SD="AAAAAA"
 ### SHOW ALLOWEDNSSAIS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF允许的网络切片信息。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_UEPOLICYCONTROL：表示使用PCF提供的Npcf_UEPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。NPCF_EVENTEXPOSURE：表示使用PCF提供的Npcf_EventExposure服务。NPCF_BDTPOLICYCONTROL：表示使用PCF提供的Npcf_BDTPolicyControl服务。NPCF：表示使用PCF提供的NPcf服务。
 SST|Sst|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
@@ -1440,9 +1440,9 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_UEPOLICYCONTROL：表示使用PCF提供的Npcf_UEPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。NPCF_EVENTEXPOSURE：表示使用PCF提供的Npcf_EventExposure服务。NPCF_BDTPOLICYCONTROL：表示使用PCF提供的Npcf_BDTPolicyControl服务。NPCF：表示使用PCF提供的NPcf服务。
 SST|Sst|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
@@ -1453,7 +1453,7 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询允许的切片配置信息。 
 
@@ -1481,14 +1481,14 @@ Npcf_SMPolicyControl  0    AAAAAA
 ## 允许的PLMN配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 PLMN是运营商移动网络标识，由MCC（Mobile Country Code）和 MNC（Mobile Network Code）组成，MCC用于区分不同的国家或地区，MNC用于区分不同的网络运营商。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 该配置用于配置PCF允许的PLMN列表。 
 
@@ -1501,7 +1501,7 @@ PCF允许的PLMN列表是PCF的可选配置，按现场规划进行可选设置�
 
 
 
-[](None)
+
 
 
 
@@ -1509,7 +1509,7 @@ PCF允许的PLMN列表是PCF的可选配置，按现场规划进行可选设置�
 ### ADD ALLOWEDPLMNS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF允许的PLMN信息。 
 
@@ -1519,16 +1519,16 @@ PCF允许的PLMN列表是PCF的可选配置，按现场规划进行可选设置�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的PLMN配置编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的PLMN配置信息。
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1540,9 +1540,9 @@ MNC|MNC|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的PLMN配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的PLMN配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1554,7 +1554,7 @@ MNC|MNC|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF允许的PLMN配置信息，编号为1，服务类型为Npcf_SMPolicyControl服务，MCC不超过139，MNC为86。 
 
@@ -1570,7 +1570,7 @@ ADD ALLOWEDPLMNS:ID=1,SERVICETYPE=NPCF_SMPOLICYCONTROL,MCC=139,MNC=86;
 ### SET ALLOWEDPLMNS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改PCF允许的PLMN信息。 
 
@@ -1580,16 +1580,16 @@ ADD ALLOWEDPLMNS:ID=1,SERVICETYPE=NPCF_SMPOLICYCONTROL,MCC=139,MNC=86;
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的PLMN配置编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的PLMN配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1601,9 +1601,9 @@ MNC|MNC|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的PLMN配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的PLMN配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1615,7 +1615,7 @@ MNC|MNC|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改允许的PLMN列表中编号为1的配置信息，将服务类型修改为Npcf_SMPolicyControl服务，MCC改为239，MNC改为86。 
 
@@ -1631,7 +1631,7 @@ SET ALLOWEDPLMNS:ID=1,SERVICETYPE=NPCF_SMPOLICYCONTROL,MCC=239,MNC=86;
 ### DEL ALLOWEDPLMNS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF允许的PLMN信息。 
 
@@ -1641,16 +1641,16 @@ SET ALLOWEDPLMNS:ID=1,SERVICETYPE=NPCF_SMPOLICYCONTROL,MCC=239,MNC=86;
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的PLMN配置编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的PLMN配置信息。
 
@@ -1659,7 +1659,7 @@ ID|允许的PLMN配置编号|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除允许的PLMN列表中编号为1的配置信息。 
 
@@ -1675,23 +1675,23 @@ DEL ALLOWEDPLMNS:ID=1;
 ### SHOW ALLOWEDPLMNS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF允许的PLMN信息。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 BEGIN|起始允许的PLMN配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~100000。|该参数用于表示允许的PLMN配置的起始编号。
 END|结束允许的PLMN配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~100000。|该参数用于表示允许的PLMN配置的结束编号。
@@ -1701,9 +1701,9 @@ END|结束允许的PLMN配置编号|参数可选性:任选参数；参数类型:
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|允许的PLMN配置编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|本参数用于唯一标识一条允许的PLMN配置信息。
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置PCF的服务类型。NPCF_SMPOLICYCONTROL：表示使用PCF提供的Npcf_SMPolicyControl服务。NPCF_AMPOLICYCONTROL：表示使用PCF提供的Npcf_AMPolicyControl服务。NPCF_POLICYAUTHORIZATION：表示使用PCF提供的Npcf_PolicyAuthorization服务。
@@ -1715,7 +1715,7 @@ MNC|MNC|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询允许的PLMN列表中所有的配置信息。 
 
@@ -1743,14 +1743,14 @@ SHOW ALLOWEDPLMNS;
 # 切片配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息） 可用于标识网络切片，由SST（Slice/Service Type，切片/服务类型）和SD（Slice Differentiator，切片区分信息）组成。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 此配置用于配置PCF的网络切片列表。 
 
@@ -1763,7 +1763,7 @@ PCF支持的SNSSAI列表信息是PCF的基础配置，PCF部署成功之后需�
 
 
 
-[](None)
+
 
 
 
@@ -1771,7 +1771,7 @@ PCF支持的SNSSAI列表信息是PCF的基础配置，PCF部署成功之后需�
 ## ADD NSSAIS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF支持的网络切片信息。 
 
@@ -1781,16 +1781,16 @@ PCF支持的SNSSAI列表信息是PCF的基础配置，PCF部署成功之后需�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|Sst|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
 SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~6个字符。默认值:NULL。|该参数用于配置SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI，当SD设置为NULL时，PCF向NRF注册时不会携带SD参数。
@@ -1800,9 +1800,9 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|Sst|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
 SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~6个字符。|该参数用于配置SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI，当SD设置为NULL时，PCF向NRF注册时不会携带SD参数。
@@ -1812,7 +1812,7 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF支持的切片配置信息，切片类型为0，切片区分信息为AAAAAA。 
 
@@ -1828,7 +1828,7 @@ ADD NSSAIS:SST=0,SD="AAAAAA"。
 ## DEL NSSAIS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF支持的切片信息。 
 
@@ -1838,16 +1838,16 @@ ADD NSSAIS:SST=0,SD="AAAAAA"。
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|Sst|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
 SD|Sd|参数可选性:必选参数；参数类型:字符型；参数范围为:1~6个字符。|该参数用于配置SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI，当SD设置为NULL时，PCF向NRF注册时不会携带SD参数。
@@ -1857,7 +1857,7 @@ SD|Sd|参数可选性:必选参数；参数类型:字符型；参数范围为:1~
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 从PCF切片配置列表中删除切片类型为0，切片区分信息为AAAAAA的切片信息。 
 
@@ -1873,23 +1873,23 @@ DEL NSSAIS:SST=0,SD="AAAAAA"。
 ## SHOW NSSAIS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF支持的切片信息。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|Sst|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
 SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~6个字符。|该参数用于配置SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI，当SD设置为NULL时，PCF向NRF注册时不会携带SD参数。
@@ -1899,9 +1899,9 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|Sst|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于配置SST（Slice/Service Type，切片/服务类型），目前协议明确的标准SST有四种。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：提供车联网服务。
 SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~6个字符。|该参数用于配置SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI，当SD设置为NULL时，PCF向NRF注册时不会携带SD参数。
@@ -1911,7 +1911,7 @@ SD|Sd|参数可选性:任选参数；参数类型:字符型；参数范围为:4~
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询允许的切片配置。 
 
@@ -1939,14 +1939,14 @@ Sst    Sd
 # DNN配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 DNN(Data Network Name)是5G系统定义的网络标识，标识了5G核心网所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 此配置用于配置PCF支持的DNN列表。 
 
@@ -1959,7 +1959,7 @@ PCF支持的DNN列表信息是PCF的基础配置，PCF部署成功之后需要�
 
 
 
-[](None)
+
 
 
 
@@ -1967,7 +1967,7 @@ PCF支持的DNN列表信息是PCF的基础配置，PCF部署成功之后需要�
 ## ADD DNN 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF支持的DNN信息。 
 
@@ -1977,16 +1977,16 @@ PCF支持的DNN列表信息是PCF的基础配置，PCF部署成功之后需要�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数用于设置DNN配置的编号，该编号唯一标识了一条DNN信息。
 DNN|DNN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于设置PCF支持DNN名称。
@@ -1996,9 +1996,9 @@ DNN|DNN|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数用于设置DNN配置的编号，该编号唯一标识了一条DNN信息。
 DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于设置PCF支持DNN名称。
@@ -2008,7 +2008,7 @@ DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 增加DNN配置，名称为"cmnet"。 
 
@@ -2020,23 +2020,23 @@ ADD DNN:ID=1,DNN="cmnet"
 
 
 
-[](None)相关命令 :
+相关命令 :
 
 
 
-[修改DNN配置](1788108.html)
-
-
-
-
-
-[删除DNN配置](1788109.html)
+[修改DNN配置]
 
 
 
 
 
-[查询DNN配置](1788110.html)
+[删除DNN配置]
+
+
+
+
+
+[查询DNN配置]
 
 
 
@@ -2046,7 +2046,7 @@ ADD DNN:ID=1,DNN="cmnet"
 ## SET DNN 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改PCF支持的DNN信息。 
 
@@ -2056,16 +2056,16 @@ ADD DNN:ID=1,DNN="cmnet"
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数用于设置DNN配置的编号，该编号唯一标识了一条DNN信息。
 DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于设置PCF支持DNN名称。
@@ -2075,9 +2075,9 @@ DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数用于设置DNN配置的编号，该编号唯一标识了一条DNN信息。
 DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于设置PCF支持DNN名称。
@@ -2087,7 +2087,7 @@ DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改编号为1的DNN配置信息，DNN改为"cmnet"。 
 
@@ -2099,23 +2099,23 @@ SET DNN:ID=1,DNN="cmnet";
 
 
 
-[](None)相关命令 :
+相关命令 :
 
 
 
-[增加DNN配置](1788107.html)
-
-
-
-
-
-[删除DNN配置](1788109.html)
+[增加DNN配置]
 
 
 
 
 
-[查询DNN配置](1788110.html)
+[删除DNN配置]
+
+
+
+
+
+[查询DNN配置]
 
 
 
@@ -2125,7 +2125,7 @@ SET DNN:ID=1,DNN="cmnet";
 ## DEL DNN 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF支持的DNN信息。 
 
@@ -2135,16 +2135,16 @@ SET DNN:ID=1,DNN="cmnet";
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数用于设置DNN配置的编号，该编号唯一标识了一条DNN信息。
 DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|
@@ -2154,7 +2154,7 @@ DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除编号为1的DNN配置信息。 
 
@@ -2172,23 +2172,23 @@ DEL DNN:DNN="cmnet";
 
 
 
-[](None)相关命令 :
+相关命令 :
 
 
 
-[增加DNN配置](1788107.html)
-
-
-
-
-
-[修改DNN配置](1788108.html)
+[增加DNN配置]
 
 
 
 
 
-[查询DNN配置](1788110.html)
+[修改DNN配置]
+
+
+
+
+
+[查询DNN配置]
 
 
 
@@ -2198,23 +2198,23 @@ DEL DNN:DNN="cmnet";
 ## SHOW DNN 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF支持的DNN信息。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 BEGIN|起始编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数表示DNN配置表中待查询记录的起始编号。
 END|终止编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数表示DNN配置表中待查询记录的结束编号。
@@ -2224,9 +2224,9 @@ END|终止编号|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数用于设置DNN配置的编号，该编号唯一标识了一条DNN信息。
 DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于设置PCF支持DNN名称。
@@ -2236,7 +2236,7 @@ DNN|DNN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询DNN配置。 
 
@@ -2261,23 +2261,23 @@ SHOW DNN:
 
 
 
-[](None)相关命令 :
+相关命令 :
 
 
 
-[增加DNN配置](1788107.html)
-
-
-
-
-
-[修改DNN配置](1788108.html)
+[增加DNN配置]
 
 
 
 
 
-[删除DNN配置](1788109.html)
+[修改DNN配置]
+
+
+
+
+
+[删除DNN配置]
 
 
 
@@ -2287,14 +2287,14 @@ SHOW DNN:
 # PLMN配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 移动核心网中可以有多个PCF。不同运营商网络有不同的PCF。故PCF需要配置自身支持的运营商的移动网络标识 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 本配置用于配置运营商的移动国家码和移动网络码。 
 
@@ -2304,7 +2304,7 @@ PCF支持的运营商PLMN标识是PCF的基础配置，PCF部署成功之后需�
 
 
 
-[](None)
+
 
 
 
@@ -2312,20 +2312,20 @@ PCF支持的运营商PLMN标识是PCF的基础配置，PCF部署成功之后需�
 ## ADD NFPLMN 
 
 
-[](None)命令功能 :
+命令功能 :
 新增PLMN
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|该参数用于指定PLMN配置的编号。
 MCC|MCC|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指定PCF支持的运营商的移动国家码。
@@ -2336,9 +2336,9 @@ MNC|MNC|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于指定PLMN配置的编号。
 MCC|MCC|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指定PCF支持的运营商的移动国家码。
@@ -2349,7 +2349,7 @@ MNC|MNC|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 增加PLMN配置 
 
@@ -2365,20 +2365,20 @@ ADD NFPLMN:ID=1,MCC="460",MNC="111"
 ## SET NFPLMN 
 
 
-[](None)命令功能 :
+命令功能 :
 修改PLMN
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|该参数用于指定PLMN配置的编号。
 MCC|MCC|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指定PCF支持的运营商的移动国家码。
@@ -2389,9 +2389,9 @@ MNC|MNC|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于指定PLMN配置的编号。
 MCC|MCC|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指定PCF支持的运营商的移动国家码。
@@ -2402,7 +2402,7 @@ MNC|MNC|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改PLMN配置 
 
@@ -2418,20 +2418,20 @@ SET NFPLMN:ID=1,MCC="460",MNC="111"
 ## DEL NFPLMN 
 
 
-[](None)命令功能 :
+命令功能 :
 删除PLMN
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|该参数用于指定PLMN配置的编号。
 
@@ -2440,7 +2440,7 @@ ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~655
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除PLMN配置 
 
@@ -2456,20 +2456,20 @@ DEL NFPLMN:ID=1
 ## SHOW NFPLMN 
 
 
-[](None)命令功能 :
+命令功能 :
 查询PLMN
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于指定PLMN配置的编号。
 
@@ -2478,9 +2478,9 @@ ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~655
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于指定PLMN配置的编号。
 MCC|MCC|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指定PCF支持的运营商的移动国家码。
@@ -2491,7 +2491,7 @@ MNC|MNC|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询PLMN配置 
 
@@ -2507,14 +2507,14 @@ SHOW NFPLMN:ID=1
 # 服务区配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 服务区（Service Area）标识了5G核心网中PCF支持的省信息，是为了SMF快速发现临近的提供相应业务功能的PCF。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 此配置用于配置PCF支持的服务区信息。 
 
@@ -2527,7 +2527,7 @@ PCF支持的服务区列表信息是PCF的基础配置，PCF部署成功之后�
 
 
 
-[](None)
+
 
 
 
@@ -2535,7 +2535,7 @@ PCF支持的服务区列表信息是PCF的基础配置，PCF部署成功之后�
 ## ADD SERVEDAREAS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加PCF支持的服务区信息。 
 
@@ -2545,16 +2545,16 @@ PCF支持的服务区列表信息是PCF的基础配置，PCF部署成功之后�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 本配置最大支持4条记录。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVEDAREA|服务区域|参数可选性:必选参数；参数类型:字符型；参数范围为:1~19个字符。|该参数用于配置PCF的服务区域。
 
@@ -2563,9 +2563,9 @@ SERVEDAREA|服务区域|参数可选性:必选参数；参数类型:字符型；
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVEDAREA|服务区域|参数可选性:任选参数；参数类型:字符型；参数范围为:1~19个字符。|该参数用于配置PCF的服务区域。
 
@@ -2574,7 +2574,7 @@ SERVEDAREA|服务区域|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 新增一条PCF支持的服务区配置，服务区域为1。 
 
@@ -2586,17 +2586,17 @@ ADD SERVEDAREAS:SERVEDAREA=1;
 
 
 
-[](None)相关命令 :
+相关命令 :
 
 
 
-[删除服务区配置](1788101.html)
+[删除服务区配置]
 
 
 
 
 
-[查询服务区配置](1788102.html)
+[查询服务区配置]
 
 
 
@@ -2606,7 +2606,7 @@ ADD SERVEDAREAS:SERVEDAREA=1;
 ## DEL SERVEDAREAS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于删除PCF支持的服务区信息。 
 
@@ -2616,16 +2616,16 @@ ADD SERVEDAREAS:SERVEDAREA=1;
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVEDAREA|服务区域|参数可选性:必选参数；参数类型:字符型；参数范围为:1~19个字符。|该参数用于配置PCF的服务区域。
 
@@ -2634,7 +2634,7 @@ SERVEDAREA|服务区域|参数可选性:必选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除PCF中服务区域为1的服务区配置。 
 
@@ -2646,17 +2646,17 @@ DEL SERVEDAREAS:SERVEDAREA=1;
 
 
 
-[](None)相关命令 :
+相关命令 :
 
 
 
-[增加服务区配置](1788100.html)
+[增加服务区配置]
 
 
 
 
 
-[查询服务区配置](1788102.html)
+[查询服务区配置]
 
 
 
@@ -2666,23 +2666,23 @@ DEL SERVEDAREAS:SERVEDAREA=1;
 ## SHOW SERVEDAREAS 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询PCF支持的服务区信息。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVEDAREA|服务区域|参数可选性:任选参数；参数类型:字符型；参数范围为:1~19个字符。|该参数用于配置PCF的服务区域。
 
@@ -2691,9 +2691,9 @@ SERVEDAREA|服务区域|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVEDAREA|服务区域|参数可选性:任选参数；参数类型:字符型；参数范围为:1~19个字符。|该参数用于配置PCF的服务区域。
 
@@ -2702,7 +2702,7 @@ SERVEDAREA|服务区域|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查看PCF的服务区配置。 
 
@@ -2726,17 +2726,17 @@ SHOW SERVEDAREAS:
 
 
 
-[](None)相关命令 :
+相关命令 :
 
 
 
-[增加服务区配置](1788100.html)
+[增加服务区配置]
 
 
 
 
 
-[删除服务区配置](1788101.html)
+[删除服务区配置]
 
 
 
@@ -2746,14 +2746,14 @@ SHOW SERVEDAREAS:
 # NRF策略配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
  NRF-Client作为公共组件被集成在PCF的业务进程内，其作为客户端用于保存连接NRF的接口，并维护缓存数据以减小与NRF交互的数据量和避免重复读取配置信息。 
 
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 本配置用于配置NRF的模式、倒回方式、老化时长等信息。当需要修改NRF的策略模式、NRF-Client的倒回及老化方式时，执行本配置。 
 
@@ -2766,7 +2766,7 @@ SHOW SERVEDAREAS:
 
 
 
-[](None)
+
 
 
 
@@ -2774,7 +2774,7 @@ SHOW SERVEDAREAS:
 ## SET NRFPATTERN 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改NRF策略配置。 
 
@@ -2784,16 +2784,16 @@ SHOW SERVEDAREAS:
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 危险命令：此配置的“NRF注册失败时是否停止周期性注册”由“否”修改为“是”时，PCF会停止向NRF注册，请谨慎修改！ 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NOSEGREG|无号段时允许注册|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于表示PCF未配置服务号段时是否允许向NRF进行注册。
 NFPROCH|支持NRF修改注册信息|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于表示是否支持NRF修改PCF的注册信息。当取值为“是”时，向NRF注册的nfProfileChangesSupportInd字段为true，表示支持NRF修改PCF的注册信息。当取值为“否”时，向NRF注册的nfProfileChangesSupportInd字段为false，表示不支持NRF修改PCF的注册信息。
@@ -2809,9 +2809,9 @@ TOKENDEVIAT|令牌有效期允许最大偏差(秒)|参数可选性:任选参数�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NOSEGREG|无号段时允许注册|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于表示PCF未配置服务号段时是否允许向NRF进行注册。
 NFPROCH|支持NRF修改注册信息|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于表示是否支持NRF修改PCF的注册信息。当取值为“是”时，向NRF注册的nfProfileChangesSupportInd字段为true，表示支持NRF修改PCF的注册信息。当取值为“否”时，向NRF注册的nfProfileChangesSupportInd字段为false，表示不支持NRF修改PCF的注册信息。
@@ -2827,7 +2827,7 @@ TOKENDEVIAT|令牌有效期允许最大偏差(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改NRF策略配置，将无号段时允许注册改为否。 
 
@@ -2843,23 +2843,23 @@ SET NRFPATTERN:NOSEGREG="NO"
 ## SHOW NRFPATTERN 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询NRF策略配置。当需要查询当前的NRF策略配置参数时，执行该命令。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NOSEGREG|无号段时允许注册|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于表示PCF未配置服务号段时是否允许向NRF进行注册。
 NFPROCH|支持NRF修改注册信息|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于表示是否支持NRF修改PCF的注册信息。当取值为“是”时，向NRF注册的nfProfileChangesSupportInd字段为true，表示支持NRF修改PCF的注册信息。当取值为“否”时，向NRF注册的nfProfileChangesSupportInd字段为false，表示不支持NRF修改PCF的注册信息。
@@ -2875,7 +2875,7 @@ TOKENDEVIAT|令牌有效期允许最大偏差(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查看NRF策略配置信息。 
 
@@ -2903,7 +2903,7 @@ SHOW NRFPATTERN
 # 通知消息名称配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 PCF作为服务提供者，当服务使用者如SMF访问PCF提供的服务操作创建资源后，由于用户签约或其它网元如AF触发重决策，PCF会发送反向通知决策信息给SMF。在反向通知请求中可携带3gpp-Sbi-Callback头部，以便SCP或服务使用者识别该请求为反向通知请求。 
 
@@ -2913,7 +2913,7 @@ PCF作为服务提供者，当服务使用者如SMF访问PCF提供的服务操�
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 该配置用于配置反向通知消息中的3gpp-Sbi-Callback头部内容。 
 
@@ -2929,7 +2929,7 @@ PCF作为服务提供者，当服务使用者如SMF访问PCF提供的服务操�
 
 
 
-[](None)
+
 
 
 
@@ -2937,7 +2937,7 @@ PCF作为服务提供者，当服务使用者如SMF访问PCF提供的服务操�
 ## SET NOTIFYMESSAGENAME 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改通知消息名称配置。当需要修改PCF网元发送反向通知请求携带3gpp-Sbi-Callback头部的通知消息名称，与服务使用者保持一致时，可以对已配置的服务通知消息名称进行修改。 
 
@@ -2947,16 +2947,16 @@ PCF作为服务提供者，当服务使用者如SMF访问PCF提供的服务操�
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 服务通知消息名称需填写正确。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指定PCF支持的服务类型，如Npcf_AMPolicyControl、Npcf_PolicyAuthorization、Npcf_SMPolicyControl、Npcf_UEPolicyControl。数据来源：全网规划。配置原则：按协议设置，不建议修改。
 ACROSSPLMN|跨PLMN|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指示反向通知请求是否跨PLMN。数据来源：全网规划。配置原则：按协议设置，不建议修改。
@@ -2968,9 +2968,9 @@ NOTIMSGNAME|通知消息名称|参数可选性:任选参数；参数类型:字�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指定PCF支持的服务类型，如Npcf_AMPolicyControl、Npcf_PolicyAuthorization、Npcf_SMPolicyControl、Npcf_UEPolicyControl。数据来源：全网规划。配置原则：按协议设置，不建议修改。
 ACROSSPLMN|跨PLMN|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指示反向通知请求是否跨PLMN。数据来源：全网规划。配置原则：按协议设置，不建议修改。
@@ -2982,7 +2982,7 @@ NOTIMSGNAME|通知消息名称|参数可选性:任选参数；参数类型:字�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改通知消息名称配置，服务类型为"NPCF_SMPOLICYCONTROL”，跨PLMN为"NO"，通知类型为"UPDATE"，通知消息名称为"Npcf_SMPolicyControl_SmPolicyUpdateNotification"。 
 
@@ -2998,23 +2998,23 @@ SET NOTIFYMESSAGENAME:SERVICETYPE="NPCF_SMPOLICYCONTROL",ACROSSPLMN="NO",NOTITYP
 ## SHOW NOTIFYMESSAGENAME 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询通知消息名称。当需要查询当前的通知消息名称配置时，执行该命令。命令执行成功后，在网管界面显示服务通知消息名称。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指定PCF支持的服务类型，如Npcf_AMPolicyControl、Npcf_PolicyAuthorization、Npcf_SMPolicyControl、Npcf_UEPolicyControl。数据来源：全网规划。配置原则：按协议设置，不建议修改。
 ACROSSPLMN|跨PLMN|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指示反向通知请求是否跨PLMN。数据来源：全网规划。配置原则：按协议设置，不建议修改。
@@ -3026,9 +3026,9 @@ NOTIMSGNAME|通知消息名称|参数可选性:任选参数；参数类型:字�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICETYPE|服务类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指定PCF支持的服务类型，如Npcf_AMPolicyControl、Npcf_PolicyAuthorization、Npcf_SMPolicyControl、Npcf_UEPolicyControl。数据来源：全网规划。配置原则：按协议设置，不建议修改。
 ACROSSPLMN|跨PLMN|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于指示反向通知请求是否跨PLMN。数据来源：全网规划。配置原则：按协议设置，不建议修改。
@@ -3040,7 +3040,7 @@ NOTIMSGNAME|通知消息名称|参数可选性:任选参数；参数类型:字�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询通知消息名称。 
 
@@ -3078,7 +3078,7 @@ SHOW NOTIFYMESSAGENAME
 # 服务化接口头部控制配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 为了保证各网元支持相同功能时，不同运营商、设备厂商能对业务功能理解一致，3GPP TS29.500标准中明确规定服务化接口携带的服务化消息头部及内容。 
 
@@ -3088,7 +3088,7 @@ SHOW NOTIFYMESSAGENAME
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 该配置用于确定PCF发送服务化接口消息中是否携带相关头部信息。 
 
@@ -3123,7 +3123,7 @@ SHOW NOTIFYMESSAGENAME
 
 
 
-[](None)
+
 
 
 
@@ -3131,7 +3131,7 @@ SHOW NOTIFYMESSAGENAME
 ## SET HTTPHEADCONTROL 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于修改服务化接口头部控制配置。当运营组网调整如接入非直连设备SCP时，结合不同服务化接口的应用要求，使用此命令进行调整。 
 
@@ -3141,16 +3141,16 @@ SHOW NOTIFYMESSAGENAME
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 根据运营组网要求，特别是服务使用者与服务提供者通信模式为非直连C/D模式时，按要求调整是否携带相关头部。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 N7BINDHEAD|N7消息携带3gpp-Sbi-Binding头部|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该软件参数用于控制PCF发送N7接口消息时是否携带3gpp-Sbi-Binding头部。该头部用于指定PCF的资源上下文，便于SMF的后续请求能保持绑定到相同PCF。数据来源：3gpp-Sbi-Binding头部中，bl固定为nfinstance；nfinst来自于SHOW NF类型为PCF记录的“NF ID”；nfset=来自于查询本局的“归属PCF集”。配置原则：根据运营规划配置，PCF为热备组网且SMF支持3gpp-Sbi-Binding处理时本参数可设置为“携带”。不携带：PCF在发送N7接口消息时不携带3gpp-Sbi-Binding头部。携带：PCF在发送N7接口消息时可携带3gpp-Sbi-Binding头部。携带(不含恢复时间)：PCF在发送N7接口消息时可携带3gpp-Sbi-Binding头部，但3gpp-Sbi-Binding头部不含恢复时间。
 N15BINDHEAD|N15消息携带3gpp-Sbi-Binding头部|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该软件参数用于控制PCF发送N15接口消息时是否携带3gpp-Sbi-Binding头部。该头部用于指定PCF的资源上下文，便于AMF的后续请求能保持绑定到相同PCF。数据来源：3gpp-Sbi-Binding头部中，bl固定为nfinstance；nfinst来自于SHOW NF类型为PCF记录的“NF ID”；nfset=来自于查询本局的“归属PCF集”。配置原则：根据运营规划配置，PCF为热备组网且AMF支持3gpp-Sbi-Binding处理时本参数可设置为“携带”。不携带：PCF在发送N15接口消息时不携带3gpp-Sbi-Binding头部。携带：PCF在发送N15接口消息时可携带3gpp-Sbi-Binding头部。携带(不含恢复时间)：PCF在发送N15接口消息时可携带3gpp-Sbi-Binding头部，但3gpp-Sbi-Binding头部不含恢复时间。
@@ -3168,9 +3168,9 @@ SERVROUTINGBINDHEAD|HTTP业务后续请求携带SCP路由发现参数|参数可�
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 N7BINDHEAD|N7消息携带3gpp-Sbi-Binding头部|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该软件参数用于控制PCF发送N7接口消息时是否携带3gpp-Sbi-Binding头部。该头部用于指定PCF的资源上下文，便于SMF的后续请求能保持绑定到相同PCF。数据来源：3gpp-Sbi-Binding头部中，bl固定为nfinstance；nfinst来自于SHOW NF类型为PCF记录的“NF ID”；nfset=来自于查询本局的“归属PCF集”。配置原则：根据运营规划配置，PCF为热备组网且SMF支持3gpp-Sbi-Binding处理时本参数可设置为“携带”。不携带：PCF在发送N7接口消息时不携带3gpp-Sbi-Binding头部。携带：PCF在发送N7接口消息时可携带3gpp-Sbi-Binding头部。携带(不含恢复时间)：PCF在发送N7接口消息时可携带3gpp-Sbi-Binding头部，但3gpp-Sbi-Binding头部不含恢复时间。
 N15BINDHEAD|N15消息携带3gpp-Sbi-Binding头部|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该软件参数用于控制PCF发送N15接口消息时是否携带3gpp-Sbi-Binding头部。该头部用于指定PCF的资源上下文，便于AMF的后续请求能保持绑定到相同PCF。数据来源：3gpp-Sbi-Binding头部中，bl固定为nfinstance；nfinst来自于SHOW NF类型为PCF记录的“NF ID”；nfset=来自于查询本局的“归属PCF集”。配置原则：根据运营规划配置，PCF为热备组网且AMF支持3gpp-Sbi-Binding处理时本参数可设置为“携带”。不携带：PCF在发送N15接口消息时不携带3gpp-Sbi-Binding头部。携带：PCF在发送N15接口消息时可携带3gpp-Sbi-Binding头部。携带(不含恢复时间)：PCF在发送N15接口消息时可携带3gpp-Sbi-Binding头部，但3gpp-Sbi-Binding头部不含恢复时间。
@@ -3188,7 +3188,7 @@ SERVROUTINGBINDHEAD|HTTP业务后续请求携带SCP路由发现参数|参数可�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 修改服务化接口头部控制配置。“N7消息携带3gpp-Sbi-Binding头部”修改为“不携带”，“N15消息携带3gpp-Sbi-Binding头部”修改为“不携带”，“N5消息携带3gpp-Sbi-Binding头部”修改为“不携带”，“N28消息携带3gpp-Sbi-Binding头部”修改为“不携带”，“N36消息携带3gpp-Sbi-Binding头部”修改为“不携带”，“HTTP请求消息携带user-agent头部”修改为“携带本网元类型和网元实例标识”，“HTTP错误应答消息携带server头部”修改为“携带”，“HTTP通知请求消息携带3gpp-Sbi-Callback头部”修改为“携带”，“HTTP通知请求携带SCP路由发现参数”修改为“不携带”，“HTTP业务后续请求携带SCP路由发现参数”修改为“不携带”。 
 
@@ -3204,23 +3204,23 @@ SET HTTPHEADCONTROL:N7BINDHEAD="NOT_CARRY",N15BINDHEAD="NOT_CARRY",N5BINDHEAD="N
 ## SHOW HTTPHEADCONTROL 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用查询服务化接口头部控制信息。当PCF发送消息携带头部参数与PCF业务处理逻辑不一致时，需要执行该命令。命令执行成功后，在网管界面显示消息中是否需要相关头部信息。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 无。 
 
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 N7BINDHEAD|N7消息携带3gpp-Sbi-Binding头部|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该软件参数用于控制PCF发送N7接口消息时是否携带3gpp-Sbi-Binding头部。该头部用于指定PCF的资源上下文，便于SMF的后续请求能保持绑定到相同PCF。数据来源：3gpp-Sbi-Binding头部中，bl固定为nfinstance；nfinst来自于SHOW NF类型为PCF记录的“NF ID”；nfset=来自于查询本局的“归属PCF集”。配置原则：根据运营规划配置，PCF为热备组网且SMF支持3gpp-Sbi-Binding处理时本参数可设置为“携带”。不携带：PCF在发送N7接口消息时不携带3gpp-Sbi-Binding头部。携带：PCF在发送N7接口消息时可携带3gpp-Sbi-Binding头部。携带(不含恢复时间)：PCF在发送N7接口消息时可携带3gpp-Sbi-Binding头部，但3gpp-Sbi-Binding头部不含恢复时间。
 N15BINDHEAD|N15消息携带3gpp-Sbi-Binding头部|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该软件参数用于控制PCF发送N15接口消息时是否携带3gpp-Sbi-Binding头部。该头部用于指定PCF的资源上下文，便于AMF的后续请求能保持绑定到相同PCF。数据来源：3gpp-Sbi-Binding头部中，bl固定为nfinstance；nfinst来自于SHOW NF类型为PCF记录的“NF ID”；nfset=来自于查询本局的“归属PCF集”。配置原则：根据运营规划配置，PCF为热备组网且AMF支持3gpp-Sbi-Binding处理时本参数可设置为“携带”。不携带：PCF在发送N15接口消息时不携带3gpp-Sbi-Binding头部。携带：PCF在发送N15接口消息时可携带3gpp-Sbi-Binding头部。携带(不含恢复时间)：PCF在发送N15接口消息时可携带3gpp-Sbi-Binding头部，但3gpp-Sbi-Binding头部不含恢复时间。
@@ -3238,7 +3238,7 @@ SERVROUTINGBINDHEAD|HTTP业务后续请求携带SCP路由发现参数|参数可�
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询服务化接口头部控制配置。 
 
@@ -3268,7 +3268,7 @@ SHOW HTTPHEADCONTROL
 # 目的网元重选配置 
 
 
-[](None)背景知识 :
+背景知识 :
 
 PCF在N15/N7接口作为服务提供者发送通知请求时，一般使用N15/N7会话中的通知URI寻址发送通知请求。 
 
@@ -3278,7 +3278,7 @@ PCF在N15/N7接口作为服务提供者发送通知请求时，一般使用N15/N
 
 
 
-[](None)功能描述 :
+功能描述 :
 
 该配置用于配置目的网元重选。当PCF收到通知错误应答消息需要重新发送通知请求消息时，PCF可根据目的网元类型、状态码产生网元、状态码决定是否重新发送通知请求到其它AMF/SMF。 
 
@@ -3288,7 +3288,7 @@ PCF在N15/N7接口作为服务提供者发送通知请求时，一般使用N15/N
 
 
 
-[](None)
+
 
 
 
@@ -3296,7 +3296,7 @@ PCF在N15/N7接口作为服务提供者发送通知请求时，一般使用N15/N
 ## ADD TARGETNFRESELECT 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于增加目的网元重选配置。 
 
@@ -3306,16 +3306,16 @@ PCF在N15/N7接口作为服务提供者发送通知请求时，一般使用N15/N
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 严格按照运营商规划配置。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TARGETNFTYPE|目的网元类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时的目的网元类型。数据来源：全网规划。配置原则：目的网元类型包括：AMFSMF
 STATUSBYNF|状态码产生网元|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时产生状态码的网元。数据来源：全网规划。配置原则：状态码产生网元，指回复错误应答的网元，包括：SCP直连目的网元非直连目的网元
@@ -3326,9 +3326,9 @@ STATUSCODE|状态码|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TARGETNFTYPE|目的网元类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时的目的网元类型。数据来源：全网规划。配置原则：目的网元类型包括：AMFSMF
 STATUSBYNF|状态码产生网元|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时产生状态码的网元。数据来源：全网规划。配置原则：状态码产生网元，指回复错误应答的网元，包括：SCP直连目的网元非直连目的网元
@@ -3339,7 +3339,7 @@ STATUSCODE|状态码|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 增加目的网元重选配置，“目的网元类型”为"AMF"，“状态码产生网元”为"非直连目的网元"，“状态码”为504。 
 
@@ -3355,7 +3355,7 @@ ADD TARGETNFRESELECT:TARGETNFTYPE="AMF",STATUSBYNF="INDIRECT_TARGET_NF",STATUSCO
 ## DEL TARGETNFRESELECT 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用删除目的网元重选配置。 
 
@@ -3365,16 +3365,16 @@ ADD TARGETNFRESELECT:TARGETNFTYPE="AMF",STATUSBYNF="INDIRECT_TARGET_NF",STATUSCO
 
 
 
-[](None)注意事项 :
+注意事项 :
 
 严格按照运营商规划配置。 
 
 
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TARGETNFTYPE|目的网元类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时的目的网元类型。数据来源：全网规划。配置原则：目的网元类型包括：AMFSMF
 STATUSBYNF|状态码产生网元|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时产生状态码的网元。数据来源：全网规划。配置原则：状态码产生网元，指回复错误应答的网元，包括：SCP直连目的网元非直连目的网元
@@ -3385,7 +3385,7 @@ STATUSCODE|状态码|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 删除目的网元重选配置，“目的网元类型”为"AMF"，“状态码产生网元”为"非直连目的网元"，“状态码”为504。 
 
@@ -3401,20 +3401,20 @@ DEL TARGETNFRESELECT:TARGETNFTYPE="AMF",STATUSBYNF="INDIRECT_TARGET_NF",STATUSCO
 ## SHOW TARGETNFRESELECT 
 
 
-[](None)命令功能 :
+命令功能 :
 
 该命令用于查询目的网元重选配置。执行此命令可以查询到已配置的特定错误码下向AMF/SMF重新发送通知请求消息的配置。 
 
 
 
 
-[](None)注意事项 :
+注意事项 :
 无。
 
 
-[](None)输入参数说明 :
+输入参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TARGETNFTYPE|目的网元类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时的目的网元类型。数据来源：全网规划。配置原则：目的网元类型包括：AMFSMF
 STATUSBYNF|状态码产生网元|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时产生状态码的网元。数据来源：全网规划。配置原则：状态码产生网元，指回复错误应答的网元，包括：SCP直连目的网元非直连目的网元
@@ -3425,9 +3425,9 @@ STATUSCODE|状态码|参数可选性:任选参数；参数类型:整数；参数
 
 
 
-[](None)输出参数说明 :
+输出参数说明 :
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TARGETNFTYPE|目的网元类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时的目的网元类型。数据来源：全网规划。配置原则：目的网元类型包括：AMFSMF
 STATUSBYNF|状态码产生网元|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置目的网元重选时产生状态码的网元。数据来源：全网规划。配置原则：状态码产生网元，指回复错误应答的网元，包括：SCP直连目的网元非直连目的网元
@@ -3438,7 +3438,7 @@ STATUSCODE|状态码|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)命令举例 :
+命令举例 :
 
 查询目的网元重选配置。 
 

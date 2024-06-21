@@ -1,7 +1,7 @@
  NF发现和选择配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF执行业务流程时要和周边NF进行交互，交互前要发现和选择对应的NF，这些NF包括：AUSF、UDM、PCF、SMF、SMSF和AMF。 
@@ -36,7 +36,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF发现和选择配置提供：NF发现强制策略、发现模式、查询结果缓存、通过NRF发现AUSF、PCF、SMF、UDM、AMF和SMSF时的参数、本地解析、地址类型选择策略和等价NF选择策略。 
@@ -44,7 +44,7 @@ NF发现和选择配置提供：NF发现强制策略、发现模式、查询结�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -55,7 +55,7 @@ NF发现和选择配置提供：NF发现强制策略、发现模式、查询结�
 # NF发现策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当现网没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置各NF解析数据，发现和选择NF。因此AMF需要提供NF发现模式选择。 
@@ -65,7 +65,7 @@ AMF和远端的NRF进行消息交互，发现和选择各NF时，消息量大，
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF发现策略配置提供强制发现策略、发现模式和开启NRF查询结果缓存。 
@@ -73,7 +73,7 @@ NF发现策略配置提供强制发现策略、发现模式和开启NRF查询结
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -84,7 +84,7 @@ NF发现策略配置提供强制发现策略、发现模式和开启NRF查询结
 ## 发现模式配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在5GC网络中，AMF与其它NF进行业务交互时，需要获取对应NF的信息以保证两者之间能成功通信，AMF获取NF的方式有两种，通过NRF发现和通过本地配置发现。 
@@ -92,7 +92,7 @@ NF发现策略配置提供强制发现策略、发现模式和开启NRF查询结
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置AMF发现NF的方式，包括通过NRF发现和通过本地配置发现。 
@@ -100,7 +100,7 @@ NF发现策略配置提供强制发现策略、发现模式和开启NRF查询结
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -111,12 +111,12 @@ NF发现策略配置提供强制发现策略、发现模式和开启NRF查询结
 ### 修改NF发现模式配置(SET NFDISCOVERYMODE CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置或修改AMF发现NF的模式。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -134,10 +134,10 @@ NF发现策略配置提供强制发现策略、发现模式和开启NRF查询结
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 discoverySmsfMode|SMSF发现模式|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-2默认值: DiscNfByNrf|参数作用：该参数用于设置AMF发现SMSF的模式，取值及含义如下：通过NRF发现：当配置为NRF发现时，AMF通过NRF发现SMSF。通过本地配置发现：当配置为本地配置发现时，AMF通过本地配置发现SMSF。优先使用NRF发现：当配置为优先使用NRF发现时，AMF先通过NRF发现SMSF，如果失败后，会使用本地配置的数据发现SMSF。修改影响：无。数据来源：本端规划。默认值：通过NRF发现。配置原则：当SMSF的“发现模式”配置为“通过本地配置发现NF”，需要确保已使用ADD SMSFPROFILECFG命令配置SMSF的本地解析数据。
 discoveryNssfMode|NSSF发现模式|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-2默认值: DiscNfByLocal|参数作用：该参数用于设置AMF发现NSSF的模式，取值及含义如下：通过NRF发现：当配置为NRF发现时，AMF通过NRF发现NSSF。通过本地配置发现：当配置为本地配置发现时，AMF通过本地配置发现NSSF。优先使用NRF发现：当配置为优先使用NRF发现时，AMF先通过NRF发现NSSF，如果失败后，会使用本地配置的数据发现NSSF。修改影响：无。数据来源：本端规划。默认值：通过本地配置发现。配置原则：当NSSF的“发现模式”配置为“通过本地配置发现NF”，需要确保已使用ADD NSSFPROFILECFG命令配置NSSF的本地解析数据。
@@ -146,7 +146,7 @@ discoveryeirmode|5G-EIR发现模式|参数可选性: 任选参数类型: 枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -159,20 +159,20 @@ SET NFDISCOVERYMODE CONFIG:DISCOVERYSMSFMODE="DiscNfByNrf",DISCOVERYNSSFMODE="Di
 ### 查询NF发现模式配置(SHOW NFDISCOVERYMODE CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF发现NF的模式。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 discoverySmsfMode|SMSF发现模式|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-2默认值: DiscNfByNrf|参数作用：该参数用于设置AMF发现SMSF的模式。通过NRF发现通过本地配置发现优先使用NRF发现
 discoveryNssfMode|NSSF发现模式|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-2默认值: DiscNfByLocal|参数作用：该参数用于设置AMF发现NSSF的模式。通过NRF发现通过本地配置发现优先使用NRF发现
@@ -181,7 +181,7 @@ discoveryeirmode|5G-EIR发现模式|参数可选性: 任选参数类型: 枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -204,7 +204,7 @@ SHOW NFDISCOVERYMODE CONFIG:
 ## 发现处理策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当NF discovery返回的Profile中未携带capacity参数时，需要配置capacity的缺省值以保证合理选择一个NF。 
@@ -212,7 +212,7 @@ SHOW NFDISCOVERYMODE CONFIG:
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置发现处理策略，目前只支持capacity的缺省值配置。 
@@ -220,7 +220,7 @@ SHOW NFDISCOVERYMODE CONFIG:
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -231,29 +231,29 @@ SHOW NFDISCOVERYMODE CONFIG:
 ### 修改发现处理策略配置(SET DISCPROCPOLICYCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置发现处理策略，目前只支持capacity的缺省值的设置。 
 
 当NF discovery返回的Profile中未携带capacity参数时，需要配置capacity的缺省值以保证合理选择一个NF。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DEFCAPACITY|缺省权重|参数可选性: 必选参数类型: 数字参数范围: 0-65535默认值: 0|该参数用于设置发现处理策略配置中capacity的缺省值。Capacity又被称为静态权重，是同一类型的NF实例的相对权重值。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -266,27 +266,27 @@ SET DISCPROCPOLICYCFG:DEFCAPACITY=10
 ### 查询发现处理策略配置(SHOW DISCPROCPOLICYCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询发现处理策略配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DEFCAPACITY|缺省权重|参数可选性: 任选参数类型: 数字参数范围: 0-65535默认值: 0|该参数用于设置发现处理策略配置中capacity的缺省值。Capacity又被称为静态权重，是同一类型的NF实例的相对权重值
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -307,7 +307,7 @@ Default Capacity
 ## 查询结果缓存配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在5G网络中，所有的NF都需要将自身的信息注册到NRF中，当5G网络中的NF在需要发现其他NF时，可以到NRF进行获取，根据NF注册的信息，发现这些满足条件的NF并执行对应的业务流程。 
@@ -315,7 +315,7 @@ Default Capacity
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制本AMF通过NRF发现并获取其他的NF信息后，是否将些NF的信息缓存在本地，在后续流程中，避免每次均到NRF去发现其他NF，从而节省网络带宽及加快NRF的处理进度。 
@@ -323,7 +323,7 @@ Default Capacity
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -334,29 +334,29 @@ Default Capacity
 ### 修改发现结果是否缓存配置(SET NFDISCOVERYRESULTCACHED) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于开启或关闭NRF发现结果缓存功能。 
 
 开启此功能可有效的减少AMF和NRF之间的信令交互数量，降低网络信令负荷。 
 
 
-[](None)注意事项 
+注意事项 
 
 AMF开启NRF发现结果缓存功能之后，并非每次都实时向NRF查询，因此如果NRF侧信息有变化，需要主动向AMF更新缓存，避免AMF使用旧的缓存。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nfDiscResultCached|发现结果是否缓存|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: DISCOVERYRESULTCACHED|该参数用于配置AMF是否缓存NRF发现的结果。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -369,27 +369,27 @@ SET NFDISCOVERYRESULTCACHED:NFDISCRESULTCACHED="DISCOVERYRESULTCACHED"
 ### 查询发现结果是否缓存配置(SHOW NFDISCOVERYRESULTCACHED) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF是否开启了NRF发现结果缓存功能。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nfDiscResultCached|发现结果是否缓存|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: DISCOVERYRESULTCACHED|该参数用于配置AMF是否缓存NRF发现的结果。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -410,7 +410,7 @@ SHOW NFDISCOVERYRESULTCACHED
 # NF发现参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF通过NRF发现其他NF时，需要考虑的因素不同，包括用户号码、切片、路由信息、DNN、位置信息和PLMN等。因运营商的部署环境不同，考虑的因素也有差异。 
@@ -418,7 +418,7 @@ AMF通过NRF发现其他NF时，需要考虑的因素不同，包括用户号码
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置AMF发现AUSF、PCF、SMF、UDM、AMF和SMSF的参数。 
@@ -426,7 +426,7 @@ AMF通过NRF发现其他NF时，需要考虑的因素不同，包括用户号码
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -437,7 +437,7 @@ AMF通过NRF发现其他NF时，需要考虑的因素不同，包括用户号码
 ## 发现AUSF参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF需要通过NRF来发现AUSF（Authentication Server Function，鉴权服务器功能），并选择一个合适的AUSF来获取鉴权向量。 
@@ -447,7 +447,7 @@ AMF发现和选择AUSF时，可参考以下因素，包括：SUPI、Routing Indi
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制AMF通过NRF发现AUSF时，发送给NRF的发现消息中所携带的参数。 
@@ -455,7 +455,7 @@ AMF发现和选择AUSF时，可参考以下因素，包括：SUPI、Routing Indi
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -466,14 +466,14 @@ AMF发现和选择AUSF时，可参考以下因素，包括：SUPI、Routing Indi
 ### 修改NRF发现AUSF参数配置(SET NRFDISCAUSFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NRF发现AUSF参数配置。当AMF需要发现AUSF时，使用该命令配置AMF发送给NRF的Nnrf_NF Discovery请求消息中所携带的参数，NRF可根据这些参数作为参考因素来选择合适的AUSF。 
 
 包括是否携带如下参数：SUPI、Routing Indicator、preferred-locality、carryhnwpubkeyid。比如是否包含SUPI，即在AMF发送给NRF的Nnrf_NF Discovery请求消息中，所携带的查询条件是否携带SUPI。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -498,10 +498,10 @@ AUSF位置信息来源如下：
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carryParaMode|携带参数方式|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupiPrior|参数作用：该参数用于设置AMF通过NRF发现AUSF时，在查询条件中携带的参数，取值及含义如下：Routing Indicator优先。SUPI优先：则AMF发出的Nnrf_NFDiscovery请求中携带SUPI字段，根据SUPI匹配到多个可用的AUSF修改影响：有Routing Indicator优先和SUPI优先两种选项，修改该参数，可以修改AMF发送给NRF的请求消息中携带的参数。数据来源：本端规划。默认值：否。配置原则：无。
 carryprelocality|携带preferred-locality|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTCARRYPRELOCALITY|参数作用：该参数用于设置AMF通过NRF发现AUSF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带preferred-locality，取值及含义如下：不携带：不携带“preferred-locality”字段。携带：携带“preferred-locality”字段，AMF发出的Nnrf_NFDiscovery请求中携带preferred-locality字段。修改影响：无。数据来源：本端规划。默认值：不携带（NotSupLocality）配置原则：preferred-locality字段是否有效取决于获取到的AUSF位置信息是否有效。AUSF位置信息来源如下：通过ADD PREFER LOCALITY命令配置的AUSF位置，即AMF配置的NF优选位置。如果通过ADD PREFER LOCALITY命令无法获取到AUSF位置，且ADD PREFER LOCALITY命令中的参数“uselocloaclity”配置为“YES”，则使用与AMF相同的本地位置信息，即使用SET AMFLOCALOFFICECFG命令配置的参数“locality”。
@@ -511,7 +511,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -524,20 +524,20 @@ SET NRFDISCAUSFPARACFG:CARRYPARAMODE="RoutingPrior",CARRYPRELOCALITY="NOTCARRYPR
 ### 查询NRF发现AUSF参数配置(SHOW NRFDISCAUSFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF通过NRF发现AUSF时，AMF发送给NRF的请求消息中的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carryParaMode|携带参数方式|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupiPrior|参数作用：该参数用于设置AMF通过NRF发现AUSF时，在查询条件中携带的参数，取值及含义如下：Routing Indicator优先。SUPI优先：则AMF发出的Nnrf_NFDiscovery请求中携带SUPI字段，根据SUPI匹配到多个可用的AUSF
 carryprelocality|携带preferred-locality|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTCARRYPRELOCALITY|参数作用：该参数用于设置AMF通过NRF发现AUSF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带preferred-locality，取值及含义如下：不携带：不携带“preferred-locality”字段。携带：携带“preferred-locality”字段，AMF发出的Nnrf_NFDiscovery请求中携带preferred-locality字段。
@@ -547,7 +547,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -570,12 +570,12 @@ SHOW NRFDISCAUSFPARACFG:
 ### 新增基于PLMN的NRF发现AUSF参数配置(ADD NRFDISCAUSFPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增一组AMF基于PLMN通过NRF发现AUSF的参数配置。当AMF需要发现AUSF以获取鉴权向量时，使用该命令，基于PLMN配置AMF发送给NRF的Nnrf_NF Discovery请求消息中所携带的参数。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -587,10 +587,10 @@ SHOW NRFDISCAUSFPARACFG:
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -601,10 +601,10 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -615,7 +615,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -628,20 +628,20 @@ ADD NRFDISCAUSFPLMNPARACFG:MCC="460",MNC="11",CARRYPRELOCALITY="NOTCARRYPRELOCAL
 ### 修改基于PLMN的NRF发现AUSF参数配置(SET NRFDISCAUSFPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF基于PLMN通过NRF发现AUSF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -652,10 +652,10 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -666,7 +666,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -679,20 +679,20 @@ SET NRFDISCAUSFPLMNPARACFG:MCC="460",MNC="11",CARRYPRELOCALITY="NOTCARRYPRELOCAL
 ### 删除基于PLMN的NRF发现AUSF参数配置(DEL NRFDISCAUSFPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一组AMF基于PLMN通过NRF发现AUSF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -700,10 +700,10 @@ mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -714,7 +714,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -727,20 +727,20 @@ DEL NRFDISCAUSFPLMNPARACFG:MCC="460",MNC="11"
 ### 查询基于PLMN的NRF发现AUSF参数配置(SHOW NRFDISCAUSFPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF基于PLMN通过NRF发现AUSF时，AMF发送给NRF的请求消息中的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -748,10 +748,10 @@ mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现AUSF是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现AUSF是否携带preferred-locality时，该参数必须填写有效。
@@ -762,7 +762,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -785,7 +785,7 @@ SHOW NRFDISCAUSFPLMNPARACFG:
 ## 发现PCF参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF需要通过NRF来发现PCF，并选择一个合适的PCF来获取策略信息。 
@@ -795,7 +795,7 @@ AMF发现和选择PCF时，可参考以下因素，包括：SUPI，sNSSAI，GPSI
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制AMF通过NRF发现PCF时，发送给NRF的发现消息中所携带的参数。 
@@ -805,7 +805,7 @@ AMF发现和选择PCF时，可参考以下因素，包括：SUPI，sNSSAI，GPSI
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -816,7 +816,7 @@ AMF发现和选择PCF时，可参考以下因素，包括：SUPI，sNSSAI，GPSI
 ### 修改NRF发现PCF参数配置(SET NRFDISCPCFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置当AMF发现PCF时，发送给NRF的消息中需要携带的参考因素，即在AMF发送给NRF的Nnrf_NFDiscovery请求消息中，所携带的查询条件。  
 
@@ -837,7 +837,7 @@ GPSI（Generic Public Subscription Identifier，一般公共用户标识）
 当网络中的PCF支持向NRF注册号段范围，希望根据终端用户的号段选择PCF时，需要配置此功能。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -852,10 +852,10 @@ GPSI（Generic Public Subscription Identifier，一般公共用户标识）
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySupi|携带SUPI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSupi|参数作用：该参数用于设置AMF通过NRF发现PCF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带SUPI，取值及含义如下：不支持SUPI支持SUPI：AMF发出的Nnrf_NFDiscovery请求中携带SUPI字段为当前用户的SUPI。修改影响：如果设置为支持，则AMF发出的Nnrf_NFDiscovery请求中携带SUPI字段，根据SUPI匹配到多个可用的UDM。数据来源：本端规划。默认值：支持SUPI配置原则：无。
 carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupSnssai|参数作用：该参数用于设置AMF通过NRF发现PCF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带S-NSSAI（为当前用户的Allowed Nssai），取值及含义如下：不支持SNSSAI：不携带“SNSSAI”字段。支持SNSSAI：携带“SNSSAI”字段，AMF发出的Nnrf_NFDiscovery请求中携带S-NSSAI字段。为当前要建立的PDU所对应的S-NSSAI。修改影响：如果设置为携带，则AMF发出的Nnrf_NFDiscovery请求中会携带SNSSAI字段。数据来源：本端规划。默认值：不支持SNSSAI配置原则：无。
@@ -864,7 +864,7 @@ carryGpsi|携带GPSI|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -877,20 +877,20 @@ SET NRFDISCPCFPARACFG:CARRYSUPI="SupSupi",CARRYSNSSAI="SupSnssai",CARRYGPSI="Sup
 ### 查询NRF发现PCF参数配置(SHOW NRFDISCPCFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NRF发现PCF参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySupi|携带SUPI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSupi|参数作用：该参数用于设置AMF通过NRF发现PCF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带SUPI，取值及含义如下：不支持SUPI支持SUPI：AMF发出的Nnrf_NFDiscovery请求中携带SUPI字段为当前用户的SUPI。
 carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupSnssai|参数作用：该参数用于设置AMF通过NRF发现PCF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带S-NSSAI（为当前用户的Allowed Nssai），取值及含义如下：不支持SNSSAI：不携带“SNSSAI”字段。支持SNSSAI：携带“SNSSAI”字段，AMF发出的Nnrf_NFDiscovery请求中携带S-NSSAI字段。为当前要建立的PDU所对应的S-NSSAI。
@@ -899,7 +899,7 @@ carryGpsi|携带GPSI|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -920,7 +920,7 @@ SHOW NRFDISCPCFPARACFG:
 ## 发现SMF参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UE发起PDU会话建立流程，AMF需要选择合适的SMF建立PDU会话。 
@@ -966,7 +966,7 @@ servingScope
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制AMF通过NRF发现SMF时，发送给NRF的发现消息中所携带的参数。 如果AMF支持网络切片选择功能，需要通过此命令设置AMF发现SMF时所参考的因素。 
@@ -976,7 +976,7 @@ servingScope
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -987,7 +987,7 @@ servingScope
 ### 发现A-SMF参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF需要通过NRF来发现A-SMF，并选择一个合适的A-SMF来为UE建立PDU会话。 
@@ -995,7 +995,7 @@ AMF需要通过NRF来发现A-SMF，并选择一个合适的A-SMF来为UE建立PD
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制AMF通过NRF发现A-SMF时，发送给NRF的发现消息中所携带的参数。  
@@ -1003,7 +1003,7 @@ AMF需要通过NRF来发现A-SMF，并选择一个合适的A-SMF来为UE建立PD
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1014,7 +1014,7 @@ AMF需要通过NRF来发现A-SMF，并选择一个合适的A-SMF来为UE建立PD
 #### 修改NRF发现A-SMF参数配置(SET NRFDISCSMFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF通过NRF发现A-SMF（Anchor-SMF，锚点SMF）的参数配置。 
 
@@ -1054,7 +1054,7 @@ NRF优选：对应本命令的参数“携带preferred-locality（CARRYLOCALITY�
  
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -1072,10 +1072,10 @@ SMF发现参数的配置，要根据5GC网络中SMF的实际能力来设置，�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carryOIinDNN|DNN携带OI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotCarryOI|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中携带DNN时是否需要包含OI（Operator Identifier，运营商标识），取值及含义如下：不支持OI：不携带“OI”字段。支持OI：携带“OI”字段，AMF发出的Nnrf_NFDiscovery请求中携带的DNN字段包含OI。修改影响：无。数据来源：本端规划。默认值：不支持OI（NotCarryOI）配置原则：无。
 carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSnssai|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中是否携带S-NSSAI（为当前用户的Allowed Nssai），取值及含义如下：不支持SNSSAI：不携带“SNSSAI”字段。支持SNSSAI：携带“SNSSAI”字段，AMF发出的Nnrf_NFDiscovery请求中携带S-NSSAI字段。为当前要建立的PDU所对应的S-NSSAI。修改影响：无。数据来源：本端规划。默认值：支持SNSSAI（SupSnssai）配置原则：无。
@@ -1093,7 +1093,7 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1106,20 +1106,20 @@ SET NRFDISCSMFPARACFG:CARRYOIINDNN="CarryOI",CARRYSNSSAI="SupSnssai",CARRYPLMN="
 #### 查询NRF发现A-SMF参数配置(SHOW NRFDISCSMFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF通过NRF发现A-SMF时，AMF发送给NRF的请求消息中所携带的参数，NRF可根据这些参数作为参考因数来选择合适的SMF。   
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carryOIinDNN|DNN携带OI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotCarryOI|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中携带DNN时是否需要包含OI（Operator Identifier，运营商标识），取值及含义如下：不支持OI：不携带“OI”字段。支持OI：携带“OI”字段，AMF发出的Nnrf_NFDiscovery请求中携带的DNN字段包含OI。
 carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSnssai|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中是否携带S-NSSAI，取值及含义如下：不支持SNSSAI：不携带“SNSSAI”字段。支持SNSSAI：携带“SNSSAI”字段，AMF发出的Nnrf_NFDiscovery请求中携带S-NSSAI字段。为当前要建立的PDU所对应的S-NSSAI。
@@ -1137,7 +1137,7 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1160,12 +1160,12 @@ SHOW NRFDISCSMFPARACFG
 #### 新增基于PLMN的NRF发现A-SMF参数配置(ADD PLMN NRFDISCSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增一组AMF基于PLMN和DNN两个维度来通过NRF发现A-SMF的参数配置。当AMF需要发现SMF以创建和管理PDU会话时，使用该命令，配置AMF发送给NRF的请求消息中所携带的参数。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -1180,10 +1180,10 @@ SHOW NRFDISCSMFPARACFG
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
@@ -1199,10 +1199,10 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1218,7 +1218,7 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1231,20 +1231,20 @@ ADD PLMN NRFDISCSMFPARA:MCC="460",MNC="11",DNN="zte.com.cn",CARRYPRELOCALITY="NO
 #### 修改基于PLMN的NRF发现A-SMF参数配置(SET PLMN NRFDISCSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改一组AMF基于PLMN和DNN两个维度通过NRF发现A-SMF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
@@ -1260,10 +1260,10 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1279,7 +1279,7 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1292,20 +1292,20 @@ SET PLMN NRFDISCSMFPARA:MCC="460",MNC="11",DNN="zte.com.cn",CARRYPRELOCALITY="NO
 #### 删除基于PLMN的NRF发现A-SMF参数配置(DEL PLMN NRFDISCSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一组AMF基于PLMN和DNN两个维度通过NRF发现A-SMF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
@@ -1314,10 +1314,10 @@ dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 1-63默认�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1333,7 +1333,7 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1346,20 +1346,20 @@ DEL PLMN NRFDISCSMFPARA:MCC="460",MNC="11",DNN="zte.com.cn"
 #### 查询基于PLMN的NRF发现A-SMF参数配置(SHOW PLMN NRFDISCSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF基于PLMN和DNN两个维度通过NRF发现A-SMF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现SMF是否携带preferred-locality时，该参数必须填写。要求PLMN（MCC+MNC）和DNN至少有一个输入有效取值。当MCC+MNC配置为"FFF"+"FF"时，表示PLMN无效，当DNN配置为“NULL”时，表示DNN无效。
@@ -1368,10 +1368,10 @@ dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 1-63默认�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3默认值: FFF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3默认值: FF|参数作用：该参数用于配置AMF基于用户目前所在的PLMN来通过NRF发现A-SMF时，AMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1387,7 +1387,7 @@ servscopeextply|服务范围扩展策略|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1410,7 +1410,7 @@ SHOW PLMN NRFDISCSMFPARA
 ### 发现I/V-SMF参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF需要通过NRF来发现I/V-SMF，并选择一个合适的I/V-SMF来为UE建立PDU会话。 
@@ -1418,7 +1418,7 @@ AMF需要通过NRF来发现I/V-SMF，并选择一个合适的I/V-SMF来为UE建�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制AMF通过NRF发现I/V-SMF时，发送给NRF的发现消息中所携带的参数。  
@@ -1426,7 +1426,7 @@ AMF需要通过NRF来发现I/V-SMF，并选择一个合适的I/V-SMF来为UE建�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1437,20 +1437,20 @@ AMF需要通过NRF来发现I/V-SMF，并选择一个合适的I/V-SMF来为UE建�
 #### 修改NRF发现I/V-SMF参数配置(SET NRFDISCIVSMFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF通过NRF发现I/V-SMF的参数配置。 
 
 当AMF需要发现I/V-SMF时，使用该命令配置AMF发送给NRF的发现请求消息中所携带的参数，NRF可根据这些参数作为参考因素来选择合适的I/V-SMF。包括如下参数：S-NSSAI、PLMN、NS-ID（Network Slice Instance，网络切片实例）、preferred-locality。  
 
 
-[](None)注意事项 
+注意事项 
 
 本命令执行后，结果立即生效。 
 
 具体参数的选择，要根据5GC网络中I/V-SMF的实际能力来设置，确保I/V-SMF向NRF注册NF Profile时，携带了这些信息。比如，通过此命令设置为携带S-NSSAI，则要确保目标切片网络中的I/V-SMF向NRF注册时已经携带了S-NSSAI信息，否则会导致AMF发现I/V-SMF失败，影响用户PDU会话的建立。 
 
-如果已经通过[SET AMFSUPPOTSLICESELECT](../mml/1100017.html)命令设置了AMF支持网络切片选择功能，可以通过本命令配置AMF发现I/V-SMF是否携带切片实例号。
+如果已经通过[SET AMFSUPPOTSLICESELECT]命令设置了AMF支持网络切片选择功能，可以通过本命令配置AMF发现I/V-SMF是否携带切片实例号。
 
 通过此命令配置AMF发现I/V-SMF携带preferred-locality参数，preferred-locality字段是否有效取决于AMF获取到的I/V-SMF位置信息是否有效，I/V-SMF位置信息来源如下： 
 
@@ -1472,10 +1472,10 @@ AMF执行Locality优选时，只能使用NRF优选和本地优选中的一种；
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSnssai|参数作用：该参数用于设置AMF通过NRF发现I/V-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中是否携带S-NSSAI。修改影响：如果设置为支持，则AMF发出的Nnrf_NFDiscovery请求中携带S-NSSAI字段。为当前要建立的PDU所对应的S-NSSAI。数据来源：本端规划。默认值：SupSnssai配置原则：无。
 carryPlmn|携带目标PLMN|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupPlmn|参数作用：该参数用于AMF通过NRF发现I/V-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中是否携带目标PLMN。修改影响：如果设置为支持，则AMF发出的Nnrf_NFDiscovery请求中携带目标PLMN字段。数据来源：本端规划。默认值：NotSupPlmn配置原则：无。
@@ -1486,7 +1486,7 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1499,20 +1499,20 @@ SET NRFDISCIVSMFPARACFG:CARRYSNSSAI="SupSnssai",CARRYPLMN="SupPlmn",CARRYNSIID="
 #### 查询NRF发现I/V-SMF参数配置(SHOW NRFDISCIVSMFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF通过NRF发现I/V-SMF时，AMF发送给NRF的请求消息中所携带的参数，NRF可根据这些参数作为参考因数来选择合适的SMF。   
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSnssai|参数作用：该参数用于设置AMF通过NRF发现I/V-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中是否携带S-NSSAI。
 carryPlmn|携带目标PLMN|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupPlmn|参数作用：该参数用于AMF通过NRF发现I/V-SMF时，发送给NRF的Nnrf_NFDiscovery请求消息中是否携带目标PLMN。
@@ -1523,7 +1523,7 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1546,20 +1546,20 @@ SHOW NRFDISCIVSMFPARACFG
 #### 新增基于PLMN的NRF发现I/V-SMF参数配置(ADD PLMN NRFDISCIVSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增一组AMF基于PLMN通过NRF发现I/V-SMF的参数配置。当AMF需要发现SMF以创建和管理PDU会话时，使用该命令，基于PLMN配置AMF发送给NRF的请求消息中所携带的参数。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1569,10 +1569,10 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1582,7 +1582,7 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1595,20 +1595,20 @@ ADD PLMN NRFDISCIVSMFPARA:MCC="460",MNC="11",CARRYPRELOCALITY="CARRY",SUPPLOCALI
 #### 修改基于PLMN的NRF发现I/V-SMF参数配置(SET PLMN NRFDISCIVSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改一组AMF基于PLMN通过NRF发现I/V-SMF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1618,10 +1618,10 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1631,7 +1631,7 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1644,20 +1644,20 @@ SET PLMN NRFDISCIVSMFPARA:MCC="460",MNC="11",CARRYPRELOCALITY="CARRY",SUPPLOCALI
 #### 删除基于PLMN的NRF发现I/V-SMF参数配置(DEL PLMN NRFDISCIVSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一组AMF基于PLMN通过NRF发现I/V-SMF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1665,10 +1665,10 @@ mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1678,7 +1678,7 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1691,20 +1691,20 @@ DEL PLMN NRFDISCIVSMFPARA:MCC="460",MNC="11"
 #### 查询基于PLMN的NRF发现I/V-SMF参数配置(SHOW PLMN NRFDISCIVSMFPARA) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF基于PLMN通过NRF发现I/V-SMF的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1712,10 +1712,10 @@ mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现I/V-SMF是否携带preferred-locality和servingScope的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -1725,7 +1725,7 @@ supplocalitysel|支持基于Locality优选|参数可选性: 任选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1748,7 +1748,7 @@ SHOW PLMN NRFDISCIVSMFPARA
 ## 发现UDM参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF需要通过NRF发现UDM实例信息，并选择一个合适的UDM来获取签约数据。 
@@ -1758,7 +1758,7 @@ AMF发现和选择UDM时，可参考以下因素，包括：SUPI、preferred-loc
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制AMF通过NRF发现UDM时，发送给NRF的发现消息中所携带的参数。 
@@ -1768,7 +1768,7 @@ AMF发现和选择UDM时，可参考以下因素，包括：SUPI、preferred-loc
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1779,12 +1779,12 @@ AMF发现和选择UDM时，可参考以下因素，包括：SUPI、preferred-loc
 ### 修改NRF发现UDM参数配置(SET NRFDISCUDMPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF通过NRF发现UDM的参数配置。当AMF需要发现UDM以获取签约数据时，使用该命令。配置AMF发送给NRF的Nnrf_NF Discovery请求消息中所携带的参数，NRF根据这些参数来选择合适的UDM。包括是否携带如下参数：SUPI、preferred-locality、carryrt、carryhnwpubkeyid。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -1802,10 +1802,10 @@ AMF发现和选择UDM时，可参考以下因素，包括：SUPI、preferred-loc
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySupi|携带SUPI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSupi|参数作用：该参数用于设置AMF通过NRF发现UDM时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带SUPI，取值及含义如下：不支持SUPI：如果设置为不支持SUPI，则AMF发送给NRF的Nnrf_NFDiscovery请求消息中不会携带SUPI字段。支持SUPI：如果设置为支持，则AMF发送给NRF的Nnrf_NFDiscovery请求消息中会携带SUPI字段，NRF根据SUPI，会匹配到多个可用的UDM。修改影响：如果设置为不支持SUPI，同时也没有配置AMF发送给NRF的Nnrf_NFDiscovery请求消息中携带其他的发现参数，则可能导致NRF发现UDM失败。数据来源：本端规划。默认值：support SUPI。配置原则：无。
 carryprelocality|携带preferred-locality|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTCARRYPRELOCALITY|参数作用：该参数用于设置AMF通过NRF发现UDM时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带preferred-locality，取值及含义如下：不携带：不携带“preferred-locality”字段。携带：携带“preferred-locality”字段，AMF发出的Nnrf_NFDiscovery请求中携带preferred-locality字段。修改影响：如果设置为携带，则AMF发出的Nnrf_NFDiscovery请求中会携带preferred-locality字段。数据来源：本端规划。默认值：NOTCARRYPRELOCALITY。配置原则：preferred-locality字段是否有效取决于获取到的UDM位置信息是否有效。UDM位置信息来源如下：通过ADD PREFER LOCALITY命令配置的UDM位置，即AMF配置的NF优选位置。如果通过ADD PREFER LOCALITY命令无法获取到UDM位置，且ADD PREFER LOCALITY命令中的参数“uselocloaclity”配置为“YES”，则使用与AMF相同的本地位置信息，即使用SET AMFLOCALOFFICECFG命令配置的参数“locality”。
@@ -1816,7 +1816,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1829,20 +1829,20 @@ SET NRFDISCUDMPARACFG:CARRYSUPI="SupSupi",CARRYPRELOCALITY="NOTCARRYPRELOCALITY"
 ### 查询NRF发现UDM参数配置(SHOW NRFDISCUDMPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF通过NRF发现UDM时，AMF发送给NRF的请求消息中的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySupi|携带SUPI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SupSupi|参数作用：该参数用于设置AMF通过NRF发现UDM时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带SUPI，取值及含义如下：不支持SUPI支持SUPI：AMF发出的Nnrf_NFDiscovery请求中携带SUPI字段为当前用户的SUPI。
 carryprelocality|携带preferred-locality|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTCARRYPRELOCALITY|参数作用：该参数用于设置AMF通过NRF发现UDM时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中是否携带preferred-locality，取值及含义如下：不携带：不携带“preferred-locality”字段。携带：携带“preferred-locality”字段，AMF发出的Nnrf_NFDiscovery请求中携带preferred-locality字段。
@@ -1853,7 +1853,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1876,12 +1876,12 @@ SHOW NRFDISCUDMPARACFG:
 ### 新增基于PLMN的NRF发现UDM参数配置(ADD NRFDISCUDMPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增一组AMF基于PLMN通过NRF发现UDM的参数配置。当AMF需要发现UDM以获取签约数据时，使用该命令，基于PLMN配置AMF发送给NRF的Nnrf_NF Discovery请求消息中所携带的参数。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -1893,10 +1893,10 @@ SHOW NRFDISCUDMPARACFG:
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -1908,10 +1908,10 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -1923,7 +1923,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1936,20 +1936,20 @@ ADD NRFDISCUDMPLMNPARACFG:MCC="460",MNC="11",CARRYPRELOCALITY="NOTCARRYPRELOCALI
 ### 修改基于PLMN的NRF发现UDM参数配置(SET NRFDISCUDMPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF基于PLMN通过NRF发现UDM的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -1961,10 +1961,10 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -1976,7 +1976,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1989,20 +1989,20 @@ SET NRFDISCUDMPLMNPARACFG:MCC="460",MNC="11",CARRYPRELOCALITY="NOTCARRYPRELOCALI
 ### 删除基于PLMN的NRF发现UDM参数配置(DEL NRFDISCUDMPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除AMF基于PLMN通过NRF发现UDM的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -2010,10 +2010,10 @@ mnc|移动网络码|参数可选性: 必选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -2025,7 +2025,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2038,20 +2038,20 @@ DEL NRFDISCUDMPLMNPARACFG:MCC="460",MNC="11"
 ### 查询基于PLMN的NRF发现UDM参数配置(SHOW NRFDISCUDMPLMNPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF基于PLMN通过NRF发现UDM时，AMF发送给NRF的请求消息中的参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -2059,10 +2059,10 @@ mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
 mnc|移动网络码|参数可选性: 任选参数类型: 字符串参数范围: 2-3|参数作用：该参数用于配置基于PLMN的NRF发现UDM是否携带preferred-locality的MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。修改影响：无。数据来源：全网规划。默认值：无。配置原则：当配置基于PLMN的NRF发现UDM是否携带preferred-locality时，该参数必须填写有效。
@@ -2074,7 +2074,7 @@ carryhnwpubkeyid|携带home-pub-key-id策略|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2097,7 +2097,7 @@ SHOW NRFDISCUDMPLMNPARACFG:
 ## 发现AMF参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF通过NRF发现其它AMF时，需要结合实际的业务场景来设置具体的发现请求参数，在N2接口的局间切换过程中，本功能用于源AMF通过NRF发现目标AMF的基本参数配置。 
@@ -2107,7 +2107,7 @@ N2接口是NR和AMF之间的接口，用于NR和AMF间的上下文管理、会�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置在N2接口的局间切换流程中，源AMF通过NRF发现目标AMF时，是否携带源AMF Region，源AMF Set及允许的SNSSAI。 
@@ -2115,7 +2115,7 @@ N2接口是NR和AMF之间的接口，用于NR和AMF间的上下文管理、会�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2126,12 +2126,12 @@ N2接口是NR和AMF之间的接口，用于NR和AMF间的上下文管理、会�
 ### 修改NRF发现AMF参数配置(SET NRFDISCAMFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 本功能用于配置在N2接口的局间切换流程中，原AMF通过NRF发现目标AMF时，是否携带原AMF Region，原AMF Set及允许的SNSSAI。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -2146,10 +2146,10 @@ N2接口是NR和AMF之间的接口，用于NR和AMF间的上下文管理、会�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carryRegion|携带Region|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupRegion|参数作用：该参数用于设置在局间切出流程中，AMF通过NRF发现目标AMF时，AMF是否携带源AMF Region。该参数仅适用于局间切出流程，取值及含义如下：不支持Region：不携带“Region”支持Region：携带“Region”修改影响：无。数据来源：本端规划。默认值：不支持Region。配置原则：如果配置为携带，需要以十六进制格式携带。
 carrySet|携带Set|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupSet|参数作用：该参数仅用于设置在局间切出流程中，AMF通过NRF发现目标AMF时，AMF是否携带源AMF Set，取值及含义如下：不支持Set：不携带“Set”支持Set：携带“Set”修改影响：无。数据来源：本端规划。默认值：不支持Set。配置原则：如果配置为携带，需要以十六进制格式携带。
@@ -2158,7 +2158,7 @@ carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2171,20 +2171,20 @@ SET NRFDISCAMFPARACFG:CARRYREGION="SupRegion",CARRYSET="SupSet",CARRYSNSSAI="Sup
 ### 查询NRF发现AMF参数配置(SHOW NRFDISCAMFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询NRF发现AMF参数的策略配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carryRegion|携带Region|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupRegion|参数作用：该参数用于设置AMF是否携带源AMF Region。该参数仅用于局间切出流程，发现目标AMF时根据该参数配置决定是否携带源AMF Region,如果携带，以十六进制格式携带。
 carrySet|携带Set|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NotSupSet|参数作用：该参数用于设置AMF是否携带源AMF Set。该参数仅用于局间切出流程，发现目标AMF时根据该参数配置决定是否携带源AMF Set,如果携带，以十六进制格式携带。
@@ -2193,7 +2193,7 @@ carrySnssai|携带SNSSAI|参数可选性: 任选参数类型: 枚举，参见枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2214,7 +2214,7 @@ SHOW NRFDISCAMFPARACFG:
 ## 发现SMSF参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF需要通过NRF来发现SMSF，并选择一个合适的SMSF来获取策略信息。 
@@ -2224,7 +2224,7 @@ AMF通过NRF发现和选择SMSF时，可参考以下因素，包括：SUPI、GPS
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于控制AMF通过NRF发现SMSF时，发送给NRF的发现消息中所携带的参数。 
@@ -2234,7 +2234,7 @@ AMF通过NRF发现和选择SMSF时，可参考以下因素，包括：SUPI、GPS
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2245,22 +2245,22 @@ AMF通过NRF发现和选择SMSF时，可参考以下因素，包括：SUPI、GPS
 ### 修改NRF发现SMSF参数配置(SET NRFDISCSMSFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置/修改AMF发现SMSF时，携带给NRF的参考因素，即AMF向NRF发送的Nnrf_NF Discovery请求消息中，所携带的查询条件。 包括是否携带如下参数：SUPI、GPSI。 
 
 当SMSF支持向NRF注册号段范围，AMF需要实现根据终端号段选择SMSF时，需要配置此命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 具体参数的选择，要根据SMSF的实际能力来设置，确保SMSF向NRF注册NF Profile时，携带了这些信息。比如，通过本功能设置发现时携带SUPI、GPSI，则要确保SMSF向NRF注册时已经携带了SUPI、GPSI信息，否则会导致AMF发现SMSF失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySupi|携带SUPI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NO|参数作用：该参数用于设置AMF通过NRF发现SMSF时，AMF向NRF发送的Nnrf_NF Discovery请求消息，所携带的查询条件中，是否携带SUPI。如果设置为携带，则AMF发送给NRF的Nnrf_NF Discovery请求消息中会携带SUPI字段，为当前用户的SUPI。修改影响：本参数设置为开启之后，当AMF发现SMSF时，如果有有效的SMSFID且151号软参设置为开启，则在查询条件中携带SUPI，如果没有有效的SMSFID，则不判断软参直接携带SUPI。151号软参，是用于控制是否可以同时携带SMSFID和SUPI。151软参为开启状态 ，表示可以同时携带SMSFID和SUPI；151软参为关闭状态，表示只能携带SMSFID，不能携带SUPI。数据来源：本端规划默认值：0配置原则：无
 carryGpsi|携带GPSI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NO|参数作用：该参数用于设置AMF发现SMSF时，AMF向NRF发送的Nnrf_NF Discovery请求消息，所携带的查询条件中，是否携带GPSI。如果设置为携带，则AMF发送给NRF的Nnrf_NF Discovery请求消息中会携带GPSI字段，为当前用户的GPSI。修改影响：本参数设置为开启之后，当AMF发现SMSF时，如果没有有效的SMSFID，则在查询条件中携带GPSI，如果有有效的SMSFID，则不携带GPSI。数据来源：本端规划默认值：0配置原则：无
@@ -2268,7 +2268,7 @@ carryGpsi|携带GPSI|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2281,20 +2281,20 @@ SET NRFDISCSMSFPARACFG:CARRYSUPI="YES",CARRYGPSI="YES"
 ### 查询NRF发现SMSF参数配置(SHOW NRFDISCSMSFPARACFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NRF发现SMSF参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 carrySupi|携带SUPI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NO|参数作用：该参数用于设置AMF通过NRF发现SMSF时，AMF向NRF发送的Nnrf_NF Discovery请求消息，所携带的查询条件中，是否携带SUPI。如果设置为携带，则AMF发送给NRF的Nnrf_NF Discovery请求消息中会携带SUPI字段，为当前用户的SUPI。修改影响：本参数设置为开启之后，当AMF发现SMSF时，如果有有效的SMSFID且151号软参设置为开启，则在查询条件中携带SUPI，如果没有有效的SMSFID，则不判断软参直接携带SUPI。151号软参，是用于控制是否可以同时携带SMSFID和SUPI。151软参为开启状态 ，表示可以同时携带SMSFID和SUPI；151软参为关闭状态，表示只能携带SMSFID，不能携带SUPI。数据来源：本端规划默认值：0配置原则：无
 carryGpsi|携带GPSI|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NO|参数作用：该参数用于设置AMF发现SMSF时，AMF向NRF发送的Nnrf_NF Discovery请求消息，所携带的查询条件中，是否携带GPSI。如果设置为携带，则AMF发送给NRF的Nnrf_NF Discovery请求消息中会携带GPSI字段，为当前用户的GPSI。修改影响：本参数设置为开启之后，当AMF发现SMSF时，如果没有有效的SMSFID，则在查询条件中携带GPSI，如果有有效的SMSFID，则不携带GPSI。数据来源：本端规划默认值：0配置原则：无
@@ -2302,7 +2302,7 @@ carryGpsi|携带GPSI|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2323,7 +2323,7 @@ SHOW NRFDISCSMSFPARACFG:
 # NF本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当5GC网络中没有部署NRF或者NRF不可用（升级或故障）以及进行拨测时，运营商希望通过AMF本地配置数据，来获取到各个NF的IP地址，后续用于发现和选择各个NF。因此AMF需要提供NF本地的IP地址解析配置数据。 
@@ -2331,7 +2331,7 @@ SHOW NRFDISCSMSFPARACFG:
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF本地解析配置提供AUSF、UDM、PCF、SMF、SMSF和AMF的本地解析配置。 
@@ -2339,7 +2339,7 @@ NF本地解析配置提供AUSF、UDM、PCF、SMF、SMSF和AMF的本地解析配�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2350,7 +2350,7 @@ NF本地解析配置提供AUSF、UDM、PCF、SMF、SMSF和AMF的本地解析配�
 ## AUSF本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取AUSF的解析数据，后续用于本地发现和选择AUSF。 
@@ -2358,7 +2358,7 @@ NF本地解析配置提供AUSF、UDM、PCF、SMF、SMSF和AMF的本地解析配�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UE注册时，AMF发现和选择合适的AUSF进行鉴权。本地解析配置提供通过Routing码解析对应的AUSF。 
@@ -2366,7 +2366,7 @@ UE注册时，AMF发现和选择合适的AUSF进行鉴权。本地解析配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2377,7 +2377,7 @@ UE注册时，AMF发现和选择合适的AUSF进行鉴权。本地解析配置�
 ### 号段选择AUSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权，主要用于运营商拨测场景。 
@@ -2394,7 +2394,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发鉴权流程，AMF根据用户的GPSI/SUPI号码选择接入的AUSF。 
@@ -2406,7 +2406,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2417,7 +2417,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 #### 基于号段选择AUSF策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权，主要用于运营商拨测场景。 
@@ -2434,7 +2434,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发鉴权流程，AMF根据用户GPSI/SUPI号码选择接入的AUSF。 
@@ -2444,7 +2444,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2455,27 +2455,27 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 修改基于号段选择AUSF策略(SET RESOLAUSFSEGPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supausfnumsel|支持基于号段选择AUSF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权。修改影响：修改参数为支持时，影响如下:AMF在选择AUSF时，首先根据用户的GPSI/SUPI号段选择AUSF，在选择失败的情况下，后续再重新通过到NRF或本地配置数据发现AUSF。数据来源：本端配置。配置原则：本参数需要根据运营商拨测场景进行配置。运维人员需要对新接入网络的AUSF进行功能测试，在AUSF还没有和NRF建立连接或还没有向NRF注册之前，AMF能够根据测试用户的GPSI/SUPI号码，将该用户切换接入到该AUSF进行功能测试。当网络中的某个AUSF可能有问题或者故障，运维人员需要确认其是否故障，AMF能够根据测试用户的GPSI/SUPI号码，将该用户接入到该AUSF，进行测试。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2488,27 +2488,27 @@ SET RESOLAUSFSEGPOLICY:SUPAUSFNUMSEL="SPRT"
 ##### 查询基于号段选择AUSF策略(SHOW RESOLAUSFSEGPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supausfnumsel|支持基于号段选择AUSF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2531,7 +2531,7 @@ SHOW RESOLAUSFSEGPOLICY
 #### 基于号段选择AUSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权，主要用于运营商拨测场景。 
@@ -2548,7 +2548,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发鉴权流程，AMF根据用户GPSI/SUPI号码选择拨测的AUSF网元。 
@@ -2558,7 +2558,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2569,20 +2569,20 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 新增基于号段选择AUSF配置(ADD RESOLAUSFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权的相关配置数据，使得拨测场景配置号段下的测试用户能够选择到指定的AUSF。 
 
 
-[](None)注意事项 
+注意事项 
 
-如需要在基于号段选择AUSF配置中配置地址池标识，必须先通过[ADD AUSFLOCALADDRPOOL](../mml/1100438.html)命令配置AUSF地址池。
-
-
-[](None)输入参数说明 
+如需要在基于号段选择AUSF配置中配置地址池标识，必须先通过[ADD AUSFLOCALADDRPOOL]命令配置AUSF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -2598,7 +2598,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2611,20 +2611,20 @@ ADD RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI",FQDN="zte.com",IPPOO
 ##### 修改基于号段选择AUSF配置(SET RESOLAUSFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权的相关配置数据，使得拨测场景配置号段下的测试用户能够选择到指定的AUSF。 
 
 
-[](None)注意事项 
+注意事项 
 
-如需要修改基于号段选择AUSF配置中的地址池标识，必须先通过[ADD AUSFLOCALADDRPOOL](../mml/1100438.html)命令配置AUSF地址池。
-
-
-[](None)输入参数说明 
+如需要修改基于号段选择AUSF配置中的地址池标识，必须先通过[ADD AUSFLOCALADDRPOOL]命令配置AUSF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -2640,7 +2640,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2653,20 +2653,20 @@ SET RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI",FQDN="zte.com",IPPOO
 ##### 删除基于号段选择AUSF配置(DEL RESOLAUSFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权的相关配置数据。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -2675,7 +2675,7 @@ fqdn|FQDN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2688,20 +2688,20 @@ DEL RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 ##### 查询基于号段选择AUSF配置(SHOW RESOLAUSFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个AUSF进行鉴权的相关配置数据。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLAUSFSEGPOLICY命令开启AMF支持基于号段选择AUSF后，AMF在选择AUSF时，会先根据配置的号段选择AUSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -2709,10 +2709,10 @@ numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。
@@ -2728,7 +2728,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2751,7 +2751,7 @@ SHOW RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 ### AUSF地址池配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取AUSF的IP地址，后续用于本地发现和选择AUSF。 
@@ -2759,7 +2759,7 @@ SHOW RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 一个AUSF会关联多个IP地址，为了提高配置效率，AMF根据“AUSF地址池配置”把地址列表和地址池标识关联，“基于号段选择AUSF配置”中只需要引用相应的地址池标识。 
@@ -2767,7 +2767,7 @@ SHOW RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2778,12 +2778,12 @@ SHOW RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 #### 增加AUSF地址池配置(ADD AUSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条AUSF地址池配置。一个地址池ID可以对应多个地址。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -2795,10 +2795,10 @@ SHOW RESOLAUSFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置AUSF地址池配置的地址池标识。当地址池标识被基于号段选择AUSF配置引用时引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于地址池标识对应的AUSF网元或AUSF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -2807,7 +2807,7 @@ port|端口号|参数可选性: 必选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2820,20 +2820,20 @@ ADD AUSFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",PORT=8080
 #### 删除AUSF地址池配置(DEL AUSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条AUSF地址池配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 当地址池标识被基于号段选择AUSF配置引用时，不能被删除。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置AUSF地址池配置的地址池标识。当地址池标识被基于号段选择AUSF配置引用时引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于地址池标识对应的AUSF网元或AUSF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -2842,7 +2842,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2855,20 +2855,20 @@ DEL AUSFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",PORT=8080
 #### 查询AUSF地址池配置(SHOW AUSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AUSF地址池配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置AUSF地址池配置的地址池标识。当地址池标识被基于号段选择AUSF配置引用时引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于地址池标识对应的AUSF网元或AUSF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -2877,10 +2877,10 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置AUSF地址池配置的地址池标识。当地址池标识被基于号段选择AUSF配置引用时引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于地址池标识对应的AUSF网元或AUSF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -2889,7 +2889,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2908,7 +2908,7 @@ SHOW AUSFLOCALADDRPOOL:ADDRPOOLID=1
 ## UDM本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取UDM的解析数据，后续用于本地发现和选择UDM。 
@@ -2916,7 +2916,7 @@ SHOW AUSFLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UE在注册时，完成到UDM的登记，AMF发现和选择合适的UDM。UDM本地解析配置提供通过SUPI号段解析对应的UDM。 
@@ -2924,7 +2924,7 @@ UE在注册时，完成到UDM的登记，AMF发现和选择合适的UDM。UDM本
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2935,7 +2935,7 @@ UE在注册时，完成到UDM的登记，AMF发现和选择合适的UDM。UDM本
 ### 号段选择UDM配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM进行处理，主要用于运营商拨测场景。 
@@ -2952,7 +2952,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发选择UDM流程，AMF根据用户的GPSI/SUPI号码选择接入的UDM。 
@@ -2964,7 +2964,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2975,7 +2975,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 #### 基于号段选择UDM策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM进行处理，主要用于运营商拨测场景。 
@@ -2992,7 +2992,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发UDM选择流程，AMF根据用户GPSI/SUPI号码选择接入的UDM。 
@@ -3002,7 +3002,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3013,27 +3013,27 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 修改基于号段选择UDM策略(SET RESOLUDMSEGPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supudmnumsel|支持基于号段选择UDM|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM。修改影响：修改参数为支持时，影响如下:AMF在选择UDM时，首先根据用户的GPSI/SUPI号段选择UDM，在选择失败的情况下，后续再重新通过到NRF或本地配置数据发现UDM。数据来源：本端配置。配置原则：本参数需要根据运营商拨测场景进行配置。运维人员需要对新接入网络的UDM进行功能测试，在UDM还没有和NRF建立连接或还没有向NRF注册之前，AMF能够根据测试用户的GPSI/SUPI号码，将该用户切换接入到该UDM进行功能测试。当网络中的某个UDM可能有问题或者故障，运维人员需要确认其是否故障，AMF能够根据测试用户的GPSI/SUPI号码，将该用户接入到该UDM，进行测试。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3046,27 +3046,27 @@ SET RESOLUDMSEGPOLICY:SUPUDMNUMSEL="SPRT"
 ##### 查询基于号段选择UDM策略(SHOW RESOLUDMSEGPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supudmnumsel|支持基于号段选择UDM|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3089,7 +3089,7 @@ SHOW RESOLUDMSEGPOLICY
 #### 基于号段选择UDM配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM进行处理，主要用于运营商拨测场景。 
@@ -3106,7 +3106,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发UDM流程，AMF根据用户GPSI/SUPI号码选择拨测的UDM网元。 
@@ -3116,7 +3116,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3127,20 +3127,20 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 新增基于号段选择UDM配置(ADD RESOLUDMSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM，使得拨测场景配置号段下的测试用户能够选择到指定的UDM。 
 
 
-[](None)注意事项 
+注意事项 
 
-如需要在基于号段选择UDM配置中配置地址池标识，必须先通过[ADD UDMLOCALADDRPOOL](../mml/1100449.html)命令配置UDM地址池。
-
-
-[](None)输入参数说明 
+如需要在基于号段选择UDM配置中配置地址池标识，必须先通过[ADD UDMLOCALADDRPOOL]命令配置UDM地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3156,7 +3156,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3169,20 +3169,20 @@ ADD RESOLUDMSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI",FQDN="zte.com",IPPOOL
 ##### 修改基于号段选择UDM配置(SET RESOLUDMSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM，使得拨测场景配置号段下的测试用户能够选择到指定的UDM。 
 
 
-[](None)注意事项 
+注意事项 
 
-如需要修改基于号段选择UDM配置中的地址池标识，必须先通过[ADD UDMLOCALADDRPOOL](../mml/1100449.html)命令配置UDM地址池。
-
-
-[](None)输入参数说明 
+如需要修改基于号段选择UDM配置中的地址池标识，必须先通过[ADD UDMLOCALADDRPOOL]命令配置UDM地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3198,7 +3198,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3211,20 +3211,20 @@ SET RESOLUDMSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI",FQDN="zte.com",IPPOOL
 ##### 删除基于号段选择UDM配置(DEL RESOLUDMSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3233,7 +3233,7 @@ fqdn|FQDN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3246,20 +3246,20 @@ DEL RESOLUDMSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 ##### 查询基于号段选择UDM配置(SHOW RESOLUDMSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个UDM。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）； 初始注册流程时还未获取到GPSI，初始注册流程拨测应配置为SUPI类型。修改影响：通过SET RESOLUDMSEGPOLICY命令开启AMF支持基于号段选择UDM后，AMF在选择UDM时，会先先根据配置的号段选择UDM，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3267,10 +3267,10 @@ numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。
@@ -3286,7 +3286,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3309,7 +3309,7 @@ SHOW RESOLUDMSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 ### UDM地址池配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取UDM的IP地址，后续用于本地发现和选择UDM。 
@@ -3317,7 +3317,7 @@ SHOW RESOLUDMSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 一个UDM会关联多个IP地址，为了提高配置效率，AMF根据“UDM地址池配置”把地址列表和地址池标识关联，“基于号段选择UDM配置”中只需要引用相应的地址池标识。 
@@ -3325,7 +3325,7 @@ SHOW RESOLUDMSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3336,21 +3336,21 @@ SHOW RESOLUDMSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 #### 增加UDM地址池配置(ADD UDMLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条UDM地址池配置。在现网需要基于终端用户的GPSI/SUPI号段来选择接入的UDM(拨测)的场景下，通过本命令设置UDM的IP地址及端口号。 
 
 
-[](None)注意事项 
+注意事项 
 
 1、一个IP地址只能归属一个地址池标识
 2、一个地址池内最多配置16个IP地址
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置UDM地址池的标识。
 ipAddress|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于配置地址池标识对应的UDM IP地址。IP地址格式可以为IPv4或IPv6。
@@ -3359,7 +3359,7 @@ port|端口号|参数可选性: 必选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3372,20 +3372,20 @@ ADD UDMLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",Port=8080
 #### 删除UDM地址池配置(DEL UDMLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条UDM地址池配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 当地址池标识被基于号段选择UDM配置引用时，不能被删除。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置UDM地址池的标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置地址池标识对应的UDM IP地址。IP地址格式可以为IPv4或IPv6。
@@ -3394,7 +3394,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3407,20 +3407,20 @@ DEL UDMLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",Port=8080
 #### 查询UDM地址池配置(SHOW UDMLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询UDM地址池配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置UDM地址池的标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置地址池标识对应的UDM IP地址。IP地址格式可以为IPv4或IPv6。
@@ -3429,10 +3429,10 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置UDM地址池的标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置地址池标识对应的UDM IP地址。IP地址格式可以为IPv4或IPv6。
@@ -3441,7 +3441,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3462,7 +3462,7 @@ SHOW UDMLOCALADDRPOOL:ADDRPOOLID=1
 ## PCF本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取PCF的解析数据，后续用于本地发现和选择PCF。 
@@ -3470,7 +3470,7 @@ SHOW UDMLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UE在注册时，AMF为UE进行策略关联的建立，发现和选择合适的PCF。PCF本地解析配置提供通过SUPI号段配置解析对应的PCF。 
@@ -3478,7 +3478,7 @@ UE在注册时，AMF为UE进行策略关联的建立，发现和选择合适的P
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3489,7 +3489,7 @@ UE在注册时，AMF为UE进行策略关联的建立，发现和选择合适的P
 ### 号段选择PCF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理，主要用于运营商拨测场景。 
@@ -3506,7 +3506,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发PCF流程，AMF根据用户的GPSI/SUPI号码选择接入的PCF。 
@@ -3518,7 +3518,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3529,7 +3529,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 #### 基于号段选择PCF策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理，主要用于运营商拨测场景。 
@@ -3546,7 +3546,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发PCF流程，AMF根据用户GPSI/SUPI号码选择接入的PCF。 
@@ -3556,7 +3556,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3567,27 +3567,27 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 修改基于号段选择PCF策略(SET RESOLPCFSEGPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 suppcfnumsel|支持基于号段选择PCF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理。修改影响：修改参数为支持时，影响如下:AMF在选择PCF时，首先根据用户的GPSI/SUPI号段选择PCF，在选择失败的情况下，后续再重新通过到NRF或本地配置数据发现PCF。数据来源：本端配置。配置原则：本参数需要根据运营商拨测场景进行配置。运维人员需要对新接入网络的PCF进行功能测试，在PCF还没有和NRF建立连接或还没有向NRF注册之前，AMF能够根据测试用户的GPSI/SUPI号码，将该用户切换接入到该PCF进行功能测试。当网络中的某个PCF可能有问题或者故障，运维人员需要确认其是否故障，AMF能够根据测试用户的GPSI/SUPI号码，将该用户接入到该PCF，进行测试。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3600,27 +3600,27 @@ SET RESOLPCFSEGPOLICY:SUPPCFNUMSEL="SPRT"
 ##### 查询基于号段选择PCF策略(SHOW RESOLPCFSEGPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 suppcfnumsel|支持基于号段选择PCF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3643,7 +3643,7 @@ SHOW RESOLPCFSEGPOLICY
 #### 基于号段选择PCF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理，主要用于运营商拨测场景。 
@@ -3660,7 +3660,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，触发PCF流程，AMF根据用户GPSI/SUPI号码选择拨测的PCF网元。 
@@ -3670,7 +3670,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3681,20 +3681,20 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 新增基于号段选择PCF配置(ADD RESOLPCFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理的相关配置数据，使得拨测场景配置号段下的测试用户能够选择到指定的PCF。 
 
 
-[](None)注意事项 
+注意事项 
 
-如需要在基于号段选择PCF配置中配置地址池标识，必须先通过[ADD PCFLOCALADDRPOOL](../mml/1100466.html)命令配置PCF地址池。
-
-
-[](None)输入参数说明 
+如需要在基于号段选择PCF配置中配置地址池标识，必须先通过[ADD PCFLOCALADDRPOOL]命令配置PCF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3710,7 +3710,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3723,20 +3723,20 @@ ADD RESOLPCFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI",FQDN="zte.com",IPPOOL
 ##### 修改基于号段选择PCF配置(SET RESOLPCFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理的相关配置数据，使得拨测场景配置号段下的测试用户能够选择到指定的PCF。 
 
 
-[](None)注意事项 
+注意事项 
 
-如需要修改基于号段选择PCF配置中的地址池标识，必须先通过[ADD PCFLOCALADDRPOOL](../mml/1100466.html)命令配置PCF地址池。
-
-
-[](None)输入参数说明 
+如需要修改基于号段选择PCF配置中的地址池标识，必须先通过[ADD PCFLOCALADDRPOOL]命令配置PCF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3752,7 +3752,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3765,20 +3765,20 @@ SET RESOLPCFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI",FQDN="zte.com",IPPOOL
 ##### 删除基于号段选择PCF配置(DEL RESOLPCFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理的相关配置数据。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3787,7 +3787,7 @@ fqdn|FQDN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3800,20 +3800,20 @@ DEL RESOLPCFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 ##### 查询基于号段选择PCF配置(SHOW RESOLPCFSEGCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个PCF进行处理的相关配置数据。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET RESOLPCFSEGPOLICY命令开启AMF支持基于号段选择PCF后，AMF在选择PCF时，会先先根据配置的号段选择PCF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则SUPI号段的优先级高于GPSI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -3821,10 +3821,10 @@ numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该命令用于设置GPSI/SUPI号码或号段。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2|参数作用：该命令用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。
@@ -3840,7 +3840,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3863,7 +3863,7 @@ SHOW RESOLPCFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 ### PCF地址池配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取PCF的IP地址，后续用于本地发现和选择PCF。 
@@ -3871,7 +3871,7 @@ SHOW RESOLPCFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于设置"基于号段选择PCF配置"中引用的PCF地址池标识。 
@@ -3881,7 +3881,7 @@ SHOW RESOLPCFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3892,26 +3892,26 @@ SHOW RESOLPCFSEGCFG:NUMBER="460111234567890",NUMTYPE="SUPI"
 #### 增加PCF地址池配置(ADD PCFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于增加PCF地址池配置，该命令设置的地址池可以被"基于号段选择AUSF配置"[ADD RESOLPCFSEGCFG](../mml/1104288.html)引用。
+该命令用于增加PCF地址池配置，该命令设置的地址池可以被"基于号段选择AUSF配置"[ADD RESOLPCFSEGCFG]引用。
 
-该命令的配置结果可以通过[SHOW PCFLOCALADDRPOOL](../mml/1100468.html)命令进行查询。
+该命令的配置结果可以通过[SHOW PCFLOCALADDRPOOL]命令进行查询。
 
 一个用户号段会关联多个IP地址及端口号，为了提高配置效率，AMF在“PCF地址池配置”中将IP地址及端口号与地址池标识进行关联，在“基于号段选择AUSF配置”中只需要引用相应的地址池标识即可关联多个IP地址。 
 
 
-[](None)注意事项 
+注意事项 
 
 一个IP地址只能归属一个地址池标识。 
 
 一个地址池内最多配置16个IP地址。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置PCF地址池标识。
 ipAddress|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于配置与PCF地址池标识关联的PCF的IP地址，地址格式可以为IPv4或IPv6。
@@ -3920,7 +3920,7 @@ port|端口号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3933,24 +3933,24 @@ ADD PCFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",Port=8080
 #### 删除PCF地址池配置(DEL PCFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条PCF地址池配置。 
 
 可以选择删除某个地址池中的特定地址，也可以选择删除整个地址池。 
 
-该命令的配置结果可以通过[SHOW PCFLOCALADDRPOOL](../mml/1100468.html)命令进行查询。
+该命令的配置结果可以通过[SHOW PCFLOCALADDRPOOL]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
-当地址池标识被"基于号段选择AUSF配置"([ADD RESOLPCFSEGCFG](../mml/1104288.html))引用时，不能被删除。必须解除绑定关系后进行删除操作。
-
-
-[](None)输入参数说明 
+当地址池标识被"基于号段选择AUSF配置"([ADD RESOLPCFSEGCFG])引用时，不能被删除。必须解除绑定关系后进行删除操作。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置PCF地址池标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置与PCF地址池标识关联的PCF的IP地址，地址格式可以为IPv4或IPv6。
@@ -3959,7 +3959,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3972,20 +3972,20 @@ DEL PCFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",Port=8080
 #### 查询PCF地址池配置(SHOW PCFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PCF地址池配置。可以查询特定配置，也可以查询所有配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置PCF地址池标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置与PCF地址池标识关联的PCF的IP地址，地址格式可以为IPv4或IPv6。
@@ -3994,10 +3994,10 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置PCF地址池标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置与PCF地址池标识关联的PCF的IP地址，地址格式可以为IPv4或IPv6。
@@ -4006,7 +4006,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4028,7 +4028,7 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
 ## SMF本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取SMF的解析数据，后续用于本地发现和选择SMF。 
@@ -4036,7 +4036,7 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 在5GC网络中，UE发起PDU会话建立，AMF发现和选择合适的SMF建立PDU会话。本功能用于配置AMF通过对号段进行解析，获取对应的SMF。 
@@ -4044,7 +4044,7 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4055,7 +4055,7 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
 ### SMF 地址池配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当现网没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置SMF解析数据，发现和选择SMF。 
@@ -4063,7 +4063,7 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 一个SMF会关联多个IP地址，为了提高配置效率，AMF根据 "SMF地址池配置"把地址列表和地址池标识关联， 其它配置中只需要引用相应的地址池标识。 
@@ -4071,7 +4071,7 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4082,14 +4082,14 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
 #### 新增SMF IP POOL配置(ADD SMFIPPOOLCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 当现网没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置SMF解析数据，发现和选择SMF。 
 
 该命令用于新增SMF地址池配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -4101,10 +4101,10 @@ SHOW PCFLOCALADDRPOOL:ADDRPOOLID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于设置IP地址池标识，一个标识最多对应16个地址。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：该参数配置后，会被ADD RESOLASMFCFG命令和ADD RESOLIVSMFCFG命令使用。
 ipAddress|IP地址|参数可选性: 必选参数类型: 字符串|参数作用：该参数用于设置IP地址池内的IP地址。一个地址池包括IP地址和端口号。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：无。
@@ -4113,7 +4113,7 @@ port|端口号|参数可选性: 必选参数类型: 数字参数范围: 0-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4126,16 +4126,16 @@ ADD SMFIPPOOLCFG:ADDRPOOLID=1,IPADDRESS="1.1.1.1",PORT=8080
 #### 删除SMF  IP POOL配置(DEL SMFIPPOOLCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SMF地址池配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
-本命令执行之前，需要确认被删除的地址池标识（IPPOOLID），不在[SHOW RESOLASMFCFG](../mml/1104075.html)命令或[SHOW RESOLIVSMFCFG](../mml/1104079.html)的查询结果中，否则不能删除成功。
+本命令执行之前，需要确认被删除的地址池标识（IPPOOLID），不在[SHOW RESOLASMFCFG]命令或[SHOW RESOLIVSMFCFG]的查询结果中，否则不能删除成功。
 
 可以通过以下两种方式解决后，再执行本命令。 
 
@@ -4149,10 +4149,10 @@ ADD SMFIPPOOLCFG:ADDRPOOLID=1,IPADDRESS="1.1.1.1",PORT=8080
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于设置IP地址池标识，一个标识最多对应16个地址。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：该参数配置后，会被ADD RESOLASMFCFG命令和ADD RESOLIVSMFCFG命令使用。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|参数作用：该参数用于设置IP地址池内的IP地址。一个地址池包括IP地址和端口号。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：无。
@@ -4161,7 +4161,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 0-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4176,22 +4176,22 @@ DEL SMFIPPOOLCFG:ADDRPOOLID=1,IPADDRESS=1.1.1.1,PORT=8080
 #### 查询SMF  IP POOL配置(SHOW SMFIPPOOLCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMF地址池配置。 
 
 可以查询所有配置，也可以按ipaddr查询特定配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于设置IP地址池标识，一个标识最多对应16个地址。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：该参数配置后，会被ADD RESOLASMFCFG命令和ADD RESOLIVSMFCFG命令使用。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|参数作用：该参数用于设置IP地址池内的IP地址。一个地址池包括IP地址和端口号。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：无。
@@ -4200,10 +4200,10 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 0-65535�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于设置IP地址池标识，一个标识最多对应16个地址。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|参数作用：该参数用于设置IP地址池内的IP地址。一个地址池包括IP地址和端口号。
@@ -4212,7 +4212,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 0-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4233,7 +4233,7 @@ ADDRPOOLID   IPADDRESS   PORT
 ### 基于号段解析SMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择SMF，主要用于运营商拨测和割接等场景。 
@@ -4267,7 +4267,7 @@ ADDRPOOLID   IPADDRESS   PORT
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置提供基于号段解析SMF的全局策略和用户级策略配置，提供基于号段解析A-SMF、I-SMF和V-SMF的配置。 
@@ -4275,7 +4275,7 @@ ADDRPOOLID   IPADDRESS   PORT
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4286,7 +4286,7 @@ ADDRPOOLID   IPADDRESS   PORT
 #### 解析SMF策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择SMF，主要用于运营商拨测和割接等场景。 
@@ -4305,7 +4305,7 @@ ADDRPOOLID   IPADDRESS   PORT
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该命令用于设置支持基于号段选择A-SMF、I-SMF和V-SMF的功能开关，以及支持基于号段本地解析A-SMF、I-SMF和V-SMF地址、号段选择失败后是否重选A-SMF、I-SMF和V-SMF的默认配置。 
@@ -4313,7 +4313,7 @@ ADDRPOOLID   IPADDRESS   PORT
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4324,22 +4324,22 @@ ADDRPOOLID   IPADDRESS   PORT
 ##### 修改解析SMF策略配置(SET RESOLVESMFPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置解析SMF策略配置的默认配置。 
 
-该命令的配置结果优先级低于[ADD RESOSMFPLYBASEDUSER](../mml/1104066.html)命令的配置结果。判断逻辑如下：判断该用户的GPSI和SUPI号码是否配置了“用户级解析SMF策略”。只要其中一个号码能够匹配成功，则使用“用户级解析SMF策略”。若均没有匹配成功，则使用“解析SMF策略”。
+该命令的配置结果优先级低于[ADD RESOSMFPLYBASEDUSER]命令的配置结果。判断逻辑如下：判断该用户的GPSI和SUPI号码是否配置了“用户级解析SMF策略”。只要其中一个号码能够匹配成功，则使用“用户级解析SMF策略”。若均没有匹配成功，则使用“解析SMF策略”。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPASMFNUMSEL|支持基于号段选择A-SMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|该参数用于设置是否支持基于号段选择A-SMF，选项如下。支持：该开关开启，用户才能进入割接环境或拨测环境选择A-SMF。不支持：该开关关闭，用户不能进入割接环境或拨测环境。
 SUPIVSMFNUMSEL|支持基于号段选择I-SMF和V-SMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|该参数用于设置是否支持基于号段选择I-SMF和V-SMF，选项如下。支持：该开关开启，用户才能进入割接环境或拨测环境选择I-SMF和V-SMF。不支持：该开关关闭，用户不能进入割接环境或拨测环境。
@@ -4352,7 +4352,7 @@ forcenrfdisc|割接模式时是否强制向NRF发现SMF|参数可选性: 任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4365,20 +4365,20 @@ SET RESOLVESMFPOLICY:SUPASMFNUMSEL="SPRT",SUPIVSMFNUMSEL="SPRT",LOCALRESOLVEASMF
 ##### 查询解析SMF策略配置(SHOW RESOLVESMFPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询解析SMF策略配置的默认配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPASMFNUMSEL|支持基于号段选择A-SMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|该参数用于设置是否支持基于号段选择A-SMF，选项如下。支持：该开关开启，用户才能进入割接环境或拨测环境选择A-SMF。不支持：该开关关闭，用户不能进入割接环境或拨测环境。
 SUPIVSMFNUMSEL|支持基于号段选择I-SMF和V-SMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|该参数用于设置是否支持基于号段选择I-SMF和V-SMF，选项如下。支持：该开关开启，用户才能进入割接环境或拨测环境选择I-SMF和V-SMF。不支持：该开关关闭，用户不能进入割接环境或拨测环境。
@@ -4391,7 +4391,7 @@ forcenrfdisc|割接模式时是否强制向NRF发现SMF|参数可选性: 任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4414,7 +4414,7 @@ SHOW RESOLVESMFPOLICY
 #### 用户级解析SMF策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择SMF，主要用于运营商拨测和割接等场景。 
@@ -4433,7 +4433,7 @@ SHOW RESOLVESMFPOLICY
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该命令用于设置是否支持基于GPSI/SUPI号段本地解析A-SMF、I-SMF和V-SMF地址、号段选择失败后是否重选A-SMF、I-SMF和V-SMF。 
@@ -4441,7 +4441,7 @@ SHOW RESOLVESMFPOLICY
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4452,16 +4452,16 @@ SHOW RESOLVESMFPOLICY
 ##### 增加用户级解析SMF策略配置(ADD RESOSMFPLYBASEDUSER) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令增加用户级解析SMF策略配置，用于配置某一GPSI/SUPI号段是否支持基于GPSI/SUPI号段本地解析A-SMF、I-SMF和V-SMF地址、号段选择失败后是否重选A-SMF、I-SMF和V-SMF、割接模式时是否强制向NRF发现SMF。 
 
-该命令的配置结果优先级高于[SET RESOLVESMFPOLICY](../mml/1104070.html)命令的配置结果。判断逻辑如下：判断该用户的GPSI和SUPI号码是否配置了"用户级解析SMF策略”。只要其中一个号码能够匹配成功，则使用"用户级解析SMF策略”。若均没有匹配成功，则使用"解析SMF策略”。
+该命令的配置结果优先级高于[SET RESOLVESMFPOLICY]命令的配置结果。判断逻辑如下：判断该用户的GPSI和SUPI号码是否配置了"用户级解析SMF策略”。只要其中一个号码能够匹配成功，则使用"用户级解析SMF策略”。若均没有匹配成功，则使用"解析SMF策略”。
 
-该命令配置完成后，可以通过[SHOW RESOSMFPLYBASEDUSER](../mml/1104069.html)命令查询配置结果。
+该命令配置完成后，可以通过[SHOW RESOSMFPLYBASEDUSER]命令查询配置结果。
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -4473,10 +4473,10 @@ SHOW RESOLVESMFPOLICY
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMBER|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：无。
 NUMTYPE|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，取值及含义如下：GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：无。数据来源：本端规划。默认值：GPSI（Generic Public Subscription Identifier，一般公共用户标识）配置原则：无。
@@ -4489,7 +4489,7 @@ forcenrfdisc|割接模式时是否强制向NRF发现SMF|参数可选性: 任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4502,24 +4502,24 @@ ADD RESOSMFPLYBASEDUSER:NUMBER="13895122456",NUMTYPE="GPSI",LOCALRESOLVEASMF="SP
 ##### 修改用户级解析SMF策略配置(SET RESOSMFPLYBASEDUSER) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改某一GPSI/SUPI号段是否支持本地解析A-SMF、I-SMF和V-SMF地址、号段选择失败后是否重选A-SMF、I-SMF和V-SMF、割接模式时是否强制向NRF发现SMF。 
 
-该命令的配置结果优先级高于[SET RESOLVESMFPOLICY](../mml/1104070.html)命令的配置结果。判断逻辑如下：判断该用户的GPSI和SUPI号码是否配置了"用户级解析SMF策略”。只要其中一个号码能够匹配成功，则使用"用户级解析SMF策略”。若均没有匹配成功，则使用"解析SMF策略”。
+该命令的配置结果优先级高于[SET RESOLVESMFPOLICY]命令的配置结果。判断逻辑如下：判断该用户的GPSI和SUPI号码是否配置了"用户级解析SMF策略”。只要其中一个号码能够匹配成功，则使用"用户级解析SMF策略”。若均没有匹配成功，则使用"解析SMF策略”。
 
-该命令配置完成后，可以通过[SHOW RESOSMFPLYBASEDUSER](../mml/1104069.html)命令查询配置结果。
+该命令配置完成后，可以通过[SHOW RESOSMFPLYBASEDUSER]命令查询配置结果。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMBER|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：无。
 NUMTYPE|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，取值及含义如下：GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：无。数据来源：本端规划。默认值：GPSI（Generic Public Subscription Identifier，一般公共用户标识）配置原则：无。
@@ -4532,7 +4532,7 @@ forcenrfdisc|割接模式时是否强制向NRF发现SMF|参数可选性: 任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4545,22 +4545,22 @@ SET RESOSMFPLYBASEDUSER:NUMBER="13895122456",NUMTYPE="GPSI",LOCALRESOLVEASMF="SP
 ##### 删除用户级解析SMF策略配置(DEL RESOSMFPLYBASEDUSER) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除某一号段用户的解析SMF策略配置。 
 
-该命令配置完成后，可以通过[SHOW RESOSMFPLYBASEDUSER](../mml/1104069.html)命令查询配置结果。
+该命令配置完成后，可以通过[SHOW RESOSMFPLYBASEDUSER]命令查询配置结果。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMBER|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：无。
 NUMTYPE|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，取值及含义如下：GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：无。数据来源：本端规划。默认值：GPSI（Generic Public Subscription Identifier，一般公共用户标识）配置原则：无。
@@ -4568,7 +4568,7 @@ NUMTYPE|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4581,20 +4581,20 @@ DEL RESOSMFPLYBASEDUSER:NUMBER="13895122456",NUMTYPE="GPSI"
 ##### 查询用户级解析SMF策略配置(SHOW RESOSMFPLYBASEDUSER) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询用户级解析SMF策略配置，可以使某一号段，也可以全部配置数据。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：无。数据来源：本端规划 。默认值：无。配置原则：无。
 NUMTYPE|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，取值及含义如下：GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：无。数据来源：本端规划。默认值：GPSI（Generic Public Subscription Identifier，一般公共用户标识）配置原则：无。
@@ -4602,10 +4602,10 @@ NUMTYPE|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。
 NUMTYPE|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，取值及含义如下：GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）
@@ -4618,7 +4618,7 @@ forcenrfdisc|割接模式时是否强制向NRF发现SMF|参数可选性: 任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4642,7 +4642,7 @@ SHOW RESOSMFPLYBASEDUSER:
 #### 基于号段解析A-SMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择A-SMF，主要用于运营商拨测和割接场景。 
@@ -4670,7 +4670,7 @@ SHOW RESOSMFPLYBASEDUSER:
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该命令用于设置基于GPSI/SUPI号段解析A-SMF的数据，包括SMF主机名、地址池标识、优先级、权重、URI scheme、API版本、PGW FQDN、有效期。 
@@ -4678,7 +4678,7 @@ SHOW RESOSMFPLYBASEDUSER:
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4689,14 +4689,14 @@ SHOW RESOSMFPLYBASEDUSER:
 ##### 新增基于号段解析A-SMF配置(ADD RESOLASMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令新增基于号段解析A-SMF配置，用于在割接或拨测场景，让某一部分测试用户选择到指定的A-SMF。该命令配置的数据包括GPSI/SUPI号段、NF实例标识、A-SMF主机名、地址池标识、优先级、权重、URI scheme、API版本、PGW FQDN、有效时间。 
 
-该命令的配置结果可以通过[SHOW RESOLASMFCFG](../mml/1104075.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLASMFCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -4708,10 +4708,10 @@ SHOW RESOSMFPLYBASEDUSER:
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 必选参数类型: 数字参数范围: 1-4096|参数作用：该参数为每个配置赋予不同的编号，用于区分不同配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 NUMBER|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
@@ -4729,7 +4729,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4742,22 +4742,22 @@ ADD RESOLASMFCFG:ID=1,NUMBER="13895122456",NUMTYPE="GPSI",NFINSTANCEID="f81d4fae
 ##### 修改基于号段解析A-SMF配置(SET RESOLASMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令修改基于号段解析A-SMF配置，用于在割接场景，让某一部分测试用户选择到指定的A-SMF。 
 
-该命令的配置结果可以通过[SHOW RESOLASMFCFG](../mml/1104075.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLASMFCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 必选参数类型: 数字参数范围: 1-4096|参数作用：该参数为每个配置赋予不同的编号，用于区分不同配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
@@ -4775,7 +4775,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4788,29 +4788,29 @@ SET RESOLASMFCFG:ID=1,NUMBER="13895122456",NUMTYPE="GPSI",NFINSTANCEID="f81d4fae
 ##### 删除基于号段解析A-SMF配置(DEL RESOLASMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令删除基于GPSI/SUPI号段解析A-SMF的配置数据。 
 
-该命令的配置结果可以通过[SHOW RESOLASMFCFG](../mml/1104075.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLASMFCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 必选参数类型: 数字参数范围: 1-4096|参数作用：该参数为每个配置赋予不同的编号，用于区分不同配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4823,22 +4823,22 @@ DEL RESOLASMFCFG:ID=1
 ##### 查询基于号段解析A-SMF配置(SHOW RESOLASMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询基于GPSI/SUPI号段解析A-SMF的配置数据。 
 
 可以查询所有配置，也可以按号码段查询特定配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 任选参数类型: 数字参数范围: 1-4096|参数作用：该参数为每个配置赋予不同的编号，用于区分不同配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
@@ -4847,10 +4847,10 @@ NUMTYPE|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 任选参数类型: 数字参数范围: 1-4096|参数作用：该参数为每个配置赋予不同的编号，用于区分不同配置。
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置GPSI/SUPI号码或号段。
@@ -4868,7 +4868,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4891,7 +4891,7 @@ SHOW RESOLASMFCFG
 #### 基于号段解析I-SMF和V-SMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择I-SMF和V-SMF，主要用于运营商拨测和割接场景。 
@@ -4919,7 +4919,7 @@ SHOW RESOLASMFCFG
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该命令用于设置基于GPSI/SUPI号段解析I-SMF和V-SMF的数据，包括SMF主机名、地址池标识、优先级、权重、URI scheme、API版本、有效时间。 
@@ -4927,7 +4927,7 @@ SHOW RESOLASMFCFG
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4938,21 +4938,21 @@ SHOW RESOLASMFCFG
 ##### 新增基于号段解析I-SMF和V-SMF配置(ADD RESOLIVSMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 
-该命令的配置结果可以通过[SHOW RESOLIVSMFCFG](../mml/1104079.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLIVSMFCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
-如需要在基于GPSI/SUPI号段解析I-SMF和V-SMF配置中配置地址池，必须先配置SMF地址池。可以通过[SHOW SMFIPPOOLCFG](../mml/1100377.html)命令查询已配置的SMF地址池。
-
-
-[](None)输入参数说明 
+如需要在基于GPSI/SUPI号段解析I-SMF和V-SMF配置中配置地址池，必须先配置SMF地址池。可以通过[SHOW SMFIPPOOLCFG]命令查询已配置的SMF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 必选参数类型: 数字参数范围: 1-4096|该参数为每个配置赋予不同的编号，用于区分不同配置。
 NUMBER|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 1-16|该参数用于设置GPSI/SUPI号码或号段。
@@ -4969,7 +4969,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4982,22 +4982,22 @@ ADD RESOLIVSMFCFG:ID=1,NUMBER="13895122456",NUMTYPE="GPSI",NFINSTANCEID="f81d4fa
 ##### 修改基于号段解析I-SMF和V-SMF配置(SET RESOLIVSMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令修改基于GPSI/SUPI号段解析I-SMF和V-SMF配置，用于在者割接场景，让某一部分测试用户选择到指定的I-SMF或者V-SMF。 
 
-该命令的配置结果可以通过[SHOW RESOLIVSMFCFG](../mml/1104079.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLIVSMFCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
-如需要在基于GPSI/SUPI号段解析I-SMF和V-SMF配置中配置地址池，必须先配置SMF地址池。可以通过[SHOW SMFIPPOOLCFG](../mml/1100377.html)命令查询已配置的SMF地址池。
-
-
-[](None)输入参数说明 
+如需要在基于GPSI/SUPI号段解析I-SMF和V-SMF配置中配置地址池，必须先配置SMF地址池。可以通过[SHOW SMFIPPOOLCFG]命令查询已配置的SMF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 必选参数类型: 数字参数范围: 1-4096|该参数为每个配置赋予不同的编号，用于区分不同配置。
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|该参数用于设置GPSI/SUPI号码或号段。
@@ -5014,7 +5014,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5027,29 +5027,29 @@ SET RESOLIVSMFCFG:ID=1,NUMBER="13895122456",NUMTYPE="GPSI",NFINSTANCEID="f81d4fa
 ##### 删除基于号段解析I-SMF和V-SMF配置(DEL RESOLIVSMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除基于GPSI/SUPI号段解析I-SMF和V-SMF的配置数据。 
 
-该命令的配置结果可以通过[SHOW RESOLIVSMFCFG](../mml/1104079.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLIVSMFCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 必选参数类型: 数字参数范围: 1-4096|该参数为每个配置赋予不同的编号，用于区分不同配置。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5062,22 +5062,22 @@ DEL RESOLIVSMFCFG:ID=1
 ##### 查询基于号段解析I-SMF和V-SMF配置(SHOW RESOLIVSMFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询基于GPSI/SUPI号段解析I-SMF和V-SMF的配置数据。 
 
 可以查询所有配置，也可以按号码段查询特定配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 任选参数类型: 数字参数范围: 1-4096|该参数为每个配置赋予不同的编号，用于区分不同配置。
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|该参数用于设置GPSI/SUPI号码或号段。
@@ -5086,10 +5086,10 @@ NUMTYPE|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 id|编号|参数可选性: 任选参数类型: 数字参数范围: 1-4096|该参数为每个配置赋予不同的编号，用于区分不同配置。
 NUMBER|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 1-16|该参数用于设置GPSI/SUPI号码或号段。
@@ -5106,7 +5106,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5128,7 +5128,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 ## SMSF本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当5GC网络中没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置的数据，来获取SMSF的IP地址，后续用于发现和选择SMSF。 
@@ -5136,7 +5136,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UE通过NAS消息投递短消息时，AMF发现和选择合适的SMSF进行短消息投递。 
@@ -5146,7 +5146,7 @@ UE通过NAS消息投递短消息时，AMF发现和选择合适的SMSF进行短�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5157,7 +5157,7 @@ UE通过NAS消息投递短消息时，AMF发现和选择合适的SMSF进行短�
 ### 默认SMSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 5GC网络中的AMF与SMSF进行交互时，需要获取SMSF的IP地址以进行通信。 
@@ -5178,7 +5178,7 @@ AMF获取SMSF的IP地址的方式有以下两种。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置本AMF对应的默认SMSF。 
@@ -5188,7 +5188,7 @@ AMF获取SMSF的IP地址的方式有以下两种。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5199,12 +5199,12 @@ AMF获取SMSF的IP地址的方式有以下两种。
 #### 修改默认SMSF配置(SET DFTSMSF CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 本功能用于配置本AMF对应的默认SMSF的IP地址信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -5216,10 +5216,10 @@ AMF获取SMSF的IP地址的方式有以下两种。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 enable|是否启用|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: ENABLE|参数作用：此参数用于控制SMSF是否可以启用默认SMSF配置，取值及含义如下：不启用启用修改影响：修改此参数，影响AMF是否可以使用默认SMSF的配置信息。 数据来源：本端规划。 默认值：不启用。配置原则：无。
 smsfIpAddress|SMSF IP地址|参数可选性: 任选参数类型: 字符串|参数作用：该参数用于设置默认SMSF的IP地址，地址格式可以为IPv4或IPv6。修改影响：修改此参数，影响默认SMSF的IP地址信息。 数据来源：本端规划。 默认值：无。配置原则：该参数应设置为正确的IPv4或IPv6地址格式 。
@@ -5230,7 +5230,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5247,20 +5247,20 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 #### 查询默认SMSF配置(SHOW DFTSMSF CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询本AMF对应的默认SMSF的IP地址信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 enable|是否启用|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: ENABLE|参数作用：此参数用于控制SMSF是否可以启用默认SMSF配置，取值及含义如下：不启用启用
 smsfIpAddress|SMSF IP地址|参数可选性: 任选参数类型: 字符串|参数作用：该参数用于设置默认SMSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -5271,7 +5271,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5293,7 +5293,7 @@ SHOW DFTSMSF CONFIG
 ### 本地解析SMSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当现网没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置SMSF解析数据，发现和选择SMSF。 
@@ -5303,7 +5303,7 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于增加SUPI号段和SMSF模板的关联关系，AMF使用本地解析方式选择SMSF时，可以按照用户SUPI号段匹配到最优的SMSF进行短消息流程的交互。 
@@ -5311,7 +5311,7 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5322,22 +5322,22 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 #### 增加本地解析SMSF配置(ADD SMSFLOCALRESO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条本地解析SMSF配置。即配置用户SUPI号段与SMSF模板(SMSF Profile配置)的关联关系。当AMF选择SMSF的方式为”本地解析“时，会根据用户SUPI号码，按照号段最长匹配原则，从这些关联关系配置中，选择匹配的SMSF进行短消息流程交互。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须是SMSF Profile配置中已存在的Profile ID。 
 
 一个SUPI段最多允许配置32个Profile。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supiSeg|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 0-16|该参数用于配置SUPI号段，可选填。
 smsfProfileID|SMSF Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置supiSeg对应的SMSF Profile标识。必须是SMSF Profile配置中已存在的Profile ID。一个SUPI段最多允许配置32个Profile。
@@ -5345,7 +5345,7 @@ smsfProfileID|SMSF Profile标识|参数可选性: 必选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5358,27 +5358,27 @@ ADD SMSFLOCALRESO:SUPISEG="46011",SMSFPROFILEID=1
 #### 删除本地解析SMSF配置(DEL SMSFLOCALRESO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条本地解析SMSF配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supiSeg|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 0-16|该参数用于配置SUPI号段，可选填。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5391,30 +5391,30 @@ DEL SMSFLOCALRESO:SUPISEG="46011"
 #### 查询本地解析SMSF配置(SHOW SMSFLOCALRESO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询本地解析SMSF配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supiSeg|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 0-16|该参数用于配置SUPI号段，可选填。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supiSeg|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 0-16|该参数用于配置SUPI号段，可选填。
 smsfProfileID|SMSF Profile标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置supiSeg对应的SMSF Profile标识。必须是SMSF Profile配置中已存在的Profile ID。一个SUPI段最多允许配置32个Profile。
@@ -5422,7 +5422,7 @@ smsfProfileID|SMSF Profile标识|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5441,7 +5441,7 @@ SUPI号段      SMSF Profile标识
 ### SMSF Profile配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当现网没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置SMSF解析数据，发现和选择SMSF。 
@@ -5451,7 +5451,7 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于增加用于本地解析的SMSF模板，包括：SMSF的主机名、优先级、权重、IP地址、URI scheme和API版本等信息。 
@@ -5459,7 +5459,7 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5470,12 +5470,12 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 #### 增加SMSF Profile配置(ADD SMSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条SMSF Profile配置。即配置一个包含NF实例标识、主机名、IP地址、端口号、权重、优先级、API版本及URI scheme等NF信息的模板，并用SMSF Profile标识(SMSF模板标识)来标识这一模板。当AMF选择SMSF的方式为”本地“时，会根据权重、优先级等参考条件，从配置中选择合适的SMSF进行短消息流程交互。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -5493,10 +5493,10 @@ ipAddressID 是引用SMSF地址池配置里的ipAddressID。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSFProfileId|SMSF Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF Profile标识。当SMSF Profile标识被本地解析SMSF配置引用时，不能被删除。
 nfinstanceid|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-36|参数作用：该参数用于设置SMSF网元的标识符，依据网络规划配置。修改影响：nfInstanceId是一个网元的唯一标识符，操作员不能随意配置，必须全网统一规划，确保全网没有重复。数据来源：全网规划。默认值：无。配置原则：采用UUID版本4格式（RFC 4122）共128个bit，以32个16进制数，并以"-"分为5段标识，具体为："time-low "-" time-mid "-" time-high-and-version "-" clock-seq-and-reserved clock-seq-low "-" node。只能为a-f、0-9的字符。nfInstanceId不允许从有效修改为无效。同类型NF本地解析配置中，nfInstanceId不允许重复。
@@ -5510,7 +5510,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5523,20 +5523,20 @@ ADD SMSFPROFILECFG:SMSFPROFILEID=1,HOST="SMSFNJ"
 #### 修改SMSF Profile配置(SET SMSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改一条SMSF Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSFProfileId|SMSF Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF Profile标识。当SMSF Profile标识被本地解析SMSF配置引用时，不能被删除。
 nfinstanceid|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-36|参数作用：该参数用于设置SMSF网元的标识符，依据网络规划配置。修改影响：nfInstanceId是一个网元的唯一标识符，操作员不能随意配置，必须全网统一规划，确保全网没有重复。数据来源：全网规划。默认值：无。配置原则：采用UUID版本4格式（RFC 4122）共128个bit，以32个16进制数，并以"-"分为5段标识，具体为："time-low "-" time-mid "-" time-high-and-version "-" clock-seq-and-reserved clock-seq-low "-" node。只能为a-f、0-9的字符。nfInstanceId不允许从有效修改为无效。同类型NF本地解析配置中，nfInstanceId不允许重复。
@@ -5550,7 +5550,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5563,27 +5563,27 @@ SET SMSFPROFILECFG:SMSFPROFILEID=1,HOST="SMSFNJ"
 #### 删除SMSF Profile配置(DEL SMSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条SMSF Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 当SMSF Profile标识被本地解析SMSF配置配置引用时，不能被删除。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSFProfileId|SMSF Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF Profile标识。当SMSF Profile标识被本地解析SMSF配置引用时，不能被删除。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5596,30 +5596,30 @@ DEL SMSFPROFILECFG:SMSFPROFILEID=1
 #### 查询SMSF Profile配置(SHOW SMSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMSF Profile配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSFProfileId|SMSF Profile标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF Profile标识。当SMSF Profile标识被本地解析SMSF配置引用时，不能被删除。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSFProfileId|SMSF Profile标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF Profile标识。当SMSF Profile标识被本地解析SMSF配置引用时，不能被删除。
 nfinstanceid|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-36|参数作用：该参数用于设置SMSF网元的标识符，依据网络规划配置。
@@ -5633,7 +5633,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5652,7 +5652,7 @@ SMSF Profile标识     NF实例标识                              主机名    
 ### SMSF地址池配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当现网没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置SMSF解析数据，发现和选择SMSF。 
@@ -5662,7 +5662,7 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 一个SMSF Profile可以关联多个IP地址，为了提高配置效率，AMF通过“SMSF地址池配置”把地址列表和地址池标识关联，“SMSF Profile配置”只需要引用相应的地址池标识。 
@@ -5670,7 +5670,7 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5681,24 +5681,24 @@ AMF本地配置SMSF解析数据，需要通过本地解析SMSF配置、SMSF Prof
 #### 增加SMSF地址池配置(ADD SMSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 一个SMSF Profile可以关联多个IP地址，为了提高配置效率，AMF通过“SMSF地址池配置”把SMSF的一个或多个地址与地址池标识关联，“SMSF Profile配置”只需要引用相应的地址池标识。 
 
 该命令用于增加一条SMSF地址池配置，以供“SMSF Profile配置” 引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 一个IP地址只能归属一个地址池标识。 
 
 一个地址池内最多配置16个IP地址。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF地址池标识，一个地址池标识可以关联多个“IP地址与端口号的组合”，但需要保证这些组合中不存在重复的IP地址，即一个地址池标识下，即使端口号不同，也不允许配置相同的IP地址。
 ipAddress|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于配置归属该SMSF地址池的SMSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -5707,7 +5707,7 @@ port|端口号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5720,20 +5720,20 @@ ADD SMSFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",PORT=8080
 #### 删除SMSF地址池配置(DEL SMSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条SMSF地址池配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 当地址池标识被SMSF Profile配置引用时，不能被删除。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF地址池标识，一个地址池标识可以关联多个“IP地址与端口号的组合”，但需要保证这些组合中不存在重复的IP地址，即一个地址池标识下，即使端口号不同，也不允许配置相同的IP地址。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置归属该SMSF地址池的SMSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -5742,7 +5742,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5755,20 +5755,20 @@ DEL SMSFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",PORT=8080
 #### 查询SMSF地址池配置(SHOW SMSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMSF地址池配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF地址池标识，一个地址池标识可以关联多个“IP地址与端口号的组合”，但需要保证这些组合中不存在重复的IP地址，即一个地址池标识下，即使端口号不同，也不允许配置相同的IP地址。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置归属该SMSF地址池的SMSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -5777,10 +5777,10 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置SMSF地址池标识，一个地址池标识可以关联多个“IP地址与端口号的组合"，但需要保证这些组合中不存在重复的IP地址，即一个地址池标识下，即使端口号不同，也不允许配置相同的IP地址。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置配置SMSF地址池配置的地址池标识对应的SMSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -5789,7 +5789,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5808,7 +5808,7 @@ SHOW SMSFLOCALADDRPOOL:ADDRPOOLID=1
 ## AMF本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取其他AMF的解析数据，后续用于本地发现和选择其他的AMF。 
@@ -5816,7 +5816,7 @@ SHOW SMSFLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，根据目标区域发现和选择新AMF为UE提供服务。AMF本地解析配置提供本地配置解析对应的目标AMF。 
@@ -5824,7 +5824,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5835,7 +5835,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 ### 号段选择AMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择AMF是指用户位置发生移动，触发N2切换请求流程，将业务切到其他AMF上时，AMF根据用户GPSI/SUPI号码选择拨测的目标AMF。可用于运营商拨测场景。拨测使用场景如下： 
@@ -5852,7 +5852,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置提供基于号段解析AMF的全局策略，以及用户级基于号段解析AMF的配置。 
@@ -5860,7 +5860,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5871,7 +5871,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 #### 基于号段选择AMF策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择AMF是指用户位置发生移动，触发N2切换请求流程，将业务切到其他AMF上时，AMF根据用户GPSI/SUPI号码选择拨测的目标AMF。可用于运营商拨测场景。拨测使用场景如下： 
@@ -5888,7 +5888,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该配置用于设置支持基于号段选择AMF的功能开关。 
@@ -5896,7 +5896,7 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5907,27 +5907,27 @@ UE在5G网络内移动，目标区域不是当前UE所在AMF的服务区时，�
 ##### 修改基于号段选择AMF策略配置(SET RESOLAMFPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置支持基于号段选择AMF策略配置。用于在AMF拨测场景中，让某一部分测试用户在切换流程中将业务切换到其他AMF时，AMF根据用户GPSI/SUPI号码选择拨测所指定的AMF网元。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supamfnumsel|支持基于号段选择AMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于设置是否支持基于号段选择AMF。修改影响：开启之后，用户可通过号段选择AMF配置选择目标AMF。数据来源：本端规划 默认值：不支持 配置原则：无
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5940,27 +5940,27 @@ SET RESOLAMFPOLICY:SUPAMFNUMSEL="SPRT"
 ##### 查询基于号段选择AMF策略配置(SHOW RESOLAMFPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询支持基于号段选择AMF这个功能开关的状态。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supamfnumsel|支持基于号段选择AMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于设置是否支持基于号段选择AMF。修改影响：开启之后，用户可通过号段选择AMF配置选择目标AMF。数据来源：本端规划 默认值：不支持 配置原则：无
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5984,7 +5984,7 @@ SHOW RESOLAMFPOLICY
 #### 基于号段选择AMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于号段选择AMF是指用户位置发生移动，触发N2切换请求流程，将业务切到其他AMF上时，AMF根据用户GPSI/SUPI号码选择拨测的目标AMF。可用于运营商拨测场景。拨测使用场景如下： 
@@ -6001,7 +6001,7 @@ SHOW RESOLAMFPOLICY
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该配置用于设置基于GPSI/SUPI号段解析AMF的数据，包括AMF FQDN、地址池标识、优先级、权重、URI scheme和API版本。 
@@ -6009,7 +6009,7 @@ SHOW RESOLAMFPOLICY
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6020,24 +6020,24 @@ SHOW RESOLAMFPOLICY
 ##### 新增基于号段选择AMF配置(ADD RESOLAMFNUMCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增基于号段解析AMF配置，用于在AMF拨测场景中，让某一部分测试用户在切换流程中将业务切换到其他AMF时，AMF根据用户GPSI/SUPI号码选择拨测所指定的AMF网元。 
 
-该命令的配置结果可以通过[SHOW RESOLAMFNUMCFG](../mml/1104253.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLAMFNUMCFG]命令进行查询。
 
-执行此命令前，需先执行[SET RESOLAMFPOLICY](../mml/1104254.html)命令，配置支持基于号段选择AMF。
-
-
-[](None)注意事项 
-
-如需要在基于号段解析AMF配置中配置地址池，必须先配置AMF地址池。可以通过[SHOW AMFLOCALADDRPOOL](../mml/1100486.html)命令查询已配置的AMF地址池。
+执行此命令前，需先执行[SET RESOLAMFPOLICY]命令，配置支持基于号段选择AMF。
 
 
-[](None)输入参数说明 
+注意事项 
+
+如需要在基于号段解析AMF配置中配置地址池，必须先配置AMF地址池。可以通过[SHOW AMFLOCALADDRPOOL]命令查询已配置的AMF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。设置号码长度大于等于10且小于等于15。修改影响：基于号段选择AMF开启后，AMF对配置号段对应的用户进行AMF拨测。数据来源：本端规划默认值：无  配置原则：无
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，选项如下。GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：基于号段选择AMF开启后，AMF对符合号码类型的用户进行AMF拨测。数据来源：本端规划默认值：无配置原则：无
@@ -6053,7 +6053,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6066,22 +6066,22 @@ ADD RESOLAMFNUMCFG:NUMBER="13895122456",NUMTYPE="GPSI",NFINSTANCEID="f81d4fae-7d
 ##### 修改基于号段选择AMF配置(SET RESOLAMFNUMCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改基于号段解析AMF配置，用于拨测场景中，让某一部分测试用户在切换流程中切出到其他局时，AMF根据用户GPSI/SUPI号码选择拨测所指定的AMF网元。 
 
-该命令的配置结果可以通过[SHOW RESOLAMFNUMCFG](../mml/1104253.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLAMFNUMCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
-如需要修改基于号段解析AMF配置中的地址池，该地址池必须存在。可以通过[SHOW AMFLOCALADDRPOOL](../mml/1100486.html)命令查询已配置的AMF地址池。
-
-
-[](None)输入参数说明 
+如需要修改基于号段解析AMF配置中的地址池，该地址池必须存在。可以通过[SHOW AMFLOCALADDRPOOL]命令查询已配置的AMF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。设置号码长度大于等于10且小于等于15。修改影响：基于号段选择AMF开启后，AMF对配置号段对应的用户进行AMF拨测。数据来源：本端规划默认值：无  配置原则：无
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，选项如下。GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：基于号段选择AMF开启后，AMF对符合号码类型的用户进行AMF拨测。数据来源：本端规划默认值：无配置原则：无
@@ -6097,7 +6097,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6110,22 +6110,22 @@ SET RESOLAMFNUMCFG:NUMBER="13895122456",NUMTYPE="GPSI",NFINSTANCEID="f81d4fae-7d
 ##### 删除基于号段选择AMF配置(DEL RESOLAMFNUMCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除基于号段解析AMF的配置数据。 
 
-该命令的配置结果可以通过[SHOW RESOLAMFNUMCFG](../mml/1104253.html)命令进行查询。
+该命令的配置结果可以通过[SHOW RESOLAMFNUMCFG]命令进行查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。设置号码长度大于等于10且小于等于15。修改影响：基于号段选择AMF开启后，AMF对配置号段对应的用户进行AMF拨测。数据来源：本端规划默认值：无  配置原则：无
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，选项如下。GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：基于号段选择AMF开启后，AMF对符合号码类型的用户进行AMF拨测。数据来源：本端规划默认值：无配置原则：无
@@ -6134,7 +6134,7 @@ fqdn|FQDN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6147,20 +6147,20 @@ DEL RESOLAMFNUMCFG:NUMBER="13895122456",NUMTYPE="GPSI",FQDN="amf1"
 ##### 查询基于号段选择AMF配置(SHOW RESOLAMFNUMCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询基于号段解析AMF的配置数据。可以查询所有配置，也可以按号码段查询特定配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。设置号码长度大于等于10且小于等于15。修改影响：基于号段选择AMF开启后，AMF对配置号段对应的用户进行AMF拨测。数据来源：本端规划默认值：无  配置原则：无
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，选项如下。GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：基于号段选择AMF开启后，AMF对符合号码类型的用户进行AMF拨测。数据来源：本端规划默认值：无配置原则：无
@@ -6169,10 +6169,10 @@ fqdn|FQDN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。设置号码长度大于等于10且小于等于15。修改影响：基于号段选择AMF开启后，AMF对配置号段对应的用户进行AMF拨测。数据来源：本端规划默认值：无  配置原则：无
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置号码类型，选项如下。GPSI（Generic Public Subscription Identifier，一般公共用户标识）SUPI（Subscriber Permanent Identifier，用户永久标识）修改影响：基于号段选择AMF开启后，AMF对符合号码类型的用户进行AMF拨测。数据来源：本端规划默认值：无配置原则：无
@@ -6188,7 +6188,7 @@ validityTime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6211,7 +6211,7 @@ SHOW RESOLAMFNUMCFG
 ### AMF地址池配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在运营商拨测等场景下，需要通过AMF本地配置获取AMF的IP地址，后续用于本地发现和选择AMF。 
@@ -6219,7 +6219,7 @@ SHOW RESOLAMFNUMCFG
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 一个AMF会关联多个IP地址，为了提高配置效率，AMF根据“AMF地址池配置”把地址列表和地址池标识关联，“基于号段选择AMF配置”中只需要引用相应的地址池标识。 
@@ -6227,7 +6227,7 @@ SHOW RESOLAMFNUMCFG
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6238,12 +6238,12 @@ SHOW RESOLAMFNUMCFG
 #### 增加AMF地址池配置(ADD AMFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条AMF地址池配置。一个地址池ID可以对应多个地址。 
 
 
-[](None)注意事项 
+注意事项 
 
 一个IP地址只能归属一个地址池标识。 
 
@@ -6253,10 +6253,10 @@ SHOW RESOLAMFNUMCFG
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置AMF地址池配置的地址池标识。当地址池标识被基于号段选择AMF配置配置引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于地址池标识对应的AMF网元或AMF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -6265,7 +6265,7 @@ port|端口号|参数可选性: 必选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6278,20 +6278,20 @@ ADD AMFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",PORT=8080
 #### 删除AMF地址池配置(DEL AMFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条AMF地址池配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 当地址池标识被基于号段选择AMF配置引用时，不能被删除。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置AMF地址池配置的地址池标识。当地址池标识被基于号段选择AMF配置配置引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于地址池标识对应的AMF网元或AMF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -6300,7 +6300,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6313,20 +6313,20 @@ DEL AMFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",PORT=8080
 #### 查询AMF地址池配置(SHOW AMFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF地址池配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置AMF地址池配置的地址池标识。当地址池标识被基于号段选择AMF配置配置引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于地址池标识对应的AMF网元或AMF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -6335,10 +6335,10 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置AMF地址池配置的地址池标识。当地址池标识被基于号段选择AMF配置配置引用时，不能被删除。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于地址池标识对应的AMF网元或AMF服务的IP地址，地址格式可以为IPv4或IPv6。 一个IP地址只能归属一个地址池标识。一个地址池内最多配置16个IP地址。
@@ -6347,7 +6347,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6366,7 +6366,7 @@ SHOW AMFLOCALADDRPOOL:ADDRPOOLID=1
 ## NSSF本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当5GC网络中没有部署NRF或者NRF不可用（升级或故障）时，运营商希望通过AMF本地配置的数据，来获取NSSF的IP地址，后续用于发现和选择NSSF。 
@@ -6374,7 +6374,7 @@ SHOW AMFLOCALADDRPOOL:ADDRPOOLID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UE进行各业务流程，AMF和NSSF协商切片或向NSSF获取切片信息时，NSSF本地解析配置提供NF级和服务级的地址解析数据配置。 
@@ -6382,7 +6382,7 @@ UE进行各业务流程，AMF和NSSF协商切片或向NSSF获取切片信息时�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6393,7 +6393,7 @@ UE进行各业务流程，AMF和NSSF协商切片或向NSSF获取切片信息时�
 ### NSSF地址解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 5GC网络中的AMF与NSSF进行交互时，需要获取NSSF的IP地址以进行通信。 
@@ -6413,7 +6413,7 @@ AMF获取NSSF的IP地址的方式有以下两种。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于本AMF，通过对NSSF地址解析配置进行解析，获取对应的NSSF。 
@@ -6421,7 +6421,7 @@ AMF获取NSSF的IP地址的方式有以下两种。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6432,12 +6432,12 @@ AMF获取NSSF的IP地址的方式有以下两种。
 #### 增加NSSF Profile配置(ADD NSSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条NSSF Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 1.本命令执行后，配置立即生效。 
 
@@ -6451,10 +6451,10 @@ AMF获取NSSF的IP地址的方式有以下两种。
 NSSelSerProfileld和NSSAIAVAISerProld没有配置有效值，则表示该NSSF支持所有服务，服务的选择因子就是该NF Profile下面的配置。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFProfileId|NSSF Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置NSSF Profile标识。修改影响：无。数据来源：本端规划。默认值：无。配置原则：NSSFProfileld对于所有的记录都是唯一的。
 nfinstanceid|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-36|参数作用：该参数用于设置NSSF网元的标识符，依据网络规划配置。修改影响：nfInstanceId是一个网元的唯一标识符，不能单独修改，必须全网统一规划，确保没有重复。数据来源：全网规划。默认值：无。配置原则：1. 采用UUID版本4格式（RFC 4122）共128个bit，以32个16进制数，并以"-"分为5段标识，具体为："time-low "-" time-mid "-" time-high-and-version "-" clock-seq-and-reserved clock-seq-low "-" node"。只能为a-f、0-9的字符。2. nfInstanceId不允许从有效设为无效。3. 同类型NF本地解析配置中，nfInstanceId不允许重复。
@@ -6471,7 +6471,7 @@ nfinstancename|NF实例名|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6484,22 +6484,22 @@ ADD NSSFPROFILECFG:NSSFPROFILEID=1,HOST="nssf",PRIORITY=0,WEIGHT=200,SCHEMA="HTT
 #### 修改NSSF Profile配置(SET NSSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改一条NSSF Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 1.本命令执行后，配置立即生效。 
 
 2.不支持修改"NSSF服务类型"，若需要修改已有配置记录的"NSSF服务类型"，则应先删除对应的配置记录，然后通过ADD NSSFPROFILECFG命令新增对应的配置记录。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFProfileId|NSSF Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置NSSF Profile标识。修改影响：无。数据来源：本端规划。默认值：无。配置原则：NSSFProfileld对于所有的记录都是唯一的。
 nfinstanceid|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-36|参数作用：该参数用于设置NSSF网元的标识符，依据网络规划配置。修改影响：nfInstanceId是一个网元的唯一标识符，不能单独修改，必须全网统一规划，确保没有重复。数据来源：全网规划。默认值：无。配置原则：1. 采用UUID版本4格式（RFC 4122）共128个bit，以32个16进制数，并以"-"分为5段标识，具体为："time-low "-" time-mid "-" time-high-and-version "-" clock-seq-and-reserved clock-seq-low "-" node"。只能为a-f、0-9的字符。2. nfInstanceId不允许从有效设为无效。3. 同类型NF本地解析配置中，nfInstanceId不允许重复。
@@ -6516,7 +6516,7 @@ nfinstancename|NF实例名|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6529,12 +6529,12 @@ SET NSSFPROFILECFG:NSSFPROFILEID=1,IPADDRESSID=1
 #### 删除NSSF Profile配置(DEL NSSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条NSSF Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 1.本命令执行后，配置立即生效。 
 
@@ -6543,17 +6543,17 @@ SET NSSFPROFILECFG:NSSFPROFILEID=1,IPADDRESSID=1
 3.执行本命令之前，确保待删除配置记录的"NSSF服务Profile标识"，不在SHOW NSSFPROFILECFG命令查询结果中。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFProfileId|NSSF Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置NSSF Profile标识。修改影响：无。数据来源：本端规划。默认值：无。配置原则：NSSFProfileld对于所有的记录都是唯一的。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6566,30 +6566,30 @@ DEL NSSFPROFILECFG:NSSFPROFILEID=1
 #### 查询NSSF Profile配置(SHOW NSSFPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NSSF Profile配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFProfileId|NSSF Profile标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置NSSF Profile标识。修改影响：无。数据来源：本端规划。默认值：无。配置原则：NSSFProfileld对于所有的记录都是唯一的。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFProfileId|NSSF Profile标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置NSSF Profile标识。
 nfinstanceid|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-36|参数作用：该参数用于设置NSSF网元的标识符，依据网络规划配置。
@@ -6606,7 +6606,7 @@ nfinstancename|NF实例名|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6625,7 +6625,7 @@ NSSF Profile标识    NF实例标识                              域名      �
 ### NSSF Profile服务配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当现网没有部署NRF或者NRF不可用（升级或故障），或者不支持NRF发现NSSF时，运营商希望通过AMF本地配置NSSF解析数据，发现和选择NSSF。 
@@ -6635,7 +6635,7 @@ AMF本地配置NSSF解析数据，需要通过NSSF地址解析配置、NSSF服�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NSSF本地解析配置按照NRF响应的分层结构（网元级和服务级），分为了“NSSF服务Profile配置”和“ NSSF地址解析配置”，“ NSSF地址解析配置”对应NF Profile，而“NSSF服务Profile配置”对应NF Service。“NSSF 服务Profile配置”的配置项包括主机名，IP地址池标识，权重，优先级，URI scheme，API Version。 
@@ -6643,7 +6643,7 @@ NSSF本地解析配置按照NRF响应的分层结构（网元级和服务级）�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6654,12 +6654,12 @@ NSSF本地解析配置按照NRF响应的分层结构（网元级和服务级）�
 #### 增加NSSF服务Profile配置(ADD NSSFSERPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条NSSF服务Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -6674,10 +6674,10 @@ NSSF本地解析配置按照NRF响应的分层结构（网元级和服务级）�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFSerProfileId|NSSF服务Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF服务Profile标识。当NSSF服务Profile标识被NSSF Profile配置引用时，不能被删除。
 NSSFSerType|NSSF服务类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: NSSF_NSSELECTION|该参数用于配置NSSF服务类型，取值如下：SELECTION 服务，对应的协议原文解释为：This service enables Network Slice selection in both the Serving PLMN and the HPLMN。NSSAI AVAILABILITY 服务，对应的协议原文解释为：This service enables to update the S-NSSAI(s) the NF service consumer (e.g AMF) supports on a per TA basis on the NSSF and to subscribe and notify any change in status, on a per TA basis, of the SNSSAIs available per TA (unrestricted) and the restricted S-NSSAI(s) per PLMN in that TA in the serving PLMN of the UE.
@@ -6691,7 +6691,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6704,20 +6704,20 @@ ADD NSSFSERPROFILECFG:NSSFSERPROFILEID=1,NSSFSERTYPE="NSSF_NSSELECTION",HOST="ns
 #### 修改NSSF服务Profile配置(SET NSSFSERPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改一条NSSF服务Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFSerProfileId|NSSF服务Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF服务Profile标识。当NSSF服务Profile标识被NSSF Profile配置引用时，不能被删除。
 host|域名|参数可选性: 任选参数类型: 字符串参数范围: 0-100|该参数用于配置NSSF服务Profile对应的域名，即NSSF服务的域名。一个Profile下只能输入一个域名。
@@ -6730,7 +6730,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6743,27 +6743,27 @@ SET NSSFSERPROFILECFG:NSSFSERPROFILEID=1,HOST="nssf_ser1"
 #### 删除NSSF服务Profile配置(DEL NSSFSERPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条NSSF服务Profile配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 1、如果NSSF Profile下未关联任何NSSF服务，本命令执行后，不会影响业务。2、如果NSSF Profile下关联了该NSSF服务Profile标识，则本配置无法删除。（不属于高危命令） 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFSerProfileId|NSSF服务Profile标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF服务Profile标识。当NSSF服务Profile标识被NSSF Profile配置引用时，不能被删除。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6776,30 +6776,30 @@ DEL NSSFSERPROFILECFG:NSSFSERPROFILEID=1
 #### 查询NSSF服务Profile配置(SHOW NSSFSERPROFILECFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NSSF服务Profile配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFSerProfileId|NSSF服务Profile标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF服务Profile标识。当NSSF服务Profile标识被NSSF Profile配置引用时，不能被删除。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NSSFSerProfileId|NSSF服务Profile标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF服务Profile标识。当NSSF服务Profile标识被NSSF Profile配置引用时，不能被删除。
 NSSFSerType|NSSF服务类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: NSSF_NSSELECTION|该参数用于配置NSSF服务类型，取值如下：SELECTION 服务，对应的协议原文解释为：This service enables Network Slice selection in both the Serving PLMN and the HPLMN。NSSAI AVAILABILITY 服务，对应的协议原文解释为：This service enables to update the S-NSSAI(s) the NF service consumer (e.g AMF) supports on a per TA basis on the NSSF and to subscribe and notify any change in status, on a per TA basis, of the SNSSAIs available per TA (unrestricted) and the restricted S-NSSAI(s) per PLMN in that TA in the serving PLMN of the UE.
@@ -6813,7 +6813,7 @@ apiVersion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6834,7 +6834,7 @@ NSSF服务Profile标识    NSSF服务类型       域名      地址池标识  �
 ### NSSF地址池配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当现网没有部署NRF或者NRF不可用（升级或故障），或者不支持NRF发现NSSF时，运营商希望通过AMF本地配置NSSF解析数据，发现和选择NSSF。 
@@ -6844,7 +6844,7 @@ AMF本地配置NSSF解析数据，需要通过NSSF地址解析配置、NSSF服�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 一个NSSF服务Profile会关联多个IP地址，为了提高配置效率，AMF通过“NSSF地址池配置”把地址列表和地址池标识关联，“NSSF服务Profile配置”中只需要引用相应的地址池标识。 
@@ -6852,7 +6852,7 @@ AMF本地配置NSSF解析数据，需要通过NSSF地址解析配置、NSSF服�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6863,22 +6863,22 @@ AMF本地配置NSSF解析数据，需要通过NSSF地址解析配置、NSSF服�
 #### 增加NSSF地址池配置(ADD NSSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一条NSSF地址池配置，配置NSSF的地址。 
 
 
-[](None)注意事项 
+注意事项 
 
 一个IP地址只能归属一个地址池标识。 
 
 一个地址池内最多配置16个IP地址。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF地址池标识。
 ipAddress|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于配置归属该NSSF地址池的NSSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -6887,7 +6887,7 @@ port|端口号|参数可选性: 必选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6900,22 +6900,22 @@ ADD NSSFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",Port=8080
 #### 删除NSSF地址池配置(DEL NSSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一条NSSF地址池配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 本命令执行后，可能导致AMF与NSSF断链，AMF会启用NSSF容灾后选择NRF发现AMF，可能会影响到5G间AMF重定向流程的成功率。 
 
 如果因为规划改变或其他原因，需要删除错误或多余的配置，请先确保：1、通过ADD NSSFLOCALADDRPOOL命令添加正确的地址池；2、通过ADD NSSFPROFILECFG命令或ADD NSSFSERPROFILECFG命令，关联到该地址池标识。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF地址池标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置归属该NSSF地址池的NSSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -6924,7 +6924,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6937,20 +6937,20 @@ DEL NSSFLOCALADDRPOOL:ADDRPOOLID=1,IPADDRESS="12.12.12.12",Port=8080
 #### 查询NSSF地址池配置(SHOW NSSFLOCALADDRPOOL) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NSSF地址池配置。可单条查询和全部查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF地址池标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置归属该NSSF地址池的NSSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -6959,10 +6959,10 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 addrPoolID|地址池标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于配置NSSF地址池标识。
 ipAddress|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于配置归属该NSSF地址池的NSSF的IP地址，地址格式可以为IPv4或IPv6。
@@ -6971,7 +6971,7 @@ port|端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6992,7 +6992,7 @@ SHOW NSSFLOCALADDRPOOL:ADDRPOOLID=1
 ### 号段选择NSSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个NSSF，主要用于运营商拨测场景。 
@@ -7009,7 +7009,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入的NSSF，主要用于运营商拨测场景。 
@@ -7019,7 +7019,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入的NS
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7030,7 +7030,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入的NS
 #### 基于号段选择NSSF策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个NSSF，主要用于运营商拨测场景。 
@@ -7047,7 +7047,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，AMF根据用户GPSI/SUPI号码选择接入的NSSF。 
@@ -7057,7 +7057,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7068,27 +7068,27 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 设置基于号段选择NSSF策略(SET SELECTNSSFPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入指定的NSSF。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supnssfnumsel|支持基于号段选择NSSF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于设置配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个NSSF。修改影响：修改参数为支持时，影响如下。AMF在选择NSSF时，首先根据用户的GPSI/SUPI号段选择NSSF，如果根据用户的GPSI/SUPI号段，不能匹配到对应的NSSF，后续再重新通过到NRF获取或本地配置数据发现NSSF。数据来源：本端配置。配置原则：本参数需要根据运营商拨测场景进行配置。运维人员需要对新接入网络的NSSF进行功能测试，在NSSF还没有和NRF建立连接或还没有向NRF注册之前，AMF能够根据测试用户的GPSI/SUPI号码，将该用户接入到该NSSF进行功能测试。当网络中的某个NSSF可能有问题或者故障，运维人员需要确认其是否故障，AMF能够根据测试用户的GPSI/SUPI号码，将该用户接入到该NSSF，进行测试。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7101,27 +7101,27 @@ SET SELECTNSSFPOLICY:supnssfnumsel="SPRT"
 ##### 查询基于号段选择NSSF策略(SHOW SELECTNSSFPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入指定的NSSF。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supnssfnumsel|支持基于号段选择NSSF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOSPRT|参数作用：该参数用于设置配置AMF是否支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个NSSF。修改影响：修改参数为支持时，影响如下。AMF在选择NSSF时，首先根据用户的GPSI/SUPI号段选择NSSF，如果根据用户的GPSI/SUPI号段，不能匹配到对应的NSSF，后续再重新通过到NRF获取或本地配置数据发现NSSF。数据来源：本端配置。配置原则：本参数需要根据运营商拨测场景进行配置。运维人员需要对新接入网络的NSSF进行功能测试，在NSSF还没有和NRF建立连接或还没有向NRF注册之前，AMF能够根据测试用户的GPSI/SUPI号码，将该用户接入到该NSSF进行功能测试。当网络中的某个NSSF可能有问题或者故障，运维人员需要确认其是否故障，AMF能够根据测试用户的GPSI/SUPI号码，将该用户接入到该NSSF，进行测试。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7143,7 +7143,7 @@ SHOW SELECTNSSFPOLICY
 #### 基于号段选择NSSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到哪个NSSF，主要用于运营商拨测场景。 
@@ -7160,7 +7160,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 终端发起初始注册请求等业务流程，AMF根据用户GPSI/SUPI号码选择拨测的NSSF网元。 
@@ -7170,7 +7170,7 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7181,20 +7181,20 @@ AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到�
 ##### 新增基于号段选择NSSF配置(ADD SELECTNSSFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到指定NSSF的相关配置数据，使得拨测场景配置号段下的测试用户能够选择到指定的NSSF。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果需要在基于GPSI/SUPI号段选择NSSF的配置数据中配置地址池，必须确保已经通过[ADD NSSFLOCALADDRPOOL](../mml/1104088.html)命令配置NSSF地址池。可以通过[SHOW NSSFLOCALADDRPOOL](../mml/1104090.html)命令查询已配置的NSSF地址池。
-
-
-[](None)输入参数说明 
+如果需要在基于GPSI/SUPI号段选择NSSF的配置数据中配置地址池，必须确保已经通过[ADD NSSFLOCALADDRPOOL]命令配置NSSF地址池。可以通过[SHOW NSSFLOCALADDRPOOL]命令查询已配置的NSSF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -7210,7 +7210,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7223,20 +7223,20 @@ ADD SELECTNSSFCFG:number="138951222456",numtype="GPSI",fqdn="zte.com.cn",ippooli
 ##### 修改基于号段选择NSSF配置(SET SELECTNSSFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到指定NSSF的相关配置数据，使得拨测场景配置号段下的测试用户能够选择到指定的NSSF。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果需要在基于GPSI/SUPI号段选择NSSF的配置数据中配置地址池，必须确保已经通过[ADD NSSFLOCALADDRPOOL](../mml/1104088.html)命令配置NSSF地址池。可以通过[SHOW NSSFLOCALADDRPOOL](../mml/1104090.html)命令查询已配置的NSSF地址池。
-
-
-[](None)输入参数说明 
+如果需要在基于GPSI/SUPI号段选择NSSF的配置数据中配置地址池，必须确保已经通过[ADD NSSFLOCALADDRPOOL]命令配置NSSF地址池。可以通过[SHOW NSSFLOCALADDRPOOL]命令查询已配置的NSSF地址池。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -7252,7 +7252,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7265,20 +7265,20 @@ SET SELECTNSSFCFG:number="138951222456",numtype="GPSI",fqdn="zte.com.cn",ippooli
 ##### 删除基于号段选择NSSF配置(DEL SELECTNSSFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到指定NSSF的相关配置数据。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 必选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -7287,7 +7287,7 @@ fqdn|NSSF FQDN|参数可选性: 任选参数类型: 字符串参数范围: 0-100
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7300,20 +7300,20 @@ DELETE SELECTNSSFCFG:number="138951222456",numtype="GPSI",fqdn="zte.com.cn"
 ##### 查询基于号段选择NSSF配置(SHOW SELECTNSSFCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF支持基于终端用户的GPSI/SUPI号段来为终端用户选择接入到指定NSSF的相关配置数据。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -7322,10 +7322,10 @@ fqdn|NSSF FQDN|参数可选性: 任选参数类型: 字符串参数范围: 0-100
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 number|用户号码|参数可选性: 任选参数类型: 字符串参数范围: 10-15|参数作用：该参数用于设置GPSI/SUPI号码或号段。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
 numtype|号码类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 1-2默认值: GPSI|参数作用：该参数用于设置终端用户的号码类型，可以配置为GPSI（Generic Public Subscription Identifier，一般公共用户标识）或者SUPI（Subscriber Permanent Identifier，用户永久标识）。修改影响：通过SET SELECTNSSFPOLICY命令开启AMF支持基于号段选择NSSF后，AMF在选择NSSF时，会先根据配置的号段选择NSSF，该字段和号码类型作为非唯一索引，可以确定一组或多组号段地址解析，如果即配置了SUPI号段，也配置了GPSI号段，则GPSI号段的优先级高于SUPI号段的优先级，如果配置的号码类型相同，则相同的号码类型中，号段越长的优先级越高。数据来源：本端规划。默认值：无。配置原则：无。
@@ -7341,7 +7341,7 @@ validitytime|有效时间|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7363,7 +7363,7 @@ SHOW SELECTNSSFCFG
 ## 5G-EIR本地解析配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UE在注册时，AMF可以向5G-EIR发起对用户终端的合法性检查。AMF通过本地解析，发现和选择5G-EIR进行通讯。 
@@ -7371,7 +7371,7 @@ UE在注册时，AMF可以向5G-EIR发起对用户终端的合法性检查。AMF
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 5G-EIR本地解析配置用于配置5G-EIR的IP地址、端口号等，便于AMF和其对接。 
@@ -7379,7 +7379,7 @@ UE在注册时，AMF可以向5G-EIR发起对用户终端的合法性检查。AMF
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7390,7 +7390,7 @@ UE在注册时，AMF可以向5G-EIR发起对用户终端的合法性检查。AMF
 ### 默认5G-EIR配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF开启PEI检查功能后，需要和5G-EIR网元对接，AMF需要发现5G-EIR网元。AMF支持通过本地配置发现5G-EIR网元，当前只支持本地配置发现一个5G-EIR网元。 
@@ -7398,7 +7398,7 @@ AMF开启PEI检查功能后，需要和5G-EIR网元对接，AMF需要发现5G-EI
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本节点用于配置本地发现5G-EIR网元，即本地配置5G-EIR网元的IP地址、端口号等，以便AMF采用HTTP协议和5G-EIR进行交互。 
@@ -7408,7 +7408,7 @@ AMF本地配置发现5G-EIR，当前只支持配置一个5G-EIR，系统默认�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7419,20 +7419,20 @@ AMF本地配置发现5G-EIR，当前只支持配置一个5G-EIR，系统默认�
 #### 修改默认5G-EIR配置(SET DFT 5G EIR CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改默认5G-EIR配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 enable|是否启用|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: DISABLE|参数作用：此参数用于控制AMF是否可以启用默认5G-EIR配置。 0：不启用1：启用修改影响：修改此参数，影响AMF是否可以使用默认5G-EIR的配置信息。 数据来源：本端规划。 默认值：0-不启用。配置原则： 无。
 ipaddress|IP地址|参数可选性: 任选参数类型: 字符串|参数作用：此参数用于设置AMF对应的默认5G-EIR的IP地址，地址格式可以为IPv4或IPv6。修改影响：修改此参数，影响AMF使用的默认5G-EIR的IP地址信息。 数据来源：本端规划。 默认值：无。配置原则： 无。
@@ -7443,7 +7443,7 @@ apiversion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7456,20 +7456,20 @@ SET DFT 5G EIR CONFIG:IPADDRESS="10.10.10.10",port=8088
 #### 查询默认5G-EIR配置(SHOW DFT 5G EIR CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询默认5G-EIR配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 enable|是否启用|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: DISABLE|参数作用：此参数用于控制AMF是否可以启用默认5G-EIR配置。 0：不启用1：启用
 ipaddress|IP地址|参数可选性: 任选参数类型: 字符串|参数作用：此参数用于设置AMF对应的默认5G-EIR的IP地址，地址格式可以为IPv4或IPv6。修改影响：修改此参数，影响AMF使用的默认5G-EIR的IP地址信息。 数据来源：本端规划。 默认值：无。配置原则： 无。
@@ -7480,7 +7480,7 @@ apiversion|API版本|参数可选性: 任选参数类型: 枚举，参见枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7503,7 +7503,7 @@ SHOW DFT 5G EIR CONFIG
 # NF发现默认HTTP端口号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF通过NRF发现或本地解析发现NF时，有些场景下无法获取端口号。 
@@ -7520,7 +7520,7 @@ NRF或者本地解析返回FQDN而非IP地址，AMF使用FQDN查询DNS，DNS查�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF发现默认HTTP端口号配置。 
@@ -7528,7 +7528,7 @@ NF发现默认HTTP端口号配置。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7539,7 +7539,7 @@ NF发现默认HTTP端口号配置。
 ## 修改NF发现默认HTTP端口号配置(SET NFDISDEFHTTPPORT CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NF发现默认HTTP端口号配置。 
 
@@ -7548,15 +7548,15 @@ NF发现默认HTTP端口号配置。
 目前仅DNS查询不返回端口号时使用。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 defaultHttpPort|默认http端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535默认值: 80|该参数用于设置NF发现的默认http端口号。
 defaultHttpsPort|默认https端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535默认值: 443|该参数用于设置NF发现的默认https端口号。
@@ -7564,7 +7564,7 @@ defaultHttpsPort|默认https端口号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7577,20 +7577,20 @@ SET NFDISDEFHTTPPORT CONFIG:DEFAULTHTTPPORT=80,DEFAULTHTTPSPORT=443
 ## 查询NF发现默认HTTP端口号配置(SHOW NFDISDEFHTTPPORT CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF发现默认HTTP端口号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 defaultHttpPort|默认http端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535默认值: 80|该参数用于显示NF发现的默认http端口号。
 defaultHttpsPort|默认https端口号|参数可选性: 任选参数类型: 数字参数范围: 1-65535默认值: 443|该参数用于设置NF发现的默认https端口号。
@@ -7598,7 +7598,7 @@ defaultHttpsPort|默认https端口号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7619,7 +7619,7 @@ SHOW NFDISDEFHTTPPORT CONFIG
 # NF选择策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 通常，与AMF交互的各类NF，会提供两种类型的IP地址，IPv4和IPv6，AMF需要选择一种类型的IP地址进行NF间的通信。 
@@ -7629,7 +7629,7 @@ AMF选择根据静态权重，选择NF的算法有两种：随机选择算法和
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF选择策略配置提供地址类型选择策略和等价NF选择策略的配置。 
@@ -7637,7 +7637,7 @@ NF选择策略配置提供地址类型选择策略和等价NF选择策略的配�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7648,7 +7648,7 @@ NF选择策略配置提供地址类型选择策略和等价NF选择策略的配�
 ## 地址类型选择策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 5GC网络中的各个NF提供了两种类型的IP地址，IPv4和IPv6，需要选择一种类型的IP地址进行NF间的通信 。 
@@ -7656,7 +7656,7 @@ NF选择策略配置提供地址类型选择策略和等价NF选择策略的配�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置各NF通信的IP地址类型，可以选择IPv4或IPv6，默认是IPv4。 
@@ -7664,7 +7664,7 @@ NF选择策略配置提供地址类型选择策略和等价NF选择策略的配�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7675,20 +7675,20 @@ NF选择策略配置提供地址类型选择策略和等价NF选择策略的配�
 ### 修改NF地址选择策略配置(SET NFADDRCHOICEPOLICYCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于配置或修改每个NF的IP地址选择策略。当NF部署成功时，需要此命令设置各个NF的IP地址选择策略，可以选择IPv4和IPv6。当NF的选择策略发生变化，也可以使用此命令进行修改。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 smfAddrChoicePolicy|SMF地址选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: IPV4|该参数用于设置SMF的IP地址选择策略。
 pcfAddrChoicePolicy|PCF地址选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: IPV4|该参数用于设置PCF的IP地址选择策略。
@@ -7701,7 +7701,7 @@ nssfAddrChoicePolicy|NSSF地址选择策略|参数可选性: 任选参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7714,20 +7714,20 @@ SET NFADDRCHOICEPOLICYCFG:SMFADDRCHOICEPOLICY="IPV4",PCFADDRCHOICEPOLICY="IPV4",
 ### 查询NF地址选择策略配置(SHOW NFADDRCHOICEPOLICYCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询所有NF的IP地址选择策略。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 smfAddrChoicePolicy|SMF地址选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: IPV4|该参数用于设置SMF的IP地址选择策略。
 pcfAddrChoicePolicy|PCF地址选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: IPV4|该参数用于设置PCF的IP地址选择策略。
@@ -7740,7 +7740,7 @@ nssfAddrChoicePolicy|NSSF地址选择策略|参数可选性: 任选参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7762,7 +7762,7 @@ IPV4                    IPV4          IPV4            IPV4           IPV4       
 ## 等价NF选择策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在5G某些业务流程中，AMF和NF之间存在消息交互，AMF通过NRF发现可用的NF，NRF会根据AMF提供的发现参数，向AMF返回所有满足条件的NF，此时，AMF需要根据一定的选择策略，选择其中一个NF进行业务交互。 
@@ -7770,7 +7770,7 @@ IPV4                    IPV4          IPV4            IPV4           IPV4       
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于设置等价NF选择策略，当AMF向NRF发现多个NF后，AMF可以依据权重负荷值进行算法选择，从中选出一个可用的NF。 
@@ -7778,7 +7778,7 @@ IPV4                    IPV4          IPV4            IPV4           IPV4       
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7789,20 +7789,20 @@ IPV4                    IPV4          IPV4            IPV4           IPV4       
 ### 修改NF选择策略配置(SET NFSELECTPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于设置或修改AMF选择NF的策略，包括随机选择和轮询选择两种算法。 
 
 
-[](None)注意事项 
+注意事项 
 
 建议设置为随机选择算法。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 smfSelectPolicy|SMF选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NFRANDSELECT|该参数用于设置AMF发现多个SMF后的选择策略。
 pcfSelectPolicy|PCF选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NFRANDSELECT|该参数用于设置AMF发现多个PCF后的选择策略。
@@ -7815,7 +7815,7 @@ nssfSelectPolicy|NSSF选择策略|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7828,20 +7828,20 @@ SET NFSELECTPOLICY:SMFSELECTPOLICY="NFPOLLINGSELECT",PCFSELECTPOLICY="NFRANDSELE
 ### 查询NF选择策略配置(SHOW NFSELECTPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询AMF选择NF的策略。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 smfSelectPolicy|SMF选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NFRANDSELECT|该参数用于设置AMF发现多个SMF后的选择策略。
 pcfSelectPolicy|PCF选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NFRANDSELECT|该参数用于设置AMF发现多个PCF后的选择策略。
@@ -7854,7 +7854,7 @@ nssfSelectPolicy|NSSF选择策略|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7875,7 +7875,7 @@ SMF选择策略 PCF选择策略 UDM选择策略 AUSF选择策略 AMF选择策略
 # SMF选择配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当终端接入到5G网络，在PDU会话建立流程中，AMF需要通过DNN来选择合适的SMF，涉及到的流程如下。 
@@ -7892,7 +7892,7 @@ SMF选择策略 PCF选择策略 UDM选择策略 AUSF选择策略 AMF选择策略
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 SMF选择配置提供DNN更正配置，更正方式包括：指定DNN和签约的默认DNN。 
@@ -7900,7 +7900,7 @@ SMF选择配置提供DNN更正配置，更正方式包括：指定DNN和签约�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7911,7 +7911,7 @@ SMF选择配置提供DNN更正配置，更正方式包括：指定DNN和签约�
 ## A-SMF选择配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
  当终端接入到5G网络，在PDU会话建立流程中，AMF需要通过DNN来选择合适的A-SMF。为此，AMF先选择切片，然后基于选择的切片选择DNN。涉及到的流程如下： 
@@ -7934,7 +7934,7 @@ SMF选择配置提供DNN更正配置，更正方式包括：指定DNN和签约�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 A-SMF选择配置包括： 
@@ -7957,7 +7957,7 @@ DNN更正配置
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7968,7 +7968,7 @@ DNN更正配置
 ### A-SMF选择策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 AMF在进行会话建立时，需要和SMF交互，运营商一般会根据地理位置、SMF服务能力部署不同的SMF来提供服务，AMF在会话建立时需要选择合适的SMF。 
@@ -7980,7 +7980,7 @@ AMF在进行会话建立时，需要和SMF交互，运营商一般会根据地�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 SMF策略配置提供A-SMF选择支持优选TA策略和同DNN的多PUD选择同一个SMF两种策略。 
@@ -8010,7 +8010,7 @@ A-SMF选择支持优选TA策略:
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8021,22 +8021,22 @@ A-SMF选择支持优选TA策略:
 #### 修改 A-SMF选择策略配置(SET ASMFSELPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置A-SMF选择策略配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
 无感分流专用SMF失败重选开关关闭时，无感分流用户只能选择专用SMF进行会话的建立。如果候选的SMF中没有专用的SMF，则会PDU建立失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 amfSelASmfByTa|A-SMF选择支持优选TA|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTSUPPORT|该参数用于设置A-SMF选择是否支持优选TA当支持时，在NRF不支持优先TA特性情况下，AMF在NRF返回的SMF列表中优先匹配UE TA的SMF列表，再根据权重优先级选择当不支持时，AMF对NRF返回的SMF列表根据权重优先级选择。
 amfSelSameASmfByDnn|支持相同DNN的多PDU会话选择同一个A-SMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTSUPPORT|该参数用于显示是否支持同DNN的多PDU选择同一个SMF当支持时，DNN相同的不同PDU建立过程会选择相同的SMF当不支持时，DNN相同的不同PDU建立过程各自选择SMF。
@@ -8049,7 +8049,7 @@ reselifdedsmffail|选择无感分流专用SMF失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8062,20 +8062,20 @@ SET ASMFSELPOLICY:AMFSELASMFBYTA="NOTSUPPORT",AMFSELSAMEASMFBYDNN="NOTSUPPORT",S
 #### 查询 A-SMF选择策略配置(SHOW ASMFSELPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询A-SMF选择策略配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 amfSelASmfByTa|A-SMF选择支持优选TA|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTSUPPORT|该参数用于显示A-SMF选择是否支持优选TA当支持时，在NRF不支持优先TA特性情况下，AMF在NRF返回的SMF列表中优先匹配UE TA的SMF列表，再根据权重优先级选择当不支持时，AMF对NRF返回的SMF列表根据权重优先级选择。
 amfSelSameASmfByDnn|支持相同DNN的多PDU会话选择同一个A-SMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTSUPPORT|该参数用于显示是否支持同DNN的多PDU选择同一个SMF当支持时，DNN相同的不同PDU建立过程会选择相同的SMF当不支持时，DNN相同的不同PDU建立过程各自选择SMF。
@@ -8088,7 +8088,7 @@ reselifdedsmffail|选择无感分流专用SMF失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8111,12 +8111,12 @@ SHOW ASMFSELPOLICY:
 #### 新增基于SUPI的A-SMF选择策略配置(ADD SUPI ASMFSELPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增基于SUPI的A-SMF选择策略配置。当AMF需要区分不同的SUPI号段和DNN使用不同的A-SMF选择策略时，使用该命令进行配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
@@ -8127,10 +8127,10 @@ AMF可以基于SUPI和/或DNN配置SMF选择策略，优先级顺序从高到低
 无感分流专用SMF失败重选开关关闭时，无感分流用户只能选择专用SMF进行会话的建立。如果候选的SMF中没有专用的SMF，则会PDU建立失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supisegment|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：此参数用于设置终端的SUPI号段，AMF支持根据终端的SUPI号段来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 0-100默认值: NULL|参数作用：此参数用于设置需要被匹配的用户DNN，AMF支持根据用户的DNN来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN只支持输入小写。
@@ -8140,7 +8140,7 @@ reselifdedsmffail|选择无感分流专用SMF失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8153,20 +8153,20 @@ ADD SUPI ASMFSELPOLICY:SUPI="460111",DNN="zte.com",SUPSELDEDSMF="NOTSUPPORT",RES
 #### 修改基于SUPI的A-SMF选择策略配置(SET SUPI ASMFSELPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改基于SUPI的A-SMF选择策略配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supisegment|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：此参数用于设置终端的SUPI号段，AMF支持根据终端的SUPI号段来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 0-100默认值: NULL|参数作用：此参数用于设置需要被匹配的用户DNN，AMF支持根据用户的DNN来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN只支持输入小写。
@@ -8176,7 +8176,7 @@ reselifdedsmffail|选择无感分流专用SMF失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8189,20 +8189,20 @@ SET SUPI ASMFSELPOLICY:SUPI="460111",DNN="zte.com",SUPSELDEDSMF="SUPPORT",RESELI
 #### 删除基于SUPI的A-SMF选择策略配置(DEL SUPI ASMFSELPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除基于SUPI的A-SMF选择策略配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supisegment|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：此参数用于设置终端的SUPI号段，AMF支持根据终端的SUPI号段来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 0-100默认值: NULL|参数作用：此参数用于设置需要被匹配的用户DNN，AMF支持根据用户的DNN来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN只支持输入小写。
@@ -8210,7 +8210,7 @@ dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 0-100默认�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8223,20 +8223,20 @@ DEL SUPI ASMFSELPOLICY:SUPI="460111",DNN="zte.com"
 #### 查询基于SUPI的A-SMF选择策略配置(SHOW SUPI ASMFSELPOLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询基于SUPI的A-SMF选择策略配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supisegment|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：此参数用于设置终端的SUPI号段，AMF支持根据终端的SUPI号段来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 0-100默认值: NULL|参数作用：此参数用于设置需要被匹配的用户DNN，AMF支持根据用户的DNN来设置不同的A-SMF选择策略配置。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN只支持输入小写。
@@ -8244,10 +8244,10 @@ dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 0-100默认�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supisegment|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 1-16|该参数用于设置终端的SUPI号段，AMF支持根据终端的SUPI号段来设置不同的A-SMF选择策略配置。
 dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 0-100默认值: NULL|该参数用于设置需要被匹配的用户DNN，AMF支持根据用户的DNN来设置不同的A-SMF选择策略配置。DNN只支持输入小写。
@@ -8257,7 +8257,7 @@ reselifdedsmffail|选择无感分流专用SMF失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8279,7 +8279,7 @@ SUPI号段       DNN          支持选择无感分流专用SMF   选择无感�
 ### 切片选择策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当终端接入到5G网络，在PDU会话建立流程中，AMF先选择切片，然后基于选择的切片选择DNN。涉及到的流程如下： 
@@ -8299,7 +8299,7 @@ SUPI号段       DNN          支持选择无感分流专用SMF   选择无感�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 切片选择策略配置包括： 
@@ -8327,7 +8327,7 @@ SUPI号段       DNN          支持选择无感分流专用SMF   选择无感�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8338,20 +8338,20 @@ SUPI号段       DNN          支持选择无感分流专用SMF   选择无感�
 #### 修改缺省切片选择策略配置(SET DEFAULT SLICE SELECTION POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改缺省切片选择策略配置。PDU会话建立流程，当用户没有携带切片时，需在AMF中配置切片选择策略。  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 sliceselpolicy|缺省切片选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: ONLYSUBSCRIBEDSNSSAI|目前有2种策略。仅签约切片和指定切片。
 sst|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: 0|该参数用于配置SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
@@ -8362,7 +8362,7 @@ basednncorrect|支持基于DNN更正策略选择切片|参数可选性: 任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8375,20 +8375,20 @@ SET DEFAULT SLICE SELECTION POLICY:SLICESELPOLICY="ONLYSUBSCRIBEDSNSSAI",SST="eM
 #### 查询缺省切片选择策略配置(SHOW DEFAULT SLICE SELECTION POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询缺省切片选择策略配置。  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 sliceselpolicy|缺省切片选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: ONLYSUBSCRIBEDSNSSAI|目前有2种策略。仅签约切片和指定切片。
 sst|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: 0|该参数用于配置SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
@@ -8399,7 +8399,7 @@ basednncorrect|支持基于DNN更正策略选择切片|参数可选性: 任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8422,20 +8422,20 @@ SHOW DEFAULT SLICE SELECTION POLICY:
 #### 新增切片选择策略配置(ADD SLICE SELECTION POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一个SUPI号段对应的切片选择策略。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-15|该参数用于设置一个特定SUPI号段。
 sliceselpolicy|切片选择策略|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: ONLYSUBSCRIBEDSNSSAI|目前有2种策略。仅签约切片和指定切片。
@@ -8446,7 +8446,7 @@ ignorewildcard|忽略通配DNN|参数可选性: 任选参数类型: 枚举，参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8459,20 +8459,20 @@ ADD SLICE SELECTION POLICY:SUPI="46011",SLICESELPOLICY="ONLYSUBSCRIBEDSNSSAI",SS
 #### 修改切片选择策略配置(SET SLICE SELECTION POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改一个SUPI号段对应的切片选择策略。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-15|该参数用于设置一个特定SUPI号段。
 sliceselpolicy|切片选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: ONLYSUBSCRIBEDSNSSAI|目前有2种策略。仅签约切片和指定切片。
@@ -8483,7 +8483,7 @@ ignorewildcard|忽略通配DNN|参数可选性: 任选参数类型: 枚举，参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8496,27 +8496,27 @@ SET SLICE SELECTION POLICY:SUPI="46011",SLICESELPOLICY="SPECIFICSNSSAIPRIOR",SD=
 #### 删除切片选择策略配置(DEL SLICE SELECTION POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一个SUPI号段对应的切片选择策略。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-15|该参数用于设置一个特定SUPI号段。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8529,30 +8529,30 @@ DEL SLICE SELECTION POLICY:SUPI=123
 #### 查询切片选择策略配置(SHOW SLICE SELECTION POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询一个SUPI号段对应的切片选择策略。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 1-15|该参数用于设置一个特定SUPI号段。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 1-15|该参数用于设置一个特定SUPI号段。
 sliceselpolicy|切片选择策略|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: ONLYSUBSCRIBEDSNSSAI|目前有2种策略。仅签约切片和指定切片。
@@ -8563,7 +8563,7 @@ ignorewildcard|忽略通配DNN|参数可选性: 任选参数类型: 枚举，参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8586,7 +8586,7 @@ SHOW SLICE SELECTION POLICY
 ### DNN更正配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 5G网络中定义的DNN(Data Network Name，数据网络名称)就是4G网络中定义的APN，这两个标识符具有相同的含义并携带相同的信息（参见3GPP TS23.003? 9A章节），所以3GPP协议中对APN的描述和定义与使用就是DNN的描述和定义与使用。 
@@ -8611,7 +8611,7 @@ DNN或APN的组成有两部分：
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 在PDU会话建立流程中，如果终端在请求消息中，没有携带DNN或者携带的DNN不合法，会导致会话建立流程失败。 
@@ -8621,7 +8621,7 @@ DNN或APN的组成有两部分：
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8632,12 +8632,12 @@ DNN或APN的组成有两部分：
 #### 修改DNN更正策略(SET DNNCORRECT POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置或修改AMF的DNN更正策略，包括是否支持DNN更正功能、A-SMF发现失败后是否支持DNN更正。  
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -8649,10 +8649,10 @@ DNN或APN的组成有两部分：
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 dnnCorrectPolicy|支持DNN更正功能|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SUPDNNCORRECT|参数作用：该参数用于设置AMF是否支持DNN更正功能，取值及含义如下：支持DNN更正：AMF支持DNN更正功能，即如果终端在请求建议PDU会话流程中，没有携带DNN或者携带的DNN不合法，AMF可修改终端的DNN，以保证会话流程的正常进行。不支持DNN更正：AMF不支持DNN更正功能修改影响：无。数据来源：本端规划。默认值：支持DNN更正。配置原则：无。
 supdnncorriffail|A-SMF发现失败后支持DNN更正|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SUPPORT|参数作用：UE在发起请求建立PDU会话流程中，携带了DNN（此DNN称为请求DNN），同时UE又签约了通配DNN，但是携带的请求DNN未签约，该参数用于设置，当AMF使用UE携带的请求DNN，通过NRF来发现A-SMF失败后，是否会把请求DNN更正为其他签约的DNN，取值及含义如下：支持：当AMF使用UE携带的请求DNN，通过NRF来发现A-SMF失败后，会把请求DNN更正为其他签约的DNN。不支持：当AMF使用UE携带的请求DNN，通过NRF来发现A-SMF失败后，不会把请求DNN更正为其他签约的DNN。修改影响：无。数据来源：本端规划。默认值：支持。配置原则：无。
@@ -8660,7 +8660,7 @@ supdnncorriffail|A-SMF发现失败后支持DNN更正|参数可选性: 任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8673,20 +8673,20 @@ SET DNNCORRECT POLICY:DNNCORRECTPOLICY="SUPDNNCORRECT",SUPDNNCORRIFFAIL="SUPPORT
 #### 查询DNN更正策略(SHOW DNNCORRECT POLICY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF的DNN更正策略。  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 dnnCorrectPolicy|支持DNN更正功能|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SUPDNNCORRECT|参数作用：该参数用于设置AMF是否支持DNN更正功能，取值及含义如下：支持DNN更正：AMF支持DNN更正功能，即如果终端在请求建议PDU会话流程中，没有携带DNN或者携带的DNN不合法，AMF可修改终端的DNN，以保证会话流程的正常进行。不支持DNN更正：AMF不支持DNN更正功能
 supdnncorriffail|A-SMF发现失败后支持DNN更正|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: SUPPORT|参数作用：UE在发起请求建立PDU会话流程中，携带了DNN（此DNN称为请求DNN），同时UE又签约了通配DNN，但是携带的请求DNN未签约，该参数用于设置，当AMF使用UE携带的请求DNN，通过NRF来发现A-SMF失败后，是否会把请求DNN更正为其他签约的DNN，取值及含义如下：支持：当AMF使用UE携带的请求DNN，通过NRF来发现A-SMF失败后，会把请求DNN更正为其他签约的DNN。不支持：当AMF使用UE携带的请求DNN，通过NRF来发现A-SMF失败后，不会把请求DNN更正为其他签约的DNN。
@@ -8694,7 +8694,7 @@ supdnncorriffail|A-SMF发现失败后支持DNN更正|参数可选性: 任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8717,12 +8717,12 @@ SHOW DNNCORRECT POLICY:
 #### 新增DNN更正配置(ADD DNNCORRECT CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于增加一个SUPI号段对应的DNN更正配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -8734,10 +8734,10 @@ SHOW DNNCORRECT POLICY:
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置一个特定的SUPI号段，对于此号段的终端，如果终端在请求建议PDU会话流程中，没有携带DNN或者携带的DNN不合法，AMF可修改终端的DNN，以保证会话流程的正常进行。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 sst|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: 0|参数作用：该参数用于设置特定的SUPI号段对应的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有四种。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：即Vehicle To Everything，车对外界的信息交换，是未来智能交通运输系统的关键技术。修改影响：无。数据来源：本端规划。默认值：0。配置原则：无。
@@ -8748,7 +8748,7 @@ dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8761,20 +8761,20 @@ ADD DNNCORRECT CONFIG:SUPI="46011222222",DNNCORRECTPOLICY="SUBSCRIBEDNN"
 #### 修改DNN更正配置(MOD DNNCORRECT CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改一个SUPI号段对应的DNN更正配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置一个特定的SUPI号段，对于此号段的终端，如果终端在请求建议PDU会话流程中，没有携带DNN或者携带的DNN不合法，AMF可修改终端的DNN，以保证会话流程的正常进行。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 sst|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: 0|参数作用：该参数用于设置特定的SUPI号段对应的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有四种。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：即Vehicle To Everything，车对外界的信息交换，是未来智能交通运输系统的关键技术。修改影响：无。数据来源：本端规划。默认值：0。配置原则：无。
@@ -8785,7 +8785,7 @@ dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8798,20 +8798,20 @@ MOD DNNCORRECT CONFIG:SUPI="46011222222",DNNCORRECTPOLICY="CONFIGDNN",DNN="zte.c
 #### 删除DNN更正配置(DEL DNNCORRECT CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除一个SUPI号段对应的DNN更正配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，配置立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 必选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置一个特定的SUPI号段，对于此号段的终端，如果终端在请求建议PDU会话流程中，没有携带DNN或者携带的DNN不合法，AMF可修改终端的DNN，以保证会话流程的正常进行。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 sst|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: 0|参数作用：该参数用于设置特定的SUPI号段对应的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有四种。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：即Vehicle To Everything，车对外界的信息交换，是未来智能交通运输系统的关键技术。修改影响：无。数据来源：本端规划。默认值：0。配置原则：无。
@@ -8820,7 +8820,7 @@ sd|SD|参数可选性: 任选参数类型: 字符串参数范围: 4-6默认值: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8833,30 +8833,30 @@ DEL DNNCORRECT CONFIG:SUPI="46011222222"
 #### 查询DNN更正配置(SHOW DNNCORRECT CONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询一个SUPI号段对应的DNN更正配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置一个特定的SUPI号段，对于此号段的终端，如果终端在请求建议PDU会话流程中，没有携带DNN或者携带的DNN不合法，AMF可修改终端的DNN，以保证会话流程的正常进行。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 supi|SUPI号段|参数可选性: 任选参数类型: 字符串参数范围: 1-16|参数作用：该参数用于设置一个特定的SUPI号段，对于此号段的终端，如果终端在请求建议PDU会话流程中，没有携带DNN或者携带的DNN不合法，AMF可修改终端的DNN，以保证会话流程的正常进行。
 sst|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255默认值: 0|参数作用：该参数用于设置特定的SUPI号段对应的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有四种。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。1-eMBB：提供高带宽、大数据量的服务。2-uRLLC：提供超高可靠低时延服务。3-mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。4-V2X：即Vehicle To Everything，车对外界的信息交换，是未来智能交通运输系统的关键技术。
@@ -8867,7 +8867,7 @@ dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8890,7 +8890,7 @@ SHOW DNNCORRECT CONFIG
 ### 缺省DNN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 5G网络中定义的DNN(Data Network Name，数据网络名称)就是4G网络中定义的APN，这两个标识符具有相同的含义并携带相同的信息（参见3GPP TS23.003? 9A章节），所以3GPP协议中对APN的描述和定义与使用就是DNN的描述和定义与使用。 
@@ -8915,7 +8915,7 @@ DNN或APN的组成有两部分：
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该功能用于配置终端的缺省DNN。 
@@ -8927,7 +8927,7 @@ DNN或APN的组成有两部分：
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8938,20 +8938,20 @@ DNN或APN的组成有两部分：
 #### 新增缺省DNN配置(ADD DEFAULTDNNCONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于在本AMF上配置终端的缺省DNN。 
 
 
-[](None)注意事项 
+注意事项 
 
 一个AMF最多只能配置255个缺省DNN记录。DNN只支持输入小写。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 必选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -8960,10 +8960,10 @@ DNN|DNN|参数可选性: 必选参数类型: 字符串参数范围: 0-100|该参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 任选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -8972,7 +8972,7 @@ DNN|DNN|参数可选性: 任选参数类型: 字符串参数范围: 0-100|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8985,20 +8985,20 @@ ADD DEFAULTDNNCONFIG:SST="eMBB",SD="303001",DNN="zte.com.cn"
 #### 修改缺省DNN配置(SET DEFAULTDNNCONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改本AMF上配置的终端的缺省DNN。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 必选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -9007,10 +9007,10 @@ DNN|DNN|参数可选性: 必选参数类型: 字符串参数范围: 0-100|该参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 任选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -9019,7 +9019,7 @@ DNN|DNN|参数可选性: 任选参数类型: 字符串参数范围: 0-100|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9032,20 +9032,20 @@ SET DEFAULTDNNCONFIG:SST="eMBB",SD="303001",DNN="zte.com.cn1"
 #### 删除缺省DNN配置(DEL DEFAULTDNNCONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除本AMF上配置终端的缺省DNN。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 必选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -9053,10 +9053,10 @@ SD|SD|参数可选性: 必选参数类型: 字符串参数范围: 4-6默认值: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 任选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -9065,7 +9065,7 @@ DNN|DNN|参数可选性: 任选参数类型: 字符串参数范围: 0-100|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9078,20 +9078,20 @@ DEL DEFAULTDNNCONFIG: :SST="eMBB",SD="303001"
 #### 查询缺省DNN配置(SHOW DEFAULTDNNCONFIG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询本AMF上配置的所有缺省DNN，或查询某个指定缺省DNN信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 任选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -9099,10 +9099,10 @@ SD|SD|参数可选性: 任选参数类型: 字符串参数范围: 4-6默认值: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SST|SST|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-255|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SST（Slice/Service Type，切片/服务类型）的编号，其中编号0-127为标准SST，编号128-255为运营商自定义的SST。目前协议明确的标准SST有三种。1：eMBB：提供高带宽、大数据量的服务。2：uRLLC：提供超高可靠低时延服务。3：mIoT：提供海量的连接数，但是数据量比较小，且对时延要求不高。具体解释参见协议23501的"5.15.2.2 Standardised SST values"。
 SD|SD|参数可选性: 任选参数类型: 字符串参数范围: 4-6默认值: NULL|该参数用于配置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的SD（Slice Differentiator，切片区分信息）。SD用于区分同一种SST之内不同的S-NSSAI。
@@ -9111,7 +9111,7 @@ DNN|DNN|参数可选性: 任选参数类型: 字符串参数范围: 0-100|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9132,7 +9132,7 @@ SHOW DEFAULTDNNCONFIG
 ### 专用DNN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 随着5G专网业务的不断拓展，越来越多场景提出双域专网需求，用户希望利用5G与已有的WiFi网络协同（或替代已有WiFi），解决公网专网协同访问问题，涉及校园、医院、政务、文旅等多个行业。 
@@ -9151,7 +9151,7 @@ SHOW DEFAULTDNNCONFIG
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该功能用于AMF本地配置专用DNN列表以及无感分流关键字。 
@@ -9159,7 +9159,7 @@ SHOW DEFAULTDNNCONFIG
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9170,12 +9170,12 @@ SHOW DEFAULTDNNCONFIG
 #### 新增专用DNN配置(ADD DEDICATEDDNNCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增专用DNN配置。当AMF需要识别有无感分流需求的用户并为该类用户选择无感分流专用SMF时，使用该命令配置专用DNN列表。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
@@ -9184,10 +9184,10 @@ SHOW DEFAULTDNNCONFIG
 最多配置4096条记录。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 1-100|参数作用：此参数用于设置专用DNN列表，用于识别出有无感分流需求的用户，并为该类用户选择无感分流专用SMF。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN NI，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 istransplitkey|是否无感分流关键字|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NO|参数作用：此参数用于设置对应的专用DNN是否为无感分流关键字。修改影响：无。数据来源：本端规划。默认值：否。配置原则：应至少配置一个DNN作为无感分流关键字。
@@ -9195,7 +9195,7 @@ istransplitkey|是否无感分流关键字|参数可选性: 必选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9208,20 +9208,20 @@ ADD DEDICATEDDNNCFG:DNN="zte.com",ISTRANSPLITKEY="YES"
 #### 修改专用DNN配置(SET DEDICATEDDNNCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改专用DNN配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 1-100|参数作用：此参数用于设置专用DNN列表，用于识别出有无感分流需求的用户，并为该类用户选择无感分流专用SMF。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN NI，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 istransplitkey|是否无感分流关键字|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NO|参数作用：此参数用于设置对应的专用DNN是否为无感分流关键字。修改影响：无。数据来源：本端规划。默认值：否。配置原则：应至少配置一个DNN作为无感分流关键字。
@@ -9229,7 +9229,7 @@ istransplitkey|是否无感分流关键字|参数可选性: 必选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9242,27 +9242,27 @@ SET DEDICATEDDNNCFG:DNN="zte.com",ISTRANSPLITKEY="NO"
 #### 删除专用DNN配置(DEL DEDICATEDDNNCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除专用DNN配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 dnn|DNN|参数可选性: 必选参数类型: 字符串参数范围: 1-100|参数作用：此参数用于设置专用DNN列表，用于识别出有无感分流需求的用户，并为该类用户选择无感分流专用SMF。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN NI，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9275,30 +9275,30 @@ DEL DEDICATEDDNNCFG:DNN="zte.com"
 #### 查询专用DNN配置(SHOW DEDICATEDDNNCFG) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询专用DNN配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|参数作用：此参数用于设置专用DNN列表，用于识别出有无感分流需求的用户，并为该类用户选择无感分流专用SMF。修改影响：无。数据来源：本端规划。默认值：无。配置原则：DNN NI，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 dnn|DNN|参数可选性: 任选参数类型: 字符串参数范围: 1-100|该参数用于设置专用DNN列表，用于识别出有无感分流需求的用户，并为该类用户选择无感分流专用SMF。DNN只支持输入小写。
 istransplitkey|是否无感分流关键字|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NO|该参数用于设置对应的专用DNN是否为无感分流关键字。
@@ -9306,7 +9306,7 @@ istransplitkey|是否无感分流关键字|参数可选性: 任选参数类型: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9328,7 +9328,7 @@ zte.com        是
 ## I/V-SMF选择配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 5G网络中，如果A-SMF管理的UPF无法与NR建立连接，则无法保证SSC mode1。当用户建立PDU会话或携带PDU会话移动时，如果A-SMF管理的UPF无法与UE所在的基站建立连接，则需要通过UE的当前位置信息来选择并插入合适的I-SMF。 
@@ -9338,7 +9338,7 @@ zte.com        是
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 I/V-SMF选择配置包括：I-SMF策略配置 
@@ -9346,7 +9346,7 @@ I/V-SMF选择配置包括：I-SMF策略配置
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9357,7 +9357,7 @@ I/V-SMF选择配置包括：I-SMF策略配置
 ### I-SMF策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在5G网络中，如果A-SMF管理的UPF无法与NR建立连接，则无法保证SSC mode1。 
@@ -9387,7 +9387,7 @@ SSC Mode3：提供短期IP连续性
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置AMF是否支持I-SMF功能。 
@@ -9397,7 +9397,7 @@ SSC Mode3：提供短期IP连续性
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9408,29 +9408,29 @@ SSC Mode3：提供短期IP连续性
 #### 修改AMF是否支持I-SMF配置(SET AMFSUPPORTISMF) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于设置AMF是否支持I-SMF功能。当运营商网络部署的A-SMF管理UPF的数量有限，A-SMF管理的UPF无法与UE所在的基站建立连接，并且网络中部署了I-UPF时，需要使用此命令打开I-SMF功能以管理I-UPF。该命令支持UE支持跨大区移动。 
 
 当需要开启或关闭I-SMF功能时，可使用此命令。  
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 amfSupportIsmf|AMF是否支持I-SMF|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTSUPPORT|该参数用于设置AMF是否支持I-SMF功能。如果本参数设置为“支持”，则需要通过SET NRFDISCSMFPARACFG命令将CARRYPREFERREDTAI参数设置为SupPreferredTai，即“支持Preferred-TAI”。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9443,27 +9443,27 @@ SET AMFSUPPORTISMF:AMFSUPPORTISMF="SUPPORT"
 #### 查询AMF是否支持I-SMF配置(SHOW AMFSUPPORTISMF) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询AMF是否支持I-SMF功能。  
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 amfSupportIsmf|AMF是否支持I-SMF|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-1默认值: NOTSUPPORT|该参数用于显示AMF是否支持I-SMF功能。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9485,7 +9485,7 @@ AMF是否支持I-SMF
 ## SMF选择服务范围配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在PDU会话建立流程中，涉及AMF选择SMF的过程，在SMF的选择过程中，AMF支持选择特定区域，即服务范围（servingScope）的SMF。 
@@ -9497,7 +9497,7 @@ AMF是否支持I-SMF
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能配置与跟踪区组标识匹配的servingScope group ID（服务范围组标识），使得AMF可以基于跟踪区映射出服务范围（servingScope），从而通过NRF选择服务特定区域的SMF。  
@@ -9505,7 +9505,7 @@ AMF是否支持I-SMF
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9516,7 +9516,7 @@ AMF是否支持I-SMF
 ### SMF服务范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当终端接入到5G网络，在PDU会话建立流程中，AMF可以基于服务范围（servingScope）选择服务于特定区域的SMF。 
@@ -9526,7 +9526,7 @@ AMF是否支持I-SMF
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置SMF服务范围组。 
@@ -9536,7 +9536,7 @@ AMF是否支持I-SMF
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9547,12 +9547,12 @@ AMF是否支持I-SMF
 #### 新增SMF服务范围组配置(ADD SMF SERVSCOPE GRP) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增SMF服务范围组配置。当AMF需要基于服务范围（servingScope）选择服务于特定区域的SMF时，使用该命令配置 SMF服务范围组。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
@@ -9564,10 +9564,10 @@ AMF是否支持I-SMF
 
 最多可输入4096条记录。
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 servscopegrpid|服务范围组标识|参数可选性: 必选参数类型: 数字参数范围: 1-4096|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围组标识。修改影响：AMF发送给NRF的Nnrf_NFDiscovery请求中携带的服务范围组标识根据本参数的配置值获取。数据来源：本端规划。默认值：无。配置原则：一个服务范围组标识最多关联128个服务范围。
 servingscope|服务范围|参数可选性: 必选参数类型: 字符串参数范围: 1-64|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围（servingScope）。修改影响：AMF发送给NRF的Nnrf_NFDiscovery请求中携带服务范围（servingScope）根据本参数的配置值获取。数据来源：本端规划。默认值：无。配置原则：无。
@@ -9576,10 +9576,10 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 servscopegrpid|服务范围组标识|参数可选性: 任选参数类型: 数字参数范围: 1-4096|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围组标识。
 servingscope|服务范围|参数可选性: 任选参数类型: 字符串参数范围: 1-64|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围（servingScope）。
@@ -9588,7 +9588,7 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9601,22 +9601,22 @@ ADD SMF SERVSCOPE GRP:SERVSCOPEGRPID="1",SERVINGSCOPE="nanjing",ALIAS="NJ"
 #### 删除SMF服务范围组配置(DEL SMF SERVSCOPE GRP) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SMF服务范围组配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
 删除某个“服务范围组标识”下全部记录之前，需要先删除或修改“SMF服务范围跟踪区组配置”和“发现A-SMF参数配置”中关联该“服务范围组标识”的配置记录。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 servscopegrpid|服务范围组标识|参数可选性: 必选参数类型: 数字参数范围: 1-4096|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围组标识。修改影响：AMF发送给NRF的Nnrf_NFDiscovery请求中携带的服务范围组标识根据本参数的配置值获取。数据来源：本端规划。默认值：无。配置原则：一个服务范围组标识最多关联128个服务范围。
 servingscope|服务范围|参数可选性: 任选参数类型: 字符串参数范围: 1-64|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围（servingScope）。修改影响：AMF发送给NRF的Nnrf_NFDiscovery请求中携带服务范围（servingScope）根据本参数的配置值获取。数据来源：本端规划。默认值：无。配置原则：无。
@@ -9624,10 +9624,10 @@ servingscope|服务范围|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 servscopegrpid|服务范围组标识|参数可选性: 任选参数类型: 数字参数范围: 1-4096|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围组标识。
 servingscope|服务范围|参数可选性: 任选参数类型: 字符串参数范围: 1-64|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围（servingScope）。
@@ -9636,7 +9636,7 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9649,20 +9649,20 @@ DEL SMF SERVSCOPE GRP:SERVSCOPEGRPID="1",SERVINGSCOPE="nanjing"
 #### 查询SMF服务范围组配置(SHOW SMF SERVSCOPE GRP) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMF服务范围组配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 servscopegrpid|服务范围组标识|参数可选性: 任选参数类型: 数字参数范围: 1-4096|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围组标识。修改影响：AMF发送给NRF的Nnrf_NFDiscovery请求中携带的服务范围组标识根据本参数的配置值获取。数据来源：本端规划。默认值：无。配置原则：一个服务范围组标识最多关联128个服务范围。
 servingscope|服务范围|参数可选性: 任选参数类型: 字符串参数范围: 1-64|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围（servingScope）。修改影响：AMF发送给NRF的Nnrf_NFDiscovery请求中携带服务范围（servingScope）根据本参数的配置值获取。数据来源：本端规划。默认值：无。配置原则：无。
@@ -9670,10 +9670,10 @@ servingscope|服务范围|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 servscopegrpid|服务范围组标识|参数可选性: 任选参数类型: 数字参数范围: 1-4096|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围组标识。
 servingscope|服务范围|参数可选性: 任选参数类型: 字符串参数范围: 1-64|参数作用：该参数用于设置AMF通过NRF发现A-SMF时，AMF发送给NRF的Nnrf_NFDiscovery请求消息中所携带的服务范围（servingScope）。
@@ -9682,7 +9682,7 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9705,7 +9705,7 @@ SHOW SMF SERVSCOPE GRP
 ### SMF服务范围跟踪区组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当终端接入到5G网络，在PDU会话建立流程中，AMF可以基于服务范围（servingScope）选择服务于特定区域的SMF。 
@@ -9715,7 +9715,7 @@ SHOW SMF SERVSCOPE GRP
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本功能用于配置SMF服务范围跟踪区组。 
@@ -9725,7 +9725,7 @@ SHOW SMF SERVSCOPE GRP
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9736,12 +9736,12 @@ SHOW SMF SERVSCOPE GRP
 #### 新增SMF服务范围跟踪区组配置(ADD SMF SERVSCOPE TA GRP) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增SMF服务范围跟踪区组配置。当AMF需要基于跟踪区映射出服务范围（servingScope）选择服务于特定区域的SMF时，使用该命令配置跟踪区和服务范围的映射关系。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
@@ -9755,10 +9755,10 @@ SHOW SMF SERVSCOPE GRP
 当需要修改配置参数时，应先执行删除命令，再执行新增命令。
 最多可输入65535条记录。
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 tagroupid|跟踪区组标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置和服务范围（servingScope）关联的跟踪区组标识。修改影响：无。数据来源：本端规划。默认值：无。配置原则：取值范围为1-65535，每个跟踪区组标识下面可以包括若干条具体的跟踪区范围。
 mcc|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置跟踪区模板的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中唯一标识一个国家信息。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
@@ -9772,10 +9772,10 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 tagroupid|跟踪区组标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置和服务范围（servingScope）关联的跟踪区组标识。
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置跟踪区组单条记录的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中唯一标识一个国家信息。
@@ -9789,7 +9789,7 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9802,20 +9802,20 @@ ADD SMF SERVSCOPE TA GRP:TAGROUPID="1",MCC="460",MNC="11",TAC="000001",TACST="00
 #### 删除SMF服务范围跟踪区组配置(DEL SMF SERVSCOPE TA GRP) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SMF服务范围跟踪区组配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后立即生效。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 tagroupid|跟踪区组标识|参数可选性: 必选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置和服务范围（servingScope）关联的跟踪区组标识。修改影响：无。数据来源：本端规划。默认值：无。配置原则：取值范围为1-65535，每个跟踪区组标识下面可以包括若干条具体的跟踪区范围。
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置跟踪区模板的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中唯一标识一个国家信息。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
@@ -9827,10 +9827,10 @@ tacend|跟踪区码终止|参数可选性: 任选参数类型: 字符串参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 tagroupid|跟踪区组标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置和服务范围（servingScope）关联的跟踪区组标识。
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置跟踪区组单条记录的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中唯一标识一个国家信息。
@@ -9844,7 +9844,7 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9857,30 +9857,30 @@ DEL SMF SERVSCOPE TA GRP:TAGROUPID="1",MCC="460",MNC="11",TAC="000001",TACST="00
 #### 查询SMF服务范围跟踪区组配置(SHOW SMF SERVSCOPE TA GRP) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMF服务范围跟踪区组配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 tagroupid|跟踪区组标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置和服务范围（servingScope）关联的跟踪区组标识。修改影响：无。数据来源：本端规划。默认值：无。配置原则：取值范围为1-65535，每个跟踪区组标识下面可以包括若干条具体的跟踪区范围。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 tagroupid|跟踪区组标识|参数可选性: 任选参数类型: 数字参数范围: 1-65535|参数作用：该参数用于配置和服务范围（servingScope）关联的跟踪区组标识。
 mcc|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|参数作用：该参数用于配置跟踪区组单条记录的MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中唯一标识一个国家信息。
@@ -9894,7 +9894,7 @@ alias|别名|参数可选性: 任选参数类型: 字符串参数范围: 0-15|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9917,7 +9917,7 @@ SHOW SMF SERVSCOPE TA GRP
 # NF优选位置配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
  AMF通过NRF发现和选择目标NF时，优先选择特定位置的NF进行业务交互，可以满足运营商在不同场景下的需求： 
@@ -9934,7 +9934,7 @@ SHOW SMF SERVSCOPE TA GRP
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 优选位置配置可以为所有NF类型设置同一个优选位置，也可以为不同的NF设置不同的优选位置。包括如下配置： 
@@ -9951,7 +9951,7 @@ SHOW SMF SERVSCOPE TA GRP
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9962,7 +9962,7 @@ SHOW SMF SERVSCOPE TA GRP
 ## 新增优选位置配置(ADD PREFER LOCALITY) 
 
 
-[](None)功能说明 
+功能说明 
 
 AMF通过NRF发现和选择目标NF时，需要基于位置信息优先选择特定位置的目标NF进行业务交互，并且期望选择的目标NF与AMF的位置不同时，使用该命令配置指定的位置信息。 
 
@@ -9980,7 +9980,7 @@ AMF通过NRF发现和选择目标NF时，如果需要基于位置信息优先选
  
 
 
-[](None)注意事项 
+注意事项 
 
 本命令执行后，结果立即生效。 
 
@@ -10012,10 +10012,10 @@ NRF优选：如果上述命令中，配置为“携带preferred-locality”，�
 AMF执行Locality优选时，只能使用NRF优选和本地优选中的一种；如果两者同时配置的情况下，以本地优选的优先级为高。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。修改影响：修改该参数，可以改变指定配置的NF类型。数据来源：本端规划。默认值：ALL NF配置原则：无。
 prelocality|优选位置|参数可选性: 任选参数类型: 字符串参数范围: 0-99默认值: NULL|参数作用：该参数用于AMF需要基于位置信息优选目标NF时设置指定NF的Preferred locality。修改影响：修改该参数，可以改变被发现目标NF的位置信息配置。其中，默认值NULL为无效位置信息，AMF不携带。数据来源：本端规划。默认值：NULL 配置原则：无。
@@ -10028,10 +10028,10 @@ locmatchdiff|位置匹配与不匹配NF个数差值|参数可选性: 任选参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。
 prelocality|优选位置|参数可选性: 任选参数类型: 字符串参数范围: 0-99默认值: NULL|参数作用：该参数用于AMF需要基于位置信息优选目标NF时设置指定NF的Preferred locality。
@@ -10044,7 +10044,7 @@ locmatchdiff|位置匹配与不匹配NF个数差值|参数可选性: 任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10057,20 +10057,20 @@ ADD PREFER LOCALITY:NFTYPE="SMF",PRELOCALITY="nanjing.dc",USELOCLOACLITY="NO",LO
 ## 修改优选位置配置(SET PREFER LOCALITY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改优选位置配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 必选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。修改影响：修改该参数，可以改变指定配置的NF类型。数据来源：本端规划。默认值：ALL NF配置原则：无。
 prelocality|优选位置|参数可选性: 任选参数类型: 字符串参数范围: 0-99默认值: NULL|参数作用：该参数用于AMF需要基于位置信息优选目标NF时设置指定NF的Preferred locality。修改影响：修改该参数，可以改变被发现目标NF的位置信息配置。其中，默认值NULL为无效位置信息，AMF不携带。数据来源：本端规划。默认值：NULL 配置原则：无。
@@ -10083,10 +10083,10 @@ locmatchdiff|位置匹配与不匹配NF个数差值|参数可选性: 任选参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。
 prelocality|优选位置|参数可选性: 任选参数类型: 字符串参数范围: 0-99默认值: NULL|参数作用：该参数用于AMF需要基于位置信息优选目标NF时设置指定NF的Preferred locality。
@@ -10099,7 +10099,7 @@ locmatchdiff|位置匹配与不匹配NF个数差值|参数可选性: 任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10112,30 +10112,30 @@ SET PREFER LOCALITY:NFTYPE="SMF",PRELOCALITY="zhenjiang.dc",USELOCLOACLITY="NO",
 ## 删除优选位置配置(DEL PREFER LOCALITY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除优选位置配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。修改影响：修改该参数，可以改变指定配置的NF类型。数据来源：本端规划。默认值：ALL NF配置原则：无。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。
 prelocality|优选位置|参数可选性: 任选参数类型: 字符串参数范围: 0-99默认值: NULL|参数作用：该参数用于AMF需要基于位置信息优选目标NF时设置指定NF的Preferred locality。
@@ -10148,7 +10148,7 @@ locmatchdiff|位置匹配与不匹配NF个数差值|参数可选性: 任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10161,30 +10161,30 @@ DEL PREFER LOCALITY:NFTYPE="SMF"
 ## 查询优选位置配置(SHOW PREFER LOCALITY) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询优选位置配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。修改影响：修改该参数，可以改变指定配置的NF类型。数据来源：本端规划。默认值：ALL NF配置原则：无。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 nftype|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-3默认值: ALL|参数作用：该参数用于设置指定NF的优选类型。当前支持的NF类型为：AUSF、UDM、SMF、ALL NF。
 prelocality|优选位置|参数可选性: 任选参数类型: 字符串参数范围: 0-99默认值: NULL|参数作用：该参数用于AMF需要基于位置信息优选目标NF时设置指定NF的Preferred locality。
@@ -10197,7 +10197,7 @@ locmatchdiff|位置匹配与不匹配NF个数差值|参数可选性: 任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `

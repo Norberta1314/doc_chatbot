@@ -1,14 +1,14 @@
  接入区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             在PS域，2/3G网络的注册区域是路由区RA（Routing Area），4G网络的注册区域是跟踪区TA（Tracking Area）；在CS域，注册区域就是位置区LA（Location Area）；RA/TA/LA都是用于用户的移动性管理。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 作为SGSN网元的接入区域配置中，位置区和路由区配置是基本配置，漫游限制功能相关配置包括路由区域编码配置、SGSN IMSI号段区域编码配置、SGSN限制区域配置、SGSN号段限制区域限制配置、漫游CAMEL用户接入限制配置和用户接入限制拒绝原因值配置。支持共享网络功能，则进行共享网络区配置。 
@@ -19,7 +19,7 @@
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -157,7 +157,7 @@ eNB邻接关系配置
 
 
 
-父主题： [系统配置](../../zh-CN/tree/N_126066_operation_cm_mml_umacV4_cm_combo_gngp_system.html)
+父主题： [系统配置]
 
 
 
@@ -180,14 +180,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # SGSN基于PLMN控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             运营商之间签署了漫游协议，可以根据漫游协议方PLMN设置用户容量、PDP容量和时间特性，达到限制漫游用户接入数量及保障本网用户接入的目的。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN基于PLMN控制配置”设置签署漫游协议网络PLMN的用户容量、PDP容量和时间特性。 
@@ -214,7 +214,7 @@ SGSN根据PLMN的时间特性（周期性更新定时器时长(秒)、不可达�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -247,7 +247,7 @@ SGSN根据PLMN的时间特性（周期性更新定时器时长(秒)、不可达�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -270,7 +270,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增基于PLMN控制配置(ADD PLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置移动网络中的管理参数，包括：是否限制接入用户数量，是否限制接入PDP数量，设置周期性位置更新的时长等。 
@@ -278,7 +278,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 PLMN参数根据运营商实际规划进行配置。
@@ -317,10 +317,10 @@ GMM上下文删除定时器时长：根据局方实际规划进行配置。
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -341,7 +341,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增基于PLMN控制配置，其中MCC为"460"、MNC为"01"、不限制在线用户数、不限制PDP数、用户别名为"PLMN1"。 
@@ -356,7 +356,7 @@ ADD PLMNCTRLCFG:PLMN="460"-"01",LIMITUSER="NO",LIMITPDP="NO",NAME="PLMN1";
 
 
 
-父主题： [SGSN基于PLMN控制配置](../../zh-CN/tree/N_1254271.html)
+父主题： [SGSN基于PLMN控制配置]
 
 
 
@@ -379,7 +379,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改基于PLMN控制配置(SET PLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改移动网络中的管理参数。当网络设计发生改变时，使用该命令。 
@@ -387,7 +387,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -395,10 +395,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -419,7 +419,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改基于PLMN控制配置，其中MCC为"460"、MNC为"01"、不限制在线用户数、不限制PDP数、用户别名为"PLMN1"。 
@@ -434,7 +434,7 @@ SET PLMNCTRLCFG:PLMN="460"-"01",LIMITUSER="NO",LIMITPDP="NO",NAME="PLMN1";
 
 
 
-父主题： [SGSN基于PLMN控制配置](../../zh-CN/tree/N_1254271.html)
+父主题： [SGSN基于PLMN控制配置]
 
 
 
@@ -457,7 +457,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除基于PLMN控制配置(DEL PLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除移动网络控制配置参数。删除条件为 MCC（移动网编号）+MNC（移动国家码）。 
@@ -465,7 +465,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令可能导致网络运行异常，非经过运营商批准不准擅自执行。 
@@ -473,10 +473,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -487,7 +487,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除基于PLMN控制配置，其中MCC为"460"、MNC为"01"。 
@@ -502,7 +502,7 @@ DEL PLMNCTRLCFG:PLMN="460"-"01";
 
 
 
-父主题： [SGSN基于PLMN控制配置](../../zh-CN/tree/N_1254271.html)
+父主题： [SGSN基于PLMN控制配置]
 
 
 
@@ -525,7 +525,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询基于PLMN控制配置(SHOW PLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用户查询基于PLMN控制配置参数。查询条件为 MCC（移动网编号）+MNC（移动国家码），查询结果为符合该条件的网络的具体管理参数。 
@@ -533,7 +533,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -541,10 +541,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:任选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -555,10 +555,10 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMNID|PLMN标识|参数可选性:任选参数；参数类型:整数。|系统自动生成的PLMN编号。
 PLMN|PLMN|参数可选性:任选参数；参数类型:字符型。|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
@@ -578,7 +578,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于PLMN控制配置，其中MCC为"460"、MNC为"01"。 
@@ -607,7 +607,7 @@ SHOW PLMNCTRLCFG:PLMN="460"-"01";
 
 
 
-父主题： [SGSN基于PLMN控制配置](../../zh-CN/tree/N_1254271.html)
+父主题： [SGSN基于PLMN控制配置]
 
 
 
@@ -630,7 +630,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 位置区配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 位置区标识LAI是指UE在不更新VLR的情况下可以在该区域下自由移动的区域，而不需要通知VLR进行位置更新的区域。位置区标识LAI由MCC（移动国家码）+MNC（移动网号）+LAC（位置区域码，Location Area Code）组成。 
@@ -641,7 +641,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 位置区配置是SGSN无线接入的基本配置；对于MME，仅当需要支持CSFB功能时，才配置位置区。 
@@ -655,7 +655,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -688,7 +688,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -711,7 +711,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增位置区配置(ADD LAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置所有位置区信息。只有本局支持的所有LAI都配置之后，BSC和RNC才能正常接入SGSN局，覆盖区内的用户才能正常注册。  
@@ -722,7 +722,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -739,10 +739,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|位置区名称为当前位置区的标识。该名称一般在网络建设时进行规划。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -754,7 +754,7 @@ LAC|位置区域码(HEX)|参数可选性:必选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加位置区，名称为"lai_0001"， 移动国家码为“460”，移动网络编码为“01”，位置区编号(16进制)为“0001”。 
@@ -769,7 +769,7 @@ ADD LAI:NAME="lai_0001",MCC="460",MNC="01",LAC="0001";
 
 
 
-父主题： [位置区配置](../../zh-CN/tree/N_1254272.html)
+父主题： [位置区配置]
 
 
 
@@ -792,7 +792,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改位置区配置(SET LAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改已经存在的位置区参数。当运营商需要调整位置区参数时使用该命令。可以根据位置区名来修改对应的移动国家码、移动网号或位置区域码信息。 
@@ -800,7 +800,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -821,10 +821,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|位置区名称为当前位置区的标识。该名称一般在网络建设时进行规划。
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -837,7 +837,7 @@ NEWNAME|新位置区名|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置区信息，待修改的位置区名称为“lai_0001”，修改参数为：移动国家码改为“460”，移动网络编码改为“02”，位置区编码（16进制）改为“4444”， 新的位置区名称为“lai_0011”。 
@@ -852,7 +852,7 @@ SET LAI:NAME="lai_0001",MCC="460",MNC="02",LAC="4444",NEWNAME="lai_0011";
 
 
 
-父主题： [位置区配置](../../zh-CN/tree/N_1254272.html)
+父主题： [位置区配置]
 
 
 
@@ -875,7 +875,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除位置区配置(DEL LAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的位置区，当运营商确定取消某些位置区时使用该命令。可根据位置区名或位置区编码来删除对应的位置区配置信息。 
@@ -883,7 +883,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -920,10 +920,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:1~50个字符。|位置区名称为当前位置区的标识。该名称一般在网络建设时进行规划。
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -935,7 +935,7 @@ LAC|位置区域码(HEX)|参数可选性:任选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置区信息，待删除的位置区名称为“lai_0001”。 
@@ -950,7 +950,7 @@ DEL LAI:NAME="lai_0001";
 
 
 
-父主题： [位置区配置](../../zh-CN/tree/N_1254272.html)
+父主题： [位置区配置]
 
 
 
@@ -973,7 +973,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询位置区配置(SHOW LAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询位置区配置信息，当系统维护人员想了解当前配置的位置区信息时使用该命令。可以根据位置区名、移动国家码、移动网号和位置区域码这些条件来查询对应的位置区配置信息。如果不输入任何参数，则查询出所有的位置区配置信息。 
@@ -981,7 +981,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -989,10 +989,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:1~50个字符。|位置区名称为当前位置区的标识。该名称一般在网络建设时进行规划。
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -1004,10 +1004,10 @@ LAC|位置区域码(HEX)|参数可选性:任选参数；参数类型:字符型�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|位置区名|参数可选性:任选参数；参数类型:字符型。|位置区名称为当前位置区的标识。该名称一般在网络建设时进行规划。
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -1019,7 +1019,7 @@ LAC|位置区域码(HEX)|参数可选性:任选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查找位置区信息，待查找的位置区名称为“lai_0001”。 
@@ -1048,7 +1048,7 @@ SHOW LAI:NAME="lai_0001";
 
 
 
-父主题： [位置区配置](../../zh-CN/tree/N_1254272.html)
+父主题： [位置区配置]
 
 
 
@@ -1071,7 +1071,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 路由区配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 路由区RA是位置区的子集，GPRS网络是按路由区来进行用户的位置管理，用户在RA内移动不需要发起路由更新，跨RA移动时，会发起路由更新。一个位置区可以对应一个路由区，也可进一步划分为几个路由区。每个RA由一到多个小区组成，RA之间没有重叠区域。 
@@ -1082,7 +1082,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 路由区配置是SGSN无线接入的基本配置。SGSN的路由区采用2位十六进制数，具体的路由区划分根据运营商的规划确定，和无线侧保持一致。 
@@ -1093,7 +1093,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1126,7 +1126,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -1149,7 +1149,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增路由区配置(ADD RAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置本SGSN支持的所有路由区（RA）及各路由区的属性。该命令为基本配置命令，只有本局支持的所有RAI都配置之后，BSC和RNC才能正常接入SGSN局，覆盖区内的用户才能正常注册。 
@@ -1160,7 +1160,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1178,10 +1178,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|路由区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|自定义路由区名称，命名应方便维护人员理解和记忆。
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|当前路由区所属的位置区的名称。用于描述当前配置路由区所归属的位置区。
@@ -1197,7 +1197,7 @@ MSCVLRPOOL|归属MSC/VLR POOL|参数可选性:任选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增路由区配置，其中路由区名为“RAI1”、位置区名为“LAI1”、路由区码为“01”、不支持Flex功能、不具有Non Broadcast属性。 
@@ -1212,7 +1212,7 @@ ADD RAI:NAME="RAI1",LAI="LAI1",RAC="01",FLEX="NO",BROADCAST="NO";
 
 
 
-父主题： [路由区配置](../../zh-CN/tree/N_1254273.html)
+父主题： [路由区配置]
 
 
 
@@ -1235,7 +1235,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改路由区配置(SET RAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改路由区RA的相关属性，当现有局点的路由区划分发生了变化，路由区标识以及相关参数则需要做相应的修改。 
@@ -1243,7 +1243,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1260,10 +1260,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|路由区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|自定义路由区名称，命名应方便维护人员理解和记忆。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|当前路由区所属的位置区的名称。用于描述当前配置路由区所归属的位置区。
@@ -1280,7 +1280,7 @@ NEWNAME|新路由区名|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改路由区配置，其中路由区名为“RAI1”、位置区名为“LAI1”、路由区码为“01”、不支持Flex功能、不具有Non Broadcast属性，新路由区名为"RAI2"。 
@@ -1295,7 +1295,7 @@ SET RAI:NAME="RAI1",LAI="LAI1",RAC="01",FLEX="NO",BROADCAST="NO",NEWNAME="RAI2";
 
 
 
-父主题： [路由区配置](../../zh-CN/tree/N_1254273.html)
+父主题： [路由区配置]
 
 
 
@@ -1318,7 +1318,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除路由区配置(DEL RAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的路由区，当现有局点确定取消某些路由区时使用该命令。根据路由区名称来删除对应的路由区配置信息。 
@@ -1326,7 +1326,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 只有不被本SGSN管理的路由区（RA）或与本局无关的路由区（RA）才能从本局删除，否则会影响该路由区下用户的接入。 
@@ -1337,10 +1337,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|路由区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|自定义路由区名称，命名应方便维护人员理解和记忆。
 
@@ -1349,7 +1349,7 @@ NAME|路由区名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除路由区名为RAI1的路由区配置信息。 
@@ -1364,7 +1364,7 @@ DEL RAI:NAME="RAI1";
 
 
 
-父主题： [路由区配置](../../zh-CN/tree/N_1254273.html)
+父主题： [路由区配置]
 
 
 
@@ -1387,7 +1387,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询路由区配置(SHOW RAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询路由区配置信息，当系统维护人员想了解当前配置的路由区信息时使用该命令。对于路由区信息可以输入路由区名、位置区名或路由区编码参数作为查询条件，若不输入任何查询条件则查询全部配置信息。 
@@ -1395,15 +1395,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|路由区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|自定义路由区名称，命名应方便维护人员理解和记忆。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|当前路由区所属的位置区的名称。用于描述当前配置路由区所归属的位置区。
@@ -1414,10 +1414,10 @@ RAC|路由区码(HEX)|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|路由区名|参数可选性:任选参数；参数类型:字符型。|自定义路由区名称，命名应方便维护人员理解和记忆。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型。|当前路由区所属的位置区的名称。用于描述当前配置路由区所归属的位置区。
@@ -1433,7 +1433,7 @@ MSCVLRPOOL|归属MSC/VLR POOL|参数可选性:任选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询路由区配置，位置区名为lai_0001。 
@@ -1462,7 +1462,7 @@ SHOW RAI:LAI="lai_0001";
 
 
 
-父主题： [路由区配置](../../zh-CN/tree/N_1254273.html)
+父主题： [路由区配置]
 
 
 
@@ -1485,7 +1485,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 跟踪区配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPC网络对用户的位置管理采用跟踪区TA（Tracking Area）， 跟踪区的划分由无线侧确定。 
@@ -1502,7 +1502,7 @@ MME支持按照跟踪区TA进行分域，用户在执行跟踪区配置命令，
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 跟踪区配置是MME的基本配置。 
@@ -1550,7 +1550,7 @@ TAC采用4位十六进制数，具体的TAC根据运营商的规划确定，和�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1588,7 +1588,7 @@ TAC采用4位十六进制数，具体的TAC根据运营商的规划确定，和�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -1611,7 +1611,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增跟踪区配置(ADD TA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置本MME支持的所有跟踪区（TA）及其各个跟踪区的属性。该命令为基本配置命令，只有本局支持的所有TAI都配置之后，eNB才能正常接入MME局，覆盖区内的用户才能正常注册。 
@@ -1650,7 +1650,7 @@ APN扩展跟踪区组名称：开启APN扩展位置信息功能，且扩展方�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1688,10 +1688,10 @@ APN扩展跟踪区组名称：开启APN扩展位置信息功能，且扩展方�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW。
 GRPID|组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。TA分组的目的是为了提高可维护性，在POOL组网的情况下所有的TA都可以为所有的SGW服务，如果将TA都分到一个组，则配置TA和SGW关联时，只需要对应SGW配置TA组号即可。GRPID在TA和SGW关系配置中被引用，对应的命令为：ADD SGW。
@@ -1718,7 +1718,7 @@ APNEXTTAG|APN扩展跟踪区组名称|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 添加本局支持的一个跟踪区（国家码460、网号01、跟踪区编码0001），MME内部标识TAID为1。 该跟踪区(TA)不使用全局时区，其时区为 “GMT+09:00”，对应名称为“lai1”的位置区，关联的ID=1的紧急号码列表，对应的紧急GMLC号码为1， 名称为“tai-0001” 。 
@@ -1733,7 +1733,7 @@ ADD TA:TAID=1,GRPID=1,MCC="460",MNC="01",TAC="0001",GLOBALTZ="NO",LAI="lai1",TIM
 
 
 
-父主题： [跟踪区配置](../../zh-CN/tree/N_1254253.html)
+父主题： [跟踪区配置]
 
 
 
@@ -1756,7 +1756,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改跟踪区配置(SET TA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置跟踪区TA的相关属性，当需要为某跟踪区修改或新增某属性的时候使用该命令。 
@@ -1795,7 +1795,7 @@ APN扩展跟踪区组名称：开启APN扩展位置信息功能，且扩展方�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1829,10 +1829,10 @@ APN扩展跟踪区组名称：开启APN扩展位置信息功能，且扩展方�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个路由区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW TAI命令关联。
 GRPID|组号|参数可选性:任选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。TA分组的目的是为了提高可维护性，在POOL组网的情况下所有的TA都可以为所有的SGW服务，如果将TA都分到一个组，则配置TA和SGW关联时，只需要对应SGW配置TA组号即可。GRPID在TA和SGW关系配置中被引用，对应的命令为：ADD SGW。
@@ -1856,7 +1856,7 @@ APNEXTTAG|APN扩展跟踪区组名称|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置标识1（TAID=1）的跟踪区所关联的位置区，及其时区。 关联名称为“lai2”的位置区，使用全局的时区（不需要给该跟踪区(TA)单独设置时区）。 
@@ -1871,7 +1871,7 @@ SET TA:TAID=1,LAI="lai2",GLOBALTZ="YES";
 
 
 
-父主题： [跟踪区配置](../../zh-CN/tree/N_1254253.html)
+父主题： [跟踪区配置]
 
 
 
@@ -1894,7 +1894,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除跟踪区配置(DEL TA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的跟踪区（TA），当某个跟踪区（TA）已经不在被本MME局管理的时候，或者配置错误的时候，可以使用此命令删除指定跟踪区。删除后该跟踪区下的用户无法再向成功向本MME局注册。 
@@ -1902,7 +1902,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1923,10 +1923,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW。
 
@@ -1935,7 +1935,7 @@ TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除TAID=1对应的跟踪区。 
@@ -1950,7 +1950,7 @@ DEL TA:TAID=1;
 
 
 
-父主题： [跟踪区配置](../../zh-CN/tree/N_1254253.html)
+父主题： [跟踪区配置]
 
 
 
@@ -1973,7 +1973,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除跟踪区关联的位置区(DEL TA LAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除跟踪区关联的位置区。 
@@ -1981,15 +1981,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW。
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:0~50个字符。|跟踪区对应的位置区名称。支持SGs口和CSFB的时候，需要为跟踪区设置相应的位置区，以便为该跟踪区下的联合用户选择MSC/VLR局向。通过ADD LAI或SET LAI命令，可以添加位置区。
@@ -1999,7 +1999,7 @@ LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除跟踪区TAID=1关联的位置区lai1。 
@@ -2014,7 +2014,7 @@ DEL TA LAI:TAID=1,LAI="lai1";
 
 
 
-父主题： [跟踪区配置](../../zh-CN/tree/N_1254253.html)
+父主题： [跟踪区配置]
 
 
 
@@ -2037,7 +2037,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询跟踪区配置(SHOW TA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查看已经配置的跟踪区（TA）。如果参数中输入具体的TAID则显示指定的TA信息， 否则显示本局支持的所有TA的信息。 
@@ -2045,15 +2045,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW。
 GRPID|组号|参数可选性:任选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。TA分组的目的是为了提高可维护性，在POOL组网的情况下所有的TA都可以为所有的SGW服务，如果将TA都分到一个组，则配置TA和SGW关联时，只需要对应SGW配置TA组号即可。GRPID在TA和SGW关系配置中被引用，对应的命令为：ADD SGW。
@@ -2067,10 +2067,10 @@ LAI|位置区名|参数可选性:任选参数；参数类型:字符型。|跟踪
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW。
 GRPID|组号|参数可选性:任选参数；参数类型:整数。|该参数标识TA归属的组号。TA分组的目的是为了提高可维护性，在POOL组网的情况下所有的TA都可以为所有的SGW服务，如果将TA都分到一个组，则配置TA和SGW关联时，只需要对应SGW配置TA组号即可。GRPID在TA和SGW关系配置中被引用，对应的命令为：ADD SGW。
@@ -2098,7 +2098,7 @@ APNEXTTAG|APN扩展跟踪区组名称|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示TAID=1对应跟踪区的具体信息。 
@@ -2127,7 +2127,7 @@ SHOW TA:TAID=1;
 
 
 
-父主题： [跟踪区配置](../../zh-CN/tree/N_1254253.html)
+父主题： [跟踪区配置]
 
 
 
@@ -2150,7 +2150,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 跟踪区列表配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME在TA List分配时，可根据操作方式总体分为两类策略： 
@@ -2175,7 +2175,7 @@ TA List静态分配：相同的TA下，对应的TA List在网管中静态配置�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 跟踪区列表配置功能包括： 
@@ -2207,7 +2207,7 @@ TA List静态分配：相同的TA下，对应的TA List在网管中静态配置�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2240,7 +2240,7 @@ TA List静态分配：相同的TA下，对应的TA List在网管中静态配置�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -2263,7 +2263,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 动态跟踪区列表分配策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPC网络对用户的位置管理采用跟踪区TA（Tracking Area）， 跟踪区的划分由无线侧确定。 
@@ -2274,14 +2274,14 @@ MME按照跟踪区对用户进行寻呼和位置管理，跟踪区的划分要�
 
 
 
-[](None)功能描述 
+功能描述 
 
             
             “跟踪区列表分配策略配置”设置MME跟踪区列表的分配策略，包括TA个数，优选TA的条件和限制入选TA的条件等。在UE附着流程或TAU流程时，MME根据设定的策略给UE分配跟踪区列表。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2304,7 +2304,7 @@ MME按照跟踪区对用户进行寻呼和位置管理，跟踪区的划分要�
 
 
 
-父主题： [跟踪区列表配置](../../zh-CN/tree/N_12623572.html)
+父主题： [跟踪区列表配置]
 
 
 
@@ -2327,7 +2327,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置动态跟踪区列表分配策略(SET TALIST ASSIGN POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设定跟踪区列表的分配策略，运营商根据规划需要给用户分配适当的跟踪区列表时使用该命令。跟踪区列表分配策略配置成功后，MME会根据设定的策略给用户分配跟踪区列表(TA List)，TA List会通过Attach Accept和TAU Accept消息下发给用户。 
@@ -2341,18 +2341,18 @@ ZXUN uMAC-MME的TA List最多包含16个TA，具体个数是由该命令的配�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-Serving GW管理区域的查询命令为[SHOW SGW](1262223.html)。
+Serving GW管理区域的查询命令为[SHOW SGW]。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MAXTANUM|TA List中允许包含的最大TA个数|参数可选性:任选参数；参数类型:整数；参数范围为:1~16。|该参数用于设置MME分配给用户的TA List中允许包含的最大TA个数，最多包含16个TA，最少包含1个。
 MOBILERECORD|根据UE之前的移动轨迹分配TA List|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME分配给用户的TA List中是否包含最后一次用户所使用的TA(Last Visited TA)。将Last Visited TA分配到TA List中的前提条件是用户必须在Attach Request或 TAU Request消息中携带该字段。取值含义：否（NO）：MME不将Last Visited TA分配到TA List中。是（YES）：如果前提条件和该配置的其他策略同时满足，MME将Last Visited TA分配到TA List中。
@@ -2373,7 +2373,7 @@ SAMEVCIMSPLY|TA List必须语音中心用户限制策略相同|参数可选性:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置如下TA List分配策略： 
@@ -2403,7 +2403,7 @@ SET TALIST ASSIGN POLICY:MAXTANUM=16,MOBILERECORD="NO";
 
 
 
-父主题： [动态跟踪区列表分配策略](../../zh-CN/tree/N_12660061.html)
+父主题： [动态跟踪区列表分配策略]
 
 
 
@@ -2426,7 +2426,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询动态跟踪区列表分配策略(SHOW TALIST ASSIGN POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询跟踪区列表的分配策略，无需输入参数，命令执行成功之后会显示当前配置的分配策略。 
@@ -2434,15 +2434,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MAXTANUM|TA List中允许包含的最大TA个数|参数可选性:任选参数；参数类型:整数。|该参数用于设置MME分配给用户的TA List中允许包含的最大TA个数，最多包含16个TA，最少包含1个。
 MOBILERECORD|根据UE之前的移动轨迹分配TA List|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME分配给用户的TA List中是否包含最后一次用户所使用的TA(Last Visited TA)。将Last Visited TA分配到TA List中的前提条件是用户必须在Attach Request或 TAU Request消息中携带该字段。取值含义：否（NO）：MME不将Last Visited TA分配到TA List中。是（YES）：如果前提条件和该配置的其他策略同时满足，MME将Last Visited TA分配到TA List中。
@@ -2463,7 +2463,7 @@ SAMEVCIMSPLY|TA List必须语音中心用户限制策略相同|参数可选性:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询当前配置的跟踪区列表分配策略。 
@@ -2492,7 +2492,7 @@ SHOW TALIST ASSIGN POLICY;
 
 
 
-父主题： [动态跟踪区列表分配策略](../../zh-CN/tree/N_12660061.html)
+父主题： [动态跟踪区列表分配策略]
 
 
 
@@ -2515,7 +2515,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 静态跟踪区列表分配策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPC网络对UE的位置管理采用TA（Tracking Area，跟踪区）来实现，跟踪区的划分由无线侧确定。 
@@ -2546,7 +2546,7 @@ MME按照跟踪区对UE进行寻呼和位置管理，跟踪区范围的划分要
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于设置MME静态跟踪区列表的分配策略，包括是否“启用静态TA列表功能”及是否启用“Last TA优选功能”。在UE附着流程或TAU流程时，MME根据本命令设定的策略决定是否使用静态TA列表功能、分配的静态TA列表中是否额外包含Last TA，用于给UE分配跟踪区列表。 
@@ -2571,7 +2571,7 @@ MME按照跟踪区对UE进行寻呼和位置管理，跟踪区范围的划分要
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2594,7 +2594,7 @@ MME按照跟踪区对UE进行寻呼和位置管理，跟踪区范围的划分要
 
 
 
-父主题： [跟踪区列表配置](../../zh-CN/tree/N_12623572.html)
+父主题： [跟踪区列表配置]
 
 
 
@@ -2617,7 +2617,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置静态跟踪区列表分配策略(SET TALIST POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置静态TA列表分配策略，包括以下两个功能： 
@@ -2637,7 +2637,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 当“MME支持TAL静态分配功能”License及“打开静态TA列表功能”开关均打开时静态TA列表分配功能才能生效。 
@@ -2645,10 +2645,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TALIST|打开静态TA列表功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置是否启用静态TA列表功能。
 LASTTA|打开Last TA优选功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用于设置是否启用Last TA优选功能。该功能用于避免用户在两个静态TA列表边界来回移动，频繁触发TAU跟踪区更新流程。本功能开关打开时，MME为UE分配跟踪区列表时，除了包含UE当前跟踪区所在的静态TA列表中的所有TA之外，还包含UE最近一次访问的TA。但是在如下两个场景中，MME为UE分配的TA列表不会包含UE最近一次访问的TA：最近一次访问的TA对应的SGW与静态TA列表对应的SGW不相同，通过SHOW SGW命令可以查询SGW与TA的对应关系。最近一次访问的TA对应的LA（Location Area，位置区）与静态TA列表对应的LA不相同，通过SHOW TA命令可以查询跟踪区归属的位置区。
@@ -2658,7 +2658,7 @@ LASTTA|打开Last TA优选功能|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置静态TA列表分配策略，其中“打开静态TA列表功能”为“是”，“打开Last TA优选功能”为否。 
@@ -2673,7 +2673,7 @@ SET TALIST POLICY:TALIST="YES",LASTTA="NO";
 
 
 
-父主题： [静态跟踪区列表分配策略](../../zh-CN/tree/N_12522513.html)
+父主题： [静态跟踪区列表分配策略]
 
 
 
@@ -2696,20 +2696,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询静态跟踪区列表分配策略(SHOW TALIST POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询静态TA列表分配策略。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TALIST|打开静态TA列表功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置是否启用静态TA列表功能。
 LASTTA|打开Last TA优选功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用于设置是否启用Last TA优选功能。该功能用于避免用户在两个静态TA列表边界来回移动，频繁触发TAU跟踪区更新流程。本功能开关打开时，MME为UE分配跟踪区列表时，除了包含UE当前跟踪区所在的静态TA列表中的所有TA之外，还包含UE最近一次访问的TA。但是在如下两个场景中，MME为UE分配的TA列表不会包含UE最近一次访问的TA：最近一次访问的TA对应的SGW与静态TA列表对应的SGW不相同，通过SHOW SGW命令可以查询SGW与TA的对应关系。最近一次访问的TA对应的LA（Location Area，位置区）与静态TA列表对应的LA不相同，通过SHOW TA命令可以查询跟踪区归属的位置区。
@@ -2719,7 +2719,7 @@ LASTTA|打开Last TA优选功能|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询静态TA列表分配策略。 
@@ -2749,7 +2749,7 @@ SHOW TALIST POLICY
 
 
 
-父主题： [静态跟踪区列表分配策略](../../zh-CN/tree/N_12522513.html)
+父主题： [静态跟踪区列表分配策略]
 
 
 
@@ -2772,7 +2772,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 静态跟踪区列表配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPC网络对UE的位置管理采用TA（Tracking Area，跟踪区）来实现，跟踪区的划分由无线侧确定。 
@@ -2803,7 +2803,7 @@ MME按照跟踪区对UE进行寻呼和位置管理，跟踪区范围的划分要
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置跟踪区列表中所包括的跟踪区，操作员将MME所管辖的跟踪区按跟踪区列表进行分组，运营商可以根据实际组网情况灵活的配置跟踪区列表。 
@@ -2811,7 +2811,7 @@ MME按照跟踪区对UE进行寻呼和位置管理，跟踪区范围的划分要
 
 
                 在UE附着流程或者TAU流程中，MME根据当前接入UE所在的跟踪区获取通过本功能配置的跟踪区列表，并将此”静态TA列表ID“分配给UE，如果UE所在的跟踪区不归属本功能配置的任何一个静态跟踪区列表时，MME根据跟踪区列表分配策略为UE分配跟踪区列表，设置跟踪区列表分配策略的命令为
-                [SET TALIST ASSIGN POLICY](../mml/1266006.html)
+                [SET TALIST ASSIGN POLICY]
                 。
             
 
@@ -2821,7 +2821,7 @@ MME按照跟踪区对UE进行寻呼和位置管理，跟踪区范围的划分要
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2849,7 +2849,7 @@ MME按照跟踪区对UE进行寻呼和位置管理，跟踪区范围的划分要
 
 
 
-父主题： [跟踪区列表配置](../../zh-CN/tree/N_12623572.html)
+父主题： [跟踪区列表配置]
 
 
 
@@ -2872,12 +2872,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增静态跟踪区列表(ADD TA LIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 本命令用于设置跟踪区列表中所包括的跟踪区。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -2902,10 +2902,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW命令关联。
 TALID|静态TA列表ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|静态TA列表在MME内部的标识，在MME中一个静态TA列表ID对应一组跟踪区。
@@ -2915,7 +2915,7 @@ TALID|静态TA列表ID|参数可选性:必选参数；参数类型:整数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增静态TA列表配置，其中跟踪区标识为1，静态TA列表ID为10。 
@@ -2930,7 +2930,7 @@ ADD TA LIST:TAID=1,TALID=10;
 
 
 
-父主题： [静态跟踪区列表配置](../../zh-CN/tree/N_12522514.html)
+父主题： [静态跟踪区列表配置]
 
 
 
@@ -2953,20 +2953,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除静态跟踪区列表(DEL TA LIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 本命令用于删除跟踪区列表中所包括的某些跟踪区。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW命令关联。
 TALID|静态TA列表ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|静态TA列表在MME内部的标识，在MME中一个静态TA列表ID对应一组跟踪区。
@@ -2976,7 +2976,7 @@ TALID|静态TA列表ID|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除跟踪区标识为1，静态TA列表ID为10的配置数据。 
@@ -2991,7 +2991,7 @@ DEL TA LIST:TAID=1,TALID=10;
 
 
 
-父主题： [静态跟踪区列表配置](../../zh-CN/tree/N_12522514.html)
+父主题： [静态跟踪区列表配置]
 
 
 
@@ -3014,20 +3014,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询静态跟踪区列表(SHOW TA LIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 本命令用于查询跟踪区列表中所包括的跟踪区。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW命令关联。
 TALID|静态TA列表ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|静态TA列表在MME内部的标识，在MME中一个静态TA列表ID对应一组跟踪区。
@@ -3037,10 +3037,10 @@ TALID|静态TA列表ID|参数可选性:任选参数；参数类型:整数；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数。|各TA在MME内部的标识，在MME中一个TAID对应一个跟踪区TA。此TAID被如下命令关联：ADD TAIZC、ADD MME IMSI TAIZC、ADD SGW命令关联。
 TALID|静态TA列表ID|参数可选性:任选参数；参数类型:整数。|静态TA列表在MME内部的标识，在MME中一个静态TA列表ID对应一组跟踪区。
@@ -3050,7 +3050,7 @@ TALID|静态TA列表ID|参数可选性:任选参数；参数类型:整数。|静
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有静态TA列表配置。 
@@ -3080,7 +3080,7 @@ SHOW TA LIST
 
 
 
-父主题： [静态跟踪区列表配置](../../zh-CN/tree/N_12522514.html)
+父主题： [静态跟踪区列表配置]
 
 
 
@@ -3103,7 +3103,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 周边跟踪区列表配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 某些运营商要求针对VoLTE用户，MME支持静态TA列表及周边TA列表寻呼。 
@@ -3111,7 +3111,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 静态TA列表是指为了减少UE的TAU流程，在Attach和TAU流程中带给UE的一组TA，这组TA是在MME上通过
-                [ADD TA LIST](../mml/1262353.html)
+                [ADD TA LIST]
                 命令配置。
             
 
@@ -3124,7 +3124,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置周边TA列表中所包括的跟踪区，将MME所管辖的TA按周边TA列表进行分组，运营商可以根据实际组网情况灵活的配置周边TA列表。 
@@ -3138,7 +3138,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3166,7 +3166,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [跟踪区列表配置](../../zh-CN/tree/N_12623572.html)
+父主题： [跟踪区列表配置]
 
 
 
@@ -3189,7 +3189,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增周边跟踪区列表配置(ADD ATAL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增周边TA列表配置。当为某个静态TA列表配置周边TA列表后，MME可以使用周边TA列表的寻呼策略，在周边TA列表范围内对UE进行寻呼。 
@@ -3197,7 +3197,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -3205,10 +3205,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTALID|当前TA列表ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|在MME内部的标识，MME中一个静态TA列表ID对应一组跟踪区。静态TA列表ID通过ADD TA LIST命令配置。
 ATALID|周边TA列表|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|由一组静态TA列表ID组成，用于表示不同TA列表之间的位置关系。由运营商规划配置，配置在此处的静态TA列表即为“当前TA列表ID”所对应的周边TA列表。
@@ -3218,7 +3218,7 @@ ATALID|周边TA列表|参数可选性:必选参数；参数类型:整数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增周边TA列表配置，当前TA列表ID为1，对应的周边TA列表为2&3&4。 
@@ -3233,7 +3233,7 @@ ADD ATAL:CTALID=1,ATALID=2&3&4;
 
 
 
-父主题： [周边跟踪区列表配置](../../zh-CN/tree/N_12661642.html)
+父主题： [周边跟踪区列表配置]
 
 
 
@@ -3256,7 +3256,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除周边跟踪区列表配置(DEL ATAL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除周边TA列表配置。当需要删除某个静态TA列表对应的周边TA列表配置时，使用该命令。 
@@ -3264,7 +3264,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -3272,10 +3272,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTALID|当前TA列表ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|在MME内部的标识，MME中一个静态TA列表ID对应一组跟踪区。静态TA列表ID通过ADD TA LIST命令配置。
 
@@ -3284,7 +3284,7 @@ CTALID|当前TA列表ID|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除当前TA列表（ID为1）对应的周边TA列表配置。 
@@ -3299,7 +3299,7 @@ DEL ATAL:CTALID=1;
 
 
 
-父主题： [周边跟踪区列表配置](../../zh-CN/tree/N_12661642.html)
+父主题： [周边跟踪区列表配置]
 
 
 
@@ -3322,7 +3322,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询周边跟踪区列表配置(SHOW ATAL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询周边TA列表配置。 
@@ -3330,7 +3330,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -3338,10 +3338,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTALID|当前TA列表ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|在MME内部的标识，MME中一个静态TA列表ID对应一组跟踪区。静态TA列表ID通过ADD TA LIST命令配置。
 
@@ -3350,10 +3350,10 @@ CTALID|当前TA列表ID|参数可选性:任选参数；参数类型:整数；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTALID|当前TA列表ID|参数可选性:任选参数；参数类型:整数。|在MME内部的标识，MME中一个静态TA列表ID对应一组跟踪区。静态TA列表ID通过ADD TA LIST命令配置。
 ATALID|周边TA列表|参数可选性:任选参数；参数类型:字符型。|由一组静态TA列表ID组成，用于表示不同TA列表之间的位置关系。由运营商规划配置，配置在此处的静态TA列表即为“当前TA列表ID”所对应的周边TA列表。
@@ -3363,7 +3363,7 @@ ATALID|周边TA列表|参数可选性:任选参数；参数类型:字符型。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询周边跟踪区列表配置。 
@@ -3394,7 +3394,7 @@ SHOW ATAL;
 
 
 
-父主题： [周边跟踪区列表配置](../../zh-CN/tree/N_12661642.html)
+父主题： [周边跟踪区列表配置]
 
 
 
@@ -3417,21 +3417,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 非广播跟踪区配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             有些业务场景下，MME需要触发UE发起TAU请求，比如：专网用户签约或规划的专网信息发生改变，触发专网重选，此时MME需要发起GUTI重分配携带非广播跟踪区，以触发UE发起TAU请求。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             当MME需要触发UE发起TAU请求时，MME发起GUTI重分配流程，重分配请求中携带非广播跟踪区；UE收到请求发现跟踪区发生改变，则UE触发TAU请求。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3459,7 +3459,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -3482,7 +3482,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增非广播跟踪区(ADD NONBCTA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置MME触发UE发起TAU请求的非广播跟踪区。 
@@ -3493,7 +3493,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -3501,10 +3501,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码，MCC的资源由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位，例如中国为460。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网络码，共2位，由国际电联(ITU)统一分配和管理，在一个移动国家码内是唯一标识一个移动网络，比如中国移动TD系统使用00，中国联通GSM系统使用01。
@@ -3515,7 +3515,7 @@ TAC|跟踪区域码(HEX)|参数可选性:必选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增非广播跟踪区，其中移动国家码为460、移动网号为11、跟踪区域码(HEX)为ddA4。 
@@ -3530,7 +3530,7 @@ ADD NONBCTA:MCC="460",MNC="11",TAC="ddA4";
 
 
 
-父主题： [非广播跟踪区配置](../../zh-CN/tree/N_12661191.html)
+父主题： [非广播跟踪区配置]
 
 
 
@@ -3553,7 +3553,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除非广播跟踪区(DEL NONBCTA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除非广播跟踪区。 
@@ -3561,7 +3561,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -3569,10 +3569,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码，MCC的资源由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位，例如中国为460。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网络码，共2位，由国际电联(ITU)统一分配和管理，在一个移动国家码内是唯一标识一个移动网络，比如中国移动TD系统使用00，中国联通GSM系统使用01。
@@ -3583,7 +3583,7 @@ TAC|跟踪区域码(HEX)|参数可选性:必选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除非广播跟踪区，其中移动国家码为460、移动网号为11、跟踪区域码(HEX)为ddA4。 
@@ -3598,7 +3598,7 @@ DEL NONBCTA:MCC="460",MNC="11",TAC="ddA4";
 
 
 
-父主题： [非广播跟踪区配置](../../zh-CN/tree/N_12661191.html)
+父主题： [非广播跟踪区配置]
 
 
 
@@ -3621,7 +3621,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询非广播跟踪区(SHOW NONBCTA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询非广播跟踪区配置信息。 
@@ -3629,7 +3629,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -3637,10 +3637,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型。|移动国家码，MCC的资源由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位，例如中国为460。
 MNC|移动网号|参数可选性:任选参数；参数类型:字符型。|移动网络码，共2位，由国际电联(ITU)统一分配和管理，在一个移动国家码内是唯一标识一个移动网络，比如中国移动TD系统使用00，中国联通GSM系统使用01。
@@ -3651,7 +3651,7 @@ TAC|跟踪区域码(HEX)|参数可选性:任选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询非广播跟踪区。 
@@ -3681,7 +3681,7 @@ SHOW NONBCTA;
 
 
 
-父主题： [非广播跟踪区配置](../../zh-CN/tree/N_12661191.html)
+父主题： [非广播跟踪区配置]
 
 
 
@@ -3704,7 +3704,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 路由区域编码配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 区域编码（Zone Code）用来定义用户是否允许漫游的位置区域，用户可以签约一个或多个区域编码，SGSN根据用户签约的区域编码来确定用户允许漫游的路由区。 
@@ -3715,7 +3715,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “路由区域编码配置”用于漫游限制功能，对于“SGSN IMSI号段区域编码配置”号段之外的用户进行接入区域限制的时候，需要在SGSN上配置区域编码和路由区的关系，以便SGSN在用户附着和RAU时，根据用户签约的区域列表、区域码与路由区关系配置以及用户当前的路由区，确定用户是否可以接入。 
@@ -3723,7 +3723,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 进行本配置之前，首先需要添加相应的路由区(RA），相应的命令为：
-                [ADD RAI](../mml/1262235.html)
+                [ADD RAI]
                 。
             
 
@@ -3733,7 +3733,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3766,7 +3766,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -3789,7 +3789,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增路由区区域编码配置(ADD RAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置路由区(RA)与区域编码（ZC）的对应关系。添加此配置之后，对于签约ZC的用户，如果是从签约ZC对应的路由区（RA）外的区域接入，会被SGSN拒绝。SGSN只允许已经签约的ZC用户接入。  
@@ -3797,7 +3797,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3818,10 +3818,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|系统维护人员可以根据需要和既定规则对当前的路由区区域编码进行命名。此名称可以作为当前配置信息的补充。该别名以便于理解和记忆为宜。
 RAI|路由区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|此处的路由区名称需配置为“路由区配置”中的路由区名称，用于和“路由区”信息进行关联。“路由区配置”通过命令ADD RAI生成。
@@ -3832,7 +3832,7 @@ ZC|区域编码(HEX)|参数可选性:必选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增路由区区域编码配置，其中用户别名为“RAIZC1”、路由区名为"RAI1"、区域编码为"A100"。  
@@ -3847,7 +3847,7 @@ ADD RAIZC:NAME="RAIZC1",RAI="RAI1",ZC="A100";
 
 
 
-父主题： [路由区域编码配置](../../zh-CN/tree/N_1254274.html)
+父主题： [路由区域编码配置]
 
 
 
@@ -3870,7 +3870,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改路由区区域编码配置(SET RAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改已经配置的路由区区域编码。当需要对已经配置的路由区区域编码记录的“用户别名”、“路由区名称”或“区域编码”进行修改的时候使用此命令。  
@@ -3878,15 +3878,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|系统维护人员可以根据需要和既定规则对当前的路由区区域编码进行命名。此名称可以作为当前配置信息的补充。该别名以便于理解和记忆为宜。
 RAI|路由区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|此处的路由区名称需配置为“路由区配置”中的路由区名称，用于和“路由区”信息进行关联。“路由区配置”通过命令ADD RAI生成。
@@ -3898,7 +3898,7 @@ NEWNAME|新用户别名|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改路由区区域编码配置，其中用户别名为"RAIZC1"、路由区名为"RAI1"、区域编码为"A100"。  
@@ -3913,7 +3913,7 @@ SET RAIZC:NAME="RAICZ1",RAI="RAI1",ZC="A100";
 
 
 
-父主题： [路由区域编码配置](../../zh-CN/tree/N_1254274.html)
+父主题： [路由区域编码配置]
 
 
 
@@ -3936,7 +3936,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除路由区区域编码配置(DEL RAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的路由区区域编码。当需要限制签约ZC的用户接入时，删除该签约用户所在路由区与区域编码的对应关系，以此达到限制用户接入的目的。  
@@ -3944,15 +3944,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|系统维护人员可以根据需要和既定规则对当前的路由区区域编码进行命名。此名称可以作为当前配置信息的补充。该别名以便于理解和记忆为宜。
 
@@ -3961,7 +3961,7 @@ NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除用户别名为"RAIZC1"的路由区区域编码配置。  
@@ -3976,7 +3976,7 @@ DEL RAIZC:NAME="RAIZC1";
 
 
 
-父主题： [路由区域编码配置](../../zh-CN/tree/N_1254274.html)
+父主题： [路由区域编码配置]
 
 
 
@@ -3999,7 +3999,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询路由区区域编码配置(SHOW RAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询配置的路由区区域编码。可以根据“用户别名”、“路由区名称”或“区域编码”来进行查询对应的路由区编码配置信息。如果不输入任何参数，则查询出所有的路由区编码配置信息。  
@@ -4007,15 +4007,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|系统维护人员可以根据需要和既定规则对当前的路由区区域编码进行命名。此名称可以作为当前配置信息的补充。该别名以便于理解和记忆为宜。
 RAI|路由区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|此处的路由区名称需配置为“路由区配置”中的路由区名称，用于和“路由区”信息进行关联。“路由区配置”通过命令ADD RAI生成。
@@ -4026,10 +4026,10 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|系统维护人员可以根据需要和既定规则对当前的路由区区域编码进行命名。此名称可以作为当前配置信息的补充。该别名以便于理解和记忆为宜。
 RAI|路由区名|参数可选性:任选参数；参数类型:字符型。|此处的路由区名称需配置为“路由区配置”中的路由区名称，用于和“路由区”信息进行关联。“路由区配置”通过命令ADD RAI生成。
@@ -4040,7 +4040,7 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询区域编码为"0001"的路由区区域编码配置。  
@@ -4071,7 +4071,7 @@ SHOW RAIZC:ZC="0001";
 
 
 
-父主题： [路由区域编码配置](../../zh-CN/tree/N_1254274.html)
+父主题： [路由区域编码配置]
 
 
 
@@ -4094,7 +4094,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # SGSN IMSI号段区域编码配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 区域编码（Zone Code）用来定义用户是否允许漫游的位置区域，用户可以签约一个或多个区域编码，SGSN根据用户签约的区域编码来确定用户允许漫游的路由区。 
@@ -4105,7 +4105,7 @@ SGSN支持对全局用户配置相同的区域编码和路由区映射关系，�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “SGSN IMSI号段区域编码配置”中用于漫游限制功能，可以对不同的IMSI号段的同一个区域码设置不同的路由区。SGSN在用户接入时，根据从HLR获取到的用户签约的区域编码、IMSI号码、当前接入的路由区和本配置中的路由区和IMSI号段区域编码对应关系，确定是否允许用户接入。 
@@ -4113,7 +4113,7 @@ SGSN支持对全局用户配置相同的区域编码和路由区映射关系，�
 
 
                 如果接入SGSN的用户号段不在SGSN IMSI号段区域编码配置中，SGSN根据路由区域码配置（命令为：
-                [ADD RAIZC](../mml/1262240.html)
+                [ADD RAIZC]
                 ）中的区域判断是否限制接入。
             
 
@@ -4123,7 +4123,7 @@ SGSN支持对全局用户配置相同的区域编码和路由区映射关系，�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4151,7 +4151,7 @@ SGSN支持对全局用户配置相同的区域编码和路由区映射关系，�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -4174,7 +4174,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增IMSI号段区域编码配置(ADD IMSI RAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置特定IMSI号段用户的路由区(RA)与区域编码（ZC）的对应关系。添加此配置之后，对于签约ZC的用户，如果是从签约ZC对应的路由区（RA）外的区域接入，将被SGSN拒绝。  
@@ -4182,7 +4182,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -4203,10 +4203,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI号段，针对该号段内的所有用户有效。
 RAI|路由区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|路由区ID，对应指定的路由区，通过ADD RAI命令生成。
@@ -4218,7 +4218,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置IMSI号段"46001"的用户，路由区名为"RAI1"，区域编码为"A100"。  
@@ -4233,7 +4233,7 @@ ADD IMSI RAIZC:IMSI="46001",RAI="RAI1",ZC="A100";
 
 
 
-父主题： [SGSN IMSI号段区域编码配置](../../zh-CN/tree/N_1254275.html)
+父主题： [SGSN IMSI号段区域编码配置]
 
 
 
@@ -4256,7 +4256,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除IMSI号段区域编码配置(DEL IMSI RAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除IMSI号段区域编码配置。删除条件为IMSI号段。删除该记录后，对应的IMSI号段的用户是否可以接入依据“路由区区域编码”配置来确定。  
@@ -4264,7 +4264,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -4272,10 +4272,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI号段，针对该号段内的所有用户有效。
 RAI|路由区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|路由区ID，对应指定的路由区，通过ADD RAI命令生成。
@@ -4286,7 +4286,7 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI号段"46001"的所有用户的区域编码配置。  
@@ -4301,7 +4301,7 @@ DEL IMSI RAIZC:IMSI="46001";
 
 
 
-父主题： [SGSN IMSI号段区域编码配置](../../zh-CN/tree/N_1254275.html)
+父主题： [SGSN IMSI号段区域编码配置]
 
 
 
@@ -4324,7 +4324,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询IMSI号段区域编码配置(SHOW IMSI RAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询IMSI号段区域编码配置。  
@@ -4332,7 +4332,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 如果不输入任何参数，则显示所有的“配置的IMSI号段路由区区域编码”记录； 否则仅显示入参指定的记录。  
@@ -4340,10 +4340,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|IMSI号段，针对该号段内的所有用户有效。
 RAI|路由区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|路由区ID，对应指定的路由区，通过ADD RAI命令生成。
@@ -4354,10 +4354,10 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型。|IMSI号段，针对该号段内的所有用户有效。
 RAI|路由区名|参数可选性:任选参数；参数类型:字符型。|路由区ID，对应指定的路由区，通过ADD RAI命令生成。
@@ -4369,7 +4369,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询IMSI号段为"46001"的区域编码配置。  
@@ -4398,7 +4398,7 @@ SHOW IMSI RAIZC:IMSI="46001";
 
 
 
-父主题： [SGSN IMSI号段区域编码配置](../../zh-CN/tree/N_1254275.html)
+父主题： [SGSN IMSI号段区域编码配置]
 
 
 
@@ -4421,7 +4421,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 跟踪区区域编码配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 区域编码(Zone Code)被用来定义用户是否允许漫游的位置区域，用户可以签约一个或多个区域编码， MME根据用户签约的区域编码确定允许漫游的跟踪区。 
@@ -4432,7 +4432,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 跟踪区区域编码配置”用于漫游限制功能。对于“MME IMSI号段区域编码配置”号段之外的用户进行接入区域编码检查的时候，需要在MME上配置区域编码和跟踪区的关系，以便MME在用户附着和TAU时，根据用户签约的区域列表、区域码与跟踪区关系配置以及用户当前的路由区，确定用户是否可以接入。 
@@ -4440,7 +4440,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 进行本配置之前，首先需要添加相应的跟踪区(TA），相应的命令为：
-                [ADD TA](../mml/1262200.html)
+                [ADD TA]
                 。
             
 
@@ -4450,7 +4450,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4483,7 +4483,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -4506,7 +4506,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增跟踪区区域编码配置(ADD TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置跟踪区(TA)与区域编码（ZC）的对应关系。当开启“MME支持区域限制”功能，对于“MME IMSI号段区域编码配置”号段之外的用户进行接入区域编码检查的时候，需要使用此命令。添加此配置之后，对于签约ZC的用户（除“MME IMSI号段区域编码配置”已经配置的IMSI号段外的用户），如果是从签约ZC对应的跟踪区（TA）外的区域接入，会被MME拒绝。 
@@ -4514,7 +4514,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -4535,10 +4535,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|用户自定义名称，便于记忆和识别跟踪区区域编码名称，无其他作用。
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|跟踪区标识，唯一标识本局已经配置的一跟踪区。通过ADD TA命令配置跟踪区的时候，生成各跟踪区标识，可通过SHOW TA命令查看。 此处标识特定的TA，便于配置或修改TA与ZC之间的对应关系。一个TAID（标识一个跟踪区）可以关联多个ZC。
@@ -4549,7 +4549,7 @@ ZC|区域编码(HEX)|参数可选性:必选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加用户别名为“ta4-zc2”的跟踪区区域配置，跟踪区TAI为4，区域编码0002。
@@ -4562,7 +4562,7 @@ ADD TAIZC:NAME="ta4-zc2",TAID=4,ZC="0002";
 
 
 
-父主题： [跟踪区区域编码配置](../../zh-CN/tree/N_1254254.html)
+父主题： [跟踪区区域编码配置]
 
 
 
@@ -4585,7 +4585,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改跟踪区区域编码配置(SET TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改跟踪区(TA)与区域编码(ZC)之间的对应关系。当需要对已经配置的跟踪区区域编码对应关系进行修改的时候，使用此命令。 
@@ -4593,7 +4593,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -4601,10 +4601,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|用户自定义名称，便于记忆和识别跟踪区区域编码名称，无其他作用。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|跟踪区标识，唯一标识本局已经配置的一跟踪区。通过ADD TA命令配置跟踪区的时候，生成各跟踪区标识，可通过SHOW TA命令查看。 此处标识特定的TA，便于配置或修改TA与ZC之间的对应关系。一个TAID（标识一个跟踪区）可以关联多个ZC。
@@ -4616,7 +4616,7 @@ NEWNAME|新用户别名|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置用户别名为“ta4-zc2”的跟踪区区域配置，跟踪区TAI为4，区域编码0002。
@@ -4629,7 +4629,7 @@ SET TAIZC:NAME="tazc4-2",TAID=4,ZC="0002";
 
 
 
-父主题： [跟踪区区域编码配置](../../zh-CN/tree/N_1254254.html)
+父主题： [跟踪区区域编码配置]
 
 
 
@@ -4652,7 +4652,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除跟踪区区域编码配置(DEL TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的跟踪区(TA)与区域编码(ZC)之间的对应关系。当确认部分TA与与ZC关联关系不再使用或错误的时候，可使用此命令删除之。 
@@ -4660,7 +4660,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令可以删除指定的用户别名的跟踪区区域编码配置，但当删除该记录之后，会导致相应的用户接入失败。 
@@ -4671,10 +4671,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|用户自定义名称，便于记忆和识别跟踪区区域编码名称，无其他作用。
 
@@ -4683,7 +4683,7 @@ NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除用户别名为“ta4-zc2”的跟踪区区域配置。
@@ -4696,7 +4696,7 @@ DEL TAIZC:NAME="tazc4-2";
 
 
 
-父主题： [跟踪区区域编码配置](../../zh-CN/tree/N_1254254.html)
+父主题： [跟踪区区域编码配置]
 
 
 
@@ -4719,7 +4719,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询跟踪区区域编码配置(SHOW TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于显示已经配置的跟踪区(TA)与区域编码(ZC)之间的对应关系。如果查询过程中指定用户别名可查询单条配置，如果不指定查询的用户别名显示所有已配置的跟踪区区域编码记录。 
@@ -4727,7 +4727,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -4735,10 +4735,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|用户自定义名称，便于记忆和识别跟踪区区域编码名称，无其他作用。
 
@@ -4747,10 +4747,10 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用户自定义名称，便于记忆和识别跟踪区区域编码名称，无其他作用。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数。|跟踪区标识，唯一标识本局已经配置的一跟踪区。通过ADD TA命令配置跟踪区的时候，生成各跟踪区标识，可通过SHOW TA命令查看。 此处标识特定的TA，便于配置或修改TA与ZC之间的对应关系。一个TAID（标识一个跟踪区）可以关联多个ZC。
@@ -4761,7 +4761,7 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示用户别名为“ta1-zc1”的跟踪区区域配置。
@@ -4788,7 +4788,7 @@ SHOW TAIZC:NAME="ta1-zc1";
 
 
 
-父主题： [跟踪区区域编码配置](../../zh-CN/tree/N_1254254.html)
+父主题： [跟踪区区域编码配置]
 
 
 
@@ -4811,7 +4811,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # MME IMSI号段区域编码配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 区域编码（Zone Code）用来定义用户是否允许漫游的位置区域，用户可以签约一个或多个区域编码，MME根据用户签约的区域编码来确定用户允许漫游的跟踪区。 
@@ -4822,7 +4822,7 @@ MME支持对全局用户配置相同的区域编码和跟踪区映射关系，�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “MME IMSI号段区域编码配置”中用于漫游限制功能，可以对不同的IMSI号段的同一个区域码设置不同的路由区。MME在用户接入时，根据从HSS获取到的用户签约的区域编码、IMSI号码、当前接入的跟踪区和本配置中的跟踪区和IMSI号段区域编码对应关系，确定是否允许用户接入。 
@@ -4830,7 +4830,7 @@ MME支持对全局用户配置相同的区域编码和跟踪区映射关系，�
 
 
                 如果接入MME的用户号段不在MME IMSI号段区域编码配置中，MME根据跟踪区域码配置（命令为：
-                [ADD TAIZC](../mml/1262205.html)
+                [ADD TAIZC]
                 ）中的区域判断是否限制接入。
             
 
@@ -4840,7 +4840,7 @@ MME支持对全局用户配置相同的区域编码和跟踪区映射关系，�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4873,7 +4873,7 @@ MME支持对全局用户配置相同的区域编码和跟踪区映射关系，�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -4896,7 +4896,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增MME IMSI号段区域编码配置(ADD MME IMSI TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置特定IMSI号段用户的跟踪区(TA)与区域编码（ZC）的对应关系。当需求针对不同号段用户进行接入区域进行限制检查的时候，需要添加此配置。添加此配置之后，对于签约ZC的用户，如果是从签约ZC对应的跟踪区（TA）外的区域接入，会被MME拒绝。 
@@ -4904,7 +4904,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -4929,10 +4929,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI国际移动用户识别码，储存在SIM卡中，区别移动用户的标志。 IMSI号段，即该号段内的用户。
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|跟踪区标识，即本局内各跟踪区的标识，每个标识对应本MME局内唯一的跟踪区。 在ADD TA命令配置TA的时候生成。
@@ -4945,7 +4945,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 添加46001号段，跟踪区标识为1、区域编码0001的记录。归属此号段的签约了ZC的用户，因不在此配置范围内而接入失败，失败原因值为“TANotAllowed”。
@@ -4958,7 +4958,7 @@ ADD MME IMSI TAIZC:IMSI="46001",TAID=1,ZC="0001",CAUSE="TANotAllowed",NAME="imsi
 
 
 
-父主题： [MME IMSI号段区域编码配置](../../zh-CN/tree/N_1254279.html)
+父主题： [MME IMSI号段区域编码配置]
 
 
 
@@ -4981,7 +4981,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改MME IMSI号段区域编码配置(SET MME IMSI TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改已经配置的IMSI号段跟踪区区域编码。当需要对已经配置的IMSI号段跟踪区区域编码记录的“限制接入原因”或“用户别名”进行修改的时候使用此命令。 
@@ -4989,7 +4989,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 使用此命令之前，已经配置的IMSI号段跟踪区区域编码记录，仅能修改其中的“限制接入原因”或“用户别名”属性。 
@@ -4997,10 +4997,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI国际移动用户识别码，储存在SIM卡中，区别移动用户的标志。 IMSI号段，即该号段内的用户。
 TAID|跟踪区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|跟踪区标识，即本局内各跟踪区的标识，每个标识对应本MME局内唯一的跟踪区。 在ADD TA命令配置TA的时候生成。
@@ -5013,7 +5013,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置46001号段，跟踪区标识为1、区域编码0001的跟踪区区域编码记录，对应的cause为“RoamNotAllowed”。
@@ -5026,7 +5026,7 @@ SET MME IMSI TAIZC:IMSI="46001",TAID=1,ZC="0001",CAUSE="RoamNotAllowed";
 
 
 
-父主题： [MME IMSI号段区域编码配置](../../zh-CN/tree/N_1254279.html)
+父主题： [MME IMSI号段区域编码配置]
 
 
 
@@ -5049,7 +5049,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除MME IMSI号段区域编码配置(DEL MME IMSI TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的IMSI号段跟踪区区域编码。删除时需要指定要删除的号段、跟踪区标识、相应的区域编码。删除之后，该号段内的用户接入时将采用默认的跟踪区号段进行接入区域检查。 
@@ -5057,18 +5057,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-删除之后，该号段内的用户接入时将采用默认的跟踪区号段进行接入区域检查。查询默认的跟踪区区域编码命令为：[SHOW TAIZC](1262208.html)。
+删除之后，该号段内的用户接入时将采用默认的跟踪区号段进行接入区域检查。查询默认的跟踪区区域编码命令为：[SHOW TAIZC]。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI国际移动用户识别码，储存在SIM卡中，区别移动用户的标志。 IMSI号段，即该号段内的用户。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|跟踪区标识，即本局内各跟踪区的标识，每个标识对应本MME局内唯一的跟踪区。 在ADD TA命令配置TA的时候生成。
@@ -5079,7 +5079,7 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除46001号段，跟踪区标识为1、区域编码0001的跟踪区区域编码记录。
@@ -5092,7 +5092,7 @@ DEL MME IMSI TAIZC:IMSI="46001",TAID=1,ZC="0001";
 
 
 
-父主题： [MME IMSI号段区域编码配置](../../zh-CN/tree/N_1254279.html)
+父主题： [MME IMSI号段区域编码配置]
 
 
 
@@ -5115,7 +5115,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询MME IMSI号段区域编码配置(SHOW MME IMSI TAIZC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于显示已经配置的IMSI号段跟踪区区域编码。可通过指定号段、跟踪区标识、相应的区域编码进行查询；也可以查询所有已经配置的记录。 
@@ -5123,7 +5123,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 如果不输入任何参数，则显示所有的“配置的IMSI号段跟踪区区域编码”记录；否则仅显示入参指定的记录。 
@@ -5131,10 +5131,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI国际移动用户识别码，储存在SIM卡中，区别移动用户的标志。 IMSI号段，即该号段内的用户。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|跟踪区标识，即本局内各跟踪区的标识，每个标识对应本MME局内唯一的跟踪区。 在ADD TA命令配置TA的时候生成。
@@ -5145,10 +5145,10 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI国际移动用户识别码，储存在SIM卡中，区别移动用户的标志。 IMSI号段，即该号段内的用户。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数。|跟踪区标识，即本局内各跟踪区的标识，每个标识对应本MME局内唯一的跟踪区。 在ADD TA命令配置TA的时候生成。
@@ -5161,7 +5161,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示所有已经配置的IMSI号段跟踪区区域编码记录。
@@ -5188,7 +5188,7 @@ SHOW MME IMSI TAIZC
 
 
 
-父主题： [MME IMSI号段区域编码配置](../../zh-CN/tree/N_1254279.html)
+父主题： [MME IMSI号段区域编码配置]
 
 
 
@@ -5211,7 +5211,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # SGSN限制区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 限制区域被用来定义用户是否允许漫游的位置区域。限制区域与区域编码的区别：限制区域不是用户签约数据，只需要在SGSN上根据用户号段配置限制区域列表。 
@@ -5222,7 +5222,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 如果运营商只希望在某一个或几个SGSN上开展不同类型用户移动范围不同的业务，则直接在SGSN上进行限制区域配置，不需要对用户在HLR上签约。 
@@ -5236,7 +5236,7 @@ SGSN根据用户当前接入位置或路由区、IMSI或MSISDN号码判断是否
 
 
                 本配置完成后还需要进行“SGSN号段区域限制配置，命令为：
-                [ADD SGSN NUMSEG RESTRICT AREA](../mml/1262265.html)
+                [ADD SGSN NUMSEG RESTRICT AREA]
                 ”。
             
 
@@ -5246,7 +5246,7 @@ SGSN根据用户当前接入位置或路由区、IMSI或MSISDN号码判断是否
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -5274,7 +5274,7 @@ SGSN根据用户当前接入位置或路由区、IMSI或MSISDN号码判断是否
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -5297,7 +5297,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增SGSN限制区域配置(ADD SGSN RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置SGSN各个限制区域对应的地理区域，每个限制区域可以包括一个或多个路由区或位置区或PLMN。 
@@ -5306,12 +5306,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 当需要限制特定号段的用户从特定的位置区或者路由区或者PLMN接入本SGSN时，使用该命令。 
 
 
-该命令中的限制区域标识AREAID 被“SGSN号段区域限制配置”关联，对应命令为 [ADD SGSN NUMSEG RESTRICT AREA](1262265.html)。
+该命令中的限制区域标识AREAID 被“SGSN号段区域限制配置”关联，对应命令为 [ADD SGSN NUMSEG RESTRICT AREA]。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 一个限制区域可以包含多个路由区和/或位置区和/或PLMN；一个路由区和/或位置区和/或PLMN也可以被多个限制区域使用。 
@@ -5319,10 +5319,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|该限制区域的标识，在“新增SGSN号段限制区域配置”时使用。新增SGSN号段限制区域配置的命令为：ADD SGSN NUMSEG RESTRICT AREA。
 LANAME|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数表示运营商规划的一个位置区的名称。此处的名称必须使用“SGSN位置区配置”中的位置区名称，不能随意填写。查看“SGSN位置区配置”的命令为：SHOW LAI。位置区用于表示用户所在的位置区信息，格式为MCC+MNC+LAC，更多的详细信息请参考24008–860协议10.5.1.3章节。
@@ -5337,7 +5337,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增限制区域配置，其中限制区域标识为1、位置区名为LAI1、用户别名为Area1。 
@@ -5352,7 +5352,7 @@ ADD SGSN RESTRICT AREA:AREAID=1,LANAME="LAI1",NAME="Area1";
 
 
 
-父主题： [SGSN限制区域配置](../../zh-CN/tree/N_1254276.html)
+父主题： [SGSN限制区域配置]
 
 
 
@@ -5375,7 +5375,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除SGSN限制区域配置(DEL SGSN RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除SGSN已经配置的限制区域标识（AREAID）与路由区、位置区或PLMN之间的对应关系。 
@@ -5386,18 +5386,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-删除某限制区的时候，需要先查看该限制区AREAID是否被 “SGSN号段区域限制配置”中关联，查看命令：[SHOW SGSN NUMSEG RESTRICT AREA](1262268.html)， 如果已经被关联，需要先使用[SHOW SGSN NUMSEG RESTRICT AREA](1262268.html)命令删除关联关系。
+删除某限制区的时候，需要先查看该限制区AREAID是否被 “SGSN号段区域限制配置”中关联，查看命令：[SHOW SGSN NUMSEG RESTRICT AREA]， 如果已经被关联，需要先使用[SHOW SGSN NUMSEG RESTRICT AREA]命令删除关联关系。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|该限制区域的标识，在“新增SGSN号段限制区域配置”时使用。新增SGSN号段限制区域配置的命令为：ADD SGSN NUMSEG RESTRICT AREA。
 WITHALLSUBITEMS|删除下属所有区域|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:NO。|该参数在删除限制区域配置时使用。取值含义：否（NO）：只删除输入的限制区域标识下属的指定区域，此时需要输入需要删除的位置区或者路由区名称。是（YES）：删除输入的限制区域标识下属的所有区域。且不需要输入位置区和路由区名称。
@@ -5412,7 +5412,7 @@ PLMNMNC|移动网号|参数可选性:必选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除限制区域标识为1的下属所有限制区域。 
@@ -5427,7 +5427,7 @@ DEL SGSN RESTRICT AREA:AREAID=1,WITHALLSUBITEMS="YES";
 
 
 
-父主题： [SGSN限制区域配置](../../zh-CN/tree/N_1254276.html)
+父主题： [SGSN限制区域配置]
 
 
 
@@ -5450,7 +5450,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询SGSN限制区域配置(SHOW SGSN RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 显示已经配置的各限制区与路由区和/或位置区和/或PLMN的关系。可以根据限制区标识和路由区和/或位置区和/或PLMN查询一条对应关系，也可以查询所有已经配置的对应关系。 
@@ -5458,18 +5458,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-删除某限制区的时候，需要先查看该限制区AREAID是否被 “SGSN号段区域限制配置”中关联，查看命令：[SHOW SGSN NUMSEG RESTRICT AREA](1262268.html)， 如果已经被关联，需要先使用[SHOW SGSN NUMSEG RESTRICT AREA](1262268.html)命令删除关联关系。
+删除某限制区的时候，需要先查看该限制区AREAID是否被 “SGSN号段区域限制配置”中关联，查看命令：[SHOW SGSN NUMSEG RESTRICT AREA]， 如果已经被关联，需要先使用[SHOW SGSN NUMSEG RESTRICT AREA]命令删除关联关系。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|该限制区域的标识，在“新增SGSN号段限制区域配置”时使用。新增SGSN号段限制区域配置的命令为：ADD SGSN NUMSEG RESTRICT AREA。
 LANAME|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数表示运营商规划的一个位置区的名称。此处的名称必须使用“SGSN位置区配置”中的位置区名称，不能随意填写。查看“SGSN位置区配置”的命令为：SHOW LAI。位置区用于表示用户所在的位置区信息，格式为MCC+MNC+LAC，更多的详细信息请参考24008–860协议10.5.1.3章节。
@@ -5483,10 +5483,10 @@ PLMNMNC|移动网号|参数可选性:必选参数；参数类型:字符型；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数。|该限制区域的标识，在“新增SGSN号段限制区域配置”时使用。新增SGSN号段限制区域配置的命令为：ADD SGSN NUMSEG RESTRICT AREA。
 LANAME|位置区名|参数可选性:任选参数；参数类型:字符型。|该参数表示运营商规划的一个位置区的名称。此处的名称必须使用“SGSN位置区配置”中的位置区名称，不能随意填写。查看“SGSN位置区配置”的命令为：SHOW LAI。位置区用于表示用户所在的位置区信息，格式为MCC+MNC+LAC，更多的详细信息请参考24008–860协议10.5.1.3章节。
@@ -5499,7 +5499,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|起�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询标识为1的限制区域配置信息。 
@@ -5529,7 +5529,7 @@ SHOW SGSN RESTRICT AREA:AREAID=1;
 
 
 
-父主题： [SGSN限制区域配置](../../zh-CN/tree/N_1254276.html)
+父主题： [SGSN限制区域配置]
 
 
 
@@ -5552,7 +5552,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # MME限制区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 限制区域被用来定义用户是否允许漫游的位置区域。限制区域与区域编码的区别：限制区域不是用户签约数据，只需要在MME上根据用户号段配置限制区域列表。 
@@ -5563,7 +5563,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 如果运营商只希望在某一个或几个MME上开展不同类型用户移动范围不同的业务，则直接在MME上进行限制区域配置，不需要对用户在HSS上签约。 
@@ -5583,7 +5583,7 @@ MME根据用户当前接入跟踪区、IMSI或MSISDN号码判断是否限制用�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -5611,7 +5611,7 @@ MME根据用户当前接入跟踪区、IMSI或MSISDN号码判断是否限制用�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -5634,7 +5634,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增MME限制区域配置(ADD MME RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置各个限制区域对应的跟踪区（TA）范围，每个限制区域可以包括一个或多个跟踪区（TA）。 当需要开启IMSI号段区域限制功能的时候，特定号段内的用户在指定的区域内禁止接入。此命令可以生成各个限制区域对应的具体TA范围。 
@@ -5642,7 +5642,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -5664,10 +5664,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|MME上限制区域的标识，每个标识对应唯一个限制区域，该限制区域可以对应一个或多个跟踪区。该限制区标识被“MME号段限制区域配置”命令关联使用，对应命令为 SHOW MME NUMSEG RESTRICT AREA。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|MME内已配置的跟踪区的标识，每个标识对应唯一的一个跟踪区，代表一个跟踪区。该标识由配置命令ADD TA生成。
@@ -5681,7 +5681,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一个限制区域，区域标识为1，该区域对应两个标识分别为1、2的跟踪区。 
@@ -5696,7 +5696,7 @@ ADD MME RESTRICT AREA:AREAID=1,TAID=1&2;
 
 
 
-父主题： [MME限制区域配置](../../zh-CN/tree/N_1254255.html)
+父主题： [MME限制区域配置]
 
 
 
@@ -5719,7 +5719,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除MME限制区域配置(DEL MME RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的限制区域(AREAID)与跟踪区标识(TAID)之间的对应关系。 
@@ -5727,7 +5727,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -5744,10 +5744,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|MME上限制区域的标识，每个标识对应唯一个限制区域，该限制区域可以对应一个或多个跟踪区。该限制区标识被“MME号段限制区域配置”命令关联使用，对应命令为 SHOW MME NUMSEG RESTRICT AREA。
 WITHALLSUBITEMS|删除下属所有区域|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:NO。|删除限制区域下的跟踪区，在删除限制区域时用到，当设置该参数为“是”时，会删除指定限制区下的所有跟踪区。
@@ -5761,7 +5761,7 @@ PLMN|PLMN|参数可选性:任选参数；参数类型:复合参数|PLMN识别号
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除标识为1的限制区域下的一个标识（TAID）为1的跟踪区。
@@ -5774,7 +5774,7 @@ DEL MME RESTRICT AREA:AREAID=1,WITHALLSUBITEMS="NO",TAID=1;
 
 
 
-父主题： [MME限制区域配置](../../zh-CN/tree/N_1254255.html)
+父主题： [MME限制区域配置]
 
 
 
@@ -5797,12 +5797,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询MME限制区域配置(SHOW MME RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 显示已经配置的各限制区与跟踪区的关系。可以根据限制区标识和跟踪区标识查询一条对应关系，也可以查询所有已经配置的对应关系。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -5810,10 +5810,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|MME上限制区域的标识，每个标识对应唯一个限制区域，该限制区域可以对应一个或多个跟踪区。该限制区标识被“MME号段限制区域配置”命令关联使用，对应命令为 SHOW MME NUMSEG RESTRICT AREA。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|MME内已配置的跟踪区的标识，每个标识对应唯一的一个跟踪区，代表一个跟踪区。该标识由配置命令ADD TA生成。
@@ -5826,10 +5826,10 @@ PLMN|PLMN|参数可选性:任选参数；参数类型:复合参数|PLMN识别号
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数。|MME上限制区域的标识，每个标识对应唯一个限制区域，该限制区域可以对应一个或多个跟踪区。该限制区标识被“MME号段限制区域配置”命令关联使用，对应命令为 SHOW MME NUMSEG RESTRICT AREA。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数。|MME内已配置的跟踪区的标识，每个标识对应唯一的一个跟踪区，代表一个跟踪区。该标识由配置命令ADD TA生成。
@@ -5841,7 +5841,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示已经配置的各限制区与跟踪区的关系。
@@ -5869,7 +5869,7 @@ SHOW MME RESTRICT AREA
 
 
 
-父主题： [MME限制区域配置](../../zh-CN/tree/N_1254255.html)
+父主题： [MME限制区域配置]
 
 
 
@@ -5892,7 +5892,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # SGSN号段限制区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 限制区域被用来定义用户是否允许漫游的位置区域。限制区域与区域编码的区别：限制区域不是用户签约数据，只需要在SGSN上根据用户号段配置限制区域列表。 
@@ -5903,7 +5903,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “SGSN号段限制区域配置”中用于漫游限制功能，通过配置号段、号码类型和限制区域标识，可以对不同的IMSI号段或MSISDN号段设置不同的漫游区域。 
@@ -5920,7 +5920,7 @@ SGSN在用户接入时，根据用户当前的路由区或位置区或PLMN、IMS
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -5963,7 +5963,7 @@ SGSN在用户接入时，根据用户当前的路由区或位置区或PLMN、IMS
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -5986,12 +5986,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置SGSN号段限制区域策略配置(SET SGSN NUMSEG RESTRICT AREA POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置SGSN号段限制区域策略配置
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -5999,10 +5999,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNSPTIMSISEGREST|SGSN是否支持基于IMSI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置SGSN是否支持基于IMSI号段的区域限制。
 SGSNSPTIMEISEGREST|SGSN是否支持基于IMEI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置SGSN是否支持基于IMEI号段的区域限制。
@@ -6015,7 +6015,7 @@ SGSNDFTREJCAUSE|SGSN区域限制缺省拒绝原因|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGSN号段限制区域策略配置。 
@@ -6030,7 +6030,7 @@ SET SGSN NUMSEG RESTRICT AREA POLICY:SGSNSPTIMSISEGREST="NO",SGSNSPTIMEISEGREST=
 
 
 
-父主题： [SGSN号段限制区域配置](../../zh-CN/tree/N_1254277.html)
+父主题： [SGSN号段限制区域配置]
 
 
 
@@ -6053,12 +6053,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询SGSN号段限制区域策略配置(SHOW SGSN NUMSEG RESTRICT AREA POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询SGSN号段限制区域策略配置
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -6066,10 +6066,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNSPTIMSISEGREST|SGSN是否支持基于IMSI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置SGSN是否支持基于IMSI号段的区域限制。
 SGSNSPTIMEISEGREST|SGSN是否支持基于IMEI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置SGSN是否支持基于IMEI号段的区域限制。
@@ -6082,7 +6082,7 @@ SGSNDFTREJCAUSE|SGSN区域限制缺省拒绝原因|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN号段限制区域策略配置。 
@@ -6112,7 +6112,7 @@ SHOW SGSN NUMSEG RESTRICT AREA POLICY;
 
 
 
-父主题： [SGSN号段限制区域配置](../../zh-CN/tree/N_1254277.html)
+父主题： [SGSN号段限制区域配置]
 
 
 
@@ -6135,7 +6135,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增SGSN号段限制区域配置(ADD SGSN NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增SGSN号段限制区域配置。当需要限制某个号段的用户、在特定的路由区或位置区或PLMN下，只有指定特征的业务可以接入设备时使用该命令。 
@@ -6143,7 +6143,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -6169,10 +6169,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|和“号段类型”参数组合使用。表示一个IMSI号段或者MSISDN号段或者IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定”号段“中输入的号段是IMSI号段、MSISDN号段还是IMEI号段。
@@ -6187,7 +6187,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增SGSN号段限制区域配置，其中号段为46001、号段类型为IMSI、适用所有区域为是、限制接入原因为PLMNNotAllowed、允许业务为SIM2G和SIM3G、用户别名为A。 
@@ -6203,7 +6203,7 @@ ADD SGSN NUMSEG RESTRICT AREA:NUMSEG="46001",NUMTYPE="IMSI",ISALLRA="YES",CAUSE=
 
 
 
-父主题： [SGSN号段限制区域配置](../../zh-CN/tree/N_1254277.html)
+父主题： [SGSN号段限制区域配置]
 
 
 
@@ -6226,7 +6226,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改SGSN号段限制区域配置(SET SGSN NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改SGSN号段限制区域配置。 
@@ -6252,7 +6252,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -6260,10 +6260,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|和“号段类型”参数组合使用。表示一个IMSI号段或者MSISDN号段或者IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定”号段“中输入的号段是IMSI号段、MSISDN号段、还是IMEI号段。
@@ -6278,7 +6278,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改SGSN号段限制区域配置，其中号段为46001、号段类型为IMSI、适用所有区域为是、限制接入原因为PLMNNotAllowed、允许业务为USIM2G、用户别名为B。 
@@ -6294,7 +6294,7 @@ SET SGSN NUMSEG RESTRICT AREA:NUMSEG="46001",NUMTYPE="IMSI",ISALLRA="YES",CAUSE=
 
 
 
-父主题： [SGSN号段限制区域配置](../../zh-CN/tree/N_1254277.html)
+父主题： [SGSN号段限制区域配置]
 
 
 
@@ -6317,7 +6317,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除SGSN号段限制区域配置(DEL SGSN NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除SGSN号段限制区域配置。 
@@ -6328,7 +6328,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -6336,10 +6336,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|和“号段类型”参数组合使用。表示一个IMSI号段或者MSISDN号段或者IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定”号段“中输入的号段是IMSI号段、MSISDN号段还是IMEI号段。
@@ -6351,7 +6351,7 @@ AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除SGSN号段限制区域配置，其中号段为46001、号段类型为IMSI、适用所有区域为是。 
@@ -6366,7 +6366,7 @@ DEL SGSN NUMSEG RESTRICT AREA:NUMSEG="46001",NUMTYPE="IMSI",ISALLRA="YES";
 
 
 
-父主题： [SGSN号段限制区域配置](../../zh-CN/tree/N_1254277.html)
+父主题： [SGSN号段限制区域配置]
 
 
 
@@ -6389,7 +6389,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询SGSN号段限制区域配置(SHOW SGSN NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询SGSN号段限制区域配置。显示信息根据输入参数的不同而有如下不同： 
@@ -6413,7 +6413,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -6421,10 +6421,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|和“号段类型”参数组合使用。表示一个IMSI号段或者MSISDN号段或者IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定”号段“中输入的号段是IMSI号段、MSISDN号段还是IMEI号段。
@@ -6436,10 +6436,10 @@ AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:任选参数；参数类型:字符型。|和“号段类型”参数组合使用。表示一个IMSI号段或者MSISDN号段或者IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定”号段“中输入的号段是IMSI号段、MSISDN号段还是IMEI号段。
@@ -6454,7 +6454,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|起�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN号段限制区域配置，其中号段为46001、号段类型为IMSI。 
@@ -6484,7 +6484,7 @@ SHOW SGSN NUMSEG RESTRICT AREA:NUMSEG="46001",NUMTYPE="IMSI";
 
 
 
-父主题： [SGSN号段限制区域配置](../../zh-CN/tree/N_1254277.html)
+父主题： [SGSN号段限制区域配置]
 
 
 
@@ -6507,7 +6507,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # MME号段限制区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 限制区域被用来定义用户是否允许漫游的位置区域。限制区域与区域编码的区别：限制区域不是用户签约数据，只需要在MME上根据用户号段配置限制区域列表。 
@@ -6518,7 +6518,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “MME IMSI号段限制区域配置”中用于漫游限制功能，通过配置IMSI号段和限制区域标识，可以对不同的IMSI号段设置不同的漫游区域。 
@@ -6532,7 +6532,7 @@ MME在用户接入时，根据用户当前的跟踪区、IMSI号码、本配置�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6575,7 +6575,7 @@ MME在用户接入时，根据用户当前的跟踪区、IMSI号码、本配置�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -6598,12 +6598,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置MME号段限制区域策略配置(SET MME NUMSEG RESTRICT AREA POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置MME号段限制区域策略配置
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -6611,10 +6611,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMESPTIMSISEGREST|MME是否支持基于IMSI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置MME是否支持基于IMSI号段的区域限制。
 MMESPTIMEISEGREST|MME是否支持基于IMEI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置MME是否支持基于IMEI号段的区域限制。
@@ -6630,7 +6630,7 @@ MMEDFTREJEXTCAUSE|MME区域限制缺省扩展原因|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME号段限制区域策略配置。 
@@ -6645,7 +6645,7 @@ SET MME NUMSEG RESTRICT AREA POLICY:MMESPTIMSISEGREST="NO",MMESPTIMEISEGREST="NO
 
 
 
-父主题： [MME号段限制区域配置](../../zh-CN/tree/N_1254256.html)
+父主题： [MME号段限制区域配置]
 
 
 
@@ -6668,12 +6668,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询MME号段限制区域策略配置(SHOW MME NUMSEG RESTRICT AREA POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询MME号段限制区域策略配置
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -6681,10 +6681,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMESPTIMSISEGREST|MME是否支持基于IMSI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置MME是否支持基于IMSI号段的区域限制。
 MMESPTIMEISEGREST|MME是否支持基于IMEI号段的区域限制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置MME是否支持基于IMEI号段的区域限制。
@@ -6700,7 +6700,7 @@ MMEDFTREJEXTCAUSE|MME区域限制缺省扩展原因|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 SHOW MME NUMSEG RESTRICT AREA POLICY; 
@@ -6728,7 +6728,7 @@ SHOW MME NUMSEG RESTRICT AREA POLICY;
 
 
 
-父主题： [MME号段限制区域配置](../../zh-CN/tree/N_1254256.html)
+父主题： [MME号段限制区域配置]
 
 
 
@@ -6751,7 +6751,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增MME号段限制区域配置(ADD MME NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME增加号段限制区域配置信息。当需要在MME上对用户进行接入限制时，使用该命令。号段关联配置了MME限制区域后，在用户移动到该MME接入时，可以本地进行限制区域检查，从而限制用户接入。 
@@ -6762,7 +6762,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -6786,10 +6786,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~16个字符。|号段是从号码中取前面特定位数的号码作为一部分用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置号段来达到对特定部分用户进行区域限制的作用，而不需要将每个用户的完整号码都配置上。
 NUMTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定“号段”中输入的号段是IMSI号段、MSISDN号段、还是IMEI号段。
@@ -6805,7 +6805,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加号段460011用户，号段类型为IMSI，限制所有区域内不允许接入，限制接入的原因值为"用户漫游时不允许接入，RoamNotAllowed"。 
@@ -6820,7 +6820,7 @@ ADD MME NUMSEG RESTRICT AREA:NUMSEG="460011",NUMTYPE="IMSI",ISALLTA="YES",ACCESS
 
 
 
-父主题： [MME号段限制区域配置](../../zh-CN/tree/N_1254256.html)
+父主题： [MME号段限制区域配置]
 
 
 
@@ -6843,7 +6843,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改MME号段限制区域配置(SET MME NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME修改号段限制区域配置信息。当需要修改MME上对用户进行接入区域限制时，使用该命令。号段关联配置了MME限制区域后，在用户移动到该MME接入时，可以本地进行限制区域检查，从而限制用户接入。 
@@ -6851,7 +6851,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -6875,10 +6875,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~16个字符。|和“号段类型”参数组合使用。表示一个IMSI/MSISDN/IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段、还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定“号段”中输入的号段是IMSI号段、MSISDN号段、还是IMEI号段。
@@ -6894,7 +6894,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改号段类型为IMSI，号段为460011的用户，限制所有区域内不允许接入，限制接入的原因值为“PLMNNotAllowed”。 
@@ -6909,7 +6909,7 @@ SET MME NUMSEG RESTRICT AREA:NUMSEG="460011",NUMTYPE="IMSI",ISALLTA="YES",ACCESS
 
 
 
-父主题： [MME号段限制区域配置](../../zh-CN/tree/N_1254256.html)
+父主题： [MME号段限制区域配置]
 
 
 
@@ -6932,7 +6932,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除MME号段限制区域配置(DEL MME NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME删除号段限制区域配置信息。当需要删除MME上对用户进行接入区域限制时，使用该命令。删除号段关联的MME限制区域配置后，在用户移动到该MME接入时，MME不对该用户进行区域接入限制。 
@@ -6940,15 +6940,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-需要删除的号段限制区域配置信息必须是已配置存在的。可通过[SHOW MME NUMSEG RESTRICT AREA](../mml/1262218.html)命令查询已存在的MME号段限制区域配置。
-
-
-[](None)参数说明 
+需要删除的号段限制区域配置信息必须是已配置存在的。可通过[SHOW MME NUMSEG RESTRICT AREA]命令查询已存在的MME号段限制区域配置。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~16个字符。|和“号段类型”参数组合使用。表示一个IMSI/MSISDN/IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段、还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定“号段”中输入的号段是IMSI号段、MSISDN号段、还是IMEI号段。
@@ -6960,7 +6960,7 @@ AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除已被限制所有区域接入的号段类型为IMSI，号段为460011的用户，不再限制所有区域接入。 
@@ -6975,7 +6975,7 @@ DEL MME NUMSEG RESTRICT AREA:NUMSEG="460011",NUMTYPE="IMSI",ISALLTA="YES";
 
 
 
-父主题： [MME号段限制区域配置](../../zh-CN/tree/N_1254256.html)
+父主题： [MME号段限制区域配置]
 
 
 
@@ -6998,7 +6998,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询MME号段限制区域配置(SHOW MME NUMSEG RESTRICT AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME查询号段限制区域配置信息。当需要查询MME号段限制区域配置信息时，使用该命令。 
@@ -7009,18 +7009,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-在查询之前，需已完成MME号段限制区域配置。增加MME号段限制区域配置的命令为：[ADD MME NUMSEG RESTRICT AREA](../mml/1262215.html)。
+在查询之前，需已完成MME号段限制区域配置。增加MME号段限制区域配置的命令为：[ADD MME NUMSEG RESTRICT AREA]。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~16个字符。|和“号段类型”参数组合使用。表示一个IMSI/MSISDN/IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段、还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定“号段”中输入的号段是IMSI号段、MSISDN号段、还是IMEI号段。
@@ -7032,10 +7032,10 @@ AREAID|限制区域标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUMSEG|号段|参数可选性:任选参数；参数类型:字符型。|和“号段类型”参数组合使用。表示一个IMSI/MSISDN/IMEI号段。通过“号段类型”参数来确定该参数是IMSI号段、MSISDN号段、还是IMEI号段。其中，IMSI号段是指长度小于等于IMSI长度的一个前缀，前缀相同的IMSI都属于同一个IMSI号段；MSISDN号段指长度小于等于MSISDN长度的一个前缀，前缀相同的MSISDN都属于同一个MSISDN号段；IMEI号段指长度小于等于IMEI长度的一个前缀，前缀相同的IMEI都属于同一个IMEI号段。
 NUMTYPE|号段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|和“号段”参数组合使用。用于确定“号段”中输入的号段是IMSI号段、MSISDN号段、还是IMEI号段。
@@ -7051,7 +7051,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|对�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询号段460011用户的限制区域配置信息。 
@@ -7081,7 +7081,7 @@ SHOW MME NUMSEG RESTRICT AREA:NUMSEG="460011";
 
 
 
-父主题： [MME号段限制区域配置](../../zh-CN/tree/N_1254256.html)
+父主题： [MME号段限制区域配置]
 
 
 
@@ -7104,7 +7104,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # Serving GW管理区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 Serving GW即SGW，一个SGW管理一个及以上跟踪区域TA。一个TA可以被多个SGW管理。 
@@ -7121,7 +7121,7 @@ Serving GW即SGW，一个SGW管理一个及以上跟踪区域TA。一个TA可以
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 Serving GW管理区域配置配置SGW名称和TA组号，Serving GW管理区域配置用于以下两种情况： 
@@ -7143,7 +7143,7 @@ Serving GW管理区域配置配置SGW名称和TA组号，Serving GW管理区域�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7196,7 +7196,7 @@ Serving GW管理区域配置配置SGW名称和TA组号，Serving GW管理区域�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -7219,7 +7219,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增Serving GW管理区域(ADD SGW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增Serving GateWay和其管理的跟踪区域，运营商根据规划需要新增SGW和所管理的TA组时使用该命令。  
@@ -7227,7 +7227,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -7248,10 +7248,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。配置后，跟踪区组号下的TA都关联“SGW标准名称”对应的SGW。GRPLIST在TA配置中配置，可以通过命令SHOW TA查询跟踪区组号。
@@ -7261,7 +7261,7 @@ GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增Serving GW管理区域配置，其中SGW标准名称为cnwap，跟踪区组号为1。 
@@ -7276,7 +7276,7 @@ GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数；参
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7299,7 +7299,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改Serving GW管理区域(SET SGW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于重新设定某个已配置的Serving GateWay所管理的跟踪区域。  
@@ -7307,7 +7307,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令执行成功后，修改前该SGW所管理的TA组都会被删除，取而代之的是重新设定的TA组。  
@@ -7315,10 +7315,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 GRPLIST|跟踪区组号|参数可选性:任选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。配置后，跟踪区组号下的TA都关联“SGW标准名称”对应的SGW。GRPLIST在TA配置中配置，可以通过命令SHOW TA查询跟踪区组号。
@@ -7328,7 +7328,7 @@ GRPLIST|跟踪区组号|参数可选性:任选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改Serving GW管理区域配置，将SGW标准名称为cnwap的跟踪区组号修改为1和2。 
@@ -7343,7 +7343,7 @@ SET SGW:SGWNAME="cnwap",GRPLIST=1&2;
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7366,7 +7366,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 增加Serving GW管理跟踪区组(ADD SGW GRPLIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于已配置的Serving GateWay新增其管理的跟踪区域。 
@@ -7374,18 +7374,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-如果需要追加新的SGW和其管理的TA组时，不能使用该命令，需要使用“新增Serving GW管理区域”方式添加，命令为[ADD SGW](1262220.html)。 
+如果需要追加新的SGW和其管理的TA组时，不能使用该命令，需要使用“新增Serving GW管理区域”方式添加，命令为[ADD SGW]。 
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。配置后，跟踪区组号下的TA都关联“SGW标准名称”对应的SGW。GRPLIST在TA配置中配置，可以通过命令SHOW TA查询跟踪区组号。
@@ -7395,7 +7395,7 @@ GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加Serving GW管理跟踪区组，将SGW标准名称为cnwap，增加跟踪区组号4。 
@@ -7410,7 +7410,7 @@ ADD SGW GRPLIST:SGWNAME="cnwap",GRPLIST=4;
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7433,7 +7433,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除Serving GW管理跟踪区组(DEL SGW GRPLIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除某个已配置的Serving GateWay所管理的单个或多个跟踪区组，通过同时输入SGW标准名称和跟踪区组标识进行删除，并且跟踪区组标识必须归属于输入的SGW。  
@@ -7441,18 +7441,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-如果需要完全删除某个SGW和其管理的TA时，不能使用该命令，需要使用“删除Serving GW管理区域”方法删除，命令为[DEL SGW](1262222.html)。 
+如果需要完全删除某个SGW和其管理的TA时，不能使用该命令，需要使用“删除Serving GW管理区域”方法删除，命令为[DEL SGW]。 
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。配置后，跟踪区组号下的TA都关联“SGW标准名称”对应的SGW。GRPLIST在TA配置中配置，可以通过命令SHOW TA查询跟踪区组号。
@@ -7462,7 +7462,7 @@ GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除SGWNAME为A管理的跟踪区标识为1的配置。 
@@ -7477,7 +7477,7 @@ DEL SGW GRPLIST:SGWNAME="A",GRPLIST=1;
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7500,7 +7500,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除Serving GW管理区域(DEL SGW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除某个已配置的Serving GateWay，通过输入SGW标准名称删除该SGW下的所有TA组。  
@@ -7508,18 +7508,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-如果需要删除某个TA组时，不能使用该命令，需要使用“删除Serving GW管理跟踪区”方式删除，命令为[DEL SGW GRPLIST](1262226.html)。 
+如果需要删除某个TA组时，不能使用该命令，需要使用“删除Serving GW管理跟踪区”方式删除，命令为[DEL SGW GRPLIST]。 
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 
@@ -7528,7 +7528,7 @@ SGWNAME|SGW标准名称|参数可选性:必选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除Serving GW管理区域，将SGW标准名称为cnwap删除。 
@@ -7543,7 +7543,7 @@ DEL SGW:SGWNAME="cnwap";
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7566,7 +7566,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询Serving GW管理区域(SHOW SGW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询Serving GateWay和其管理的跟踪区域，输入SGW标准名称或不输入，查询结果为SGW和TA组的对应关系。  
@@ -7574,7 +7574,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7582,10 +7582,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 
@@ -7594,10 +7594,10 @@ SGWNAME|SGW标准名称|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:任选参数；参数类型:字符型。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 GRPLIST|跟踪区组号|参数可选性:任选参数；参数类型:字符型。|该参数标识TA归属的组号。配置后，跟踪区组号下的TA都关联“SGW标准名称”对应的SGW。GRPLIST在TA配置中配置，可以通过命令SHOW TA查询跟踪区组号。
@@ -7607,7 +7607,7 @@ GRPLIST|跟踪区组号|参数可选性:任选参数；参数类型:字符型。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询Serving GW管理区域。 
@@ -7633,7 +7633,7 @@ GRPLIST|跟踪区组号|参数可选性:任选参数；参数类型:字符型。
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7656,7 +7656,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询Serving GW标准名称(SHOW SGWNAME) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询Serving GateWay的名称，无输入参数，查询结果为已经配置的SGW名称。  
@@ -7664,7 +7664,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7672,10 +7672,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:任选参数；参数类型:字符型。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 
@@ -7684,7 +7684,7 @@ SGWNAME|SGW标准名称|参数可选性:任选参数；参数类型:字符型。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询Serving GW标准名称信息。 
@@ -7713,7 +7713,7 @@ sgw-01
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7736,7 +7736,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询Serving GW管理跟踪区(SHOW SGW TAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询Serving GateWay所管理的跟踪区域信息。 
@@ -7744,15 +7744,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 必须输入“SGW名称”、“跟踪区组号”和“跟踪区标识”这三个参数的任何一个。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 GRPLIST|跟踪区组号|参数可选性:任选参数；参数类型:整数；参数范围为:1~128。|该参数标识TA归属的组号。配置后，跟踪区组号下的TA都关联“SGW标准名称”对应的SGW。GRPLIST在TA配置中配置，可以通过命令SHOW TA查询跟踪区组号。
@@ -7763,10 +7763,10 @@ TAI|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWNAME|SGW标准名称|参数可选性:必选参数；参数类型:字符型。|该参数为网管配置或DNS解析返回的SGW名称。如果是网管配置，通过“查询EPC地址解析配置”方法查询SGW的名称，命令为SHOW EPCHOST。
 GRPLIST|跟踪区组号|参数可选性:必选参数；参数类型:整数。|该参数标识TA归属的组号。配置后，跟踪区组号下的TA都关联“SGW标准名称”对应的SGW。GRPLIST在TA配置中配置，可以通过命令SHOW TA查询跟踪区组号。
@@ -7777,7 +7777,7 @@ TAI|跟踪区标识|参数可选性:必选参数；参数类型:整数。|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询Serving GW管理跟踪区，查询SGW标准名称为cnwap下的所有的跟踪区。 
@@ -7800,7 +7800,7 @@ cnwap       2          10
 
 
 
-父主题： [Serving GW管理区域配置](../../zh-CN/tree/N_1254257.html)
+父主题： [Serving GW管理区域配置]
 
 
 
@@ -7823,7 +7823,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # Gs口MSC/VLR分担配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 Gs接口是SGSN和MSC/VLR之间的接口，用于支持UE发起的联合类接入请求。SGs接口是MME和MSC/VLR之间的接口，支持UE发起的联合类位置更新和CSFB功能。Sv接口是MME和MSC Server之间的接口，用于MME支持SRVCC的呼叫切换。 
@@ -7840,7 +7840,7 @@ SRVCC（Single Radio Voice Call Continuity，双模单待无线语音呼叫连�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 "Gs口MSC/VLR分担配置"用于SGSN在支持Gs口或者MME支持SGs口时，进行MSC/VLR选择。SGSN/MME存在Gs/SGs口时必须进行Gs口MSC/VLR分担配置。 
@@ -7858,7 +7858,7 @@ SGSN支持Gs口MSC/VLR分担配置前需要已配置支持Gs口、MSC/VLR管理�
 
 
                         配置SGSN支持Gs口，命令为：SET SGSNCFG或
-                        [SET COMBOCFG](../mml/1260006.html)
+                        [SET COMBOCFG]
                         :SUPTYPE="Gs";
                     
 
@@ -7869,7 +7869,7 @@ SGSN支持Gs口MSC/VLR分担配置前需要已配置支持Gs口、MSC/VLR管理�
 
 
                         配置SGSN上，MSC/VLR管理的位置区，命令为：
-                        [ADD LAI](../mml/1262230.html)
+                        [ADD LAI]
 
 
 
@@ -7879,7 +7879,7 @@ SGSN支持Gs口MSC/VLR分担配置前需要已配置支持Gs口、MSC/VLR管理�
 
 
                         配置SGSN上，VLR号码对应的GT翻译，命令为：
-                        [ADD GT](../mml/CommonS_SIG->ADD GT.html)
+                        [ADD GT]
 
 
 
@@ -7903,7 +7903,7 @@ MME支持Gs口MSC/VLR分担配置前需要已配置支持SGs口、MSC/VLR管理�
 
 
                         配置MME上，MSC/VLR管理的位置区，命令为：
-                        [ADD LAI](../mml/1262230.html)
+                        [ADD LAI]
 
 
 
@@ -7913,7 +7913,7 @@ MME支持Gs口MSC/VLR分担配置前需要已配置支持SGs口、MSC/VLR管理�
 
 
                         配置MME上，SGs口局向，命令为：
-                        [ADD SGS OFFICE ROUTE GROUP](../mml/1262165.html)
+                        [ADD SGS OFFICE ROUTE GROUP]
 
 
 
@@ -7923,7 +7923,7 @@ MME支持Gs口MSC/VLR分担配置前需要已配置支持SGs口、MSC/VLR管理�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7956,7 +7956,7 @@ MME支持Gs口MSC/VLR分担配置前需要已配置支持SGs口、MSC/VLR管理�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -7979,7 +7979,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增Gs口MSC/VLR分担配置(ADD MSCVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增Gs口MSC/VLR分担配置，当需要增加位置区到MSC/VLR的映射关系时，使用该命令。对于一个位置区对应多个VLR时，依据IMSI号段，根据配置的VSTART和VEND参数进行分担。 
@@ -7987,7 +7987,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -8013,10 +8013,10 @@ MSC_VLR分担配置中配置的数据包括Gs口和SGs口两部分，两者的�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|唯一标识一条负荷分担记录，用户名称的选取应该便于理解和记忆。
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|位置区编码用于识别网络中的位置区。应该根据网络规划进行编码。本参数加上“MSC/VLR负荷分担起始值”、“MSC/VLR负荷分担结束值”可匹配到一条MSC/VLR分担记录。
@@ -8029,7 +8029,7 @@ VEND|V值终止值|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MSC_VLR分担配置，其中用户名为“VLR1”, 路由区名称为“LAI001”，VLR局向号为1，VLR编号为“861390001”， VSTART为“1”， VEND为“499”。 
@@ -8044,7 +8044,7 @@ ADD MSCVLR:NAME="VLR1",LAI="LAI001",OFCID=1,VLRCODE="861390001",VSTART=1,VEND=49
 
 
 
-父主题： [Gs口MSC/VLR分担配置](../../zh-CN/tree/N_1254278.html)
+父主题： [Gs口MSC/VLR分担配置]
 
 
 
@@ -8067,7 +8067,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改Gs口MSC/VLR分担配置(SET MSCVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改Gs口MSC/VLR分担配置，当需要修改MSC/VLR配置的参数，或者修改对应位置区的MSC/VLR分担规则时使用该命令。 
@@ -8075,7 +8075,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 对于同一个位置区的多个VLR记录，V-START 和 V-END的区间不能重叠。 
@@ -8083,10 +8083,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|唯一标识一条负荷分担记录，用户名称的选取应该便于理解和记忆。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|位置区编码用于识别网络中的位置区。应该根据网络规划进行编码。本参数加上“MSC/VLR负荷分担起始值”、“MSC/VLR负荷分担结束值”可匹配到一条MSC/VLR分担记录。
@@ -8100,7 +8100,7 @@ NEWNAME|新用户别名|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改用户“VLR1”的MSC_VLR分担配置，修改后的参数为：路由区名称为“LAI002”，VLR局向号为“1”，VLR编号为“861390022”， VSTART为“1”， VEND为“300”。 
@@ -8115,7 +8115,7 @@ SET MSCVLR:NAME="VLR1",LAI="LAI002",OFCID=1,VLRCODE="861390022",VSTART=1,VEND=30
 
 
 
-父主题： [Gs口MSC/VLR分担配置](../../zh-CN/tree/N_1254278.html)
+父主题： [Gs口MSC/VLR分担配置]
 
 
 
@@ -8138,7 +8138,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除Gs口MSC/VLR分担配置(DEL MSCVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除Gs口MSC/VLR分担配置，当需要删除MSC/VLR配置时使用该命令，删除条件为用户名。 
@@ -8146,7 +8146,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -8163,10 +8163,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|唯一标识一条负荷分担记录，用户名称的选取应该便于理解和记忆。
 
@@ -8175,7 +8175,7 @@ NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除用户名为“VLR1”的MSC_VLR分担配置信息。 
@@ -8190,7 +8190,7 @@ DEL MSCVLR:NAME="VLR1";
 
 
 
-父主题： [Gs口MSC/VLR分担配置](../../zh-CN/tree/N_1254278.html)
+父主题： [Gs口MSC/VLR分担配置]
 
 
 
@@ -8213,7 +8213,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询Gs口MSC/VLR分担配置(SHOW MSCVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询Gs口MSC/VLR分担配置。可以根据用户别名、位置区名和VLR号码来查询对应的Gs口MSC/VLR分担配置信息。 
@@ -8221,7 +8221,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 查询命令若不输入任何条件参数表示查询全部，若输入条件参数表示查询符合条件的MSC_VLR分担配置信息。 
@@ -8229,10 +8229,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|唯一标识一条负荷分担记录，用户名称的选取应该便于理解和记忆。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|位置区编码用于识别网络中的位置区。应该根据网络规划进行编码。本参数加上“MSC/VLR负荷分担起始值”、“MSC/VLR负荷分担结束值”可匹配到一条MSC/VLR分担记录。
@@ -8243,10 +8243,10 @@ VLRCODE|VLR号码|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|唯一标识一条负荷分担记录，用户名称的选取应该便于理解和记忆。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型。|位置区编码用于识别网络中的位置区。应该根据网络规划进行编码。本参数加上“MSC/VLR负荷分担起始值”、“MSC/VLR负荷分担结束值”可匹配到一条MSC/VLR分担记录。
@@ -8259,7 +8259,7 @@ VEND|V值终止值|参数可选性:任选参数；参数类型:整数。|当一�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示用户名为“VLR1”的MSC_VLR分担配置信息。 
@@ -8288,7 +8288,7 @@ SHOW MSCVLR:NAME="VLR1";
 
 
 
-父主题： [Gs口MSC/VLR分担配置](../../zh-CN/tree/N_1254278.html)
+父主题： [Gs口MSC/VLR分担配置]
 
 
 
@@ -8311,7 +8311,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 用户接入限制拒绝原因值配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME拒绝UE接入时会下发拒绝消息并携带合适的原因值，不同的原因值会影响UE行为（比如，UE自动重新附着、UE重发请求消息、UE停止EPS服务直到开关机等）。 
@@ -8322,7 +8322,7 @@ MME在下发拒绝UE接入消息时，对于不同的失败场景，MME下发的
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 一般情况下，在UE接入失败，MME下发的拒绝消息基于3GPP规范携带合适的原因值，本配置默认不需要。如果运营商希望对于特定号段的用户接入失败时使用特定的接入拒绝原因值时，可以针对特定的IMSI号段设置期望的拒绝原因值。 
@@ -8422,7 +8422,7 @@ MME处理UE的附着或者跟踪区更新请求，流程失败，需要发送拒
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8455,7 +8455,7 @@ MME处理UE的附着或者跟踪区更新请求，流程失败，需要发送拒
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -8478,7 +8478,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增用户接入限制拒绝原因值配置(ADD IMSI REJECT CAUSE CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME增加用户接入限制拒绝原因值配置。当需要对不同用户群组进行接入限制，并回复不同的拒绝或者失败原因值时，使用该命令进行配置。  
@@ -8489,7 +8489,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -8499,10 +8499,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码，是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行接入限制的作用，而不需要将每个用户的完整号码都配置上。
 REJECTCAUSE|接入拒绝原因|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:EPS services not allowed。|限制接入原因，默认值为“EPSServicesNotAllowed”。取值含义：IMSIUnknownInHss：IMSI在HSS中未知，表示用户在HSS中没有签约数据。IllegalUE：非法用户，表示用户的IMSI是非法的，例如出现非规定的英文字符。IllegalME：非法设备，表示用户的设备是非法的，例如取得入网许可的设备。EPSServicesNotAllowed：EPS业务不允许，表示用户没有签约请求的业务，例如没有签约LTE业务的用户，请求接入LTE网络。EANGNotAllowed：EPS业务和非EPS业务均不允许，表示用户不允许接入任何网络，紧急呼叫用户除外。PLMNNotAllowed：PLMN不允许，表示用户漫游时不能接入。TANotAllowed：跟踪区不允许，表示非漫游用户在某些跟踪区内不允许接入。RoamNotAllowed：本跟踪区内漫游不允许，表示漫游用户在某些跟踪区内不允许接入。EPSNotAllowedInPlmn：本PLMN内EPS业务不允许，表示用户漫游接入不允许接入EPS业务。NoCellInTA：本跟踪区内没有合适的小区，表示无服务区或者小区选择失败时的原因值。SevereNetworkFailure：严重网络故障，表示发生严重网络故障时的原因值。ProtocolErrorUnspecified：不明确的协议错误，表示发生不明确的协议错误时的原因值。
@@ -8513,7 +8513,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增IMSI号段460011用户，接入拒绝原因值为“EPS services not allowed”。
@@ -8526,7 +8526,7 @@ ADD IMSI REJECT CAUSE CTRL:IMSI="460011",REJECTCAUSE="EPS services not allowed";
 
 
 
-父主题： [用户接入限制拒绝原因值配置](../../zh-CN/tree/N_12542771.html)
+父主题： [用户接入限制拒绝原因值配置]
 
 
 
@@ -8549,7 +8549,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改用户接入限制拒绝原因值配置(SET IMSI REJECT CAUSE CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME修改用户接入限制拒绝原因值配置。当需要对不同用户进行接入限制，并回复不同的拒绝或者失败原因值时，使用该命令进行配置。  
@@ -8557,7 +8557,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -8567,10 +8567,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码，是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行接入限制的作用，而不需要将每个用户的完整号码都配置上。
 REJECTCAUSE|接入拒绝原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|限制接入原因，默认值为“EPSServicesNotAllowed”。取值含义：IMSIUnknownInHss：IMSI在HSS中未知，表示用户在HSS中没有签约数据。IllegalUE：非法用户，表示用户的IMSI是非法的，例如出现非规定的英文字符。IllegalME：非法设备，表示用户的设备是非法的，例如取得入网许可的设备。EPSServicesNotAllowed：EPS业务不允许，表示用户没有签约请求的业务，例如没有签约LTE业务的用户，请求接入LTE网络。EANGNotAllowed：EPS业务和非EPS业务均不允许，表示用户不允许接入任何网络，紧急呼叫用户除外。PLMNNotAllowed：PLMN不允许，表示用户漫游时不能接入。TANotAllowed：跟踪区不允许，表示非漫游用户在某些跟踪区内不允许接入。RoamNotAllowed：本跟踪区内漫游不允许，表示漫游用户在某些跟踪区内不允许接入。EPSNotAllowedInPlmn：本PLMN内EPS业务不允许，表示用户漫游接入不允许接入EPS业务。NoCellInTA：本跟踪区内没有合适的小区，表示无服务区或者小区选择失败时的原因值。SevereNetworkFailure：严重网络故障，表示发生严重网络故障时的原因值。ProtocolErrorUnspecified：不明确的协议错误，表示发生不明确的协议错误时的原因值。
@@ -8581,7 +8581,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI号段460011用户，接入拒绝原因值为“EPS services not allowed”。
@@ -8594,7 +8594,7 @@ SET IMSI REJECT CAUSE CTRL:IMSI="460011",REJECTCAUSE="EPS services not allowed";
 
 
 
-父主题： [用户接入限制拒绝原因值配置](../../zh-CN/tree/N_12542771.html)
+父主题： [用户接入限制拒绝原因值配置]
 
 
 
@@ -8617,7 +8617,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除用户接入限制拒绝原因值配置(DEL IMSI REJECT CAUSE CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME删除用户接入限制拒绝原因值配置。当不再对用户进行IMSI限制区域限制接入时，或者IMSI限制区域的原因值不符合当前的限制条件，需要删除不再使用的原因值时使用该命令进行配置。  
@@ -8625,7 +8625,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -8636,10 +8636,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码，是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行接入限制的作用，而不需要将每个用户的完整号码都配置上。
 
@@ -8648,7 +8648,7 @@ IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI号段460011用户接入限制拒绝原因值配置。
@@ -8661,7 +8661,7 @@ DEL IMSI REJECT CAUSE CTRL:IMSI="460011";
 
 
 
-父主题： [用户接入限制拒绝原因值配置](../../zh-CN/tree/N_12542771.html)
+父主题： [用户接入限制拒绝原因值配置]
 
 
 
@@ -8684,7 +8684,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询用户接入限制拒绝原因值配置(SHOW IMSI REJECT CAUSE CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于MME查询用户接入限制拒绝原因值配置。当需要查询IMSI号段用户接入限制回复失败原因值配置信息时，使用该命令。  
@@ -8695,7 +8695,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -8705,10 +8705,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|IMSI是国际移动用户识别码，是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行接入限制的作用，而不需要将每个用户的完整号码都配置上。
 
@@ -8717,10 +8717,10 @@ IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型。|IMSI是国际移动用户识别码，是区别移动用户的标志，存储于SIM卡中，可用于区别移动用户的有效信息。IMSI号段是从IMSI号码中取前面特定位数的号码作为一部份用户号段，来标识具有特定号码开头的用户群体，如46001表示以46001开头的IMSI的用户的号段。通过配置IMSI号段来达到对特定部分用户进行接入限制的作用，而不需要将每个用户的完整号码都配置上。
 REJECTCAUSE|接入拒绝原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|限制接入原因，默认值为“EPSServicesNotAllowed”。取值含义：IMSIUnknownInHss：IMSI在HSS中未知，表示用户在HSS中没有签约数据。IllegalUE：非法用户，表示用户的IMSI是非法的，例如出现非规定的英文字符。IllegalME：非法设备，表示用户的设备是非法的，例如取得入网许可的设备。EPSServicesNotAllowed：EPS业务不允许，表示用户没有签约请求的业务，例如没有签约LTE业务的用户，请求接入LTE网络。EANGNotAllowed：EPS业务和非EPS业务均不允许，表示用户不允许接入任何网络，紧急呼叫用户除外。PLMNNotAllowed：PLMN不允许，表示用户漫游时不能接入。TANotAllowed：跟踪区不允许，表示非漫游用户在某些跟踪区内不允许接入。RoamNotAllowed：本跟踪区内漫游不允许，表示漫游用户在某些跟踪区内不允许接入。EPSNotAllowedInPlmn：本PLMN内EPS业务不允许，表示用户漫游接入不允许接入EPS业务。NoCellInTA：本跟踪区内没有合适的小区，表示无服务区或者小区选择失败时的原因值。SevereNetworkFailure：严重网络故障，表示发生严重网络故障时的原因值。ProtocolErrorUnspecified：不明确的协议错误，表示发生不明确的协议错误时的原因值。
@@ -8731,7 +8731,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|对�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询IMSI号段460011用户接入限制拒绝原因值配置。
@@ -8758,7 +8758,7 @@ SHOW IMSI REJECT CAUSE CTRL:IMSI="460011";
 
 
 
-父主题： [用户接入限制拒绝原因值配置](../../zh-CN/tree/N_12542771.html)
+父主题： [用户接入限制拒绝原因值配置]
 
 
 
@@ -8781,7 +8781,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # MME基于PLMN控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 运营商之间签署了漫游协议，可以根据漫游协议方PLMN设置用户容量和承载容量，达到限制漫游用户接入数量及保障本网用户接入的目的。 
@@ -8789,7 +8789,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当UE发起附着、TAU请求或HO时，MME在获取到用户IMSI后，判断当前该IMSI用户所属PLMN下的附着用户数是否达到该PLMN的最大附着用户数，若超过则MME拒绝接入，接入拒绝原因值可配置。 
@@ -8800,7 +8800,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8833,7 +8833,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -8856,7 +8856,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增基于PLMN控制配置(ADD MMEPLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置移动网络中的管理参数，包括：PLMN、是否限制在线用户数、限制的在线用户数目、接入拒绝原因、是否限制承载数、限制的承载数目和激活拒绝原因。 
@@ -8864,7 +8864,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -8881,10 +8881,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -8902,7 +8902,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增基于PLMN控制配置，其中PLMN为"460"-"01"，是否限制在线用户数为是，是否限制承载数为是，限制的在线用户数目为1，限制的承载数目为2。 
@@ -8917,7 +8917,7 @@ ADD MMEPLMNCTRLCFG:PLMN="460"-"01",LIMITUSER="YES",LIMITUSERNUM=1,LIMITBEAR="YES
 
 
 
-父主题： [MME基于PLMN控制配置](../../zh-CN/tree/N_1254284.html)
+父主题： [MME基于PLMN控制配置]
 
 
 
@@ -8940,7 +8940,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改基于PLMN控制配置(SET MMEPLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改移动网络中的管理参数。当网络设计发生改变时，使用该命令。 
@@ -8948,7 +8948,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -8956,10 +8956,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -8977,7 +8977,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改PLMN为"460"-"01"的配置数据，将是否限制承载数修改为否。 
@@ -8992,7 +8992,7 @@ SET MMEPLMNCTRLCFG:PLMN="460"-"01",LIMITBEAR="NO";
 
 
 
-父主题： [MME基于PLMN控制配置](../../zh-CN/tree/N_1254284.html)
+父主题： [MME基于PLMN控制配置]
 
 
 
@@ -9015,7 +9015,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除基于PLMN控制配置(DEL MMEPLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除移动网络控制配置参数。删除条件为 MCC（移动国家码）+MNC（移动网编号）。 
@@ -9023,7 +9023,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令可能导致网络运行异常，非经过运营商批准不准擅自执行。 
@@ -9031,10 +9031,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -9045,7 +9045,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除PLMN为"460"-"01"的配置数据。 
@@ -9060,7 +9060,7 @@ DEL MMEPLMNCTRLCFG:PLMN="460"-"01";
 
 
 
-父主题： [MME基于PLMN控制配置](../../zh-CN/tree/N_1254284.html)
+父主题： [MME基于PLMN控制配置]
 
 
 
@@ -9083,7 +9083,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询基于PLMN控制配置(SHOW MMEPLMNCTRLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询基于PLMN控制配置参数。查询条件为 MCC（移动国家码）+MNC（移动网编号），查询结果为符合该条件的网络的具体管理参数。 
@@ -9091,7 +9091,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -9099,10 +9099,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMN|PLMN|参数可选性:任选参数；参数类型:复合参数|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。
@@ -9113,10 +9113,10 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PLMNID|PLMN标识|参数可选性:任选参数；参数类型:整数。|系统自动生成的PLMN编号。
 PLMN|PLMN|参数可选性:任选参数；参数类型:字符型。|公共陆地移动(通信)网络。在某个国家或地区，某个运营商的某种制式的蜂窝移动通信网络被称为PLMN。
@@ -9133,7 +9133,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于PLMN控制配置。 
@@ -9163,7 +9163,7 @@ SHOW MMEPLMNCTRLCFG;
 
 
 
-父主题： [MME基于PLMN控制配置](../../zh-CN/tree/N_1254284.html)
+父主题： [MME基于PLMN控制配置]
 
 
 
@@ -9186,7 +9186,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # MME切换限制列表配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 区域编码(Zone Code)被用来定义用户是否允许漫游的位置区域，用户可以签约一个或多个区域编码。 
@@ -9197,7 +9197,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 如果用户在HSS中签约了区域编码限制列表，但是不需要MME对用户的移动性进行区域限制，只希望通过eNodeB来限制用户切换的区域，在本配置中打开“切换限制列表是否携带禁止的位置区”，并配置区域编码和位置区名的映射。 
@@ -9208,7 +9208,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9246,7 +9246,7 @@ MME号段禁止LA配置
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -9269,7 +9269,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## MME切换限制列表策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在UE处于连接态时，MME会通知UE的切换限制列表，eNodeB根据此列表进行目标小区的选择。 
@@ -9294,7 +9294,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用于设置MME切换限制列表功能涉及的功能开关和策略，包括： 
@@ -9356,7 +9356,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9379,7 +9379,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME切换限制列表配置](../../zh-CN/tree/N_12542841.html)
+父主题： [MME切换限制列表配置]
 
 
 
@@ -9402,7 +9402,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置MME切换限制列表策略(SET MME HRLPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置MME切换限制列表功能涉及的功能开关和策略。 
@@ -9410,15 +9410,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IFCARRYHRL|是否携带切换限制列表|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|本参数控制MME是否发送切换限制列表信息给eNodeB。是：携带切换限制列表信息给eNodeB。否：不携带切换限制列表信息给eNodeB。
 IFFBDTAIMSIAREALMT|禁止TA列表是否包含IMSI号段区域限制信息|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|禁止TA列表是指不允许用户进行切换的TA。根据用户的IMSI和签约的ZoneCode，获取用户允许接入的TAs，再通过数据库获取本局管理的所有TA，排除用户允许接入的TAs，得到用户的禁止TA列表。切换限制列表中的禁止TA列表，默认是根据签约ZoneCode获取的，没有考虑基于IMSI号段区域限制中禁止的TA。通过本参数控制切换限制列表中的禁止TA列表是否包含基于IMSI号段区域限制中禁止的TA。是：禁止TA列表包含IMSI号段区域限制信息。否：禁止TA列表不包含IMSI号段区域限制信息。
@@ -9437,7 +9437,7 @@ IFZCINFORBIDDENTA|禁止跟踪区列表是否包含签约ZoneCode信息|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME切换限制列表策略配置。  
@@ -9452,7 +9452,7 @@ SET MME HRLPLY:IFCARRYHRL="NO",IFFBDTAIMSIAREALMT="NO",CRYRESTLSTININTERHO="NO",
 
 
 
-父主题： [MME切换限制列表策略配置](../../zh-CN/tree/N_12542842.html)
+父主题： [MME切换限制列表策略配置]
 
 
 
@@ -9475,7 +9475,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询MME切换限制列表策略(SHOW MME HRLPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME切换限制列表功能涉及的功能开关和策略。 
@@ -9483,15 +9483,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IFCARRYHRL|是否携带切换限制列表|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|本参数控制MME是否发送切换限制列表信息给eNodeB。是：携带切换限制列表信息给eNodeB。否：不携带切换限制列表信息给eNodeB。
 IFFBDTAIMSIAREALMT|禁止TA列表是否包含IMSI号段区域限制信息|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|禁止TA列表是指不允许用户进行切换的TA。根据用户的IMSI和签约的ZoneCode，获取用户允许接入的TAs，再通过数据库获取本局管理的所有TA，排除用户允许接入的TAs，得到用户的禁止TA列表。切换限制列表中的禁止TA列表，默认是根据签约ZoneCode获取的，没有考虑基于IMSI号段区域限制中禁止的TA。通过本参数控制切换限制列表中的禁止TA列表是否包含基于IMSI号段区域限制中禁止的TA。是：禁止TA列表包含IMSI号段区域限制信息。否：禁止TA列表不包含IMSI号段区域限制信息。
@@ -9510,7 +9510,7 @@ IFZCINFORBIDDENTA|禁止跟踪区列表是否包含签约ZoneCode信息|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME切换限制列表策略配置。  
@@ -9538,7 +9538,7 @@ SHOW MME HRLPLY
 
 
 
-父主题： [MME切换限制列表策略配置](../../zh-CN/tree/N_12542842.html)
+父主题： [MME切换限制列表策略配置]
 
 
 
@@ -9561,7 +9561,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 位置区列表配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UE处于连接态时，MME可以向eNodeB发送切换限制列表，通过该列表选择切换时的目标小区。 
@@ -9589,14 +9589,14 @@ eNodeB在切换时应满足以下要求：
 
 
 
-[](None)功能描述 
+功能描述 
 
             
             位置区列表用于配置切换限制列表中的Forbidden LAs信息，其可以为空，表示不需携带Forbidden LAs给eNodeB。该配置被“MME号段禁止LA配置”引用。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9624,7 +9624,7 @@ eNodeB在切换时应满足以下要求：
 
 
 
-父主题： [MME切换限制列表配置](../../zh-CN/tree/N_12542841.html)
+父主题： [MME切换限制列表配置]
 
 
 
@@ -9647,26 +9647,26 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增位置区列表配置(ADD MME HRLLALIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增位置区列表配置，即切换限制列表中的Forbidden LAs信息。 
 
 
-该命令的配置结果可以通过[SHOW MME HRLLALIST](1266180.html)命令进行查询。
+该命令的配置结果可以通过[SHOW MME HRLLALIST]命令进行查询。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LALISTID|位置区列表ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~128。|该参数用于标识LA List，在MME中一个LA列表ID对应一组位置区。
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|该参数用于标识LA List中具体的LA，一个LA Tist ID关联多个LA。该参数必须已经存在，需要预先通过ADD LAI命令进行配置。
@@ -9676,7 +9676,7 @@ LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增位置区列表配置，其中，位置区列表ID为1，位置区名为lai_0001。  
@@ -9691,7 +9691,7 @@ ADD MME HRLLALIST:LALISTID=1,LAI="lai_0001"
 
 
 
-父主题： [位置区列表配置](../../zh-CN/tree/N_12661770.html)
+父主题： [位置区列表配置]
 
 
 
@@ -9714,7 +9714,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除位置区列表配置(DEL MME HRLLALIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除位置区列表配置，即切换限制列表中的Forbidden LAs信息。 
@@ -9722,15 +9722,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LALISTID|位置区列表ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~128。|该参数用于标识LA List，在MME中一个LA列表ID对应一组位置区。
 WITHALLSUBITEMS|删除下属所有区域|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:NO。|该参数用于配置是否删除该位置区列表下的所有位置区。是：删除位置区列表的同时也删除该位置区列表下的所有位置区。否：删除位置区列表的同时不删除该位置区列表下的位置区。
@@ -9741,7 +9741,7 @@ LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置区列表配置，其中，位置区列表ID为1，位置区名为lai_0001  
@@ -9756,7 +9756,7 @@ DEL MME HRLLALIST:LALISTID=1,LAI="lai_0001"
 
 
 
-父主题： [位置区列表配置](../../zh-CN/tree/N_12661770.html)
+父主题： [位置区列表配置]
 
 
 
@@ -9779,20 +9779,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询位置区列表配置(SHOW MME HRLLALIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询位置区列表配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LALISTID|位置区列表ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~128。|该参数用于标识LA List，在MME中一个LA列表ID对应一组位置区。
 
@@ -9801,10 +9801,10 @@ LALISTID|位置区列表ID|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LALISTID|位置区列表ID|参数可选性:任选参数；参数类型:整数。|该参数用于标识LA List，在MME中一个LA列表ID对应一组位置区。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型。|该参数用于标识LA List中具体的LA，一个LA Tist ID关联多个LA。该参数必须已经存在，需要预先通过ADD LAI命令进行配置。
@@ -9814,7 +9814,7 @@ LAI|位置区名|参数可选性:任选参数；参数类型:字符型。|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询位置区列表配置。  
@@ -9841,7 +9841,7 @@ SHOW MME HRLLALIST
 
 
 
-父主题： [位置区列表配置](../../zh-CN/tree/N_12661770.html)
+父主题： [位置区列表配置]
 
 
 
@@ -9864,7 +9864,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 跟踪区域分组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在UE处于连接态时，MME会通知UE的切换限制列表，eNodeB根据此列表进行目标小区的选择。 
@@ -9889,7 +9889,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 在一组TA中，其Forbidden LAs可能是相同的，因此配置跟踪区域分组，可以简化配置。 
@@ -9903,7 +9903,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9931,7 +9931,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME切换限制列表配置](../../zh-CN/tree/N_12542841.html)
+父主题： [MME切换限制列表配置]
 
 
 
@@ -9954,7 +9954,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增跟踪区域分组(ADD MME HRLTALIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增跟踪区域分组配置。每个跟踪区域分组可以包括一个或多个跟踪区（TA）。 当需要开启MME IMSI号段禁止LA功能的时候，特定号段内的用户在指定的区域内禁止接入。此命令可以生成各个跟踪区域分组对应的具体TA范围。 
@@ -9962,15 +9962,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TALISTID|跟踪区域分组标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|MME上跟踪区域分组的标识，每个标识对应唯一一个跟踪区域分组，该跟踪区域分组可以对应一个或多个跟踪区，或该PLMN下的所有跟踪区。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|MME内已配置的跟踪区的标识，每个标识对应唯一一个跟踪区。该标识由配置命令ADD TA生成。
@@ -9984,7 +9984,7 @@ NAME|别名|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增跟踪区域分组配置，跟踪区域分组标识为1，跟踪区标识为1。 
@@ -9999,7 +9999,7 @@ ADD MME HRLTALIST:TALISTID=1,TAID=1
 
 
 
-父主题： [跟踪区域分组配置](../../zh-CN/tree/N_12542844.html)
+父主题： [跟踪区域分组配置]
 
 
 
@@ -10022,7 +10022,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除跟踪区域分组(DEL MME HRLTALIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除跟踪区域分组配置。删除已经配置的跟踪区域分组(TALISTID)与跟踪区标识(TAID)之间的对应关系。 
@@ -10030,15 +10030,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TALISTID|跟踪区域分组标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|MME上跟踪区域分组的标识，每个标识对应唯一一个跟踪区域分组，该跟踪区域分组可以对应一个或多个跟踪区，或该PLMN下的所有跟踪区。
 WITHALLSUBITEMS|删除下属所有区域|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:NO。|删除跟踪区域分组下的跟踪区，在删除跟踪区域分组时用到，当设置该参数为“是”时，会删除指定跟踪区域分组下的所有跟踪区。
@@ -10052,7 +10052,7 @@ PLMN|PLMN|参数可选性:任选参数；参数类型:复合参数|PLMN识别号
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除标识为1的跟踪区域分组下的一个标识为1的跟踪区，不删除下属所有区域。 
@@ -10067,7 +10067,7 @@ DEL MME HRLTALIST:TALISTID=1,WITHALLSUBITEMS="NO",TAID=1
 
 
 
-父主题： [跟踪区域分组配置](../../zh-CN/tree/N_12542844.html)
+父主题： [跟踪区域分组配置]
 
 
 
@@ -10090,7 +10090,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询跟踪区域分组(SHOW MME HRLTALIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询跟踪区域分组配置。可以根据跟踪区域分组标识和跟踪区标识查询一条对应关系，也可以查询所有已经配置的对应关系。 
@@ -10098,15 +10098,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TALISTID|跟踪区域分组标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|MME上跟踪区域分组的标识，每个标识对应唯一一个跟踪区域分组，该跟踪区域分组可以对应一个或多个跟踪区，或该PLMN下的所有跟踪区。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|MME内已配置的跟踪区的标识，每个标识对应唯一一个跟踪区。该标识由配置命令ADD TA生成。
@@ -10119,10 +10119,10 @@ PLMN|PLMN|参数可选性:任选参数；参数类型:复合参数|PLMN识别号
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TALISTID|跟踪区域分组标识|参数可选性:任选参数；参数类型:整数。|MME上跟踪区域分组的标识，每个标识对应唯一一个跟踪区域分组，该跟踪区域分组可以对应一个或多个跟踪区，或该PLMN下的所有跟踪区。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数。|MME内已配置的跟踪区的标识，每个标识对应唯一一个跟踪区。该标识由配置命令ADD TA生成。
@@ -10134,7 +10134,7 @@ NAME|别名|参数可选性:任选参数；参数类型:字符型。|用户为�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询跟踪区域分组配置。 
@@ -10162,7 +10162,7 @@ SHOW MME HRLTALIST
 
 
 
-父主题： [跟踪区域分组配置](../../zh-CN/tree/N_12542844.html)
+父主题： [跟踪区域分组配置]
 
 
 
@@ -10185,21 +10185,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## MME号段禁止LA配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             可以通过设置IMSI号段、设置该号段是否适用所有跟踪区域、设置跟踪区域分组标识以及设置位置区列表ID来设置禁止LA配置的信息。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             基于IMSI号段的禁止LA配置用于配置用户的Forbidden LAs。通过配置IMSI号段和位置区列表标识列表，可以对不同的IMSI号段设置不同的Forbidden LAs。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -10232,7 +10232,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME切换限制列表配置](../../zh-CN/tree/N_12542841.html)
+父主题： [MME切换限制列表配置]
 
 
 
@@ -10255,12 +10255,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增MME号段禁止LA配置(ADD MME IMSIFORBIDDENLA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增MME号段禁止LA配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10268,10 +10268,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置IMSI号段，针对该号段内的所有用户有效。
 ISALLTA|是否适用所有跟踪区域|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对于已设置的IMSI号段，是否是适用于对所有的跟踪区来进行新增或修改或删除禁止LA配置操作。
@@ -10283,7 +10283,7 @@ LALISTID|位置区列表ID|参数可选性:必选参数；参数类型:整数；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MME号段禁止LA配置，IMSI号段为1234、不适用所有跟踪区域、跟踪区域分组标识为12，位置区列表ID为1。  
@@ -10298,7 +10298,7 @@ ADD MME IMSIFORBIDDENLA:IMSI="1234",ISALLTA="NO",TALISTID=12,LALISTID=11
 
 
 
-父主题： [MME号段禁止LA配置](../../zh-CN/tree/N_12661811.html)
+父主题： [MME号段禁止LA配置]
 
 
 
@@ -10321,12 +10321,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改MME号段禁止LA配置(SET MME IMSIFORBIDDENLA) 
 
 
-[](None)命令功能 
+命令功能 
 
 修改MME号段禁止LA配置
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10334,10 +10334,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于IMSI号段，针对该号段内的所有用户有效。
 ISALLTA|是否适用所有跟踪区域|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对于已选择的IMSI号段，是否是针对所有跟踪区来新增或修改或删除禁止LA配置。
@@ -10349,7 +10349,7 @@ LALISTID|位置区列表ID|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改MME号段禁止LA配置。  
@@ -10364,7 +10364,7 @@ SET MME IMSIFORBIDDENLA:IMSI="1",ISALLTA="NO",TALISTID=1,LALISTID=1;
 
 
 
-父主题： [MME号段禁止LA配置](../../zh-CN/tree/N_12661811.html)
+父主题： [MME号段禁止LA配置]
 
 
 
@@ -10387,12 +10387,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除MME号段禁止LA配置(DEL MME IMSIFORBIDDENLA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除MME号段禁止LA配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10400,10 +10400,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置IMSI号段，针对该号段内的所有用户有效。
 ISALLTA|是否适用所有跟踪区域|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对于已设置的IMSI号段，是否是适用于对所有的跟踪区来进行新增或修改或删除禁止LA配置操作。
@@ -10414,7 +10414,7 @@ TALISTID|跟踪区域分组标识|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除MME号段禁止LA配置，IMSI号段为1234、不适用所有跟踪区域、跟踪区域分组标识为12，位置区列表ID为1。  
@@ -10429,7 +10429,7 @@ DEL MME IMSIFORBIDDENLA:IMSI="1234",ISALLTA="NO",TALISTID=12,LALISTID=11
 
 
 
-父主题： [MME号段禁止LA配置](../../zh-CN/tree/N_12661811.html)
+父主题： [MME号段禁止LA配置]
 
 
 
@@ -10452,12 +10452,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询MME号段禁止LA配置(SHOW MME IMSIFORBIDDENLA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询MME号段禁止LA配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10465,10 +10465,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置IMSI号段，针对该号段内的所有用户有效。
 ISALLTA|是否适用所有跟踪区域|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|对于已设置的IMSI号段，是否是适用于对所有的跟踪区来进行新增或修改或删除禁止LA配置操作。
@@ -10479,10 +10479,10 @@ TALISTID|跟踪区域分组标识|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型。|该参数用于设置IMSI号段，针对该号段内的所有用户有效。
 ISALLTA|是否适用所有跟踪区域|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|对于已设置的IMSI号段，是否是适用于对所有的跟踪区来进行新增或修改或删除禁止LA配置操作。
@@ -10494,7 +10494,7 @@ LALISTID|位置区列表ID|参数可选性:任选参数；参数类型:整数。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME号段禁止LA配置。  
@@ -10523,7 +10523,7 @@ SHOW MME IMSIFORBIDDENLA
 
 
 
-父主题： [MME号段禁止LA配置](../../zh-CN/tree/N_12661811.html)
+父主题： [MME号段禁止LA配置]
 
 
 
@@ -10546,7 +10546,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 区域编码与禁止位置区映射配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 区域编码(Zone Code)被用来定义用户是否允许漫游的位置区域，用户可以签约一个或多个区域编码。 
@@ -10557,7 +10557,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 如果用户在HSS中签约了区域编码限制列表，但是不需要MME对用户的移动性进行区域限制，只希望通过eNodeB来限制用户切换的区域，在本配置中打开“切换限制列表是否携带禁止的位置区”，并配置区域编码和位置区名的映射。 
@@ -10568,7 +10568,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -10601,7 +10601,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME切换限制列表配置](../../zh-CN/tree/N_12542841.html)
+父主题： [MME切换限制列表配置]
 
 
 
@@ -10624,29 +10624,29 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增区域编码与禁止位置区映射配置(ADD ZC BARRED LA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增区域编码与禁止位置区之间的映射。当运营商需要针对区域编码限制用户接入的位置区时，使用该命令。命令执行成功后，MME根据用户签约的区域编码列表，查询区域编码与禁止位置区的映射表，从而得到禁止位置区列表，然后通过切换限制列表携带给eNodeB。  
 
 
-该命令需要设置两个参数：位置区名称和区域编码。位置区名称，可以通过如下命令查询：[SHOW LAI](1262233.html)。 
+该命令需要设置两个参数：位置区名称和区域编码。位置区名称，可以通过如下命令查询：[SHOW LAI]。 
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-执行该命令之前，需要打开MME分配切换限制列表的开关、携带禁止位置区列表开关、禁止位置区列表获取方式设置为签约ZONECODE，命令为：[SET MME HRLPLY](1262227.html):IFCARRYHRL="YES",IFCARRYFORBIDDENLA="YES",FORBIDDENLAGETMODE="ZONECODE"。 
+执行该命令之前，需要打开MME分配切换限制列表的开关、携带禁止位置区列表开关、禁止位置区列表获取方式设置为签约ZONECODE，命令为：[SET MME HRLPLY]:IFCARRYHRL="YES",IFCARRYFORBIDDENLA="YES",FORBIDDENLAGETMODE="ZONECODE"。 
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|禁止位置区名称，位置区名称是配置位置区时设置的，配置命令为ADD LAI。
 ZC|区域编码(HEX)|参数可选性:必选参数；参数类型:字符型；参数范围为:4~4个字符。|某一PLMN内唯一地识别允许用户漫游的区域，由运营者设定并保存在HSS中。
@@ -10657,7 +10657,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增区域编码与禁止位置区映射配置信息，其中位置区域为LA_1、区域编码为0001。  
@@ -10675,7 +10675,7 @@ ADD ZC BARRED LA:LAI="LA_1",ZC="0001";
 
 
 
-父主题： [区域编码与禁止位置区映射配置](../../zh-CN/tree/N_12542846.html)
+父主题： [区域编码与禁止位置区映射配置]
 
 
 
@@ -10698,7 +10698,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改区域编码与禁止位置区映射配置(SET ZC BARRED LA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改特定区域编码与禁止位置区配置的用户别名。  
@@ -10709,15 +10709,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|禁止位置区名称，位置区名称是配置位置区时设置的，配置命令为ADD LAI。
 ZC|区域编码(HEX)|参数可选性:必选参数；参数类型:字符型；参数范围为:4~4个字符。|某一PLMN内唯一地识别允许用户漫游的区域，由运营者设定并保存在HSS中。
@@ -10728,7 +10728,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置区"LA_1"，区域编码为0001禁止位置区映射配置的用户别名为"LA_1_ZC_0001" 
@@ -10746,7 +10746,7 @@ SET ZC BARRED LA:LAI="LA_1",ZC="0001",NAME="LA_1_ZC_0001";
 
 
 
-父主题： [区域编码与禁止位置区映射配置](../../zh-CN/tree/N_12542846.html)
+父主题： [区域编码与禁止位置区映射配置]
 
 
 
@@ -10769,7 +10769,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除区域编码与禁止位置区映射配置(DEL ZC BARRED LA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除特定区域编码与禁止位置区的映射关系。当移动网络允许用户在某位置区下接入时，使用该命令。命令执行成功后，在该位置区下，用户可以接入移动网络。  
@@ -10777,15 +10777,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|禁止位置区名称，位置区名称是配置位置区时设置的，配置命令为ADD LAI。
 ZC|区域编码(HEX)|参数可选性:必选参数；参数类型:字符型；参数范围为:4~4个字符。|某一PLMN内唯一地识别允许用户漫游的区域，由运营者设定并保存在HSS中。
@@ -10795,7 +10795,7 @@ ZC|区域编码(HEX)|参数可选性:必选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除区域编码与禁止位置区映射配置信息，其中位置区域为LA_1、区域编码为0001。  
@@ -10810,7 +10810,7 @@ DEL ZC BARRED LA:LAI="LA_1",ZC="0001";
 
 
 
-父主题： [区域编码与禁止位置区映射配置](../../zh-CN/tree/N_12542846.html)
+父主题： [区域编码与禁止位置区映射配置]
 
 
 
@@ -10833,7 +10833,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询区域编码与禁止位置区映射配置(SHOW ZC BARRED LA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询特定或者全部区域编码与禁止位置区的映射关系。查询特定区域编码和禁止位置区的映射关系时，需要同时输入区域编码与禁止位置区。  
@@ -10841,15 +10841,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|禁止位置区名称，位置区名称是配置位置区时设置的，配置命令为ADD LAI。
 ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型；参数范围为:4~4个字符。|某一PLMN内唯一地识别允许用户漫游的区域，由运营者设定并保存在HSS中。
@@ -10859,10 +10859,10 @@ ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型。|禁止位置区名称，位置区名称是配置位置区时设置的，配置命令为ADD LAI。
 ZC|区域编码(HEX)|参数可选性:任选参数；参数类型:字符型。|某一PLMN内唯一地识别允许用户漫游的区域，由运营者设定并保存在HSS中。
@@ -10873,7 +10873,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|对�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询区域编码与禁止位置区映射配置信息。 
@@ -10901,7 +10901,7 @@ SHOW ZC BARRED LA;
 
 
 
-父主题： [区域编码与禁止位置区映射配置](../../zh-CN/tree/N_12542846.html)
+父主题： [区域编码与禁止位置区映射配置]
 
 
 
@@ -10924,7 +10924,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 共享网络区配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 3GPP R6引入的网络共享概念，是指不同运营商进行核心网共享或无线网络共享，主要是多个运营商共同出资建设共享的网络，这是为分担网络建设成本、降低风险而采取的一种建网模式。 
@@ -10947,7 +10947,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN支持MOCN功能需要License支持，对应的License项为“GnGp SGSN MOCN功能”。 
@@ -10962,7 +10962,7 @@ ZXUN uMAC-SGSN 网元中，MOCN功能相关的配置流程如下：
 
 
                         配置SGSN不支持Flex功能时是否分配NRI，参见：SET SGSNCFG或
-                        [SET COMBOCFG](../mml/1260006.html)
+                        [SET COMBOCFG]
                         。
                     
 
@@ -10980,21 +10980,21 @@ ZXUN uMAC-SGSN 网元中，MOCN功能相关的配置流程如下：
 
 
                         配置SGSN与RNC对接，配置命令参见：
-                        [ADD OPC](../mml/CommonS_SIG->ADD OPC.html)
+                        [ADD OPC]
                         ，
-                        [ADD ADJOFC](../mml/CommonS_SIG->ADD ADJOFC.html)
+                        [ADD ADJOFC]
                         ，配置Sigtran（包括：
-                        [ADD M3UASCTP](../mml/CommonS_SIG->ADD M3UASCTP.html)
+                        [ADD M3UASCTP]
                         ，配置命令参见：
-                        [ADD M3UAASP](../mml/CommonS_SIG->ADD M3UAASP.html)
+                        [ADD M3UAASP]
                         ，
-                        [ADD M3UAAS](../mml/CommonS_SIG->ADD M3UAAS.html)
+                        [ADD M3UAAS]
                         ，
-                        [ADD M3UART](../mml/CommonS_SIG->ADD M3UART.html)
+                        [ADD M3UART]
                         ，
-                        [ADD SIOLOCAS](../mml/CommonS_SIG->ADD SIOLOCAS.html)
+                        [ADD SIOLOCAS]
                         ），
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -11005,13 +11005,13 @@ ZXUN uMAC-SGSN 网元中，MOCN功能相关的配置流程如下：
 
 
                         如果需要SGSN支持多PLMN功能，配置SGSN支持多PLMN，配置命令参见：
-                        [ADD HPLMNCFG](../mml/1260105.html)
+                        [ADD HPLMNCFG]
                         ，
-                        [ADD LAI](../mml/1262230.html)
+                        [ADD LAI]
                         ，
-                        [ADD RAI](../mml/1262235.html)
+                        [ADD RAI]
                         ，
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -11022,7 +11022,7 @@ ZXUN uMAC-SGSN 网元中，MOCN功能相关的配置流程如下：
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -11050,7 +11050,7 @@ ZXUN uMAC-SGSN 网元中，MOCN功能相关的配置流程如下：
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -11073,7 +11073,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 共享网络区配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MOCN（Multi-Operator Core Network），是指无线接入网络共享，核心网元不共享的一种网络共享方式，即多个运营商共同出资建设共享的无线接入网络，分担网络建设成本，降低网络建设风险，提高建网速度。 
@@ -11084,7 +11084,7 @@ SGSN和RNC支持基于SNA（Shared Network Area）实现共享网络区域的接
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 共享网络区配置完成共享网络区域码（SNAC）和位置区的对应关系配置。 
@@ -11102,7 +11102,7 @@ SGSN和RNC支持基于SNA（Shared Network Area）实现共享网络区域的接
 
 
                         配置本局是否支持共享网络区，命令为：
-                        [SET SUPPORT SNA](../mml/1264006.html)
+                        [SET SUPPORT SNA]
                         。
                     
 
@@ -11113,7 +11113,7 @@ SGSN和RNC支持基于SNA（Shared Network Area）实现共享网络区域的接
 
 
                         配置RNC支持SNA功能，配置命令参见：
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -11124,7 +11124,7 @@ SGSN和RNC支持基于SNA（Shared Network Area）实现共享网络区域的接
 
 
                         配置共享网络区和位置区的对应关系，命令为：
-                        [ADD SNA](../mml/1264010.html)
+                        [ADD SNA]
                         。
                     
 
@@ -11135,7 +11135,7 @@ SGSN和RNC支持基于SNA（Shared Network Area）实现共享网络区域的接
 
 
                         如果需要增加共享网络区中的位置区，可使用配置命令：
-                        [ADD SNA LAI](../mml/1264009.html)
+                        [ADD SNA LAI]
                         。
                     
 
@@ -11152,7 +11152,7 @@ SGSN支持MOCN功能需要License支持，对应的License项为“GnGp SGSN MOC
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -11200,7 +11200,7 @@ SGSN支持MOCN功能需要License支持，对应的License项为“GnGp SGSN MOC
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254295.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11223,12 +11223,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置是否支持SNA功能(SET SUPPORT SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置SGSN是否支持SNA（Shared Network Area，共享网络区域）功能。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -11249,10 +11249,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAFLAG|是否支持SNA功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示本局是否支持SNA功能。 取值含义：“是（Yes）”：本局支持SNA功能。“否（No）”：本局不支持SNA功能。
 
@@ -11261,7 +11261,7 @@ SNAFLAG|是否支持SNA功能|参数可选性:任选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置本局不支持SNA功能。
@@ -11274,7 +11274,7 @@ SET SUPPORT SNA:SNAFLAG="NO";
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254296.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11297,20 +11297,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询是否支持SNA功能(SHOW SUPPORT SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SGSN网元是否支持SNA功能。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAFLAG|是否支持SNA功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示本局是否支持SNA功能。 取值含义：“是（Yes）”：本局支持SNA功能。“否（No）”：本局不支持SNA功能。
 
@@ -11319,7 +11319,7 @@ SNAFLAG|是否支持SNA功能|参数可选性:任选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本局是否支持SNA功能，查询结果示例如下：
@@ -11346,7 +11346,7 @@ SHOW SUPPORT SNA;
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254296.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11369,7 +11369,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 增加共享网络区的位置区(ADD SNA LAI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于为某个SNA增加一个指定的LA。 
@@ -11383,15 +11383,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-新增操作前，需保证将要加入SNA中的LA当前已配置。查询本局LA配置情况的命令为：[SHOW LAI](1262233.html)。
-
-
-[](None)参数说明 
+新增操作前，需保证将要加入SNA中的LA当前已配置。查询本局LA配置情况的命令为：[SHOW LAI]。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 SNAID|共享网络区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数用于指示SNAID，该参数由运营商分配，本局最多支持配置256个SNAID。
 LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|该参数用于表示要加入SNA中的LA名称，是指已在系统中配置的LA名称，查询本局LA配置情况的命令为：SHOW LAI。
@@ -11401,7 +11401,7 @@ LAI|位置区名|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 在SNAID为“1”的SNA中新增关联一个LA名称为“LAI_1”的LA。
@@ -11414,7 +11414,7 @@ ADD SNA LAI:SNAID=1,LAI="LAI_1";
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254296.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11437,7 +11437,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增共享网络区配置(ADD SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于为SGSN网元新增一个SNA，并设置此SNA所包含的LA（Location Area，位置区）。 
@@ -11448,7 +11448,7 @@ LAI（Location Area Identity，位置区标识）用于唯一标识一个LA，�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -11481,10 +11481,10 @@ SGSN最大支持配置256个SNA。每个SNA最多支持关联32个LA，且所关
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAID|共享网络区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数用于指示SNAID，该参数由运营商分配，本局最多支持配置256个SNAID。
 SNAC|共享网络区域码(HEX)|参数可选性:必选参数；参数类型:字符型；参数范围为:4~4个字符。|该参数用于指示SNAC。该参数由运营商分配，为4位十六进制数。
@@ -11496,7 +11496,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一个SNA配置，其中SNAID为“1”、SNAC为“0001”、LA名称为“LAI_1”、用户别名为“SNA_1”。
@@ -11509,7 +11509,7 @@ ADD SNA:SNAID=1,SNAC="0001",LAI="LAI_1",NAME="SNA_1";
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254296.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11532,12 +11532,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改共享网络区配置(SET SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于当需要对某个SNAID（Shared Network Area ID，共享网络区标识）所关联的SNAC（Shared Network Area Code，共享网络区域码）/LA NAME/User Alias中的一个或多个进行修改时，执行该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -11558,10 +11558,10 @@ SNAID标识一个SNA的编号，SNAC标识一个SNA的编码内容。一个SNAID
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAID|共享网络区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数用于指示SNAID，该参数由运营商分配，本局最多支持配置256个SNAID。
 SNAC|共享网络区域码(HEX)|参数可选性:任选参数；参数类型:字符型；参数范围为:4~4个字符。|该参数用于指示SNAC。该参数由运营商分配，为4位十六进制数。
@@ -11573,7 +11573,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将SNAID为“1”的SNA所关联的SNAC修改为“0001”、LA名称修改为“LAI_1”、用户别名修改为“SNA_1”。
@@ -11586,7 +11586,7 @@ SET SNA:SNAID=1,SNAC="0001",LAI="LAI_1",NAME="SNA_1";
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254296.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11609,12 +11609,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除共享网络区配置(DEL SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 当需要删除某个SNA或某个SNA下关联的一个LA时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -11639,10 +11639,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAID|共享网络区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数用于指示SNAID，该参数由运营商分配，本局最多支持配置256个SNAID。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于表示要加入SNA中的LA名称，是指已在系统中配置的LA名称，查询本局LA配置情况的命令为：SHOW LAI。
@@ -11652,7 +11652,7 @@ LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除SNAID为“1”的SNA的配置。
@@ -11665,7 +11665,7 @@ DEL SNA:SNAID=1;
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254296.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11688,20 +11688,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询共享网络区配置(SHOW SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询本局SNA配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAID|共享网络区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数用于指示SNAID，该参数由运营商分配，本局最多支持配置256个SNAID。
 LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于表示要加入SNA中的LA名称，是指已在系统中配置的LA名称，查询本局LA配置情况的命令为：SHOW LAI。
@@ -11711,10 +11711,10 @@ LAI|位置区名|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAID|共享网络区标识|参数可选性:任选参数；参数类型:整数。|该参数用于指示SNAID，该参数由运营商分配，本局最多支持配置256个SNAID。
 SNAC|共享网络区域码(HEX)|参数可选性:任选参数；参数类型:字符型；参数范围为:4~4个字符。|该参数用于指示SNAC。该参数由运营商分配，为4位十六进制数。
@@ -11726,7 +11726,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SNA配置，查询结果示例如下：
@@ -11753,7 +11753,7 @@ SHOW SNA;
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254296.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11776,7 +11776,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 共享网络群配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MOCN功能中，SGSN和RNC支持基于SNA（Shared Network Area）编号实现共享网络区域的接入控制。 
@@ -11787,7 +11787,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当SGSN在接入过程（附着和路由更新）和切换过程中需要为RNC提供用户的共享网络区域信息时，SGSN根据“共享网络群配置”把多个共享网络区标识和共享网络群标识关联，这样就可以方便被号码段所引用，从而提高配置的效率。 
@@ -11802,7 +11802,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置本局支持共享网络区，配置命令参见：
-                        [SET SUPPORT SNA](../mml/1264006.html)
+                        [SET SUPPORT SNA]
                         。
                     
 
@@ -11813,7 +11813,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置RNC支持SNA功能，配置命令参见：
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -11824,7 +11824,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置共享网络区和位置区的对应关系，配置命令参见：
-                        [ADD SNA](../mml/1264010.html)
+                        [ADD SNA]
                         。
                     
 
@@ -11835,7 +11835,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置共享网络群，命令为：
-                        [ADD SNG](../mml/1264015.html)
+                        [ADD SNG]
                         。
                     
 
@@ -11846,7 +11846,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置基于用户的SNA接入信息，配置命令参见：
-                        [ADD IMSI SNA](../mml/1264020.html)
+                        [ADD IMSI SNA]
                         。
                     
 
@@ -11863,7 +11863,7 @@ SGSN支持MOCN功能需要License支持，对应的License项为“GnGp SGSN MOC
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -11896,7 +11896,7 @@ SGSN支持MOCN功能需要License支持，对应的License项为“GnGp SGSN MOC
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254295.html)
+父主题： [共享网络区配置]
 
 
 
@@ -11919,12 +11919,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增共享网络群配置(ADD SNG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于为SGSN网元新增一个SNG（Shared Network Group，共享网络群），并设置此SNG所包含的SNA，该SNG可包含一个或多个SNA。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -11961,10 +11961,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAGRPID|共享网络群标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNG的标识。本局最多支持配置22048个SNG。
 SNAID|共享网络区标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNA的标识。一个SNG最多支持配置8个SNA，且每个SNA的PLMN相同。
@@ -11975,7 +11975,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增SNAGRPID为“1”的SNG，该SNG包含SNAID为“1”的SNA，用户别名为“NAGRP_1”。
@@ -11988,7 +11988,7 @@ ADD SNG:SNAGRPID=1,SNAID=1,NAME="NAGRP_1";
 
 
 
-父主题： [共享网络群配置](../../zh-CN/tree/N_1254297.html)
+父主题： [共享网络群配置]
 
 
 
@@ -12011,12 +12011,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改共享网络群配置(SET SNG) 
 
 
-[](None)命令功能 
+命令功能 
 
 当需要修改某个SNG下关联的SNA时，执行该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -12033,10 +12033,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAGRPID|共享网络群标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNG的标识。本局最多支持配置22048个SNG。
 SNAID|共享网络区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNA的标识。一个SNG最多支持配置8个SNA，且每个SNA的PLMN相同。
@@ -12047,7 +12047,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将SNAGRPID为“1”的SNG所包含的SNAID修改为“1”、用户别名修改为“NAGRP_1”。
@@ -12060,7 +12060,7 @@ SET SNG:SNAGRPID=1,SNAID=1,NAME="NAGRP_1";
 
 
 
-父主题： [共享网络群配置](../../zh-CN/tree/N_1254297.html)
+父主题： [共享网络群配置]
 
 
 
@@ -12083,12 +12083,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除共享网络群配置(DEL SNG) 
 
 
-[](None)命令功能 
+命令功能 
 
 当需要删除某个SNG或该SNG下关联的某个SNA时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -12109,10 +12109,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAGRPID|共享网络群标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNG的标识。本局最多支持配置22048个SNG。
 SNAID|共享网络区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNA的标识。一个SNG最多支持配置8个SNA，且每个SNA的PLMN相同。
@@ -12122,7 +12122,7 @@ SNAID|共享网络区标识|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除SNAGRPID为“1”的SNG的配置。
@@ -12135,7 +12135,7 @@ DEL SNG:SNAGRPID=1;
 
 
 
-父主题： [共享网络群配置](../../zh-CN/tree/N_1254297.html)
+父主题： [共享网络群配置]
 
 
 
@@ -12158,20 +12158,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询共享网络群配置(SHOW SNG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询共享网络群配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNG的标识。本局最多支持配置22048个SNG。
 SNAID|共享网络区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNA的标识。一个SNG最多支持配置8个SNA，且每个SNA的PLMN相同。
@@ -12181,10 +12181,10 @@ SNAID|共享网络区标识|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:整数。|该参数指示SNG的标识。本局最多支持配置22048个SNG。
 SNAID|共享网络区标识|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数指示SNA的标识。一个SNG最多支持配置8个SNA，且每个SNA的PLMN相同。
@@ -12195,7 +12195,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SNG配置，查询结果示例如下：
@@ -12222,7 +12222,7 @@ SHOW SNG;
 
 
 
-父主题： [共享网络群配置](../../zh-CN/tree/N_1254297.html)
+父主题： [共享网络群配置]
 
 
 
@@ -12245,7 +12245,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 基于用户的SNA接入信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MOCN功能中，SGSN和RNC支持基于SNA（Shared Network Area）实现共享网络区域的接入控制。 
@@ -12256,7 +12256,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当SGSN在接入过程（附着和路由更新）和切换过程中需要为RNC提供用户的共享网络区域信息时，SGSN根据“基于用户的SNA接入信息配置”获取用户的共享网络区域信息。 
@@ -12271,7 +12271,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置本局是否支持共享网络区，配置命令参见：
-                        [SET SUPPORT SNA](../mml/1264006.html)
+                        [SET SUPPORT SNA]
                         。
                     
 
@@ -12282,7 +12282,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置RNC支持SNA功能，配置命令参见：
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -12293,7 +12293,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置共享网络区和位置区的对应关系，配置命令参见：
-                        [ADD SNA](../mml/1264010.html)
+                        [ADD SNA]
                         。
                     
 
@@ -12304,7 +12304,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置共享网络群，配置命令参见：
-                        [ADD SNG](../mml/1264015.html)
+                        [ADD SNG]
                         。
                     
 
@@ -12315,7 +12315,7 @@ RNC从SGSN获得关于本RNC下所有LA在SNA中的归属关系以及用户在�
 
 
                         配置基于用户的SNA接入信息，命令为：
-                        [ADD IMSI SNA](../mml/1264020.html)
+                        [ADD IMSI SNA]
                         。
                     
 
@@ -12332,7 +12332,7 @@ SGSN支持MOCN功能需要License支持，对应的License项为“GnGp SGSN MOC
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -12365,7 +12365,7 @@ SGSN支持MOCN功能需要License支持，对应的License项为“GnGp SGSN MOC
 
 
 
-父主题： [共享网络区配置](../../zh-CN/tree/N_1254295.html)
+父主题： [共享网络区配置]
 
 
 
@@ -12388,7 +12388,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增基于用户的SNA接入信息配置(ADD IMSI SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于根据用户的IMSI号码，配置与该IMSI关联的SNG（Shared Network Area Group，共享网络群）。 
@@ -12399,7 +12399,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -12424,10 +12424,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数指示IMSI号码。该参数是区别移动用户的标志，使用0～9的数字，且总长度不超过15位。
 SNAGRPID|共享网络群标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNAGRPID。一个共享网络群最多配置8个共享网络区，且所有共享网络区中关联位置区的MCC和MNC必须一致。
@@ -12438,7 +12438,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增IMSI号段为“46001”的用户的SNA接入信息配置，其中，关联的SNAGRPID为“1”、用户别名为“IMSISNA_1”。
@@ -12451,7 +12451,7 @@ ADD IMSI SNA:IMSI="46001",SNAGRPID=1,NAME="IMSISNA_1";
 
 
 
-父主题： [基于用户的SNA接入信息配置](../../zh-CN/tree/N_1254298.html)
+父主题： [基于用户的SNA接入信息配置]
 
 
 
@@ -12474,12 +12474,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改基于用户的SNA接入信息配置(SET IMSI SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 当需要根据用户的IMSI号码，修改与该IMSI号段已关联的SNG配置信息时，执行该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -12496,10 +12496,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数指示IMSI号码。该参数是区别移动用户的标志，使用0～9的数字，且总长度不超过15位。
 SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNAGRPID。一个共享网络群最多配置8个共享网络区，且所有共享网络区中关联位置区的MCC和MNC必须一致。
@@ -12510,7 +12510,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI号段为“46001”的用户的SNA接入信息配置，其中，SNAGRPID修改为“1”、用户别名修改为“IMSISNA_1”。
@@ -12523,7 +12523,7 @@ SET IMSI SNA:IMSI="46001",SNAGRPID=1,NAME="IMSISNA_1";
 
 
 
-父主题： [基于用户的SNA接入信息配置](../../zh-CN/tree/N_1254298.html)
+父主题： [基于用户的SNA接入信息配置]
 
 
 
@@ -12546,12 +12546,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除基于用户的SNA接入信息配置(DEL IMSI SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 当需要根据用户的IMSI号码，删除与该用户已关联的SNG配置信息时，执行该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -12568,10 +12568,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数指示IMSI号码。该参数是区别移动用户的标志，使用0～9的数字，且总长度不超过15位。
 SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNAGRPID。一个共享网络群最多配置8个共享网络区，且所有共享网络区中关联位置区的MCC和MNC必须一致。
@@ -12581,7 +12581,7 @@ SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI号段为“46001”的用户的SNA接入信息配置。
@@ -12594,7 +12594,7 @@ DEL IMSI SNA:IMSI="46001";
 
 
 
-父主题： [基于用户的SNA接入信息配置](../../zh-CN/tree/N_1254298.html)
+父主题： [基于用户的SNA接入信息配置]
 
 
 
@@ -12617,20 +12617,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询基于用户的SNA接入信息配置(SHOW IMSI SNA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询用户的SNA接入信息配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数指示IMSI号码。该参数是区别移动用户的标志，使用0～9的数字，且总长度不超过15位。
 SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65534。|该参数指示SNAGRPID。一个共享网络群最多配置8个共享网络区，且所有共享网络区中关联位置区的MCC和MNC必须一致。
@@ -12640,10 +12640,10 @@ SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:整�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数指示IMSI号码。该参数是区别移动用户的标志，使用0～9的数字，且总长度不超过15位。
 SNAGRPID|共享网络群标识|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数指示SNAGRPID。一个共享网络群最多配置8个共享网络区，且所有共享网络区中关联位置区的MCC和MNC必须一致。
@@ -12654,7 +12654,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询用户的SNA接入信息配置，查询结果示例如下：
@@ -12681,7 +12681,7 @@ SHOW IMSI SNA;
 
 
 
-父主题： [基于用户的SNA接入信息配置](../../zh-CN/tree/N_1254298.html)
+父主题： [基于用户的SNA接入信息配置]
 
 
 
@@ -12704,7 +12704,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 允许4G漫游PLMN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UE漫游到归属运营商不能提供服务的区域时，如果需要继续使用移动业务，则需要UE归属运营商和拜访地运营商签约漫游协议。 
@@ -12712,7 +12712,7 @@ UE漫游到归属运营商不能提供服务的区域时，如果需要继续使
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “允许4G漫游PLMN配置”用于控制是否允许其他PLMN的UE漫游到本运营商的EPC网络。本功能配置流程如下： 
@@ -12722,14 +12722,14 @@ UE漫游到归属运营商不能提供服务的区域时，如果需要继续使
 
 
                     设置MME是否支持“允许4G漫游PLMN功能”。命令为：
-                    [SET ROAM PLMN SPRT](../mml/1266024.html)
+                    [SET ROAM PLMN SPRT]
                     。
                 
 
 
 
                     设置允许4G漫游的PLMN列表。命令为：
-                    [ADD ROAM PLMN](../mml/1266027.html)
+                    [ADD ROAM PLMN]
                     。
                 
 
@@ -12738,7 +12738,7 @@ UE漫游到归属运营商不能提供服务的区域时，如果需要继续使
 
 
                 配置完成后，其他PLMN漫游来的UE发起附着和TAU时，MME查询“允许4G漫游PLMN功能”。如果设置为支持，MME根据UE的IMSI检测UE的PLMN是否在配置的允许4G漫游的PLMN列表中，如果不在列表中，说明该UE的归属运营商没有和本运营商签约4G漫游协议，MME直接拒绝UE接入。MME返回给UE的拒绝原因值可通过
-                [SET ROAM PLMN SPRT](../mml/1266024.html)
+                [SET ROAM PLMN SPRT]
                 命令配置。
             
 
@@ -12751,7 +12751,7 @@ UE漫游到归属运营商不能提供服务的区域时，如果需要继续使
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -12794,7 +12794,7 @@ UE漫游到归属运营商不能提供服务的区域时，如果需要继续使
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -12817,15 +12817,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置是否允许4G漫游PLMN配置(SET ROAM PLMN SPRT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于设置MME是否支持“允许4G漫游PLMN功能”。配置为支持后，如果从其他PLMN漫游来的UE的PLMN不在MME已配置的列表中（可通过[SHOW ROAM PLMN](1266030.html) 命令查询），则说明该UE的归属运营商没有和本运营商签约4G漫游协议，MME直接拒绝UE接入，拒绝原因值在本命令中配置。
+该命令用于设置MME是否支持“允许4G漫游PLMN功能”。配置为支持后，如果从其他PLMN漫游来的UE的PLMN不在MME已配置的列表中（可通过[SHOW ROAM PLMN] 命令查询），则说明该UE的归属运营商没有和本运营商签约4G漫游协议，MME直接拒绝UE接入，拒绝原因值在本命令中配置。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -12833,10 +12833,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ROAMPLMN|支持允许漫游PLMN功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持允许4G漫游的PLMN列表功能。如果设置为支持，MME在处理从其他PLMN漫游来的UE的附着和TAU时，需要检查UE的PLMN是否在配置的已签约4G漫游协议的PLMN列表中。如果不在列表中，MME拒绝用户接入，并返回配置的拒绝原因值。
 REJCAUSE|拒绝原因值|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置漫游的UE，由于归属运营商和本网络未签约4G漫游协议，本网络拒绝UE接入时，返回给UE的拒绝原因值。
@@ -12847,7 +12847,7 @@ EXEMMCAUSE|是否携带扩展EMM原因|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME是否支持允许4G漫游PLMN功能，其中支持允许漫游PLMN功能为“支持”，拒绝原因值为“非法UE”。 
@@ -12862,7 +12862,7 @@ SET ROAM PLMN SPRT:ROAMPLMN="YES",REJCAUSE="Illegal UE";
 
 
 
-父主题： [允许4G漫游PLMN配置](../../zh-CN/tree/N_1252381.html)
+父主题： [允许4G漫游PLMN配置]
 
 
 
@@ -12885,7 +12885,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询是否允许4G漫游PLMN配置(SHOW ROAM PLMN SPRT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME是否支持允许4G漫游PLMN功能。 
@@ -12893,7 +12893,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -12901,10 +12901,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ROAMPLMN|支持允许漫游PLMN功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持允许4G漫游的PLMN列表功能。如果设置为支持，MME在处理从其他PLMN漫游来的UE的附着和TAU时，需要检查UE的PLMN是否在配置的已签约4G漫游协议的PLMN列表中。如果不在列表中，MME拒绝用户接入，并返回配置的拒绝原因值。
 REJCAUSE|拒绝原因值|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置漫游的UE，由于归属运营商和本网络未签约4G漫游协议，本网络拒绝UE接入时，返回给UE的拒绝原因值。
@@ -12915,7 +12915,7 @@ EXEMMCAUSE|是否携带扩展EMM原因|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME是否支持允许4G漫游PLMN功能。 
@@ -12945,7 +12945,7 @@ SHOW ROAM PLMN SPRT;
 
 
 
-父主题： [允许4G漫游PLMN配置](../../zh-CN/tree/N_1252381.html)
+父主题： [允许4G漫游PLMN配置]
 
 
 
@@ -12968,15 +12968,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增允许4G漫游PLMN配置(ADD ROAM PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于新增MME支持的允许4G漫游的PLMN列表。如果漫游到本网的UE的PLMN不在本命令配置的列表中，说明该UE的归属运营商没有和本运营商签约4G漫游协议，MME直接拒绝UE接入，返回的拒绝原因值可以通过[SET ROAM PLMN SPRT](1266024.html)命令设置。
+该命令用于新增MME支持的允许4G漫游的PLMN列表。如果漫游到本网的UE的PLMN不在本命令配置的列表中，说明该UE的归属运营商没有和本运营商签约4G漫游协议，MME直接拒绝UE接入，返回的拒绝原因值可以通过[SET ROAM PLMN SPRT]命令设置。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 只有当MME支持“允许4G漫游PLMN功能”时，本配置才生效。 
@@ -12984,10 +12984,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位。例如，中国的“移动国家码”为“460”、美国的“移动国家码”为“310”等。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号由2位或3位数字组成，它由本国电信主管部门在本国范围内统一分配。例如，“01”是中国联通的移动网号，“02”是中国移动的移动网号，“03”是中国电信的移动网号等。
@@ -12998,7 +12998,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增允许4G漫游的PLMN列表，其中移动国家码为460，移动网号为01，用户别名为name1。 
@@ -13013,7 +13013,7 @@ ADD ROAM PLMN:MCC="460",MNC="01",NAME="name1";
 
 
 
-父主题： [允许4G漫游PLMN配置](../../zh-CN/tree/N_1252381.html)
+父主题： [允许4G漫游PLMN配置]
 
 
 
@@ -13036,7 +13036,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改允许4G漫游PLMN配置(SET ROAM PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改MME已配置的允许4G漫游的PLMN列表，只能修改PLMN的别名，不能修改MCC和MNC。 
@@ -13044,7 +13044,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13052,10 +13052,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位。例如，中国的“移动国家码”为“460”、美国的“移动国家码”为“310”等。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号由2位或3位数字组成，它由本国电信主管部门在本国范围内统一分配。例如，“01”是中国联通的移动网号，“02”是中国移动的移动网号，“03”是中国电信的移动网号等。
@@ -13066,7 +13066,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改允许4G漫游的PLMN列表，其中移动国家码为460，移动网号为01，用户别名修改为name_1。 
@@ -13081,7 +13081,7 @@ SET ROAM PLMN:MCC="460",MNC="01",NAME="name_1";
 
 
 
-父主题： [允许4G漫游PLMN配置](../../zh-CN/tree/N_1252381.html)
+父主题： [允许4G漫游PLMN配置]
 
 
 
@@ -13104,7 +13104,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除允许4G漫游PLMN配置(DEL ROAM PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除MME已配置的允许4G漫游的PLMN列表。 
@@ -13112,7 +13112,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13120,10 +13120,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位。例如，中国的“移动国家码”为“460”、美国的“移动国家码”为“310”等。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号由2位或3位数字组成，它由本国电信主管部门在本国范围内统一分配。例如，“01”是中国联通的移动网号，“02”是中国移动的移动网号，“03”是中国电信的移动网号等。
@@ -13133,7 +13133,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除允许4G漫游的PLMN列表，其中移动国家码为468，移动网号为05。 
@@ -13148,7 +13148,7 @@ DEL ROAM PLMN:MCC="468",MNC="05";
 
 
 
-父主题： [允许4G漫游PLMN配置](../../zh-CN/tree/N_1252381.html)
+父主题： [允许4G漫游PLMN配置]
 
 
 
@@ -13171,7 +13171,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询允许4G漫游PLMN配置(SHOW ROAM PLMN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME已配置的允许4G漫游的PLMN列表。 
@@ -13179,7 +13179,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13187,10 +13187,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位。例如，中国的“移动国家码”为“460”、美国的“移动国家码”为“310”等。
 MNC|移动网号|参数可选性:任选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号由2位或3位数字组成，它由本国电信主管部门在本国范围内统一分配。例如，“01”是中国联通的移动网号，“02”是中国移动的移动网号，“03”是中国电信的移动网号等。
@@ -13200,10 +13200,10 @@ MNC|移动网号|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型。|移动国家码由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位。例如，中国的“移动国家码”为“460”、美国的“移动国家码”为“310”等。
 MNC|移动网号|参数可选性:任选参数；参数类型:字符型。|移动网号由2位或3位数字组成，它由本国电信主管部门在本国范围内统一分配。例如，“01”是中国联通的移动网号，“02”是中国移动的移动网号，“03”是中国电信的移动网号等。
@@ -13214,7 +13214,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|允�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询允许4G漫游的PLMN列表。 
@@ -13245,7 +13245,7 @@ SHOW ROAM PLMN;
 
 
 
-父主题： [允许4G漫游PLMN配置](../../zh-CN/tree/N_1252381.html)
+父主题： [允许4G漫游PLMN配置]
 
 
 
@@ -13268,7 +13268,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # PRA区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 随着EPC的发展，运营商出于流量经营业务的需要，迫切需要能够得知用户当前的活动区域，PRA（Presence Reporting
@@ -13295,14 +13295,14 @@ MME预配置区域控制：在MME上事先配置PRA ID，以及PRA ID包含的�
 
 
 
-[](None)功能描述 
+功能描述 
 
             
             当采用MME预配置区域控制模式进行PRA区域控制时，使用本配置。通过配置PRA ID和对应的位置信息，来完成PRA区域控制。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -13340,7 +13340,7 @@ MME预配置区域控制：在MME上事先配置PRA ID，以及PRA ID包含的�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -13363,7 +13363,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增PRA区域配置(ADD PRA AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增PRA ID和该ID包含的位置信息的配置。当运营商希望PRA使用“MME预配置区域控制”的方式时，使用该命令。通过该命令的配置信息，MME可以获得用户使用的PRA ID包括哪些位置区域。 
@@ -13371,7 +13371,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13379,10 +13379,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:8388608~16777215。|该参数用于指定PRA的标识。该标识需要和PCRF的定义保持一致。
 TYPE|类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于标识PRA位置区域类型，即指明是TAI、ECGI、Macro eNodeB或者Home eNodeB。
@@ -13396,7 +13396,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增PRA区域配置，其中区域标识为12233455，类型为TAI，MCC为460，MNC为01，位置信息为1。 
@@ -13412,7 +13412,7 @@ AREA:AREAID=12233455,TYPE="TAI",MCC="460",MNC="01",AREAINFO=1;
 
 
 
-父主题： [PRA区域配置](../../zh-CN/tree/N_12552724.html)
+父主题： [PRA区域配置]
 
 
 
@@ -13435,7 +13435,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除PRA区域配置(DEL PRA AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除“MME预配置区域控制”方式下的配置参数。当某个PRA ID不再使用时，使用该命令。 
@@ -13443,7 +13443,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13451,10 +13451,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:8388608~16777215。|该参数用于指定PRA的标识。该标识需要和PCRF的定义保持一致。
 TYPE|类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于标识PRA位置区域类型，即指明是TAI、ECGI、Macro eNodeB或者Home eNodeB。
@@ -13467,7 +13467,7 @@ AREAINFO|位置信息|参数可选性:必选参数；参数类型:整数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除PRA区域配置，其中区域标识为12233455，类型为TAI，MCC为460，MNC为01，位置信息为1。 
@@ -13483,7 +13483,7 @@ AREA:AREAID=12233455,TYPE="TAI",MCC="460",MNC="01",AREAINFO=1;
 
 
 
-父主题： [PRA区域配置](../../zh-CN/tree/N_12552724.html)
+父主题： [PRA区域配置]
 
 
 
@@ -13506,7 +13506,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 批量新增PRA区域配置(ADD PRA AREA BATCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于批量新增PRA ID和该ID包含的位置信息的配置。当PRA ID包含多个连续的位置信息时，使用该命令。通过该命令，可以提高操作维护人员的配置工作效率。 
@@ -13514,15 +13514,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 执行该命令前，需要事先规划好区域信息。执行此命令后，起始位置和终止位置之间的位置区域信息都会添加到相应的PRA ID下。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:8388608~16777215。|该参数用于指定PRA的标识。该标识需要和PCRF的定义保持一致。
 TYPE|类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于标识PRA位置区域类型，即指明是TAI、ECGI、eNodeB或者Home eNodeB。
@@ -13537,7 +13537,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 批量新增PRA区域配置，其中区域标识为12233455，类型为TAI，MCC为460，MNC为01，起始位置为1，终止位置为10。 
@@ -13552,7 +13552,7 @@ ADD PRA AREA BATCH:AREAID=12233455,TYPE="TAI",MCC="460",MNC="01",AREAINFOBEGIN=1
 
 
 
-父主题： [PRA区域配置](../../zh-CN/tree/N_12552724.html)
+父主题： [PRA区域配置]
 
 
 
@@ -13575,7 +13575,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 批量删除PRA区域配置(DEL PRA AREA BATCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于批量删除PRA ID和该ID包含的位置信息的配置。当需要删除PRA ID包含的多个位置信息时，使用该命令。通过该命令，可以提高操作维护人员的配置工作效率。 
@@ -13583,15 +13583,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令请慎重使用！执行该命令后，起始位置和终止位置之间的位置区域信息都会被删除。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域标识|参数可选性:必选参数；参数类型:整数；参数范围为:8388608~16777215。|该参数用于指定PRA的标识。该标识需要和PCRF的定义保持一致。
 TYPE|类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于标识PRA位置区域类型，即指明是TAI、ECGI、eNodeB或者Home eNodeB。
@@ -13605,7 +13605,7 @@ AREAINFOEND|终止位置|参数可选性:特殊任选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 批量删除PRA区域配置，其中区域标识为12233455。 
@@ -13620,7 +13620,7 @@ DEL PRA AREA BATCH:AREAID=12233455;
 
 
 
-父主题： [PRA区域配置](../../zh-CN/tree/N_12552724.html)
+父主题： [PRA区域配置]
 
 
 
@@ -13643,7 +13643,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询PRA区域配置(SHOW PRA AREA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询“MME预配置区域控制”方式下的配置参数。 
@@ -13651,7 +13651,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13659,10 +13659,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域标识|参数可选性:任选参数；参数类型:整数；参数范围为:8388608~16777215。|该参数用于指定PRA的标识。该标识需要和PCRF的定义保持一致。
 TYPE|类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于标识PRA位置区域类型，即指明是TAI、ECGI、Macro eNodeB或者Home eNodeB。
@@ -13676,10 +13676,10 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域标识|参数可选性:任选参数；参数类型:整数。|该参数用于指定PRA的标识。该标识需要和PCRF的定义保持一致。
 TYPE|类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于标识PRA位置区域类型，即指明是TAI、ECGI、Macro eNodeB或者Home eNodeB。
@@ -13693,7 +13693,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|起�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示区域标识为12233455的PRA区域配置信息。 
@@ -13722,7 +13722,7 @@ SHOW PRA AREA:AREAID=12233455;
 
 
 
-父主题： [PRA区域配置](../../zh-CN/tree/N_12552724.html)
+父主题： [PRA区域配置]
 
 
 
@@ -13745,7 +13745,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # MME的APN接入限制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 APN接入控制，主要用于限制某些漫游用户接入。MME从HSS获取用户的签约信息，结合MME本地配置的APN接入控制策略，决定是否允许用户接入。 
@@ -13753,7 +13753,7 @@ APN接入控制，主要用于限制某些漫游用户接入。MME从HSS获取�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用户发起附着/TAU（包括切换后的TAU），MME为该用户配置有APN NI白名单列表，其配置的APN NI在用户签约的APN列表中，则MME允许用户接入；否则MME不允许用户接入，可配置不允许接入的拒绝原因。 
@@ -13761,7 +13761,7 @@ APN接入控制，主要用于限制某些漫游用户接入。MME从HSS获取�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -13804,7 +13804,7 @@ APN接入控制，主要用于限制某些漫游用户接入。MME从HSS获取�
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -13827,7 +13827,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置是否支持APN接入控制(SET APN CONTROL FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置MME是否支持APN接入控制。当需要打开或者关闭MME APN接入控制功能时，使用该命令。 
@@ -13835,7 +13835,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13843,10 +13843,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LOCALAPNACCON|MME是否支持APN接入控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持APN接入控制。否（NO）：MME不支持APN接入控制。是（YES）：MME支持APN接入控制。
 
@@ -13855,7 +13855,7 @@ LOCALAPNACCON|MME是否支持APN接入控制|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME不支持APN接入控制。 
@@ -13870,7 +13870,7 @@ SET APN CONTROL FLAG:LOCALAPNACCON="NO";
 
 
 
-父主题： [MME的APN接入限制配置](../../zh-CN/tree/N_12552722.html)
+父主题： [MME的APN接入限制配置]
 
 
 
@@ -13893,7 +13893,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询是否支持APN接入控制(SHOW APN CONTROL FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME是否支持APN接入控制。可以查询出MME的APN接入控制功能是开启还是关闭。 
@@ -13901,7 +13901,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -13909,10 +13909,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LOCALAPNACCON|MME是否支持APN接入控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持APN接入控制。否（NO）：MME不支持APN接入控制。是（YES）：MME支持APN接入控制。
 
@@ -13921,7 +13921,7 @@ LOCALAPNACCON|MME是否支持APN接入控制|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME是否支持APN接入控制。 
@@ -13952,7 +13952,7 @@ SHOW APN CONTROL FLAG
 
 
 
-父主题： [MME的APN接入限制配置](../../zh-CN/tree/N_12552722.html)
+父主题： [MME的APN接入限制配置]
 
 
 
@@ -13975,7 +13975,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增APN接入控制配置(ADD APN CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增MME的APN接入控制配置。 
@@ -13998,7 +13998,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -14006,10 +14006,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 APNNI|APNNI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数为APN的NI部分。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出PGW；另一方面，APN标识了通过该PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了PGW所在的EPC分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。注意事项：不可配置为通配*。
@@ -14020,7 +14020,7 @@ DENYCAUSE|拒绝原因|参数可选性:必选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN接入控制配置，其中IMSI号段为46003，APNNI为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，拒绝原因为非法ME，控制类型为允许接入。 
@@ -14035,7 +14035,7 @@ ADD APN CONTROL:IMSI="46003",APNNI="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.or
 
 
 
-父主题： [MME的APN接入限制配置](../../zh-CN/tree/N_12552722.html)
+父主题： [MME的APN接入限制配置]
 
 
 
@@ -14058,7 +14058,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改APN接入控制配置(SET APN CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改APN接入控制配置。当需要修改APN白名单列表和拒绝原因时，使用该命令。 
@@ -14066,7 +14066,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -14074,10 +14074,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 APNNI|APNNI|参数可选性:任选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数为APN的NI部分。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出PGW；另一方面，APN标识了通过该PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了PGW所在的EPC分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。注意事项：不可配置为通配*。
@@ -14088,7 +14088,7 @@ DENYCAUSE|拒绝原因|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI号段为46003的配置数据，将拒绝原因修改为EPS服务不允许。 
@@ -14103,7 +14103,7 @@ SET APN CONTROL:IMSI="46003",DENYCAUSE="EPS services not allowed";
 
 
 
-父主题： [MME的APN接入限制配置](../../zh-CN/tree/N_12552722.html)
+父主题： [MME的APN接入限制配置]
 
 
 
@@ -14126,7 +14126,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除APN接入控制配置(DEL APN CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除APN接入控制配置。当需要删除APN接入控制配置记录时，使用该命令。该命令执行成功后，会删除指定号码段的配置记录。 
@@ -14134,7 +14134,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -14142,10 +14142,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 
@@ -14154,7 +14154,7 @@ IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI号段为46003的APN接入控制配置数据。 
@@ -14169,7 +14169,7 @@ DEL APN CONTROL:IMSI="46003";
 
 
 
-父主题： [MME的APN接入限制配置](../../zh-CN/tree/N_12552722.html)
+父主题： [MME的APN接入限制配置]
 
 
 
@@ -14192,7 +14192,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN接入控制配置(SHOW APN CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询APN接入控制配置。可查询IMSI号段与APN NI白名单的对应关系，以及拒绝的原因。 
@@ -14200,7 +14200,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -14208,10 +14208,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 
@@ -14220,10 +14220,10 @@ IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 APNNI|APNNI|参数可选性:任选参数；参数类型:字符型。|该参数为APN的NI部分。APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出PGW；另一方面，APN标识了通过该PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了PGW所在的EPC分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。注意事项：不可配置为通配*。
@@ -14234,7 +14234,7 @@ DENYCAUSE|拒绝原因|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有APN接入控制配置。 
@@ -14263,7 +14263,7 @@ SHOW APN CONTROL
 
 
 
-父主题： [MME的APN接入限制配置](../../zh-CN/tree/N_12552722.html)
+父主题： [MME的APN接入限制配置]
 
 
 
@@ -14286,7 +14286,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 核心网类型限制和5GS NR限制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 4G和5G互操作，指具有4G/5G能力的UE，在4G和5G间移动时（包括重新接入、重选、切换），能保证用户的会话连续性。 
@@ -14314,7 +14314,7 @@ MME可以基于5G签约数据和本地策略，限制用户是否可以切换到
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME可以基于用户IMSI号段或全局策略设置Core Network Type Restrictions和NR Restriction in 5GS的策略。 
@@ -14322,7 +14322,7 @@ MME可以基于用户IMSI号段或全局策略设置Core Network Type Restrictio
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -14345,7 +14345,7 @@ MME可以基于用户IMSI号段或全局策略设置Core Network Type Restrictio
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -14368,7 +14368,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 全局核心网类型限制和5GS NR限制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 4G和5G互操作，指具有4G/5G能力的UE，在4G和5G间移动时（包括重新接入、重选、切换），能保证用户的会话连续性。 
@@ -14396,7 +14396,7 @@ MME可以基于5G签约数据和本地策略，限制用户是否可以切换到
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME可以全局设置Core Network Type Restrictions和NR Restriction in 5GS的策略。 
@@ -14404,7 +14404,7 @@ MME可以全局设置Core Network Type Restrictions和NR Restriction in 5GS的�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -14432,7 +14432,7 @@ MME可以全局设置Core Network Type Restrictions和NR Restriction in 5GS的�
 
 
 
-父主题： [核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645133.html)
+父主题： [核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14455,12 +14455,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置全局核心网类型限制和5GS NR限制策略配置(SET GLOBAL 5G RSTC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置全局核心网类型限制和5GS NR限制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -14468,10 +14468,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NRRESTRICTPOLICY|5GS NR限制策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识5GS NR限制的处理策略。使用签约值：如果没有签约的ARD，则认为没有限制。5GS NR限制：禁止用户从NR接入。5GS NR允许：允许用户从NR接入。
 CNTYPERESTRICTPOLICY|核心网类型限制策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识核心网类型限制的处理策略。使用签约值：如果配置了“PLMN限制策略”，则对“PLMN限制策略”中的每一个PLMN，先判断PLMN是否为Serving PLMN或EPLMN，如果不是，丢弃该“PLMN限制策略”信息；如果是，则MME取签约的Core-Network-Restrictions。如果没有签约的Core-Network-Restriction，则认为没有限制。如果没有配置“PLMN限制策略”，则MME取Serving PLMN+EPLMN，对每一个PLMN，MME取签约的Core-Network-Restrictions。如果没有签约的Core-Network-Restriction，则认为没有限制。本地策略：MME取本地配置的“PLMN限制策略”。对“PLMN限制策略”中的每一个PLMN，先判断PLMN是否为Serving PLMN或EPLMN，如果不是，丢弃该PLMN限制策略信息。如果是，则根据其值，填充切换限制列表中的Core Network Type Restrictions。如果“PLMN限制策略”为空，表示不需要Core Network Type Restrictions，即切换限制列表中不携带Core Network Type Restrictions。
@@ -14486,7 +14486,7 @@ RESTRICTEPC|限制接入EPC|参数可选性:必选参数；参数类型:枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置全局核心网限制和5GS NR限制策略配置，5GS NR限制策略为5GS NR限制，核心网类型限制策略为本地策略，PLMN限制策略包含PLMN 460-10，限制接入5GC，不限制接入EPC。 
@@ -14501,7 +14501,7 @@ SET GLOBAL 5G RSTC:NRRESTRICTPOLICY="NR5GSNOTALLOW",CNTYPERESTRICTPOLICY="LOCALP
 
 
 
-父主题： [全局核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645134.html)
+父主题： [全局核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14524,12 +14524,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 重置全局核心网类型限制和5GS NR限制策略配置(RESET GLOBAL 5G RSTC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于重置全局核心网类型限制和5GS NR限制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -14537,7 +14537,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 重置全局核心网限制和5GS NR限制策略配置。 
@@ -14552,7 +14552,7 @@ RESET GLOBAL 5G RSTC;
 
 
 
-父主题： [全局核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645134.html)
+父主题： [全局核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14575,12 +14575,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询全局核心网类型限制和5GS NR限制策略配置(SHOW GLOBAL 5G RSTC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询全局核心网类型限制和5GS NR限制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -14588,10 +14588,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NRRESTRICTPOLICY|5GS NR限制策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识5GS NR限制的处理策略。使用签约值：如果没有签约的ARD，则认为没有限制。5GS NR限制：禁止用户从NR接入。5GS NR允许：允许用户从NR接入。
 CNTYPERESTRICTPOLICY|核心网类型限制策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识核心网类型限制的处理策略。使用签约值：如果配置了“PLMN限制策略”，则对“PLMN限制策略”中的每一个PLMN，先判断PLMN是否为Serving PLMN或EPLMN，如果不是，丢弃该“PLMN限制策略”信息；如果是，则MME取签约的Core-Network-Restrictions。如果没有签约的Core-Network-Restriction，则认为没有限制。如果没有配置“PLMN限制策略”，则MME取Serving PLMN+EPLMN，对每一个PLMN，MME取签约的Core-Network-Restrictions。如果没有签约的Core-Network-Restriction，则认为没有限制。本地策略：MME取本地配置的“PLMN限制策略”。对“PLMN限制策略”中的每一个PLMN，先判断PLMN是否为Serving PLMN或EPLMN，如果不是，丢弃该PLMN限制策略信息。如果是，则根据其值，填充切换限制列表中的Core Network Type Restrictions。如果“PLMN限制策略”为空，表示不需要Core Network Type Restrictions，即切换限制列表中不携带Core Network Type Restrictions。
@@ -14602,7 +14602,7 @@ PLMN限制策略|PLMN限制策略|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询全局核心网类型限制和5GS NR限制策略配置 
@@ -14631,7 +14631,7 @@ SHOW GLOBAL 5G RSTC;
 
 
 
-父主题： [全局核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645134.html)
+父主题： [全局核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14654,7 +14654,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 基于IMSI号段的核心网类型限制和5GS NR限制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 4G和5G互操作，指具有4G/5G能力的UE，在4G和5G间移动时（包括重新接入、重选、切换），能保证用户的会话连续性。 
@@ -14682,7 +14682,7 @@ MME可以基于5G签约数据和本地策略，限制用户是否可以切换到
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME可以基于IMSI号段设置Core Network Type Restrictions和NR Restriction in 5GS的策略。 
@@ -14690,7 +14690,7 @@ MME可以基于IMSI号段设置Core Network Type Restrictions和NR Restriction i
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -14723,7 +14723,7 @@ MME可以基于IMSI号段设置Core Network Type Restrictions和NR Restriction i
 
 
 
-父主题： [核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645133.html)
+父主题： [核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14746,20 +14746,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增基于IMSI号段的核心网类型限制和5GS NR限制策略配置(ADD IMSI 5G RSTC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增基于IMSI号段的核心网类型限制和5GS NR限制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 NRRESTRICTPOLICY|5GS NR限制策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:SUBSCRIBED。|该参数标识5GS NR限制的处理策略。使用签约值：如果没有签约的ARD，则认为没有限制。5GS NR限制：禁止用户从NR接入。5GS NR允许：允许用户从NR接入。
@@ -14775,7 +14775,7 @@ RESTRICTEPC|限制接入EPC|参数可选性:必选参数；参数类型:枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增基于IMSI号段的核心网类型限制和5GS NR限制策略配置，IMSI号段为46011111，5GS NR限制策略为5GS NR限制，核心网类型限制策略为本地策略，PLMN限制策略包含PLMN 460-10，限制接入5GC，不限制接入EPC。 
@@ -14790,7 +14790,7 @@ ADD IMSI 5G RSTC:IMSISEG="46011111",NRRESTRICTPOLICY="NR5GSNOTALLOW",CNTYPERESTR
 
 
 
-父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645135.html)
+父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14813,20 +14813,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改基于IMSI号段的核心网类型限制和5GS NR限制策略配置(SET IMSI 5G RSTC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改基于IMSI号段的核心网类型限制和5GS NR限制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 NRRESTRICTPOLICY|5GS NR限制策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识5GS NR限制的处理策略。使用签约值：如果没有签约的ARD，则认为没有限制。5GS NR限制：禁止用户从NR接入。5GS NR允许：允许用户从NR接入。
@@ -14842,7 +14842,7 @@ RESTRICTEPC|限制接入EPC|参数可选性:必选参数；参数类型:枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改基于IMSI号段的核心网类型限制和5GS NR限制策略配置，IMSI号段为46011111，5GS NR限制策略为5GS NR允许。 
@@ -14857,7 +14857,7 @@ SET IMSI 5G RSTC:IMSISEG="46011111",NRRESTRICTPOLICY="NRIN5GSALLOWED";
 
 
 
-父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645135.html)
+父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14880,20 +14880,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除基于IMSI号段的核心网类型限制和5GS NR限制策略配置(DEL IMSI 5G RSTC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除基于IMSI号段的核心网类型限制和5GS NR限制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 
@@ -14902,7 +14902,7 @@ IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除基于IMSI号段的核心网类型限制和5GS NR限制策略配置，IMSI号码为46011111。 
@@ -14917,7 +14917,7 @@ DEL IMSI 5G RSTC:IMSISEG="46011111";
 
 
 
-父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645135.html)
+父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -14940,20 +14940,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询基于IMSI号段的核心网类型限制和5GS NR限制策略配置(SHOW IMSI 5G RSTC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询基于IMSI号段的核心网类型限制和5GS NR限制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 
@@ -14962,10 +14962,10 @@ IMSISEG|IMSI号段|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 NRRESTRICTPOLICY|5GS NR限制策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识5GS NR限制的处理策略。使用签约值：如果没有签约的ARD，则认为没有限制。5GS NR限制：禁止用户从NR接入。5GS NR允许：允许用户从NR接入。
@@ -14977,7 +14977,7 @@ PLMNRESTRICT|PLMN限制策略|参数可选性:任选参数；参数类型:字符
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于IMSI号段的核心网类型限制和5GS NR限制策略配置。 
@@ -15006,7 +15006,7 @@ SHOW IMSI 5G RSTC;
 
 
 
-父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置](../../zh-CN/tree/N_12645135.html)
+父主题： [基于IMSI号段的核心网类型限制和5GS NR限制策略配置]
 
 
 
@@ -15029,7 +15029,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # eNB邻接关系配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 邻接eNB（Neighbor eNB）应用于策略寻呼功能，邻接eNB指的是地理位置上邻接的eNB。 
@@ -15037,7 +15037,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置中心eNB下与其的邻接eNB信息。 
@@ -15045,7 +15045,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -15078,7 +15078,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [接入区域配置](../../zh-CN/tree/N_12542700.html)
+父主题： [接入区域配置]
 
 
 
@@ -15101,7 +15101,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增eNB邻接关系配置(ADD NEIGHBORENB) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增中心eNB下的一个或多个邻接eNB。 
@@ -15109,7 +15109,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令执行后，结果立即生效。 
@@ -15120,10 +15120,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|中心基站移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MCC。MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 MNC|中心基站移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MNC。MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -15138,7 +15138,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增eNB邻接关系配置。其中中心基站移动国家码为460，中心基站移动网号为10，中心eNB标识为12；邻接基站移动国家码为460，邻接基站移动网号为30，邻接eNB标识为15。 
@@ -15153,7 +15153,7 @@ ADD NEIGHBORENB:MCC="460",MNC="10",ENBID=12,NEIMCC="460",NEIMNC="30",NEIENBID=15
 
 
 
-父主题： [eNB邻接关系配置](../../zh-CN/tree/N_12661971.html)
+父主题： [eNB邻接关系配置]
 
 
 
@@ -15176,7 +15176,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除eNB邻接关系配置(DEL NEIGHBORENB) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除eNB下的邻接eNB。 
@@ -15184,7 +15184,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令执行后，结果立即生效。 
@@ -15195,10 +15195,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|中心基站移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MCC。MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 MNC|中心基站移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MNC。MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -15212,7 +15212,7 @@ NEIENBID|邻接eNB标识|参数可选性:特殊任选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除中心基站移动国家码为460，中心基站移动网号为10，中心eNB标识为12的所有eNB邻接关系配置。 
@@ -15227,7 +15227,7 @@ DEL NEIGHBORENB:MCC="460",MNC="10",ENBID=12;
 
 
 
-父主题： [eNB邻接关系配置](../../zh-CN/tree/N_12661971.html)
+父主题： [eNB邻接关系配置]
 
 
 
@@ -15250,7 +15250,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除所有eNB邻接关系配置(DEL ALLNEIGHBORENB) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除所有eNB的邻接关系配置。 
@@ -15258,7 +15258,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令执行后，结果立即生效。 
@@ -15269,7 +15269,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除所有eNB邻接关系配置。 
@@ -15284,7 +15284,7 @@ DEL ALLNEIGHBORENB;
 
 
 
-父主题： [eNB邻接关系配置](../../zh-CN/tree/N_12661971.html)
+父主题： [eNB邻接关系配置]
 
 
 
@@ -15307,7 +15307,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询eNB邻接关系配置(SHOW NEIGHBORENB) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询eNB邻接关系配置。 
@@ -15315,7 +15315,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令执行后，结果立即生效。 
@@ -15323,10 +15323,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|中心基站移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MCC。MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 MNC|中心基站移动网号|参数可选性:任选参数；参数类型:字符型；参数范围为:2~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MNC。MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -15340,10 +15340,10 @@ NEIENBID|邻接eNB标识|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|中心基站移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MCC。MCC（Mobile Country Code，移动国家码），由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。
 MNC|中心基站移动网号|参数可选性:任选参数；参数类型:字符型；参数范围为:2~3个字符。|本参数用于设置中心基站的Global eNodeB ID中的MNC。MNC（Mobile Network Code，移动网络号），由运营商根据国际电联分配的网络号进行规划配置，用于在移动网络中，基于MCC唯一标识一个运营商网络信息。例如运营商“中国移动“在中国运营的GSM网络的MNC为01。MCC和MNC标识唯一的一个PLMN，标识移动用户的归属PLMN，也就是移动用户归属的运营商的移动网络。
@@ -15358,7 +15358,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询eNB邻接关系配置。 
@@ -15387,7 +15387,7 @@ SHOW NEIGHBORENB;
 
 
 
-父主题： [eNB邻接关系配置](../../zh-CN/tree/N_12661971.html)
+父主题： [eNB邻接关系配置]
 
 
 

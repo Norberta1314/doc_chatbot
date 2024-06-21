@@ -1,11 +1,11 @@
 # License功能描述 
 摘要描述应用场景客户收益系统影响应用限制遵循标准特性能力O&M相关 
-描述 定义
+描述 :定义
 License是指有特定期限和条件的一个协定，赋予受著作权法保护的计算机软件使用许可。ZXUN uMAC网元的License是通过文件来控制的。 
 一个uMAC设备只有一个激活的License。使用软件生成序列号的方式，让License和序列号绑定，保证一个License不能在其他局点复用。  
 背景知识
 ZXUN uMAC的License文件是一个加密的文件，该文件不可篡改，激活后生效，可以选择是否与设备绑定，或者是否有到期时间。 
-应用场景 功能开关控制和系统容量限制场景： 
+应用场景 :功能开关控制和系统容量限制场景： 
 限制功能开启License可以控制某些功能启用或者不启用，如NSA DCNR限制功能，可以通过License设置为启用或不启用。 
 限制系统容量通过License可以限制系统的容量，如最大接入用户数。通常硬件成本为一次支付，后期需要增加功能时，只需要支付License的费用，而不必再重新购买新的硬件。在ZXUN uMAC的CPU资源充足的情况下，可通过扩大License的最大接入用户数来满足运营商的扩容需求。 
 License激活流程，适应于以下场景： 
@@ -13,17 +13,17 @@ License激活流程，适应于以下场景：
 升级激活License：适用于已经激活过License，后续有功能项增加或者扩容时，需要重新激活License。 
 License使用情况查询适应于以下场景： 
 用户执行查询命令，查询到所有被管网元的基础资源信息。 
-客户收益 收益者|收益描述
+客户收益 :收益者|收益描述
 ---|---
 运营商|通过购买License获取新的功能，无需更换硬件，节约成本。通过购买License扩大容量，无需更换硬件，节约成本。通过查询命令直接获取License使用情况，简化用户运维。
-系统影响 License不开启的功能，相应功能不能使用。 
+系统影响 :License不开启的功能，相应功能不能使用。 
 超过License设置容纳的最大接入用户量时，系统会拒绝用户接入。 
 若加载序列号不匹配的License，系统会在运行过程中发现并上报序列号不匹配告警，3天后系统将自动恢复成默认License，此时会影响系统的性能统计和告警功能。 
-应用限制 License文件不可篡改，经人篡改则在系统上不能激活。 
+应用限制 :License文件不可篡改，经人篡改则在系统上不能激活。 
 License可以限制系统功能，如果License失效，与License控制功能相关的一些系统配置命令会失效，系统会按照当前的配置继续运行，确保系统不瘫局。但由于功能不能修改、该设备属于不可维护状态。 
 License可以限制系统容量，接入量达到License的最大限制值之后，系统会拒绝用户接入，此时需要联系中兴通讯技术支持更换License，对系统进行扩容。 
-遵循标准 本特性采用中兴通讯股份有限公司内部的接口和协议，不涉及标准协议。 
-特性能力 ZXUN
+遵循标准 :本特性采用中兴通讯股份有限公司内部的接口和协议，不涉及标准协议。 
+特性能力 :ZXUN
 uMAC各网元对应的License控制项并不相同，现场需要根据对应网元来开启相关的License控制项，并可以通过查询命令获取各控制项的百分比使用情况。 
 ZXUN uMAC涉及的License控制项参见下表： 
 ID|控制项名称|取值|简要说明|相关特导|是否要重启生效
@@ -219,8 +219,8 @@ uMAC_SGSN_7129|SGSN支持Gb口Rerouting|开/关|网络共享时，对于不支�
  说明： 
 uMAC产品包含MME、SGSN、AMF三个服务，外场根据网元部署包含的服务种类选择和申请对应License。 
 随着新功能的启用，License项会增加或修改。 
-O&M相关 命令
-与License相关的命令参见[表1](#T_201512301723953__%E6%96%B0%E5%A2%9E%E9%85%8D%E7%BD%AE%E9%A1%B9-24E0BB59)。
+O&M相关 :命令
+与License相关的命令参见[表1]。
 命令|功能
 ---|---
 IMP LICFILE|导入License文件。
@@ -241,7 +241,7 @@ SHOW LICPOLICY|查询License的即将过期通知提前天数。
 性能指标
 该特性不涉及性能指标。 
 告警和通知
-与License相关的告警和通知参见[表2](#T_201512301723953__ed0da5ef-4cf4-41b1-88e2-92c710e37a41)。
+与License相关的告警和通知参见[表2]。
 告警与通知
 ---
 2115371013 承载/PDP上下文局容量不足一级告警
@@ -285,7 +285,7 @@ SHOW LICPOLICY|查询License的即将过期通知提前天数。
 该特性不涉及话单与计费。 
 # License功能配置 
 摘要配置特性常见问题处理 
-配置特性 配置说明
+配置特性 :配置说明
 通过激活支持ZXUN uMAC相关网元或功能的License文件，从而实现支持ZXUN uMAC的功能。 
 ZXUN-uMAC License控制功能用于对设备的逻辑类型、功能、容量进行控制，需根据合同规定的功能、容量如实申请License文件。 
  说明： 
@@ -301,9 +301,9 @@ License申请模板（《License模板.xls》文件）包含了ZXUN uMAC支持�
  说明： 
 License申请模板中各逻辑网元的功能和容量填写必须是合同规定值，如果填写人员不清楚合同规定，需与签订项目合同的售前技术人员确认或联系中兴通讯技术支持
 进行确认。杜绝随意填写造成License不满足合同规定要求。
-在License申请模板中填写信息，如[图1](#T_201512301723953__e043551e-9268-4e72-8b3c-000f18c046e4)所示。
+在License申请模板中填写信息，如[图1]所示。
 图1  License模板
-[]images/License%E6%A8%A1%E6%9D%BF.png)
+
 在各项填写内容中： 
 网元标识、网元产品名称、网元版本号、网元位置和网元类型需根据实际情况填写。 
 设备序列号需在申请License之前，在网元节点执行SHOW NFSN命令查看网元的序列号。 
@@ -319,57 +319,57 @@ EM上操作激活的配置实例
 如果网元已对接EM，建议采用EM上的网元许可证管理进行激活License。 
 将License文件保存在EM客户端所在的PC机上。 
 登录EM客户端，选择菜单维护→CN NF维护→网元许可证管理
-，打开网元许可证管理窗口。选择需要发布License的网元，如[图2](#T_201512301723953__7fad0a80-6043-49f8-9b4f-e6dc8054684e)所示。
+，打开网元许可证管理窗口。选择需要发布License的网元，如[图2]所示。
 图2  选择需要发布License的网元
-[]images/%E7%BD%91%E5%85%83%E8%AE%B8%E5%8F%AF%E8%AF%81%E7%AE%A1%E7%90%86.png)
-单击发布按钮，进入许可证发布界面。如[图3](#T_201512301723953__344bc67a-e8c8-447c-9384-5c33da80ebed)所示。
+
+单击发布按钮，进入许可证发布界面。如[图3]所示。
 图3  许可证发布页面
-[]images/%E8%AE%B8%E5%8F%AF%E8%AF%81%E5%8F%91%E5%B8%83%E9%A1%B5%E9%9D%A2.png)
+
 单击上传按钮，在弹出的文件夹对话框中，选择需要上传的License文件。
-上传成功，如[图4](#T_201512301723953__c38224a5-87f1-44f7-a5c4-74e672cc0621)所示。
+上传成功，如[图4]所示。
 图4  许可证上传成功
-[]images/%E8%AE%B8%E5%8F%AF%E8%AF%81%E4%B8%8A%E4%BC%A0%E6%88%90%E5%8A%9F.png)
-单击发布按钮，发布成功，如[图5](#T_201512301723953__6a787514-7b9b-4a63-a26d-e45f6b570458)所示。
+
+单击发布按钮，发布成功，如[图5]所示。
 图5  License发布成功
-[]images/License%E5%8F%91%E5%B8%83%E6%88%90%E5%8A%9F.png)
+
 单击查看按钮，可以看到License的详细信息，检查页面信息与申请表格中的信息是否一致。
 本地操作激活License的配置实例
  说明： 
 一般在还未对接EM时，使用本地激活的方式。 
 将已获取的License文件上传至和OMU互通的一个SFTP服务器。
 使用SSH工具登录到OMU，需带用户名登录，端口为7788。用户名为admin，默认密码为Z_tywg_2019（具体以实际情况为准）。 
-执行[show nf](None)命令，记录下查询结果中显示的网元名称，如[图6](#T_201512301723953__ebb04702-ab2a-4e7b-a601-666d5527dd20)所示。
+执行[show nf]命令，记录下查询结果中显示的网元名称，如[图6]所示。
 图6  返回网元名称
-[]images/%E8%BF%94%E5%9B%9E%E7%BD%91%E5%85%83%E5%90%8D%E7%A7%B0.png)
-执行[SET NF](../../Commons_TMSP\zh-cn\mml\1242313.html)命令，命令参数为步骤3中查询得到的结果，命令格式如下。
+
+执行[SET NF]命令，命令参数为步骤3中查询得到的结果，命令格式如下。
 `SET NF:NAME="AMF_41"` 
-执行[IMP LICFILE](../../OAM\zh-CN\mml\1417963.html)命令，导入License文件，命令格式如下。
+执行[IMP LICFILE]命令，导入License文件，命令格式如下。
 `IMP LICFILE:FILEURL="sftp://168.49.0.137:22/AMF_default.lic",USERNAME="root",PASSWORD="ZTE_ossdbg1"
 //fileurl需替换为实际的License路径。命令中的fileurl文件路径为登录用户的根目录相对路径，
 如果是用root用户登录的，需要将AMF_default.lic放到root用户的根目录/root文件夹下。` 
-执行[LOAD LICENSE](../../OAM\zh-CN\mml\1417900.html)命令，执行完毕后，License将生效。
+执行[LOAD LICENSE]命令，执行完毕后，License将生效。
 `LOAD LICENSE:AMF_default.lic   //AMF_default.lic请替换成实际的License文件名称` 
-执行[SHOW LICENSE](../../OAM\zh-CN\mml\1417902.html)命令，查询License控制项，检查返回结果中的信息与实际申请的是否一致。
+执行[SHOW LICENSE]命令，查询License控制项，检查返回结果中的信息与实际申请的是否一致。
  说明： 
 显示结果仅为示例，具体情况取决于实际环境中的License文件。 
-常见问题处理 License文件中的序列号与环境不匹配
+常见问题处理 :License文件中的序列号与环境不匹配
 故障现象
 发布License时，提示“序列号不合法”。  
 故障原因
 License文件中的序列号和当前环境中的不匹配。 
 处理方法
-参考[配置过程](#T_201512301723953__%E9%85%8D%E7%BD%AE%E8%BF%87%E7%A8%8B-89D44A14)中的方法重新获取并激活正确的License。
+参考[配置过程]中的方法重新获取并激活正确的License。
 对原有License文件进行备份
 现象
 在进行License升级等操作前，需对原有License文件进行备份。 
 处理方法
 登录EM客户端，选择菜单维护→CN NF维护→网元许可证管理
-，打开网元许可证管理窗口。选择需要备份License的网元，如[图7](#T_201512301723953__70d6fc0d-c17e-44b0-9e35-1a6b197838de)所示。
+，打开网元许可证管理窗口。选择需要备份License的网元，如[图7]所示。
 图7  选择要导出License的网元
-[]images/%E9%80%89%E6%8B%A9%E8%A6%81%E5%AF%BC%E5%87%BALicense%E7%9A%84%E7%BD%91%E5%85%83.png)
-如需导出多个网元的License文件，单击页面上方的批量导出按钮。如只需导出一个网元的License文件，单击导出按钮，如[图8](#T_201512301723953__5f61d3c7-a56a-4dfe-a882-b720d16c0a05)所示。
+
+如需导出多个网元的License文件，单击页面上方的批量导出按钮。如只需导出一个网元的License文件，单击导出按钮，如[图8]所示。
 图8  导出选择
-[]images/%E5%AF%BC%E5%87%BA%E9%80%89%E6%8B%A9.PNG)
+
 在弹出的对话框单击按钮，完成导出，将License文件存储到本地。 
 在新License加载出现问题时回退到旧License
 现象
@@ -378,12 +378,14 @@ License文件中的序列号和当前环境中的不匹配。
 已经准备了回滚license文件。 
 处理方法
 登录EM客户端，选择菜单维护→CN NF维护→网元许可证管理
-，打开网元许可证管理窗口。选择需要回滚License的网元，如[图7](#T_201512301723953__70d6fc0d-c17e-44b0-9e35-1a6b197838de)所示。
-如需回滚多个网元的License文件，单击页面上方的批量回滚按钮。如只需回滚一个网元的License文件，单击回滚按钮。进入回滚许可证窗口，如[图9](#T_201512301723953__66727607-28a3-43d0-88e8-9f80bdfca485)所示。
+，打开网元许可证管理窗口。选择需要回滚License的网元，如[图7]所示。
+如需回滚多个网元的License文件，单击页面上方的批量回滚按钮。如只需回滚一个网元的License文件，单击回滚按钮。进入回滚许可证窗口，如[图9]所示。
 图9  许可证回滚
-[]images/%E8%AE%B8%E5%8F%AF%E8%AF%81%E5%9B%9E%E6%BB%9A.png)
+
 单击回滚按钮，在弹出的对话框单击确定按钮，完成回滚操作。
-缩略语 缩略语 # CBC 
+ 缩略语 
+ 缩略语 
+# CBC 
 Cell broadcast center小区广播短消息中心
 # CS 
 Circuit Switched电路交换
@@ -411,7 +413,7 @@ Minimization of Drive Tests最小化路测
 Network Identity and Time Zone网络标志和时区
 # NSA 
 Non-Standalone5G非独立组网
-OMU Operation & Management Unit操作管理单元
+OMU :Operation & Management Unit操作管理单元
 # PCO 
 Protocol Configuration Option协议配置选项
 # PSM 
@@ -420,10 +422,10 @@ Power Saving Mode节电模式
 Public Warning System公共预警系统
 # RFSP 
 RAT/Frequency Selection Priority无线/频率选择优先级
-SC Service Component服务组件
+SC :Service Component服务组件
 # SEPP 
 Security Edge Protection Proxy安全边缘保护代理
-SFTP Secure File Transfer Protocol安全文件传输协议
+SFTP :Secure File Transfer Protocol安全文件传输协议
 # SIPTO 
 Selected IP Traffic Offload选定的IP流量分流 
 # SRVCC 

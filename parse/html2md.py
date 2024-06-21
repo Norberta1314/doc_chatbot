@@ -71,9 +71,11 @@ def parse_title(title, level):
         return ""
     if title == "相关主题":
         return ""
+    if title == "子主题":
+        return ""
     if title in ['命令功能', '相关命令', '命令模式', '命令默认权限级别', '命令格式', '命令参数解释', '缺省', '使用说明', '范例', '计数器描述', '测量触发点', '采集方式',
                  '注意事项', '命令举例', '输入参数说明', '输出参数说明', '处理建议', '告警描述', '系统影响', '可能原因', '告警属性', '应用场景', '告警参数', '相关主题',
-                 '背景知识', '摘要', '步骤', '功能描述', '指标说明', '计算公式', '相关计数器', '功能说明', '影响说明', '默认取值', '其他相关配置', '参数说明', '缩略语',
+                 '背景知识', '摘要', '步骤', '功能描述', '指标说明', '计算公式', '相关计数器', '功能说明', '影响说明', '默认取值', '其他相关配置', '参数说明',
                  '消息功能', '相关信元', '告警类型', '告警样例', '告警类别', '告警恢复', '引起原因', '产生的影响', '默认级别', '告警描述原型', '数据规划', '配置步骤',
                  '场景说明', '概述', '信令流程', '业务模型', '保护对象', '流控原理', '防御策略', '配置方法', '配置前提', '特性描述', '特性配置', '实现原理', '配置过程',
                  '配置说明', '流程说明', '描述', '应用限制', '系统架构', '客户收益', '前提', '业务流程', '测试用例', '配置脚本', '相关任务', '配置实例', 'PCF',
@@ -129,7 +131,9 @@ def digui_parse(element, level, content: Content):
         elif child_ele.name == "img":
             if not child_ele.get('src'):
                 continue
-            content.add_content((f"[{child_ele.get('alt', '')}]{os.path.join(content.path, child_ele.get('src'))})"))
+            # content.add_content((f"[{child_ele.get('alt', '')}]{os.path.join(content.path, child_ele.get('src'))})"))
+            if child_ele.get('alt', '') != "":
+                content.add_content(f"[{child_ele.get('alt', '')}]")
             if child_ele == element.contents[-1]:
                 content.add_content(os.linesep)
             continue
@@ -138,8 +142,7 @@ def digui_parse(element, level, content: Content):
                 continue
             if child_ele.text.startswith('本节包含以下内容'):
                 continue
-            print(child_ele)
-            print("nav bb 过滤特殊nav")
+
             continue
         elif child_ele.name in ["ul"]:
             is_child = False
@@ -167,7 +170,8 @@ def digui_parse(element, level, content: Content):
         elif child_ele.name == "br":
             content.add_content(os.linesep)
         elif child_ele.name == "a":
-            content.add_content(f"[{child_ele.text}]")
+            if child_ele.text.strip() != "":
+                content.add_content(f"[{child_ele.text}]")
             if child_ele == element.contents[-1]:
                 content.add_content(os.linesep)
         else:

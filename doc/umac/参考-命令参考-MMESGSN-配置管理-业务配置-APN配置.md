@@ -1,7 +1,7 @@
  APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 APN（Access Point Name），即“接入点名称”，是用户通过手机上网时必须配置的一个参数，它决定了用户的手机通过哪种接入方式来访问网络，在骨干网中用来标识要使用的外部PDN网络。APN由以下两部分组成： 
@@ -23,7 +23,7 @@ APN（Access Point Name），即“接入点名称”，是用户通过手机上
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 APN网络标识通常作为用户签约数据存储在HSS/HLR中，用户在发起分组业务时也可向MME/SGSN提供APN。MME/SGSN根据APN通过DNS或本地域名解析得到PGW/GGSN的IP地址。 
@@ -34,7 +34,7 @@ APN网络标识通常作为用户签约数据存储在HSS/HLR中，用户在发�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -127,7 +127,7 @@ APN选择策略配置
 
 
 
-父主题： [业务配置](../../zh-CN/tree/N_126085_operation_cm_mml_umacV4_cm_combo_gngp_service.html)
+父主题： [业务配置]
 
 
 
@@ -150,14 +150,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # GPRS APN HOST配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 
                 APN有2种格式：GPRS APN 和EPC APN，对支持LTE能力的用户终端，SGSN使用LTE能力终端域名格式配置（
-                [SET EPC APN NAME CFG](../mml/1261571.html)
+                [SET EPC APN NAME CFG]
                 ）选择EPC APN格式或GPRS APN格式进行地址解析，如果SGSN选择EPC APN格式进行地址解析，则使用EPC APN HOST配置（
-                [ADD EPC APN](../mml/1261510.html)
+                [ADD EPC APN]
                 ），如果SGSN选择GPRS APN格式进行地址解析，则使用GPRS APN HOST配置；对不支持LTE能力的用户终端，SGSN选择GPRS APN格式进行地址解析，使用GPRS APN HOST配置。
             
 
@@ -167,7 +167,7 @@ SGSN从HSS/HLR或UE获取到APN，对支持LTE能力且选择GPRS APN格式的�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 GPRS APN HOST配置包括以下内容： 
@@ -215,7 +215,7 @@ GPRS APN HOST配置包括以下内容：
 
 
                         RNC局向附加属性中配置支持DT功能，
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -226,7 +226,7 @@ GPRS APN HOST配置包括以下内容：
 
 
                         配置GGSN支持DT或配置根据签约APN信息决策是否支持DT，配置命令为：
-                        [ADD GPRS APN](../mml/1261500.html)
+                        [ADD GPRS APN]
                         。
                     
 
@@ -237,7 +237,7 @@ GPRS APN HOST配置包括以下内容：
 
 
                         如果配置了根据签约APN信息决策是否支持DT，继续配置支持DT的APN前缀，检查用户签约APN DT前缀信息，配置命令参见
-                        [SET APN DT PREFIX](../mml/1261507.html)
+                        [SET APN DT PREFIX]
                         。
                     
 
@@ -282,7 +282,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
                         SGSN终端双栈数据中配置支持终端双栈功能，配置命令参见：
-                        [SET GNGP DUAL STACK](../mml/1260189.html)
+                        [SET GNGP DUAL STACK]
                         。
                     
 
@@ -293,7 +293,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
                         RNC局向附加属性中配置支持终端双栈功能，配置命令参见：
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -304,7 +304,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
                         配置GGSN支持终端双栈。配置命令为：
-                        [ADD GPRS APN](../mml/1261500.html)
+                        [ADD GPRS APN]
                         。
                     
 
@@ -322,7 +322,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -365,7 +365,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -388,7 +388,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增GPRS APN HOST配置(ADD GPRS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 运营商首先需要知道MS将被允许通过GGSN接入到哪些PDN，一旦确定后，就应当规划连接到那些PDN的APN，并在SGSN上配置相应APN数据，以保证SGSN能够根据用户提供的APN信息，解析获取到对应的GGSN的IP地址，从而将MS接入相应的PDN。 
@@ -414,7 +414,7 @@ SGSN对该APN下接入的用户是否生成S-CDR（Serving GPRS Support Node -Ca
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该功能只适用于SGSN网元。 
@@ -435,15 +435,15 @@ SGSN对该APN下接入的用户是否生成S-CDR（Serving GPRS Support Node -Ca
 取值为“3”：表示SGSN获取GGSN控制面IP地址的优先级为：DNS Server->Host Local 
 
 
-如果要通过本命令配置该APN下接入的用户对应的计费数据，需要先通过[ADD APNCTPL](1262400.html)命令配置该APN对应的计费模板。
+如果要通过本命令配置该APN下接入的用户对应的计费数据，需要先通过[ADD APNCTPL]命令配置该APN对应的计费模板。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~82个字符。|APN由Network Identifier（NI）和Operator Identifier（OI）组成。NI部分具有格式“Label1.Label2.Label3”，可包含多个的标签；长度<=63；不以“rac”，“lac”，“sgsn”，“rnc”或者"."开头；不以“.gprs”结尾；不使用通配符“*”。OI部分具有格式“mnc<MNC>.mcc<MCC>.gprs” ，<MNC>和<MCC>都是三位0~9数字，不足三位的，靠前补零。NI和OI间以"."分隔。不区分大小写，SGSN完全以小写入库。
 IPADDR|IP地址|参数可选性:必选参数；参数类型:地址|配置GGSN的IP地址，包括IPv4或者IPv6地址，多实例。用户根据实际的IP地址个数配置，系统按照添加配置先后顺序生成各IP地址，一个APN最多可以解析出64个地址，可配置小于等于64的任意个IP地址。
@@ -457,7 +457,7 @@ SCDRFLT|过滤S-CDR|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增GPRS APN HOST配置，APN名称为zte.com.mnc222.mcc333.gprs，IP地址为1.0.0.0和2.0.0.0，计费模板标识为1，不支持DT功能，不支持终端双栈功能，不过滤S-CDR。 
@@ -472,7 +472,7 @@ ADD GPRS APN:APN="zte.com.mnc222.mcc333.gprs",IPADDR="1.0.0.0"&"2.0.0.0",CTPLID=
 
 
 
-父主题： [GPRS APN HOST配置](../../zh-CN/tree/N_1254421.html)
+父主题： [GPRS APN HOST配置]
 
 
 
@@ -495,7 +495,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改GPRS APN HOST配置(SET GPRS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 通过本命令，除了可以修改某个APN对应的GGSN IP地址，还可以修改以下内容： 
@@ -515,15 +515,15 @@ SGSN对该APN下接入的用户是否生成S-CDR（Serving GPRS Support Node -Ca
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~82个字符。|APN由Network Identifier（NI）和Operator Identifier（OI）组成。NI部分具有格式“Label1.Label2.Label3”，可包含多个的标签；长度<=63；不以“rac”，“lac”，“sgsn”，“rnc”或者"."开头；不以“.gprs”结尾；不使用通配符“*”。OI部分具有格式“mnc<MNC>.mcc<MCC>.gprs” ，<MNC>和<MCC>都是三位0~9数字，不足三位的，靠前补零。NI和OI间以"."分隔。不区分大小写，SGSN完全以小写入库。
 IPADDR|IP地址|参数可选性:任选参数；参数类型:地址|配置GGSN的IP地址，包括IPv4或者IPv6地址，多实例。用户根据实际的IP地址个数配置，系统按照添加配置先后顺序生成各IP地址，一个APN最多可以解析出64个地址，可配置小于等于64的任意个IP地址。
@@ -537,7 +537,7 @@ SCDRFLT|过滤S-CDR|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN名称为zte.com.mnc222.mcc333.gprs的GPRS APN HOST配置，IP地址为3.3.3.3和4.4.4.4，支持DT功能，支持终端双栈功能，过滤S-CDR。 
@@ -552,7 +552,7 @@ SET GPRS APN:APN="zte.com.mnc222.mcc333.gprs",IPADDR="3.3.3.3"&"4.4.4.4",DTSPRT=
 
 
 
-父主题： [GPRS APN HOST配置](../../zh-CN/tree/N_1254421.html)
+父主题： [GPRS APN HOST配置]
 
 
 
@@ -575,23 +575,23 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 增加GPRS APN HOST地址(ADD GPRS APN IPADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-在已经通过[ADD GPRS APN](1261500.html)配置了某个APN对应的的GGSN的基础上，如果此APN还需要解析到其它GGSN时，需要通过本命令增加此APN对应的GGSN的IP地址。
+在已经通过[ADD GPRS APN]配置了某个APN对应的的GGSN的基础上，如果此APN还需要解析到其它GGSN时，需要通过本命令增加此APN对应的GGSN的IP地址。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~82个字符。|APN由Network Identifier（NI）和Operator Identifier（OI）组成。NI部分具有格式“Label1.Label2.Label3”，可包含多个的标签；长度<=63；不以“rac”，“lac”，“sgsn”，“rnc”或者"."开头；不以“.gprs”结尾；不使用通配符“*”。OI部分具有格式“mnc<MNC>.mcc<MCC>.gprs” ，<MNC>和<MCC>都是三位0~9数字，不足三位的，靠前补零。NI和OI间以"."分隔。不区分大小写，SGSN完全以小写入库。
 IPADDR|IP地址|参数可选性:必选参数；参数类型:地址|配置GGSN的IP地址，包括IPv4或者IPv6地址，多实例。用户根据实际的IP地址个数配置，系统按照添加配置先后顺序生成各IP地址，一个APN最多可以解析出64个地址，可配置小于等于64的任意个IP地址。
@@ -601,7 +601,7 @@ IPADDR|IP地址|参数可选性:必选参数；参数类型:地址|配置GGSN的
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 名称为zte.com.mnc222.mcc333.gprs的APN增加GPRS APN HOST地址，地址为5.5.5.5和6.6.6.6。 
@@ -616,7 +616,7 @@ ADD GPRS APN IPADDR:APN="zte.com.mnc222.mcc333.gprs",IPADDR="5.5.5.5"&"6.6.6.6";
 
 
 
-父主题： [GPRS APN HOST配置](../../zh-CN/tree/N_1254421.html)
+父主题： [GPRS APN HOST配置]
 
 
 
@@ -639,20 +639,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除GPRS APN HOST地址(DEL GPRS APN IPADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除某个APN对应的GGSN IP地址。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~82个字符。|APN由Network Identifier（NI）和Operator Identifier（OI）组成。NI部分具有格式“Label1.Label2.Label3”，可包含多个的标签；长度<=63；不以“rac”，“lac”，“sgsn”，“rnc”或者"."开头；不以“.gprs”结尾；不使用通配符“*”。OI部分具有格式“mnc<MNC>.mcc<MCC>.gprs” ，<MNC>和<MCC>都是三位0~9数字，不足三位的，靠前补零。NI和OI间以"."分隔。不区分大小写，SGSN完全以小写入库。
 IPADDR|IP地址|参数可选性:必选参数；参数类型:地址|配置GGSN的IP地址，包括IPv4或者IPv6地址，多实例。用户根据实际的IP地址个数配置，系统按照添加配置先后顺序生成各IP地址，一个APN最多可以解析出64个地址，可配置小于等于64的任意个IP地址。
@@ -662,7 +662,7 @@ IPADDR|IP地址|参数可选性:必选参数；参数类型:地址|配置GGSN的
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GPRS APN HOST地址，APN名称为zte.com.mnc222.mcc333.gprs，地址为5.5.5.5。 
@@ -677,7 +677,7 @@ DEL GPRS APN IPADDR:APN="zte.com.mnc222.mcc333.gprs",IPADDR="5.5.5.5";
 
 
 
-父主题： [GPRS APN HOST配置](../../zh-CN/tree/N_1254421.html)
+父主题： [GPRS APN HOST配置]
 
 
 
@@ -700,20 +700,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除GPRS APN HOST配置(DEL GPRS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除某个APN对应的本地解析配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~82个字符。|APN由Network Identifier（NI）和Operator Identifier（OI）组成。NI部分具有格式“Label1.Label2.Label3”，可包含多个的标签；长度<=63；不以“rac”，“lac”，“sgsn”，“rnc”或者"."开头；不以“.gprs”结尾；不使用通配符“*”。OI部分具有格式“mnc<MNC>.mcc<MCC>.gprs” ，<MNC>和<MCC>都是三位0~9数字，不足三位的，靠前补零。NI和OI间以"."分隔。不区分大小写，SGSN完全以小写入库。
 
@@ -722,7 +722,7 @@ APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN名称为zte.com.mnc222.mcc333.gprs的GPRS APN HOST配置。 
@@ -737,7 +737,7 @@ DEL GPRS APN:APN="zte.com.mnc222.mcc333.gprs";
 
 
 
-父主题： [GPRS APN HOST配置](../../zh-CN/tree/N_1254421.html)
+父主题： [GPRS APN HOST配置]
 
 
 
@@ -760,7 +760,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询GPRS APN HOST配置(SHOW GPRS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询某个APN对应的本地解析配置数据。 
@@ -774,15 +774,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~82个字符。|APN由Network Identifier（NI）和Operator Identifier（OI）组成。NI部分具有格式“Label1.Label2.Label3”，可包含多个的标签；长度<=63；不以“rac”，“lac”，“sgsn”，“rnc”或者"."开头；不以“.gprs”结尾；不使用通配符“*”。OI部分具有格式“mnc<MNC>.mcc<MCC>.gprs” ，<MNC>和<MCC>都是三位0~9数字，不足三位的，靠前补零。NI和OI间以"."分隔。不区分大小写，SGSN完全以小写入库。
 
@@ -791,10 +791,10 @@ APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNID|APN标识|参数可选性:任选参数；参数类型:整数。|系统自动生成的标识，不需要关注。
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|APN由Network Identifier（NI）和Operator Identifier（OI）组成。NI部分具有格式“Label1.Label2.Label3”，可包含多个的标签；长度<=63；不以“rac”，“lac”，“sgsn”，“rnc”或者"."开头；不以“.gprs”结尾；不使用通配符“*”。OI部分具有格式“mnc<MNC>.mcc<MCC>.gprs” ，<MNC>和<MCC>都是三位0~9数字，不足三位的，靠前补零。NI和OI间以"."分隔。不区分大小写，SGSN完全以小写入库。
@@ -809,7 +809,7 @@ SCDRFLT|过滤S-CDR|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询 GPRS APN HOST配置。 
@@ -839,7 +839,7 @@ SHOW GPRS APN;
 
 
 
-父主题： [GPRS APN HOST配置](../../zh-CN/tree/N_1254421.html)
+父主题： [GPRS APN HOST配置]
 
 
 
@@ -862,16 +862,16 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # EPC APN HOST配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 
                 APN有2种格式：GPRS APN 和EPC APN，对支持LTE能力的用户终端，SGSN使用LTE能力终端域名格式配置 （
-                [SET EPC APN NAME CFG](../mml/1261571.html)
+                [SET EPC APN NAME CFG]
                 ）选择EPC APN格式或GPRS APN格式进行地址解析，如果SGSN选择EPC APN格式进行地址解析，则使用EPC APN HOST配置，如果SGSN选择GPRS APN格式进行地址解析，则使用GPRS APN HOST配置（
-                [ADD GPRS APN](../mml/1261500.html)
+                [ADD GPRS APN]
                 ），MME选择EPC APN格式进行地址解析，使用EPC APN HOST配置；对不支持LTE能力的用户终端，SGSN选择GPRS APN格式进行地址解析，使用GPRS APN HOST配置（
-                [ADD GPRS APN](../mml/1261500.html)
+                [ADD GPRS APN]
                 ），MME只支持具有LTE能力的用户终端，因此不使用GPRS APN HOST配置。
             
 
@@ -884,7 +884,7 @@ SGSN从HSS/HLR或UE获取到APN，对支持LTE能力且选择EPC APN格式的用
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 EPC APN HOST配置包括以下内容： 
@@ -918,7 +918,7 @@ EPC APN HOST配置包括以下内容：
 
 
                         RNC局向附加属性中配置支持DT功能，
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -929,7 +929,7 @@ EPC APN HOST配置包括以下内容：
 
 
                         配置GGSN支持DT或配置根据签约APN信息决策是否支持DT，配置命令为
-                        [ADD EPC APN](../mml/1261510.html)
+                        [ADD EPC APN]
                         。
                     
 
@@ -940,7 +940,7 @@ EPC APN HOST配置包括以下内容：
 
 
                         如果配置了根据签约APN信息决策是否支持DT，继续配置支持DT的APN前缀，检查用户签约APN DT前缀信息，配置命令参见
-                        [SET APN DT PREFIX](../mml/1261507.html)
+                        [SET APN DT PREFIX]
                         。
                     
 
@@ -964,7 +964,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
                         SGSN终端双栈数据中配置支持终端双栈功能，配置命令参见：
-                        [SET GNGP DUAL STACK](../mml/1260189.html)
+                        [SET GNGP DUAL STACK]
                         。
                     
 
@@ -975,7 +975,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
                         RNC局向附加属性中配置支持终端双栈功能，配置命令参见：
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -986,7 +986,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
                         配置GGSN支持终端双栈。配置命令为
-                        [ADD EPC APN](../mml/1261510.html)
+                        [ADD EPC APN]
                         。
                     
 
@@ -1010,7 +1010,7 @@ EPC网络中eNodeB、MME和PGW，是一定支持DT和终端双栈，无需配置
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1053,7 +1053,7 @@ EPC网络中eNodeB、MME和PGW，是一定支持DT和终端双栈，无需配置
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -1076,7 +1076,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增EPC APN HOST配置(ADD EPC APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增EPC形式的APN本地域名解析信息，将EPC形式的APN解析成网络上可以识别的IP地址。 
@@ -1087,7 +1087,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1108,10 +1108,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过99个字符。NI部分格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 HOST|主机名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|目标局的主机名称，长度为1-100个字符，不区分大小写。
@@ -1129,7 +1129,7 @@ UEUSAGETYPE|用户使用类型|参数可选性:任选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增EPC APN HOST配置，APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，主机名为fg，IP地址为3.0.0.0和5.0.0.0，支持的服务类别有PGW和GGSN，支持的协议类型为"x-s5-gtp"，其余采用默认配置。 
@@ -1144,7 +1144,7 @@ ADD EPC APN:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",HOST="fg.epc.mnc
 
 
 
-父主题： [EPC APN HOST配置](../../zh-CN/tree/N_1254422.html)
+父主题： [EPC APN HOST配置]
 
 
 
@@ -1167,7 +1167,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改EPC APN HOST配置(SET EPC APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改已经配置的EPC形式的APN本地域名解析的信息，例如可以修改IP地址、支持服务类别、支持协议类型、支持DT功能、支持终端双栈功能、优先级、或者权重等信息。 
@@ -1178,21 +1178,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-该命令中APN名称和主机名必须已事先通过[ADD EPC APN](1261510.html)配置。如果没有配置APN名称和主机名，该命令会执行失败。
+该命令中APN名称和主机名必须已事先通过[ADD EPC APN]配置。如果没有配置APN名称和主机名，该命令会执行失败。
 
 
-可通过[SHOW EPC APN](1261513.html) 查询已经配置的EPC APN本地域名解析信息。
+可通过[SHOW EPC APN] 查询已经配置的EPC APN本地域名解析信息。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过99个字符。NI部分格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 HOST|主机名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|目标局的主机名称，长度为1-100个字符，不区分大小写。
@@ -1210,7 +1210,7 @@ UEUSAGETYPE|用户使用类型|参数可选性:任选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，名为fg.epc.mnc222.mcc333.3gppnetwork.org的EPC APN HOST配置，IP地址为3.0.0.0，优先级为1。 
@@ -1225,7 +1225,7 @@ SET EPC APN:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",HOST="fg.epc.mnc
 
 
 
-父主题： [EPC APN HOST配置](../../zh-CN/tree/N_1254422.html)
+父主题： [EPC APN HOST配置]
 
 
 
@@ -1248,20 +1248,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 增加EPC APN HOST地址(ADD EPC APN IPADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增EPC形式的APN本地域名解析的地址信息。当需要在APN本地域名解析信息中增加解析的地址时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
-该命令中APN名称和主机名必须已事先通过[ADD EPC APN](1261510.html)配置。如果没有配置APN名称和主机名，该命令会执行失败。
-
-
-[](None)参数说明 
+该命令中APN名称和主机名必须已事先通过[ADD EPC APN]配置。如果没有配置APN名称和主机名，该命令会执行失败。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过99个字符。NI部分格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 HOST|主机名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|目标局的主机名称，长度为1-100个字符，不区分大小写。
@@ -1272,7 +1272,7 @@ IPADDR|IP地址|参数可选性:必选参数；参数类型:地址|PGW或GGSN的
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 为APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，名为fg的主机增加EPC APN HOST地址，地址为1.1.1.1和2.2.2.2。 
@@ -1287,7 +1287,7 @@ ADD EPC APN IPADDR:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",HOST="fg"
 
 
 
-父主题： [EPC APN HOST配置](../../zh-CN/tree/N_1254422.html)
+父主题： [EPC APN HOST配置]
 
 
 
@@ -1310,20 +1310,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除EPC APN HOST地址(DEL EPC APN IPADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除EPC形式的APN本地域名解析的地址信息。
 
 
-[](None)注意事项 
+注意事项 
 
-该命令中APN名称和主机名必须已事先通过 [ADD EPC APN](1261510.html) 配置。如果没有配置APN名称和主机名，该命令会执行失败。
-
-
-[](None)参数说明 
+该命令中APN名称和主机名必须已事先通过 [ADD EPC APN] 配置。如果没有配置APN名称和主机名，该命令会执行失败。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过99个字符。NI部分格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 HOST|主机名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|目标局的主机名称，长度为1-100个字符，不区分大小写。
@@ -1334,7 +1334,7 @@ IPADDR|IP地址|参数可选性:必选参数；参数类型:地址|PGW或GGSN的
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 为APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，名为fg的主机删除2.2.2.2的EPC APN HOST地址。 
@@ -1349,7 +1349,7 @@ DEL EPC APN IPADDR:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",HOST="fg"
 
 
 
-父主题： [EPC APN HOST配置](../../zh-CN/tree/N_1254422.html)
+父主题： [EPC APN HOST配置]
 
 
 
@@ -1372,20 +1372,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除EPC APN HOST配置(DEL EPC APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除EPC形式的APN本地域名解析配置。当运营商不需要本地解析APN名称时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令可删除指定的APN名称的地址解析信息，也可以只删除指定的APN名称和指定的主机名对应的地址解析信息。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过99个字符。NI部分格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 HOST|主机名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|目标局的主机名称，长度为1-100个字符，不区分大小写。
@@ -1395,7 +1395,7 @@ HOST|主机名|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org的EPC APN HOST配置。 
@@ -1410,7 +1410,7 @@ DEL EPC APN:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org";
 
 
 
-父主题： [EPC APN HOST配置](../../zh-CN/tree/N_1254422.html)
+父主题： [EPC APN HOST配置]
 
 
 
@@ -1433,20 +1433,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC APN HOST配置(SHOW EPC APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询EPC形式的APN本地域名解析配置信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过99个字符。NI部分格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 HOST|主机名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|目标局的主机名称，长度为1-100个字符，不区分大小写。
@@ -1456,10 +1456,10 @@ HOST|主机名|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNID|APN标识|参数可选性:任选参数；参数类型:整数。|网管自动生成的记录号。
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过99个字符。NI部分格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
@@ -1478,7 +1478,7 @@ UEUSAGETYPE|用户使用类型|参数可选性:任选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC APN HOST配置。 
@@ -1508,7 +1508,7 @@ SHOW EPC APN;
 
 
 
-父主题： [EPC APN HOST配置](../../zh-CN/tree/N_1254422.html)
+父主题： [EPC APN HOST配置]
 
 
 
@@ -1531,7 +1531,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # GPRS扩展APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 运营商在部署GGSN时，有可能需要考虑用户的号码和签约计费特性等，在APN NI中扩展这些用户信息，可以为运营商提供更准确的APN选择GGSN的策略。 
@@ -1539,7 +1539,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN在进行GGSN选择时，对APN根据配置的扩展方法对APN NI进行扩展，然后用扩展后的APN NI来构造APN获取服务的GGSN。 
@@ -1572,7 +1572,7 @@ SGSN在进行GGSN选择时，对APN根据配置的扩展方法对APN NI进行扩
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1605,7 +1605,7 @@ SGSN在进行GGSN选择时，对APN根据配置的扩展方法对APN NI进行扩
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -1628,7 +1628,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增GPRS扩展APN配置(ADD EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据3GPP TS 23.003协议的定义，APN名称由NI（Network Identifier，网络标识）和OI（Operator Identifier，运营商标识）两部分组成： 
@@ -1680,15 +1680,15 @@ NI（Network Identifier，网络标识），定义了通过分组核心网连接
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|此参数为APN的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：长度小于63个字符。不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头。不能以“.gprs”结尾。不能使用通配符“*”。除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cn
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|此参数设置为MS的IMSI或MSISDN号段。IMSI（International Mobile Subscriber Identity，国际移动用户标识），由MCC+MNC+MSIN组成。MSISDN（Mobile Station International Subscriber Directory Number，移动台国际用户目录号），由CC+NDC+SN组成。SGSN根据软件参数“扩展APN的号码类型”（ID为786565）来获取APN NI的扩展方式的匹配条件：软件参数取值为“0”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+“IMSI号段”作为条件匹配APN NI的扩展方式。软件参数取值为“1”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+”MSISDN号段“作为条件查询APN NI的扩展方式。
@@ -1709,7 +1709,7 @@ IFEXTBASEDCC|根据CC判断是否需进行APN扩展|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增GPRS扩展APN配置，APN名称为bbs，IMSI/MSISDN号段为434546，扩展终端类型为全部扩展，扩展方式为MSISDN扩展，APN扩展起始位为2，终止位为4。 
@@ -1724,7 +1724,7 @@ ADD EXAPN:APN="bbs",IMSI="434546",EXMODE="MSISDN",EXBITS=2-4;
 
 
 
-父主题： [GPRS扩展APN配置](../../zh-CN/tree/N_1254423.html)
+父主题： [GPRS扩展APN配置]
 
 
 
@@ -1747,20 +1747,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改GPRS扩展APN配置(SET EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改APN NI的扩展数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|此参数为APN的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：长度小于63个字符。不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头。不能以“.gprs”结尾。不能使用通配符“*”。除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cn
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|此参数设置为MS的IMSI或MSISDN号段。IMSI（International Mobile Subscriber Identity，国际移动用户标识），由MCC+MNC+MSIN组成。MSISDN（Mobile Station International Subscriber Directory Number，移动台国际用户目录号），由CC+NDC+SN组成。SGSN根据软件参数“扩展APN的号码类型”（ID为786565）来获取APN NI的扩展方式的匹配条件：软件参数取值为“0”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+“IMSI号段”作为条件匹配APN NI的扩展方式。软件参数取值为“1”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+”MSISDN号段“作为条件查询APN NI的扩展方式。
@@ -1781,7 +1781,7 @@ IFEXTBASEDCC|根据CC判断是否需进行APN扩展|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改GPRS扩展APN配置，APN名称为bbs，IMSI/MSISDN号段为434546，将扩展方式修改为签约计费特性+IMSI扩展，APN扩展起始位修改为5，终止位修改为7。 
@@ -1796,7 +1796,7 @@ SET EXAPN:APN="bbs",IMSI="434546",EXMODE="CHARGE+IMSI",EXBITS=5-7;
 
 
 
-父主题： [GPRS扩展APN配置](../../zh-CN/tree/N_1254423.html)
+父主题： [GPRS扩展APN配置]
 
 
 
@@ -1819,20 +1819,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除GPRS扩展APN配置(DEL EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除APN NI的扩展数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|此参数为APN的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：长度小于63个字符不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*” 除了数字、字母、“-”、和“.”不能输入其余字符示例：zte.com.cn
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|此参数设置为MS的IMSI或MSISDN号段。IMSI（International Mobile Subscriber Identity，国际移动用户标识），由MCC+MNC+MSIN组成。MSISDN（Mobile Station International Subscriber Directory Number，移动台国际用户目录号），由CC+NDC+SN组成。SGSN根据软件参数“扩展APN的号码类型”（ID为786565）来获取APN NI的扩展方式的匹配条件：软件参数取值为“0”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+“IMSI号段”作为条件匹配APN NI的扩展方式。软件参数取值为“1”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+”MSISDN号段“作为条件查询APN NI的扩展方式。
@@ -1842,7 +1842,7 @@ IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GPRS扩展APN配置，APN名称为bbs，IMSI/MSISDN号段为434546。 
@@ -1857,7 +1857,7 @@ DEL EXAPN:APN="bbs",IMSI="434546";
 
 
 
-父主题： [GPRS扩展APN配置](../../zh-CN/tree/N_1254423.html)
+父主题： [GPRS扩展APN配置]
 
 
 
@@ -1880,7 +1880,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询GPRS扩展APN配置(SHOW EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询APN NI的扩展数据。 
@@ -1894,15 +1894,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|此参数为APN的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：长度小于63个字符。不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头。不能以“.gprs”结尾。不能使用通配符“*”。除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cn
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|此参数设置为MS的IMSI或MSISDN号段。IMSI（International Mobile Subscriber Identity，国际移动用户标识），由MCC+MNC+MSIN组成。MSISDN（Mobile Station International Subscriber Directory Number，移动台国际用户目录号），由CC+NDC+SN组成。SGSN根据软件参数“扩展APN的号码类型”（ID为786565）来获取APN NI的扩展方式的匹配条件：软件参数取值为“0”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+“IMSI号段”作为条件匹配APN NI的扩展方式。软件参数取值为“1”：表示SGSN将使用ADD EXAPN命令设置的“APN名称“+”MSISDN号段“作为条件查询APN NI的扩展方式。
@@ -1912,10 +1912,10 @@ IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 COMAPNID|扩展APN标识|参数可选性:任选参数；参数类型:整数。|该参数为输出参数，表示系统自动生成的标识。
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|此参数为APN的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：长度小于63个字符。不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头。不能以“.gprs”结尾。不能使用通配符“*”。除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cn
@@ -1936,7 +1936,7 @@ IFEXTBASEDCC|根据CC判断是否需进行APN扩展|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GPRS扩展APN配置。 
@@ -1965,7 +1965,7 @@ SHOW EXAPN;
 
 
 
-父主题： [GPRS扩展APN配置](../../zh-CN/tree/N_1254423.html)
+父主题： [GPRS扩展APN配置]
 
 
 
@@ -1988,7 +1988,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # EPC扩展APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 运营商在部署PGW时，有可能需要考虑用户的号码和签约计费特性等因素，在APN NI中扩展这些用户信息，可以为运营商提供更准确的APN选择PGW的策略。 
@@ -1996,7 +1996,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME在进行PGW选择时，根据配置的扩展方法对APN NI进行扩展，然后用扩展后的APN NI来构造APN获取服务的PGW。 
@@ -2050,7 +2050,7 @@ MME在进行PGW选择时，根据配置的扩展方法对APN NI进行扩展，�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2083,7 +2083,7 @@ MME在进行PGW选择时，根据配置的扩展方法对APN NI进行扩展，�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -2106,12 +2106,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增EPC扩展APN配置(ADD EPC EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增EPC扩展APN配置。当运营商希望通过用户号码段更准确的获取本次服务的PGW时，使用该命令，EPC扩展APN配置成功后，MME根据IMSI/MSISDN/IMEI号段、签约计费特性、两者的组合方式、TA信息、以及无感分流标识对APN NI进行扩展，然后通过扩展的APN获取到PGW的IP地址。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -2128,10 +2128,10 @@ IMSI/MSISDN号段和APN名称必须至少配置其中一个。
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~61个字符。|APN名称由Network Identifier（NI）组成，格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|通过扩展的APN获取到PGW的IP地址的IMSI/MSISDN号段。
@@ -2153,7 +2153,7 @@ RESELIFDEDPGWFAIL|选择无感分流专用PGW失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增EPC扩展APN配置，APN名称为zte.com，IMSI号段前缀为46001，扩展方式为IMSI扩展，APN扩展位为2-4位，HOST解析失败后使用非扩展APN解析。 
@@ -2168,7 +2168,7 @@ ADD EPC EXAPN:APNNAME="zte.com",IMSI="46001",NUMBERTYPE="IMSI",EXBIT=2-4,APNCTRL
 
 
 
-父主题： [EPC扩展APN配置](../../zh-CN/tree/N_12616205.html)
+父主题： [EPC扩展APN配置]
 
 
 
@@ -2191,12 +2191,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改EPC扩展APN配置(SET EPC EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改EPC扩展APN配置。当需要修改APN扩展中IMSI/MSISDN号段、扩展方式、APN扩展位等信息时，使用该命令。EPC扩展APN配置修改成功后，MME根据IMSI/MSISDN/IMEI号段、签约计费特性、两者的组合方、TA信息、以及无感分流标识对APN NI进行扩展，然后通过扩展的APN获取到PGW的IP地址。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -2213,10 +2213,10 @@ IMSI/MSISDN号段和APN名称必须至少配置其中一个。
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~61个字符。|APN名称由Network Identifier（NI）组成，格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|通过扩展的APN获取到PGW的IP地址的IMSI/MSISDN号段。
@@ -2238,7 +2238,7 @@ RESELIFDEDPGWFAIL|选择无感分流专用PGW失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改EPC扩展APN配置，APN名称为zte.com，IMSI/MSISDN号段为46001，将扩展方式修改为MSISDN扩展，APN扩展起始位修改为2，终止位修改为4，HOST解析失败后使用非扩展APN进行解析。 
@@ -2253,7 +2253,7 @@ SET EPC EXAPN:APNNAME="zte.com",IMSI="46001",NUMBERTYPE="MSISDN",EXBIT=2-4,APNCT
 
 
 
-父主题： [EPC扩展APN配置](../../zh-CN/tree/N_12616205.html)
+父主题： [EPC扩展APN配置]
 
 
 
@@ -2276,20 +2276,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除EPC扩展APN配置(DEL EPC EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除EPC扩展APN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|APN名称由Network Identifier（NI）组成，格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|通过扩展的APN获取到PGW的IP地址的IMSI/MSISDN号段。
@@ -2299,7 +2299,7 @@ IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除EPC扩展APN配置，APN名称为zte.com，IMSI号段前缀为46001。 
@@ -2314,7 +2314,7 @@ DEL EPC EXAPN:APNNAME="zte.com",IMSI="46001";
 
 
 
-父主题： [EPC扩展APN配置](../../zh-CN/tree/N_12616205.html)
+父主题： [EPC扩展APN配置]
 
 
 
@@ -2337,20 +2337,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC扩展APN配置(SHOW EPC EXAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询EPC扩展APN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|APN名称由Network Identifier（NI）组成，格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|通过扩展的APN获取到PGW的IP地址的IMSI/MSISDN号段。
@@ -2360,10 +2360,10 @@ IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型。|APN名称由Network Identifier（NI）组成，格式为“Label1Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 IMSI|IMSI/MSISDN号段|参数可选性:任选参数；参数类型:字符型。|通过扩展的APN获取到PGW的IP地址的IMSI/MSISDN号段。
@@ -2384,7 +2384,7 @@ RESELIFDEDPGWFAIL|选择无感分流专用PGW失败是否重选|参数可选性:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC扩展APN配置。 
@@ -2413,7 +2413,7 @@ SHOW MME EXAPN;
 
 
 
-父主题： [EPC扩展APN配置](../../zh-CN/tree/N_12616205.html)
+父主题： [EPC扩展APN配置]
 
 
 
@@ -2436,7 +2436,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # GPRS APN优选GGSN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN网元通过A/AAAA查询或者本地配置的Host查询得到GPRS APN对应的一组GGSN IP地址后，需要选择一个GGSN来提供本次业务。 
@@ -2444,7 +2444,7 @@ SGSN网元通过A/AAAA查询或者本地配置的Host查询得到GPRS APN对应�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN给查询到的每个GGSN的IP地址赋值一个优先级和权重，选择出高优先级的GGSN的IP地址，如果高优先级的IP地址是多个，再根据权重选出一个GGSN IP地址，目的是为了更准确地获取到本次服务的GGSN。 
@@ -2455,7 +2455,7 @@ SGSN给查询到的每个GGSN的IP地址赋值一个优先级和权重，选择�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2488,7 +2488,7 @@ SGSN给查询到的每个GGSN的IP地址赋值一个优先级和权重，选择�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -2511,7 +2511,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增GPRS APN优选GGSN配置(ADD GPRS APN GGSN PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置如何为SGSN，根据APN解析的结果，从中选择一个最佳的GGSN。 
@@ -2522,7 +2522,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该功能只适用于SGSN网元。 
@@ -2545,10 +2545,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~82个字符。|APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*” 除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置某个APN的名称为“zte.com.cn.mnc011.mcc460.gprs”。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -2564,7 +2564,7 @@ WEIGHT|权重|参数可选性:必选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增GPRS APN优选GGSN配置，APN名称为zte.com.mnc111.mcc222.gprs，其中地址为12.1.1.1/24的优先级为1，权重为22，地址为12.2.2.2/24的优先级为2，权重为23。 
@@ -2579,7 +2579,7 @@ ADD GPRS APN GGSN PRI:APN="zte.com.mnc111.mcc222.gprs",SNPRI="12.1.1.1"-24-1-22&
 
 
 
-父主题： [GPRS APN优选GGSN配置](../../zh-CN/tree/N_1254424.html)
+父主题： [GPRS APN优选GGSN配置]
 
 
 
@@ -2602,20 +2602,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改GPRS APN优选GGSN配置(SET GPRS APN GGSN PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改APN的GGSN优选配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~82个字符。|APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*” 除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置某个APN的名称为“zte.com.cn.mnc011.mcc460.gprs”。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -2630,7 +2630,7 @@ WEIGHT|权重|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改GPRS APN优选GGSN配置，APN名称为zte.com.mnc111.mcc222.gprs，其中地址为12.1.1.1/24的优先级为5，权重为32。 
@@ -2645,7 +2645,7 @@ SET GPRS APN GGSN PRI:APN="zte.com.mnc111.mcc222.gprs",ADDR="12.1.1.1",LEN=24,PR
 
 
 
-父主题： [GPRS APN优选GGSN配置](../../zh-CN/tree/N_1254424.html)
+父主题： [GPRS APN优选GGSN配置]
 
 
 
@@ -2668,20 +2668,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除GPRS APN优选GGSN配置(DEL GPRS APN GGSN PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除APN的GGSN优选配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~82个字符。|APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*” 除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置某个APN的名称为“zte.com.cn.mnc011.mcc460.gprs”。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -2695,7 +2695,7 @@ LEN|长度|参数可选性:必选参数；参数类型:整数；参数范围为:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN名称为zte.com.mnc111.mcc222.gprs的GPRS APN优选GGSN配置。 
@@ -2710,7 +2710,7 @@ DEL GPRS APN GGSN PRI:APN="zte.com.mnc111.mcc222.gprs";
 
 
 
-父主题： [GPRS APN优选GGSN配置](../../zh-CN/tree/N_1254424.html)
+父主题： [GPRS APN优选GGSN配置]
 
 
 
@@ -2733,20 +2733,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询GPRS APN优选GGSN配置(SHOW GPRS APN GGSN PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN的GGSN优选配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~82个字符。|APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*” 除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置某个APN的名称为“zte.com.cn.mnc011.mcc460.gprs”。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -2757,10 +2757,10 @@ RAINAME|路由区名称|参数可选性:任意单选参数；参数类型:字符
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*” 除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），定义了GGSN所在的GPRS分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”，要求如下：<MNC>和<MCC>都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs例如：设置某个APN的名称为“zte.com.cn.mnc011.mcc460.gprs”。
 LAINAME|位置区名称|参数可选性:任选参数；参数类型:字符型。|此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -2835,7 +2835,7 @@ WEIGHT16|权重16|参数可选性:任选参数；参数类型:整数。|此参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GPRS APN优选GGSN配置。 
@@ -2864,7 +2864,7 @@ SHOW GPRS APN GGSN PRI;
 
 
 
-父主题： [GPRS APN优选GGSN配置](../../zh-CN/tree/N_1254424.html)
+父主题： [GPRS APN优选GGSN配置]
 
 
 
@@ -2887,7 +2887,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # EPC APN优选子网段配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME/SGSN使用EPC形式的APN进行NAPTR（名称权威指针，Naming Authority Pointer）查询或本地HOST查询，可以得到一组PGW列表。MME/SGSN根据PGW的优先级、权重、拓扑关系、节点有效性等选择策略选出一个PGW。SGSN出Gn/Gp口时是与PGW内置的GGSN进行业务交互。 
@@ -2895,7 +2895,7 @@ MME/SGSN使用EPC形式的APN进行NAPTR（名称权威指针，Naming Authority
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME/SGSN可以为选出的PGW的每个IP地址段，先赋值一个子网优先级，再选择高优先级的PGW的IP地址。如果高优先级的IP地址既有IPv4地址，又有IPv6地址，则根据软参“与非邻接网元交互时业务IP双栈优选的IP类型”（ID：786569），确定是选择IPv4地址还是IPv6地址。如果高优先级的IP地址有多个，则随机选择一个。目的是为了更准确地获取到本次服务的PGW。 
@@ -2906,7 +2906,7 @@ MME/SGSN可以为选出的PGW的每个IP地址段，先赋值一个子网优先�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2939,7 +2939,7 @@ MME/SGSN可以为选出的PGW的每个IP地址段，先赋值一个子网优先�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -2962,7 +2962,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增EPC APN优选子网段配置(ADD EPC APN SUBNET PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置如何为MME/SGSN，根据APN解析的结果，从中选择一个最佳的PGW。 
@@ -2979,7 +2979,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该功能适用于MME/SGSN网元。 
@@ -3005,10 +3005,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过100个字符。NI部分格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“SGSN”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|当具有EPC能力的终端接入SGSN，SGSN出Gn/Gp口与PGW内置的GGSN交互时，该参数可作为可选配置。此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -3023,7 +3023,7 @@ PRI|优先级|参数可选性:必选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 为APN名称为"zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org"增加优选子网段配置，其中地址段为“6.0.87.0”，掩码为23位，优先级为5。 
@@ -3038,7 +3038,7 @@ ADD EPC APN SUBNET PRI:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",SNPRI
 
 
 
-父主题： [EPC APN优选子网段配置](../../zh-CN/tree/N_1254425.html)
+父主题： [EPC APN优选子网段配置]
 
 
 
@@ -3061,7 +3061,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改EPC APN优选子网段配置(SET EPC APN SUBNET PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改EPC APN优选子网段配置。 
@@ -3069,15 +3069,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过100个字符。NI部分格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“SGSN”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|当具有EPC能力的终端接入SGSN，SGSN出Gn/Gp口与PGW内置的GGSN交互时，该参数可作为可选配置。此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -3091,7 +3091,7 @@ PRI|优先级|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 为APN名称为"zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org"修改优选子网段配置，其中地址段为“6.0.87.0”，掩码为23位，优先级为7。 
@@ -3106,7 +3106,7 @@ SET EPC APN SUBNET PRI:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",IP="6
 
 
 
-父主题： [EPC APN优选子网段配置](../../zh-CN/tree/N_1254425.html)
+父主题： [EPC APN优选子网段配置]
 
 
 
@@ -3129,7 +3129,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除EPC APN优选子网段配置(DEL EPC APN SUBNET PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除EPC APN优选子网段配置。 
@@ -3137,15 +3137,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过100个字符。NI部分格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“SGSN”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|当具有EPC能力的终端接入SGSN，SGSN出Gn/Gp口与PGW内置的GGSN交互时，该参数可作为可选配置。此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -3159,7 +3159,7 @@ MASKLEN|掩码长度|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN名称为"zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org"的优选子网段配置。 
@@ -3174,7 +3174,7 @@ DEL EPC APN SUBNET PRI:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org";
 
 
 
-父主题： [EPC APN优选子网段配置](../../zh-CN/tree/N_1254425.html)
+父主题： [EPC APN优选子网段配置]
 
 
 
@@ -3197,7 +3197,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC APN优选子网段配置(SHOW EPC APN SUBNET PRI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询EPC APN优选子网段配置。 
@@ -3205,15 +3205,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过100个字符。NI部分格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“SGSN”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 LAINAME|位置区名称|参数可选性:任意单选参数；参数类型:字符型；参数范围为:0~50个字符。|当具有EPC能力的终端接入SGSN，SGSN出Gn/Gp口与PGW内置的GGSN交互时，该参数可作为可选配置。此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -3224,10 +3224,10 @@ RAINAME|路由区名称|参数可选性:任意单选参数；参数类型:字符
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|APN名称由Network Identifier（NI）和Operator Identifier（OI）,加上插在二者之间的“apn.epc”组成，格式为“APN-NI.apn.epc.mnc<MNC>.mcc<MCC>.3gppnetwork.org”。APN协议规定最长不能超过100个字符。NI部分格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过61个字符。不以“rac”、“lac”、“SGSN”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。 OI部分格式为“mnc<MNC>.mcc<MCC>.3gppnetwork.org”，MNC和MCC都是三位0~9的数字，不足三位的，靠前补零。
 LAINAME|位置区名称|参数可选性:任选参数；参数类型:字符型。|当具有EPC能力的终端接入SGSN，SGSN出Gn/Gp口与PGW内置的GGSN交互时，该参数可作为可选配置。此参数的取值，是通过ADD LAI命令设置的“位置区名”，可以通过SHOW LAI命令查询获取。SGSN根据软件参数“GGSN子网优先级选择方式”（ID为65566）来获取GGSN IP地址匹配条件：当“GGSN子网优先级选择方式”设置为0，表示SGSN只根据“APN名称”来匹配GGSN的优先级。当“GGSN子网优先级选择方式”设置为1，表示SGSN根据“APN名称”+“位置区名称”或“路由区名称”来匹配GGSN的优先级。
@@ -3268,7 +3268,7 @@ PRI10|优先级10|参数可选性:任选参数；参数类型:整数。|数值�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC APN优选子网段配置信息。 
@@ -3297,7 +3297,7 @@ SHOW EPC APN SUBNET PRI;
 
 
 
-父主题： [EPC APN优选子网段配置](../../zh-CN/tree/N_1254425.html)
+父主题： [EPC APN优选子网段配置]
 
 
 
@@ -3320,7 +3320,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # GPRS APN更正配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当用户接入分组网络时，请求消息中如果没有携带APN或携带的APN不合法（无效的格式，或格式有效但是没有对应的GGSN），网络不能解析出对应的GGSN地址，导致接入失败。 
@@ -3328,7 +3328,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用户没有携带APN或者携带的APN不合法时，SGSN根据APN更正配置的策略更正为其他APN，用户使用更正后的APN激活PDP上下文访问数据业务和其他业务。 
@@ -3346,7 +3346,7 @@ APN更正功能的配置流程如下：
 
 
                         配置APN更正策略，命令为：
-                        [SET APNMOD POLICY](../mml/1261532.html)
+                        [SET APNMOD POLICY]
                         。
                     
 
@@ -3357,7 +3357,7 @@ APN更正功能的配置流程如下：
 
 
                         配置APN控制更正策略，命令为：
-                        [ADD APNCTRLMOD POLICY](../mml/1261966.html)
+                        [ADD APNCTRLMOD POLICY]
                         。
                     
 
@@ -3368,7 +3368,7 @@ APN更正功能的配置流程如下：
 
 
                         配置基于IMSI号段的APN更正，命令为：
-                        [ADD APN MODIFICATION](../mml/1261535.html)
+                        [ADD APN MODIFICATION]
                         。
                     
 
@@ -3379,7 +3379,7 @@ APN更正功能的配置流程如下：
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3442,7 +3442,7 @@ APN更正功能的配置流程如下：
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -3465,7 +3465,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置APN更正策略(SET APNMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置SGSN的APN更正策略，可以设置SGSN是否支持APN更正。 
@@ -3485,7 +3485,7 @@ APN控制更正策略是指，当SGSN支持APN更正的时候，可以根据APN�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此功能只适用于SGSN。 
@@ -3502,10 +3502,10 @@ APN控制更正策略是指，当SGSN支持APN更正的时候，可以根据APN�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNMODIFY|支持APN更正|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置为“支持”：表示SGSN支持APN更正功能。设置为“不支持”：表示SGSN不支持APN更正功能。
 SUPAPNCTLMODPLY|支持APN控制更正策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否支持基于APN控制更正策略。
@@ -3517,7 +3517,7 @@ PDPREJCAUSEVALUE|APN控制不更正时PDP激活拒绝原因值|参数可选性:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置APN更正策略。 
@@ -3532,7 +3532,7 @@ SET APNMOD POLICY:APNMODIFY="YES";
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -3555,20 +3555,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN更正策略(SHOW APNMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SGSN的APN更正策略。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNMODIFY|支持APN更正|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置为“支持”：表示SGSN支持APN更正功能。设置为“不支持”：表示SGSN不支持APN更正功能。
 SUPAPNCTLMODPLY|支持APN控制更正策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否支持基于APN控制更正策略。
@@ -3580,7 +3580,7 @@ PDPREJCAUSEVALUE|APN控制不更正时PDP激活拒绝原因值|参数可选性:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN更正策略。 
@@ -3609,7 +3609,7 @@ SHOW APNMOD POLICY;
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -3632,7 +3632,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增APN控制更正策略配置(ADD APNCTRLMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置APN控制的更正策略。当需要基于特定的APN配置更正策略时，使用该命令。 
@@ -3640,15 +3640,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-当[SET APNMOD POLICY](1261532.html)命令中的“支持APN更正”设为“支持”， “支持APN控制更正策略”设为“支持”，且特定APN的更正策略与[SET APNMOD POLICY](1261532.html)命令中的“APN默认控制策略”不一致时，才需要使用[ADD APNCTRLMOD POLICY](1261966.html)命令。
-
-
-[](None)参数说明 
+当[SET APNMOD POLICY]命令中的“支持APN更正”设为“支持”， “支持APN控制更正策略”设为“支持”，且特定APN的更正策略与[SET APNMOD POLICY]命令中的“APN默认控制策略”不一致时，才需要使用[ADD APNCTRLMOD POLICY]命令。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|该参数用于设置APN NI（Network Identifier），格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过63个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 APNMODPLY|APN更正策略|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN控制的更正策略。
@@ -3658,7 +3658,7 @@ APNMODPLY|APN更正策略|参数可选性:必选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN控制更正策略配置，其中APN为"zte"、APN更正策略为更正。 
@@ -3673,7 +3673,7 @@ ADD APNCTRLMOD POLICY:APN="zte",APNMODPLY="MODIFY";
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -3696,7 +3696,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改APN控制更正策略配置(SET APNCTRLMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改APN控制更正策略。当需要修改基于APN控制的更正策略时，使用该命令。 
@@ -3704,15 +3704,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|该参数用于设置APN NI（Network Identifier），格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过63个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN控制的更正策略。
@@ -3722,7 +3722,7 @@ APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN为"zte"的APN控制更正策略，将APN更正策略修改为更正。 
@@ -3737,7 +3737,7 @@ SET APNCTRLMOD POLICY:APN="zte",APNMODPLY="MODIFY";
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -3760,7 +3760,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除APN控制更正策略配置(DEL APNCTRLMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除基于特定APN的控制更正策略。 
@@ -3768,15 +3768,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|该参数用于设置APN NI（Network Identifier），格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过63个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
@@ -3785,7 +3785,7 @@ APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN为"zte"的APN控制更正策略。 
@@ -3800,7 +3800,7 @@ DEL APNCTRLMOD POLICY:APN="zte";
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -3823,7 +3823,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN控制更正策略配置(SHOW APNCTRLMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询基于APN的控制更正策略。 
@@ -3831,15 +3831,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|该参数用于设置APN NI（Network Identifier），格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过63个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
@@ -3848,10 +3848,10 @@ APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|该参数用于设置APN NI（Network Identifier），格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求。不超过63个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN控制的更正策略。
@@ -3861,7 +3861,7 @@ APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN控制更正策略。 
@@ -3890,7 +3890,7 @@ SHOW APNCTRLMOD POLICY;
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -3913,26 +3913,26 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增APN更正配置(ADD APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 此命令用于SGSN根据MS的IMSI号段来对不能正确解析的APN的NI部分进行修改，以便SGSN能够根据修改后的APN获取到GGSN的IP地址。
 
 
-[](None)注意事项 
+注意事项 
 
 
 此功能只适用于SGSN。 
 
 
-此命令的执行前提是，通过[SET APNMOD SPRT](1261532.html)命令，设置SGSN支持APN更正功能。
+此命令的执行前提是，通过[SET APNMOD SPRT]命令，设置SGSN支持APN更正功能。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 MODIFYMODE|更正APN方式|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:First APN Signed by HLR。|表示对APN进行更正的方式，包括以下4种：指定APN：“指定APN”表示使用ADD APN MODIFICATION命令配置的参数“APN”，设置为该选项，表示使用“指定APN”对原APN进行更正。该选项受软件参数“指定APN更正是否需要检查HLR签约信息”（ID为786483）的控制，如果此软件参数设置为“1”，SGSN在更正前，需要检查“指定APN”是否为MS在HLR中签约的APN，如果确为签约的APN，则将更正为指定APN”，如果不是HLR中签约的APN，则会导致PDP激活流程失败。如果此软件参数设置为“0”，SGSN直接使用“指定APN”对原APN进行更正。HLR签约的第一个APN：表示SGSN使用MS的HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。APN模糊匹配：SGSN首先检查“指定APN”是否为HLR签约APN，如果是，则将原APN更正为“指定APN”；如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。请求APN更正：表示SGSN首先检查用户请求的APN（即原APN）是否为HLR的签约APN。如果是，则使用该用户请求的APN，如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。
@@ -3946,7 +3946,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN更正配置，IMSI前缀为46001，更正APN方式为APN模糊匹配，APN名称为zte，PDP类型为IPv4。 
@@ -3961,7 +3961,7 @@ ADD APN MODIFICATION:IMSI="46001",MODIFYMODE="APN Fuzzy Match",APN="zte";
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -3984,20 +3984,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改APN更正配置(SET APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据MS的IMSI号段来修改APN更正配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 MODIFYMODE|更正APN方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|表示对APN进行更正的方式，包括以下4种：指定APN：“指定APN”表示使用ADD APN MODIFICATION命令配置的参数“APN”，设置为该选项，表示使用“指定APN”对原APN进行更正。该选项受软件参数“指定APN更正是否需要检查HLR签约信息”（ID为786483）的控制，如果此软件参数设置为“1”，SGSN在更正前，需要检查“指定APN”是否为MS在HLR中签约的APN，如果确为签约的APN，则将更正为指定APN”，如果不是HLR中签约的APN，则会导致PDP激活流程失败。如果此软件参数设置为“0”，SGSN直接使用“指定APN”对原APN进行更正。HLR签约的第一个APN：表示SGSN使用MS的HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。APN模糊匹配：SGSN首先检查“指定APN”是否为HLR签约APN，如果是，则将原APN更正为“指定APN”；如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。请求APN更正：表示SGSN首先检查用户请求的APN（即原APN）是否为HLR的签约APN。如果是，则使用该用户请求的APN，如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。
@@ -4011,7 +4011,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI前缀为46001的APN更正配置，更正APN方式为HLR签约的第一个APN。 
@@ -4026,7 +4026,7 @@ SET APN MODIFICATION:IMSI="46001",MODIFYMODE="First APN Signed by HLR";
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -4049,20 +4049,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除APN更正配置(DEL APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据MS的IMSI号段来删除APN更正配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 
@@ -4071,7 +4071,7 @@ IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI前缀为46001的APN更正配置。 
@@ -4086,7 +4086,7 @@ DEL APN MODIFICATION:IMSI="46001";
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -4109,20 +4109,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN更正配置(SHOW APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN更正配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 MODIFYMODE|更正APN方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|表示对APN进行更正的方式，包括以下4种：指定APN：“指定APN”表示使用ADD APN MODIFICATION命令配置的参数“APN”，设置为该选项，表示使用“指定APN”对原APN进行更正。该选项受软件参数“指定APN更正是否需要检查HLR签约信息”（ID为786483）的控制，如果此软件参数设置为“1”，SGSN在更正前，需要检查“指定APN”是否为MS在HLR中签约的APN，如果确为签约的APN，则将更正为指定APN”，如果不是HLR中签约的APN，则会导致PDP激活流程失败。如果此软件参数设置为“0”，SGSN直接使用“指定APN”对原APN进行更正。HLR签约的第一个APN：表示SGSN使用MS的HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。APN模糊匹配：SGSN首先检查“指定APN”是否为HLR签约APN，如果是，则将原APN更正为“指定APN”；如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。请求APN更正：表示SGSN首先检查用户请求的APN（即原APN）是否为HLR的签约APN。如果是，则使用该用户请求的APN，如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。
@@ -4133,10 +4133,10 @@ APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 MODIFYMODE|更正APN方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|表示对APN进行更正的方式，包括以下4种：指定APN：“指定APN”表示使用ADD APN MODIFICATION命令配置的参数“APN”，设置为该选项，表示使用“指定APN”对原APN进行更正。该选项受软件参数“指定APN更正是否需要检查HLR签约信息”（ID为786483）的控制，如果此软件参数设置为“1”，SGSN在更正前，需要检查“指定APN”是否为MS在HLR中签约的APN，如果确为签约的APN，则将更正为指定APN”，如果不是HLR中签约的APN，则会导致PDP激活流程失败。如果此软件参数设置为“0”，SGSN直接使用“指定APN”对原APN进行更正。HLR签约的第一个APN：表示SGSN使用MS的HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。APN模糊匹配：SGSN首先检查“指定APN”是否为HLR签约APN，如果是，则将原APN更正为“指定APN”；如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。请求APN更正：表示SGSN首先检查用户请求的APN（即原APN）是否为HLR的签约APN。如果是，则使用该用户请求的APN，如果不是，则使用HLR签约信息中的第一个APN做为更正后APN，如果签约的第一个APN为“*”，则使用“指定APN”（即通过ADD APN MODIFICATION命令配置的参数“APN”）做为更正后的APN。
@@ -4150,7 +4150,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN更正配置。 
@@ -4179,7 +4179,7 @@ SHOW APN MODIFICATION;
 
 
 
-父主题： [GPRS APN更正配置](../../zh-CN/tree/N_1254426.html)
+父主题： [GPRS APN更正配置]
 
 
 
@@ -4202,7 +4202,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # EPC APN更正配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当用户接入分组网络时，请求消息中如果没有携带APN或携带的APN不合法（无效的格式，或格式有效但是没有对应的PGW），网络不能解析出对应的PGW地址，导致接入失败。 
@@ -4210,7 +4210,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用户没有携带APN或者携带的APN不合法时，MME根据APN更正配置的策略更正为其他APN，用户使用更正后的APN激活EPS承载上下文访问数据业务和其他业务。 
@@ -4228,7 +4228,7 @@ APN更正功能的配置流程如下：
 
 
                         配置本局是否支持APN更正功能，命令为：
-                        [SET MME APNMOD POLICY](../mml/1261563.html)
+                        [SET MME APNMOD POLICY]
                         。
                     
 
@@ -4239,7 +4239,7 @@ APN更正功能的配置流程如下：
 
 
                         配置基于IMSI号段的APN更正，命令为：
-                        [ADD MME APN MODIFICATION](../mml/1261566.html)
+                        [ADD MME APN MODIFICATION]
                         。
                     
 
@@ -4250,7 +4250,7 @@ APN更正功能的配置流程如下：
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4313,7 +4313,7 @@ APN更正功能的配置流程如下：
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -4336,7 +4336,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置EPC APN更正策略(SET MME APNMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置本局是否支持EPC APN更正功能, 和更正APN方式为“指定APN（Specified APN）”时，MME是否需要检查用户是否签约了指定的APN。 
@@ -4347,7 +4347,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -4364,10 +4364,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNMODIFY|是否支持APN更正功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本局是否支持EPC APN更正功能。取值含义：“不支持（No）”：本局不支持EPC APN更正功能。“支持（Yes）：本局支持EPC APN更正功能。
 SPECAPNCHKSUB|指定APN更正时检查签约|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置更正APN方式为“指定APN（Specified APN）”时，MME是否需要检查用户是否签约了指定的APN，如果未签约，则MME拒绝该用户接入；如果签约，则MME使用指定的APN。取值含义：No：不检查Yes：检查
@@ -4379,7 +4379,7 @@ EAPNDFTCTLPLY|APN默认控制策略|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置EPC APN更正策略。 
@@ -4394,7 +4394,7 @@ SET MME APNMOD POLICY:APNMODIFY="YES";
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4417,20 +4417,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC APN更正策略(SHOW MME APNMOD POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询本局是否支持EPC APN更正功能. 和更正APN方式为“指定APN（Specified APN）”时，MME是否需要检查用户是否签约了指定的APN。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNMODIFY|是否支持APN更正功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本局是否支持EPC APN更正功能。取值含义：“不支持（No）”：本局不支持EPC APN更正功能。“支持（Yes）：本局支持EPC APN更正功能。
 SPECAPNCHKSUB|指定APN更正时检查签约|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置更正APN方式为“指定APN（Specified APN）”时，MME是否需要检查用户是否签约了指定的APN，如果未签约，则MME拒绝该用户接入；如果签约，则MME使用指定的APN。取值含义：No：不检查Yes：检查
@@ -4442,7 +4442,7 @@ EAPNDFTCTLPLY|APN默认控制策略|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC APN更正策略。 
@@ -4471,7 +4471,7 @@ SHOW MME APNMOD POLICY;
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4494,7 +4494,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增EPC APN控制更正策略配置(ADD MME APN MODIFY POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置EPC APN控制的更正策略。当需要基于特定的EPC APN配置更正策略时，使用该命令。 
@@ -4502,15 +4502,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 当“支持APN更正”设为“支持”， “支持APN控制更正策略”设为“支持”，且特定APN的更正策略与“APN默认控制策略”不一致时，才需要配置“新增EPC APN控制更正策略配置”。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 APNMODPLY|APN更正策略|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN控制的更正策略。
@@ -4520,7 +4520,7 @@ APNMODPLY|APN更正策略|参数可选性:必选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增EPC APN控制更正策略配置，其中APN名称为"zte"、APN更正策略为不更正。 
@@ -4535,7 +4535,7 @@ ADD MME APN MODIFY POLICY:APN="zte",APNMODPLY="NOTMODIFY";
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4558,7 +4558,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改EPC APN控制更正策略配置(SET MME APN MODIFY POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改EPC APN控制更正策略。当需要修改基于EPC APN控制的更正策略时，使用该命令。 
@@ -4566,15 +4566,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN控制的更正策略。
@@ -4584,7 +4584,7 @@ APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN名称为"zte"的EPC APN控制更正策略配置，将APN更正策略修改为更正。 
@@ -4599,7 +4599,7 @@ SET MME APN MODIFY POLICY:APN="zte",APNMODPLY="MODIFY";
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4622,7 +4622,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除EPC APN控制更正策略配置(DEL MME APN MODIFY POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除EPC APN控制更正策略。 
@@ -4630,15 +4630,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
@@ -4647,7 +4647,7 @@ APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN名称为"zte"的EPC APN控制更正策略配置。 
@@ -4662,7 +4662,7 @@ DEL MME APN MODIFY POLICY:APN="zte";
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4685,7 +4685,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC APN控制更正策略配置(SHOW MME APN MODIFY POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询EPC APN控制更正策略。 
@@ -4693,15 +4693,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
@@ -4710,10 +4710,10 @@ APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN控制的更正策略。
@@ -4723,7 +4723,7 @@ APNMODPLY|APN更正策略|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC APN控制更正策略配置。 
@@ -4751,7 +4751,7 @@ SHOW MME APN MODIFY POLICY;
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4774,26 +4774,26 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增EPC APN更正配置(ADD MME APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于MME根据MS的IMSI号段来对不能正确解析的APN的NI部分进行修改，以便MME能够根据修改后的APN获取到PGW的IP地址。
 
 
-[](None)注意事项 
+注意事项 
 
 
 此功能只适用于MME。 
 
 
-此命令的执行前提是，通过[SET MME APNMOD SPRT](1261563.html)命令，设置MME支持APN更正功能。
+此命令的执行前提是，通过[SET MME APNMOD SPRT]命令，设置MME支持APN更正功能。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 SUBWILDCHK|用户是否签约通配|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|如果在同一个号段内的用户，签约通配的用户和没有签约通配的用户使用不同的APN更正方式，则此参数需要分别设置为签约通配和没有签约通配；否则此参数设置为忽略。
@@ -4807,7 +4807,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增IMSI号段前缀为“46002”的EPC APN更正配置，用户是否签约通配为更正方式为“忽略”,“HSS签约的默认APN”，用户别名为“gg”。 
@@ -4822,7 +4822,7 @@ ADD MME APN MODIFICATION:IMSI="46002",SUBWILDCHK="IGNORE",MODIFYMODE="Default AP
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4845,20 +4845,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改EPC APN更正配置(SET MME APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据MS的IMSI号段来修改APN更正配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 SUBWILDCHK|用户是否签约通配|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|如果在同一个号段内的用户，签约通配的用户和没有签约通配的用户使用不同的APN更正方式，则此参数需要分别设置为签约通配和没有签约通配；否则此参数设置为忽略。
@@ -4873,7 +4873,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI号段前缀为“46002”,用户是否签约通配为更正方式为“忽略”的EPC APN更正配置，更正方式为“指定APN”，指定的APN名称为“zte.com”。 
@@ -4888,7 +4888,7 @@ SET MME APN MODIFICATION:IMSI="46002",SUBWILDCHK="IGNORE",MODIFYMODE="Specified 
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4911,20 +4911,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除EPC APN更正配置(DEL MME APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据MS的IMSI号段来删除APN更正配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 SUBWILDCHK|用户是否签约通配|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|如果在同一个号段内的用户，签约通配的用户和没有签约通配的用户使用不同的APN更正方式，则此参数需要分别设置为签约通配和没有签约通配；否则此参数设置为忽略。
@@ -4934,7 +4934,7 @@ SUBWILDCHK|用户是否签约通配|参数可选性:必选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI号段前缀为“46002”,用户是否签约通配为更正方式为“忽略”的EPC APN更正配置。 
@@ -4949,7 +4949,7 @@ DEL MME APN MODIFICATION:IMSI="46002",SUBWILDCHK="IGNORE";
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -4972,20 +4972,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC APN更正配置(SHOW MME APN MODIFICATION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN更正配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 SUBWILDCHK|用户是否签约通配|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|如果在同一个号段内的用户，签约通配的用户和没有签约通配的用户使用不同的APN更正方式，则此参数需要分别设置为签约通配和没有签约通配；否则此参数设置为忽略。
@@ -4998,10 +4998,10 @@ NIPAPN|Non-IP PDN类型的APN|参数可选性:任选参数；参数类型:字符
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 SUBWILDCHK|用户是否签约通配|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|如果在同一个号段内的用户，签约通配的用户和没有签约通配的用户使用不同的APN更正方式，则此参数需要分别设置为签约通配和没有签约通配；否则此参数设置为忽略。
@@ -5015,7 +5015,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询全部的EPC APN更正配置。 
@@ -5044,7 +5044,7 @@ SHOW MME APN MODIFICATION;
 
 
 
-父主题： [EPC APN更正配置](../../zh-CN/tree/N_1254428.html)
+父主题： [EPC APN更正配置]
 
 
 
@@ -5067,7 +5067,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # EPC APN选择控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 用户发起附着和PDN连接流程时，进行APN选择。某些运营商要求，用户请求的APN、PDN类型与HSS签约信息匹配时，忽略签约通配。当请求的APN、PDN类型与HSS签约信息中的APN、PDN类型匹配时，才允许用户接入；不匹配时，拒绝用户接入。 
@@ -5078,7 +5078,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 EPC APN选择控制配置包括： 
@@ -5105,7 +5105,7 @@ EPC APN选择控制配置包括：
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -5158,7 +5158,7 @@ EPC APN选择控制配置包括：
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -5181,7 +5181,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置EPC APN选择控制策略(SET EPC APN SELECT CFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置EPC APN选择控制策略。当需要设置MME是否支持APN选择控制时，使用该命令。 
@@ -5189,15 +5189,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPAPNSELCTL|支持APN选择控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持APN选择控制。0-不支持1-支持
 
@@ -5206,7 +5206,7 @@ SUPAPNSELCTL|支持APN选择控制|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置EPC APN选择控制策略，将支持APN选择控制修改为支持。 
@@ -5221,7 +5221,7 @@ SET EPC APN SELECT CFG:SUPAPNSELCTL="YES";
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5244,7 +5244,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC APN选择控制策略(SHOW EPC APN SELECT CFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询EPC APN选择控制策略。 
@@ -5252,15 +5252,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPAPNSELCTL|支持APN选择控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持APN选择控制。0-不支持1-支持
 
@@ -5269,7 +5269,7 @@ SUPAPNSELCTL|支持APN选择控制|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC APN选择控制策略。 
@@ -5297,7 +5297,7 @@ SHOW EPC APN SELECT CFG;
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5320,7 +5320,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置缺省EPC APN选择控制(SET DEF EPC APN SELCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置缺省EPC APN选择控制。当MME支持APN选择控制的时候，需要配置是否忽略签约通配时，使用该命令。 
@@ -5328,15 +5328,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IGNWILDCARD|忽略签约通配|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN选择控制时是否忽略签约通配。0-不忽略1-忽略
 ATTAREJCAU|附着拒绝原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|APN选择，签约通配，且通配的PDN类型与请求的PDN类型一致，当配置为忽略签约通配，导致APN选择失败，附着拒绝时，该参数用于设置附着拒绝原因值。
@@ -5347,7 +5347,7 @@ PDNCONREJCAU|PDN连接拒绝原因|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置缺省EPC APN选择控制,将忽略签约通配修改忽略，附着拒绝原因修改为Illegal UE，PDN连接拒绝原因修改为operator determined barring。 
@@ -5362,7 +5362,7 @@ SET DEF EPC APN SELCTRL:IGNWILDCARD="YES",ATTAREJCAU="ATTAREJCAU_3",PDNCONREJCAU
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5385,7 +5385,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询缺省EPC APN选择控制(SHOW DEF EPC APN SELCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询缺省EPC APN选择控制配置。 
@@ -5393,15 +5393,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IGNWILDCARD|忽略签约通配|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置APN选择控制时是否忽略签约通配。0-不忽略1-忽略
 ATTAREJCAU|附着拒绝原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|APN选择，签约通配，且通配的PDN类型与请求的PDN类型一致，当配置为忽略签约通配，导致APN选择失败，附着拒绝时，该参数用于设置附着拒绝原因值。
@@ -5412,7 +5412,7 @@ PDNCONREJCAU|PDN连接拒绝原因|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询缺省EPC APN选择控制。 
@@ -5440,7 +5440,7 @@ SHOW DEF EPC APN SELCTRL;
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5463,7 +5463,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增EPC APN选择控制配置(ADD EPC APN SEL CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增基于用户IMSI号段或APN NI或IMSI号段+APN NI的EPC APN选择控制配置。当APN选择需要根据特定IMSI号段、APN设置是否忽略签约通配时，使用该命令。 
@@ -5471,7 +5471,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 基于IMSI号段、APN的APN选择控制，可以从3个维度进行控制，优先级从高到低顺序为：IMSI号段+APN NI、APN NI、IMSI号段。 
@@ -5479,10 +5479,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于设置IMSI号段。
 APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
@@ -5493,7 +5493,7 @@ IGNWILDCARD|忽略签约通配|参数可选性:必选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增EPC APN选择控制配置，其中IMSI为46001、APN为"zte"、忽略签约通配为不忽略。 
@@ -5508,7 +5508,7 @@ ADD EPC APN SEL CTRL:IMSI="46001",APN="zte",IGNWILDCARD="NO";
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5531,7 +5531,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改EPC APN选择控制配置(SET EPC APN SEL CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改基于用户IMSI号段或APN NI或IMSI号段+APN NI的EPC APN选择控制配置。 
@@ -5539,15 +5539,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于设置IMSI号段。
 APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
@@ -5558,7 +5558,7 @@ IGNWILDCARD|忽略签约通配|参数可选性:任选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改EPC APN选择控制配置，将忽略签约通配改为忽略。 
@@ -5573,7 +5573,7 @@ SET EPC APN SEL CTRL:IMSI="46001",APN="zte",IGNWILDCARD="YES";
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5596,7 +5596,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除EPC APN选择控制配置(DEL EPC APN SEL CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除基于用户IMSI号段或APN NI或IMSI号段+APN NI的EPC APN选择控制配置。 
@@ -5604,15 +5604,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于设置IMSI号段。
 APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
@@ -5622,7 +5622,7 @@ APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除EPC APN选择控制配置。 
@@ -5637,7 +5637,7 @@ DEL EPC APN SEL CTRL:IMSI="46001",APN="zte";
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5660,7 +5660,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询EPC APN选择控制配置(SHOW EPC APN SEL CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询基于用户IMSI号段或APN NI或IMSI号段+APN NI的EPC APN选择控制配置。 
@@ -5668,15 +5668,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于设置IMSI号段。
 APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
@@ -5687,10 +5687,10 @@ IGNWILDCARD|忽略签约通配|参数可选性:任选参数；参数类型:枚�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型。|该参数用于设置IMSI号段。
 APN|APN|参数可选性:任选参数；参数类型:字符型。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
@@ -5701,7 +5701,7 @@ IGNWILDCARD|忽略签约通配|参数可选性:必选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC APN选择控制配置。 
@@ -5729,7 +5729,7 @@ SHOW EPC APN SEL CTRL;
 
 
 
-父主题： [EPC APN选择控制配置](../../zh-CN/tree/N_12619711.html)
+父主题： [EPC APN选择控制配置]
 
 
 
@@ -5752,21 +5752,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # APN PDP IDLE时长配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             随着用户数量的增多，为了节省网络资源，可以对不活跃用户去激活。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             该配置支持基于GPRS/EPC APN NI的PDP空闲时长配置。SGSN对PDP空闲时长大于等于该配置时长的用户，基于APN执行去激活。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -5799,7 +5799,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -5822,7 +5822,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增APN PDP IDLE时长配置(ADD APN IDLE TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置某个APN下PDP空闲的MS的超时时长。 
@@ -5833,7 +5833,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此功能只适用于SGSN网元。 
@@ -5844,10 +5844,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|该参数为用户接入的APN的NI部分。 APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN/PGW；另一方面，APN标识了通过该GGSN/PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN/PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN/PGW所在的分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。
 IDLETIME|IDLE时长(分)|参数可选性:必选参数；参数类型:整数；参数范围为:1~14400。默认值:60。|表示接入某个APN下PDP空闲的MS的超时时长，当此类用户的PDP空闲时长超过本命令配置的数值时，SGSN会对此类用户进行去激活操作。默认值为60分钟。
@@ -5857,7 +5857,7 @@ IDLETIME|IDLE时长(分)|参数可选性:必选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN PDP IDLE时长配置，APN名称为test.apn，IDLE时长为60分钟。 
@@ -5872,7 +5872,7 @@ ADD APN IDLE TIME:APN="test.apn",IDLETIME=60;
 
 
 
-父主题： [APN PDP IDLE时长配置](../../zh-CN/tree/N_1254427.html)
+父主题： [APN PDP IDLE时长配置]
 
 
 
@@ -5895,20 +5895,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改APN PDP IDLE时长配置(SET APN IDLE TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改某个APN下PDP空闲的MS的超时时长。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|该参数为用户接入的APN的NI部分。 APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN/PGW；另一方面，APN标识了通过该GGSN/PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN/PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN/PGW所在的分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。
 IDLETIME|IDLE时长(分)|参数可选性:必选参数；参数类型:整数；参数范围为:1~14400。|表示接入某个APN下PDP空闲的MS的超时时长，当此类用户的PDP空闲时长超过本命令配置的数值时，SGSN会对此类用户进行去激活操作。默认值为60分钟。
@@ -5918,7 +5918,7 @@ IDLETIME|IDLE时长(分)|参数可选性:必选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN PDP IDLE时长配置，APN名称为test.apn，IDLE时长修改为57分钟。 
@@ -5933,7 +5933,7 @@ SET APN IDLE TIME:APN="test.apn",IDLETIME=57;
 
 
 
-父主题： [APN PDP IDLE时长配置](../../zh-CN/tree/N_1254427.html)
+父主题： [APN PDP IDLE时长配置]
 
 
 
@@ -5956,7 +5956,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除APN PDP IDLE时长配置(DEL APN IDLE TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除某个APN下PDP空闲的MS的超时时长。 
@@ -5967,15 +5967,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|该参数为用户接入的APN的NI部分。 APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN/PGW；另一方面，APN标识了通过该GGSN/PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN/PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN/PGW所在的分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。
 
@@ -5984,7 +5984,7 @@ APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除名称为test.apn的APN PDP IDLE时长配置。 
@@ -5999,7 +5999,7 @@ DEL APN IDLE TIME:APN="test.apn";
 
 
 
-父主题： [APN PDP IDLE时长配置](../../zh-CN/tree/N_1254427.html)
+父主题： [APN PDP IDLE时长配置]
 
 
 
@@ -6022,20 +6022,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN PDP IDLE时长配置(SHOW APN IDLE TIME) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据APN来查询此APN下用户PDP空闲时长配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|该参数为用户接入的APN的NI部分。 APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN/PGW；另一方面，APN标识了通过该GGSN/PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN/PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN/PGW所在的分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。
 
@@ -6044,10 +6044,10 @@ APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:1~63个字符。|该参数为用户接入的APN的NI部分。 APN（Access Point Name，接入点名称）是分组核心网定义的网络标识。一方面，分组核心网通过APN标识出GGSN/PGW；另一方面，APN标识了通过该GGSN/PGW所连接的外部PDN（如ISP网络、企业网等）或所关联的某种类型的业务（如Internet接入、WAP业务等）。根据3GPP TS 23.003协议的定义，APN名称由如下两部分组成：NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务，这部分是必须的。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户通过该GGSN/PGW接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。OI（Operator Identifier，运营商标识），定义了GGSN/PGW所在的分组核心网，这部分是可选的。每个运营商都有一个缺省的APN运营商标识。此APN OI由IMSI可获取，形式为“MNCxxx.MCCyyy.gprs”。
 IDLETIME|IDLE时长(分)|参数可选性:任选参数；参数类型:整数；参数范围为:1~14400。|表示接入某个APN下PDP空闲的MS的超时时长，当此类用户的PDP空闲时长超过本命令配置的数值时，SGSN会对此类用户进行去激活操作。默认值为60分钟。
@@ -6057,7 +6057,7 @@ IDLETIME|IDLE时长(分)|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN PDP IDLE时长配置。 
@@ -6086,7 +6086,7 @@ SHOW APN IDLE TIME;
 
 
 
-父主题： [APN PDP IDLE时长配置](../../zh-CN/tree/N_1254427.html)
+父主题： [APN PDP IDLE时长配置]
 
 
 
@@ -6109,23 +6109,23 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # LTE能力终端域名格式配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 
                 APN有2种格式：GPRS APN 和EPC APN，对支持LTE能力的用户终端，SGSN使用LTE能力终端域名格式配置选择EPC APN格式或GPRS APN格式进行地址解析，如果SGSN选择EPC APN格式进行地址解析，则使用EPC APN HOST配置（
-                [ADD EPC APN](../mml/1261510.html)
+                [ADD EPC APN]
                 ），如果SGSN选择GPRS APN格式进行地址解析，则使用GPRS APN HOST配置（
-                [ADD GPRS APN](../mml/1261500.html)
+                [ADD GPRS APN]
                 ）；对不支持LTE能力的用户终端，SGSN选择GPRS APN格式进行地址解析，使用GPRS APN HOST配置（
-                [ADD GPRS APN](../mml/1261500.html)
+                [ADD GPRS APN]
                 ）。
             
 
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN从HSS/HLR或UE获取到APN，对支持LTE能力的用户终端，根据LTE能力终端域名格式配置选择得到APN域名格式，根据EPC格式或GPRS APN格式的APN通过DNS或本地域名解析得到GGSN/PGW的IP地址。 
@@ -6172,7 +6172,7 @@ SGSN支持对整个网元配置LTE能力的用户终端使用的APN域名格式�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6210,7 +6210,7 @@ SGSN支持对整个网元配置LTE能力的用户终端使用的APN域名格式�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -6233,13 +6233,13 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置LTE能力域名格式(SET EPC APN NAME CFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改本局的LTE能力终端域名格式。当需要修改本局的LTE能力终端域名格式时，使用该命令。修改本局的LTE能力终端域名格式成功后，本局用户在与其他网元进行控制面信令交互时，信令中携带的APN可变成形式为：
 “xxx.yyy.gprs”的GPRS APN格式，或者“xxx.yyy.3gppnetwork.org”的EPC APN的格式。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -6256,10 +6256,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNFORMAT|APN域名格式|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:GPRS format。|该参数用于设置本局的LTE能力终端域名格式。 取值含义：“使用GPRS格式（GRPS format）”：本局所有用户给其他网元发送的APN将变成形式为“xxx.yyy.gprs”的GPRS APN格式。“使用EPC格式（EPC format）：本局所有用户给其他网元发送的APN为”xxx.yyy.3gppnetwork.org”的EPC APN的格式。“基于IMSI号段使用EPC格式（EPC format Depends on IMSI segment）：ADD EPC NAME MSID SEG命令设置的IMSI用户发送到其他网元的APN形式变为”xxx.yyy.3gppnetwork.org”的EPC APN的格式。“基于IMEI号段使用EPC格式（EPC format Depends on IMEI segment）：ADD EPC NAME MSID SEG命令设置的IMEI用户发送到其他网元的APN形式变为”xxx.yyy.3gppnetwork.org”的EPC APN的格式。
 
@@ -6268,7 +6268,7 @@ APNFORMAT|APN域名格式|参数可选性:必选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置本局的LTE能力终端域名格式为“GPRS格式”。 
@@ -6283,7 +6283,7 @@ SET EPC APN NAME CFG:APNFORMAT="GPRS format";
 
 
 
-父主题： [LTE能力终端域名格式配置](../../zh-CN/tree/N_12544281.html)
+父主题： [LTE能力终端域名格式配置]
 
 
 
@@ -6306,20 +6306,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询LTE能力域名格式(SHOW EPC APN NAME CFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询本局支持的LTE能力终端域名格式。本局可以支持LTE能力终端域名格式为GPRS格式或者EPC格式。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNFORMAT|APN域名格式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本局的LTE能力终端域名格式。 取值含义：“使用GPRS格式（GRPS format）”：本局所有用户给其他网元发送的APN将变成形式为“xxx.yyy.gprs”的GPRS APN格式。“使用EPC格式（EPC format）：本局所有用户给其他网元发送的APN为”xxx.yyy.3gppnetwork.org”的EPC APN的格式。“基于IMSI号段使用EPC格式（EPC format Depends on IMSI segment）：ADD EPC NAME MSID SEG命令设置的IMSI用户发送到其他网元的APN形式变为”xxx.yyy.3gppnetwork.org”的EPC APN的格式。“基于IMEI号段使用EPC格式（EPC format Depends on IMEI segment）：ADD EPC NAME MSID SEG命令设置的IMEI用户发送到其他网元的APN形式变为”xxx.yyy.3gppnetwork.org”的EPC APN的格式。
 
@@ -6328,7 +6328,7 @@ APNFORMAT|APN域名格式|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本局的LTE能力终端域名格式。 
@@ -6357,7 +6357,7 @@ SHOW EPC APN NAME CFG;
 
 
 
-父主题： [LTE能力终端域名格式配置](../../zh-CN/tree/N_12544281.html)
+父主题： [LTE能力终端域名格式配置]
 
 
 
@@ -6380,12 +6380,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增支持EPC格式域名号段(ADD EPC NAME MSID SEG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增支持EPC格式域名的号段。当需要新增支持EPC格式域名的IMSI号段或者IMEI号段时，使用该命令。新增支持EPC格式域名的号段成功后，该IMSI或者IMEI号段的用户在与其他网元进行控制面信令交互时，信令中携带的APN格式变成形式为”xxx.yyy.3gppnetwork.org”的EPC APN的格式，其他用户将使用形式为“xxx.yyy.gprs”的GPRS APN格式。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -6402,10 +6402,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SEGTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置支持EPC格式域名的用户号段是为IMSI号段还是为IMEI号段。取值含义：“IMSI（IMSI）”：支持EPC APN格式域名的用户号段是为IMSI号段。“IMEI（IMEI）：支持EPC APN格式域名的用户号段是为 IMEI号段。
 MSIDSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置支持EPC格式域名的用户号段。
@@ -6415,7 +6415,7 @@ MSIDSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增本局支持EPC格式域名的用户号段，号段类型是“IMSI”，号段前缀是“460103”。 
@@ -6430,7 +6430,7 @@ ADD EPC NAME MSID SEG:SEGTYPE="IMSI",MSIDSEG="460103";
 
 
 
-父主题： [LTE能力终端域名格式配置](../../zh-CN/tree/N_12544281.html)
+父主题： [LTE能力终端域名格式配置]
 
 
 
@@ -6453,20 +6453,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除支持EPC格式域名号段(DEL EPC NAME MSID SEG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除支持EPC格式域名的号段。当需要删除支持EPC格式域名的IMSI号段或者IMEI号段时。使用该命令，删除支持EPC格式域名的号段成功后，被删除号段的用户在与其他网元进行控制面信令交互时，信令中携带的APN格式将由EPC APN的格式，变成形式为“xxx.yyy.gprs”的GPRS APN格式。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，被删除号段的用户使用的APN将不再是EPC APN格式，将会变成默认的GPRS APN格式。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SEGTYPE|号段类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置支持EPC格式域名的用户号段是为IMSI号段还是为IMEI号段。取值含义：“IMSI（IMSI）”：支持EPC APN格式域名的用户号段是为IMSI号段。“IMEI（IMEI）：支持EPC APN格式域名的用户号段是为 IMEI号段。
 MSIDSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置支持EPC格式域名的用户号段。
@@ -6476,7 +6476,7 @@ MSIDSEG|号段|参数可选性:必选参数；参数类型:字符型；参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除本局支持EPC格式域名的用户号段，号段类型为“IMSI”，号段前缀是“460103”。 
@@ -6491,7 +6491,7 @@ DEL EPC NAME MSID SEG:SEGTYPE="IMSI",MSIDSEG="460103";
 
 
 
-父主题： [LTE能力终端域名格式配置](../../zh-CN/tree/N_12544281.html)
+父主题： [LTE能力终端域名格式配置]
 
 
 
@@ -6514,20 +6514,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询支持EPC格式域名号段(SHOW EPC NAME MSID SEG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询本局支持EPC格式域名的用户IMSI或者IMEI号段。该IMSI或者IMEI号段的用户在与其他网元进行控制面信令交互时，信令中携带的APN变成形式为”xxx.yyy.3gppnetwork.org”的EPC APN的格式，其它用户将使用形式为“xxx.yyy.gprs”的GPRS APN格式。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SEGTYPE|号段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置支持EPC格式域名的用户号段是为IMSI号段还是为IMEI号段。取值含义：“IMSI（IMSI）”：支持EPC APN格式域名的用户号段是为IMSI号段。“IMEI（IMEI）：支持EPC APN格式域名的用户号段是为 IMEI号段。
 MSIDSEG|号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于设置支持EPC格式域名的用户号段。
@@ -6537,10 +6537,10 @@ MSIDSEG|号段|参数可选性:任选参数；参数类型:字符型；参数范
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SEGTYPE|号段类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置支持EPC格式域名的用户号段是为IMSI号段还是为IMEI号段。取值含义：“IMSI（IMSI）”：支持EPC APN格式域名的用户号段是为IMSI号段。“IMEI（IMEI）：支持EPC APN格式域名的用户号段是为 IMEI号段。
 MSIDSEG|号段|参数可选性:任选参数；参数类型:字符型。|该参数用于设置支持EPC格式域名的用户号段。
@@ -6550,7 +6550,7 @@ MSIDSEG|号段|参数可选性:任选参数；参数类型:字符型。|该参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本局支持EPC格式域名的用户号段。 
@@ -6579,7 +6579,7 @@ SHOW EPC NAME MSID SEG;
 
 
 
-父主题： [LTE能力终端域名格式配置](../../zh-CN/tree/N_12544281.html)
+父主题： [LTE能力终端域名格式配置]
 
 
 
@@ -6602,7 +6602,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 签约APN DT前缀配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 某些运营商部署的HLR/HSS在用户签约的APN中携带APN DT（Direct Tunnel，直传隧道）前缀信息，通过APN DT前缀，运营商可以实现基于APN控制是否支持DT。 
@@ -6610,7 +6610,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用户在激活流程中，SGSN在进行APN检查时，如果需要检查从HLR/HSS获取的签约上下文，则使用签约的APN与本局配置的支持DT的APN前缀进行比较，根据前缀是否相等，决定基于APN控制是否支持DT。 
@@ -6625,7 +6625,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         RNC局向附加属性中配置支持DT功能，配置命令参见：
-                        [ADD RNC](../mml/1260130.html)
+                        [ADD RNC]
                         。
                     
 
@@ -6636,13 +6636,13 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         确定GGSN是否支持DT，有两种方式：配置支持DT的GGSN地址（
-                        [ADD DT IP](../mml/1261080.html)
+                        [ADD DT IP]
                         ）和本地根据APN进行配置，使用GPRS APN HOST配置（
-                        [ADD GPRS APN](../mml/1261500.html)
+                        [ADD GPRS APN]
                         ）或EPC APN HOST配置（
-                        [ADD EPC APN](../mml/1261510.html)
+                        [ADD EPC APN]
                         ）或DNS解析类APN配置（
-                        [ADD DNSAPNCHG](../mml/1262420.html)
+                        [ADD DNSAPNCHG]
                         ）。
                     
 
@@ -6653,7 +6653,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         配置支持DT的APN前缀，检查用户签约APN DT前缀信息，配置命令为：
-                        [SET APN DT PREFIX](../mml/1261507.html)
+                        [SET APN DT PREFIX]
                         。
                     
 
@@ -6691,7 +6691,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6714,7 +6714,7 @@ SGSN支持DT功能需要License支持，对应的License项为“支持DT功能�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -6737,7 +6737,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置签约APN DT前缀配置(SET APN DT PREFIX) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据本命令的配置数据，SGSN可以基于MS的签约APN的NI部分的前缀决定此类用户是否支持DT功能。 
@@ -6748,15 +6748,15 @@ MS在PDP激活流程中，SGSN将使用HLR/HSS中签约的APN与本命令配置�
 
 
 
-[](None)注意事项 
+注意事项 
 
 此功能只适用于SGSN。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CHECKCTX|是否检查签约上下文|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置为“是”：表示SGSN使用MS签约的APN与本命令配置的APN NI部分的前缀进行比较，根据前缀是否相等，决定是否对此类用户开启DT功能。如果设置为“否”：则无需比较，表示SGSN对此类用户不启用DT功能。
 APNPERFIX|APN前缀|参数可选性:任选参数；参数类型:字符型；参数范围为:0~20个字符。|表示APN NI部分的前缀。SGSN使用此参数与用户签约的APN的NI部分的前缀进行匹配，如果可以匹配，表示SGSN对基于此APN接入的用户启用DT功能。
@@ -6766,7 +6766,7 @@ APNPERFIX|APN前缀|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置签约APN DT前缀，检查签约上下文，APN前缀为zte。 
@@ -6781,7 +6781,7 @@ SET APN DT PREFIX:CHECKCTX="YES",APNPERFIX="zte";
 
 
 
-父主题： [签约APN DT前缀配置](../../zh-CN/tree/N_12544291.html)
+父主题： [签约APN DT前缀配置]
 
 
 
@@ -6804,20 +6804,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询签约APN DT前缀配置(SHOW APN DT PREFIX) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SGSN根据MS的签约APN NI部分的前缀决定是否支持DT功能的配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CHECKCTX|是否检查签约上下文|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置为“是”：表示SGSN使用MS签约的APN与本命令配置的APN NI部分的前缀进行比较，根据前缀是否相等，决定是否对此类用户开启DT功能。如果设置为“否”：则无需比较，表示SGSN对此类用户不启用DT功能。
 APNPERFIX|APN前缀|参数可选性:任选参数；参数类型:字符型。|表示APN NI部分的前缀。SGSN使用此参数与用户签约的APN的NI部分的前缀进行匹配，如果可以匹配，表示SGSN对基于此APN接入的用户启用DT功能。
@@ -6827,7 +6827,7 @@ APNPERFIX|APN前缀|参数可选性:任选参数；参数类型:字符型。|表
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询签约APN DT前缀配置。 
@@ -6856,7 +6856,7 @@ SHOW APN DT PREFIX;
 
 
 
-父主题： [签约APN DT前缀配置](../../zh-CN/tree/N_12544291.html)
+父主题： [签约APN DT前缀配置]
 
 
 
@@ -6879,7 +6879,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 转换APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 APN转换：当用户携带的APN合法且是用户签约的APN时，根据IMSI、APN和PDP类型匹配判断是否需要进行APN转换，如果是，则将当前APN转换为配置指定的APN。 
@@ -6890,7 +6890,7 @@ SGSN能够根据IMSI 和终端请求的APN进行APN转换处理，然后根据�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN进行APN有效性检查时，当用户携带的APN合法且是用户签约的APN时，根据IMSI、APN和PDP类型对APN NI进行转换，然后用转换后的APN NI来构造APN获取服务的GGSN/PGW。 
@@ -6904,7 +6904,7 @@ SGSN进行APN有效性检查时，当用户携带的APN合法且是用户签约�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6937,7 +6937,7 @@ SGSN进行APN有效性检查时，当用户携带的APN合法且是用户签约�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -6960,7 +6960,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增转换APN配置(ADD CONVERT APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于SGSN对MS请求的APN进行转换。 
@@ -6974,15 +6974,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 REQPDPTYPE|终端请求PDP类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|表示MS的PDP类型，包括“IPv4”、“IPv6”、“IPv4v6”和“PPP”四种类型。
@@ -6995,7 +6995,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增转换APN配置，IMSI号段为46001，终端请求PDP类型为IPv4，终端请求APN名称为zte.com，SGSN转换APN名称为zte1.com。 
@@ -7010,7 +7010,7 @@ ADD CONVERT APN:IMSI=46001,REQPDPTYPE="IPv4",REQAPN="zte.com",CNVTAPN="zte1.com"
 
 
 
-父主题： [转换APN配置](../../zh-CN/tree/N_12616102.html)
+父主题： [转换APN配置]
 
 
 
@@ -7033,20 +7033,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改转换APN配置(SET CONVERT APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据MS的IMSI号段、PDP类型和MS请求的APN这三个条件修改APN NI的转换配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 REQPDPTYPE|终端请求PDP类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|表示MS的PDP类型，包括“IPv4”、“IPv6”、“IPv4v6”和“PPP”四种类型。
@@ -7059,7 +7059,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改转换APN配置，将IMSI号段为46001，终端请求PDP类型为IPv4，终端请求APN的SGSN转换APN名称修改为zte2.com。 
@@ -7074,7 +7074,7 @@ SET CONVERT APN:IMSI="46001",REQPDPTYPE="IPv4",REQAPN="zte.com",CNVTAPN="zte2.co
 
 
 
-父主题： [转换APN配置](../../zh-CN/tree/N_12616102.html)
+父主题： [转换APN配置]
 
 
 
@@ -7097,20 +7097,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除转换APN配置(DEL CONVERT APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于根据MS的IMSI号段、PDP类型和MS请求的APN这三个条件删除APN NI的转换配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 REQPDPTYPE|终端请求PDP类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|表示MS的PDP类型，包括“IPv4”、“IPv6”、“IPv4v6”和“PPP”四种类型。
@@ -7121,7 +7121,7 @@ REQAPN|终端请求APN|参数可选性:必选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将IMSI号段为46001，终端请求PDP类型为IPv4，终端请求APN的APN转换配置删除。 
@@ -7136,7 +7136,7 @@ DEL CONVERT APN:IMSI=46001,REQPDPTYPE="IPv4",REQAPN="zte.com";
 
 
 
-父主题： [转换APN配置](../../zh-CN/tree/N_12616102.html)
+父主题： [转换APN配置]
 
 
 
@@ -7159,20 +7159,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询转换APN配置(SHOW CONVERT APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN NI的转换配置数据。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 REQPDPTYPE|终端请求PDP类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|表示MS的PDP类型，包括“IPv4”、“IPv6”、“IPv4v6”和“PPP”四种类型。
@@ -7183,10 +7183,10 @@ REQAPN|终端请求APN|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型。|此参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSINMCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 REQPDPTYPE|终端请求PDP类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|表示MS的PDP类型，包括“IPv4”、“IPv6”、“IPv4v6”和“PPP”四种类型。
@@ -7199,7 +7199,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN转换配置。 
@@ -7228,7 +7228,7 @@ SHOW CONVERT APN;
 
 
 
-父主题： [转换APN配置](../../zh-CN/tree/N_12616102.html)
+父主题： [转换APN配置]
 
 
 
@@ -7251,7 +7251,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # IMS APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IMS APN是EPC网络支持VoLTE业务后引入的，运营商通常为移动用户分配特定的APN，该APN专用于连接IMS网络，使用IMS业务，此类APN 称为IMS APN。移动用户发起业务时，MME需要识别移动用户使用的APN或者签约的APN是否是IMS APN，从而针对该APN进行业务控制和性能统计等。 
@@ -7259,7 +7259,7 @@ IMS APN是EPC网络支持VoLTE业务后引入的，运营商通常为移动用�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “IMS APN配置”用于指定移动用户使用IMS业务、连接IMS网络专用的APN名称。MME根据该配置，识别移动用户使用的APN或者签约的APN是否是IMS APN。 
@@ -7273,7 +7273,7 @@ IMS MME的计数器“IMS网络PDN连接请求次数”和“IMS网络PDN连接�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7316,7 +7316,7 @@ IMS MME的计数器“IMS网络PDN连接请求次数”和“IMS网络PDN连接�
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -7339,7 +7339,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增通用IMS APN配置(ADD IMS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增IMS APN配置配置。 
@@ -7347,7 +7347,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
  MME最多支持配置64个IMS APN。 
@@ -7358,10 +7358,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 
@@ -7370,7 +7370,7 @@ APNNAME|IMS APN名称|参数可选性:必选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增IMS APN配置，其中IMS APN名称为apn。 
@@ -7385,7 +7385,7 @@ ADD IMS APN:APNNAME="apn";
 
 
 
-父主题： [IMS APN配置](../../zh-CN/tree/N_12616103.html)
+父主题： [IMS APN配置]
 
 
 
@@ -7408,7 +7408,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除通用IMS APN配置(DEL IMS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除IMS APN配置。 
@@ -7416,7 +7416,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7424,10 +7424,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 
@@ -7436,7 +7436,7 @@ APNNAME|IMS APN名称|参数可选性:必选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMS APN配置，其中IMS APN名称为apn。 
@@ -7451,7 +7451,7 @@ DEL IMS APN:APNNAME="apn";
 
 
 
-父主题： [IMS APN配置](../../zh-CN/tree/N_12616103.html)
+父主题： [IMS APN配置]
 
 
 
@@ -7474,7 +7474,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询通用IMS APN配置(SHOW IMS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询IMS APN配置。 
@@ -7482,7 +7482,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7490,10 +7490,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~61个字符。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 
@@ -7502,10 +7502,10 @@ APNNAME|IMS APN名称|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:任选参数；参数类型:字符型。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 
@@ -7514,7 +7514,7 @@ APNNAME|IMS APN名称|参数可选性:任选参数；参数类型:字符型。|I
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询IMS APN配置。 
@@ -7545,7 +7545,7 @@ SHOW IMS APN;
 
 
 
-父主题： [IMS APN配置](../../zh-CN/tree/N_12616103.html)
+父主题： [IMS APN配置]
 
 
 
@@ -7568,7 +7568,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增基于PLMN的IMS APN配置(ADD PLMN IMS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增基于PLMN的IMS APN配置。当需要根据PLMN来识别用户使用的APN是否是IMS APN时，使用该命令进行配置。 
@@ -7576,7 +7576,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7584,10 +7584,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|PLMN（Public Land Mobile Network，公共陆地移动网络），是由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -7599,7 +7599,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加基于PLMN的IMS APN配置，其中IMS APN名称为zte，PLMN为460-01。 
@@ -7614,7 +7614,7 @@ ADD PLMN IMS APN:APNNAME="zte",PLMN="460"-"01";
 
 
 
-父主题： [IMS APN配置](../../zh-CN/tree/N_12616103.html)
+父主题： [IMS APN配置]
 
 
 
@@ -7637,7 +7637,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除基于PLMN的IMS APN配置(DEL PLMN IMS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除PLMN配置了哪些IMS APN。当某些APN在某个PLMN下已经不是IMS APN时，使用该命令进行删除。 
@@ -7645,7 +7645,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7653,10 +7653,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 PLMN|PLMN|参数可选性:必选参数；参数类型:复合参数|PLMN（Public Land Mobile Network，公共陆地移动网络），是由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -7668,7 +7668,7 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除基于PLMN的IMS APN配置，其中IMS APN名称为zte，PLMN为460-01。 
@@ -7683,7 +7683,7 @@ DEL PLMN IMS APN:APNNAME="zte",PLMN="460"-"01";
 
 
 
-父主题： [IMS APN配置](../../zh-CN/tree/N_12616103.html)
+父主题： [IMS APN配置]
 
 
 
@@ -7706,7 +7706,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询基于PLMN的IMS APN配置(SHOW PLMN IMS APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询PLMN下配置的IMS APN。当需要查询某个PLMN下配置了哪些IMS APN时，使用该命令进行查询。 
@@ -7714,7 +7714,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7722,10 +7722,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~61个字符。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 PLMN|PLMN|参数可选性:任选参数；参数类型:复合参数|PLMN（Public Land Mobile Network，公共陆地移动网络），是由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -7737,10 +7737,10 @@ MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|IMS APN名称|参数可选性:任选参数；参数类型:字符型。|IMS APN是EPC网络支持VoLTE业务后引入的，运营商为移动用户分配特定的APN，该APN专用于移动用户连接IMS网络，使用IMS业务。
 PLMN|PLMN|参数可选性:任选参数；参数类型:字符型。|PLMN（Public Land Mobile Network，公共陆地移动网络），是由政府或政府所批准的经营者，为公众提供陆地移动通信业务目的而建立和经营的网络。PLMN = MCC + MNC，例如，46001是中国联通的PLMN，46002中国移动的PLMN，46003是中国电信的PLMN。
@@ -7750,7 +7750,7 @@ PLMN|PLMN|参数可选性:任选参数；参数类型:字符型。|PLMN（Public
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示基于PLMN的IMS APN配置。 
@@ -7779,7 +7779,7 @@ SHOW PLMN IMS APN;
 
 
 
-父主题： [IMS APN配置](../../zh-CN/tree/N_12616103.html)
+父主题： [IMS APN配置]
 
 
 
@@ -7802,23 +7802,23 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # APN选择策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             运营商的定制APN选择需求，区别于协议3GPP 23.060上描述的APN选择流程。运营商对签约通配APN的特定漫游用户和其他用户要实施不同的计费策略和业务控制，APN是业务接入点和计费关键字，APN对用户的计费策略和业务控制起决定作用，因此运营商希望SGSN区分这两类用户选择APN。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             SGSN提供配置区分签约通配APN的特定漫游用户和其他用户。对签约通配APN的特定漫游用户不忽略签约的通配APN，SGSN选择用户请求的APN。对其他用户，如果签约了通配APN，则忽略其签约的通配APN；如果用户请求了APN且该APN已签约，则SGSN选择用户请求的APN；如果用户未请求APN，则SGSN选择“APN更正配置”的APN（参见
-            [ADD APN MODIFICATION](../mml/1261535.html)
+            [ADD APN MODIFICATION]
             ）。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7861,7 +7861,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -7884,7 +7884,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 设置SGSN APN选择控制(SET SGSN APN POLICY CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置SGSN是否支持特定的APN选择、默认是否忽略签约的通配APN和本地QoS模板标识。 
@@ -7895,15 +7895,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNSELCTL|SGSN是否支持特定的APN选择|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识SGSN是否支持特定的APN选择。不支持（Not Support）：SGSN不支持特定的APN选择。支持（Support）：SGSN支持特定的APN选择。
 IGNORECOMAPN|默认是否忽略签约的通配APN|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识默认是否忽略签约的通配APN。不忽略（Not Ignore）：默认不忽略签约的通配APN。忽略（Ignore）：默认忽略签约的通配APN。
@@ -7914,7 +7914,7 @@ REJNOSUBAPN|无匹配签约APN时是否拒绝|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGSN APN选择控制，设置SGSN是否支持特定的APN选择为支持、默认是否忽略签约的通配APN为忽略。 
@@ -7929,7 +7929,7 @@ SET SGSN APN POLICY CONTROL:APNSELCTL="YES",IGNORECOMAPN="YES";
 
 
 
-父主题： [APN选择策略配置](../../zh-CN/tree/N_12619172.html)
+父主题： [APN选择策略配置]
 
 
 
@@ -7952,7 +7952,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询SGSN APN选择控制(SHOW SGSN APN POLICY CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询SGSN是否支持特定的APN选择、默认是否忽略签约的通配APN和本地QoS模板标识。 
@@ -7963,15 +7963,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNSELCTL|SGSN是否支持特定的APN选择|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识SGSN是否支持特定的APN选择。不支持（Not Support）：SGSN不支持特定的APN选择。支持（Support）：SGSN支持特定的APN选择。
 IGNORECOMAPN|默认是否忽略签约的通配APN|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识默认是否忽略签约的通配APN。不忽略（Not Ignore）：默认不忽略签约的通配APN。忽略（Ignore）：默认忽略签约的通配APN。
@@ -7982,7 +7982,7 @@ REJNOSUBAPN|无匹配签约APN时是否拒绝|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN APN选择控制。 
@@ -8011,7 +8011,7 @@ SHOW SGSN APN POLICY CONTROL;
 
 
 
-父主题： [APN选择策略配置](../../zh-CN/tree/N_12619172.html)
+父主题： [APN选择策略配置]
 
 
 
@@ -8034,7 +8034,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增APN选择策略(ADD APN POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增APN选择策略配置。 
@@ -8043,20 +8043,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 如果该命令配置的IMSI号段“不忽略签约的通配APN”，则此号段对应的签约通配APN的用户是特定漫游用户，SGSN为此类用户选择用户请求的APN。 
 
 
-如果该命令配置的IMSI号段“忽略签约的通配APN”，则此号段对应的用户是其他用户，如果用户请求了APN且该APN已签约，则SGSN选择用户请求的APN，如果用户未请求APN，则SGSN选择“APN更正配置”的APN（参见[ADD APN MODIFICATION](1261535.html)）。
+如果该命令配置的IMSI号段“忽略签约的通配APN”，则此号段对应的用户是其他用户，如果用户请求了APN且该APN已签约，则SGSN选择用户请求的APN，如果用户未请求APN，则SGSN选择“APN更正配置”的APN（参见[ADD APN MODIFICATION]）。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 OPTION|是否忽略签约的通配APN|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数标识是否忽略签约的通配APN。不忽略（Not Ignore）：不忽略签约的通配APN。忽略（Ignore）：忽略签约的通配APN。
@@ -8067,7 +8067,7 @@ REJNOSUBAPN|无匹配签约APN时是否拒绝|参数可选性:必选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN选择策略，IMSI为4600199999988，是否忽略签约的通配APN为不忽略。 
@@ -8082,7 +8082,7 @@ ADD APN POLICY:IMSI="4600199999988",OPTION="NO",REJNOSUBAPN="NO";
 
 
 
-父主题： [APN选择策略配置](../../zh-CN/tree/N_12619172.html)
+父主题： [APN选择策略配置]
 
 
 
@@ -8105,20 +8105,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改APN选择策略(SET APN POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改APN选择策略配置。当需要修改用户号段是否忽略签约的通配APN时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 OPTION|是否忽略签约的通配APN|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识是否忽略签约的通配APN。不忽略（Not Ignore）：不忽略签约的通配APN。忽略（Ignore）：忽略签约的通配APN。
@@ -8129,7 +8129,7 @@ REJNOSUBAPN|无匹配签约APN时是否拒绝|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN选择策略。修改IMSI为4600199999988的APN选择策略，是否忽略签约的通配APN修改为不忽略。 
@@ -8144,7 +8144,7 @@ SET APN POLICY:IMSI="4600199999988",OPTION="NO";
 
 
 
-父主题： [APN选择策略配置](../../zh-CN/tree/N_12619172.html)
+父主题： [APN选择策略配置]
 
 
 
@@ -8167,20 +8167,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除APN选择策略(DEL APN POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除APN选择策略配置。当需要删除APN选择策略配置记录时，使用该命令。该命令执行成功后，会删除指定号码段的配置记录。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 
@@ -8189,7 +8189,7 @@ IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI为4600199999988的APN选择策略。 
@@ -8204,7 +8204,7 @@ DEL APN POLICY:IMSI="4600199999988";
 
 
 
-父主题： [APN选择策略配置](../../zh-CN/tree/N_12619172.html)
+父主题： [APN选择策略配置]
 
 
 
@@ -8227,20 +8227,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询APN选择策略(SHOW APN POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN选择策略配置。可查询IMSI号段与是否忽略签约的通配APN的对应关系。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 
@@ -8249,10 +8249,10 @@ IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型。|该参数表示IMSI（International Mobile Subscriber Identity，国际移动用户标识）的前缀，总长度不超过15位的数字串，首位不能为0。IMSI由三部分组成，结构为MCC＋MNC＋MSIN。MCC（Mobile Country Code，移动国家码）标识移动用户所属的国家，MCC由ITU（International Telecommunications Union，国际电信联盟）管理，在世界范围里统一分配。MNC（Mobile Network Code，移动网络号）标识移动用户的归属PLMN（Public Land Mobile Network，公共陆地移动网），包含两位或三位数字，标识移动用户的归属的PLMN，MNC的长度与MCC的值有关，在单个MCC区域，一般不建议MNC采用两位和三位数字的混合方式。MSIN（Mobile Station Identification Number，移动台识别号码），标识一个PLMN内的移动用户。
 OPTION|是否忽略签约的通配APN|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识是否忽略签约的通配APN。不忽略（Not Ignore）：不忽略签约的通配APN。忽略（Ignore）：忽略签约的通配APN。
@@ -8263,7 +8263,7 @@ REJNOSUBAPN|无匹配签约APN时是否拒绝|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN选择策略。 
@@ -8292,7 +8292,7 @@ SHOW APN POLICY;
 
 
 
-父主题： [APN选择策略配置](../../zh-CN/tree/N_12619172.html)
+父主题： [APN选择策略配置]
 
 
 
@@ -8315,7 +8315,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 专用APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 随着专网业务的不断拓展，为简化用户在终端UE界面上进行公网业务与专网业务之间切换的操作以及避免终端UE的功能限制，“用户公网业务与专网业务无感知切换及同时并存”的业务需求应运而生。
@@ -8331,7 +8331,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “专用APN配置”用于MME本地配置专用APN列表以及无感分流关键字。 
@@ -8339,7 +8339,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8372,7 +8372,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_1254420.html)
+父主题： [APN配置]
 
 
 
@@ -8395,12 +8395,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改专用APN配置(SET DEDICATED APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改专用APN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -8408,10 +8408,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数用于MME本地配置专用APN，即专网业务对应的APN。APN名称由Network Identifier（NI）组成，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 ISTRANSPLITKEY|是否无感分流关键字|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:NO。|该参数用于设置该APN是否为无感分流关键字。取值含义：否：该APN不是无感分流关键字。是：该APN是无感分流关键字。
@@ -8421,7 +8421,7 @@ ISTRANSPLITKEY|是否无感分流关键字|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改专用APN配置，APN为"wugan"，是否无感分流关键字为“否”。 
@@ -8436,7 +8436,7 @@ SET DEDICATED APN:APN="wugan",ISTRANSPLITKEY="NO";
 
 
 
-父主题： [专用APN配置](../../zh-CN/tree/N_12619173.html)
+父主题： [专用APN配置]
 
 
 
@@ -8459,12 +8459,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除专用APN配置(DEL DEDICATED APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除专用APN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -8472,10 +8472,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数用于MME本地配置专用APN，即专网业务对应的APN。APN名称由Network Identifier（NI）组成，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
@@ -8484,7 +8484,7 @@ APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除专用APN配置，APN为"wugan"。 
@@ -8499,7 +8499,7 @@ DEL DEDICATED APN:APN="wugan";
 
 
 
-父主题： [专用APN配置](../../zh-CN/tree/N_12619173.html)
+父主题： [专用APN配置]
 
 
 
@@ -8522,12 +8522,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询专用APN配置(SHOW DEDICATED APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改专用APN配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -8535,10 +8535,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数用于MME本地配置专用APN，即专网业务对应的APN。APN名称由Network Identifier（NI）组成，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 
@@ -8547,10 +8547,10 @@ APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|该参数用于MME本地配置专用APN，即专网业务对应的APN。APN名称由Network Identifier（NI）组成，格式为“Label1.Label2.Label3”，可包含多个标签并且必须符合如下要求：不超过61个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 ISTRANSPLITKEY|是否无感分流关键字|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置该APN是否为无感分流关键字。取值含义：否：该APN不是无感分流关键字。是：该APN是无感分流关键字。
@@ -8560,7 +8560,7 @@ ISTRANSPLITKEY|是否无感分流关键字|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询专用APN配置。 
@@ -8590,7 +8590,7 @@ SHOW DEDICATED APN;
 
 
 
-父主题： [专用APN配置](../../zh-CN/tree/N_12619173.html)
+父主题： [专用APN配置]
 
 
 

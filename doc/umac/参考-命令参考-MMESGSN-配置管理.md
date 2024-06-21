@@ -1,7 +1,7 @@
  配置管理 
 
 
-[](None)背景知识 
+背景知识 
 
 
 数据配置是指制作能够使通信设备正常运行的数据，并将这些数据设定到通信设备的操作。配置管理用于对全局的数据配置命令进行详细的描述。 
@@ -9,7 +9,7 @@
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用来详细阐述ZXUN uMAC产品中与业务维护相关的配置命令。 
@@ -17,7 +17,7 @@
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -74,7 +74,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 安全网关对接配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -112,7 +112,7 @@ X3口报文过滤配置
 
 
 
-父主题： [配置管理](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm.html)
+父主题： [配置管理]
 
 
 
@@ -135,17 +135,17 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 进入安全网关对接模式(ENTER ESTI) 
 
 
-[](None)命令功能 
+命令功能 
 
 进入安全网关对接模式
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)命令举例 
+命令举例 
 
 
 进入安全网关对接模式 
@@ -160,7 +160,7 @@ ENTER ESTI
 
 
 
-父主题： [安全网关对接配置](../../zh-CN/tree/N_126099_operation_cm_mml_umacV4_cm_combo_gngp_esti.html)
+父主题： [安全网关对接配置]
 
 
 
@@ -183,17 +183,17 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 退出安全网关对接模式(EXIT ESTI) 
 
 
-[](None)命令功能 
+命令功能 
 
 退出安全网关对接模式
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)命令举例 
+命令举例 
 
 
 退出安全网关对接模式 
@@ -208,7 +208,7 @@ EXIT ESTI
 
 
 
-父主题： [安全网关对接配置](../../zh-CN/tree/N_126099_operation_cm_mml_umacV4_cm_combo_gngp_esti.html)
+父主题： [安全网关对接配置]
 
 
 
@@ -231,7 +231,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 安全网关对接基础数据配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -259,7 +259,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [安全网关对接配置](../../zh-CN/tree/N_126099_operation_cm_mml_umacV4_cm_combo_gngp_esti.html)
+父主题： [安全网关对接配置]
 
 
 
@@ -282,7 +282,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置安全网关对接基础数据(SET LICFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置安全网关对接基础数据。 
@@ -290,15 +290,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LIFLAG|是否支持安全网关对接接口功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|是否支持安全网关对接接口功能
 NENO|SGSN逻辑网元编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~1000。|SGSN逻辑网元编号
@@ -321,7 +321,7 @@ CPENCRYPPWD|控制面加密密钥|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置安全网关对接基础数据，支持安全网关对接接口功能，SGSN逻辑网元编号为100，安全网关对接业务地址为1.1.1.1，安全网关对接本端X1X2端口号为15000，安全网关X1X2地址为2.2.2.2。 
@@ -336,7 +336,7 @@ SET LICFG:LIFLAG="YES",NENO=100,NEIP="1.1.1.1",NEX1X2PORT=15000,LIGX1X2IP="2.2.2
 
 
 
-父主题： [安全网关对接基础数据配置](../../zh-CN/tree/N_1254481.html)
+父主题： [安全网关对接基础数据配置]
 
 
 
@@ -359,7 +359,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询安全网关对接基础数据(SHOW LICFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询安全网关对接基础数据。 
@@ -367,15 +367,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LIFLAG|是否支持安全网关对接接口功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|是否支持安全网关对接接口功能
 NENO|SGSN逻辑网元编号|参数可选性:任选参数；参数类型:整数。|SGSN逻辑网元编号
@@ -396,7 +396,7 @@ CPENCRYPALGO|控制面加密算法|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询安全网关对接基础数据。 
@@ -425,7 +425,7 @@ SHOW LICFG;
 
 
 
-父主题： [安全网关对接基础数据配置](../../zh-CN/tree/N_1254481.html)
+父主题： [安全网关对接基础数据配置]
 
 
 
@@ -448,20 +448,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询安全网关对接实例号(SHOW LIMODULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询安全网关对接实例号
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MODULE|SC实例号|参数可选性:任选参数；参数类型:整数。|SC实例号
 
@@ -470,7 +470,7 @@ MODULE|SC实例号|参数可选性:任选参数；参数类型:整数。|SC实�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询安全网关对接实例号。 
@@ -499,7 +499,7 @@ SC实例号
 
 
 
-父主题： [安全网关对接基础数据配置](../../zh-CN/tree/N_1254481.html)
+父主题： [安全网关对接基础数据配置]
 
 
 
@@ -522,7 +522,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 安全网关对接CC配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -545,7 +545,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [安全网关对接配置](../../zh-CN/tree/N_126099_operation_cm_mml_umacV4_cm_combo_gngp_esti.html)
+父主题： [安全网关对接配置]
 
 
 
@@ -568,7 +568,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置安全网关对接CC配置(SET LICC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置安全网关对接CC配置。 
@@ -576,15 +576,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SVRSIGX3IP|对端 X3控制面地址|参数可选性:任选参数；参数类型:地址|对端 X3控制面地址
 SVRMEDIAX3IP|对端 X3媒体面地址|参数可选性:任选参数；参数类型:地址|对端 X3媒体面地址
@@ -607,7 +607,7 @@ SQNGROUPNO|SQN组号|参数可选性:任选参数；参数类型:整数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置安全网关对接CC配置，对端X3控制面地址为1.1.1.1，对端X3媒体面地址为2.2.2.2，开启安全网关对接X3链路检测。 
@@ -622,7 +622,7 @@ SET LICC:SVRSIGX3IP="1.1.1.1",SVRMEDIAX3IP="2.2.2.2",X3LINKCHECK="ON";
 
 
 
-父主题： [安全网关对接CC配置](../../zh-CN/tree/N_1254482.html)
+父主题： [安全网关对接CC配置]
 
 
 
@@ -645,7 +645,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询安全网关对接CC配置(SHOW LICC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询安全网关对接CC配置。 
@@ -653,15 +653,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SVRSIGX3IP|对端 X3控制面地址|参数可选性:任选参数；参数类型:地址|对端 X3控制面地址
 SVRMEDIAX3IP|对端 X3媒体面地址|参数可选性:任选参数；参数类型:地址|对端 X3媒体面地址
@@ -683,7 +683,7 @@ SQNGROUPNO|SQN组号|参数可选性:任选参数；参数类型:整数。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询安全网关对接CC配置。 
@@ -712,7 +712,7 @@ SHOW LICC;
 
 
 
-父主题： [安全网关对接CC配置](../../zh-CN/tree/N_1254482.html)
+父主题： [安全网关对接CC配置]
 
 
 
@@ -735,7 +735,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## X3口报文过滤配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -758,7 +758,7 @@ X3口报文过滤规则配置
 
 
 
-父主题： [安全网关对接配置](../../zh-CN/tree/N_126099_operation_cm_mml_umacV4_cm_combo_gngp_esti.html)
+父主题： [安全网关对接配置]
 
 
 
@@ -781,7 +781,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### X3口报文过滤全局配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -804,7 +804,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [X3口报文过滤配置](../../zh-CN/tree/N_12610576.html)
+父主题： [X3口报文过滤配置]
 
 
 
@@ -827,20 +827,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置X3口报文过滤全局参数(SET X3FILTERFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置X3口报文过滤全局参数
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FILTERFG|过滤报文|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|过滤报文
 DEFPROC|报文默认处理方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|报文默认处理方式
@@ -850,7 +850,7 @@ DEFPROC|报文默认处理方式|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置X3口报文过滤全局参数 
@@ -865,7 +865,7 @@ SET X3FILTERFG:FILTERFG=YES,DEFPROC=FORWARD;
 
 
 
-父主题： [X3口报文过滤全局配置](../../zh-CN/tree/N_12610575.html)
+父主题： [X3口报文过滤全局配置]
 
 
 
@@ -888,20 +888,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询X3口报文过滤全局参数(SHOW X3FILTERFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询X3口报文过滤全局参数
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FILTERFG|过滤报文|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|过滤报文
 DEFPROC|报文默认处理方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|报文默认处理方式
@@ -911,7 +911,7 @@ DEFPROC|报文默认处理方式|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询X3口报文过滤全局参数 
@@ -940,7 +940,7 @@ SHOW X3FILTERFG;
 
 
 
-父主题： [X3口报文过滤全局配置](../../zh-CN/tree/N_12610575.html)
+父主题： [X3口报文过滤全局配置]
 
 
 
@@ -963,7 +963,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### X3口报文过滤规则配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -996,7 +996,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [X3口报文过滤配置](../../zh-CN/tree/N_12610576.html)
+父主题： [X3口报文过滤配置]
 
 
 
@@ -1019,20 +1019,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增X3口报文过滤规则(ADD X3FILTER RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 新增X3口报文过滤规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|规则标识
 PROTYPE|IP协议类型|参数可选性:必须单选参数；参数类型:枚举。参见枚举定义。|IP协议类型
@@ -1047,7 +1047,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增X3口报文过滤规则 
@@ -1062,7 +1062,7 @@ ADD X3FILTER RULE:ID=1,PROVALUE=1;
 
 
 
-父主题： [X3口报文过滤规则配置](../../zh-CN/tree/N_1261065.html)
+父主题： [X3口报文过滤规则配置]
 
 
 
@@ -1085,20 +1085,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改X3口报文过滤规则(SET X3FILTER RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 修改X3口报文过滤规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|规则标识
 DESTPORTBEGIN|远端起始端口号|参数可选性:特殊任选参数；参数类型:整数；参数范围为:0~65535。|远端起始端口号
@@ -1111,7 +1111,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改X3口报文过滤规则 
@@ -1126,7 +1126,7 @@ SET X3FILTER RULE:ID=1;
 
 
 
-父主题： [X3口报文过滤规则配置](../../zh-CN/tree/N_1261065.html)
+父主题： [X3口报文过滤规则配置]
 
 
 
@@ -1149,20 +1149,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除X3口报文过滤规则(DEL X3FILTER RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 删除X3口报文过滤规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|规则标识
 
@@ -1171,7 +1171,7 @@ ID|规则标识|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除X3口报文过滤规则 
@@ -1186,7 +1186,7 @@ DEL X3FILTER RULE:ID=1;
 
 
 
-父主题： [X3口报文过滤规则配置](../../zh-CN/tree/N_1261065.html)
+父主题： [X3口报文过滤规则配置]
 
 
 
@@ -1209,20 +1209,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询X3口报文过滤规则(SHOW X3FILTER RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询X3口报文过滤规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|规则标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~1024。|规则标识
 PROTYPE|IP协议类型|参数可选性:任意单选参数；参数类型:枚举。参见枚举定义。|IP协议类型
@@ -1233,10 +1233,10 @@ PROVALUE|IP协议值|参数可选性:任意单选参数；参数类型:整数；
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|规则标识|参数可选性:任选参数；参数类型:整数。|规则标识
 PROTYPE1|IP协议类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|IP协议类型
@@ -1251,7 +1251,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询X3口报文过滤规则 
@@ -1280,7 +1280,7 @@ SHOW X3FILTER RULE:PROVALUE=5;
 
 
 
-父主题： [X3口报文过滤规则配置](../../zh-CN/tree/N_1261065.html)
+父主题： [X3口报文过滤规则配置]
 
 
 
@@ -1303,7 +1303,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 高级配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 系统提供了拥塞控制、GTP节点控制、容灾、监控、安全加固等配置项，通过配置这些内容，可以保障系统运行的安全性、稳定性。 
@@ -1311,7 +1311,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 高级配置中提供了拥塞控制、GTP节点控制、容灾、监控、安全加固等配置项。 
@@ -1319,7 +1319,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1547,7 +1547,7 @@ MME分级备份策略配置
 
 
 
-父主题： [配置管理](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm.html)
+父主题： [配置管理]
 
 
 
@@ -1570,14 +1570,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 拥塞和过负荷控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             过负荷控制功能，通过限制本网元接入的业务量，降低本网元或者邻接网元的负荷，避免因负荷过高导致本网元或者邻接网元设备异常或崩溃。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN/MME过负荷控制功能包括以下几个子功能： 
@@ -1634,7 +1634,7 @@ MME过负荷控制包括：过负荷基本配置、MME过负荷参数配置、MM
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1697,7 +1697,7 @@ MME/SGSN网管过负荷控制参数配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -1720,14 +1720,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 本网元拥塞和过负荷控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             过负荷控制功能，通过限制本网元接入的业务量，降低本网元或者邻接网元的负荷，避免因负荷过高导致本网元或者邻接网元设备异常或崩溃。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN/MME过负荷控制功能包括以下几个子功能： 
@@ -1784,7 +1784,7 @@ MME过负荷控制包括：过负荷基本配置、MME过负荷参数配置、MM
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1842,7 +1842,7 @@ MME接口消息控制配置
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -1865,7 +1865,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 过负荷基本参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN/MME网元对于CPU拥塞控制和信令拥塞控制，采用“自适应二分法”算法，主要涉及到以下几个概念： 
@@ -1912,7 +1912,7 @@ Low和High通过数
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “过负荷基本参数配置”用于设置SGSN/MME网元的负荷控制算法参数和CPU拥塞控制的参数。 
@@ -1923,7 +1923,7 @@ Low和High通过数
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1946,7 +1946,7 @@ Low和High通过数
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -1969,12 +1969,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置过负荷基本参数(SET OVERLOAD BASIC PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置过负荷基本参数。当需要更改过负荷控制基本参数时，如开启或关闭CPU拥塞控制、更新CPU拥塞门限、更新业务控制周期或评判周期、设置业务被过负荷控制后是否需要回拒绝响应等场景下，使用该命令。“业务控制周期”、“评判周期/业务控制周期”设置成功后，会影响过负荷控制算法的计算粒度。若“是否开启CPU拥塞控制”设置为“是”，则SGSN或MME网元会根据设置的参数计算CPU是否拥塞，并在CPU拥塞时会根据“拒绝/丢弃策略”来决定是丢弃收到的消息还是回拒绝响应。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1995,10 +1995,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTRLTIMER|业务控制周期(100ms)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于配置过负荷控制算法时计算业务通过数的周期（时间段），单位是100毫秒。
 JUDGETIMER|评判周期/业务控制周期|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于配置评判周期时长，即CPU拥塞控制（包括链路、局向拥塞控制）时，动态调整当前允许通过业务数的频率。说明：评判周期配置采用的是业务控制周期的倍数，即100毫秒的倍数。
@@ -2020,7 +2020,7 @@ LASTTIME|业务过负荷告警持续时间（秒）|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置过负荷基本参数，设置业务控制周期为1秒，评判周期为5秒（5个业务控制周期），开启CPU拥塞控制，采用拒绝策略，设置CPU拥塞门限为CPU使用率超过75%，CPU高拥塞门限为CPU使用率超过85%，缓冲区大小为10，即CPU使用率在65%~75%之间为缓冲区。
@@ -2033,7 +2033,7 @@ SET OVERLOAD BASIC PARA:CTRLTIMER=10,JUDGETIMER=5,CPUENABLE="YES",REJECT="Refuse
 
 
 
-父主题： [过负荷基本参数配置](../../zh-CN/tree/N_125250231.html)
+父主题： [过负荷基本参数配置]
 
 
 
@@ -2056,20 +2056,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询过负荷基本参数(SHOW OVERLOAD BASIC PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询当前过负荷控制相关的基本参数配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTRLTIMER|业务控制周期(100ms)|参数可选性:任选参数；参数类型:整数。|该参数用于配置过负荷控制算法时计算业务通过数的周期（时间段），单位是100毫秒。
 JUDGETIMER|评判周期/业务控制周期|参数可选性:任选参数；参数类型:整数。|该参数用于配置评判周期时长，即CPU拥塞控制（包括链路、局向拥塞控制）时，动态调整当前允许通过业务数的频率。说明：评判周期配置采用的是业务控制周期的倍数，即100毫秒的倍数。
@@ -2091,7 +2091,7 @@ LASTTIME|业务过负荷告警持续时间（秒）|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询过负荷基本参数配置。
@@ -2118,7 +2118,7 @@ SHOW OVERLOAD BASIC PARA
 
 
 
-父主题： [过负荷基本参数配置](../../zh-CN/tree/N_125250231.html)
+父主题： [过负荷基本参数配置]
 
 
 
@@ -2141,7 +2141,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### SGSN过负荷参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 根据协议3GPP TS 25.413的描述, SGSN在过负荷情况下，会向RNC发送Overload消息，通知RNC，本网元拥塞。 
@@ -2149,7 +2149,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “SGSN过负荷参数配置” 用于设置SGSN向RNC发送Overload消息的相关参数。 
@@ -2160,7 +2160,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2183,7 +2183,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -2206,7 +2206,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置SGSN通用过负荷参数(SET OVERLOAD PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置SGSN网元的通用过负荷参数。当需要更改SGSN网元的过负荷参数时，如开启或关闭信令局向及窄带信令链路的拥塞控制、更新默认ERL拥塞门限及缓冲区大小、更新overload消息相关参数等场景下，使用该命令，其影响如下： 
@@ -2233,7 +2233,7 @@ ERL拥塞门限及缓冲区大小的配置也可以在“特定信令链路拥�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -2254,10 +2254,10 @@ ERL拥塞门限及缓冲区大小的配置也可以在“特定信令链路拥�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OLSLOWLEVEL|开始发送overload时的最小拥塞级别|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置SGSN网元往RNC发送overload消息的最小拥塞级别，表示当SGSN处于何种拥塞程度才进行overload消息的发送。取值含义：低过载: SGSN处于低过载（CPU达到了低过载门限，但没有达到高过载门限）时就可以发送overload消息。高过载: SGSN处于高过载（CPU达到了高过载门限）时就可以发送overload消息。不发送: SGSN不主动发送overload消息。
 OLSINTERVAL|每发送overload到RNC的报文间隔|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|该参数用于配置当RNC拥塞时，每次累计收到该RNC的多少个报文后再发送一次overload消息到RNC，若无特殊要求，建议采用默认值。
@@ -2268,7 +2268,7 @@ OLIUDNCTRL|是否根据overload消息控制Iu口下行业务|参数可选性:任
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置SGSN通用过负荷参数配置，窄带信令链路开启拥塞控制，并且默认ERL拥塞门限为80%，默认ERL缓冲区配置为10，即ERL百分比在70%~80%之间为缓冲区。开始发送overload到RNC时的最小拥塞级别为高拥塞，发送overload到RNC的报文间隔是收到300个报文，并且开启根据overload消息控制Iu口下行业务。
@@ -2281,7 +2281,7 @@ SET OVERLOAD PARA:NO7CTRL="YES",ERL=80,BUFFER=10,OLSLOWLEVEL="Severely",OLSINTER
 
 
 
-父主题： [SGSN过负荷参数配置](../../zh-CN/tree/N_125250232.html)
+父主题： [SGSN过负荷参数配置]
 
 
 
@@ -2304,20 +2304,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询SGSN通用过负荷参数(SHOW OVERLOAD PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SGSN网元的通用过负荷参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OLSLOWLEVEL|开始发送overload时的最小拥塞级别|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置SGSN网元往RNC发送overload消息的最小拥塞级别，表示当SGSN处于何种拥塞程度才进行overload消息的发送。取值含义：低过载: SGSN处于低过载（CPU达到了低过载门限，但没有达到高过载门限）时就可以发送overload消息。高过载: SGSN处于高过载（CPU达到了高过载门限）时就可以发送overload消息。不发送: SGSN不主动发送overload消息。
 OLSINTERVAL|每发送overload到RNC的报文间隔|参数可选性:任选参数；参数类型:整数。|该参数用于配置当RNC拥塞时，每次累计收到该RNC的多少个报文后再发送一次overload消息到RNC，若无特殊要求，建议采用默认值。
@@ -2328,7 +2328,7 @@ OLIUDNCTRL|是否根据overload消息控制Iu口下行业务|参数可选性:任
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询SGSN通用过负荷参数配置。
@@ -2355,7 +2355,7 @@ SHOW OVERLOAD PARA;
 
 
 
-父主题： [SGSN过负荷参数配置](../../zh-CN/tree/N_125250232.html)
+父主题： [SGSN过负荷参数配置]
 
 
 
@@ -2378,7 +2378,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### MME过负荷参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 按照协议3GPP TS 36.413, MME在拥塞情况下可以向eNodeB发送overload start消息，通知eNode减少向本MME发起业务；当MME解除拥塞，需要向已经发送overload start消息的eNodeB发送overload stop消息，通知eNodeB恢复正常业务。 
@@ -2386,7 +2386,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “MME过负荷参数配置”用于设置S1接口发送overload start消息的策略。 
@@ -2397,7 +2397,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2425,7 +2425,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -2448,12 +2448,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置MME过负荷参数(SET MME OVERLOAD PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置MME网元的过负荷参数。当需要更改MME网元的过负荷参数时，例如更改更改S1口发送overload消息相关参数时，使用该命令。overload消息相关参数设置成功后，会影响MME网元S1口发送overload start消息的策略，及消息中Overload Action信元的设置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -2472,10 +2472,10 @@ overload消息发送相关参数的配置只对MME网元的S1口生效，并且�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 S1OLCTRL|S1口发送Overload Start的策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME网元S1口往eNodeB发送overload start消息的策略。取值含义：不发送: MME不主动发送overload start消息根据CPU负荷发送: MME根据CPU负荷发送overload start消息根据NAS信令速率发送: MME根据NAS信令速率发送overload start消息
 CPULOWTHD|发送Overload Start的CPU低门限（%）|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数仅在“S1口发送Overload Start的策略”配置为“根据CPU负荷发送”时有效。如果“S1口发送Overload Start的策略”配置为“根据CPU负荷发送”时，当MME的CPU负荷超过该参数，MME则通过S1口往eNodeB发送overload start消息，overload start消息中“Overload Action信元”为配置的“低门限Overload Start消息中的Overload Action信元设置”，消息中“Traffic Load Reduction Indication信元”为配置的“低门限Traffic Load Reduction Indication信元设置”。
@@ -2495,7 +2495,7 @@ S1OLENBNUM|发送Overload Start的eNodeB个数|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置MME过负荷参数，S1口发送Overload Start的策略为"不发送"。
@@ -2508,7 +2508,7 @@ SET MME OVERLOAD PARA:S1OLCTRL="NOSEND";
 
 
 
-父主题： [MME过负荷参数配置](../../zh-CN/tree/N_125250233.html)
+父主题： [MME过负荷参数配置]
 
 
 
@@ -2531,20 +2531,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询MME过负荷参数(SHOW MME OVERLOAD PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询MME网元当前过负荷参数的配置信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 S1OLCTRL|S1口发送Overload Start的策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME网元S1口往eNodeB发送overload start消息的策略。取值含义：不发送: MME不主动发送overload start消息根据CPU负荷发送: MME根据CPU负荷发送overload start消息根据NAS信令速率发送: MME根据NAS信令速率发送overload start消息
 CPULOWTHD|发送Overload Start的CPU低门限（%）|参数可选性:任选参数；参数类型:整数。|该参数仅在“S1口发送Overload Start的策略”配置为“根据CPU负荷发送”时有效。如果“S1口发送Overload Start的策略”配置为“根据CPU负荷发送”时，当MME的CPU负荷超过该参数，MME则通过S1口往eNodeB发送overload start消息，overload start消息中“Overload Action信元”为配置的“低门限Overload Start消息中的Overload Action信元设置”，消息中“Traffic Load Reduction Indication信元”为配置的“低门限Traffic Load Reduction Indication信元设置”。
@@ -2564,7 +2564,7 @@ S1OLENBNUM|发送Overload Start的eNodeB个数|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询MME过负荷参数配置。
@@ -2590,7 +2590,7 @@ SHOW MME OVERLOAD PARA;
 
 
 
-父主题： [MME过负荷参数配置](../../zh-CN/tree/N_125250233.html)
+父主题： [MME过负荷参数配置]
 
 
 
@@ -2613,7 +2613,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 到GW的过负荷配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME支持S11接口的DDN Throttling。 
@@ -2639,7 +2639,7 @@ MME收到SGW和PGW的过载信息OCI后，有业务请求时(PDN创建、承载�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 在SGSN/MME网元处理的消息中，有一部分是与签约用户无关的管理类消息和中继消息，其中有些消息可能引起网元负荷冲高，因而需要加以负荷控制，每秒超过此门限的报文将要被丢弃。 
@@ -2647,7 +2647,7 @@ MME收到SGW和PGW的过载信息OCI后，有业务请求时(PDN创建、承载�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -2680,7 +2680,7 @@ MME收到SGW和PGW的过载信息OCI后，有业务请求时(PDN创建、承载�
 
 
 
-父主题： [MME过负荷参数配置](../../zh-CN/tree/N_125250233.html)
+父主题： [MME过负荷参数配置]
 
 
 
@@ -2703,7 +2703,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置到GW的过负荷(SET MME OVERLOAD INFO TO GW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改MME到SGW/PGW的过负荷配置信息，包括发送过负荷信息的CPU门限和过负荷信息发送周期。 
@@ -2711,15 +2711,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 THRESHOLD|发送过负荷信息的CPU门限|参数可选性:任选参数；参数类型:整数；参数范围为:50~99。|MME开始发送过负荷信息的CPU门限。当MME检测到CPU达到配置门限后，即开始向SGW/PGW发送相应的过负荷信息。
 PERIOD|过负荷信息发送周期(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:0~86400。|MME发送过负荷信息的周期。当MME始终处于过负荷时，需要周期性的发送过负荷信息。每次发送的过负荷信息的有效期与发送周期一致。
@@ -2731,7 +2731,7 @@ GWOLIALG|过负荷控制信息参数生成方式|参数可选性:任选参数；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改MME到SGW/PGW的过负荷信息，其中发送过负荷信息的CPU门限为70、过负荷信息发送周期为600秒，过负荷控制信息参数生成方式为固定算法。 
@@ -2746,7 +2746,7 @@ SET MME OVERLOAD INFO TO GW:THRESHOLD=70,PERIOD=600,TOPGW="ALL",GWOLIALG="FIXEDA
 
 
 
-父主题： [到GW的过负荷配置](../../zh-CN/tree/N_125250217.html)
+父主题： [到GW的过负荷配置]
 
 
 
@@ -2769,7 +2769,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询到GW的过负荷(SHOW MME OVERLOAD INFO TO GW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME到SGW/PGW的过负荷配置信息。 
@@ -2777,15 +2777,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 THRESHOLD|发送过负荷信息的CPU门限|参数可选性:任选参数；参数类型:整数。|MME开始发送过负荷信息的CPU门限。当MME检测到CPU达到配置门限后，即开始向SGW/PGW发送相应的过负荷信息。
 PERIOD|过负荷信息发送周期(秒)|参数可选性:任选参数；参数类型:整数。|MME发送过负荷信息的周期。当MME始终处于过负荷时，需要周期性的发送过负荷信息。每次发送的过负荷信息的有效期与发送周期一致。
@@ -2797,7 +2797,7 @@ GWOLIALG|过负荷控制信息参数生成方式|参数可选性:任选参数；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME到SGW/PGW的过负荷配置信息。 
@@ -2826,7 +2826,7 @@ SHOW MME OVERLOAD INFO TO GW
 
 
 
-父主题： [到GW的过负荷配置](../../zh-CN/tree/N_125250217.html)
+父主题： [到GW的过负荷配置]
 
 
 
@@ -2849,7 +2849,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置到GW的过负荷门限(SET MME OVERLOAD THRESHOLD INFO TO GW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改到GW的过负荷门限。 
@@ -2857,15 +2857,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 THRESHOLD|MME当前CPU负荷|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数仅在“过负荷控制信息参数生成方式”配置为“使用配置”时有效。本参数用来配置MME当前CPU负荷，分成以下几个等级：40~49（THRESHOLD_0）50~59（THRESHOLD_1）60~69（THRESHOLD_2）70~79（THRESHOLD_3）80~89（THRESHOLD_4）90~100（THRESHOLD_5）每个等级都有对应的“业务缩减比例(%)”和“业务缩减时长(秒)”配置。
 METRIC|业务缩减比例(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|该参数仅在“过负荷控制信息参数生成方式”配置为“使用配置”时有效，用来配置固定的业务缩减比例（%）。
@@ -2876,7 +2876,7 @@ PERIOD|业务缩减时长(秒)|参数可选性:任选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置到GW的过负荷门限。 
@@ -2891,7 +2891,7 @@ SET MME OVERLOAD THRESHOLD INFO TO GW:THRESHOLD="THRESHOLD_0",METRIC=0,PERIOD =6
 
 
 
-父主题： [到GW的过负荷配置](../../zh-CN/tree/N_125250217.html)
+父主题： [到GW的过负荷配置]
 
 
 
@@ -2914,7 +2914,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询到GW的过负荷门限(SHOW MME OVERLOAD THRESHOLD INFO TO GW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询到GW的过负荷门限。 
@@ -2922,15 +2922,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 THRESHOLD|MME当前CPU负荷|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数仅在“过负荷控制信息参数生成方式”配置为“使用配置”时有效。本参数用来配置MME当前CPU负荷，分成以下几个等级：40~49（THRESHOLD_0）50~59（THRESHOLD_1）60~69（THRESHOLD_2）70~79（THRESHOLD_3）80~89（THRESHOLD_4）90~100（THRESHOLD_5）每个等级都有对应的“业务缩减比例(%)”和“业务缩减时长(秒)”配置。
 
@@ -2939,10 +2939,10 @@ THRESHOLD|MME当前CPU负荷|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 THRESHOLD|MME当前CPU负荷|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数仅在“过负荷控制信息参数生成方式”配置为“使用配置”时有效。本参数用来配置MME当前CPU负荷，分成以下几个等级：40~49（THRESHOLD_0）50~59（THRESHOLD_1）60~69（THRESHOLD_2）70~79（THRESHOLD_3）80~89（THRESHOLD_4）90~100（THRESHOLD_5）每个等级都有对应的“业务缩减比例(%)”和“业务缩减时长(秒)”配置。
 METRIC|业务缩减比例(%)|参数可选性:任选参数；参数类型:整数。|该参数仅在“过负荷控制信息参数生成方式”配置为“使用配置”时有效，用来配置固定的业务缩减比例（%）。
@@ -2953,7 +2953,7 @@ PERIOD|业务缩减时长(秒)|参数可选性:任选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询到GW的过负荷门限。 
@@ -2983,7 +2983,7 @@ SHOW MME OVERLOAD THRESHOLD INFO TO GW;
 
 
 
-父主题： [到GW的过负荷配置](../../zh-CN/tree/N_125250217.html)
+父主题： [到GW的过负荷配置]
 
 
 
@@ -3006,7 +3006,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### SGSN业务控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN支持限制对端到本端的入向业务量，来控制自身的业务负荷；也支持限制本端到HLR、SMC的出向业务量，来控制对方的业务负荷。 
@@ -3014,7 +3014,7 @@ SGSN支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “SGSN业务控制配置”用于过负荷控制时，配置业务相关的参数。可以配置SGSN的入向、出向业务控制门限，高优先级业务类型，CPU拥塞控制业务保证通过数。 
@@ -3022,7 +3022,7 @@ SGSN支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3050,7 +3050,7 @@ SGSN自动业务控制策略配置
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -3073,7 +3073,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### SGSN通用业务控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN支持限制对端到本端的入向业务量，来控制自身的业务负荷，也支持限制本端到HLR、SMC的出向业务量，来控制对方的业务负荷。 
@@ -3081,7 +3081,7 @@ SGSN支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “SGSN通用业务控制配置”用于过负荷控制时，配置业务相关的通用参数。主要包括以下内容： 
@@ -3131,7 +3131,7 @@ SGSN支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3154,7 +3154,7 @@ SGSN支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-父主题： [SGSN业务控制配置](../../zh-CN/tree/N_125250234.html)
+父主题： [SGSN业务控制配置]
 
 
 
@@ -3177,7 +3177,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置通用业务控制(SET SERVICE CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置SGSN网元过负荷控制相关的通用业务控制参数。当需要更改SGSN网元过负荷控制相关的通用业务控制参数时，如高优先业务配置、保证业务通过数配置、允许通过业务数配置、业务权重配置、入向业务控制对应的拒绝/丢弃策略、到HLR的鉴权及位置更新最大数目、到SMC的短消息最大数目等场景下，使用该命令。SGSN通用业务控制参数设置成功后，可以调整SGSN网元过负荷控制相关的通用业务控制参数。 
@@ -3188,7 +3188,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3205,10 +3205,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 HPRISVRI|高优先级业务|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置SGSN高优先级业务，高优先业务只在CPU高过载时才会控制，非高优先级业务只要在CPU拥塞时（高过载、或低过载、或非过载区但拥塞）时都会被控制。取值含义：附着(ATTACH)：Attach Request消息业务请求(SVRREQ)：Service Request消息PDP上下文激活(PDPACT)：Active PDP Context Request消息PDP上下文修改(PDPMOD)：Modify PDP Context Request消息短消息(SMS)：触发短消息流程的第一条CP-DATA消息寻呼(PAGING)：用户面触发的寻呼或CS寻呼流程的Paging Request消息路由区更新(RAU)：Routing Area Update Request消息切换(HO)：Handover Required消息Null(NULL)：不设置任何业务为高优先级说明：当不选择NULL时，业务可以选择多个，选择NULL时，不能选择任何业务。
 ATTNUMG|附着|参数可选性:任选参数；参数类型:整数；参数范围为:5~65535。|该参数用于设置SGSN保证每秒通过的附着业务数，即无论CPU拥塞程度如何，在进行过负荷控制时，仍然需要确保每秒至少通过的Attach Request消息数。说明：此处设置的个数针对单个MP实例。
@@ -3243,7 +3243,7 @@ SMCSMSNUM|每实例缺省每秒到SMC短消息最大数目|参数可选性:任�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置SGSN通用业务控制配置，高优先级业务为附着，附着业务保证每秒通过数为10个，MP实例每秒允许通过100个附着业务，附着业务权重为5，拒绝/丢弃策略为丢弃，MP实例缺省每秒到HLR鉴权最大数目为100个。
@@ -3256,7 +3256,7 @@ SET SERVICE CONTROL:HPRISVRI="ATTACH",SERVICENUMG="10"-"6"-"6"-"6"-"6"-"6"-"6"-"
 
 
 
-父主题： [SGSN通用业务控制配置](../../zh-CN/tree/N_1252502341.html)
+父主题： [SGSN通用业务控制配置]
 
 
 
@@ -3279,7 +3279,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询通用业务控制(SHOW SERVICE CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询SGSN通用业务控制配置相关信息。 
@@ -3287,15 +3287,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 HPRISVRI|高优先级业务|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置SGSN高优先级业务，高优先业务只在CPU高过载时才会控制，非高优先级业务只要在CPU拥塞时（高过载、或低过载、或非过载区但拥塞）时都会被控制。取值含义：附着(ATTACH)：Attach Request消息业务请求(SVRREQ)：Service Request消息PDP上下文激活(PDPACT)：Active PDP Context Request消息PDP上下文修改(PDPMOD)：Modify PDP Context Request消息短消息(SMS)：触发短消息流程的第一条CP-DATA消息寻呼(PAGING)：用户面触发的寻呼或CS寻呼流程的Paging Request消息路由区更新(RAU)：Routing Area Update Request消息切换(HO)：Handover Required消息Null(NULL)：不设置任何业务为高优先级说明：当不选择NULL时，业务可以选择多个，选择NULL时，不能选择任何业务。
 ATTNUMG|每实例每秒保证通过业务数(附着)|参数可选性:任选参数；参数类型:整数。|该参数用于设置SGSN保证每秒通过的附着业务数，即无论CPU拥塞程度如何，在进行过负荷控制时，仍然需要确保每秒至少通过的Attach Request消息数。说明：此处设置的个数针对单个MP实例。
@@ -3329,7 +3329,7 @@ SMCSMSNUM|每实例缺省每秒到SMC短消息最大数目|参数可选性:任�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询SGSN通用业务控制配置相关信息。
@@ -3356,7 +3356,7 @@ SHOW SERVICE CONTROL;
 
 
 
-父主题： [SGSN通用业务控制配置](../../zh-CN/tree/N_1252502341.html)
+父主题： [SGSN通用业务控制配置]
 
 
 
@@ -3379,7 +3379,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### SGSN特定局向业务控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN支持支持限制本端到HLR、SMC的出向业务量，来控制对方的业务负荷。 
@@ -3387,16 +3387,16 @@ SGSN支持支持限制本端到HLR、SMC的出向业务量，来控制对方的�
 
 
 
-[](None)功能描述 
+功能描述 
 
             
             本配置项针对特定的HLR、SMC局向设置出向业务控制，保护对方网元。如果该HLR、SMC局向没有配置特定局向业务控制时，采用
-            [SET SGSN SERVICE CONTROL](../mml/1261240.html)
+            [SET SGSN SERVICE CONTROL]
             命令中配置的默认HLR/SMC局向控制参数。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3429,7 +3429,7 @@ SGSN支持支持限制本端到HLR、SMC的出向业务量，来控制对方的�
 
 
 
-父主题： [SGSN业务控制配置](../../zh-CN/tree/N_125250234.html)
+父主题： [SGSN业务控制配置]
 
 
 
@@ -3452,12 +3452,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 新增SGSN特定局向业务控制配置(ADD SGSN OFFICE SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于增加SGSN特定局向业务控制参数的配置。当需要针对SGSN特定局向进行允许的出向业务个数进行特殊设置时，使用该命令。成功后，发往该特定局向的业务数通过数将采用自身配置进行控制，通用业务控制中的相关参数对其无效。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3475,10 +3475,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|该参数用于指定SGSN特定邻接局的局向号。SGSN特定邻接局需要在邻接局已经配置。查询命令参见SHOW ADJOFC。
 HLRAUTHNUM|每进程每秒到HLR鉴权最大数目|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。默认值:65535。|该参数用于设置指定SGSN特定邻接局在出向业务控制时，SGSN每个MP模块每秒钟允许发送到该HLR的鉴权消息的最大个数。局向号对应的邻接局类型为HLR时该配置才有效。
@@ -3490,7 +3490,7 @@ SMCSMSNUM|每进程每秒到SMC短消息最大数目|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于新增局向号为1的邻接局的业务控制配置，MP进程每秒到HLR鉴权最大数目为100，MP模块每秒到HLR位置更新最大数目为200，MP模块每秒到SMC短消息最大数目为65535（即不控制发送到SMC的短消息数）。
@@ -3503,7 +3503,7 @@ ADD SGSN OFFICE SERVICE MAXIMUM:ADJID=1,HLRAUTHNUM=100,HLRLUNUM=200,SMCSMSNUM=65
 
 
 
-父主题： [SGSN特定局向业务控制配置](../../zh-CN/tree/N_1252502342.html)
+父主题： [SGSN特定局向业务控制配置]
 
 
 
@@ -3526,12 +3526,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 修改SGSN特定局向业务控制配置(SET SGSN OFFICE SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改SGSN特定局向业务控制参数的配置。当需要对已存在配置的SGSN特定局向业务控制参数进行修改时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -3549,10 +3549,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|该参数用于指定SGSN特定邻接局的局向号。SGSN特定邻接局需要在邻接局已经配置。查询命令参见SHOW ADJOFC。
 HLRAUTHNUM|每进程每秒到HLR鉴权最大数目|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|该参数用于设置指定SGSN特定邻接局在出向业务控制时，SGSN每个MP模块每秒钟允许发送到该HLR的鉴权消息的最大个数。局向号对应的邻接局类型为HLR时该配置才有效。
@@ -3564,7 +3564,7 @@ SMCSMSNUM|每进程每秒到SMC短消息最大数目|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于修改局向号为1的邻接局的业务控制配置，MP进程每秒到HLR鉴权最大数目改为200，MP模块每秒到HLR位置更新最大数目改为65535（即不控制发送到HLR的位置更新消息数）。
@@ -3577,7 +3577,7 @@ SET SGSN OFFICE SERVICE MAXIMUM:ADJID=1,HLRAUTHNUM=200,HLRLUNUM=65535;
 
 
 
-父主题： [SGSN特定局向业务控制配置](../../zh-CN/tree/N_1252502342.html)
+父主题： [SGSN特定局向业务控制配置]
 
 
 
@@ -3600,20 +3600,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 删除SGSN特定局向业务控制配置(DEL SGSN OFFICE SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除SGSN特定局向业务控制参数配置。当该特定邻接局不采用特定配置，而直接采用SGSN通用业务控制配置时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令执行后，SGSN特定局向业务控制参数被删除，而特定局向号对应的SGSN邻接局将采用SGSN通用业务控制配置中的相应配置。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|该参数用于指定SGSN特定邻接局的局向号。SGSN特定邻接局需要在邻接局已经配置。查询命令参见SHOW ADJOFC。
 
@@ -3622,7 +3622,7 @@ ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于删除局向号为1的SGSN邻接局的特定业务控制配置。
@@ -3635,7 +3635,7 @@ DEL SGSN OFFICE SERVICE MAXIMUM:ADJID=1;
 
 
 
-父主题： [SGSN特定局向业务控制配置](../../zh-CN/tree/N_1252502342.html)
+父主题： [SGSN特定局向业务控制配置]
 
 
 
@@ -3658,7 +3658,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询SGSN特定局向业务控制配置(SHOW SGSN OFFICE SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询SGSN特定局向业务控制配置的相关信息。 
@@ -3666,15 +3666,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~4096。|该参数用于指定SGSN特定邻接局的局向号。SGSN特定邻接局需要在邻接局已经配置。查询命令参见SHOW ADJOFC。
 
@@ -3683,10 +3683,10 @@ ADJID|局向ID|参数可选性:任选参数；参数类型:整数；参数范围
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:任选参数；参数类型:整数。|该参数用于指定SGSN特定邻接局的局向号。SGSN特定邻接局需要在邻接局已经配置。查询命令参见SHOW ADJOFC。
 HLRAUTHNUM|每进程每秒到HLR鉴权最大数目|参数可选性:任选参数；参数类型:整数。|该参数用于设置指定SGSN特定邻接局在出向业务控制时，SGSN每个MP模块每秒钟允许发送到该HLR的鉴权消息的最大个数。局向号对应的邻接局类型为HLR时该配置才有效。
@@ -3698,7 +3698,7 @@ SMCSMSNUM|每进程每秒到SMC短消息最大数目|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询局向号为1的SGSN邻接局的特定业务控制配置。
@@ -3725,7 +3725,7 @@ SHOW SGSN OFFICE SERVICE MAXIMUM:ADJID=1;
 
 
 
-父主题： [SGSN特定局向业务控制配置](../../zh-CN/tree/N_1252502342.html)
+父主题： [SGSN特定局向业务控制配置]
 
 
 
@@ -3748,7 +3748,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### SGSN自动业务控制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本功能根据业务成功率来评判当前系统中是否存在拥塞，通过限制接入的业务量，保证整个系统的业务正常。 
@@ -3756,7 +3756,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN网元对接入业务（Attach/局间RAU/跨RAT RAU）进行自动拥塞控制，目的是为了保护HLR，在HLR的业务处理能力比较弱的情况下，SGSN需要根据HLR的业务处理能力来进行配置。 
@@ -3764,7 +3764,7 @@ SGSN网元对接入业务（Attach/局间RAU/跨RAT RAU）进行自动拥塞控�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -3787,7 +3787,7 @@ SGSN网元对接入业务（Attach/局间RAU/跨RAT RAU）进行自动拥塞控�
 
 
 
-父主题： [SGSN业务控制配置](../../zh-CN/tree/N_125250234.html)
+父主题： [SGSN业务控制配置]
 
 
 
@@ -3810,7 +3810,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置SGSN自动业务控制策略(SET SGSN AUTO CNGCTL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置自动业务控制功能策略。 
@@ -3818,15 +3818,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。
 STARTCAPS|触发拥塞的接入业务通过数量(单进程每秒)|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|只有在本进程，每秒的业务（Attach/局间RAU/跨RAT RAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -3840,7 +3840,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGSN自动业务控制策略，其中是否开启设置为是，触发拥塞的接入业务通过数量(单进程每秒)为20，允许通过的接入业务最大数量(单进程每秒)为60，触发拥塞的HLR业务成功率(%)为85，接入业务控制步长为4，控制持续时间(分钟)为30。 
@@ -3855,7 +3855,7 @@ SET SGSN AUTO CNGCTL:FLG="YES",STARTCAPS=20,MAXCAPS=60,SUCCRATE=85,STEP=4,LASTTI
 
 
 
-父主题： [SGSN自动业务控制策略配置](../../zh-CN/tree/N_1252502343.html)
+父主题： [SGSN自动业务控制策略配置]
 
 
 
@@ -3878,7 +3878,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询SGSN自动业务控制策略(SHOW SGSN AUTO CNGCTL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询自动业务控制功能策略。 
@@ -3886,15 +3886,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。
 STARTCAPS|触发拥塞的接入业务通过数量(单进程每秒)|参数可选性:任选参数；参数类型:整数。|只有在本进程，每秒的业务（Attach/局间RAU/跨RAT RAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -3908,7 +3908,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN自动业务控制策略。 
@@ -3936,7 +3936,7 @@ SHOW SGSN AUTO CNGCTL;
 
 
 
-父主题： [SGSN自动业务控制策略配置](../../zh-CN/tree/N_1252502343.html)
+父主题： [SGSN自动业务控制策略配置]
 
 
 
@@ -3959,7 +3959,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### MME业务控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME支持限制对端到本端的入向业务量，来控制自身的业务负荷；也支持限制本端到HSS、VLR的出向业务量，来控制对方的业务负荷。 
@@ -3967,7 +3967,7 @@ MME支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “MME业务控制配置”配置 MME的入向、出向业务控制门限，高优先级业务类型，CPU拥塞控制业务保证通过数。 
@@ -3975,7 +3975,7 @@ MME支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4018,7 +4018,7 @@ S6a ALC局向IMSI号段配置
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -4041,7 +4041,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### MME通用业务控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME支持限制对端到本端的入向业务量，来控制自身的业务负荷；也支持限制本端到HSS、VLR的出向业务量，来控制对方的业务负荷。 
@@ -4049,7 +4049,7 @@ MME支持限制对端到本端的入向业务量，来控制自身的业务负�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “MME通用业务控制配置”用于过负荷控制时，配置业务相关的参数。主要包括以下内容： 
@@ -4069,28 +4069,28 @@ MP每实例通过业务最大数，用于入向业务单项控制，单位时间
 
 
                 MP实例默认每秒到Diameter局向的最大业务，用于出向针对Diameter局向的业务控制，保护对方网元。如果需要针对特定的Diameter局向进行控制，可以通过
-                [ADD MME DIAMETER SERVICE MAXIMUM](../mml/1261251.html)
+                [ADD MME DIAMETER SERVICE MAXIMUM]
                 命令配置。
             
 
 
 
                 MP实例默认每秒到VLR局向的最大业务，用于出向针对VLR局向的业务控制，保护对方网元。如果需要针对特定的VLR局向进行控制，可以通过
-                [ADD MOLVLR](../mml/1261256.html)
+                [ADD MOLVLR]
                 命令配置。
             
 
 
 
                 入向业务控制和出向业务控制，优先级高于CPU拥塞控制（CPU拥塞控制命令：
-                [SET OVERLOAD BASIC PARA](../mml/1261200.html)
+                [SET OVERLOAD BASIC PARA]
                 ），配置入向、出向业务控制可以快速地降低系统负荷，设置的门限值需要根据实际话务模型设定（默认不控制）。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4113,7 +4113,7 @@ MP每实例通过业务最大数，用于入向业务单项控制，单位时间
 
 
 
-父主题： [MME业务控制配置](../../zh-CN/tree/N_125250235.html)
+父主题： [MME业务控制配置]
 
 
 
@@ -4136,7 +4136,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置MME通用业务控制(SET MME SERVICE CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置MME网元过负荷相关的通用业务控制参数。当需要更改MME通用业务控制参数时，如高优先业务配置、保证业务通过数配置、允许通过业务数配置、业务权重配置、入向业务控制对应的拒绝/丢弃策略、到Diameter局向的鉴权及位置更新最大数目等参数时，使用该命令。MME通用业务控制参数设置成功后，会影响MME网元CPU拥塞时的控制策略、入向业务控制时消息通过数的控制和拒绝/丢弃策略、及每秒发送鉴权和位置更新消息到Diameter局向的最大数目的控制。 
@@ -4147,7 +4147,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -4176,10 +4176,10 @@ NBIOT流程未做特别区分，包含在各个流程中。
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 HPRISVRI|高优先级业务|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME高优先级业务。高优先级业务仅在CPU拥塞并且CPU使用率处于高过载区才控制，相对于非高优先级业务，可以优先保证高优先级业务的放行。取值含义：附着(ATTACH)：Attach Request消息业务请求(SVRREQ)：Service Request消息PDN连接建立(PDNCONN)：PDN Connectivity Request消息专有承载建立(BEARERACT)：Create Bearer Request消息承载修改(BEARERMOD)：Update Bearer Request消息寻呼(PAGING)：下行数据通知触发寻呼的Downlink Data Notification消息或CS寻呼流程的Paging Request消息跟踪区更新(TAU)：TAU Request消息切换(HO)：无线侧或网络侧触发的切换业务涉及到的Handover Required、Path Switch Request消息Null(NULL)：不设置任何业务为高优先级，即只要CPU拥塞时就对所有业务进行控制
 ATTNUMG|附着|参数可选性:任选参数；参数类型:整数；参数范围为:5~65535。|该参数用于设置MME保证每秒通过的附着业务数，即无论CPU拥塞程度如何，在进行过负荷控制时，仍然需要确保每秒至少通过的Attach Request消息数。说明：此处设置的个数针对单个MP实例。
@@ -4219,7 +4219,7 @@ BACKOFFTIMEEND|拒绝时携带的Back-off Timer最大取值（秒）|参数可�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置MME通用业务控制配置，高优先级业务为附着，附着业务保证每秒通过数为10个，MP实例每秒允许通过200个附着业务，附着业务权重为10，拒绝/丢弃策略为拒绝，MP实例缺省每秒到Diameter局向最大鉴权业务数目为156个。
@@ -4232,7 +4232,7 @@ SET MME SERVICE CONTROL:HPRISVRI="ATTACH",SERVICENUMG="10"-"6"-"6"-"6"-"6"-"6"-"
 
 
 
-父主题： [MME通用业务控制配置](../../zh-CN/tree/N_1252502351.html)
+父主题： [MME通用业务控制配置]
 
 
 
@@ -4255,20 +4255,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MME通用业务控制(SHOW MME SERVICE CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询MME通用业务控制配置相关信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 HPRISVRI|高优先级业务|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME高优先级业务。高优先级业务仅在CPU拥塞并且CPU使用率处于高过载区才控制，相对于非高优先级业务，可以优先保证高优先级业务的放行。取值含义：附着(ATTACH)：Attach Request消息业务请求(SVRREQ)：Service Request消息PDN连接建立(PDNCONN)：PDN Connectivity Request消息专有承载建立(BEARERACT)：Create Bearer Request消息承载修改(BEARERMOD)：Update Bearer Request消息寻呼(PAGING)：下行数据通知触发寻呼的Downlink Data Notification消息或CS寻呼流程的Paging Request消息跟踪区更新(TAU)：TAU Request消息切换(HO)：无线侧或网络侧触发的切换业务涉及到的Handover Required、Path Switch Request消息Null(NULL)：不设置任何业务为高优先级，即只要CPU拥塞时就对所有业务进行控制
 ATTNUMG|每实例每秒保证通过业务数(附着)|参数可选性:任选参数；参数类型:整数。|该参数用于设置MME保证每秒通过的附着业务数，即无论CPU拥塞程度如何，在进行过负荷控制时，仍然需要确保每秒至少通过的Attach Request消息数。说明：此处设置的个数针对单个MP实例。
@@ -4307,7 +4307,7 @@ BACKOFFTIMEEND|拒绝时携带的Back-off Timer最大取值（秒）|参数可�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询MME通用业务控制配置相关信息。 
@@ -4337,7 +4337,7 @@ SHOW MME SERVICE CONTROL;
 
 
 
-父主题： [MME通用业务控制配置](../../zh-CN/tree/N_1252502351.html)
+父主题： [MME通用业务控制配置]
 
 
 
@@ -4360,7 +4360,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### MME特定Diameter业务控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME支持控制本端发送到到特定Diameter协议类型的网元（比如HSS）的消息数，来避免对端网元因短时间收到大量消息冲击而出现过负荷的情况。 
@@ -4368,19 +4368,19 @@ MME支持控制本端发送到到特定Diameter协议类型的网元（比如HSS
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 
                 本配置项针对特定的Diameter局向设置出向业务控制，保护对方网元。如果该Diameter局向没有配置特定Diameter局向业务控制时，采用“
-                [SET MME SERVICE CONTROL](../mml/1261248.html)
+                [SET MME SERVICE CONTROL]
                 ”命令中配置的默认Diameter局向控制参数。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4413,7 +4413,7 @@ MME支持控制本端发送到到特定Diameter协议类型的网元（比如HSS
 
 
 
-父主题： [MME业务控制配置](../../zh-CN/tree/N_125250235.html)
+父主题： [MME业务控制配置]
 
 
 
@@ -4436,7 +4436,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 新增MME特定Diameter业务控制(ADD MME DIAMETER SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加MME特定Diameter业务控制配置。当过负荷控制对某个diameter局向不采用MME通用业务控制配置来控制业务，而是需要对该局向进行特殊配置来控制业务时，使用该命令。 
@@ -4447,7 +4447,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -4464,10 +4464,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4224。|该参数用于指定Diameter局向的局向ID。要求全局唯一。局向ID的查询命令参见SHOW DIAMADJ。
 DIAMAUTHNUM|每进程每秒到Diameter局向最大鉴权业务数目|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。默认值:65535。|该参数用于限制MP进程每秒向Diameter局向发送的鉴权业务数。默认值为65535，表示不对其进行控制。
@@ -4478,7 +4478,7 @@ DIAMLUNUM|每进程每秒到Diameter局向最大位置更新业务数目|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MME特定Diameter业务控制配置，局向ID为1，MP进程每秒到Diameter局向最大鉴权业务数目为100，MP进程每秒到Diameter局向最大位置更新业务数目为200。
@@ -4491,7 +4491,7 @@ ADD MME DIAMETER SERVICE MAXIMUM:ADJID=1,DIAMAUTHNUM=100,DIAMLUNUM=200；
 
 
 
-父主题： [MME特定Diameter业务控制配置](../../zh-CN/tree/N_1252502352.html)
+父主题： [MME特定Diameter业务控制配置]
 
 
 
@@ -4514,20 +4514,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 修改MME特定Diameter业务控制(SET MME DIAMETER SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改MME特定Diameter业务控制配置。当需要修改MP进程每秒到Diameter局向最大鉴权业务数目，或MP进程每秒到Diameter局向最大位置更新业务数目时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 该修改命令中MP进程每秒到Diameter局向最大鉴权业务数目或MP进程每秒到Diameter局向最大位置更新业务数目若设置为65535，则表示不对其进行控制。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4224。|该参数用于指定Diameter局向的局向ID。要求全局唯一。局向ID的查询命令参见SHOW DIAMADJ。
 DIAMAUTHNUM|每进程每秒到Diameter局向最大鉴权业务数目|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|该参数用于限制MP进程每秒向Diameter局向发送的鉴权业务数。默认值为65535，表示不对其进行控制。
@@ -4538,7 +4538,7 @@ DIAMLUNUM|每进程每秒到Diameter局向最大位置更新业务数目|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改MMEDiameter局向ID为1下的业务控制配置，MP进程每秒到Diameter局向最大鉴权业务数目改为200，MP进程每秒到Diameter局向最大位置更新业务数目改为300。
@@ -4551,7 +4551,7 @@ SET MME DIAMETER SERVICE MAXIMUM:ADJID=1,DIAMAUTHNUM=200,DIAMLUNUM=300;
 
 
 
-父主题： [MME特定Diameter业务控制配置](../../zh-CN/tree/N_1252502352.html)
+父主题： [MME特定Diameter业务控制配置]
 
 
 
@@ -4574,7 +4574,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 删除MME特定Diameter业务控制(DEL MME DIAMETER SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除MME特定Diameter业务控制配置。 
@@ -4585,15 +4585,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4224。|该参数用于指定Diameter局向的局向ID。要求全局唯一。局向ID的查询命令参见SHOW DIAMADJ。
 
@@ -4602,7 +4602,7 @@ ADJID|局向ID|参数可选性:必选参数；参数类型:整数；参数范围
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除局向ID为1的MME特定Diameter业务控制配置。
@@ -4615,7 +4615,7 @@ DEL MME DIAMETER SERVICE MAXIMUM:ADJID=1;
 
 
 
-父主题： [MME特定Diameter业务控制配置](../../zh-CN/tree/N_1252502352.html)
+父主题： [MME特定Diameter业务控制配置]
 
 
 
@@ -4638,20 +4638,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MME特定Diameter业务控制(SHOW MME DIAMETER SERVICE MAXIMUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询MME特定Diameter业务控制配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~4224。|该参数用于指定Diameter局向的局向ID。要求全局唯一。局向ID的查询命令参见SHOW DIAMADJ。
 
@@ -4660,10 +4660,10 @@ ADJID|局向ID|参数可选性:任选参数；参数类型:整数；参数范围
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ADJID|局向ID|参数可选性:任选参数；参数类型:整数。|该参数用于指定Diameter局向的局向ID。要求全局唯一。局向ID的查询命令参见SHOW DIAMADJ。
 DIAMAUTHNUM|每进程每秒到Diameter局向最大鉴权业务数目|参数可选性:任选参数；参数类型:整数。|该参数用于限制MP进程每秒向Diameter局向发送的鉴权业务数。默认值为65535，表示不对其进行控制。
@@ -4674,7 +4674,7 @@ DIAMLUNUM|每进程每秒到Diameter局向最大位置更新业务数目|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询局向ID为1的MME特定Diameter业务控制配置。
@@ -4701,7 +4701,7 @@ SHOW MME DIAMETER SERVICE MAXIMUM:ADJID=1;
 
 
 
-父主题： [MME特定Diameter业务控制配置](../../zh-CN/tree/N_1252502352.html)
+父主题： [MME特定Diameter业务控制配置]
 
 
 
@@ -4724,7 +4724,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### MME特定VLR局向业务控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 过负荷控制是避免网元出现CPU或信令拥塞而采取的一种保护手段。 
@@ -4735,19 +4735,19 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 
                 本配置项针对特定的VLR局向设置出向业务控制，保护对端MSC/VLR网元，避免MSC/VLR短时间内收到来自MME的大量的位置更新或起呼短消息导致CPU负荷过高等。如果该VLR局向没有配置特定VLR局向业务控制时，采用“
-                [SET MME SERVICE CONTROL](../mml/1261248.html)
+                [SET MME SERVICE CONTROL]
                 ”命令中配置的默认VLR局向控制参数。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -4780,7 +4780,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME业务控制配置](../../zh-CN/tree/N_125250235.html)
+父主题： [MME业务控制配置]
 
 
 
@@ -4803,7 +4803,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 新增MME特定VLR局向业务控制配置(ADD MOLVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加MME特定VLR局向业务控制配置。当过负荷控制对某个VLR局向不采用MME通用业务控制配置来控制业务，而是需要对该局向进行特殊配置来控制业务时，使用该命令。 
@@ -4814,21 +4814,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该配置命令中MP进程每秒到VLR局向最大位置更新业务数目和MP进程每秒到VLR局向最大起呼短消息业务数目若设置为65535，则表示不对其进行控制。 
 
 
-配置该命令前，首先要新增SGs口VLR局向配置。配置命令参见[ADD VLROFFICE](1261261.html)进行配置。
+配置该命令前，首先要新增SGs口VLR局向配置。配置命令参见[ADD VLROFFICE]进行配置。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VLROFFICEID|VLR局向标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于指示特定的VLR局向标识。
 VLRLUNUM|每进程每秒到VLR局向最大位置更新业务数目|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。默认值:65535。|该参数用于限制MP进程每秒向VLR局向发送的位置更新业务数。默认值为65535，表示不对其进行控制。
@@ -4840,7 +4840,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MME特定VLR局向业务控制配置，其中VLR局向标识为1，MP进程每秒到VLR局向最大位置更新业务数目为10000，MP进程每秒到VLR局向最大起呼短消息业务数目为10000。 
@@ -4855,7 +4855,7 @@ ADD MOLVLR:VLROFFICEID=1,VLRLUNUM=10000,VLRMOSMSNUM=10000;
 
 
 
-父主题： [MME特定VLR局向业务控制配置](../../zh-CN/tree/N_1252502353.html)
+父主题： [MME特定VLR局向业务控制配置]
 
 
 
@@ -4878,7 +4878,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 修改MME特定VLR局向业务控制配置(SET MOLVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改MME特定VLR局向业务控制配置。 
@@ -4886,7 +4886,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -4894,10 +4894,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VLROFFICEID|VLR局向标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于指示特定的VLR局向标识。
 VLRLUNUM|每进程每秒到VLR局向最大位置更新业务数目|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|该参数用于限制MP进程每秒向VLR局向发送的位置更新业务数。默认值为65535，表示不对其进行控制。
@@ -4909,7 +4909,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改VLR局向标识为1的配置数据，将MP进程每秒到VLR局向最大位置更新业务数目修改为5000。 
@@ -4924,7 +4924,7 @@ SET MOLVLR:VLROFFICEID=1,VLRLUNUM=5000;
 
 
 
-父主题： [MME特定VLR局向业务控制配置](../../zh-CN/tree/N_1252502353.html)
+父主题： [MME特定VLR局向业务控制配置]
 
 
 
@@ -4947,7 +4947,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 删除MME特定VLR局向业务控制配置(DEL MOLVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除MME特定VLR局向业务控制配置。 
@@ -4955,7 +4955,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -4963,10 +4963,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VLROFFICEID|VLR局向标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于指示特定的VLR局向标识。
 
@@ -4975,7 +4975,7 @@ VLROFFICEID|VLR局向标识|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除VLR局向标识为1的配置数据。 
@@ -4990,7 +4990,7 @@ DEL MOLVLR:VLROFFICEID=1;
 
 
 
-父主题： [MME特定VLR局向业务控制配置](../../zh-CN/tree/N_1252502353.html)
+父主题： [MME特定VLR局向业务控制配置]
 
 
 
@@ -5013,7 +5013,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MME特定VLR局向业务控制配置(SHOW MOLVLR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME特定VLR局向业务控制配置。 
@@ -5021,7 +5021,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -5029,10 +5029,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VLROFFICEID|VLR局向标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~2048。|该参数用于指示特定的VLR局向标识。
 
@@ -5041,10 +5041,10 @@ VLROFFICEID|VLR局向标识|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VLROFFICEID|VLR局向标识|参数可选性:任选参数；参数类型:整数。|该参数用于指示特定的VLR局向标识。
 VLRLUNUM|每进程每秒到VLR局向最大位置更新业务数目|参数可选性:任选参数；参数类型:整数。|该参数用于限制MP进程每秒向VLR局向发送的位置更新业务数。默认值为65535，表示不对其进行控制。
@@ -5056,7 +5056,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|对�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有的MME特定VLR局向业务控制配置 
@@ -5087,7 +5087,7 @@ SHOW MOLVLR;
 
 
 
-父主题： [MME特定VLR局向业务控制配置](../../zh-CN/tree/N_1252502353.html)
+父主题： [MME特定VLR局向业务控制配置]
 
 
 
@@ -5110,7 +5110,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### MME自动业务控制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本功能根据业务成功率来评判当前系统中是否存在拥塞，通过限制接入的业务量，保证整个系统的业务正常。 
@@ -5121,7 +5121,7 @@ MME自动业务控制策略配置功能是指MME的周边网元（HSS\SGW\MSC等
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 此命令用于设置统一ALC（Auto Load Control）流控功能的相关参数。当由于系统升级、故障、业务大量涌入等情况导致S11、S6a、SGs接口出现拥塞时，可以通过开启此功能来保护周边网元。 
@@ -5132,7 +5132,7 @@ MME根据周边网元返回的业务成功率的周期变化，判断周边网�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -5185,7 +5185,7 @@ MME根据周边网元返回的业务成功率的周期变化，判断周边网�
 
 
 
-父主题： [MME业务控制配置](../../zh-CN/tree/N_125250235.html)
+父主题： [MME业务控制配置]
 
 
 
@@ -5208,7 +5208,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置MME自动业务控制基本参数(SET MME AUTOCTL BASIC PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置MME自动业务控制基本参数，包括: 控制周期、评判周期等，从而控制向周边网元发往的请求数，达到保护周边网元的目的。 
@@ -5216,15 +5216,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTRLTIMER|业务控制周期(100ms)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于配置MME自动业务控制控制算法时计算业务通过数的周期（时间段），单位是100毫秒。
 JUDGETIMER|评判周期/业务控制周期|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于配置评判周期时长，即MME自动识别周边网元拥塞控制时，动态调整当前允许通过业务数的频率。说明：评判周期配置采用的是MME自动业务控制周期的倍数，即100毫秒的倍数。
@@ -5240,7 +5240,7 @@ TOKENBKTRADIO|允许业务突发系数（%）|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME自动业务控制基本参数，其中业务控制周期(100ms)为10，评判周期/业务控制周期为10，拥塞控制时是否上报日志为是，hss成功率统计包含NOR/NOA为是，hss成功率统计包含PUR/PUA为是，周边网元无过载成功率（%）为10，临过载时向上步长缩减比例（%）为10，允许业务突发系数（%）为100。 
@@ -5255,7 +5255,7 @@ SET MME AUTOCTL BASIC PARA:CTRLTIMER=10,JUDGETIMER=10,ISLOG="YES",HSSSUCCRATEWIT
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5278,7 +5278,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MME自动业务控制基本参数(SHOW MME AUTOCTL BASIC PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME自动业务控制基本参数。 
@@ -5286,15 +5286,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CTRLTIMER|业务控制周期(100ms)|参数可选性:任选参数；参数类型:整数。|该参数用于配置MME自动业务控制控制算法时计算业务通过数的周期（时间段），单位是100毫秒。
 JUDGETIMER|评判周期/业务控制周期|参数可选性:任选参数；参数类型:整数。|该参数用于配置评判周期时长，即MME自动识别周边网元拥塞控制时，动态调整当前允许通过业务数的频率。说明：评判周期配置采用的是MME自动业务控制周期的倍数，即100毫秒的倍数。
@@ -5310,7 +5310,7 @@ TOKENBKTRADIO|允许业务突发系数（%）|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME自动业务控制基本参数。 
@@ -5338,7 +5338,7 @@ SHOW MME AUTOCTL BASIC PARA
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5361,7 +5361,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置S6a统一ALC流控策略(SET MME AUTO CNGCTL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置S6a接口局向统一ALC业务流控策略。当运营商要求对S6a接口所有的HSS局向进行统一ALC流控时，使用此命令。 
@@ -5369,15 +5369,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。
 STARTCAPS|触发拥塞的接入业务通过数量(单SC每秒)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|只有在本SC，每秒的业务（Attach/局间TAU/跨RAT TAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -5392,7 +5392,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置S6a统一ALC流控策略，其中是否开启设置为是，触发拥塞的接入业务通过数量(单SC每秒)为20，允许通过的接入业务最大数量(单SC每秒)为60，触发拥塞的HSS业务成功率(%)为85，接入业务控制步长为4，控制持续时间(分钟)为30。 
@@ -5407,7 +5407,7 @@ SET MME AUTO CNGCTL:FLG="YES",STARTCAPS=20,MAXCAPS=60,SUCCRATE=85,STEP=4,LASTTIM
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5430,7 +5430,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询S6a统一ALC流控策略(SHOW MME AUTO CNGCTL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询S6a口局向统一ALC业务流控策略。 
@@ -5438,15 +5438,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。
 STARTCAPS|触发拥塞的接入业务通过数量(单SC每秒)|参数可选性:任选参数；参数类型:整数。|只有在本SC，每秒的业务（Attach/局间TAU/跨RAT TAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -5461,7 +5461,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询S6a统一ALC流控策略。 
@@ -5489,7 +5489,7 @@ SHOW MME AUTO CNGCTL
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5512,7 +5512,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置S11统一ALC流控策略(SET S11 ALCPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据此命令设置S11口局向统一ALC业务流控策略，当运营商要求对S11接口所有的SGW局向进行统一ALC流控时，使用此命令设置流控参数。 
@@ -5520,15 +5520,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。 根据此参数设置是否支持S11接口的统一ALC流控。
 STARTCAPS|触发拥塞的接入业务通过数量(单SC每秒)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|只有在本SC，每秒的业务（Attach/局间TAU/跨RAT TAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -5543,7 +5543,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置S11统一ALC流控策略，其中是否开启设置为是，触发拥塞的接入业务通过数量(单SC每秒)为20，允许通过的接入业务最大数量(单SC每秒)为60，触发拥塞的HSS业务成功率(%)为85，接入业务控制步长为4，控制持续时间(分钟)为30。 
@@ -5558,7 +5558,7 @@ SET S11 ALCPLY:FLG="YES",STARTCAPS=20,MAXCAPS=60,SUCCRATE=85,STEP=4,LASTTIME=30
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5581,7 +5581,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询S11统一ALC流控策略(SHOW S11 ALCPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据此命令查询S11口局向统一ALC业务流控策略。 
@@ -5589,15 +5589,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。 根据此参数设置是否支持S11接口的统一ALC流控。
 STARTCAPS|触发拥塞的接入业务通过数量(单SC每秒)|参数可选性:任选参数；参数类型:整数。|只有在本SC，每秒的业务（Attach/局间TAU/跨RAT TAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -5612,7 +5612,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询S11统一ALC流控策略。 
@@ -5639,7 +5639,7 @@ SHOW S11 ALCPLYL
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5662,7 +5662,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置SGS统一ALC流控策略(SET SGS ALCPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据此命令设置SGS口局向统一ALC业务流控策略，当运营商要求对SGS接口所有的SGW局向进行统一ALC流控时，使用此命令设置流控参数。 
@@ -5670,15 +5670,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。 根据此参数设置是否支持SGS接口的统一ALC流控。
 STARTCAPS|触发拥塞的接入业务通过数量(单SC每秒)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|只有在本SC，每秒的业务（联合Attach/联合TAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -5693,7 +5693,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGS统一ALC流控策略，其中是否开启设置为是，触发拥塞的接入业务通过数量(单SC每秒)为20，允许通过的接入业务最大数量(单SC每秒)为60，触发拥塞的HSS业务成功率(%)为85，接入业务控制步长为4，控制持续时间(分钟)为30。 
@@ -5708,7 +5708,7 @@ SET SGS ALCPLY:FLG="YES",STARTCAPS=20,MAXCAPS=60,SUCCRATE=85,STEP=4,LASTTIME=30
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5731,7 +5731,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询SGS统一ALC流控策略(SHOW SGS ALCPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据此命令查询SGS口局向统一ALC业务流控策略。 
@@ -5739,15 +5739,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLG|是否开启|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|功能开关。 根据此参数设置是否支持SGS接口的统一ALC流控。
 STARTCAPS|触发拥塞的接入业务通过数量(单SC每秒)|参数可选性:任选参数；参数类型:整数。|只有在本SC，每秒的业务（Attach/局间TAU/跨RAT TAU）数量超过配置的值时，才可能会触发本功能。即如果业务量过低是不被控制的。
@@ -5762,7 +5762,7 @@ LASTTIME|控制持续时间(分钟)|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGS统一ALC流控策略。 
@@ -5789,7 +5789,7 @@ SHOW SGS ALCPLY
 
 
 
-父主题： [MME自动业务控制策略配置](../../zh-CN/tree/N_126323829.html)
+父主题： [MME自动业务控制策略配置]
 
 
 
@@ -5812,7 +5812,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### S6a ALC局向流控策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 随着网络用户和业务不断增加，uMAC系统各周边接口和网元拥塞的可能性增加，另外，由于系统升级、系统故障、大型节假日、容灾等场景，会导致大量用户涌入MME，MME对周边网元HSS的消息量也会急剧增加，极易造成HSS的负荷拥塞。 
@@ -5826,7 +5826,7 @@ S6a接口局向自动业务控制功能是指MME的周边HSS网元存在过载�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能是根据业务成功率来评判当前系统中是否存在S6a接口网元拥塞，通过限制接入的业务量，保证MME和周边网元HSS的安全，保护HSS网元。 
@@ -5837,7 +5837,7 @@ S6a接口局向自动业务控制功能是指MME的周边HSS网元存在过载�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -5870,7 +5870,7 @@ S6a接口局向自动业务控制功能是指MME的周边HSS网元存在过载�
 
 
 
-父主题： [MME业务控制配置](../../zh-CN/tree/N_125250235.html)
+父主题： [MME业务控制配置]
 
 
 
@@ -5893,7 +5893,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 新增S6a ALC局向流控策略配置(ADD S6A ALCOFC POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于新增S6a接口ALC局向流控策略配置。在根据HOST解析转发的组网配置下，只有DRA对MME逻辑上可见，HSS目的实体对MME逻辑上不可见，所以需要用户手动配置，对自动业务控制的HSS局向进行区分，以保证准确的自动业务控制对象，避免错误控制。 
@@ -5901,15 +5901,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFCIDX|局向索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~10。|该参数用于设置S6a ALC局向索引。
 OFCNAME|局向名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~128个字符。|该参数用于设置S6a ALC局向名称。
@@ -5927,7 +5927,7 @@ EXCLUDEERRCODE|被排除的S6a错误码|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增S6a ALC局向流控策略配置，其中局向索引为1，局向名称为OFC_1。 
@@ -5942,7 +5942,7 @@ ADD S6A ALCOFC POLICY:OFCIDX=1,OFCNAME="OFC_1";
 
 
 
-父主题： [S6a ALC局向流控策略配置](../../zh-CN/tree/N_12632521.html)
+父主题： [S6a ALC局向流控策略配置]
 
 
 
@@ -5965,7 +5965,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 修改S6a ALC局向流控策略配置(SET S6A ALCOFC POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于修改S6a接口ALC局向流控策略配置。 
@@ -5973,15 +5973,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFCIDX|局向索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~10。|该参数用于设置S6a ALC局向索引。
 OFCNAME|局向名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~128个字符。|该参数用于设置S6a ALC局向名称。
@@ -5999,7 +5999,7 @@ EXCLUDEERRCODE|被排除的S6a错误码|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改局向索引为1的S6a ALC局向流控策略配置，将局向流控开关修改为YES。 
@@ -6014,7 +6014,7 @@ SET S6A ALCOFC POLICY:OFCIDX=1,OFCAUTOCTLSWITCH="YES";
 
 
 
-父主题： [S6a ALC局向流控策略配置](../../zh-CN/tree/N_12632521.html)
+父主题： [S6a ALC局向流控策略配置]
 
 
 
@@ -6037,7 +6037,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 删除S6a ALC局向流控策略配置(DEL S6A ALCOFC POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于删除S6a接口ALC局向流控策略配置。 
@@ -6045,15 +6045,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFCIDX|局向索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~10。|该参数用于设置S6a ALC局向索引。
 
@@ -6062,7 +6062,7 @@ OFCIDX|局向索引|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除局向索引为1的S6a ALC局向流控策略配置。 
@@ -6077,7 +6077,7 @@ DEL S6A ALCOFC POLICY:OFCIDX=1;
 
 
 
-父主题： [S6a ALC局向流控策略配置](../../zh-CN/tree/N_12632521.html)
+父主题： [S6a ALC局向流控策略配置]
 
 
 
@@ -6100,7 +6100,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询S6a ALC局向流控策略配置(SHOW S6A ALCOFC POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于查询S6a接口ALC局向流控策略配置。 
@@ -6108,15 +6108,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFCIDX|局向索引|参数可选性:任选参数；参数类型:整数；参数范围为:1~10。|该参数用于设置S6a ALC局向索引。
 
@@ -6125,10 +6125,10 @@ OFCIDX|局向索引|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFCIDX|局向索引|参数可选性:任选参数；参数类型:整数。|该参数用于设置S6a ALC局向索引。
 OFCNAME|局向名称|参数可选性:任选参数；参数类型:字符型。|该参数用于设置S6a ALC局向名称。
@@ -6146,7 +6146,7 @@ EXCLUDEERRCODE|被排除的S6a错误码|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询S6a ALC局向流控策略配置。 
@@ -6176,7 +6176,7 @@ SHOW S6A ALCOFC POLICY;
 
 
 
-父主题： [S6a ALC局向流控策略配置](../../zh-CN/tree/N_12632521.html)
+父主题： [S6a ALC局向流控策略配置]
 
 
 
@@ -6199,7 +6199,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### S6a ALC局向IMSI号段配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 随着网络用户和业务不断增加，uMAC系统各周边接口和网元拥塞的可能性增加，另外，由于系统升级、系统故障、大型节假日、容灾等场景，会导致大量用户涌入MME，MME对周边网元HSS的消息量也会急剧增加，极易造成HSS的负荷拥塞。 
@@ -6213,7 +6213,7 @@ S6a接口自动业务控制功能是指MME的周边HSS网元存在过载风险�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该命令用于设置S6a接口ALC局向关联的IMSI号段。MME在进行S6a ALC局向流控过程中，根据用户IMSI在此配置数据中查找，如果用户归属于一个ALC局向，那么MME根据具体ALC局向的业务成功率进行自动流控，保障周边网元指定的ALC局向的通畅。 
@@ -6221,7 +6221,7 @@ S6a接口自动业务控制功能是指MME的周边HSS网元存在过载风险�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6254,7 +6254,7 @@ S6a接口自动业务控制功能是指MME的周边HSS网元存在过载风险�
 
 
 
-父主题： [MME业务控制配置](../../zh-CN/tree/N_125250235.html)
+父主题： [MME业务控制配置]
 
 
 
@@ -6277,7 +6277,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 新增S6a ALC局向IMSI号段配置(ADD S6A ALCOFC IMSICFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增一个S6a接口ALC局向关联的IMSI号段。 
@@ -6285,15 +6285,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 只有当"S6a ALC局向"配置表中“局向索引”对应的“局向流控开关”为“YES”时，本命令所配置的各个IMSI号段才进行流控。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置IMSI号段。
 OFCIDX|局向索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~10。|该参数用于设置S6a ALC局向索引。
@@ -6303,7 +6303,7 @@ OFCIDX|局向索引|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增S6a ALC局向IMSI号段配置，其中IMSI为"46012"，局向索引为1。 
@@ -6318,7 +6318,7 @@ ADD S6A ALCOFC IMSICFG:IMSI="46012",OFCIDX=1;
 
 
 
-父主题： [S6a ALC局向IMSI号段配置](../../zh-CN/tree/N_12632561.html)
+父主题： [S6a ALC局向IMSI号段配置]
 
 
 
@@ -6341,7 +6341,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 修改S6a ALC局向IMSI号段配置(SET S6A ALCOFC IMSICFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改一个S6a接口ALC局向关联的IMSI号段。 
@@ -6349,15 +6349,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 只有当"S6a ALC局向"配置表中“局向索引”对应的“局向流控开关”为“YES”时，本命令所配置的各个IMSI号段才进行流控。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置IMSI号段。
 OFCIDX|局向索引|参数可选性:任选参数；参数类型:整数；参数范围为:1~10。|该参数用于设置S6a ALC局向索引。
@@ -6367,7 +6367,7 @@ OFCIDX|局向索引|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI为"46012"的S6a ALC局向IMSI号段配置，将局向索引修改为2。 
@@ -6382,7 +6382,7 @@ SET S6A ALCOFC IMSICFG:IMSI="46012",OFCIDX=2;
 
 
 
-父主题： [S6a ALC局向IMSI号段配置](../../zh-CN/tree/N_12632561.html)
+父主题： [S6a ALC局向IMSI号段配置]
 
 
 
@@ -6405,7 +6405,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 删除S6a ALC局向IMSI号段配置(DEL S6A ALCOFC IMSICFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除一个S6a接口ALC局向关联的IMSI号段。 
@@ -6413,15 +6413,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置IMSI号段。
 
@@ -6430,7 +6430,7 @@ IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI为"46012"的S6a ALC局向IMSI号段配置。 
@@ -6445,7 +6445,7 @@ DEL S6A ALCOFC IMSICFG:IMSI="46012";
 
 
 
-父主题： [S6a ALC局向IMSI号段配置](../../zh-CN/tree/N_12632561.html)
+父主题： [S6a ALC局向IMSI号段配置]
 
 
 
@@ -6468,7 +6468,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询S6a ALC局向IMSI号段配置(SHOW S6A ALCOFC IMSICFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询S6a接口ALC局向关联的IMSI号段。 
@@ -6476,15 +6476,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于设置IMSI号段。
 
@@ -6493,10 +6493,10 @@ IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型。|该参数用于设置IMSI号段。
 OFCIDX|局向索引|参数可选性:任选参数；参数类型:整数。|该参数用于设置S6a ALC局向索引。
@@ -6506,7 +6506,7 @@ OFCIDX|局向索引|参数可选性:任选参数；参数类型:整数。|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询S6a ALC局向IMSI号段配置。 
@@ -6535,7 +6535,7 @@ SHOW S6A  ALCOFC IMSICFG;
 
 
 
-父主题： [S6a ALC局向IMSI号段配置](../../zh-CN/tree/N_12632561.html)
+父主题： [S6a ALC局向IMSI号段配置]
 
 
 
@@ -6558,7 +6558,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### UE无关的网元消息控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在SGSN/MME网元处理的消息中，有一部分是与签约用户无关的管理类消息和中继消息，如果这类消息过多，也会导致网元过负荷。 
@@ -6566,7 +6566,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 在SGSN/MME网元处理的消息中，有一部分是与签约用户无关的管理类消息和中继消息，其中有些消息可能引起网元负荷冲高，因而需要加以负荷控制，每秒超过此门限的报文将被丢弃。 
@@ -6574,7 +6574,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6597,7 +6597,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -6620,7 +6620,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置UE无关的网元消息控制(SET UEINDMSG CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置UE无关的网元消息控制。 
@@ -6628,15 +6628,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CFGTRANSNUM|每秒许可的入向配置传输消息数|参数可选性:任选参数；参数类型:整数；参数范围为:20~2000。|当进程内S1口或S10口在1秒内收到的eNB Configuration Transfer消息或Configuration Transfer Tunnel请求消息超过该门限时，多余的消息将被丢弃。S1口和S10口的消息独立计数。
 
@@ -6645,7 +6645,7 @@ CFGTRANSNUM|每秒许可的入向配置传输消息数|参数可选性:任选参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将于UE无关的每秒许可的入向配置传输消息数设置为20。 
@@ -6660,7 +6660,7 @@ SET UEINDMSG CTRL:CFGTRANSNUM="20";
 
 
 
-父主题： [UE无关的网元消息控制配置](../../zh-CN/tree/N_125250236.html)
+父主题： [UE无关的网元消息控制配置]
 
 
 
@@ -6683,7 +6683,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询UE无关的网元消息控制(SHOW UEINDMSG CTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询UE无关的网元消息控制配置。 
@@ -6691,15 +6691,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CFGTRANSNUM|每秒许可的入向配置传输消息数|参数可选性:任选参数；参数类型:整数。|当进程内S1口或S10口在1秒内收到的eNB Configuration Transfer消息或Configuration Transfer Tunnel请求消息超过该门限时，多余的消息将被丢弃。S1口和S10口的消息独立计数。
 
@@ -6708,7 +6708,7 @@ CFGTRANSNUM|每秒许可的入向配置传输消息数|参数可选性:任选参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询UE无关的网元消息控制。 
@@ -6736,7 +6736,7 @@ SHOW UEINDMSG CTRL;
 
 
 
-父主题： [UE无关的网元消息控制配置](../../zh-CN/tree/N_125250236.html)
+父主题： [UE无关的网元消息控制配置]
 
 
 
@@ -6759,7 +6759,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 业务类型过负荷控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 过负荷控制功能指的是通过限制本网元接入的业务量，降低本网元或者邻接网元的负荷，避免因负荷过高导致本网元或者邻接网元设备异常或崩溃。 
@@ -6770,7 +6770,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于在系统出现过负荷，将语音相关业务（CSFB、VOLTE）作为高优先级业务，避免语音业务被限制。 
@@ -6778,7 +6778,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6801,7 +6801,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -6824,7 +6824,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置业务类型过负荷控制(SET SERVICE TYPE OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置是否开启过负荷时语音业务优先的功能。 
@@ -6832,7 +6832,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -6840,10 +6840,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPORTVOICE|语音业务优先|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否开启过负荷时语音业务优先的功能。
 
@@ -6852,7 +6852,7 @@ SUPPORTVOICE|语音业务优先|参数可选性:任选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 开启过负荷时语音业务优先的功能。 
@@ -6867,7 +6867,7 @@ SET SERVICE TYPE OVERLOAD CONTROL:SUPPORTVOICE="ON";
 
 
 
-父主题： [业务类型过负荷控制配置](../../zh-CN/tree/N_12614381.html)
+父主题： [业务类型过负荷控制配置]
 
 
 
@@ -6890,7 +6890,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询业务类型过负荷控制(SHOW SERVICE TYPE OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询是否开启过负荷时语音业务优先的功能。 
@@ -6898,7 +6898,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -6906,10 +6906,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPORTVOICE|语音业务优先|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否开启过负荷时语音业务优先的功能。
 
@@ -6918,7 +6918,7 @@ SUPPORTVOICE|语音业务优先|参数可选性:任选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询是否开启过负荷时语音业务优先的功能。 
@@ -6933,7 +6933,7 @@ SHOW SERVICE TYPE OVERLOAD CONTROL;
 
 
 
-父主题： [业务类型过负荷控制配置](../../zh-CN/tree/N_12614381.html)
+父主题： [业务类型过负荷控制配置]
 
 
 
@@ -6956,7 +6956,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### MME过负荷寻呼优化配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME向每个被寻呼的eNodeB都要发送S1寻呼消息，寻呼的eNodeB个数越多，对MME的负荷冲击就越大。 
@@ -6964,7 +6964,7 @@ MME向每个被寻呼的eNodeB都要发送S1寻呼消息，寻呼的eNodeB个数
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于当系统出现过负荷的情况下，MME通过优化寻呼使用的策略，减少寻呼次数和寻呼范围，达到减少系统负荷的目的。 
@@ -6972,7 +6972,7 @@ MME向每个被寻呼的eNodeB都要发送S1寻呼消息，寻呼的eNodeB个数
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -6995,7 +6995,7 @@ MME向每个被寻呼的eNodeB都要发送S1寻呼消息，寻呼的eNodeB个数
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -7018,7 +7018,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置MME过负荷寻呼优化(SET MME OVERLOAD PAGING POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置是否开启过负荷时优化寻呼过程的功能。 
@@ -7026,7 +7026,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7034,10 +7034,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPOLPAGINGOPTIMEZE|过负荷寻呼优化|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否开启过负荷时优化寻呼过程的功能。
 OLPAGINGRANGE|过负荷时寻呼范围|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当参数“寻呼方式”为“基于最近活动eNB列表或邻接eNB列表寻呼”时，该参数标识使用最近活动eNB列表寻呼，还是使用邻接eNB列表寻呼。
@@ -7048,7 +7048,7 @@ ENBLISTTYPE|eNB列表类型|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 开启过负荷时优化寻呼过程的功能,寻呼范围为：最近活动eNB列表。 
@@ -7063,7 +7063,7 @@ SET MME OVERLOAD PAGING POLICY:SUPPOLPAGINGOPTIMEZE="ON",OLPAGINGRANGE="LASTACTE
 
 
 
-父主题： [MME过负荷寻呼优化配置](../../zh-CN/tree/N_12614411.html)
+父主题： [MME过负荷寻呼优化配置]
 
 
 
@@ -7086,7 +7086,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询MME过负荷寻呼优化(SHOW MME OVERLOAD PAGING POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询是否开启过负荷时优化寻呼过程的功能。 
@@ -7094,7 +7094,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7102,10 +7102,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPOLPAGINGOPTIMEZE|过负荷寻呼优化|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否开启过负荷时优化寻呼过程的功能。
 OLPAGINGRANGE|过负荷时寻呼范围|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当参数“寻呼方式”为“基于最近活动eNB列表或邻接eNB列表寻呼”时，该参数标识使用最近活动eNB列表寻呼，还是使用邻接eNB列表寻呼。
@@ -7116,7 +7116,7 @@ ENBLISTTYPE|eNB列表类型|参数可选性:任选参数；参数类型:枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询是否开启过负荷时优化寻呼过程的功能。 
@@ -7131,7 +7131,7 @@ SHOW MME OVERLOAD PAGING POLICY;
 
 
 
-父主题： [MME过负荷寻呼优化配置](../../zh-CN/tree/N_12614411.html)
+父主题： [MME过负荷寻呼优化配置]
 
 
 
@@ -7154,7 +7154,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### MME接口消息控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME通过限制各个逻辑接口的收发消息速率来避免本网元过负荷。 
@@ -7162,7 +7162,7 @@ MME通过限制各个逻辑接口的收发消息速率来避免本网元过负�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME支持控制各个逻辑接口的消息通过速率。 
@@ -7170,7 +7170,7 @@ MME支持控制各个逻辑接口的消息通过速率。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7193,7 +7193,7 @@ MME支持控制各个逻辑接口的消息通过速率。
 
 
 
-父主题： [本网元拥塞和过负荷控制配置](../../zh-CN/tree/N_1252502304.html)
+父主题： [本网元拥塞和过负荷控制配置]
 
 
 
@@ -7216,20 +7216,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置MME接口消息控制配置(SET INTERFACE MSG OVERLOAD) 
 
 
-[](None)命令功能 
+命令功能 
 
 本命令用于设置MME的各个逻辑接口的消息通过速率。
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 S1RCV|S1接口接收速率(条/秒/进程)|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|控制S1接口的消息接收速率。
 S1SND|S1接口发送速率(条/秒/进程)|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|控制S1接口的消息发送速率。
@@ -7251,7 +7251,7 @@ GNSND|Gn接口发送速率(条/秒/进程)|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME接口消息控制配置。 
@@ -7266,7 +7266,7 @@ SET INTERFACE MSG OVERLOAD:S1RCV=65535,S1SND=65535,S6ARCV=65535,S6ASND=65535,S11
 
 
 
-父主题： [MME接口消息控制配置](../../zh-CN/tree/N_12631921.html)
+父主题： [MME接口消息控制配置]
 
 
 
@@ -7289,20 +7289,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询MME接口消息控制配置(SHOW INTERFACE MSG OVERLOAD) 
 
 
-[](None)命令功能 
+命令功能 
 
 本命令用于查询MME的各个逻辑接口的消息通过速率。
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 S1RCV|S1接口接收速率(条/秒/进程)|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|控制S1接口的消息接收速率。
 S1SND|S1接口发送速率(条/秒/进程)|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|控制S1接口的消息发送速率。
@@ -7324,7 +7324,7 @@ GNSND|Gn接口发送速率(条/秒/进程)|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME接口消息控制配置。 
@@ -7353,7 +7353,7 @@ SHOW INTERFACE MSG OVERLOAD;
 
 
 
-父主题： [MME接口消息控制配置](../../zh-CN/tree/N_12631921.html)
+父主题： [MME接口消息控制配置]
 
 
 
@@ -7376,21 +7376,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### HSS过负荷控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             HSS过负荷控制，是指MME收到HSS通过Diameter协议扩展的OC-OLR AVP携带的控制比例和有效时间等详细过负荷信息，并根据该信息完成到该HSS的业务控制的功能。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             HSS过负荷控制配置用于配置HSS网元过负荷控制的开关和相关参数。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7413,7 +7413,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -7436,12 +7436,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置HSS过负荷控制(SET HSS OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置HSS网元的过负荷控制的开关以及拒绝时携带的Back-off Timer取值。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7449,10 +7449,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOAD|支持HSS过负荷控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持HSS过负荷控制的开关。
 MIN|拒绝时携带的Back-off Timer最小值(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:0~1116000。|配置HSS过负荷时，NAS拒绝消息中携带的Back-off Timer最小值。在用户4G接入，MME向HSS发送消息，收到HSS返回的过负荷信息，MME会给用户发送接入拒绝消息，原因值为#22（Congestion）时，消息中是否携带Back-off Timer及携带的值，通过本参数确定。如果本参数为0，表示不携带Back-off Timer信息给UE。如果本参数不为0，则MME在"拒绝时携带的Back-off Timer最小取值（秒）”与"拒绝时携带的Back-off Timer最小取值（秒）”范围取随机值，作为Back-off Timer的值，带给UE，指示UE在Back-off Timer超时后，再重新尝试接入。如果终端不支持#22或没有携带Back-off Timer，则业务重试时长取决于终端行为，通常终端启动默认定时器3411， 10秒后发起业务重试；连续重试4次失败后，终端通常在12分钟后再重新尝试4G接入。注：无论HSS过负荷控制License是否打开，该字段都会使用。
@@ -7463,7 +7463,7 @@ MAX|拒绝时携带的Back-off Timer最大值(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置支持HSS过负荷控制,支持HSS过负荷控制为不支持，拒绝时携带的Back-off Timer最小值为1800，拒绝时携带的Back-off Timer取值为3600。 
@@ -7478,7 +7478,7 @@ SET HSS OVERLOAD CONTROL:OVERLOAD="NO",MIN=1800,MAX=3600;
 
 
 
-父主题： [HSS过负荷控制配置](../../zh-CN/tree/N_1252502360.html)
+父主题： [HSS过负荷控制配置]
 
 
 
@@ -7501,20 +7501,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询HSS过负荷控制(SHOW HSS OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询HSS网元的过负荷控制配置信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOAD|支持HSS过负荷控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持HSS过负荷控制的开关。
 MIN|拒绝时携带的Back-off Timer最小值(秒)|参数可选性:任选参数；参数类型:整数。|配置HSS过负荷时，NAS拒绝消息中携带的Back-off Timer最小值。在用户4G接入，MME向HSS发送消息，收到HSS返回的过负荷信息，MME会给用户发送接入拒绝消息，原因值为#22（Congestion）时，消息中是否携带Back-off Timer及携带的值，通过本参数确定。如果本参数为0，表示不携带Back-off Timer信息给UE。如果本参数不为0，则MME在"拒绝时携带的Back-off Timer最小取值（秒）”与"拒绝时携带的Back-off Timer最小取值（秒）”范围取随机值，作为Back-off Timer的值，带给UE，指示UE在Back-off Timer超时后，再重新尝试接入。如果终端不支持#22或没有携带Back-off Timer，则业务重试时长取决于终端行为，通常终端启动默认定时器3411， 10秒后发起业务重试；连续重试4次失败后，终端通常在12分钟后再重新尝试4G接入。注：无论HSS过负荷控制License是否打开，该字段都会使用。
@@ -7525,7 +7525,7 @@ MAX|拒绝时携带的Back-off Timer最大值(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询HSS过负荷控制信息。 
@@ -7554,7 +7554,7 @@ SHOW HSS OVERLOAD CONTROL;
 
 
 
-父主题： [HSS过负荷控制配置](../../zh-CN/tree/N_1252502360.html)
+父主题： [HSS过负荷控制配置]
 
 
 
@@ -7577,21 +7577,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### SGW过负荷控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             GTP-C过负荷控制，即过负荷的GTP-C节点在发送的GTP-C消息中的携带包含有缩减比例的过负荷控制信息，接收消息的GTP-C节点根据收到的缩减比例，缩减到该发生过负荷的GTP-C节点的业务负荷。对于MME来说，SGW过负荷控制就是当SGW发生过负荷后，通知MME，由MME来缩减到SGW的业务负荷。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             SGW过负荷控制配置主要用于设置SGW过负荷控制的功能开关，以及SGW过负荷时给不同UE下发的NAS拒绝消息中携带的Back-off Timer的取值范围。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7614,7 +7614,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -7637,12 +7637,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置SGW过负荷控制(SET SGW OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改SGW过负荷控制，包括功能开关，以及SGW过负荷时NAS拒绝消息中携带的Back-off Timer的范围。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7650,10 +7650,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOAD|支持SGW过负荷控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持SGW过负荷控制的开关。
 MIN|拒绝时携带的Back-off Timer最小值(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:0~1116000。|该参数用于配置SGW过负荷时，NAS拒绝消息中携带的Back-off Timer的最小值。在用户4G接入，MME向SGW发送消息，收到SGW返回的过负荷信息，MME会给用户发送接入拒绝消息，原因值为#22（Congestion）时，消息中是否携带Back-off Timer及携带的值，通过本参数确定。如果本参数为0，表示不携带Back-off Timer信息给UE。如果本参数不为0，则MME在“拒绝时携带的Back-off Timer最小值(秒)”和“拒绝时携带的Back-off Timer最小值(秒)”范围取随机值，作为Back-off Timer的值，带给UE，指示UE在Back-off Timer超时后，再重新尝试接入。如果终端不支持#22或没有携带Back-off Timer，则业务重试时长取决于终端行为，通常终端启动默认定时器3411， 10秒后发起业务重试；连续重试4次失败后，终端通常在12分钟后再重新尝试4G接入。在PDN连接建立过程中，MME向SGW发送消息，收到SGW返回的过负荷信息，MME会给用户发送拒绝消息，消息中是否携带Back-off Timer及携带的值，通过本参数确定。如果为0，标识不携带Back-off Timer信息给UE。如果不是0，则MME在【MIN，MAX】范围取随机值，作为Back-off Timer的值，带给UE，指示UE在Back-off Timer超时后，再重新尝试PDN连接建立。
@@ -7664,7 +7664,7 @@ MAX|拒绝时携带的Back-off Timer最大值(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置支持SGW过负荷控制、拒绝时携带的Back-off Timer最小值为3600、拒绝时携带的Back-off Timer最大值为18000。 
@@ -7679,7 +7679,7 @@ SET SGW OVERLOAD CONTROL:OVERLOAD="YES",MIN=3600,MAX=18000;
 
 
 
-父主题： [SGW过负荷控制配置](../../zh-CN/tree/N_1252502361.html)
+父主题： [SGW过负荷控制配置]
 
 
 
@@ -7702,20 +7702,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询SGW过负荷控制(SHOW SGW OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SGW过负荷控制的配置信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOAD|支持SGW过负荷控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持SGW过负荷控制的开关。
 MIN|拒绝时携带的Back-off Timer最小值(秒)|参数可选性:任选参数；参数类型:整数。|该参数用于配置SGW过负荷时，NAS拒绝消息中携带的Back-off Timer的最小值。在用户4G接入，MME向SGW发送消息，收到SGW返回的过负荷信息，MME会给用户发送接入拒绝消息，原因值为#22（Congestion）时，消息中是否携带Back-off Timer及携带的值，通过本参数确定。如果本参数为0，表示不携带Back-off Timer信息给UE。如果本参数不为0，则MME在“拒绝时携带的Back-off Timer最小值(秒)”和“拒绝时携带的Back-off Timer最小值(秒)”范围取随机值，作为Back-off Timer的值，带给UE，指示UE在Back-off Timer超时后，再重新尝试接入。如果终端不支持#22或没有携带Back-off Timer，则业务重试时长取决于终端行为，通常终端启动默认定时器3411， 10秒后发起业务重试；连续重试4次失败后，终端通常在12分钟后再重新尝试4G接入。在PDN连接建立过程中，MME向SGW发送消息，收到SGW返回的过负荷信息，MME会给用户发送拒绝消息，消息中是否携带Back-off Timer及携带的值，通过本参数确定。如果为0，标识不携带Back-off Timer信息给UE。如果不是0，则MME在【MIN，MAX】范围取随机值，作为Back-off Timer的值，带给UE，指示UE在Back-off Timer超时后，再重新尝试PDN连接建立。
@@ -7726,7 +7726,7 @@ MAX|拒绝时携带的Back-off Timer最大值(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGW过负荷控制。 
@@ -7757,7 +7757,7 @@ SHOW SGW OVERLOAD CONTROL;
 
 
 
-父主题： [SGW过负荷控制配置](../../zh-CN/tree/N_1252502361.html)
+父主题： [SGW过负荷控制配置]
 
 
 
@@ -7780,7 +7780,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### PGW过负荷控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GTP-C过负荷控制，即过负荷的GTP-C节点在发送的GTP-C消息中的携带包含有缩减比例的过负荷控制信息，接收消息的GTP-C节点根据收到的缩减比例，缩减到该发生过负荷的GTP-C节点的业务负荷。对于MME来说，PGW过负荷控制就是当PGW发生过负荷后，通知MME，由MME来缩减到PGW的业务负荷。同时，PGW也可以通过在创建会话响应消息中携带Back-off time来指示APN拥塞，MME可进行APN的拥塞控制。 
@@ -7788,7 +7788,7 @@ GTP-C过负荷控制，即过负荷的GTP-C节点在发送的GTP-C消息中的�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 PGW过负荷控制配置主要用于设置PGW过负荷控制的功能开关、PGW返回Back-off time的APN拥塞控制功能的开关、以及PGW过负荷时给不同UE下发的NAS拒绝消息中携带的Back-off Timer的取值范围。 
@@ -7796,7 +7796,7 @@ PGW过负荷控制配置主要用于设置PGW过负荷控制的功能开关、PG
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -7819,7 +7819,7 @@ PGW过负荷控制配置主要用于设置PGW过负荷控制的功能开关、PG
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -7842,12 +7842,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置PGW过负荷控制(SET PGW OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改PGW过负荷控制，包括过负荷控制功能开关，PGW返回Back-off time的APN拥塞控制功能开关，以及SGW过负荷时NAS拒绝消息中携带的Back-off Timer的范围。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -7855,10 +7855,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOAD|支持PGW过负荷控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持PGW过负荷控制的开关。
 PGWBACKTIME|支持PGW Back-off time控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持PGW返回Back-off time的APN拥塞控制功能的开关。
@@ -7870,7 +7870,7 @@ MAX|拒绝时携带的Back-off Timer最大值(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置支持PGW过负荷控制、支持PGW Back-off time控制、拒绝时携带的Back-off Timer最小值为3600、拒绝时携带的Back-off Timer最大值为18000。 
@@ -7885,7 +7885,7 @@ SET PGW OVERLOAD CONTROL:OVERLOAD="YES",PGWBACKTIME="YES",MIN=3600,MAX=18000;
 
 
 
-父主题： [PGW过负荷控制配置](../../zh-CN/tree/N_1252502363.html)
+父主题： [PGW过负荷控制配置]
 
 
 
@@ -7908,20 +7908,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询PGW过负荷控制(SHOW PGW OVERLOAD CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询PGW过负荷控制的配置信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOAD|支持PGW过负荷控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持PGW过负荷控制的开关。
 PGWBACKTIME|支持PGW Back-off time控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持PGW返回Back-off time的APN拥塞控制功能的开关。
@@ -7933,7 +7933,7 @@ MAX|拒绝时携带的Back-off Timer最大值(秒)|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询PGW过负荷控制。 
@@ -7964,7 +7964,7 @@ SHOW PGW OVERLOAD CONTROL;
 
 
 
-父主题： [PGW过负荷控制配置](../../zh-CN/tree/N_1252502363.html)
+父主题： [PGW过负荷控制配置]
 
 
 
@@ -7987,7 +7987,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 基于APN拥塞控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中，当用户发起的业务量过多时，可能导致PGW资源不够用而造成拥塞。此时如果MME不对业务量进行控制，那么PGW就有可能瘫痪。 
@@ -7998,7 +7998,7 @@ MME控制业务量的具体过程：当MME判断出已有过多业务建立时�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块可实现以下功能： 
@@ -8020,7 +8020,7 @@ MME控制业务量的具体过程：当MME判断出已有过多业务建立时�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8043,7 +8043,7 @@ APN拥塞控制策略配置
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -8066,7 +8066,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 基于APN拥塞控制开关 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中，当用户发起业务量过多，可能导致PGW资源不够用而造成拥塞。MME支持拥塞控制：当MME判断出已有过多业务建立，MME可拒绝后续用户发起的业务，并通知这些用户延迟发起业务，这样可避免PGW负荷过载。 
@@ -8077,7 +8077,7 @@ MME可针对特定的APN来进行拥塞控制，如果用户使用该特定的AP
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块可设置MME是否启用基于APN进行拥塞控制。 
@@ -8085,7 +8085,7 @@ MME可针对特定的APN来进行拥塞控制，如果用户使用该特定的AP
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8108,7 +8108,7 @@ MME可针对特定的APN来进行拥塞控制，如果用户使用该特定的AP
 
 
 
-父主题： [基于APN拥塞控制配置](../../zh-CN/tree/N_12825233.html)
+父主题： [基于APN拥塞控制配置]
 
 
 
@@ -8131,7 +8131,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置APN拥塞控制开关(SET APN CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置是否支持按APN进行拥塞控制。 
@@ -8139,15 +8139,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISSUPCONAPN|支持按APN拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持按APN进行拥塞控制。
 NBUSELPACAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|基于APN拥塞控制下，该参数用于配置用户NB-IoT RAT接入时，是否使用低接入优先级拥塞控制参数进行拥塞控制。
@@ -8157,7 +8157,7 @@ NBUSELPACAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 开启按APN拥塞控制。 
@@ -8172,7 +8172,7 @@ SET APN CONGESTION SWITCH:ISSUPCONAPN="YES";
 
 
 
-父主题： [基于APN拥塞控制开关](../../zh-CN/tree/N_128252331.html)
+父主题： [基于APN拥塞控制开关]
 
 
 
@@ -8195,7 +8195,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询APN拥塞控制开关(SHOW APN CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询是否支持按APN进行拥塞控制。 
@@ -8203,15 +8203,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISSUPCONAPN|支持按APN拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持按APN进行拥塞控制。
 NBUSELPACAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|基于APN拥塞控制下，该参数用于配置用户NB-IoT RAT接入时，是否使用低接入优先级拥塞控制参数进行拥塞控制。
@@ -8221,7 +8221,7 @@ NBUSELPACAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN拥塞控制开关。 
@@ -8250,7 +8250,7 @@ SHOW APN CONGESTION SWITCH;
 
 
 
-父主题： [基于APN拥塞控制开关](../../zh-CN/tree/N_128252331.html)
+父主题： [基于APN拥塞控制开关]
 
 
 
@@ -8273,7 +8273,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### APN拥塞控制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中，当用户发起业务量过多，可能导致PGW资源不够用而造成拥塞。MME支持进行拥塞控制：当MME判断出已有过多业务建立，MME可拒绝后续用户发起的业务，并通知这些用户延迟发起业务，这样可避免PGW负荷过载。 
@@ -8284,7 +8284,7 @@ MME可针对特定的APN来进行拥塞控制，如果用户使用该特定的AP
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块可设置MME支持对用户使用特定APN发起的业务进行拥塞控制，以及进行控制的策略、控制的门限和拒绝用户业务的比例。 
@@ -8292,7 +8292,7 @@ MME可针对特定的APN来进行拥塞控制，如果用户使用该特定的AP
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8325,7 +8325,7 @@ MME可针对特定的APN来进行拥塞控制，如果用户使用该特定的AP
 
 
 
-父主题： [基于APN拥塞控制配置](../../zh-CN/tree/N_12825233.html)
+父主题： [基于APN拥塞控制配置]
 
 
 
@@ -8348,7 +8348,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 新增APN拥塞控制策略(ADD APN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加APN拥塞控制策略。每个APN最多可配置三种策略，三个策略分别是“承载建立数”、“承载建立速率”和“接收NAS MM信令速率”。 
@@ -8356,7 +8356,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 当选择策略为“承载建立数”与“承载建立速率”时，配置的APN为APNNI+APNOI。当选择策略为“接收NAS MM信令速率”时，配置的APN为APNNI。 
@@ -8364,10 +8364,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于指示需进行拥塞控制的APN。
 TYPE|拥塞控制类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于指示对APN进行拥塞控制的方式，可选择三种方式。“承载建立数”：当该APN对应的已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。“承载建立速率”：当该APN对应的建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。 “接收NAS MM信令速率”：当签约某APN的一类用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。
@@ -8392,7 +8392,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN拥塞控制策略配置。 
@@ -8407,7 +8407,7 @@ ADD APN CONGESTION POLICY:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",TY
 
 
 
-父主题： [APN拥塞控制策略配置](../../zh-CN/tree/N_128252332.html)
+父主题： [APN拥塞控制策略配置]
 
 
 
@@ -8430,7 +8430,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 修改APN拥塞控制策略(SET APN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改APN拥塞控制策略。 
@@ -8438,15 +8438,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于指示需进行拥塞控制的APN。
 TYPE|拥塞控制类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于指示对APN进行拥塞控制的方式，可选择三种方式。“承载建立数”：当该APN对应的已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。“承载建立速率”：当该APN对应的建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。 “接收NAS MM信令速率”：当签约某APN的一类用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。
@@ -8471,7 +8471,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN拥塞控制策略配置。 
@@ -8486,7 +8486,7 @@ SET APN CONGESTION POLICY:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",TY
 
 
 
-父主题： [APN拥塞控制策略配置](../../zh-CN/tree/N_128252332.html)
+父主题： [APN拥塞控制策略配置]
 
 
 
@@ -8509,7 +8509,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 删除APN拥塞控制策略(DEL APN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除APN拥塞控制策略。 
@@ -8517,15 +8517,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于指示需进行拥塞控制的APN。
 TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示对APN进行拥塞控制的方式，可选择三种方式。“承载建立数”：当该APN对应的已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。“承载建立速率”：当该APN对应的建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。 “接收NAS MM信令速率”：当签约某APN的一类用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。
@@ -8535,7 +8535,7 @@ TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN拥塞控制策略配置，APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，拥塞控制类型为承载建立数。 
@@ -8550,7 +8550,7 @@ DEL APN CONGESTION POLICY:APN="zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org",TY
 
 
 
-父主题： [APN拥塞控制策略配置](../../zh-CN/tree/N_128252332.html)
+父主题： [APN拥塞控制策略配置]
 
 
 
@@ -8573,7 +8573,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询APN拥塞控制策略(SHOW APN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询APN拥塞控制策略。 
@@ -8581,15 +8581,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数用于指示需进行拥塞控制的APN。
 TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示对APN进行拥塞控制的方式，可选择三种方式。“承载建立数”：当该APN对应的已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。“承载建立速率”：当该APN对应的建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。 “接收NAS MM信令速率”：当签约某APN的一类用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。
@@ -8599,10 +8599,10 @@ TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|该参数用于指示需进行拥塞控制的APN。
 TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示对APN进行拥塞控制的方式，可选择三种方式。“承载建立数”：当该APN对应的已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。“承载建立速率”：当该APN对应的建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。 “接收NAS MM信令速率”：当签约某APN的一类用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。
@@ -8627,7 +8627,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN拥塞控制策略配置，APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，拥塞控制类型为承载建立数。 
@@ -8657,7 +8657,7 @@ SHOW APN CONGESTION POLICY:APN=""zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org""
 
 
 
-父主题： [APN拥塞控制策略配置](../../zh-CN/tree/N_128252332.html)
+父主题： [APN拥塞控制策略配置]
 
 
 
@@ -8680,7 +8680,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 基于MTC用户的拥塞控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中支持MTC类型用户。 
@@ -8703,7 +8703,7 @@ MTC终端通常为单天线，其信号覆盖效果较差，MME可以协同eNode
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC用户发起业务过快时，MME可对此类用户发起的业务进行拒绝。 
@@ -8728,7 +8728,7 @@ MME提供了如下MTC用户的拥塞控制策略，分别从网元角度和APN�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8751,7 +8751,7 @@ MME提供了如下MTC用户的拥塞控制策略，分别从网元角度和APN�
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -8774,7 +8774,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 基于MTC用户的MME网元拥塞控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中支持MTC类型用户。 
@@ -8800,7 +8800,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 基于MTC用户的MME网元拥塞控制功能包括： 
@@ -8822,7 +8822,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8845,7 +8845,7 @@ MTC用户的MME网元拥塞控制策略配置
 
 
 
-父主题： [基于MTC用户的拥塞控制配置](../../zh-CN/tree/N_128252345.html)
+父主题： [基于MTC用户的拥塞控制配置]
 
 
 
@@ -8868,7 +8868,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 基于MTC用户的MME网元拥塞控制开关 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中支持MTC类型用户，MTC用户业务行为不可预期，可能出现特定类型MTC用户同时接入MME，可能会造成MME拥塞，影响其他用户正常接入。系统需要对MTC用户进行拥塞控制，当MME判断出特定类型MTC用户发起业务过快时，MME可拒绝后续此类用户发起的业务，并通知这些用户延迟发起业务，这样可避免MME负荷过载。 
@@ -8879,7 +8879,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块可设置是否启用对MTC用户进行拥塞控制。如果启用，那么当MTC用户发起业务过快时，可降低MME网元负荷。 
@@ -8887,7 +8887,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -8910,7 +8910,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-父主题： [基于MTC用户的MME网元拥塞控制配置](../../zh-CN/tree/N_12825234.html)
+父主题： [基于MTC用户的MME网元拥塞控制配置]
 
 
 
@@ -8933,7 +8933,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置MTC用户的MME网元拥塞控制开关(SET MTCMME CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置是否支持基于MTC用户的MME网元拥塞控制。 
@@ -8941,15 +8941,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISSUPCONMTCMME|支持MTC用户的MME网元拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持基于MTC用户的MME网元拥塞控制。
 NBUSELPACMTC|NB-IoT接入使用低接入优先级控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|基于MTC用户的MME网元拥塞控制下，该参数用于配置用户NB-IoT RAT接入时，是否使用低接入优先级拥塞控制参数进行拥塞控制。
@@ -8959,7 +8959,7 @@ NBUSELPACMTC|NB-IoT接入使用低接入优先级控制|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 开启基于MTC用户的MME网元拥塞控制开关。 
@@ -8974,7 +8974,7 @@ SET MTCMME CONGESTION SWITCH:ISSUPCONMTCMME="YES";
 
 
 
-父主题： [基于MTC用户的MME网元拥塞控制开关](../../zh-CN/tree/N_128252341.html)
+父主题： [基于MTC用户的MME网元拥塞控制开关]
 
 
 
@@ -8997,7 +8997,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MTC用户的MME网元拥塞控制开关(SHOW MTCMME CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询是否支持基于MTC用户的MME网元拥塞控制。 
@@ -9005,15 +9005,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISSUPCONMTCMME|支持MTC用户的MME网元拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持基于MTC用户的MME网元拥塞控制。
 NBUSELPACMTC|NB-IoT接入使用低接入优先级控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|基于MTC用户的MME网元拥塞控制下，该参数用于配置用户NB-IoT RAT接入时，是否使用低接入优先级拥塞控制参数进行拥塞控制。
@@ -9023,7 +9023,7 @@ NBUSELPACMTC|NB-IoT接入使用低接入优先级控制|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于MTC用户的MME网元拥塞控制开关。 
@@ -9053,7 +9053,7 @@ SHOW MTCMME CONGESTION SWITCH;
 
 
 
-父主题： [基于MTC用户的MME网元拥塞控制开关](../../zh-CN/tree/N_128252341.html)
+父主题： [基于MTC用户的MME网元拥塞控制开关]
 
 
 
@@ -9076,7 +9076,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### MTC用户的MME网元拥塞控制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中支持MTC类型用户，MTC用户业务行为不可预期，可能出现特定类型MTC用户同时接入MME，可能会造成MME拥塞，影响其他用户正常接入。系统需要对MTC用户进行拥塞控制，当MME判断出特定类型MTC用户发起业务过快时，MME可拒绝后续此类用户发起的业务，并通知这些用户延迟发起业务，这样可避免MME负荷过载。 
@@ -9087,7 +9087,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块可设置MME支持对某些特定MTC用户进行拥塞控制，以及进行控制的策略、控制的门限和拒绝用户业务的比例。 
@@ -9095,7 +9095,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9128,7 +9128,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-父主题： [基于MTC用户的MME网元拥塞控制配置](../../zh-CN/tree/N_12825234.html)
+父主题： [基于MTC用户的MME网元拥塞控制配置]
 
 
 
@@ -9151,7 +9151,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 新增MTC用户的MME网元拥塞控制策略(ADD MTCMME CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增MTC用户的MME网元拥塞控制策略。 
@@ -9159,15 +9159,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:必选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -9190,7 +9190,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MTC用户的MME网元拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，拥塞控制类型为接收NAS MM信令速率，最大接收NAS MM信令速率为2000，通知终端延时最小值为600秒，通知终端延时最大值为1800秒，拒绝比例为100%，支持主动去活承载，可保障接收NAS MM信令速率为2。 
@@ -9205,7 +9205,7 @@ ADD MTCMME CONGESTION POLICY:MTCGRPID="460"-"01"-123456,TYPE="NASMMRATE",MAXNASM
 
 
 
-父主题： [MTC用户的MME网元拥塞控制策略配置](../../zh-CN/tree/N_128252342.html)
+父主题： [MTC用户的MME网元拥塞控制策略配置]
 
 
 
@@ -9228,7 +9228,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 修改MTC用户的MME网元拥塞控制策略(SET MTCMME CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改MTC用户的MME网元拥塞控制策略。 
@@ -9236,15 +9236,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:必选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -9267,7 +9267,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改MTC用户的MME网元拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，拥塞控制类型为接收NAS MM信令速率，最大接收NAS MM信令速率为2000，通知终端延时最小值为600秒，通知终端延时最大值为1800秒，拒绝比例为100%，支持主动去活承载。 
@@ -9282,7 +9282,7 @@ SET MTCMME CONGESTION POLICY:MTCGRPID="460"-"01"-123456,TYPE="NASMMRATE",MAXNASM
 
 
 
-父主题： [MTC用户的MME网元拥塞控制策略配置](../../zh-CN/tree/N_128252342.html)
+父主题： [MTC用户的MME网元拥塞控制策略配置]
 
 
 
@@ -9305,7 +9305,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 删除MTC用户的MME网元拥塞控制策略(DEL MTCMME CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除MTC用户的MME网元拥塞控制策略。 
@@ -9313,15 +9313,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:必选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -9334,7 +9334,7 @@ TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除MTC用户的MME网元拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，拥塞控制类型为接收NAS MM信令速率。 
@@ -9349,7 +9349,7 @@ DEL MTCMME CONGESTION POLICY:MTCGRPID="460"-"01"-123456,TYPE="NASMMRATE";
 
 
 
-父主题： [MTC用户的MME网元拥塞控制策略配置](../../zh-CN/tree/N_128252342.html)
+父主题： [MTC用户的MME网元拥塞控制策略配置]
 
 
 
@@ -9372,7 +9372,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MTC用户的MME网元拥塞控制策略(SHOW MTCMME CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询删除MTC用户的MME网元拥塞控制策略。 
@@ -9380,15 +9380,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:任选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -9401,10 +9401,10 @@ TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:任选参数；参数类型:字符型。|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示对特定MTC Group Identifier进行拥塞控制的方式，可选择两种方式。“接收NAS MM信令速率”：当签约该MTC Group Identifier的用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。 “接收NAS SM信令速率”：当签约该MTC Group Identifier的用户发送NAS SM信令速率超过配置的最大接收NAS SM信令速率时，对其进行拥塞控制。
@@ -9424,7 +9424,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MTC用户的MME网元拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，拥塞控制类型为接收NAS MM信令速率。 
@@ -9453,7 +9453,7 @@ SHOW MTCMME CONGESTION POLICY:MTCGRPID="460"-"01"-123456,TYPE="NASMMRATE";
 
 
 
-父主题： [MTC用户的MME网元拥塞控制策略配置](../../zh-CN/tree/N_128252342.html)
+父主题： [MTC用户的MME网元拥塞控制策略配置]
 
 
 
@@ -9476,7 +9476,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 基于MTC用户的APN拥塞控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中支持MTC类型用户。 
@@ -9502,7 +9502,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 基于MTC用户的APN拥塞控制功能包括： 
@@ -9524,7 +9524,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9547,7 +9547,7 @@ MTC用户的APN拥塞控制策略配置
 
 
 
-父主题： [基于MTC用户的拥塞控制配置](../../zh-CN/tree/N_128252345.html)
+父主题： [基于MTC用户的拥塞控制配置]
 
 
 
@@ -9570,7 +9570,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 基于MTC用户的APN拥塞控制开关 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中支持MTC类型用户，MTC用户业务行为不可预期，可能出现特定类型MTC用户同时接入到同一PGW，可能会造成PGW拥塞，影响其他用户正常接入。系统需要对MTC用户进行拥塞控制，当MME判断出特定类型MTC用户发起业务过快时，MME可拒绝后续此类用户发起的业务，并通知这些用户延迟发起业务，这样可避免PGW负荷过载。 
@@ -9581,7 +9581,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块可设置MME是否启用基于MTC用户的APN拥塞控制。 
@@ -9589,7 +9589,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9612,7 +9612,7 @@ MME可针对某些特定类型的MTC用户来进行拥塞控制，当此类MTC�
 
 
 
-父主题： [基于MTC用户的APN拥塞控制配置](../../zh-CN/tree/N_12825235.html)
+父主题： [基于MTC用户的APN拥塞控制配置]
 
 
 
@@ -9635,7 +9635,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 设置MTC用户的APN拥塞控制开关(SET MTCAPN CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置是否支持基于MTC用户的APN拥塞控制。 
@@ -9643,15 +9643,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISSUPCONMTCAPN|支持MTC用户的APN拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持基于MTC用户的APN拥塞控制。
 NBUSELPACMTCAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|基于MTC用户的APN拥塞控制下，该参数用于配置用户NB-IoT RAT接入时，是否使用低接入优先级拥塞控制参数进行拥塞控制。
@@ -9661,7 +9661,7 @@ NBUSELPACMTCAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 开启基于MTC用户的APN拥塞控制开关。 
@@ -9676,7 +9676,7 @@ SET MTCAPN CONGESTION SWITCH:ISSUPCONMTCAPN="YES";
 
 
 
-父主题： [基于MTC用户的APN拥塞控制开关](../../zh-CN/tree/N_128252351.html)
+父主题： [基于MTC用户的APN拥塞控制开关]
 
 
 
@@ -9699,7 +9699,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MTC用户的APN拥塞控制开关(SHOW MTCAPN CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询是否支持基于MTC用户的APN拥塞控制。 
@@ -9707,15 +9707,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISSUPCONMTCAPN|支持MTC用户的APN拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持基于MTC用户的APN拥塞控制。
 NBUSELPACMTCAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|基于MTC用户的APN拥塞控制下，该参数用于配置用户NB-IoT RAT接入时，是否使用低接入优先级拥塞控制参数进行拥塞控制。
@@ -9725,7 +9725,7 @@ NBUSELPACMTCAPN|NB-IoT接入使用低接入优先级控制|参数可选性:任�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于MTC用户的APN拥塞控制开关。 
@@ -9755,7 +9755,7 @@ SHOW MTCAPN CONGESTION SWITCH;
 
 
 
-父主题： [基于MTC用户的APN拥塞控制开关](../../zh-CN/tree/N_128252351.html)
+父主题： [基于MTC用户的APN拥塞控制开关]
 
 
 
@@ -9778,7 +9778,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### MTC用户的APN拥塞控制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LTE网络中，当MTC用户使用某APN发起业务量过多，占用PGW网元过多资源，将影响其他用户的业务，系统支持对MTC用户进行拥塞控制。当MME判断出MTC用户使用某APN已有过多业务建立，MME可拒绝后续MTC用户使用此APN发起的业务，并通知这些用户延迟发起业务，这样可避免占用过多PGW资源。 
@@ -9786,7 +9786,7 @@ LTE网络中，当MTC用户使用某APN发起业务量过多，占用PGW网元�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块可设置MME支持对特定MTC用户使用特定APN发起的业务进行拥塞控制，进行控制的策略、控制的门限及拒绝用户业务的比例。 
@@ -9794,7 +9794,7 @@ LTE网络中，当MTC用户使用某APN发起业务量过多，占用PGW网元�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -9827,7 +9827,7 @@ LTE网络中，当MTC用户使用某APN发起业务量过多，占用PGW网元�
 
 
 
-父主题： [基于MTC用户的APN拥塞控制配置](../../zh-CN/tree/N_12825235.html)
+父主题： [基于MTC用户的APN拥塞控制配置]
 
 
 
@@ -9850,7 +9850,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 新增MTC用户的APN拥塞控制策略(ADD MTCAPN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增MTC用户的APN拥塞控制策略，最多可配置三种策略，分别是“承载建立数”、“接收NAS MM信令速率”和“接收NAS SM信令速率”。 
@@ -9858,7 +9858,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 当选择策略为“承载建立数”时，配置的APN为APNNI+APNOI。当选择策略为“接收NAS MM信令速率”和“接收NAS SM信令速率”时，配置的APN为APNNI。 
@@ -9866,10 +9866,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:必选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -9895,7 +9895,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MTC用户的APN拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，拥塞控制类型为接收NAS MM信令速率，最大接收NAS MM信令速率为2000，通知终端延时最小值为600秒，通知终端延时最大值为1800秒，拒绝比例为100%，支持主动去活承载。 
@@ -9910,7 +9910,7 @@ ADD MTCAPN CONGESTION POLICY:MTCGRPID="460"-"01"-123456,APN="zte.com.apn.epc.mnc
 
 
 
-父主题： [MTC用户的APN拥塞控制策略配置](../../zh-CN/tree/N_128252352.html)
+父主题： [MTC用户的APN拥塞控制策略配置]
 
 
 
@@ -9933,7 +9933,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 修改MTC用户的APN拥塞控制策略(SET MTCAPN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改MTC用户的APN拥塞控制策略。 
@@ -9941,15 +9941,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:必选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -9975,7 +9975,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改MTC用户的APN拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，拥塞控制类型为接收NAS MM信令速率，最大接收NAS MM信令速率为2000，通知终端延时最小值为600秒，通知终端延时最大值为1800秒，拒绝比例为100%，支持主动去活承载。 
@@ -9990,7 +9990,7 @@ SET MTCAPN CONGESTION POLICY:MTCGRPID="460"-"01"-123456,APN="zte.com.apn.epc.mnc
 
 
 
-父主题： [MTC用户的APN拥塞控制策略配置](../../zh-CN/tree/N_128252352.html)
+父主题： [MTC用户的APN拥塞控制策略配置]
 
 
 
@@ -10013,7 +10013,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 删除MTC用户的APN拥塞控制策略(DEL MTCAPN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除MTC用户的APN拥塞控制策略。 
@@ -10021,15 +10021,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:必选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -10043,7 +10043,7 @@ TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除MTC用户的APN拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，拥塞控制类型为接收NAS MM信令速率。 
@@ -10058,7 +10058,7 @@ DEL MTCAPN CONGESTION POLICY:MTCGRPID="460"-"01"-123456,APN="zte.com.apn.epc.mnc
 
 
 
-父主题： [MTC用户的APN拥塞控制策略配置](../../zh-CN/tree/N_128252352.html)
+父主题： [MTC用户的APN拥塞控制策略配置]
 
 
 
@@ -10081,7 +10081,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ###### 查询MTC用户的APN拥塞控制策略(SHOW MTCAPN CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MTC用户的APN拥塞控制策略。 
@@ -10089,15 +10089,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:任选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -10111,10 +10111,10 @@ TYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:0~99个字符。|该参数用于指示需进行拥塞控制的APN。
@@ -10137,7 +10137,7 @@ LOWMAX|低优先级拒绝时携带的Back-off Timer最大取值（秒）|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MTC用户的APN拥塞控制策略配置，MTC Group Identifier为"460"-"01"-123456，APN名称为zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org，拥塞控制类型为接收NAS MM信令速率。 
@@ -10166,7 +10166,7 @@ SHOW MTCAPN CONGESTION POLICY:MTCGRPID="460"-"01"-123456,APN="zte.com.apn.epc.mn
 
 
 
-父主题： [MTC用户的APN拥塞控制策略配置](../../zh-CN/tree/N_128252352.html)
+父主题： [MTC用户的APN拥塞控制策略配置]
 
 
 
@@ -10189,7 +10189,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 基于RAT拥塞控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当MME网元在业务过负荷的情况下，NB-IOT物联网用户的优先级应该低于人网用户，即MME需要优先满足人网用户的接入需求。 
@@ -10197,7 +10197,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用来配置RAT拥塞控制开关和RAT（Radio Access Technology，无线接入技术）拥塞控制参数，比如分别设置NB-IOT和WB用户的承载建立数、承载建立速率、接收NAS MM信令速率、接收NAS SM信令速率。 
@@ -10205,7 +10205,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -10228,7 +10228,7 @@ RAT拥塞控制策略配置
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -10251,21 +10251,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### RAT拥塞控制开关 
 
 
-[](None)背景知识 
+背景知识 
 
             
             NB-IoT用户有更低的拥塞控制门限，优先于普通移动用户被控制。网元可基于用户接入RAT类型进行NAS拥塞门限配置、拥塞判断和拥塞控制，如可控制NB-IoT RAT类型用户的附着请求消息和CPSR消息。当NB-IoT用户的拥塞门限低于普通移动用户的拥塞门限时，优先被控制。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             RAT拥塞控制开关用于配置MME是否支持RAT拥塞控制。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -10288,7 +10288,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [基于RAT拥塞控制配置](../../zh-CN/tree/N_128252346.html)
+父主题： [基于RAT拥塞控制配置]
 
 
 
@@ -10311,12 +10311,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置RAT拥塞控制开关(SET RAT CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置基于用户接入类型的RAT拥塞控制功能是否开启。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10324,10 +10324,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPNBRATCON|支持RAT拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置是否支持基于用户接入类型RAT的拥塞控制。
 
@@ -10336,7 +10336,7 @@ SUPNBRATCON|支持RAT拥塞控制|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置不支持RAT拥塞控制。 
@@ -10351,7 +10351,7 @@ SET RAT CONGESTION SWITCH:SUPNBRATCON="NO";
 
 
 
-父主题： [RAT拥塞控制开关](../../zh-CN/tree/N_128252347.html)
+父主题： [RAT拥塞控制开关]
 
 
 
@@ -10374,12 +10374,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询RAT拥塞控制开关(SHOW RAT CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询基于用户接入类型的RAT拥塞控制是否开启。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10387,10 +10387,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPNBRATCON|支持RAT拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|设置是否支持基于用户接入类型RAT的拥塞控制。
 
@@ -10399,7 +10399,7 @@ SUPNBRATCON|支持RAT拥塞控制|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询是否支持RAT拥塞控制。 
@@ -10429,7 +10429,7 @@ SHOW RAT CONGESTION SWITCH;
 
 
 
-父主题： [RAT拥塞控制开关](../../zh-CN/tree/N_128252347.html)
+父主题： [RAT拥塞控制开关]
 
 
 
@@ -10452,21 +10452,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### RAT拥塞控制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             NB-IoT用户有更低的拥塞控制门限，优先于大网用户被控制。网元可基于用户接入RAT类型进行NAS拥塞门限配置、拥塞判断和拥塞控制，如可控制NB-IoT RAT类型用户的附着请求消息和CPSR消息。当NB-IoT用户的拥塞门限低于大网用户的拥塞门限时，优先被控制。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             RAT拥塞控制策略配置用于设置MME基于用户接入RAT的业务进行拥塞控制，包括进行控制的策略、控制的门限和拒绝用户业务的比例。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -10499,7 +10499,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [基于RAT拥塞控制配置](../../zh-CN/tree/N_128252346.html)
+父主题： [基于RAT拥塞控制配置]
 
 
 
@@ -10522,12 +10522,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 新增RAT拥塞控制策略(ADD RAT CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增RAT拥塞控制策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10535,10 +10535,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACCESSTYPE|无线接入类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于配置用户的无线接入类型，包括Wide Band和NB-IoT。
 CTLTYPE|拥塞控制类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置基于RAT拥塞控制的方式，有4种控制方式供选择：承载建立数：当该无线接入类型下已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。承载建立速率：当该无线接入类型下建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。接收NAS MM信令速率：当该无线接入类型下的用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。接收NAS SM信令速率：当该无线接入类型下的用户发送NAS SM信令速率超过配置的最大接收NAS SM信令速率时，对其进行拥塞控制。
@@ -10556,7 +10556,7 @@ BACKOFFTIMEEND|拒绝时携带的Back-off Timer最大取值(秒)|参数可选性
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增RAT拥塞控制策略配置。 
@@ -10571,7 +10571,7 @@ ADD RAT CONGESTION POLICY:ACCESSTYPE="NB-IOT",CTLTYPE="RATE_NAS_SM_SIG",MAXNASSM
 
 
 
-父主题： [RAT拥塞控制策略配置](../../zh-CN/tree/N_128252348.html)
+父主题： [RAT拥塞控制策略配置]
 
 
 
@@ -10594,12 +10594,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 修改RAT拥塞控制策略(SET RAT CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置RAT拥塞控制策略。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10607,10 +10607,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACCESSTYPE|无线接入类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于配置用户的无线接入类型，包括Wide Band和NB-IoT。
 CTLTYPE|拥塞控制类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置基于RAT拥塞控制的方式，有4种控制方式供选择：承载建立数：当该无线接入类型下已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。承载建立速率：当该无线接入类型下建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。接收NAS MM信令速率：当该无线接入类型下的用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。接收NAS SM信令速率：当该无线接入类型下的用户发送NAS SM信令速率超过配置的最大接收NAS SM信令速率时，对其进行拥塞控制。
@@ -10628,7 +10628,7 @@ BACKOFFTIMEEND|拒绝时携带的Back-off Timer最大取值(秒)|参数可选性
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置RAT拥塞控制策略，最大接收NAS MM信令速率为100，拒绝时携带的Back-off Timer最小取值(秒)为50，拒绝时携带的Back-off Timer最大取值(秒)为100。 
@@ -10643,7 +10643,7 @@ SET RAT CONGESTION POLICY:ACCESSTYPE="NB-IOT",CTLTYPE="RATE_NAS_MM_SIG",MAXNASMM
 
 
 
-父主题： [RAT拥塞控制策略配置](../../zh-CN/tree/N_128252348.html)
+父主题： [RAT拥塞控制策略配置]
 
 
 
@@ -10666,12 +10666,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 删除RAT拥塞控制策略(DEL RAT CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除RAT拥塞控制策略。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10679,10 +10679,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACCESSTYPE|无线接入类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于配置用户的无线接入类型，包括Wide Band和NB-IoT。
 CTLTYPE|拥塞控制类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置基于RAT拥塞控制的方式，有4种控制方式供选择：承载建立数：当该无线接入类型下已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。承载建立速率：当该无线接入类型下建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。接收NAS MM信令速率：当该无线接入类型下的用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。接收NAS SM信令速率：当该无线接入类型下的用户发送NAS SM信令速率超过配置的最大接收NAS SM信令速率时，对其进行拥塞控制。
@@ -10692,7 +10692,7 @@ CTLTYPE|拥塞控制类型|参数可选性:必选参数；参数类型:枚举。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除RAT拥塞控制策略。 
@@ -10707,7 +10707,7 @@ DEL RAT CONGESTION POLICY:ACCESSTYPE="NB-IOT",CTLTYPE="RATE_NAS_MM_SIG";
 
 
 
-父主题： [RAT拥塞控制策略配置](../../zh-CN/tree/N_128252348.html)
+父主题： [RAT拥塞控制策略配置]
 
 
 
@@ -10730,12 +10730,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询RAT拥塞控制策略(SHOW RAT CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询RAT拥塞控制策略。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10743,10 +10743,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACCESSTYPE|无线接入类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置用户的无线接入类型，包括Wide Band和NB-IoT。
 CTLTYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置基于RAT拥塞控制的方式，有4种控制方式供选择：承载建立数：当该无线接入类型下已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。承载建立速率：当该无线接入类型下建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。接收NAS MM信令速率：当该无线接入类型下的用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。接收NAS SM信令速率：当该无线接入类型下的用户发送NAS SM信令速率超过配置的最大接收NAS SM信令速率时，对其进行拥塞控制。
@@ -10756,10 +10756,10 @@ CTLTYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACCESSTYPE|无线接入类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置用户的无线接入类型，包括Wide Band和NB-IoT。
 CTLTYPE|拥塞控制类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置基于RAT拥塞控制的方式，有4种控制方式供选择：承载建立数：当该无线接入类型下已建立承载数超过配置的最大建立承载数时，对其进行拥塞控制 。承载建立速率：当该无线接入类型下建立承载速率超过配置的最大建立承载速率时，对其进行拥塞控制。接收NAS MM信令速率：当该无线接入类型下的用户发送NAS MM信令速率超过配置的最大接收NAS MM信令速率时，对其进行拥塞控制。接收NAS SM信令速率：当该无线接入类型下的用户发送NAS SM信令速率超过配置的最大接收NAS SM信令速率时，对其进行拥塞控制。
@@ -10777,7 +10777,7 @@ BACKOFFTIMEEND|拒绝时携带的Back-off Timer最大取值(秒)|参数可选性
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询RAT拥塞控制策略。 
@@ -10809,7 +10809,7 @@ SHOW RAT CONGESTION POLICY;
 
 
 
-父主题： [RAT拥塞控制策略配置](../../zh-CN/tree/N_128252348.html)
+父主题： [RAT拥塞控制策略配置]
 
 
 
@@ -10832,7 +10832,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 控制面数据拥塞控制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 控制面数据拥塞控制，属于3GPP协议标准的NAS拥塞控制；控制面数据拥塞可独立控制和识别，区别于人网和物网其他的拥塞控制，这样，各拥塞门限也可独立控制，例如人网拥塞门限可以设置高于物联网控制面数据拥塞门限，增加拥塞控制灵活度。 
@@ -10840,7 +10840,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME控制面数据传送过负荷时，可以限制UE的控制面数据传输，通过下发UE新增的“Control Plane data back-off timer”T3448 来实施针对控制面数据传输的退让时间。 
@@ -10848,7 +10848,7 @@ MME控制面数据传送过负荷时，可以限制UE的控制面数据传输，
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -10871,7 +10871,7 @@ MME控制面数据传送过负荷时，可以限制UE的控制面数据传输，
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -10894,7 +10894,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 控制面数据拥塞控制开关 
 
 
-[](None)背景知识 
+背景知识 
 
 
 控制面数据拥塞控制，属于3GPP协议标准的NAS拥塞控制；控制面数据拥塞可独立控制和识别。 
@@ -10902,7 +10902,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 控制面数据拥塞控制开关设置MME是否支持控制面数据拥塞控制，和当MME控制面数据拥塞时，是否支持控制面数据传送转用户面数据传送。 
@@ -10910,7 +10910,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -10933,7 +10933,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [控制面数据拥塞控制配置](../../zh-CN/tree/N_128252360.html)
+父主题： [控制面数据拥塞控制配置]
 
 
 
@@ -10956,7 +10956,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置控制面数据拥塞控制开关(SET CONTROL PLANE DATA CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置是否支持控制面数据拥塞控制。 
@@ -10964,7 +10964,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -10972,10 +10972,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPCPCONG|支持控制面数据拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持控制面数据拥塞控制。
 SUPCGECPTOUP|支持拥塞时控制面数据转用户面数据传送|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置当MME控制面数据拥塞时，是否支持控制面数据传送转用户面数据传送。
@@ -10985,7 +10985,7 @@ SUPCGECPTOUP|支持拥塞时控制面数据转用户面数据传送|参数可选
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置控制面数据拥塞控制开关，不支持控制面数据拥塞控制，不支持拥塞时控制面数据转用户面数据传送。 
@@ -11000,7 +11000,7 @@ SET CONTROL PLANE DATA CONGESTION SWITCH:SUPCPCONG="NO",SUPCGECPTOUP="NO";
 
 
 
-父主题： [控制面数据拥塞控制开关](../../zh-CN/tree/N_128252361.html)
+父主题： [控制面数据拥塞控制开关]
 
 
 
@@ -11023,7 +11023,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询控制面数据拥塞控制开关(SHOW CONTROL PLANE DATA CONGESTION SWITCH) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询是否支持控制面数据拥塞控制。 
@@ -11031,7 +11031,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -11039,10 +11039,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPCPCONG|支持控制面数据拥塞控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持控制面数据拥塞控制。
 SUPCGECPTOUP|支持拥塞时控制面数据转用户面数据传送|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置当MME控制面数据拥塞时，是否支持控制面数据传送转用户面数据传送。
@@ -11052,7 +11052,7 @@ SUPCGECPTOUP|支持拥塞时控制面数据转用户面数据传送|参数可选
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询控制面数据拥塞控制开关。 
@@ -11082,7 +11082,7 @@ SHOW CONTROL PLANE DATA CONGESTION SWITCH
 
 
 
-父主题： [控制面数据拥塞控制开关](../../zh-CN/tree/N_128252361.html)
+父主题： [控制面数据拥塞控制开关]
 
 
 
@@ -11105,7 +11105,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 控制面数据拥塞控制策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 控制面数据拥塞控制，属于3GPP协议标准的NAS拥塞控制；控制面数据拥塞可独立控制和识别，区别于人网和物网其他的拥塞控制，这样，各拥塞门限也可独立控制，例如人网拥塞门限可以设置高于物联网控制面数据拥塞门限，增加拥塞控制灵活度。 
@@ -11113,7 +11113,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME控制面数据传送过负荷时，可以限制UE的控制面数据传输，当MME最大接收CP业务请求信令速率大于设置门限时，通过下发UE新增的“Control Plane data back-off timer”T3448 来实施针对控制面数据传输的退让时间。 
@@ -11121,7 +11121,7 @@ MME控制面数据传送过负荷时，可以限制UE的控制面数据传输，
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -11144,7 +11144,7 @@ MME控制面数据传送过负荷时，可以限制UE的控制面数据传输，
 
 
 
-父主题： [控制面数据拥塞控制配置](../../zh-CN/tree/N_128252360.html)
+父主题： [控制面数据拥塞控制配置]
 
 
 
@@ -11167,7 +11167,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置控制面数据拥塞控制策略(SET CONTROL PLANE DATA CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置控制面数据拥塞策略。 
@@ -11175,7 +11175,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -11183,10 +11183,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MAXCPSERVREQ|最大接收CP业务请求信令速率（条/秒）|参数可选性:任选参数；参数类型:整数；参数范围为:0~4294967295。|该参数用于设置可支持的最大CP业务请求信令速率，超过此配置值时进行控制面数据拥塞控制。
 CPBACKOFFTIMESTART|拒绝时携带的Control Plane data Back-off Timer最小取值(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:0~11160。|该参数用于指示下发给终端发起Control Plane data Back-off Timer的最小值。当用户发起Control Plane Service Request，系统判断由于达到拥塞控制条件而拒绝此业务时，通过本参数确定拒绝消息中是否携带Control Plane data Back- off Timer。如果本参数为0，表示不携带Control Plane data Back-off Timer信息给UE。如果本参数不为0，此字段取值在“拒绝时携带的Control Plane data Back-off Timer最小取值(秒)”与“拒绝时携带的Control Plane data Back-off Timer最大取值(秒)”的范围内随机选择。终端在Control Plane data Back- off Timer时间内不再发起Control Plane Service Request。
@@ -11198,7 +11198,7 @@ REJECTRATE|拒绝比例|参数可选性:任选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置控制面数据拥塞控制策略，将最大接收CP业务请求信令速率设置为0，拒绝时携带的Control Plane data Back-off Timer最小取值设置为600s，最大取值设置为1800s，拒绝比例设置为100。 
@@ -11213,7 +11213,7 @@ SET CONTROL PLANE DATA CONGESTION POLICY:MAXCPSERVREQ=0,CPBACKOFFTIMESTART=600,C
 
 
 
-父主题： [控制面数据拥塞控制策略](../../zh-CN/tree/N_128252362.html)
+父主题： [控制面数据拥塞控制策略]
 
 
 
@@ -11236,7 +11236,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询控制面数据拥塞控制策略(SHOW CONTROL PLANE DATA CONGESTION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询控制面数据拥塞策略。 
@@ -11244,7 +11244,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -11252,10 +11252,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MAXCPSERVREQ|最大接收CP业务请求信令速率（条/秒）|参数可选性:任选参数；参数类型:整数。|该参数用于设置可支持的最大CP业务请求信令速率，超过此配置值时进行控制面数据拥塞控制。
 CPBACKOFFTIMESTART|拒绝时携带的Control Plane data Back-off Timer最小取值(秒)|参数可选性:任选参数；参数类型:整数。|该参数用于指示下发给终端发起Control Plane data Back-off Timer的最小值。当用户发起Control Plane Service Request，系统判断由于达到拥塞控制条件而拒绝此业务时，通过本参数确定拒绝消息中是否携带Control Plane data Back- off Timer。如果本参数为0，表示不携带Control Plane data Back-off Timer信息给UE。如果本参数不为0，此字段取值在“拒绝时携带的Control Plane data Back-off Timer最小取值(秒)”与“拒绝时携带的Control Plane data Back-off Timer最大取值(秒)”的范围内随机选择。终端在Control Plane data Back- off Timer时间内不再发起Control Plane Service Request。
@@ -11267,7 +11267,7 @@ REJECTRATE|拒绝比例|参数可选性:任选参数；参数类型:整数。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询控制面数据拥塞控制策略。 
@@ -11297,7 +11297,7 @@ SHOW CONTROL PLANE DATA CONGESTION POLICY
 
 
 
-父主题： [控制面数据拥塞控制策略](../../zh-CN/tree/N_128252362.html)
+父主题： [控制面数据拥塞控制策略]
 
 
 
@@ -11320,7 +11320,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME拥塞控制管理 
 
 
-[](None)背景知识 
+背景知识 
 
 
 拥塞控制是指在网络中，因为各种原因发生业务拥塞时，MME会对接入的业务和用户实施控制，以达到降低业务和整个网络的负荷，保证网元长期有效的正常运行的目的。 
@@ -11350,7 +11350,7 @@ MME拥塞控制区分用户和业务特性，包括：
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME的拥塞控制，可以对承载建立速率、MME接收NAS MM信令的速率和接收NAS SM信令速率设置对应的阈值，当达到阈值时，拥塞机制会起作用。为了方便运营商在商用局上部署拥塞控制，“MME拥塞控制管理”提供信令速率查询，用于根据当前的信令速率，来设置拥塞信令速率阈值： 
@@ -11386,7 +11386,7 @@ MME的拥塞控制，可以对承载建立速率、MME接收NAS MM信令的速�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -11419,7 +11419,7 @@ MME的拥塞控制，可以对承载建立速率、MME接收NAS MM信令的速�
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -11442,12 +11442,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询基于APN拥塞控制信令速率(SHOW APN SIGRATE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询基于APN拥塞控制信令速率
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -11455,10 +11455,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|该参数表示发生拥塞的APN名称。
 
@@ -11467,10 +11467,10 @@ APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型。|该参数表示发生拥塞的APN名称。
 CRBEARERRATE|建立承载速率（个/秒）|参数可选性:任选参数；参数类型:整数。|该参数表示建立承载速率(个/秒)。
@@ -11481,7 +11481,7 @@ RENASMMSIGRATE|接收NAS MM信令速率（条/秒）|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于APN拥塞控制信令速率 
@@ -11510,7 +11510,7 @@ zte.com.apn.epc.mnc222.mcc333.3gppnetwork.org   12345                   12345
 
 
 
-父主题： [MME拥塞控制管理](../../zh-CN/tree/N_130840540.html)
+父主题： [MME拥塞控制管理]
 
 
 
@@ -11533,12 +11533,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询基于MTC用户拥塞控制信令速率(SHOW MTC SIGRATE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询基于MTC用户拥塞控制信令速率
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -11546,10 +11546,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:任选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码(MCC)|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|MCC标识移动用户所在国家，比如中国MCC为460。
@@ -11561,10 +11561,10 @@ GROUPID|Group ID|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码(MCC)|参数可选性:任选参数；参数类型:字符型。|MCC标识移动用户所在国家，比如中国MCC为460。
 MNC|移动网号(MNC)|参数可选性:任选参数；参数类型:字符型。|移动网号标识移动用户归属的PLMN网络编号，比如中国电信为03，中国移动为00、02。
@@ -11577,7 +11577,7 @@ RENASSMSIGRATE|接收NAS SM信令速率（条/秒）|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于MTC用户拥塞控制信令速率。 
@@ -11606,7 +11606,7 @@ SHOW MTC SIGRATE;
 
 
 
-父主题： [MME拥塞控制管理](../../zh-CN/tree/N_130840540.html)
+父主题： [MME拥塞控制管理]
 
 
 
@@ -11629,12 +11629,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询基于MTC用户的APN拥塞控制信令速率(SHOW MTCAPN SIGRATE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询基于MTC用户的APN拥塞控制信令速率
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -11642,10 +11642,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MTCGRPID|MTC Group Identifier|参数可选性:特殊任选参数；参数类型:复合参数|该参数用于指示进行拥塞控制的MTC用户的MTC Group Identifier，MTC Group Identifier由MCC、MNC及Group ID三部分组成。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|该参数用于指示MTC Group Identifier的MCC。
@@ -11658,10 +11658,10 @@ APN|APN名称|参数可选性:特殊任选参数；参数类型:字符型；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型。|该参数用于指示MTC Group Identifier的MCC。
 MNC|移动网号|参数可选性:任选参数；参数类型:字符型。|该参数用于指示MTC Group Identifier的MNC。
@@ -11675,7 +11675,7 @@ RENASSMSIGRATE|接收NAS SM信令速率（条/秒）|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于MTC用户的APN拥塞控制信令速率。 
@@ -11704,7 +11704,7 @@ SHOW MTCAPN SIGRATE;
 
 
 
-父主题： [MME拥塞控制管理](../../zh-CN/tree/N_130840540.html)
+父主题： [MME拥塞控制管理]
 
 
 
@@ -11727,12 +11727,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询基于RAT拥塞控制信令速率(SHOW RAT SIGRATE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询基于RAT拥塞控制信令速率
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -11740,10 +11740,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACCESSTYPE|无线接入类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:ALL。|该参数用于表示查询的用户无线接入类型，包括Wide Band和NB-IoT。
 
@@ -11752,10 +11752,10 @@ ACCESSTYPE|无线接入类型|参数可选性:任选参数；参数类型:枚举
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACCESSTYPE|无线接入类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于表示查询的用户无线接入类型，包括Wide Band和NB-IoT。
 CRBEARERRATE|建立承载速率（个/秒）|参数可选性:任选参数；参数类型:整数。|该参数表示建立承载速率(个/秒)。
@@ -11767,7 +11767,7 @@ RENASSMSIGRATE|接收NAS SM信令速率（条/秒）|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询基于RAT拥塞控制信令速率 
@@ -11796,7 +11796,7 @@ Wide Band       12345                   100                           100
 
 
 
-父主题： [MME拥塞控制管理](../../zh-CN/tree/N_130840540.html)
+父主题： [MME拥塞控制管理]
 
 
 
@@ -11819,7 +11819,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME/SGSN网管过负荷控制参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当业务处理单元发生过负荷的时候，为了优先保证用户的正常业务，需要对信令跟踪、失败观察等网管类的功能进行控制，停止向网管上报信令，把对应的系统消耗留出来给业务使用，达到优先保障业务正常运行的目的。 
@@ -11827,7 +11827,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置在网元发生过负荷的时候，控制业务进程单用户信令跟踪、全用户信令跟踪、接口信令跟踪以及失败观察等是否上报给网管。 
@@ -11835,7 +11835,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -11858,7 +11858,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [拥塞和过负荷控制配置](../../zh-CN/tree/N_12525023.html)
+父主题： [拥塞和过负荷控制配置]
 
 
 
@@ -11881,7 +11881,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置MME/SGSN网管过负荷控制参数(SET MMESGSNOMMCPUOLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置网管过负荷控制参数，包括全用户信令跟踪优先级、单用户信令跟踪优先级、接口信令跟踪优先级、全用户失败观察优先级、单用户失败观察优先级。在网元发生过负荷的时候，控制业务进程的单用户信令跟踪、全用户信令跟踪、接口信令跟踪这些信令是否上报给网管。 
@@ -11889,15 +11889,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OMMALLSIGCFG|全用户信令跟踪优先级|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置全用户信令跟踪优先级，包括三个选项：不控制、低优先级和高优先级。设置参数为不控制，当MME/SGSN启用CPU过负荷控制功能，无论CPU是否处于过负荷，MME/SGSN都会上报全用户的信令跟踪给网管。设置参数为低优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载）或者二级过负荷时（低过载），则MME/SGSN都会对全用户信令跟踪进行控制，不再上报信令给网管。设置参数为高优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载），则MME/SGSN都会对全用户信令跟踪进行控制，不再上报信令给网管。
 OMMSINGLESIGCFG|单用户信令跟踪优先级|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置单用户信令跟踪优先级，包括三个选项：不控制、低优先级和高优先级。设置参数为不控制，当MME/SGSN启用CPU过负荷控制功能，无论CPU是否处于过负荷，MME/SGSN都会上报单用户的信令跟踪给网管。设置参数为低优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载）或者二级过负荷时（低过载），则MME/SGSN都会对单用户信令跟踪进行控制，不再上报信令给网管。设置参数为高优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载），则MME/SGSN都会对单用户信令跟踪进行控制，不再上报信令给网管。
@@ -11910,7 +11910,7 @@ OMMSINGLEFAILCFG|单用户失败观察优先级|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME/SGSN网管过负荷控制参数。全用户信令跟踪优先级为优先级低，单用户信令跟踪优先级为优先级高，接口信令跟踪优先级为优先级低。 
@@ -11925,7 +11925,7 @@ SET MMESGSNOMMCPUOLCFG:OMMALLSIGCFG="LOW",OMMSINGLESIGCFG="HIGH",OMMINTERFACESIG
 
 
 
-父主题： [MME/SGSN网管过负荷控制参数配置](../../zh-CN/tree/N_12632060.html)
+父主题： [MME/SGSN网管过负荷控制参数配置]
 
 
 
@@ -11948,7 +11948,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询MME/SGSN网管过负荷控制参数(SHOW MMESGSNOMMCPUOLCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询网管过负荷控制配置。 
@@ -11956,15 +11956,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OMMALLSIGCFG|全用户信令跟踪优先级|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置全用户信令跟踪优先级，包括三个选项：不控制、低优先级和高优先级。设置参数为不控制，当MME/SGSN启用CPU过负荷控制功能，无论CPU是否处于过负荷，MME/SGSN都会上报全用户的信令跟踪给网管。设置参数为低优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载）或者二级过负荷时（低过载），则MME/SGSN都会对全用户信令跟踪进行控制，不再上报信令给网管。设置参数为高优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载），则MME/SGSN都会对全用户信令跟踪进行控制，不再上报信令给网管。
 OMMSINGLESIGCFG|单用户信令跟踪优先级|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置单用户信令跟踪优先级，包括三个选项：不控制、低优先级和高优先级。设置参数为不控制，当MME/SGSN启用CPU过负荷控制功能，无论CPU是否处于过负荷，MME/SGSN都会上报单用户的信令跟踪给网管。设置参数为低优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载）或者二级过负荷时（低过载），则MME/SGSN都会对单用户信令跟踪进行控制，不再上报信令给网管。设置参数为高优先级，当MME/SGSN启用CPU过负荷控制功能，如果当前CPU的负荷等级处于一级过负荷（高过载），则MME/SGSN都会对单用户信令跟踪进行控制，不再上报信令给网管。
@@ -11977,7 +11977,7 @@ OMMSINGLEFAILCFG|单用户失败观察优先级|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME/SGSN网管过负荷控制参数。 
@@ -12007,7 +12007,7 @@ SHOW MMESGSNOMMCPUOLCFG
 
 
 
-父主题： [MME/SGSN网管过负荷控制参数配置](../../zh-CN/tree/N_12632060.html)
+父主题： [MME/SGSN网管过负荷控制参数配置]
 
 
 
@@ -12030,7 +12030,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 软件参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 由于某些功能或者应用场景的需要，MME可以通过设置系统内部自定义的参数，对非协议要求的或一些特殊场景下使用的功能进行控制。 
@@ -12038,7 +12038,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 软件参数配置功能提供了系统内部自定义参数的设置，对业务流程、系统控制、非协议要求的或个别功能进行简单灵活控制。 
@@ -12046,7 +12046,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -12079,7 +12079,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -12102,26 +12102,26 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 增加软件参数配置(ADD SOFTWARE PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加软件参数配置。 
 
 
-[所有软参详细说明](enum/softwareParaHelp.html)
+[所有软参详细说明]
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PARAID|软件参数ID|参数可选性:必选参数；参数类型:整数；参数范围为:0~4294967295。|本参数用于设置软件参数编号。
 PARANAME|参数变量名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~40个字符。|本参数用于设置参数变量名。
@@ -12138,7 +12138,7 @@ REMARK|备注|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加软件参数，软件参数ID为9999，软件参数值为111，软参名为bCode，最小值为1，最大值为1000。 
@@ -12153,7 +12153,7 @@ ADD SOFTWARE PARAMETER:PARAID=9999,PARANAME="bCode",DFTVALUE=1,PARAVALUE=111,MIN
 
 
 
-父主题： [软件参数配置](../../zh-CN/tree/N_1254501.html)
+父主题： [软件参数配置]
 
 
 
@@ -12176,26 +12176,26 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置软件参数配置(SET SOFTWARE PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置系统内部自定义的参数，非协议要求的或个别功能的开关，比如是否启用资源异常回收控制开关。 
 
 
-[所有软参详细说明](enum/softwareParaHelp.html)
+[所有软参详细说明]
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PARAID|软件参数ID|参数可选性:必选参数；参数类型:整数；参数范围为:0~4294967295。|本参数用于设置软件参数编号。
 PARAVALUE|软件参数值|参数可选性:必选参数；参数类型:整数；参数范围为:0~4294967295。|本参数用于设置参数当前值。
@@ -12205,7 +12205,7 @@ PARAVALUE|软件参数值|参数可选性:必选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置软件参数，软件参数ID为786685，软件参数值为1。 
@@ -12220,7 +12220,7 @@ SET SOFTWARE PARAMETER:PARAID=786685,PARAVALUE=1;
 
 
 
-父主题： [软件参数配置](../../zh-CN/tree/N_1254501.html)
+父主题： [软件参数配置]
 
 
 
@@ -12243,7 +12243,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除软件参数配置(DEL SOFTWARE PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除软件参数配置。 
@@ -12251,15 +12251,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PARAID|软件参数ID|参数可选性:必选参数；参数类型:整数；参数范围为:0~4294967295。|本参数用于设置软件参数编号。
 
@@ -12268,7 +12268,7 @@ PARAID|软件参数ID|参数可选性:必选参数；参数类型:整数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除软件参数，软件参数ID为9999。 
@@ -12283,7 +12283,7 @@ DEL SOFTWARE PARAMETER:PARAID=9999;
 
 
 
-父主题： [软件参数配置](../../zh-CN/tree/N_1254501.html)
+父主题： [软件参数配置]
 
 
 
@@ -12306,26 +12306,26 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询软件参数配置(SHOW SOFTWARE PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询软件参数配置。 
 
 
-[所有软参详细说明](enum/softwareParaHelp.html)
+[所有软参详细说明]
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PARAID|软件参数ID|参数可选性:任选参数；参数类型:整数；参数范围为:0~4294967295。|本参数用于设置软件参数编号。
 NAME|参数名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~200个字符。|本参数用于设置参数名称。
@@ -12336,10 +12336,10 @@ FLAG|修改标识|参数可选性:任选参数；参数类型:枚举。参见枚
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PARAID|软件参数ID|参数可选性:任选参数；参数类型:整数。|本参数用于设置软件参数编号。
 DFTVALUE|参数缺省值|参数可选性:任选参数；参数类型:整数。|本参数用于设置参数缺省值。
@@ -12354,7 +12354,7 @@ REMARK|备注|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询软件参数配置，修改标识为“已修改”。 
@@ -12389,7 +12389,7 @@ SHOW SOFTWARE PARAMETER:FLAG="CHANGED";
 
 
 
-父主题： [软件参数配置](../../zh-CN/tree/N_1254501.html)
+父主题： [软件参数配置]
 
 
 
@@ -12412,14 +12412,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 资源告警配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             为了保证网络的正常运行，本网元的注册用户数、在线用户数、PDP数量和动态资源达到一定的容量比例时，需要进行告警，以便运营商及时考虑扩容。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 资源告警配置包括业务量拥塞统计配置和动态资源使用率告警参数配置。 
@@ -12433,7 +12433,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -12456,7 +12456,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -12479,7 +12479,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 业务量拥塞统计配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 业务量拥塞统计配置是指当系统的各种资源（如用户数量或承载数量）将要到达了License容量的门限，进行提前预警，以便运营商及时采取扩容等措施，以免资源不足导致用户业务失败，对运营商造成损失。 
@@ -12506,7 +12506,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 对应不同的局点类型，设置对应容量受License控制的告警类型，每种告警类型都可以设置四个不同级别的告警门限，每种告警类型都可以设置一个告警恢复门限。 
@@ -12565,7 +12565,7 @@ Combo根据统计的各种类型的用户数和对应的License容量的比例�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -12598,7 +12598,7 @@ Combo根据统计的各种类型的用户数和对应的License容量的比例�
 
 
 
-父主题： [资源告警配置](../../zh-CN/tree/N_1254510.html)
+父主题： [资源告警配置]
 
 
 
@@ -12621,20 +12621,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增资源告警(ADD EQU) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增资源告警。该告警用于监控全局的用户资源，与license进行比较，进行提前预警，以便运营商及时采取扩容等措施，以免资源不足导致用户业务失败，对运营商造成损失。
 
 
-[](None)注意事项 
+注意事项 
 
 该告警共分为4级，1级为最高，4级为最低，低级告警的门限值必须小于高级告警的门限值，告警阈值下限必须小于4级告警门限值。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 EQUTYPE|告警类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对应的用户资源告警类型，包括用户数、PDP数等。
 HIGHTHRES1|一级告警上报门限|参数可选性:必选参数；参数类型:整数；参数范围为:0~100。|一级告警，用户资源数与对应license的比例高于该上限时，上报该告警。
@@ -12649,7 +12649,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增资源告警，告警类型为PDP上下文过局容量数据库告警（DB_PDP），一级告警阈值上限为9，二级告警阈值上限为8，三级告警阈值上限为7，四级告警阈值上限为6，告警阈值下限为5，用户别名为mm。 
@@ -12664,7 +12664,7 @@ ADD EQU:EQUTYPE="DB_PDP",HIGHTHRES1=9,HIGHTHRES2=8,HIGHTHRES3=7,HIGHTHRES4=6,LOW
 
 
 
-父主题： [业务量拥塞统计配置](../../zh-CN/tree/N_1254511.html)
+父主题： [业务量拥塞统计配置]
 
 
 
@@ -12687,20 +12687,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改资源告警(SET EQU) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改资源告警。可修改告警类型、4个级别的告警门限、告警阈值下限、以及用户别名。
 
 
-[](None)注意事项 
+注意事项 
 
 该告警共分为4级，1级为最高，4级为最低，低级告警的门限值必须小于高级告警的门限值，告警阈值下限必须小于4级告警门限值。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 EQUTYPE|告警类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对应的用户资源告警类型，包括用户数、PDP数等。
 HIGHTHRES1|一级告警上报门限|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|一级告警，用户资源数与对应license的比例高于该上限时，上报该告警。
@@ -12715,7 +12715,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改资源告警，告警类型为PDP上下文过局容量数据库告警（DB_PDP），一级告警阈值上限改为75，二级告警阈值上限改为45，三级告警阈值上限改为15，四级告警阈值上限改为10，告警阈值下限改为2，用户别名改为ippool。 
@@ -12730,7 +12730,7 @@ SET EQU:EQUTYPE="DB_PDP",HIGHTHRES1=75,HIGHTHRES2=45,HIGHTHRES3=15,HIGHTHRES4=10
 
 
 
-父主题： [业务量拥塞统计配置](../../zh-CN/tree/N_1254511.html)
+父主题： [业务量拥塞统计配置]
 
 
 
@@ -12753,20 +12753,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除资源告警(DEL EQU) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除资源告警。删除对应资源告警对业务不会造成影响，但是在用户资源超出license限制时将不会上报告警。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 EQUTYPE|告警类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|对应的用户资源告警类型，包括用户数、PDP数等。
 
@@ -12775,7 +12775,7 @@ EQUTYPE|告警类型|参数可选性:必选参数；参数类型:枚举。参见
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除告警类型为PDP上下文过局容量数据库告警（DB_PDP）的资源告警。 
@@ -12790,7 +12790,7 @@ DEL EQU:EQUTYPE="DB_PDP";
 
 
 
-父主题： [业务量拥塞统计配置](../../zh-CN/tree/N_1254511.html)
+父主题： [业务量拥塞统计配置]
 
 
 
@@ -12813,20 +12813,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询资源告警(SHOW EQU) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询资源告警。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 EQUTYPE|告警类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|对应的用户资源告警类型，包括用户数、PDP数等。
 
@@ -12835,10 +12835,10 @@ EQUTYPE|告警类型|参数可选性:任选参数；参数类型:枚举。参见
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 EQUTYPE|告警类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|对应的用户资源告警类型，包括用户数、PDP数等。
 HIGHTHRES1|一级告警上报门限|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|一级告警，用户资源数与对应license的比例高于该上限时，上报该告警。
@@ -12853,7 +12853,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询告警类型为PDP上下文过局容量数据库告警（DB_PDP）的资源告警。 
@@ -12882,7 +12882,7 @@ SHOW EQU:EQUTYPE="DB_PDP";
 
 
 
-父主题： [业务量拥塞统计配置](../../zh-CN/tree/N_1254511.html)
+父主题： [业务量拥塞统计配置]
 
 
 
@@ -12905,7 +12905,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 动态资源使用率告警参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 系统中有数据区、缓存、标识索引、表等不同类型的动态资源，为了监控这些动态资源的使用状况，系统提供了动态资源使用率告警（包括“表容量使用率过高告警”和“系统资源容量不足告警”），当动态资源占用率过高时上报告警，提醒运维人员及时采取扩容处理措施或者联系中兴通讯支持，以免资源不足导致用户业务失败，对运营商造成损失。 
@@ -12913,7 +12913,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本配置包括缺省动态资源使用率告警参数配置、特定动态资源使用率告警参数配置。 
@@ -12921,7 +12921,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -12944,7 +12944,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [资源告警配置](../../zh-CN/tree/N_1254510.html)
+父主题： [资源告警配置]
 
 
 
@@ -12967,7 +12967,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 缺省动态资源使用率告警参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 系统中有数据区、缓存、表等不同类型的动态资源，为了监控这些动态资源的使用状况，系统提供了动态资源占用率告警（包括“表容量使用率过高告警”和“系统资源容量不足告警”），当动态资源占用率过高时上报告警，提醒运维人员及时采取扩容处理措施或者联系中兴通讯支持，以免资源不足导致用户业务失败，对运营商造成损失。 
@@ -12981,7 +12981,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本节点用于配置缺省的动态资源使用率告警参数，参数包括“一级告警门限值”，“二级告警门限值”，“三级告警门限值”，“恢复告警门限值”。 
@@ -12989,7 +12989,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -13012,7 +13012,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [动态资源使用率告警参数配置](../../zh-CN/tree/N_1254512.html)
+父主题： [动态资源使用率告警参数配置]
 
 
 
@@ -13035,7 +13035,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 修改缺省动态资源使用率告警参数配置(SET DRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改缺省动态资源使用率告警参数配置，参数包括各级告警门限和恢复门限。动态资源使用率达到某一级别门限后，将会上报对应的动态资源使用率告警。 
@@ -13043,15 +13043,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LEVEL1VALUE|一级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|动态资源使用率达到该门限后，将会上报对应的动态资源使用率一级告警。特别的，当配置为0时，表示不上报该级别告警，如果某一级别告警门限值配置为0，则比它级别低的告警门限都需要配置为0，比它低级别的告警也都不上报。
 LEVEL2VALUE|二级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|动态资源使用率达到该门限后，将会上报对应的动态资源使用率二级告警。特别的，当配置为0时，表示不上报该级别告警，如果某一级别告警门限值配置为0，则比它级别低的告警门限都需要配置为0，比它低级别的告警也都不上报。
@@ -13063,7 +13063,7 @@ RESTOREVALUE|恢复告警门限值(%)|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改缺省动态资源使用率告警参数配置，设置一级告警门限值为90%，二级告警门限值为80%，三级告警门限值为70%，恢复告警门限值为65%。 
@@ -13074,12 +13074,12 @@ SET DRA:LEVEL1VALUE=90,LEVEL2VALUE=80,LEVEL3VALUE=70,RESTOREVALUE=65
 
 
 
-[](None)相关命令 
+相关命令 
 
 
 
 
-[查询动态资源使用率告警参数](1260163.html)
+[查询动态资源使用率告警参数]
 
 
 
@@ -13089,7 +13089,7 @@ SET DRA:LEVEL1VALUE=90,LEVEL2VALUE=80,LEVEL3VALUE=70,RESTOREVALUE=65
 
 
 
-父主题： [缺省动态资源使用率告警参数配置](../../zh-CN/tree/N_12545121.html)
+父主题： [缺省动态资源使用率告警参数配置]
 
 
 
@@ -13112,7 +13112,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询缺省动态资源使用率告警参数配置(SHOW DRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询缺省动态资源使用率告警参数配置，参数包括各级告警门限和恢复门限。 
@@ -13120,15 +13120,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LEVEL1VALUE|一级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|动态资源使用率达到该门限后，将会上报对应的动态资源使用率一级告警。特别的，当配置为0时，表示不上报该级别告警，如果某一级别告警门限值配置为0，则比它级别低的告警门限都需要配置为0，比它低级别的告警也都不上报。
 LEVEL2VALUE|二级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|动态资源使用率达到该门限后，将会上报对应的动态资源使用率二级告警。特别的，当配置为0时，表示不上报该级别告警，如果某一级别告警门限值配置为0，则比它级别低的告警门限都需要配置为0，比它低级别的告警也都不上报。
@@ -13140,7 +13140,7 @@ RESTOREVALUE|恢复告警门限值(%)|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询缺省动态资源使用率告警参数配置。 
@@ -13169,7 +13169,7 @@ SHOW DRA
 
 
 
-父主题： [缺省动态资源使用率告警参数配置](../../zh-CN/tree/N_12545121.html)
+父主题： [缺省动态资源使用率告警参数配置]
 
 
 
@@ -13192,7 +13192,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 特定动态资源使用率告警参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 系统中有数据区、缓存、表等不同类型的动态资源，为了监控这些动态资源的使用状况，系统提供了动态资源占用率告警（包括“表容量使用率过高告警”和“系统资源容量不足告警”），当动态资源占用率过高时上报告警，提醒运维人员及时采取扩容处理措施或者联系中兴通讯支持，以免资源不足导致用户业务失败，对运营商造成损失。 
@@ -13212,7 +13212,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本节点用于配置系统特定动态资源使用率告警参数，参数包括“资源名称”，“一级告警门限值”，“二级告警门限值”，“三级告警门限值”，“恢复告警门限值”，即可以针对特定资源，配置不同的动态资源使用率告警参数。 
@@ -13220,7 +13220,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -13253,7 +13253,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [动态资源使用率告警参数配置](../../zh-CN/tree/N_1254512.html)
+父主题： [动态资源使用率告警参数配置]
 
 
 
@@ -13276,7 +13276,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 新增特定动态资源使用率告警参数配置(ADD SPECDRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增特定动态资源使用率告警参数配置，参数包括资源名称，各级告警门限和恢复门限。当该种动态资源使用率达到某一级别门限后，将会上报对应的动态资源使用率告警。 
@@ -13284,15 +13284,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|资源名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数用于标识系统中各种数据区、缓存、标识索引、表等不同类型的动态资源名称。
 LEVEL1VALUE|一级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。默认值:90。|该参数用于设置一级告警门限值。当该种动态资源使用率达到该门限后，将会上报对应的动态资源使用率一级告警。特别的，当配置为0时，表示不上报该级别告警，如果某一级别告警门限值配置为0，则比它级别低的告警门限都需要配置为0，比它低级别的告警也都不上报。
@@ -13305,7 +13305,7 @@ RESTOREVALUE|恢复告警门限值(%)|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增特定动态资源使用率告警参数配置，其中资源名称为“DNSCacheDataArea”，一级告警门限值为90%，二级告警门限值为80%，三级告警门限值为70%，恢复告警门限值为65%。 
@@ -13316,24 +13316,24 @@ ADD SPECDRA:NAME="DNSCacheDataArea",LEVEL1VALUE=90,LEVEL2VALUE=80,LEVEL3VALUE=70
 
 
 
-[](None)相关命令 
+相关命令 
 
 
 
 
-[修改特定动态资源使用率告警参数配置](1260982.html)
-
-
-
-
-
-[删除特定动态资源使用率告警参数配置](1260983.html)
+[修改特定动态资源使用率告警参数配置]
 
 
 
 
 
-[查询特定动态资源使用率告警参数配置](1260984.html)
+[删除特定动态资源使用率告警参数配置]
+
+
+
+
+
+[查询特定动态资源使用率告警参数配置]
 
 
 
@@ -13343,7 +13343,7 @@ ADD SPECDRA:NAME="DNSCacheDataArea",LEVEL1VALUE=90,LEVEL2VALUE=80,LEVEL3VALUE=70
 
 
 
-父主题： [特定动态资源使用率告警参数配置](../../zh-CN/tree/N_12545122.html)
+父主题： [特定动态资源使用率告警参数配置]
 
 
 
@@ -13366,7 +13366,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 修改特定动态资源使用率告警参数配置(SET SPECDRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改特定动态资源使用率告警参数配置，参数包括资源名称，各级告警门限和恢复门限。当该种动态资源使用率达到某一级别门限后，将会上报对应的动态资源使用率告警。 
@@ -13374,15 +13374,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|资源名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数用于标识系统中各种数据区、缓存、标识索引、表等不同类型的动态资源名称。
 LEVEL1VALUE|一级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|该参数用于设置一级告警门限值。当该种动态资源使用率达到该门限后，将会上报对应的动态资源使用率一级告警。特别的，当配置为0时，表示不上报该级别告警，如果某一级别告警门限值配置为0，则比它级别低的告警门限都需要配置为0，比它低级别的告警也都不上报。
@@ -13395,7 +13395,7 @@ RESTOREVALUE|恢复告警门限值(%)|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改特定动态资源使用率告警参数配置，其中资源名称为“DNSCacheDataArea”，设置一级告警门限值为95%。 
@@ -13406,24 +13406,24 @@ SET SPECDRA:NAME="DNSCacheDataArea",LEVEL1VALUE=95
 
 
 
-[](None)相关命令 
+相关命令 
 
 
 
 
-[新增特定动态资源使用率告警参数配置](1260981.html)
-
-
-
-
-
-[删除特定动态资源使用率告警参数配置](1260983.html)
+[新增特定动态资源使用率告警参数配置]
 
 
 
 
 
-[查询特定动态资源使用率告警参数配置](1260984.html)
+[删除特定动态资源使用率告警参数配置]
+
+
+
+
+
+[查询特定动态资源使用率告警参数配置]
 
 
 
@@ -13433,7 +13433,7 @@ SET SPECDRA:NAME="DNSCacheDataArea",LEVEL1VALUE=95
 
 
 
-父主题： [特定动态资源使用率告警参数配置](../../zh-CN/tree/N_12545122.html)
+父主题： [特定动态资源使用率告警参数配置]
 
 
 
@@ -13456,7 +13456,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 删除特定动态资源使用率告警参数配置(DEL SPECDRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除特定动态资源使用率告警参数配置，参数包括资源名称，各级告警门限和恢复门限。 
@@ -13464,15 +13464,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|资源名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数用于标识系统中各种数据区、缓存、标识索引、表等不同类型的动态资源名称。
 
@@ -13481,7 +13481,7 @@ NAME|资源名称|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除特定动态资源使用率告警参数配置，其中资源名称为“DNSCacheDataArea”。 
@@ -13492,24 +13492,24 @@ DEL SPECDRA:NAME="DNSCacheDataArea"
 
 
 
-[](None)相关命令 
+相关命令 
 
 
 
 
-[新增特定动态资源使用率告警参数配置](1260981.html)
-
-
-
-
-
-[修改特定动态资源使用率告警参数配置](1260982.html)
+[新增特定动态资源使用率告警参数配置]
 
 
 
 
 
-[查询特定动态资源使用率告警参数配置](1260984.html)
+[修改特定动态资源使用率告警参数配置]
+
+
+
+
+
+[查询特定动态资源使用率告警参数配置]
 
 
 
@@ -13519,7 +13519,7 @@ DEL SPECDRA:NAME="DNSCacheDataArea"
 
 
 
-父主题： [特定动态资源使用率告警参数配置](../../zh-CN/tree/N_12545122.html)
+父主题： [特定动态资源使用率告警参数配置]
 
 
 
@@ -13542,7 +13542,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询特定动态资源使用率告警参数配置(SHOW SPECDRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询特定动态资源使用率告警参数配置。系统支持指定动态资源名称进行查询，也支持不指定资源名称进行通配查询。 
@@ -13550,15 +13550,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|资源名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数用于标识系统中各种数据区、缓存、标识索引、表等不同类型的动态资源名称。
 
@@ -13567,10 +13567,10 @@ NAME|资源名称|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NAME|资源名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~100个字符。|该参数用于标识系统中各种数据区、缓存、标识索引、表等不同类型的动态资源名称。
 LEVEL1VALUE|一级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~100。|该参数用于设置一级告警门限值。当该种动态资源使用率达到该门限后，将会上报对应的动态资源使用率一级告警。特别的，当配置为0时，表示不上报该级别告警，如果某一级别告警门限值配置为0，则比它级别低的告警门限都需要配置为0，比它低级别的告警也都不上报。
@@ -13583,7 +13583,7 @@ RESTOREVALUE|恢复告警门限值(%)|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询特定动态资源使用率告警参数配置。 
@@ -13608,24 +13608,24 @@ SHOW SPECDRA
 
 
 
-[](None)相关命令 
+相关命令 
 
 
 
 
-[新增特定动态资源使用率告警参数配置](1260981.html)
-
-
-
-
-
-[修改特定动态资源使用率告警参数配置](1260982.html)
+[新增特定动态资源使用率告警参数配置]
 
 
 
 
 
-[删除特定动态资源使用率告警参数配置](1260983.html)
+[修改特定动态资源使用率告警参数配置]
+
+
+
+
+
+[删除特定动态资源使用率告警参数配置]
 
 
 
@@ -13635,7 +13635,7 @@ SHOW SPECDRA
 
 
 
-父主题： [特定动态资源使用率告警参数配置](../../zh-CN/tree/N_12545122.html)
+父主题： [特定动态资源使用率告警参数配置]
 
 
 
@@ -13658,7 +13658,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 话单存储空间使用率告警参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当CG服务器不通时，话单没法正常发送，系统对话单进行了本地缓存。 
@@ -13672,7 +13672,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本节点用于配置话单存储空间使用率告警参数，参数包括“一级告警门限值“，二级告警门限值”，“三级告警门限值”。 
@@ -13680,7 +13680,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -13703,7 +13703,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -13726,7 +13726,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改话单存储空间使用率告警参数配置(SET CDRDRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改话单存储空间使用率告警参数配置，当需要修改话单存储空间使用率告警参数配置时，使用该命令进行修改配置。 
@@ -13734,15 +13734,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LEVEL1VALUE|一级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于设置一级告警门限值。话单存储空间使用率达到该门限后，将会上报“MP计费话单存储空间不足一级告警”。
 LEVEL2VALUE|二级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于设置二级告警门限值。话单存储空间使用率达到该门限后，将会上报“MP计费话单存储空间不足二级告警”。
@@ -13753,7 +13753,7 @@ LEVEL3VALUE|三级告警门限值(%)|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改话单存储空间使用率告警参数配置，设置一级告警门限值为80%，二级告警门限值为70%，三级告警门限值为50%。 
@@ -13764,12 +13764,12 @@ SET CDRDRA:LEVEL1VALUE=80,LEVEL2VALUE=70,LEVEL3VALUE=50
 
 
 
-[](None)相关命令 
+相关命令 
 
 
 
 
-[查询话单存储空间使用率告警参数配置](1260987.html)
+[查询话单存储空间使用率告警参数配置]
 
 
 
@@ -13779,7 +13779,7 @@ SET CDRDRA:LEVEL1VALUE=80,LEVEL2VALUE=70,LEVEL3VALUE=50
 
 
 
-父主题： [话单存储空间使用率告警参数配置](../../zh-CN/tree/N_1254503.html)
+父主题： [话单存储空间使用率告警参数配置]
 
 
 
@@ -13802,7 +13802,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询话单存储空间使用率告警参数配置(SHOW CDRDRA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询话单存储空间使用率告警参数配置，当需要查询话单存储空间使用率告警参数配置时，使用该命令进行查询。 
@@ -13810,15 +13810,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LEVEL1VALUE|一级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于设置一级告警门限值。话单存储空间使用率达到该门限后，将会上报“MP计费话单存储空间不足一级告警”。
 LEVEL2VALUE|二级告警门限值(%)|参数可选性:任选参数；参数类型:整数；参数范围为:1~100。|该参数用于设置二级告警门限值。话单存储空间使用率达到该门限后，将会上报“MP计费话单存储空间不足二级告警”。
@@ -13829,7 +13829,7 @@ LEVEL3VALUE|三级告警门限值(%)|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询话单存储空间使用率告警参数配置。 
@@ -13854,12 +13854,12 @@ SHOW CDRDRA
 
 
 
-[](None)相关命令 
+相关命令 
 
 
 
 
-[修改话单存储空间使用率告警参数配置](1260986.html)
+[修改话单存储空间使用率告警参数配置]
 
 
 
@@ -13869,7 +13869,7 @@ SHOW CDRDRA
 
 
 
-父主题： [话单存储空间使用率告警参数配置](../../zh-CN/tree/N_1254503.html)
+父主题： [话单存储空间使用率告警参数配置]
 
 
 
@@ -13892,7 +13892,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 性能管理专用配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 性能统计分为无对象和有对象两个模式，对于分对象这种模式的性能统计，有些需要根据对象的格式来进行规整，便于系统使用正确的对象来匹配上报的性能数据。 
@@ -13900,7 +13900,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 性能管理专用配置主要用于设置与性能统计相关的需要特殊配置的信息，包括GGSN的IP地址，IMSI号段、MME和SGW链路和ACL规则标识。配置后，可以根据GGSN IP地址或IMSI号段或链路号或ACL规则标识建立性能统计任务。 
@@ -13908,7 +13908,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -13966,7 +13966,7 @@ MME TA组配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -13989,7 +13989,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### GGSN IP配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 网元的性能统计测量项，可以设置对象（比如，路由区、APN、号码段、GGSN IP等），通过区分对象的统计查看该对象下的统计数据，以达到更细致的数据分析目的。 
@@ -13997,7 +13997,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本命令功能用于设置待性能统计的GGSN IP信息，包括GGSN IP编号和用户别名。GGSN IP的用户别名在性能管理中可以与测量类型信息相关联，从而获取以GGSN IP为对象的性能统计数据。 
@@ -14005,14 +14005,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 在配置前，向运营商获取期望统计的GGSN IP地址列表，并通过
-                [ADD GGSNIP](../mml/1260300.html)
+                [ADD GGSNIP]
                 命令，将所有GGSN IP地址逐个配置。
             
 
 
 
                 在操作员进行性能统计时，会使用到
-                [ADD GGSNIP](../mml/1260300.html)
+                [ADD GGSNIP]
                 命令配置的IMSI号段，操作如下：
             
 
@@ -14053,7 +14053,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         “测量类型信息”页签左侧列出的“对象名称”就是通过
-                        [ADD GGSNIP](../mml/1260300.html)
+                        [ADD GGSNIP]
                         命令设置的用户别名。勾选需要进行性能统计的GGSN IP地址，默认是全部勾选
                     
 
@@ -14078,7 +14078,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         SGSN根据GGSN IP地址，匹配
-                        [ADD GGSNIP](../mml/1260300.html)
+                        [ADD GGSNIP]
                         命令的配置结果，以确定对应的GGSN IP地址。
                     
 
@@ -14103,7 +14103,7 @@ OMM服务器将分GGSN IP地址的、统计的性能统计数据上报给EMS。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -14136,7 +14136,7 @@ OMM服务器将分GGSN IP地址的、统计的性能统计数据上报给EMS。
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -14159,7 +14159,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增GGSN IP(ADD GGSNIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于新增GGSN IP地址信息，包括编号和别名。 
@@ -14170,7 +14170,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14178,10 +14178,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GGSN IP编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~2147483647。|该参数用于标识一条已配置GGSN IP地址的记录，该编号不能与已存在的编号相同。
 IP|GGSN IP|参数可选性:必选参数；参数类型:地址|该参数用于配置GGSN IP地址。
@@ -14192,7 +14192,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一个GGSN IP，编号为1、GGSN IP为1.1.1.1、用户别名为A地址。 
@@ -14207,7 +14207,7 @@ ADD GGSNIP:ID=1,IP="1.1.1.1",NAME="A地址";
 
 
 
-父主题： [GGSN IP配置](../../zh-CN/tree/N_12603002.html)
+父主题： [GGSN IP配置]
 
 
 
@@ -14230,7 +14230,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改GGSN IP(SET GGSNIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于修改GGSN IP地址信息，包括别名。 
@@ -14241,7 +14241,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14249,10 +14249,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN IP|参数可选性:必选参数；参数类型:地址|该参数用于配置GGSN IP地址。
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~250个字符。|该参数为GGSN IP地址配置的别名，用于区分不同的GGSN IP地址配置。
@@ -14262,7 +14262,7 @@ NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将GGSN IP 地址为1.1.1.1的用户别名修改为B地址。 
@@ -14277,7 +14277,7 @@ SET GGSNIP:IP="1.1.1.1",NAME="B地址";
 
 
 
-父主题： [GGSN IP配置](../../zh-CN/tree/N_12603002.html)
+父主题： [GGSN IP配置]
 
 
 
@@ -14300,7 +14300,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除GGSN IP(DEL GGSNIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于删除GGSN IP地址信息。 
@@ -14311,7 +14311,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14319,10 +14319,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN IP|参数可选性:必选参数；参数类型:地址|该参数用于配置GGSN IP地址。
 
@@ -14331,7 +14331,7 @@ IP|GGSN IP|参数可选性:必选参数；参数类型:地址|该参数用于配
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除一个GGSN性能统计IP，地址为1.1.1.1。 
@@ -14346,7 +14346,7 @@ DEL GGSNIP:IP="1.1.1.1";
 
 
 
-父主题： [GGSN IP配置](../../zh-CN/tree/N_12603002.html)
+父主题： [GGSN IP配置]
 
 
 
@@ -14369,12 +14369,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询GGSN IP(SHOW GGSNIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 此命令用于查询已配置的GGSN IP地址信息。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14382,10 +14382,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN IP|参数可选性:任选参数；参数类型:地址|该参数用于配置GGSN IP地址。
 
@@ -14394,10 +14394,10 @@ IP|GGSN IP|参数可选性:任选参数；参数类型:地址|该参数用于配
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GGSN IP编号|参数可选性:任选参数；参数类型:整数。|该参数用于标识一条已配置GGSN IP地址的记录，该编号不能与已存在的编号相同。
 IP|GGSN IP|参数可选性:任选参数；参数类型:地址|该参数用于配置GGSN IP地址。
@@ -14408,7 +14408,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有GGSN IP配置。 
@@ -14438,7 +14438,7 @@ SHOW GGSNIP;
 
 
 
-父主题： [GGSN IP配置](../../zh-CN/tree/N_12603002.html)
+父主题： [GGSN IP配置]
 
 
 
@@ -14461,7 +14461,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 用户流程测量号段配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 网元的性能统计测量项，可以设置对象（比如，路由区、APN、号码段、GGSN IP等），通过区分对象的统计查看该对象下的统计数据，以达到更细致的数据分析目的。 
@@ -14469,7 +14469,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本命令功能用于设置待性能统计的IMSI号段信息，包括IMSI编号和用户别名。IMSI号段的用户别名在性能管理中可以与测量类型信息相关联，从而获取以IMSI号段为对象的性能统计数据。 
@@ -14477,7 +14477,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 在配置前，需要向运营商获取期望统计的IMSI号段列表，并通过
-                [ADD IMSINUM](../mml/1260304.html)
+                [ADD IMSINUM]
                 命令，将所有IMSI号段逐个配置。
             
 
@@ -14512,7 +14512,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         “测量类型信息”页签左侧列出的“对象名称”就是通过
-                        [ADD IMSINUM](../mml/1260304.html)
+                        [ADD IMSINUM]
                         命令设置的用户别名。勾选需要进行性能统计的IMSI号段，默认是全部勾选。
                     
 
@@ -14537,7 +14537,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         SGSN根据用户IMSI，匹配
-                        [ADD IMSINUM](../mml/1260304.html)
+                        [ADD IMSINUM]
                         命令的配置结果，以确定对应的IMSI号段。
                     
 
@@ -14562,7 +14562,7 @@ OMM服务器将分IMSI号段的、统计的性能统计数据上报给EMS。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -14595,7 +14595,7 @@ OMM服务器将分IMSI号段的、统计的性能统计数据上报给EMS。
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -14618,7 +14618,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增IMSI号段(ADD IMSINUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于新增IMSI号段信息，包括编号和别名。 
@@ -14629,7 +14629,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14637,10 +14637,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IMSI NUM编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~5。|该参数用于标识一条已配置IMSI号段的记录，该编号不能与已存在的编号相同。
 NUM|IMSI NUM|参数可选性:必选参数；参数类型:整数；参数范围为:1~999999999999999。|该参数用于配置IMSI号段，该IMSI号段必须与性能统计期望的IMSI号段一致。
@@ -14651,7 +14651,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一个IMSI号段，IMSI编号为1，IMSI号段为460020012700100，用户别名为IMSI Number1。 
@@ -14666,7 +14666,7 @@ ADD IMSINUM:ID=1,NUM="460020012700100",NAME="IMSI Number1";
 
 
 
-父主题： [用户流程测量号段配置](../../zh-CN/tree/N_12603042.html)
+父主题： [用户流程测量号段配置]
 
 
 
@@ -14689,7 +14689,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改IMSI号段(SET IMSINUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于修改IMSI号段信息，包括别名。 
@@ -14700,7 +14700,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14708,10 +14708,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUM|IMSI NUM|参数可选性:必选参数；参数类型:整数；参数范围为:1~999999999999999。|该参数用于配置IMSI号段，该IMSI号段必须与性能统计期望的IMSI号段一致。
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~250个字符。|该参数为IMSI号段配置的别名，用于区分不同的IMSI号段配置。
@@ -14721,7 +14721,7 @@ NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将IMSI号段为460020012700100的用户别名改为IMSINUM1。 
@@ -14736,7 +14736,7 @@ SET IMSINUM:NUM="460020012700100",NAME="IMSINUM1";
 
 
 
-父主题： [用户流程测量号段配置](../../zh-CN/tree/N_12603042.html)
+父主题： [用户流程测量号段配置]
 
 
 
@@ -14759,7 +14759,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除IMSI号段(DEL IMSINUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于删除IMSI号段信息。 
@@ -14770,7 +14770,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14778,10 +14778,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUM|IMSI NUM|参数可选性:必选参数；参数类型:整数；参数范围为:1~999999999999999。|该参数用于配置IMSI号段，该IMSI号段必须与性能统计期望的IMSI号段一致。
 
@@ -14790,7 +14790,7 @@ NUM|IMSI NUM|参数可选性:必选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI NUM为460020012700100的IMSI号段。 
@@ -14805,7 +14805,7 @@ DEL IMSINUM:NUM="460020012700100";
 
 
 
-父主题： [用户流程测量号段配置](../../zh-CN/tree/N_12603042.html)
+父主题： [用户流程测量号段配置]
 
 
 
@@ -14828,12 +14828,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询IMSI号段(SHOW IMSINUM) 
 
 
-[](None)命令功能 
+命令功能 
 
 此命令用于查询已配置的IMSI号段信息。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -14841,10 +14841,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 NUM|IMSI NUM|参数可选性:任选参数；参数类型:整数；参数范围为:1~999999999999999。|该参数用于配置IMSI号段，该IMSI号段必须与性能统计期望的IMSI号段一致。
 
@@ -14853,10 +14853,10 @@ NUM|IMSI NUM|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IMSI NUM编号|参数可选性:任选参数；参数类型:整数。|该参数用于标识一条已配置IMSI号段的记录，该编号不能与已存在的编号相同。
 NUM|IMSI NUM|参数可选性:任选参数；参数类型:整数。|该参数用于配置IMSI号段，该IMSI号段必须与性能统计期望的IMSI号段一致。
@@ -14867,7 +14867,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询IMSI NUM为460020012700100的IMSI号段配置。 
@@ -14898,7 +14898,7 @@ SHOW IMSINUM:NUM="460020012700100";
 
 
 
-父主题： [用户流程测量号段配置](../../zh-CN/tree/N_12603042.html)
+父主题： [用户流程测量号段配置]
 
 
 
@@ -14921,7 +14921,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 用户号段统计配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 运营商在运维的过程中，需要监控某些号段用户数。为了便于统计相关的数据，需要配置相关的IMSI或者MSISDN号码段。 
@@ -14929,7 +14929,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本命令功能用于设置待性能统计的号码段信息，包括IMSI和MSISDN。号码段的用户别名在性能管理中可以与测量类型信息相关联，从而获取以号码段为对象的性能统计数据。 
@@ -14937,9 +14937,9 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 在配置前，向运营商获取期望统计的号码段列表，并通过
-                [ADD IMSI](../mml/1260603.html)
+                [ADD IMSI]
                 或者
-                [ADD MSISDN](../mml/1260609.html)
+                [ADD MSISDN]
                 命令，将所有号码段址逐个配置。
             
 
@@ -14974,9 +14974,9 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         “测量类型信息”页签左侧列出的“对象名称”就是通过
-                        [ADD IMSI](../mml/1260603.html)
+                        [ADD IMSI]
                         或者
-                        [ADD MSISDN](../mml/1260609.html)
+                        [ADD MSISDN]
                         命令设置的用户别名。勾选需要进行性能统计的号码段，默认是全部勾选。
                     
 
@@ -15001,9 +15001,9 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         MME根据IMSI/MSISDN号码段，匹配
-                        [ADD IMSI](../mml/1260603.html)
+                        [ADD IMSI]
                         或者
-                        [ADD MSISDN](../mml/1260609.html)
+                        [ADD MSISDN]
                         命令的配置结果，以确定对应的IMSI/MSISDN号段。
                     
 
@@ -15028,7 +15028,7 @@ OMM服务器将分IMSI/MSISDN的统计的性能统计数据上报给EMS。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -15081,7 +15081,7 @@ OMM服务器将分IMSI/MSISDN的统计的性能统计数据上报给EMS。
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -15104,7 +15104,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增IMSI号段(ADD IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于配置需要进行统计的IMSI号段。当运营商需要统计相关IMSI号码段用户数的时候，使用该命令。 
@@ -15112,7 +15112,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15120,10 +15120,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IMSI编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~1024。|配置IMSI的号码编号。
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|配置待统计的IMSI号段。
@@ -15134,7 +15134,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增待统计的IMSI号段信息，其中IMSI编号为12、IMSI号段为460020012700100、用户别名为IMSI Number1。 
@@ -15149,7 +15149,7 @@ ADD IMSI:ID=12,IMSI="460020012700100",NAME="IMSI Number1";
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15172,7 +15172,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改IMSI号段(SET IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于修改统计的IMSI号段。当运营商需要修改已经存在统计IMSI号码段用户数的时候，使用该命令。 
@@ -15180,7 +15180,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15188,10 +15188,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|配置待统计的IMSI号段。
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|对此配置进行维护记录，起备注作用。
@@ -15201,7 +15201,7 @@ NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改IMSI号段为460020012700100的配置数据，将该配置的用户别名为IMSI Number2。 
@@ -15216,7 +15216,7 @@ SET IMSI:IMSI="460020012700100",NAME="IMSI Number2";
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15239,7 +15239,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除IMSI号段(DEL IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于删除已经配置的IMSI号段信息。当运营商需要取消已经配置了哪些IMSI号码段用户数的时候，使用该命令。 
@@ -15247,7 +15247,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15255,10 +15255,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|配置待统计的IMSI号段。
 
@@ -15267,7 +15267,7 @@ IMSI|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI号段为460020012700100的配置数据。 
@@ -15282,7 +15282,7 @@ DEL IMSI:IMSI="460020012700100";
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15305,7 +15305,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询IMSI号段(SHOW IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于查询已经配置的IMSI号段信息。当运营商需要查询配置了哪些IMSI号码段用户数的时候，使用该命令。 
@@ -15313,7 +15313,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15321,10 +15321,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|配置待统计的IMSI号段。
 
@@ -15333,10 +15333,10 @@ IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IMSI编号|参数可选性:任选参数；参数类型:整数。|配置IMSI的号码编号。
 IMSI|IMSI号段|参数可选性:任选参数；参数类型:字符型。|配置待统计的IMSI号段。
@@ -15347,7 +15347,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|对�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有的IMSI号段。 
@@ -15382,7 +15382,7 @@ SHOW IMSI;
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15405,7 +15405,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增MSISDN号段(ADD MSISDN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于配置需要进行统计的MSISDN号段。当运营商需要统计相关MSISDN号码段用户数的时候，使用该命令。 
@@ -15413,7 +15413,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15421,10 +15421,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|MSISDN编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~1024。|配置MSISDN的号码编号。
 MSISDN|MSISDN号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|配置待统计的MSISDN号段。
@@ -15435,7 +15435,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增待统计的MSISDN号段信息，其中MSISDN编号为10、MSISDN号段为8613675138501、用户别名为MSISDN Number1。 
@@ -15450,7 +15450,7 @@ ADD MSISDN:ID=10,MSISDN="8613675138501",NAME="MSISDN Number1";
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15473,7 +15473,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改MSISDN号段(SET MSISDN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于修改统计的MSISDN号段。当运营商需要修改已经存在统计MSISDN号码段用户数的时候，使用该命令。 
@@ -15481,7 +15481,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15489,10 +15489,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MSISDN|MSISDN号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|配置待统计的MSISDN号段。
 NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数范围为:1~50个字符。|对此配置进行维护记录，起备注作用。
@@ -15502,7 +15502,7 @@ NAME|用户别名|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改MSISDN号段为8613675138501的配置数据，将该配置的用户别名为MSISDN Number2。 
@@ -15517,7 +15517,7 @@ SET MSISDN:MSISDN="8613675138501",NAME="MSISDN Number2";
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15540,7 +15540,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除MSISDN号段(DEL MSISDN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于删除已经配置了的MSISDN号段信息。当运营商需要取消已经配置了哪些MSISDN号码段用户数的时候，使用该命令。 
@@ -15548,7 +15548,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15556,10 +15556,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MSISDN|MSISDN号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|配置待统计的MSISDN号段。
 
@@ -15568,7 +15568,7 @@ MSISDN|MSISDN号段|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除MSISDN号段为8613675138501的配置数据。 
@@ -15583,7 +15583,7 @@ DEL MSISDN:MSISDN="8613675138501";
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15606,7 +15606,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询MSISDN号段(SHOW MSISDN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于查询已经配置的MSISDN号段信息。当运营商需要查询配置了哪些MSISDN号码段用户数的时候，使用该命令。 
@@ -15614,7 +15614,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -15622,10 +15622,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MSISDN|MSISDN号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|配置待统计的MSISDN号段。
 
@@ -15634,10 +15634,10 @@ MSISDN|MSISDN号段|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|MSISDN编号|参数可选性:任选参数；参数类型:整数。|配置MSISDN的号码编号。
 MSISDN|MSISDN号段|参数可选性:任选参数；参数类型:字符型。|配置待统计的MSISDN号段。
@@ -15648,7 +15648,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|对�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有的MSISDN号段。 
@@ -15678,7 +15678,7 @@ SHOW MSISDN;
 
 
 
-父主题： [用户号段统计配置](../../zh-CN/tree/N_12606032.html)
+父主题： [用户号段统计配置]
 
 
 
@@ -15701,7 +15701,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME与SGW链路配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 上级网管要求EMS上报有关S11接口的相关统计信息（基于CORBA接口），由于S11接口的相关统计信息是基于MME网元的控制面地址和SGW网元的控制面地址两个对象标识进行统计的，而建立性能统计任务只能基于一个对象标识。 
@@ -15712,23 +15712,23 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 
                 操作维护人员先根据将被统计的MME控制面地址（通过
-                [ADD MMESGWLINK](../mml/1260316.html)
+                [ADD MMESGWLINK]
                 命令设置的“源地址”）和SGW控制面地址（通过
-                [ADD MMESGWLINK](../mml/1260316.html)
+                [ADD MMESGWLINK]
                 命令设置的“目的地址”）配置链路号（通过
-                [ADD MMESGWLINK](../mml/1260316.html)
+                [ADD MMESGWLINK]
                 命令设置的“链路编号”），一个链路号中的源地址只能有一个，目的地址也只能有一个。
             
 
 
 
                 在操作员进行性能统计时，会使用到
-                [ADD MMESGWLINK](../mml/1260316.html)
+                [ADD MMESGWLINK]
                 命令配置的“链路编号”，操作如下：
             
 
@@ -15760,7 +15760,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         在“测量类型信息”页签左侧的“对象名称”就是通过
-                        [ADD MMESGWLINK](../mml/1260316.html)
+                        [ADD MMESGWLINK]
                         命令设置的“链路编号”。
                     
 
@@ -15778,7 +15778,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         MME根据S11接口的交互消息获取MME控制面地址和SGW控制面地址，根据两个网元的地址，匹配
-                        [ADD MMESGWLINK](../mml/1260316.html)
+                        [ADD MMESGWLINK]
                         命令的配置结果，以确定对应的“链路编号”。
                     
 
@@ -15810,7 +15810,7 @@ EMS再通过CORBA接口将S11接口的性能统计数据上报给上级网管。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -15843,7 +15843,7 @@ EMS再通过CORBA接口将S11接口的性能统计数据上报给上级网管。
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -15866,7 +15866,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增MME与SGW链路(ADD MMESGWLINK) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加一个链路编号。 
@@ -15877,15 +15877,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于MME网元。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|此参数对应一个MME控制面地址和一个SGW控制面地址，用于唯一标识一对MME网元和SGW网元。在操作员进行性能统计时，会使用到ADD MMESGWLINK命令配置的“链路编号”，操作如下：在“本地维护终端”界面上，选择“系统菜单--应用管理--性能管理”，打开“性能管理”窗口。在界面左侧的“测量类型树”中，右击“性能管理--MME测量--MME链路测量--MME用户链路测量”，在弹出的快捷菜单中选择“新建测量任务”。在弹出的“新建测量任务”对话框中，选择“测量类型信息”页签。在“测量类型信息”页签左侧的“对象名称”就是通过ADD MMESGWLINK命令设置的“链路编号”。
 SRCADDR|MME地址|参数可选性:必选参数；参数类型:地址|该参数表示MME的控制面地址。该参数的取值是通过命令SET MME GTPC配置的“GTPC IPv4信令地址”，可通过SHOW SIGIP GTPC命令，从查询结果中获取。
@@ -15898,7 +15898,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一条MME与SGW的链路，链路编号为1，源地址（MME控制面地址）为1.1.1.1，目的地址（SGW控制面地址）为2.2.2.2，类型为S11-C。 
@@ -15913,7 +15913,7 @@ ADD MMESGWLINK:LINKID=1,SRCADDR="1.1.1.1",DESTADDR="2.2.2.2",TYPE="S11-C";
 
 
 
-父主题： [MME与SGW链路配置](../../zh-CN/tree/N_12603165.html)
+父主题： [MME与SGW链路配置]
 
 
 
@@ -15936,20 +15936,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改MME与SGW链路(SET MMESGWLINK) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改链路对应的源地址（MME控制面地址）和目的地址（SGW控制面地址）。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|此参数对应一个MME控制面地址和一个SGW控制面地址，用于唯一标识一对MME网元和SGW网元。在操作员进行性能统计时，会使用到ADD MMESGWLINK命令配置的“链路编号”，操作如下：在“本地维护终端”界面上，选择“系统菜单--应用管理--性能管理”，打开“性能管理”窗口。在界面左侧的“测量类型树”中，右击“性能管理--MME测量--MME链路测量--MME用户链路测量”，在弹出的快捷菜单中选择“新建测量任务”。在弹出的“新建测量任务”对话框中，选择“测量类型信息”页签。在“测量类型信息”页签左侧的“对象名称”就是通过ADD MMESGWLINK命令设置的“链路编号”。
 SRCADDR|MME地址|参数可选性:任选参数；参数类型:地址|该参数表示MME的控制面地址。该参数的取值是通过命令SET MME GTPC配置的“GTPC IPv4信令地址”，可通过SHOW SIGIP GTPC命令，从查询结果中获取。
@@ -15962,7 +15962,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改一条链路编号为1的链路，将源地址修改为1.1.1.10。 
@@ -15977,7 +15977,7 @@ SET MMESGWLINK:LINKID=1,SRCADDR="1.1.1.10";
 
 
 
-父主题： [MME与SGW链路配置](../../zh-CN/tree/N_12603165.html)
+父主题： [MME与SGW链路配置]
 
 
 
@@ -16000,20 +16000,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除MME与SGW链路(DEL MMESGWLINK) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除MME与SGW链路。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|此参数对应一个MME控制面地址和一个SGW控制面地址，用于唯一标识一对MME网元和SGW网元。在操作员进行性能统计时，会使用到ADD MMESGWLINK命令配置的“链路编号”，操作如下：在“本地维护终端”界面上，选择“系统菜单--应用管理--性能管理”，打开“性能管理”窗口。在界面左侧的“测量类型树”中，右击“性能管理--MME测量--MME链路测量--MME用户链路测量”，在弹出的快捷菜单中选择”新建测量任务“。在弹出的“新建测量任务”对话框中，选择“测量类型信息”页签。在“测量类型信息”页签左侧的“对象名称”就是通过ADD MMESGWLINK命令设置的”链路编号”。
 
@@ -16022,7 +16022,7 @@ LINKID|链路编号|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除一条链路编号为1的链路。 
@@ -16037,7 +16037,7 @@ DEL MMESGWLINK:LINKID=1;
 
 
 
-父主题： [MME与SGW链路配置](../../zh-CN/tree/N_12603165.html)
+父主题： [MME与SGW链路配置]
 
 
 
@@ -16060,20 +16060,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询MME与SGW链路(SHOW MMESGWLINK) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询MME与SGW链路。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~2048。|此参数对应一个MME控制面地址和一个SGW控制面地址，用于唯一标识一对MME网元和SGW网元。在操作员进行性能统计时，会使用到ADD MMESGWLINK命令配置的“链路编号”，操作如下：在“本地维护终端”界面上，选择“系统菜单--应用管理--性能管理”，打开“性能管理”窗口。在界面左侧的“测量类型树”中，右击“性能管理--MME测量--MME链路测量--MME用户链路测量”，在弹出的快捷菜单中选择”新建测量任务“。在弹出的“新建测量任务”对话框中，选择“测量类型信息”页签。在“测量类型信息”页签左侧的“对象名称”就是通过ADD MMESGWLINK命令设置的”链路编号”。
 
@@ -16082,10 +16082,10 @@ LINKID|链路编号|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路编号|参数可选性:任选参数；参数类型:整数。|此参数对应一个MME控制面地址和一个SGW控制面地址，用于唯一标识一对MME网元和SGW网元。在操作员进行性能统计时，会使用到ADD MMESGWLINK命令配置的“链路编号”，操作如下：在“本地维护终端”界面上，选择“系统菜单--应用管理--性能管理”，打开“性能管理”窗口。在界面左侧的“测量类型树”中，右击“性能管理--MME测量--MME链路测量--MME用户链路测量”，在弹出的快捷菜单中选择”新建测量任务“。在弹出的“新建测量任务”对话框中，选择“测量类型信息”页签。在“测量类型信息”页签左侧的“对象名称”就是通过ADD MMESGWLINK命令设置的”链路编号”。
 SRCADDR|MME地址|参数可选性:任选参数；参数类型:地址|该参数表示MME的控制面地址。该参数的取值是通过命令SET MME GTPC配置的“GTPC IPv4信令地址”，可通过SHOW SIGIP GTPC命令，从查询结果中获取。
@@ -16098,7 +16098,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询链路编号为1的记录。 
@@ -16127,7 +16127,7 @@ SHOW MMESGWLINK:LINKID=1;
 
 
 
-父主题： [MME与SGW链路配置](../../zh-CN/tree/N_12603165.html)
+父主题： [MME与SGW链路配置]
 
 
 
@@ -16150,7 +16150,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### EPC APN统计配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当网络或设备出现故障时，运营商有可能会需要获取某个或某几个特定的APN的统计信息，用于进行故障定位、话务分析等。基于特定APN的统计前，必须先完成该APN的配置。目前，基于APN测量的统计项包括：承载激活流程统计、承载修改流程统计以及承载去激活流程统计。 
@@ -16158,7 +16158,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 
@@ -16193,7 +16193,7 @@ APN的方式包括FQDN和NI两种：
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -16216,7 +16216,7 @@ APN配置
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -16239,7 +16239,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### APN方式配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当网络或设备出现故障时，运营商有可能会需要获取某个或某几个特定APN的性能统计信息，用于进行故障定位、话务分析等操作。 
@@ -16250,9 +16250,9 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 操作员需要先通过
-                [SET APN MODE](../mml/1261832.html)
+                [SET APN MODE]
                 命令设置系统支持的APN统计格式，然后再通过
-                [ADD APN STATIS](../mml/1261788.html)
+                [ADD APN STATIS]
                 命令根据不同的格式设置APN的名称。
             
 
@@ -16265,7 +16265,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 在操作员进行性能统计时，会使用到
-                [ADD APN STATIS](../mml/1261788.html)
+                [ADD APN STATIS]
                 命令配置的“APN名称”。
             
 
@@ -16300,7 +16300,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         在“测量类型信息”页签左侧的“对象名称”就是通过
-                        [ADD APN STATIS](../mml/1261788.html)
+                        [ADD APN STATIS]
                         命令设置的”APN名称”。
                     
 
@@ -16311,7 +16311,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该命令用于配置基于APN进行性能统计时的测量方式，可以配置为根据NI或FQDN进行统计。 
@@ -16319,7 +16319,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -16342,7 +16342,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [EPC APN统计配置](../../zh-CN/tree/N_12603167.html)
+父主题： [EPC APN统计配置]
 
 
 
@@ -16365,13 +16365,13 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 设置APN方式配置(SET APN MODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置基于APN进行性能统计时的测量方式。 
 
 
-在通过[ADD APN STATIS](1261788.html)命令配置需要进行性能统计的特定APN名称之前，必须先通过此命令配置系统支持的APN统计格式。目前支持两种格式：FQDN或NI。
+在通过[ADD APN STATIS]命令配置需要进行性能统计的特定APN名称之前，必须先通过此命令配置系统支持的APN统计格式。目前支持两种格式：FQDN或NI。
 
 
 FQDN（Fully Qualified Domain Name，全称域名）由NI和OI，加上插在二者之间的“apn.epc”组成，格式为“NI.apn.epc.OI”。 
@@ -16429,13 +16429,13 @@ MNC和MCC都是三位0~9的数字，如果不足三位，需要靠前用0补齐�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该功能仅适用于MME网元。 
 
 
-本命令的配置结果，会影响[ADD APN STATIS](1261788.html)E命令的配置数据。
+本命令的配置结果，会影响[ADD APN STATIS]E命令的配置数据。
 
 
 
@@ -16452,10 +16452,10 @@ MNC和MCC都是三位0~9的数字，如果不足三位，需要靠前用0补齐�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MODE|APN方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|操作员在基于APN进行性能统计时，支持两种方式：可以基于NI进行统计，也可以基于FQDN进行统计。
 
@@ -16464,7 +16464,7 @@ MODE|APN方式|参数可选性:任选参数；参数类型:枚举。参见枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 操作员在基于APN进行性能统计时，设置为基于APN-NI方式进行统计。 
@@ -16479,7 +16479,7 @@ SET APN MODE:MODE=NI;
 
 
 
-父主题： [APN方式配置](../../zh-CN/tree/N_126031671.html)
+父主题： [APN方式配置]
 
 
 
@@ -16502,7 +16502,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询APN方式配置(SHOW APN MODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询基于APN进行性能统计时的测量方式。 
@@ -16510,7 +16510,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -16518,10 +16518,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MODE|APN方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|操作员在基于APN进行性能统计时，支持两种方式：可以基于NI进行统计，也可以基于FQDN进行统计。
 
@@ -16530,7 +16530,7 @@ MODE|APN方式|参数可选性:任选参数；参数类型:枚举。参见枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN方式配置。 
@@ -16559,7 +16559,7 @@ SHOW APN MODE
 
 
 
-父主题： [APN方式配置](../../zh-CN/tree/N_126031671.html)
+父主题： [APN方式配置]
 
 
 
@@ -16582,7 +16582,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当网络或设备出现故障时，运营商有可能会需要获取某个或某几个特定APN的性能统计信息，用于进行故障定位、话务分析等操作。 
@@ -16593,9 +16593,9 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 操作员需要先通过
-                [SET APN MODE](../mml/1261832.html)
+                [SET APN MODE]
                 命令设置系统支持的APN统计格式，然后再通过
-                [ADD APN STATIS](../mml/1261788.html)
+                [ADD APN STATIS]
                 命令根据不同的格式设置APN的名称。
             
 
@@ -16608,7 +16608,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 在操作员进行性能统计时，会使用到
-                [ADD APN STATIS](../mml/1261788.html)
+                [ADD APN STATIS]
                 命令配置的“APN名称”。
             
 
@@ -16643,7 +16643,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         在“测量类型信息”页签左侧的“对象名称”就是通过
-                        [ADD APN STATIS](../mml/1261788.html)
+                        [ADD APN STATIS]
                         命令设置的”APN名称”。
                     
 
@@ -16654,7 +16654,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该命令用于配置基于APN进行性能统计的测量对象，即APN名称。 
@@ -16662,7 +16662,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -16690,7 +16690,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [EPC APN统计配置](../../zh-CN/tree/N_12603167.html)
+父主题： [EPC APN统计配置]
 
 
 
@@ -16713,7 +16713,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 新增APN配置(ADD APN STATIS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置基于APN进行性能统计的测量对象，即APN名称。 
@@ -16721,13 +16721,13 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该功能仅适用于MME网元。 
 
 
-在通过本命令配置需要进行性能统计的特定APN名称之前，必须先通过[SET APN MODE](1261832.html)命令配置系统支持的APN统计格式。
+在通过本命令配置需要进行性能统计的特定APN名称之前，必须先通过[SET APN MODE]命令配置系统支持的APN统计格式。
 
 
 
@@ -16744,10 +16744,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|系统支持基于两种形式的APN格式进行性能统计，包括根据FQDN或NI进行性能数据统计。具体使用哪种方式进行统计，取决于SET APN MODE命令的配置结果。操作员需要先通过SET APN MODE命令设置系统支持的APN统计格式，然后再通过本命令根据不同的格式设置APN的名称。FQDN由NI和OI，加上插在二者之间的“apn.epc”组成，格式为“NI.apn.epc.OI”。协议规定FQDN最长不能超过100个字符。NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），每个运营商都有一个缺省的APN运营商标识。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”（此处要求选用后面一种格式），要求如下：MNC和MCC都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs
 
@@ -16756,7 +16756,7 @@ APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增基于NI格式进行性能测量的APN名称，其中APN名称为'APN-NI.apn.epcmnc460.mcc01.3gppnetwork.org'。 
@@ -16771,7 +16771,7 @@ ADD APN STATIS:APNNAME="APN-NI.apn.epcmnc460.mcc01.3gppnetwork.org";
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_126031672.html)
+父主题： [APN配置]
 
 
 
@@ -16794,7 +16794,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 删除APN配置(DEL APN STATIS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已经配置的基于APN进行性能统计的测量对象。 
@@ -16802,7 +16802,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -16810,10 +16810,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|系统支持基于两种形式的APN格式进行性能统计，包括根据FQDN或NI进行性能数据统计。具体使用哪种方式进行统计，取决于SET APN MODE命令的配置结果。操作员需要先通过SET APN MODE命令设置系统支持的APN统计格式，然后再通过本命令根据不同的格式设置APN的名称。FQDN由NI和OI，加上插在二者之间的“apn.epc”组成，格式为“NI.apn.epc.OI”。协议规定FQDN最长不能超过100个字符。NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），每个运营商都有一个缺省的APN运营商标识。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”（此处要求选用后面一种格式），要求如下：MNC和MCC都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs
 
@@ -16822,7 +16822,7 @@ APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 已经配置的基于APN进行性能统计的测量对象，其中APN名称为'apn-ni.apn.epcmnc460.mcc01.3gppnetwork.org'的配置数据。 
@@ -16837,7 +16837,7 @@ DEL APN STATIS:APNNAME="apn-ni.apn.epcmnc460.mcc01.3gppnetwork.org";
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_126031672.html)
+父主题： [APN配置]
 
 
 
@@ -16860,7 +16860,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询APN配置(SHOW APN STATIS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已经配置的基于APN进行性能统计的测量对象。 
@@ -16868,7 +16868,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -16876,10 +16876,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~99个字符。|系统支持基于两种形式的APN格式进行性能统计，包括根据FQDN或NI进行性能数据统计。具体使用哪种方式进行统计，取决于SET APN MODE命令的配置结果。操作员需要先通过SET APN MODE命令设置系统支持的APN统计格式，然后再通过本命令根据不同的格式设置APN的名称。FQDN由NI和OI，加上插在二者之间的“apn.epc”组成，格式为“NI.apn.epc.OI”。协议规定FQDN最长不能超过100个字符。NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），每个运营商都有一个缺省的APN运营商标识。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”（此处要求选用后面一种格式），要求如下：MNC和MCC都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs
 
@@ -16888,10 +16888,10 @@ APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNID|APN标识|参数可选性:任选参数；参数类型:整数。|APN标识用于标识一个APN。
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型。|系统支持基于两种形式的APN格式进行性能统计，包括根据FQDN或NI进行性能数据统计。具体使用哪种方式进行统计，取决于SET APN MODE命令的配置结果。操作员需要先通过SET APN MODE命令设置系统支持的APN统计格式，然后再通过本命令根据不同的格式设置APN的名称。FQDN由NI和OI，加上插在二者之间的“apn.epc”组成，格式为“NI.apn.epc.OI”。协议规定FQDN最长不能超过100个字符。NI（Network Identifier，网络标识），定义了通过分组核心网连接的外部网络和终端的可选请求业务。它是由网络运营商分配给ISP或企业的，与其固定Internet域名相同的一个标识。例如，定义移动用户接入某公司的企业网，则APN的网络标识可以规划为“zte.com”。APN名称的NI部分，配置格式：“Label1.Label2.....Labeln”，可包含多个标签，要求如下：不能以“.”、“rac”、“lac”、“sgsn”或者“rnc”开头不能以“.gprs”结尾不能使用通配符“*”除了数字、字母、“-”、和“.”不能输入其余字符。示例：zte.com.cnOI（Operator Identifier，运营商标识），每个运营商都有一个缺省的APN运营商标识。APN名称的OI部分，配置格式为“Label1.Label2.Label3”，包含3个标签，其中，R8版本之前的形式为：MNC<MNC>.MCC<MCC>.gprs，R8版本之后的形式为“MNC<MNC>.MCC<MCC>.3gppnetwork.org”（此处要求选用后面一种格式），要求如下：MNC和MCC都是三位0~9的数字，如果不足三位，需要靠前用0补齐。除了数字、字母、“-”、和“.”不能输入其余字符。示例：mnc001.mcc222.3gppnetwork.org，mnc011.mcc460.gprs
@@ -16901,7 +16901,7 @@ APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型。|系�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已经配置的基于APN进行性能统计的测量对象。 
@@ -16932,7 +16932,7 @@ SHOW APN STATIS;
 
 
 
-父主题： [APN配置](../../zh-CN/tree/N_126031672.html)
+父主题： [APN配置]
 
 
 
@@ -16955,7 +16955,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### eNodeB局向配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当网络或设备出现故障时，运营商有可能会需要获取某个或某几个特定的eNodeB局向的统计信息，用于进行故障定位、话务分析等。基于特定eNodeB局向的统计前，必须先完成该特定eNodeB局向的配置。目前，基于eNodeB测量的统计项为：基于eNB局向的S1AP消息测量。 
@@ -16963,7 +16963,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 
@@ -16985,7 +16985,7 @@ eNodeB局向配置的内容包括：MCC、MNC、ENODEBID以及NAME，MCC+MNC+ENO
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -17018,7 +17018,7 @@ eNodeB局向配置的内容包括：MCC、MNC、ENODEBID以及NAME，MCC+MNC+ENO
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -17041,7 +17041,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增eNodeB局向配置(ADD ENODEBOBJ) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置eNodeB局向。当运营商要求能在性能管理中进行基于eNB局向的S1AP消息测量时，需要进行该配置。配置成功后，eNodeB局向作为S1AP消息的测量对象，在性能管理的MME测量 > 链路测量 > 接口消息测量 > 基于eNB局向的S1AP消息测量
@@ -17050,7 +17050,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -17058,10 +17058,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，如中国大陆（不含港澳台地区）为460或461。移动国家码由ITU统一分配和管理。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|由运营商所在国官方机构按国际电信联盟ITU-T E.212建议分配给本MME网元使用的移动网号。如中国移动使用02（460-02）。
@@ -17073,7 +17073,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增eNodeB局向配置，其中移动国家码为460、移动网号为01、eNodeB局向号为123456、用户别名为enb01。 
@@ -17088,7 +17088,7 @@ ADD ENODEBOBJ:MCC="460",MNC="01",ENODEBID=123456,NAME="enb01";
 
 
 
-父主题： [eNodeB局向配置](../../zh-CN/tree/N_12603168.html)
+父主题： [eNodeB局向配置]
 
 
 
@@ -17111,7 +17111,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改eNodeB局向配置(SET ENODEBOBJ) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改eNodeB局向配置的别名。 
@@ -17119,7 +17119,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -17127,10 +17127,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，如中国大陆（不含港澳台地区）为460或461。移动国家码由ITU统一分配和管理。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|由运营商所在国官方机构按国际电信联盟ITU-T E.212建议分配给本MME网元使用的移动网号。如中国移动使用02（460-02）。
@@ -17142,7 +17142,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将移动国家码为460、移动网号为01、局向号为123456的eNodeB局向配置的用户别名修改为enb02。 
@@ -17157,7 +17157,7 @@ SET ENODEBOBJ:MCC="460",MNC="01",ENODEBID=123456,NAME="enb02";
 
 
 
-父主题： [eNodeB局向配置](../../zh-CN/tree/N_12603168.html)
+父主题： [eNodeB局向配置]
 
 
 
@@ -17180,7 +17180,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除eNodeB局向配置(DEL ENODEBOBJ) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除已存在的eNodeB局向配置。 
@@ -17188,7 +17188,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -17196,10 +17196,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，如中国大陆（不含港澳台地区）为460或461。移动国家码由ITU统一分配和管理。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|由运营商所在国官方机构按国际电信联盟ITU-T E.212建议分配给本MME网元使用的移动网号。如中国移动使用02（460-02）。
@@ -17210,7 +17210,7 @@ ENODEBID|eNodeB局向号|参数可选性:必选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除移动国家码为460、移动网号为01、局向号为123456的eNodeB局向配置。 
@@ -17225,7 +17225,7 @@ DEL ENODEBOBJ:MCC="460",MNC="01",ENODEBID=123456;
 
 
 
-父主题： [eNodeB局向配置](../../zh-CN/tree/N_12603168.html)
+父主题： [eNodeB局向配置]
 
 
 
@@ -17248,7 +17248,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询eNodeB局向配置(SHOW ENODEBOBJ) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已经配置的eNodeB测量对象。如果设置查询条件，则只查询出符合条件的配置；否则，查询所有配置。 
@@ -17256,7 +17256,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -17264,10 +17264,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，如中国大陆（不含港澳台地区）为460或461。移动国家码由ITU统一分配和管理。
 MNC|移动网号|参数可选性:任选参数；参数类型:字符型；参数范围为:2~3个字符。|由运营商所在国官方机构按国际电信联盟ITU-T E.212建议分配给本MME网元使用的移动网号。如中国移动使用02（460-02）。
@@ -17278,10 +17278,10 @@ ENODEBID|eNodeB局向号|参数可选性:任选参数；参数类型:整数；�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|eNodeB局向编号|参数可选性:任选参数；参数类型:整数。|eNodeB局向编号用于唯一标识一条eNodeB局向配置记录，该参数在增加eNodeB局向配置成功后自动产生，可通过SHOW ENODEBOBJ命令查询。
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，如中国大陆（不含港澳台地区）为460或461。移动国家码由ITU统一分配和管理。
@@ -17294,7 +17294,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有eNodeB局向配置。 
@@ -17325,7 +17325,7 @@ SHOW ENODEBOBJ;
 
 
 
-父主题： [eNodeB局向配置](../../zh-CN/tree/N_12603168.html)
+父主题： [eNodeB局向配置]
 
 
 
@@ -17348,7 +17348,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 组合条件配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为了满足运营商对性能测量统计结果的不同要求，比如运营商希望在统计QCI的同时还关注TA，组合测量对象就随之应运而出了。 
@@ -17359,7 +17359,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
             
             组合条件配置的结果用于性能测量，每一个组合条件配置结果作为一个组合测量对象，应用于性能管理的
@@ -17374,7 +17374,7 @@ MME测量
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -17407,7 +17407,7 @@ MME测量
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -17430,7 +17430,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增组合条件(ADD COMCOND) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置组合条件，每一个组合条件配置结果作为一个组合测量对象，应用于性能管理的MME测量 > 组合条件测量 > 流程测量
@@ -17439,7 +17439,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 一种测量类型只能对应一种组合条件。比如，承载激活流程测量的组合一旦配置了TA+QCI的组合，那么就不能配置任何其他的组合。 
@@ -17447,10 +17447,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TYPE|用于组合统计的测量类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该测量类型与性能管理的MME测量 > 组合条件测量 > 流程测量节点下的承载激活流程组合条件测量、承载修改流程组合条件测量、承载去激活流程组合条件测量、承载激活分网元组合条件测量以及承载修改分网元组合条件测量相对应。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的唯一标识，在MME中一个TAID对应一个跟踪区TA。该参数关联ADD TA 命令配置的TAID。
@@ -17463,7 +17463,7 @@ NAME|测量对象描述|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增组合条件配置，其中用于组合统计的测量类型为承载激活流程组合条件测量、跟踪区标识为1、测量对象描述为type_1。 
@@ -17478,7 +17478,7 @@ ADD COMCOND:TYPE="MOPTYPEID_MME_BEARACT",TAID=1,NAME="type_1";
 
 
 
-父主题： [组合条件配置](../../zh-CN/tree/N_12603169.html)
+父主题： [组合条件配置]
 
 
 
@@ -17501,7 +17501,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改组合条件(SET COMCOND) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改已配置的组合条件，只能修改组合条件配置的测量对象描述。
@@ -17509,7 +17509,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -17517,10 +17517,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TYPE|用于组合统计的测量类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该测量类型与性能管理的MME测量 > 组合条件测量 > 流程测量节点下的承载激活流程组合条件测量、承载修改流程组合条件测量、承载去激活流程组合条件测量、承载激活分网元组合条件测量以及承载修改分网元组合条件测量相对应。
 TAID|跟踪区标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|各TA在MME内部的唯一标识，在MME中一个TAID对应一个跟踪区TA。该参数关联ADD TA 命令配置的TAID。
@@ -17533,7 +17533,7 @@ NAME|测量对象描述|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改用于组合统计的测量类型为承载激活流程组合条件测量，跟踪区标识为1的配置数据，将该配置的测量对象描述修改为type_2。 
@@ -17548,7 +17548,7 @@ SET COMCOND:TYPE="MOPTYPEID_MME_BEARACT",TAID=1,NAME="type_2";
 
 
 
-父主题： [组合条件配置](../../zh-CN/tree/N_12603169.html)
+父主题： [组合条件配置]
 
 
 
@@ -17571,15 +17571,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除组合条件(DEL COMCOND) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于删除已配置的组合条件。可根据测量对象ID进行删除也可根据测量类型进行删除。测量对象ID可通过[SHOW COMCOND](1261855.html)命令查询。
+该命令用于删除已配置的组合条件。可根据测量对象ID进行删除也可根据测量类型进行删除。测量对象ID可通过[SHOW COMCOND]命令查询。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -17587,10 +17587,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OBJECTID|测量对象ID|参数可选性:必须单选参数；参数类型:整数；参数范围为:1~100。|测量对象ID唯一标识一条组合条件配置，该参数在增加组合条件配置成功后自动产生，可通过SHOW COMCOND命令查询。
 TYPE|用于组合统计的测量类型|参数可选性:必须单选参数；参数类型:枚举。参见枚举定义。|该测量类型与性能管理的MME测量 > 组合条件测量 > 流程测量节点下的承载激活流程组合条件测量、承载修改流程组合条件测量、承载去激活流程组合条件测量、承载激活分网元组合条件测量以及承载修改分网元组合条件测量相对应。
@@ -17603,7 +17603,7 @@ APNID|APN ID|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除测量对象ID为1的组合条件配置。 
@@ -17618,7 +17618,7 @@ DEL COMCOND:OBJECTID=1;
 
 
 
-父主题： [组合条件配置](../../zh-CN/tree/N_12603169.html)
+父主题： [组合条件配置]
 
 
 
@@ -17641,7 +17641,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询组合条件(SHOW COMCOND) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已经配置的组合条件。如果设置查询条件，则只查询出符合条件的配置；否则，查询所有配置。 
@@ -17649,7 +17649,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无 
@@ -17657,10 +17657,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TYPE|用于组合统计的测量类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该测量类型与性能管理的MME测量 > 组合条件测量 > 流程测量节点下的承载激活流程组合条件测量、承载修改流程组合条件测量、承载去激活流程组合条件测量、承载激活分网元组合条件测量以及承载修改分网元组合条件测量相对应。
 
@@ -17669,10 +17669,10 @@ TYPE|用于组合统计的测量类型|参数可选性:任选参数；参数类�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OBJECTID|测量对象ID|参数可选性:任选参数；参数类型:整数。|测量对象ID唯一标识一条组合条件配置，该参数在增加组合条件配置成功后自动产生，可通过SHOW COMCOND命令查询。
 TYPE|用于组合统计的测量类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该测量类型与性能管理的MME测量 > 组合条件测量 > 流程测量节点下的承载激活流程组合条件测量、承载修改流程组合条件测量、承载去激活流程组合条件测量、承载激活分网元组合条件测量以及承载修改分网元组合条件测量相对应。
@@ -17686,7 +17686,7 @@ NAME|测量对象描述|参数可选性:任选参数；参数类型:字符型；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有的组合条件配置。 
@@ -17717,7 +17717,7 @@ SHOW COMCOND;
 
 
 
-父主题： [组合条件配置](../../zh-CN/tree/N_12603169.html)
+父主题： [组合条件配置]
 
 
 
@@ -17740,21 +17740,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME TA组配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             目前网络采用的都是大区制，即一个MME/SGSN管理多个地市。在运维的过程中，为了监控网络运行情况，需要监控某些热点区域或者某个地市的指标数据。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             该功能用于满足大区制下的地市或者热点区域指标监控的要求，把某些TA归类为一个组，做为一个单元采集数据。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -17777,7 +17777,7 @@ TA组资源配置
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -17800,7 +17800,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### TA组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME支持基于TA的性能统计，在运维中需要获取某些TA的合并数据，现有的基于TA的统计无法满足。因此MME需要根据配置把某个或者某些TA归类到一个组，即TA组，统计并呈现出对应TA组的性能统计数据。TA组是TA资源的集合。 
@@ -17808,7 +17808,7 @@ MME支持基于TA的性能统计，在运维中需要获取某些TA的合并数�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该功能用于对MME网元管理的TA组进行配置。包括TA组编号和别名 
@@ -17816,7 +17816,7 @@ MME支持基于TA的性能统计，在运维中需要获取某些TA的合并数�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -17849,7 +17849,7 @@ MME支持基于TA的性能统计，在运维中需要获取某些TA的合并数�
 
 
 
-父主题： [MME TA组配置](../../zh-CN/tree/N_12603170.html)
+父主题： [MME TA组配置]
 
 
 
@@ -17872,7 +17872,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 新增TA组编号配置(ADD MMETAGROUPID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置MME网元管理的TA组的编号和别名。 
@@ -17880,15 +17880,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 ALIAS|别名|参数可选性:任选参数；参数类型:字符型。|该参数用于设置TA组的别名，比如：南京雨花区、南京鼓楼区等。
@@ -17898,7 +17898,7 @@ ALIAS|别名|参数可选性:任选参数；参数类型:字符型。|该参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增TA组编号配置，其中TA组标识为1，别名为"yuhua"。 
@@ -17913,7 +17913,7 @@ ADD MMETAGROUPID:GROUPID=1,ALIAS="yuhua"
 
 
 
-父主题： [TA组编号配置](../../zh-CN/tree/N_126031701.html)
+父主题： [TA组编号配置]
 
 
 
@@ -17936,7 +17936,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 修改TA组编号配置(SET MMETAGROUPID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改MME的TA组每个编号对应的别名。 
@@ -17944,15 +17944,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 ALIAS|别名|参数可选性:任选参数；参数类型:字符型。|该参数用于设置TA组的别名，比如：南京雨花区、南京鼓楼区等。
@@ -17962,7 +17962,7 @@ ALIAS|别名|参数可选性:任选参数；参数类型:字符型。|该参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改TA组编号配置，其中TA组标识为1，别名修改为"YuhuaDistrict"。 
@@ -17977,7 +17977,7 @@ SET MMETAGROUPID:GROUPID=1,ALIAS="YuhuaDistrict"
 
 
 
-父主题： [TA组编号配置](../../zh-CN/tree/N_126031701.html)
+父主题： [TA组编号配置]
 
 
 
@@ -18000,7 +18000,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 删除TA组编号配置(DEL MMETAGROUPID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除MME网元配置的TA组。 
@@ -18008,15 +18008,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 
@@ -18025,7 +18025,7 @@ GROUPID|TA组号|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除TA组标识为1的TA组编号配置。 
@@ -18040,7 +18040,7 @@ DEL MMETAGROUPID:GROUPID=1
 
 
 
-父主题： [TA组编号配置](../../zh-CN/tree/N_126031701.html)
+父主题： [TA组编号配置]
 
 
 
@@ -18063,7 +18063,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询TA组编号配置(SHOW MMETAGROUPID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME网元配置的TA组的编号和别名。 
@@ -18071,15 +18071,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:任选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 
@@ -18088,10 +18088,10 @@ GROUPID|TA组号|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:任选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 ALIAS|别名|参数可选性:任选参数；参数类型:字符型。|该参数用于设置TA组的别名，比如：南京雨花区、南京鼓楼区等。
@@ -18101,7 +18101,7 @@ ALIAS|别名|参数可选性:任选参数；参数类型:字符型。|该参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询TA组编号配置。 
@@ -18130,7 +18130,7 @@ SHOW APN STATI
 
 
 
-父主题： [TA组编号配置](../../zh-CN/tree/N_126031701.html)
+父主题： [TA组编号配置]
 
 
 
@@ -18153,7 +18153,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### TA组资源配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME根据配置把某个或者某些TA归类到一个组，称为TA组，然后统计并呈现对应的性能统计数据。一个TA组中可以包含多个TA资源分段，一个TA资源分段只能归属于一个TA组。一个TA资源分段包括TA资源归属的TA组、TA资源段的MCC和MNC、起始值和终止值，不同的资源分段之间不能重叠交叉。 
@@ -18161,7 +18161,7 @@ MME根据配置把某个或者某些TA归类到一个组，称为TA组，然后�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该功能用于配置指定TA组下关联的TA资源分段信息，包括TA资源归属的TA组、TA资源段的MCC和MNC、起始值和终止值。 
@@ -18172,7 +18172,7 @@ MME根据配置把某个或者某些TA归类到一个组，称为TA组，然后�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -18200,7 +18200,7 @@ MME根据配置把某个或者某些TA归类到一个组，称为TA组，然后�
 
 
 
-父主题： [MME TA组配置](../../zh-CN/tree/N_12603170.html)
+父主题： [MME TA组配置]
 
 
 
@@ -18223,7 +18223,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 新增TA组资源配置(ADD MMETAGRPRESOURSES) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加TA组关联的TA列表。当需要把某些TA归类为一个TA组的时候使用该配置。配置后，MME根据配置把某个或者某些TA按照一个组来使用。 
@@ -18231,15 +18231,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码，MCC的资源由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位，例如中国为460。
@@ -18252,7 +18252,7 @@ TAEND|跟踪区码终止值|参数可选性:必选参数；参数类型:字符�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增TA组关联的TA列表，其中TA组标识为1，移动国家码为460，移动网号为11，跟踪区码范围为6001到7001。 
@@ -18267,7 +18267,7 @@ ADD MMETAGRPRESOURSES:GROUPID=1,MCC="460",MNC="11",TABEGIN="6001",TAEND="7001"
 
 
 
-父主题： [TA组资源配置](../../zh-CN/tree/N_126031702.html)
+父主题： [TA组资源配置]
 
 
 
@@ -18290,7 +18290,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 删除TA组资源配置(DEL MMETAGRPRESOURSES) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除TA组关联的TA列表。可以根据TA组ID删除该TA组下的所有TA列表，或者根据TA组+MCC+MNC+跟踪区码起始值+跟踪区码终止值删除某一条记录。 
@@ -18298,15 +18298,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-根据TA组+MCC+MNC+跟踪区码起始值+跟踪区码终止值删除某一条记录时，删除的记录需与[ADD MMETAGRPRESOURSES](1266194.html)命令中新增的记录对应。
-
-
-[](None)参数说明 
+根据TA组+MCC+MNC+跟踪区码起始值+跟踪区码终止值删除某一条记录时，删除的记录需与[ADD MMETAGRPRESOURSES]命令中新增的记录对应。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 MCC|移动国家码|参数可选性:特殊任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码，MCC的资源由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位，例如中国为460。
@@ -18319,7 +18319,7 @@ TAEND|跟踪区码终止值|参数可选性:特殊任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除TA组关联的TA列表，其中TA组标识为1。 
@@ -18334,7 +18334,7 @@ DEL MMETAGRPRESOURSES:GROUPID=1
 
 
 
-父主题： [TA组资源配置](../../zh-CN/tree/N_126031702.html)
+父主题： [TA组资源配置]
 
 
 
@@ -18357,7 +18357,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ##### 查询TA组资源配置(SHOW MMETAGRPRESOURSES) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询TA组关联的TA列表。 
@@ -18365,15 +18365,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:任选参数；参数类型:整数；参数范围为:1~2048。|该参数用于设置TA组的编号。
 
@@ -18382,10 +18382,10 @@ GROUPID|TA组号|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|TA组号|参数可选性:任选参数；参数类型:整数。|该参数用于设置TA组的编号。
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型。|移动国家码，MCC的资源由国际电联（ITU）统一分配和管理，唯一识别移动用户所属的国家，共3位，例如中国为460。
@@ -18398,7 +18398,7 @@ TAEND|跟踪区码终止值|参数可选性:任选参数；参数类型:字符�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询TA组关联的TA列表。 
@@ -18429,7 +18429,7 @@ SHOW MMETAGRPRESOURSES
 
 
 
-父主题： [TA组资源配置](../../zh-CN/tree/N_126031702.html)
+父主题： [TA组资源配置]
 
 
 
@@ -18452,7 +18452,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 测量类型对象数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 基于系统的支持能力，当前测量类型能够支持的对象数都是按照最大值来设置，但当所有测量类型支持的对象数过于庞大时，性能任务超过了系统的处理能力，可能会出现统计数据的延迟、错误和丢失等，因此要求当出现上述问题时，能够降低测量类型支持的对象数量。 
@@ -18460,7 +18460,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用来控制系统支持的测量类型所对应的对象容量，可以针对不同的测量类型设置不同的对象容量。 
@@ -18468,7 +18468,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -18501,7 +18501,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [性能管理专用配置](../../zh-CN/tree/N_1254520.html)
+父主题： [性能管理专用配置]
 
 
 
@@ -18524,7 +18524,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增测量类型对象数配置(ADD POOBJNUMCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加测量类型支持的最大对象数，当需要控制某个测量类型的对象数时，执行此命令。 
@@ -18532,7 +18532,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 增加某个测量类型支持的对象数后，如果已经激活的任务对象数大于设置后的对象数，则自动根据设置后的对象数上报数据，超过的部分对象不再上报。 
@@ -18540,10 +18540,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 POID|测量类型标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~65535。|该参数用于配置测量类型标识。
 CAPACITY|容量|参数可选性:必选参数；参数类型:整数；参数范围为:100~65535。|该参数用于配置PO ID标识的测量类型能够支持的对象数的最大值。
@@ -18553,7 +18553,7 @@ CAPACITY|容量|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一条测量类型对象数配置，测量类型编号为44000、容量为300。 
@@ -18568,7 +18568,7 @@ ADD POOBJNUMCFG:POID=44000,CAPACITY=300
 
 
 
-父主题： [测量类型对象数配置](../../zh-CN/tree/N_12697570.html)
+父主题： [测量类型对象数配置]
 
 
 
@@ -18591,7 +18591,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改测量类型对象数配置(SET POOBJNUMCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改测量类型支持的最大对象数，当某个测量类型的对象数需要减少或者增加时，执行此命令。 
@@ -18599,7 +18599,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 设置某个测量类型支持的对象数后，如果已经激活的任务对象数大于设置后的对象数，则自动根据设置后的对象数上报数据，超过的部分对象不再上报。 
@@ -18607,10 +18607,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 POID|测量类型标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~65535。|该参数用于配置测量类型标识。
 CAPACITY|容量|参数可选性:必选参数；参数类型:整数；参数范围为:100~65535。|该参数用于配置PO ID标识的测量类型能够支持的对象数的最大值。
@@ -18620,7 +18620,7 @@ CAPACITY|容量|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改一条测量类型对象数配置，测量类型编号为44000、容量为300。 
@@ -18635,7 +18635,7 @@ SET POOBJNUMCFG:POID=44000,CAPACITY=300
 
 
 
-父主题： [测量类型对象数配置](../../zh-CN/tree/N_12697570.html)
+父主题： [测量类型对象数配置]
 
 
 
@@ -18658,7 +18658,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除测量类型对象数配置(DEL POOBJNUMCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除测量类型支持的最大对象数，当某个测量类型的对象数不需要控制时，通过该命令来移除控制。 
@@ -18666,7 +18666,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -18674,10 +18674,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 POID|测量类型标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~65535。|该参数用于配置测量类型标识。
 
@@ -18686,7 +18686,7 @@ POID|测量类型标识|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除一条测量类型对象数配置，测量类型编号为44000。 
@@ -18701,7 +18701,7 @@ DEL POOBJNUMCFG:POID=44000
 
 
 
-父主题： [测量类型对象数配置](../../zh-CN/tree/N_12697570.html)
+父主题： [测量类型对象数配置]
 
 
 
@@ -18724,7 +18724,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询测量类型对象数配置(SHOW POOBJNUMCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询测量类型支持的最大对象数。 
@@ -18732,7 +18732,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -18740,10 +18740,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 POID|测量类型标识|参数可选性:任选参数；参数类型:整数。|该参数用于配置测量类型标识。
 CAPACITY|容量|参数可选性:任选参数；参数类型:整数。|该参数用于配置PO ID标识的测量类型能够支持的对象数的最大值。
@@ -18753,7 +18753,7 @@ CAPACITY|容量|参数可选性:任选参数；参数类型:整数。|该参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有测量类型对象数配置。 
@@ -18780,7 +18780,7 @@ SHOW POOBJNUMCFG
 
 
 
-父主题： [测量类型对象数配置](../../zh-CN/tree/N_12697570.html)
+父主题： [测量类型对象数配置]
 
 
 
@@ -18803,7 +18803,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## MCDR配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 M-CDR：即M-CDR话单（Mobility management generated - Charging Data Record）。M-CDR话单记录SGSN上附着用户的移动性管理相关的计费信息，主要包括话单类型、IMSI、话单序列号、用户当前的路由区以及路由区改变信息。 
@@ -18870,7 +18870,7 @@ M-CDR：即M-CDR话单（Mobility management generated - Charging Data Record）
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用户附着的时长达到一个阈值或者用户局内路由更新且路由区变化次数达到一个阈值时，M-CDR话单关闭，SGSN输出M-CDR话单，MCDR配置用于设置这两个阈值。 
@@ -18881,14 +18881,14 @@ M-CDR：即M-CDR话单（Mobility management generated - Charging Data Record）
 
 
                 如果配置了指定出话单时间和出话单原因（网管强制），命令为：
-                [SET CDR TIME](../mml/1262405.html)
+                [SET CDR TIME]
                 。在该命令中设置的出话单时间到达时，SGSN也会输出M-CDR话单。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -18911,7 +18911,7 @@ M-CDR：即M-CDR话单（Mobility management generated - Charging Data Record）
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -18934,7 +18934,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置MCDR配置(SET MCDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置M-CDR配置。可以设置用户接入成功后，经过多长时间后出M-CDR话单。可以设置终端在本局内发生多少次路由区切换后出一份M-CDR话单。 
@@ -18942,15 +18942,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TIMELMT|M-CDR超时关闭时长(分钟)|参数可选性:任选参数；参数类型:整数；参数范围为:5~2880。|用户接入成功后，用户一直没有出M-CDR话单，需要设置在一段时间后出一份M-CDR话单，此参数即为设置这段时间的值。
 MCLMT|移动性改变次数|参数可选性:任选参数；参数类型:整数；参数范围为:1~4。|用户在本局路由区会经常切换，当切换达到一定数量时，则会出一份M-CDR话单，此参数即为设置切换数量的值。
@@ -18960,7 +18960,7 @@ MCLMT|移动性改变次数|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MCDR话单MCDR超时关闭时长为5分钟，移动性改变次数为1次。 
@@ -18975,7 +18975,7 @@ SET MCDR:TIMELMT=5,MCLMT=1;
 
 
 
-父主题： [MCDR配置](../../zh-CN/tree/N_1254524.html)
+父主题： [MCDR配置]
 
 
 
@@ -18998,7 +18998,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询MCDR配置(SHOW MCDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询M-CDR配置，显示所配置的M-CDR超时关闭时长和移动性改变次数信息。 
@@ -19006,15 +19006,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TIMELMT|M-CDR超时关闭时长(分钟)|参数可选性:任选参数；参数类型:整数；参数范围为:5~2880。|用户接入成功后，用户一直没有出M-CDR话单，需要设置在一段时间后出一份M-CDR话单，此参数即为设置这段时间的值。
 MCLMT|移动性改变次数|参数可选性:任选参数；参数类型:整数；参数范围为:1~4。|用户在本局路由区会经常切换，当切换达到一定数量时，则会出一份M-CDR话单，此参数即为设置切换数量的值。
@@ -19024,7 +19024,7 @@ MCLMT|移动性改变次数|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示MCDR配置。 
@@ -19053,7 +19053,7 @@ SHOW MCDR;
 
 
 
-父主题： [MCDR配置](../../zh-CN/tree/N_1254524.html)
+父主题： [MCDR配置]
 
 
 
@@ -19076,7 +19076,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## CDR过滤配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 CDR过滤是控制SGSN启用或关闭话单，对如下各话单分别进行控制，便于运营商根据本地计费策略灵活控制SGSN是否输出相应话单。 
@@ -19123,7 +19123,7 @@ LCS-NI-CDR话单记录的是，网络触发的定位请求经过SGSN传送相关
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 CDR过滤配置在以下场景使用。 
@@ -19154,7 +19154,7 @@ CDR过滤配置可以控制SGSN在SMS-SMT-CDR话单中是否输出发送者号�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -19177,7 +19177,7 @@ CDR过滤配置可以控制SGSN在SMS-SMT-CDR话单中是否输出发送者号�
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -19200,7 +19200,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置CDR过滤配置(SET CDRFLT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置CDR过滤配置，当需要过滤各类话单时使用该命令，包括M-CDR话单、SMS-SMO-CDR话单、过滤SMS-SMT-CDR话单、LCS-MO-CDR话单、LCS-MT-CDR话单、LCS-NI-CDR话单。将期望的话单配置为过滤后，SGSN将不再将该类话单上报至计费服务器，SGSN将直接丢弃被过滤的话单信息。 
@@ -19208,15 +19208,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCDRFLT|过滤M-CDR|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|过滤M-CDR（移动性话单），设置选项中YES表示过滤，NO表示不过滤。
 SMOCDRFLT|过滤SMS-SMO-CDR|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|过滤SMS-SMO-CDR（短消息起呼话单），设置选项中YES表示过滤，NO表示不过滤。
@@ -19233,7 +19233,7 @@ NUMBERFLT|过滤短信终呼话单中发送者号码|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGSN的话单过滤配置为MCDR不过滤，SMS-SMO-CDR话单不过滤，SMS-SMT-CDR话单不过滤，LCS-MO-CDR话单不过滤，LCS-MT-CDR话单不过滤，LCS-NI-CDR话单不过滤，M-CDR中PLMNID不过滤，SMS-CDR中PLMNID不过滤。 
@@ -19248,7 +19248,7 @@ SET CDRFLT:MCDRFLT="NO",SMOCDRFLT="NO",SMTCDRFLT="NO",LCSMOCDRFLT="NO",LCSMTCDRF
 
 
 
-父主题： [CDR过滤配置](../../zh-CN/tree/N_1254525.html)
+父主题： [CDR过滤配置]
 
 
 
@@ -19271,7 +19271,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询CDR过滤配置(SHOW CDRFLT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询CDR过滤配置信息，显示以下内容。 
@@ -19295,7 +19295,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -19303,10 +19303,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCDRFLT|过滤M-CDR|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|过滤M-CDR（移动性话单），设置选项中YES表示过滤，NO表示不过滤。
 SMOCDRFLT|过滤SMS-SMO-CDR|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|过滤SMS-SMO-CDR（短消息起呼话单），设置选项中YES表示过滤，NO表示不过滤。
@@ -19323,7 +19323,7 @@ NUMBERFLT|过滤短信终呼话单中发送者号码|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 显示CDR过滤配置信息。 
@@ -19352,7 +19352,7 @@ SHOW CDRFLT;
 
 
 
-父主题： [CDR过滤配置](../../zh-CN/tree/N_1254525.html)
+父主题： [CDR过滤配置]
 
 
 
@@ -19375,7 +19375,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## USUP报文缓存配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN USUP模块处理用户面报文时，由于下行的2、3G用户面数据会触发寻呼、上行2G SNDCP（Sub Network Dependent Convergence Protocol，子网相关会聚协议）重组，需要MME缓存用户面报文。 
@@ -19383,7 +19383,7 @@ SGSN USUP模块处理用户面报文时，由于下行的2、3G用户面数据�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN USUP模块处理用户面报文时，由于下行2、3G用户面数据触发寻呼、上行2G SNDCP（Sub Network Dependent Convergence Protocol，子网相关会聚协议）重组，需要缓存用户面报文。 
@@ -19394,7 +19394,7 @@ USUP报文缓存配置用于配置2G USUP和3G USUP模块对每个PDP上下文�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -19422,7 +19422,7 @@ SNDCP重组配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -19445,12 +19445,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 3G USUP报文缓存配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 
                 每个USUP模块寻呼缓存报文数的总量有最大值限制，参见命令
-                [SHOW CAPACITY](../mml/1260066.html)
+                [SHOW CAPACITY]
                 。单个USUP模块的所有PDP上下文缓存的报文个数相加，如果大于总量，则后续寻呼过程中的数据报文将无法缓存，只有等寻呼应答或超时后，对缓存进行释放才可以继续缓存。
             
 
@@ -19460,7 +19460,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “3G USUP报文缓存配置”配置下行3G用户面数据触发寻呼时，每个PDP上下文最多缓存的报文个数。 
@@ -19471,7 +19471,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -19494,7 +19494,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [USUP报文缓存配置](../../zh-CN/tree/N_1254527.html)
+父主题： [USUP报文缓存配置]
 
 
 
@@ -19517,7 +19517,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置3G用户报文缓存配置(SET 3G USUP PACKBUF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置3G用户报文寻呼缓存配置。当需要设置每PDP上下文寻呼缓存下行数据包最大个数时，使用该命令，设置成功后，新接入的3G用户在寻呼过程中，每个PDP最大可以缓存的下行数据包个数将采用本配置的值。 
@@ -19528,7 +19528,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -19545,10 +19545,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PDPPACKBUF|每PDP缓存最大下行报文数|参数可选性:必选参数；参数类型:整数；参数范围为:0~70。|该参数用来设定寻呼缓存每PDP上下文能够缓存报文最大数量。若实际缓存报文数超过该配置值，则后续寻呼过程中的数据报文将无法缓存，只有等寻呼应答或超时后，对缓存进行释放才可以继续缓存。
 
@@ -19557,7 +19557,7 @@ PDPPACKBUF|每PDP缓存最大下行报文数|参数可选性:必选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置3G用户报文缓存配置，每PDP缓存最大下行报文数为0，即不缓存。
@@ -19570,7 +19570,7 @@ SET 3G USUP PACKBUF:PDPPACKBUF=0;
 
 
 
-父主题： [3G USUP报文缓存配置](../../zh-CN/tree/N_1254528.html)
+父主题： [3G USUP报文缓存配置]
 
 
 
@@ -19593,20 +19593,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询3G用户报文缓存配置(SHOW 3G USUP PACKBUF) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询3G用户报文寻呼缓存配置。寻呼缓存作用是，在用户寻呼过程中可以对此时下行的数据报文进行一定数量的缓存，当寻呼成功后再将缓存的报文下发给用户，保证了业务的连续性。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PDPPACKBUF|每PDP缓存最大下行报文数|参数可选性:任选参数；参数类型:整数。|该参数用来设定寻呼缓存每PDP上下文能够缓存报文最大数量。若实际缓存报文数超过该配置值，则后续寻呼过程中的数据报文将无法缓存，只有等寻呼应答或超时后，对缓存进行释放才可以继续缓存。
 
@@ -19615,7 +19615,7 @@ PDPPACKBUF|每PDP缓存最大下行报文数|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询3G用户报文缓存配置。
@@ -19642,7 +19642,7 @@ SHOW 3G USUP PACKBUF;
 
 
 
-父主题： [3G USUP报文缓存配置](../../zh-CN/tree/N_1254528.html)
+父主题： [3G USUP报文缓存配置]
 
 
 
@@ -19665,12 +19665,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 2G USUP报文缓存配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 
                 每个USUP模块寻呼缓存报文数的总量有最大值限制，参见命令
-                [SHOW CAPACITY](../mml/1260066.html)
+                [SHOW CAPACITY]
                 。单个USUP模块的所有PDP上下文缓存的报文个数相加，如果大于总量，则后续寻呼过程中的数据报文将无法缓存，只有等寻呼应答或超时后，对缓存进行释放才可以继续缓存。
             
 
@@ -19680,7 +19680,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “2G USUP报文缓存配置”配置下行2G用户面数据触发寻呼时，每个PDP上下文最多缓存的报文个数。 
@@ -19691,7 +19691,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -19714,7 +19714,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [USUP报文缓存配置](../../zh-CN/tree/N_1254527.html)
+父主题： [USUP报文缓存配置]
 
 
 
@@ -19737,7 +19737,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置2G用户报文缓存配置(SET 2G USUP PACKBUF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置2G用户报文寻呼缓存配置。当需要设置每PDP上下文寻呼缓存下行数据包最大个数时，使用该命令，设置成功后，新接入的2G用户在寻呼过程中，每个PDP最大可以缓存的下行数据包个数将采用本配置的值。 
@@ -19748,7 +19748,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -19765,10 +19765,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 USRPACKBUF|每PDP缓存最大下行报文数|参数可选性:必选参数；参数类型:整数；参数范围为:0~70。|该参数用来设定寻呼缓存每PDP上下文能够缓存报文最大数量。若实际缓存报文数超过该配置值，则后续寻呼过程中的数据报文将无法缓存，只有等寻呼应答或超时后，对缓存进行释放才可以继续缓存。
 
@@ -19777,7 +19777,7 @@ USRPACKBUF|每PDP缓存最大下行报文数|参数可选性:必选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置2G用户报文缓存配置，每PDP缓存最大下行报文数为0，即不缓存。
@@ -19790,7 +19790,7 @@ SET 2G USUP PACKBUF:USRPACKBUF=0;
 
 
 
-父主题： [2G USUP报文缓存配置](../../zh-CN/tree/N_1254529.html)
+父主题： [2G USUP报文缓存配置]
 
 
 
@@ -19813,7 +19813,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询2G用户报文缓存配置(SHOW 2G USUP PACKBUF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询2G用户报文寻呼缓存配置。 
@@ -19824,15 +19824,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 USRPACKBUF|每PDP缓存最大下行报文数|参数可选性:任选参数；参数类型:整数；参数范围为:0~70。|该参数用来设定寻呼缓存每PDP上下文能够缓存报文最大数量。若实际缓存报文数超过该配置值，则后续寻呼过程中的数据报文将无法缓存，只有等寻呼应答或超时后，对缓存进行释放才可以继续缓存。
 
@@ -19841,7 +19841,7 @@ USRPACKBUF|每PDP缓存最大下行报文数|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询2G用户报文缓存配置。
@@ -19868,7 +19868,7 @@ SHOW 2G USUP PACKBUF;
 
 
 
-父主题： [2G USUP报文缓存配置](../../zh-CN/tree/N_1254529.html)
+父主题： [2G USUP报文缓存配置]
 
 
 
@@ -19891,7 +19891,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### SNDCP重组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN和BSS之间通过Gb接口互通。 
@@ -19976,7 +19976,7 @@ XID参数协商
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “SNDCP重组配置”用于设置2G USUP模块对于2G上行用户面数据进行SNDCP重组时的缓存个数和重组超时时长。 
@@ -20001,7 +20001,7 @@ XID参数协商
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -20024,7 +20024,7 @@ XID参数协商
 
 
 
-父主题： [USUP报文缓存配置](../../zh-CN/tree/N_1254527.html)
+父主题： [USUP报文缓存配置]
 
 
 
@@ -20047,12 +20047,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置SNDCP重组配置(SET SNDCP REASSEMBLE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改SGSN网元中SNDCP（SubNetwork Dependent Convergence Protocol，子网会聚协议）重组功能的相关配置。对于Gb口数据报文，当需要修改单个用户面模块支持的最大缓存报文总数、分片报文的重组超时时长的时候，使用该命令。修改成功后，SNDCP分片重组将按照新配置的策略进行重组。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -20073,10 +20073,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 BUFFERNUM|SNDCP重组最大缓存个数|参数可选性:任选参数；参数类型:整数；参数范围为:3000~10000。|每用户面模块SNDCP重组最大缓存个数，取值越大容纳分片个数越多，即重组能力越强。当网络上报文延时较大时，建议使用较大值。
 TIMEOUT|SNDCP重组超时时间(毫秒)|参数可选性:任选参数；参数类型:整数；参数范围为:1000~6000。|SNDCP重组超时时间，时间越长则等待分片而重组失败的时间越长。当网络上报文延时较大时，建议使用较大值。
@@ -20086,7 +20086,7 @@ TIMEOUT|SNDCP重组超时时间(毫秒)|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改SNDCP重组配置，SNDCP重组最大缓存个数为4000，SNDCP重组超时时间（毫秒）为3000。 
@@ -20101,7 +20101,7 @@ SET SNDCP REASSEMBLE:BUFFERNUM=4000,TIMEOUT=3000;
 
 
 
-父主题： [SNDCP重组配置](../../zh-CN/tree/N_12545291.html)
+父主题： [SNDCP重组配置]
 
 
 
@@ -20124,20 +20124,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询SNDCP重组配置(SHOW SNDCP REASSEMBLE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SNDCP重组功能的相关配置。对于Gb口数据报文，SNDCP分片需要重组，重组过程中需要对已接收的分片进行缓存，对缓存一定时长的报文则认为重组失败从而释放缓存。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 BUFFERNUM|SNDCP重组最大缓存个数|参数可选性:任选参数；参数类型:整数。|每用户面模块SNDCP重组最大缓存个数，取值越大容纳分片个数越多，即重组能力越强。当网络上报文延时较大时，建议使用较大值。
 TIMEOUT|SNDCP重组超时时间(毫秒)|参数可选性:任选参数；参数类型:整数。|SNDCP重组超时时间，时间越长则等待分片而重组失败的时间越长。当网络上报文延时较大时，建议使用较大值。
@@ -20147,7 +20147,7 @@ TIMEOUT|SNDCP重组超时时间(毫秒)|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SNDCP重组配置。 
@@ -20176,7 +20176,7 @@ SHOW SNDCP REASSEMBLE;
 
 
 
-父主题： [SNDCP重组配置](../../zh-CN/tree/N_12545291.html)
+父主题： [SNDCP重组配置]
 
 
 
@@ -20199,7 +20199,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## TCP MSS协商配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MSS: Maximum Segment Size 最大分段大小，是TCP协议里面的一个概念。 
@@ -20222,7 +20222,7 @@ TCP MSS相关描述请参见RFC879协议。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 TCP MSS修改功能，即是SGSN在传输用户TCP SYN报文时，如果发现用户传送的MSS值大于配置的MSS值时，将其修改为配置的MSS值。 
@@ -20230,7 +20230,7 @@ TCP MSS修改功能，即是SGSN在传输用户TCP SYN报文时，如果发现�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -20253,7 +20253,7 @@ TCP MSS修改功能，即是SGSN在传输用户TCP SYN报文时，如果发现�
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -20276,12 +20276,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置TCP MSS协商配置(SET TCP MSS) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置TCP MSS协商配置。当需要对用户TCP SYN报文携带的TCP MSS字段进行协商修改时，使用该命令。配置成功后，SGSN将对用户TCP SYN报文中的TCP MSS进行协商，从而限定后续用户TCP数据报文的长度，减少分片重组对系统的影响，提高传输效率或减少GTP承载封装引起的分片，从而提高系统的传输性能。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -20302,10 +20302,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TCPMSS|最大IPv4报文段长度(字节)|参数可选性:任选参数；参数类型:整数；参数范围为:0~1420。|IPv4报文TCP报文段长度，以字节数为单位，该长度不包括TCP首部长度。
 IPV6TCPMSS|最大IPv6报文段长度(字节)|参数可选性:任选参数；参数类型:整数；参数范围为:0~1400。|IPv6报文TCP报文段长度，以字节数为单位，该长度不包括TCP首部长度。
@@ -20315,7 +20315,7 @@ IPV6TCPMSS|最大IPv6报文段长度(字节)|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置TCP MSS协商配置，最大IPv6报文TCP报文段长度（字节）为1000。
@@ -20328,7 +20328,7 @@ SET TCP MSS:IPV6TCPMSS=1000;
 
 
 
-父主题： [TCP MSS协商配置](../../zh-CN/tree/N_1254535.html)
+父主题： [TCP MSS协商配置]
 
 
 
@@ -20351,7 +20351,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询TCP MSS协商配置(SHOW TCP MSS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询TCP MSS协商配置。 
@@ -20362,15 +20362,15 @@ TCP MSS协商的作用是通过TCP建链时的协商，保证后续TCP报文段�
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TCPMSS|最大IPv4报文段长度(字节)|参数可选性:任选参数；参数类型:整数。|IPv4报文TCP报文段长度，以字节数为单位，该长度不包括TCP首部长度。
 IPV6TCPMSS|最大IPv6报文段长度(字节)|参数可选性:任选参数；参数类型:整数。|IPv6报文TCP报文段长度，以字节数为单位，该长度不包括TCP首部长度。
@@ -20380,7 +20380,7 @@ IPV6TCPMSS|最大IPv6报文段长度(字节)|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询TCP MSS协商配置。
@@ -20407,7 +20407,7 @@ SHOW TCP MSS;
 
 
 
-父主题： [TCP MSS协商配置](../../zh-CN/tree/N_1254535.html)
+父主题： [TCP MSS协商配置]
 
 
 
@@ -20430,7 +20430,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 跟踪管理配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本功能是用于SGSN网元的用户面报文的跟踪功能。包含单用户跟踪功能和丢包跟踪功能。 
@@ -20438,7 +20438,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 单用户跟踪功能即是在SGSN上跟踪指定用户当前传输的该用户的所有报文，并使用ZTE自定义格式发送到指定跟踪服务器上进行存储和解析。不同于信令中的数据跟踪，本功能跟踪的报文不可以在网管界面上直接呈现。本功能最多支持5个用户同时跟踪。 
@@ -20449,7 +20449,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -20477,7 +20477,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -20500,7 +20500,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 跟踪服务器配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 跟踪服务器是在单用户跟踪功能和丢包跟踪功能中使用到的报文存储和解析用的服务器。 
@@ -20508,7 +20508,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 配置跟踪服务器的IP地址（只能IPV4）和VRF。 
@@ -20516,7 +20516,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -20539,7 +20539,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [跟踪管理配置](../../zh-CN/tree/N_1254540.html)
+父主题： [跟踪管理配置]
 
 
 
@@ -20562,7 +20562,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置跟踪服务器配置(SET TRACE SERVER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置单用户跟踪或丢包跟踪时报文存储及解析的服务器相关信息。当需要设置跟踪服务器的IP地址和VRF信息时，使用该命令。跟踪服务器配置成功后，被跟踪的用户报文将发往该服务器。 
@@ -20573,7 +20573,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 需要确保SGSN网元与所配置的服务器地址（包括VRF）对应的链路正常（即路由是通的）。VRF相关信息可以在Rosng配置管理中查看，命令如下：show running-config 
@@ -20581,10 +20581,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IPADDR|跟踪服务器地址|参数可选性:任选参数；参数类型:地址|该参数用于设置跟踪服务器IP地址。可以选择一台与SGSN网元路由相同的PC机作为跟踪服务器。包括IPv4或者IPv6地址。
 VRF|VRF标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于指定SGSN到跟踪服务器路由所归属的VRF的标识。VRF相关信息可以在Rosng配置管理中查看，命令如下：show running-config
@@ -20594,7 +20594,7 @@ VRF|VRF标识|参数可选性:任选参数；参数类型:整数；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置跟踪服务器IP地址为20.1.10.1，VRF标识为100。
@@ -20607,7 +20607,7 @@ SET TRACE SERVER:IPADDR="20.1.10.1",VRF=100;
 
 
 
-父主题： [跟踪服务器配置](../../zh-CN/tree/N_1254541.html)
+父主题： [跟踪服务器配置]
 
 
 
@@ -20630,20 +20630,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询跟踪服务器配置(SHOW TRACE SERVER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询配置的跟踪服务器IP地址和VRF信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IPADDR|跟踪服务器地址|参数可选性:任选参数；参数类型:地址|该参数用于设置跟踪服务器IP地址。可以选择一台与SGSN网元路由相同的PC机作为跟踪服务器。包括IPv4或者IPv6地址。
 VRF|VRF标识|参数可选性:任选参数；参数类型:整数。|该参数用于指定SGSN到跟踪服务器路由所归属的VRF的标识。VRF相关信息可以在Rosng配置管理中查看，命令如下：show running-config
@@ -20653,7 +20653,7 @@ VRF|VRF标识|参数可选性:任选参数；参数类型:整数。|该参数用
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询跟踪服务器IP地址及VRF配置。
@@ -20680,7 +20680,7 @@ SHOW TRACE SERVER;
 
 
 
-父主题： [跟踪服务器配置](../../zh-CN/tree/N_1254541.html)
+父主题： [跟踪服务器配置]
 
 
 
@@ -20703,7 +20703,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 丢包跟踪配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 丢包跟踪功能则能将SGSN由于各种异常导致的丢弃的报文进行跟踪，同单用户跟踪功能一样，使用自定义格式发送到指定服务器上进行存储和解析。 
@@ -20711,7 +20711,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 可以配置开启或关闭丢包跟踪功能。 
@@ -20719,13 +20719,13 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 配置本功能时，必须配置对应的跟踪服务器，跟踪服务器配置命令为：
-                [SET TRACE SERVER](../mml/1260196.html)
+                [SET TRACE SERVER]
 
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -20748,7 +20748,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [跟踪管理配置](../../zh-CN/tree/N_1254540.html)
+父主题： [跟踪管理配置]
 
 
 
@@ -20771,12 +20771,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置丢包跟踪配置(SET DROP PACKET TRACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置是否开启丢包跟踪功能。当需要开启或关闭丢包跟踪功能时，使用该命令。设置开启跟踪后，SGSN将对所有用户由于各种异常导致丢弃的用户报文进行跟踪，发送到跟踪服务器上进行存储和解析。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -20793,10 +20793,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SPRT|是否开启丢包跟踪|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于配置是否开启丢包跟踪。取值含义：不开启：关闭丢包跟踪。开启：开启丢包跟踪。在需要对SGSN网元由于各种异常导致丢弃的用户数据报文进行跟踪分析时，开启丢包跟踪，默认情况下关闭丢包跟踪。
 
@@ -20805,7 +20805,7 @@ SPRT|是否开启丢包跟踪|参数可选性:必选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置为开启丢包跟踪。
@@ -20818,7 +20818,7 @@ SET DROP PACKET TRACE:SPRT="YES";
 
 
 
-父主题： [丢包跟踪配置](../../zh-CN/tree/N_1254542.html)
+父主题： [丢包跟踪配置]
 
 
 
@@ -20841,20 +20841,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询丢包跟踪配置(SHOW DROP PACKET TRACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询当前丢包跟踪配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SPRT|是否开启丢包跟踪|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置是否开启丢包跟踪。取值含义：不开启：关闭丢包跟踪。开启：开启丢包跟踪。在需要对SGSN网元由于各种异常导致丢弃的用户数据报文进行跟踪分析时，开启丢包跟踪，默认情况下关闭丢包跟踪。
 
@@ -20863,7 +20863,7 @@ SPRT|是否开启丢包跟踪|参数可选性:任选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询丢包跟踪配置。
@@ -20890,7 +20890,7 @@ SHOW DROP PACKET TRACE;
 
 
 
-父主题： [丢包跟踪配置](../../zh-CN/tree/N_1254542.html)
+父主题： [丢包跟踪配置]
 
 
 
@@ -20913,7 +20913,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 单用户跟踪配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 单用户跟踪功能即是在SGSN上跟踪指定用户当前传输的该用户的所有报文，并使用ZTE自定义格式发送到指定跟踪服务器上进行存储和解析。不同于信令中的数据跟踪，本功能跟踪的报文不可以在网管界面上直接呈现。本功能最多支持5个用户同时跟踪。 
@@ -20921,7 +20921,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 配置跟踪的用户的IMSI号码，不支持按IMSI号段匹配。可以指定用户进行跟踪或不进行跟踪。 
@@ -20929,13 +20929,13 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 配置本功能时，必须配置对应的跟踪服务器，跟踪服务器配置命令为：
-                [SET TRACE SERVER](../mml/1260196.html)
+                [SET TRACE SERVER]
 
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -20968,7 +20968,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [跟踪管理配置](../../zh-CN/tree/N_1254540.html)
+父主题： [跟踪管理配置]
 
 
 
@@ -20991,12 +20991,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增单用户跟踪配置(ADD SINGLE USER TRACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于增加需要进行单用户跟踪的用户信息，并设置是否开启跟踪。当需要新增一个IMSI对应的用户进行单用户跟踪时，使用该命令。新增单用户跟踪，并设置开启跟踪后，可以跟踪指定用户当前传输的所有用户数据报文，发送到跟踪服务器上存储和解析。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -21013,10 +21013,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于指定用户对应的IMSI。
 TRCFLG|是否开启跟踪|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:NO。|该参数用于配置IMSI对应用户是否开启单用户跟踪。取值含义：不开启：关闭单用户跟踪。开启：开启单用户跟踪。在需要对某用户当前传输的所有报文进行跟踪分析时，可以开启单用户跟踪，默认情况下关闭单用户跟踪。
@@ -21026,7 +21026,7 @@ TRCFLG|是否开启跟踪|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于新增单用户跟踪配置，IMSI为460090000000002，开启跟踪。
@@ -21039,7 +21039,7 @@ ADD SINGLE USER TRACE:IMSI="460090000000002",TRCFLG="YES";
 
 
 
-父主题： [单用户跟踪配置](../../zh-CN/tree/N_1254543.html)
+父主题： [单用户跟踪配置]
 
 
 
@@ -21062,20 +21062,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改单用户跟踪配置(SET SINGLE USER TRACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改指定IMSI对应用户的单用户跟踪配置。当需要开启或关闭用户对应的单用户跟踪功能时，使用该命令。开启跟踪后，可以跟踪该用户当前传输的所有用户数据报文，发送到跟踪服务器上存储和解析。关闭跟踪后，该用户当前传输的报文将不再被跟踪。
 
 
-[](None)注意事项 
+注意事项 
 
 指定IMSI对应的用户需要已经设置为单用户跟踪。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于指定用户对应的IMSI。
 TRCFLG|是否开启跟踪|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置IMSI对应用户是否开启单用户跟踪。取值含义：不开启：关闭单用户跟踪。开启：开启单用户跟踪。在需要对某用户当前传输的所有报文进行跟踪分析时，可以开启单用户跟踪，默认情况下关闭单用户跟踪。
@@ -21085,7 +21085,7 @@ TRCFLG|是否开启跟踪|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于修改IMSI为460090000000002的用户，不进行跟踪。
@@ -21098,7 +21098,7 @@ SET SINGLE USER TRACE:IMSI="460090000000002",TRCFLG="NO";
 
 
 
-父主题： [单用户跟踪配置](../../zh-CN/tree/N_1254543.html)
+父主题： [单用户跟踪配置]
 
 
 
@@ -21121,20 +21121,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除单用户跟踪配置(DEL SINGLE USER TRACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除指定IMSI对应用户的单用户跟踪配置。当需要删除对应用户的单用户跟踪功能配置时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 指定IMSI对应的用户需要已经设置为单用户跟踪。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于指定用户对应的IMSI。
 
@@ -21143,7 +21143,7 @@ IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于删除IMSI改为460090000000002的单用户跟踪配置。
@@ -21156,7 +21156,7 @@ DEL SINGLE USER TRACE:IMSI="460090000000002";
 
 
 
-父主题： [单用户跟踪配置](../../zh-CN/tree/N_1254543.html)
+父主题： [单用户跟踪配置]
 
 
 
@@ -21179,20 +21179,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询单用户跟踪配置(SHOW SINGLE USER TRACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询当前配置的所有单用户跟踪配置信息，或查询指定IMSI的单用户跟踪配置信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于指定用户对应的IMSI。
 
@@ -21201,10 +21201,10 @@ IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于指定用户对应的IMSI。
 TRCFLG|是否开启跟踪|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置IMSI对应用户是否开启单用户跟踪。取值含义：不开启：关闭单用户跟踪。开启：开启单用户跟踪。在需要对某用户当前传输的所有报文进行跟踪分析时，可以开启单用户跟踪，默认情况下关闭单用户跟踪。
@@ -21214,7 +21214,7 @@ TRCFLG|是否开启跟踪|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询当前配置的单用户跟踪配置信息。
@@ -21241,7 +21241,7 @@ SHOW SINGLE USER TRACE;
 
 
 
-父主题： [单用户跟踪配置](../../zh-CN/tree/N_1254543.html)
+父主题： [单用户跟踪配置]
 
 
 
@@ -21264,7 +21264,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## SGSN黑名单配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 局间RAU（路由区位置更新）过程中，UE新注册的New SGSN需要向UE上一次注册的Old SGSN请求该用户的移动性管理上下文和PDP上下文。New SGSN给OldSGSN发送SGSN Context Request（SGSN上下文请求）消息，Old SGSN给New SGSN返回SGSN Context Response（SGSN上下文响应）消息，消息中携带移动性管理上下文和PDP上下文，New SGSN再给Old SGSN返回SGSN Context Acknowledge（SGSN上下文确认）消息。RAU流程的具体细节可以参考3GPP TS 23.060 6.9.1.2.2章节。 
@@ -21278,7 +21278,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 通过SGSN黑名单配置，把不能按协议处理局间RAU的对端SGSN设置在SGSN黑名单里。SGSN和黑名单中的SGSN进行局间RAU流程时，控制是否向Old SGSN发送SGSN Context Request消息，控制Old SGSN在收到SGSN Context Request消息后，是否返回SGSN Context Response消息及在返回SGSN Context Response消息时是否携带PDP上下文信息。 
@@ -21286,14 +21286,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 配置SGSN黑名单的配置命令为：
-                [ADD SGSN BLACKLIST](../mml/1260271.html)
+                [ADD SGSN BLACKLIST]
                 。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -21326,7 +21326,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -21349,7 +21349,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增SGSN黑名单配置(ADD SGSN BLACKLIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置一个黑名单列表，将一些不按3GPP协议规范处理SGSN局间RAU（Routing Area Update，路由区位置更新）流程的对端SGSN网元的IP地址设置在此黑名单中。 
@@ -21366,15 +21366,15 @@ UE发生局间RAU流程时，如果New SGSN（目标SGSN）与Old SGSN（源SGSN
 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于SGSN网元。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN IP地址|参数可选性:必选参数；参数类型:地址|与本SGSN网元对接的其它SGSN网元的控制面IP地址，包括IPv4或者IPv6地址。对端SGSN网元的IP地址可通过两种方式获取：该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 NEWSGSNCTRL|New SGSN策略控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:NOSEND。|该参数用于在UE发生局间RAU过程中，本SGSN网元作为目标 SGSN的策略控制。取值含义：设置为“不限制（NONE）”时：表示当UE发生局间RAU时，本SGSN网元向源SGSN发送SGSN Context Request消息。 设置为“不发送SGSN Context Request请求（NOSEND）”时：表示当UE发生局间RAU时，本SGSN不向源SGSN发送SGSN Context Request消息。
@@ -21385,7 +21385,7 @@ OLDSGSNCTRL|Old SGSN策略控制|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增SGSN黑名单配置，SGSN IP地址为10.44.10.1，目标SGSN策略控制为不限制，源 SGSN策略控制为不限制。
@@ -21398,7 +21398,7 @@ ADD SGSN BLACKLIST:SGSNIP="10.44.10.1",NEWSGSNCTRL="NONE",OLDSGSNCTRL="NONE";
 
 
 
-父主题： [SGSN黑名单配置](../../zh-CN/tree/N_1254555.html)
+父主题： [SGSN黑名单配置]
 
 
 
@@ -21421,20 +21421,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改SGSN黑名单配置(SET SGSN BLACKLIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改本局SGSN与黑名单列表中的SGSN进行局间RAU流程时的处理策略。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于SGSN网元。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN IP地址|参数可选性:必选参数；参数类型:地址|与本SGSN网元对接的其它SGSN网元的控制面IP地址，包括IPv4或者IPv6地址。对端SGSN网元的IP地址可通过两种方式获取：该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 NEWSGSNCTRL|New SGSN策略控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于在UE发生局间RAU过程中，本SGSN网元作为目标 SGSN的策略控制。取值含义：设置为“不限制（NONE）”时：表示当UE发生局间RAU时，本SGSN网元向源SGSN发送SGSN Context Request消息。 设置为“不发送SGSN Context Request请求（NOSEND）”时：表示当UE发生局间RAU时，本SGSN不向源SGSN发送SGSN Context Request消息。
@@ -21445,7 +21445,7 @@ OLDSGSNCTRL|Old SGSN策略控制|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改SGSN IP地址为10.44.10.1SGSN黑名单配置，目标SGSN策略控制改为不限制，源SGSN策略控制改为不限制。
@@ -21458,7 +21458,7 @@ SET SGSN BLACKLIST:SGSNIP="10.44.10.1",NEWSGSNCTRL="NONE",OLDSGSNCTRL="NONE";
 
 
 
-父主题： [SGSN黑名单配置](../../zh-CN/tree/N_1254555.html)
+父主题： [SGSN黑名单配置]
 
 
 
@@ -21481,20 +21481,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除SGSN黑名单配置(DEL SGSN BLACKLIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除SGSN黑名单配置。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于SGSN网元。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN IP地址|参数可选性:必选参数；参数类型:地址|与本SGSN网元对接的其它SGSN网元的控制面IP地址，包括IPv4或者IPv6地址。对端SGSN网元的IP地址可通过两种方式获取：该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -21503,7 +21503,7 @@ SGSNIP|SGSN IP地址|参数可选性:必选参数；参数类型:地址|与本SG
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除SGSN IP地址为10.44.10.1SGSN黑名单配置。
@@ -21516,7 +21516,7 @@ DEL SGSN BLACKLIST:SGSNIP="10.44.10.1";
 
 
 
-父主题： [SGSN黑名单配置](../../zh-CN/tree/N_1254555.html)
+父主题： [SGSN黑名单配置]
 
 
 
@@ -21539,7 +21539,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询SGSN黑名单配置(SHOW SGSN BLACKLIST) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 当不输入”SGSN IP地址“时，表示查询系统中配置的所有SGSN黑名单配置信息。
@@ -21554,15 +21554,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于SGSN网元。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN IP地址|参数可选性:任选参数；参数类型:地址|与本SGSN网元对接的其它SGSN网元的控制面IP地址，包括IPv4或者IPv6地址。对端SGSN网元的IP地址可通过两种方式获取：该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -21571,10 +21571,10 @@ SGSNIP|SGSN IP地址|参数可选性:任选参数；参数类型:地址|与本SG
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN IP地址|参数可选性:任选参数；参数类型:字符型。|与本SGSN网元对接的其它SGSN网元的控制面IP地址，包括IPv4或者IPv6地址。对端SGSN网元的IP地址可通过两种方式获取：该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 NEWSGSNCTRL|New SGSN策略控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于在UE发生局间RAU过程中，本SGSN网元作为目标 SGSN的策略控制。取值含义：设置为“不限制（NONE）”时：表示当UE发生局间RAU时，本SGSN网元向源SGSN发送SGSN Context Request消息。 设置为“不发送SGSN Context Request请求（NOSEND）”时：表示当UE发生局间RAU时，本SGSN不向源SGSN发送SGSN Context Request消息。
@@ -21585,7 +21585,7 @@ OLDSGSNCTRL|Old SGSN策略控制|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN黑名单配置。
@@ -21612,7 +21612,7 @@ SHOW SGSN BLACKLIST;
 
 
 
-父主题： [SGSN黑名单配置](../../zh-CN/tree/N_1254555.html)
+父主题： [SGSN黑名单配置]
 
 
 
@@ -21635,7 +21635,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## Pool内SGSN重选配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN POOL组网下，某些特定厂商的SGSN作为源SGSN时，收到局间的GTP请求消息不回响应；需要目的SGSN将消息发送到POOL内的其他 SGSN，再由该SGSN转发至源SGSN； 
@@ -21646,7 +21646,7 @@ SGSN POOL组网下，某些特定厂商的SGSN作为源SGSN时，收到局间的
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “POOL内SGSN重选配置”中配置的SGSN的GTP地址，用来检查该目的SGSN是否需要启用重选功能； 
@@ -21657,7 +21657,7 @@ SGSN POOL组网下，某些特定厂商的SGSN作为源SGSN时，收到局间的
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -21685,7 +21685,7 @@ SGSN POOL组网下，某些特定厂商的SGSN作为源SGSN时，收到局间的
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -21708,7 +21708,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增Pool内SGSN重选配置(ADD RESEL SGSN ADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 一组SGSN可以构成一个SGSN池，即SGSN Pool。SGSN Pool组网是指：允许接入网侧连接同一个运营商的多个CN（Core Network，核心网）节点。 
@@ -21728,7 +21728,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令只适用于SGSN网元。 
@@ -21736,10 +21736,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN GTP地址|参数可选性:必选参数；参数类型:地址|表示对端SGSN网元的IP地址，包括IPv4或者IPv6地址。该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -21748,7 +21748,7 @@ SGSNIP|SGSN GTP地址|参数可选性:必选参数；参数类型:地址|表示�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增Pool内SGSN重选配置，SGSN GTP地址为10.44.10.1。
@@ -21761,7 +21761,7 @@ ADD RESEL SGSN ADDR:SGSNIP="10.44.10.1";
 
 
 
-父主题： [Pool内SGSN重选配置](../../zh-CN/tree/N_1254556.html)
+父主题： [Pool内SGSN重选配置]
 
 
 
@@ -21784,12 +21784,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除Pool内SGSN重选配置(DEL RESEL SGSN ADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除Pool内SGSN重选配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -21797,10 +21797,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN GTP地址|参数可选性:必选参数；参数类型:地址|表示对端SGSN网元的IP地址，包括IPv4或者IPv6地址。该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -21809,7 +21809,7 @@ SGSNIP|SGSN GTP地址|参数可选性:必选参数；参数类型:地址|表示�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除SGSN GTP地址为10.44.10.1的Pool内SGSN重选配置。
@@ -21822,7 +21822,7 @@ DEL RESEL SGSN ADDR:SGSNIP="10.44.10.1";
 
 
 
-父主题： [Pool内SGSN重选配置](../../zh-CN/tree/N_1254556.html)
+父主题： [Pool内SGSN重选配置]
 
 
 
@@ -21845,12 +21845,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询Pool内SGSN重选配置(SHOW RESEL SGSN ADDR) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询Pool内SGSN重选配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -21858,10 +21858,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN GTP地址|参数可选性:任选参数；参数类型:地址|表示对端SGSN网元的IP地址，包括IPv4或者IPv6地址。该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -21870,10 +21870,10 @@ SGSNIP|SGSN GTP地址|参数可选性:任选参数；参数类型:地址|表示�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNIP|SGSN GTP地址|参数可选性:任选参数；参数类型:字符型。|表示对端SGSN网元的IP地址，包括IPv4或者IPv6地址。该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得（SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -21882,7 +21882,7 @@ SGSNIP|SGSN GTP地址|参数可选性:任选参数；参数类型:字符型。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询Pool内SGSN重选配置。
@@ -21911,7 +21911,7 @@ SGSN GTP地址
 
 
 
-父主题： [Pool内SGSN重选配置](../../zh-CN/tree/N_1254556.html)
+父主题： [Pool内SGSN重选配置]
 
 
 
@@ -21934,14 +21934,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## GTP链路告警过滤配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             对于现网中大量出现的GTP链路告警，维护人员认为，只有需要关注的GSN断链才需要告警，不需要关注的GSN断链不需要告警，所有SGSN都告警的方式是不可取的。通过配置过滤，对关注的对端GSN节点上报告警，其他不关注的则不上报告警。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 对GTP链路告警进行过滤，关注重要的GSN节点是否发生故障。 
@@ -21956,7 +21956,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         启用GTP链路告警过滤。 配置命令为：
-                        [SET GTP ALARM FLAG](../mml/1260400.html)
+                        [SET GTP ALARM FLAG]
                         :GTPALMFLAG="YES";
                     
 
@@ -21967,7 +21967,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                         配置GTP链路告警过滤。 配置命令为：
-                        [ADD GTP ALARM NODE](../mml/1260403.html)
+                        [ADD GTP ALARM NODE]
 
 
 
@@ -21977,7 +21977,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -22015,7 +22015,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -22038,12 +22038,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置GTP链路告警过滤开关(SET GTP ALARM FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置当运营商只需要关注部分GTP链路（对端网元为SGSN/MME）的告警信息时，SGSN/MME是否能将运营商不关注的对端SGSN/MME网元产生的GTP链路告警信息进行屏蔽，不会在本地维护终端的告警管理界面中显示出来。
 
 
-[](None)注意事项 
+注意事项 
 
 
 系统的默认配置为不对GTP链路告警（由对端SGSN/MME网元产生的）进行屏蔽，即表示所有的GTP链路告警信息，都会在本地维护终端的告警管理界面中显示 。 
@@ -22051,10 +22051,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPALMFLAG|GTP链路告警过滤开关|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本SGSN/MME网元是否能将运营商不关注的对端SGSN/MME网元产生的GTP链路告警信息进行屏蔽，不会在本地维护终端的告警管理界面中显示出来。 取值含义：设置为“不支持（NO）”：表示所有的GTP链路告警信息，都会在本地维护终端的告警管理界面中显示 。设置为“支持（YES）”：表示只有系统配置的对端SGSN/MME网元产生的GTP链路的告警信息才会在本地维护终端的告警管理界面中显示 。
 
@@ -22063,7 +22063,7 @@ GTPALMFLAG|GTP链路告警过滤开关|参数可选性:必选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置GTP链路告警过滤开关为开。
@@ -22076,7 +22076,7 @@ SET GTP ALARM FLAG:GTPALMFLAG="YES";
 
 
 
-父主题： [GTP链路告警过滤配置](../../zh-CN/tree/N_1254570.html)
+父主题： [GTP链路告警过滤配置]
 
 
 
@@ -22099,20 +22099,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP链路告警过滤开关(SHOW GTP ALARM FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询本SGSN/MME网元是否支持对GTP链路告警（由对端SGSN/MME网元产生的）进行屏蔽。
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPALMFLAG|GTP链路告警过滤开关|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本SGSN/MME网元是否能将运营商不关注的对端SGSN/MME网元产生的GTP链路告警信息进行屏蔽，不会在本地维护终端的告警管理界面中显示出来。 取值含义：设置为“不支持（NO）”：表示所有的GTP链路告警信息，都会在本地维护终端的告警管理界面中显示 。设置为“支持（YES）”：表示只有系统配置的对端SGSN/MME网元产生的GTP链路的告警信息才会在本地维护终端的告警管理界面中显示 。
 
@@ -22121,7 +22121,7 @@ GTPALMFLAG|GTP链路告警过滤开关|参数可选性:任选参数；参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP链路告警过滤开关。
@@ -22148,7 +22148,7 @@ SHOW GTP ALARM FLAG;
 
 
 
-父主题： [GTP链路告警过滤配置](../../zh-CN/tree/N_1254570.html)
+父主题： [GTP链路告警过滤配置]
 
 
 
@@ -22171,7 +22171,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增GTP链路告警对端节点地址(ADD GTP ALARM NODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增对端SGSN/MME网元的IP地址。 
@@ -22182,15 +22182,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-在执行本操作之前，需要执行[SET GTP ALARM FLAG](1260400.html)命令。
-
-
-[](None)参数说明 
+在执行本操作之前，需要执行[SET GTP ALARM FLAG]命令。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 IP|对端节点IP地址|参数可选性:必选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -22199,7 +22199,7 @@ IP|对端节点IP地址|参数可选性:必选参数；参数类型:地址|GSN�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增GTP链路告警对端节点地址，对端节点IP地址为1.1.1.1。
@@ -22212,7 +22212,7 @@ ADD GTP ALARM NODE:IP="1.1.1.1";
 
 
 
-父主题： [GTP链路告警过滤配置](../../zh-CN/tree/N_1254570.html)
+父主题： [GTP链路告警过滤配置]
 
 
 
@@ -22235,7 +22235,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除GTP链路告警对端节点地址(DEL GTP ALARM NODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除对端SGSN/MME网元的IP地址。 
@@ -22246,15 +22246,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|对端节点IP地址|参数可选性:必选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -22263,7 +22263,7 @@ IP|对端节点IP地址|参数可选性:必选参数；参数类型:地址|GSN�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GTP链路告警对端节点地址，对端节点IP地址为1.1.1.1。
@@ -22276,7 +22276,7 @@ DEL GTP ALARM NODE:IP="1.1.1.1";
 
 
 
-父主题： [GTP链路告警过滤配置](../../zh-CN/tree/N_1254570.html)
+父主题： [GTP链路告警过滤配置]
 
 
 
@@ -22299,7 +22299,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP链路告警对端节点地址(SHOW GTP ALARM NODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询对端SGSN/MME网元的IP地址列表。 
@@ -22310,15 +22310,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|对端节点IP地址|参数可选性:任选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -22327,10 +22327,10 @@ IP|对端节点IP地址|参数可选性:任选参数；参数类型:地址|GSN�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|对端节点IP地址|参数可选性:任选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。
 
@@ -22339,7 +22339,7 @@ IP|对端节点IP地址|参数可选性:任选参数；参数类型:地址|GSN�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP链路告警对端节点地址，对端节点IP地址为1.1.1.1。
@@ -22362,7 +22362,7 @@ SHOW GTP ALARM NODE:IP="1.1.1.1";
 
 
 
-父主题： [GTP链路告警过滤配置](../../zh-CN/tree/N_1254570.html)
+父主题： [GTP链路告警过滤配置]
 
 
 
@@ -22385,7 +22385,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## GTP节点管理保护配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GTP节点管理是指，对与本网元（SGSN/MME）存在GTP消息/数据报文交互的GTP节点进行管理（比如，邻接的GGSN、SGSN、MME、SGW等），维护对端节点信息。 
@@ -22396,7 +22396,7 @@ GTP节点管理保护是指，对端节点网元由于处理不当，可能会�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当与本网元（SGSN/MME）存在GTP消息/数据报文交互的对端节点网元处理不当，在返回的GTP消息（非ECHO消息）中携带错误的Recovery值时，SGSN/MME为了保证用户业务正常，在对端网元不升级的情况下，根据“GTP节点管理保护配置”，对配置的GTP节点管理保护地址对应路径上的GTP消息（非ECHO消息）的Recovery值不做判断，直接忽略，只检查ECHO消息中的Recovery值。 
@@ -22411,7 +22411,7 @@ GTP节点管理保护配置的流程如下：
 
 
                         启用GTP节点管理保护。配置命令为：
-                        [SET GTP PROTECT FLAG](../mml/1260406.html)
+                        [SET GTP PROTECT FLAG]
                         。
                     
 
@@ -22422,7 +22422,7 @@ GTP节点管理保护配置的流程如下：
 
 
                         配置GTP节点管理保护的对端节点地址。配置命令为：
-                        [ADD GTP PROTECT IP](../mml/1260409.html)
+                        [ADD GTP PROTECT IP]
                         。
                     
 
@@ -22433,7 +22433,7 @@ GTP节点管理保护配置的流程如下：
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -22471,7 +22471,7 @@ GTP节点管理保护配置的流程如下：
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -22494,7 +22494,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置是否支持节点管理保护配置(SET GTP PROTECT FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置SGSN/MME是否支持GTP节点管理保护功能。 
@@ -22508,7 +22508,7 @@ SGSN/MME可以通过是否支持GTP节点管理保护功能来避免此类问题
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 本功能适用于SGSN和MME网元。 
@@ -22519,10 +22519,10 @@ SGSN/MME可以通过是否支持GTP节点管理保护功能来避免此类问题
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPPROTECT|是否支持节点管理异常保护|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本SGSN/MME是否支持GTP节点管理保护功能。取值含义： 设置为“不支持（NO）”：表示本SGSN/MME对其它GTP网元返回的GTP消息（非Echo消息）中的Recovery值进行处理，如果该值错误，会导致用户下线。 设置为“支持（YES）”：表示本SGSN/MME对其它网元返回的GTP消息（非ECHO消息）中的Recovery值不进行处理，直接忽略，以保证用户可以正常使用业务。
 
@@ -22531,7 +22531,7 @@ GTPPROTECT|是否支持节点管理异常保护|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置不支持节点管理保护。
@@ -22544,7 +22544,7 @@ SET GTP PROTECT FLAG:GTPPROTECT="NO";
 
 
 
-父主题： [GTP节点管理保护配置](../../zh-CN/tree/N_1254580.html)
+父主题： [GTP节点管理保护配置]
 
 
 
@@ -22567,20 +22567,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询是否支持节点管理保护配置(SHOW GTP PROTECT FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询uMAC是否支持节点管理保护功能
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPPROTECT|是否支持节点管理异常保护|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本SGSN/MME是否支持GTP节点管理保护功能。取值含义： 设置为“不支持（NO）”：表示本SGSN/MME对其它GTP网元返回的GTP消息（非Echo消息）中的Recovery值进行处理，如果该值错误，会导致用户下线。 设置为“支持（YES）”：表示本SGSN/MME对其它网元返回的GTP消息（非ECHO消息）中的Recovery值不进行处理，直接忽略，以保证用户可以正常使用业务。
 
@@ -22589,7 +22589,7 @@ GTPPROTECT|是否支持节点管理异常保护|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询是否支持节点管理保护配置。
@@ -22616,7 +22616,7 @@ SHOW GTP PROTECT FLAG;
 
 
 
-父主题： [GTP节点管理保护配置](../../zh-CN/tree/N_1254580.html)
+父主题： [GTP节点管理保护配置]
 
 
 
@@ -22639,7 +22639,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增GTP节点管理保护配置(ADD GTP PROTECT IP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于在SGSN/MME支持GTP节点管理保护功能的情况下，设置对端GTP网元的IP地址。 
@@ -22650,15 +22650,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-在执行本命令前，需要执行[SET GTP PROTECT FLAG](1260406.html)命令。
-
-
-[](None)参数说明 
+在执行本命令前，需要执行[SET GTP PROTECT FLAG]命令。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 IPADDR|GTP节点地址|参数可选性:必选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。本端网元为MME的情况下，该地址包括如下两种情况：如果对端网元为SGW/PGW，该参数的取值可通过SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW EPC APN命令查询的是通过本地数据解析的SGW/PGW IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGW/PGW IP地址）。如果对端网元为MME，该参数的取值可通过SHOW EPCHOST或DNS LOOKUP命令的查询结果获得。SHOW EPCHOST命令查询的是通过本地数据解析的MME IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的MME IP地址）。
 
@@ -22667,7 +22667,7 @@ IPADDR|GTP节点地址|参数可选性:必选参数；参数类型:地址|GSN节
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增GTP节点管理保护，GTP节点地址为192.168.0.1。
@@ -22680,7 +22680,7 @@ ADD GTP PROTECT IP:IPADDR="192.168.0.1";
 
 
 
-父主题： [GTP节点管理保护配置](../../zh-CN/tree/N_1254580.html)
+父主题： [GTP节点管理保护配置]
 
 
 
@@ -22703,20 +22703,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除GTP节点管理保护配置(DEL GTP PROTECT IP) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除GTP节点管理保护配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IPADDR|GTP节点地址|参数可选性:必选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。本端网元为MME的情况下，该地址包括如下两种情况：如果对端网元为SGW/PGW，该参数的取值可通过SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW EPC APN命令查询的是通过本地数据解析的SGW/PGW IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGW/PGW IP地址）。如果对端网元为MME，该参数的取值可通过SHOW EPCHOST或DNS LOOKUP命令的查询结果获得。SHOW EPCHOST命令查询的是通过本地数据解析的MME IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的MME IP地址）。
 
@@ -22725,7 +22725,7 @@ IPADDR|GTP节点地址|参数可选性:必选参数；参数类型:地址|GSN节
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GTP节点地址为192.168.0.1的GTP节点管理保护配置。
@@ -22738,7 +22738,7 @@ DEL GTP PROTECT IP:IPADDR="192.168.0.1";
 
 
 
-父主题： [GTP节点管理保护配置](../../zh-CN/tree/N_1254580.html)
+父主题： [GTP节点管理保护配置]
 
 
 
@@ -22761,20 +22761,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP节点管理保护配置(SHOW GTP PROTECT IP) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询GTP节点管理保护配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IPADDR|GTP节点地址|参数可选性:任选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。本端网元为MME的情况下，该地址包括如下两种情况：如果对端网元为SGW/PGW，该参数的取值可通过SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW EPC APN命令查询的是通过本地数据解析的SGW/PGW IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGW/PGW IP地址）。如果对端网元为MME，该参数的取值可通过SHOW EPCHOST或DNS LOOKUP命令的查询结果获得。SHOW EPCHOST命令查询的是通过本地数据解析的MME IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的MME IP地址）。
 
@@ -22783,10 +22783,10 @@ IPADDR|GTP节点地址|参数可选性:任选参数；参数类型:地址|GSN节
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IPADDR|GTP节点地址|参数可选性:任选参数；参数类型:地址|GSN节点的IP地址，包括IPv4或者IPv6地址。本端网元为SGSN的情况下，该地址包括如下两种情况：如果对端网元为GGSN，该参数的取值可通过SHOW GPRS APN、SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW GPRS APN、SHOW EPC APN命令查询的是通过本地数据解析的GGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的GGSN IP地址）。如果对端网元为SGSN，该参数的取值可通过SHOW SGSNHOST或DNS LOOKUP命令的查询结果获得。SHOW SGSNHOST命令查询的是通过本地数据解析的SGSN IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGSN IP地址）。本端网元为MME的情况下，该地址包括如下两种情况：如果对端网元为SGW/PGW，该参数的取值可通过SHOW EPC APN或DNS LOOKUP命令的查询结果获得。SHOW EPC APN命令查询的是通过本地数据解析的SGW/PGW IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的SGW/PGW IP地址）。如果对端网元为MME，该参数的取值可通过SHOW EPCHOST或DNS LOOKUP命令的查询结果获得。SHOW EPCHOST命令查询的是通过本地数据解析的MME IP地址，DNS LOOKUP命令查询的是通过DNS解析获取的MME IP地址）。
 
@@ -22795,7 +22795,7 @@ IPADDR|GTP节点地址|参数可选性:任选参数；参数类型:地址|GSN节
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP节点地址为192.168.0.1的GTP节点管理保护配置。
@@ -22822,7 +22822,7 @@ SHOW GTP PROTECT IP:IPADDR="192.168.0.1";
 
 
 
-父主题： [GTP节点管理保护配置](../../zh-CN/tree/N_1254580.html)
+父主题： [GTP节点管理保护配置]
 
 
 
@@ -22845,7 +22845,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 系统可用性配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 系统可用性表征系统运行的稳定程度，是指除了特定维护操作（比如版本升级）外，系统正常运行时间与统计时长的百分比。可用性数值越高，系统稳定性越好。该功能是系统的一个可选项，系统提供了启用开关，可根据需要决定是否开启该功能。 
@@ -22853,7 +22853,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 设置或查看系统可用性统计功能开关。 
@@ -22861,7 +22861,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -22884,7 +22884,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -22907,7 +22907,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置系统可用性统计开关(SET SYSAVAILSTAT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于打开或关闭系统可用性统计功能开关。 
@@ -22918,7 +22918,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该开关值需根据网络规划确定，默认是关闭状态。 
@@ -22926,10 +22926,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAS|系统可用性统计|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|决定网元中是否启用系统可用性统计功能。ON：打开系统可用性统计功能。OFF：关闭系统可用性统计功能。
 
@@ -22938,7 +22938,7 @@ SAS|系统可用性统计|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 关闭系统可用性统计功能开关。 
@@ -22953,7 +22953,7 @@ SET SYSAVAILSTAT:SAS="OFF";
 
 
 
-父主题： [系统可用性配置](../../zh-CN/tree/N_14004155.html)
+父主题： [系统可用性配置]
 
 
 
@@ -22976,7 +22976,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询系统可用性统计开关(SHOW SYSAVAILSTAT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询系统可用性统计功能是否启动的开关状态。无输入参数。默认状态为关闭。 
@@ -22984,15 +22984,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAS|系统可用性统计|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|决定网元中是否启用系统可用性统计功能。ON：打开系统可用性统计功能。OFF：关闭系统可用性统计功能。
 
@@ -23001,7 +23001,7 @@ SAS|系统可用性统计|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询系统可用性统计开关。 
@@ -23030,7 +23030,7 @@ SHOW SYSAVAILSTAT;
 
 
 
-父主题： [系统可用性配置](../../zh-CN/tree/N_14004155.html)
+父主题： [系统可用性配置]
 
 
 
@@ -23053,7 +23053,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 区内GSN网段配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为满足运营商流量监控需求，SGSN网元支持通过GSN IP识别区域内/区域外流量并区分GTP-U（用户面）和GTP-C（控制面）进行流量统计。 
@@ -23061,7 +23061,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 运营商希望针对某些GSN统计区域内的流量时，配置区内GSN网段，区内GSN网段是一组GSN IP地址段，流量统计时处于配置地址段内的为区内流量，否则为区外流量。对应的流量统计体现在“SGSN网元测量->SGSN区内区外GTP测量”这一性能统计测量项的计数器中。 
@@ -23072,7 +23072,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -23100,7 +23100,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -23123,20 +23123,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增区内GSN网段配置(ADD LOCAL GSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增区内GSN网段配置。当运营商需要对一组GSN（SGSN、GGSN）进行流量统计时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于SGSN网元。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GSNIP|GSN网段地址|参数可选性:必选参数；参数类型:地址|配置省内GSN网段的IP地址(SGSN、GGSN的控制面和用户面地址。)，包括IPv4或者IPv6地址。
 GSNMASK|GSN网段掩码|参数可选性:必选参数；参数类型:整数；参数范围为:0~128。|表示子网掩码的长度。IPv4地址掩码最大长度为32，IPv6地址掩码最大长度为128。
@@ -23146,7 +23146,7 @@ GSNMASK|GSN网段掩码|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增区内GSN网段配置，GSN网段地址为10.44.36.0，GSN网段掩码为24。 
@@ -23161,7 +23161,7 @@ ADD LOCAL GSN:GSNIP=10.44.36.0,GSNMASK=24;
 
 
 
-父主题： [区内GSN网段配置](../../zh-CN/tree/N_12545910.html)
+父主题： [区内GSN网段配置]
 
 
 
@@ -23184,20 +23184,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除区内GSN网段配置(DEL LOCAL GSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除区内GSN网段配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GSNIP|GSN网段地址|参数可选性:必选参数；参数类型:地址|配置省内GSN网段的IP地址(SGSN、GGSN的控制面和用户面地址。)，包括IPv4或者IPv6地址。
 GSNMASK|GSN网段掩码|参数可选性:必选参数；参数类型:整数；参数范围为:0~128。|表示子网掩码的长度。IPv4地址掩码最大长度为32，IPv6地址掩码最大长度为128。
@@ -23207,7 +23207,7 @@ GSNMASK|GSN网段掩码|参数可选性:必选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GSN网段地址为10.44.36.0，GSN网段掩码为24的区内GSN网段配置。 
@@ -23222,7 +23222,7 @@ DEL LOCAL GSN:GSNIP="10.44.36.0",GSNMASK=24;
 
 
 
-父主题： [区内GSN网段配置](../../zh-CN/tree/N_12545910.html)
+父主题： [区内GSN网段配置]
 
 
 
@@ -23245,20 +23245,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询区内GSN网段配置(SHOW LOCAL GSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询区内GSN网段配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GSNIP|GSN网段地址|参数可选性:任选参数；参数类型:地址|配置省内GSN网段的IP地址(SGSN、GGSN的控制面和用户面地址。)，包括IPv4或者IPv6地址。
 GSNMASK|GSN网段掩码|参数可选性:任选参数；参数类型:整数；参数范围为:0~128。|表示子网掩码的长度。IPv4地址掩码最大长度为32，IPv6地址掩码最大长度为128。
@@ -23268,10 +23268,10 @@ GSNMASK|GSN网段掩码|参数可选性:任选参数；参数类型:整数；参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GSNIP|GSN网段地址|参数可选性:任选参数；参数类型:地址|配置省内GSN网段的IP地址(SGSN、GGSN的控制面和用户面地址。)，包括IPv4或者IPv6地址。
 GSNMASK|GSN网段掩码|参数可选性:任选参数；参数类型:整数。|表示子网掩码的长度。IPv4地址掩码最大长度为32，IPv6地址掩码最大长度为128。
@@ -23281,7 +23281,7 @@ GSNMASK|GSN网段掩码|参数可选性:任选参数；参数类型:整数。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询区内GSN网段配置。 
@@ -23310,7 +23310,7 @@ SHOW LOCAL GSN;
 
 
 
-父主题： [区内GSN网段配置](../../zh-CN/tree/N_12545910.html)
+父主题： [区内GSN网段配置]
 
 
 
@@ -23333,14 +23333,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## CSFB配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             CSFB（Circuit Switch Fallback，电路域回落）即CS回落，指触发终端从LTE网络回落到2/3G网络的CS（Circuit Switch，电路交换）域，以便进行语音业务。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 在LTE网络中，切换和CSFB业务同时出现的概率比较大，为尽量保证CSFB业务的成功，通过本功能配置进行CSFB业务和切换业务的优先级，及配置和切换后各CSFB信令的重发处理配置策略。 
@@ -23351,7 +23351,7 @@ MME在发现切换和CSFB业务同时出现时，根据本功能配置的优先�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -23374,7 +23374,7 @@ MME在发现切换和CSFB业务同时出现时，根据本功能配置的优先�
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -23397,7 +23397,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置CSFB参数(SET CSFBCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置用户CSFB业务和切换业务发生冲突时MME的处理策略，比如优先处理CSFB还是优先处理切换业务。当本局存在用户CSFB业务和切换业务冲突场景时，使用该命令。命令执行成功后，当CSFB业务与切换业务冲突时，依据该配置策略处理切换和CSFB业务。 
@@ -23408,7 +23408,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -23425,10 +23425,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PRIORITY|切换优先于CSFB|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置切换业务是否优先于CSFB业务。否（NO）： CSFB业务优先于切换业务，当出现CSFB业务和切换业务冲突时，优先处理CSFB业务。是（YES）: 切换业务优先于CSFB业务，当出现CSFB业务和切换业务冲突时，优先处理切换业务，缓存CSFB业务。切换完成后，再执行CSFB业务。
 STOPHO|终止切换准备阶段进行CSFB|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数生效，需要“切换优先于CSFB”配置为“是(YES)”。否（NO）：当用户处于切换准备阶段，用户执行CSFB业务时，继续切换业务，切换业务完成后再进行CSFB业务。是（YES）：当用户处于切换准备阶段，用户执行CSFB业务时，终止切换业务，执行CSFB业务。
@@ -23444,7 +23444,7 @@ RCONTEXT|UE上下文初始建立或修改失败时保留会话上下文|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 当用户CSFB业务和切换业务冲突时，设置CSFB业务优先于切换业务，并且UE上下文修改失败时不保留会话上下文。 
@@ -23459,7 +23459,7 @@ SET CSFBCFG:PRIORITY="NO",RCONTEXT="NOT_RESERVING";
 
 
 
-父主题： [CSFB配置](../../zh-CN/tree/N_12545913.html)
+父主题： [CSFB配置]
 
 
 
@@ -23482,7 +23482,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询CSFB参数(SHOW CSFBCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询用户CSFB业务和切换业务发生冲突时MME的处理策略。 
@@ -23490,18 +23490,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-MME配置的CSFB业务与切换业务冲突时处理策略，需要在本局MME支持SGs接口并且本局License中支持CSFB功能时才会生效。查询本局是否支持SGs功能的命令为：[SHOW SGSFLAG](1260254.html);，查询本局License的命令为：[SHOW LICENSE](../mml/CommonS_OAM->SHOW LICENSE.html)。
+MME配置的CSFB业务与切换业务冲突时处理策略，需要在本局MME支持SGs接口并且本局License中支持CSFB功能时才会生效。查询本局是否支持SGs功能的命令为：[SHOW SGSFLAG];，查询本局License的命令为：[SHOW LICENSE]。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PRIORITY|切换优先于CSFB|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置切换业务是否优先于CSFB业务。否（NO）： CSFB业务优先于切换业务，当出现CSFB业务和切换业务冲突时，优先处理CSFB业务。是（YES）: 切换业务优先于CSFB业务，当出现CSFB业务和切换业务冲突时，优先处理切换业务，缓存CSFB业务。切换完成后，再执行CSFB业务。
 STOPHO|终止切换准备阶段进行CSFB|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数生效，需要“切换优先于CSFB”配置为“是(YES)”。否（NO）：当用户处于切换准备阶段，用户执行CSFB业务时，继续切换业务，切换业务完成后再进行CSFB业务。是（YES）：当用户处于切换准备阶段，用户执行CSFB业务时，终止切换业务，执行CSFB业务。
@@ -23517,7 +23517,7 @@ RCONTEXT|UE上下文初始建立或修改失败时保留会话上下文|参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询CSFB业务与切换业务发生冲突时，MME的处理策略。 
@@ -23545,7 +23545,7 @@ SHOW CSFBCFG;
 
 
 
-父主题： [CSFB配置](../../zh-CN/tree/N_12545913.html)
+父主题： [CSFB配置]
 
 
 
@@ -23568,7 +23568,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## IP和位置关联配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -23597,7 +23597,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “IP和位置关联配置”用于设置IP和位置关联功能策略、具体的RA编组或TA编组、省内用户的IMSI号段。 
@@ -23655,7 +23655,7 @@ SGSN/MME强制UE下线方式。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -23723,7 +23723,7 @@ TA编组规则配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -23746,7 +23746,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### SGSN IP和位置关联配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -23775,7 +23775,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块主要实现2G/3G用户IP和位置关联功能策略，包括： 
@@ -23819,7 +23819,7 @@ SGSN强制UE下线方式。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -23842,7 +23842,7 @@ SGSN强制UE下线方式。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -23865,7 +23865,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置SGSN IP地址和位置关联配置(SET SGSNIPLOC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 本命令用于设置2G/3G用户IP和位置关联功能策略，包括： 
@@ -23893,7 +23893,7 @@ SGSN强制UE下线方式。
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 设置开启IP和位置关联功能时，需要一并把IP和位置关联功能的策略也确定好 
@@ -23901,10 +23901,10 @@ SGSN强制UE下线方式。
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DETACH|功能开启时SGSN是否强制UE下线|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|SGSN是否支持用户IP地址和位置关联功能开启时是否分离UE：是：支持。否：不支持。
 DETACHFUNCOFF|功能关闭时SGSN是否强制UE下线|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用户IP地址和位置关联功能关闭时，SGSN是否强制UE下线。是：SGSN对所有在RA编组内的UE进行强制下线。否：UE不下线。
@@ -23916,7 +23916,7 @@ NONRADEACT|进入非RA编组位置时SGSN是否去激活PDP|参数可选性:任�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGSN IP地址和位置关联功能的策略。其中功能开启时SGSN是否强制UE下线为“否”，功能关闭时SGSN是否强制UE下线为“是”，强制UE下线方式为“分离UE”，进入非RA编组位置时SGSN是否去激活PDP“是”。 
@@ -23931,7 +23931,7 @@ SET SGSNIPLOC:DETACH="NO",DETACHFUNCOFF="YES",UEOFFMETHOD="DETACH_UE",NONRADEACT
 
 
 
-父主题： [SGSN IP和位置关联配置](../../zh-CN/tree/N_12545916.html)
+父主题： [SGSN IP和位置关联配置]
 
 
 
@@ -23954,7 +23954,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询SGSN IP地址和位置关联配置(SHOW SGSNIPLOC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询IP和位置关联功能的策略。 
@@ -23962,7 +23962,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -23970,10 +23970,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DETACH|功能开启时SGSN是否强制UE下线|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|SGSN是否支持用户IP地址和位置关联功能开启时是否分离UE：是：支持。否：不支持。
 DETACHFUNCOFF|功能关闭时SGSN是否强制UE下线|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用户IP地址和位置关联功能关闭时，SGSN是否强制UE下线。是：SGSN对所有在RA编组内的UE进行强制下线。否：UE不下线。
@@ -23985,7 +23985,7 @@ NONRADEACT|进入非RA编组位置时SGSN是否去激活PDP|参数可选性:任�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN IP地址和位置关联功能的策略。 
@@ -24015,7 +24015,7 @@ SHOW SGSNIPLOC;
 
 
 
-父主题： [SGSN IP和位置关联配置](../../zh-CN/tree/N_12545916.html)
+父主题： [SGSN IP和位置关联配置]
 
 
 
@@ -24038,7 +24038,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### RA编组规则配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -24067,7 +24067,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块实现2G/3G用户在RA编组中，关联的IP和位置关联功能策略，包括： 
@@ -24101,7 +24101,7 @@ RA编组是否支持用户IP地址和位置关联开关。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -24134,7 +24134,7 @@ RA编组是否支持用户IP地址和位置关联开关。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -24157,7 +24157,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增RA编组规则配置(ADD RAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加位置IP关联功能的RA编组策略。 
@@ -24165,7 +24165,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 设置开启IP和位置关联功能时，需要一并把IP和位置关联功能的策略也确定好 
@@ -24173,10 +24173,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|RA编组规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的RA编组策略标识，用于区分不同的位置IP关联功能的RA编组策略。
 RAGROUPIPLOC|RA编组是否支持用户IP地址和位置关联|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:YES。|该位置IP关联RA编组是否启用位置IP关联功能。只有在“支持用户IP地址和位置关联功能”License设置为“支持”，且该参数也设置为“支持”时，SGSN才需要对该位置IP关联RA编组下的移动用户启用IP位置关联功能。
@@ -24191,7 +24191,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增位置IP关联功能的RA编组策略配置，其中RA编组规则标识为“1”，RA编组是否支持用户IP地址和位置关联为“是”，SGSN位置IP关联功能是否限制国际漫游用户为“是”，SGSN位置IP关联功能是否限制国内漫游用户为“是”，SGSN由于位置IP关联功能拒绝国际漫游用户接入的原因值为“PLMN不允许”，SGSN由于位置IP关联功能拒绝国内漫游用户接入的原因值为“PLMN不允许”，用户别名为“area1”。 
@@ -24206,7 +24206,7 @@ ADD RAGROUP RULE:RULEID=1,RAGROUPIPLOC="YES",IMPACTINTERROAM="YES",IMPACTINTRARO
 
 
 
-父主题： [RA编组规则配置](../../zh-CN/tree/N_12661012.html)
+父主题： [RA编组规则配置]
 
 
 
@@ -24229,7 +24229,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改RA编组规则配置(SET RAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改位置IP关联功能的RA编组策略。 
@@ -24237,7 +24237,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -24245,10 +24245,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|RA编组规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的RA编组策略标识，用于区分不同的位置IP关联功能的RA编组策略。
 RAGROUPIPLOC|RA编组是否支持用户IP地址和位置关联|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该位置IP关联RA编组是否启用位置IP关联功能。只有在“支持用户IP地址和位置关联功能”License设置为“支持”，且该参数也设置为“支持”时，SGSN才需要对该位置IP关联RA编组下的移动用户启用IP位置关联功能。
@@ -24263,7 +24263,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置IP关联功能的RA编组策略配置，其中RA编组规则标识为“1”，RA编组是否支持用户IP地址和位置关联为“否”。 
@@ -24278,7 +24278,7 @@ SET RAGROUP RULE:RULEID=1,RAGROUPIPLOC="NO";
 
 
 
-父主题： [RA编组规则配置](../../zh-CN/tree/N_12661012.html)
+父主题： [RA编组规则配置]
 
 
 
@@ -24301,7 +24301,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除RA编组规则配置(DEL RAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除位置IP关联功能的RA编组策略。 
@@ -24309,7 +24309,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -24317,10 +24317,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|RA编组规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的RA编组策略标识，用于区分不同的位置IP关联功能的RA编组策略。
 
@@ -24329,7 +24329,7 @@ RULEID|RA编组规则标识|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置IP关联功能的RA编组策略配置，其中RA编组规则标识为“1”。 
@@ -24344,7 +24344,7 @@ DEL RAGROUP RULE:RULEID=1;
 
 
 
-父主题： [RA编组规则配置](../../zh-CN/tree/N_12661012.html)
+父主题： [RA编组规则配置]
 
 
 
@@ -24367,7 +24367,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询RA编组规则配置(SHOW RAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已配置位置IP关联功能的RA编组策略。 
@@ -24375,7 +24375,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -24383,10 +24383,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|RA编组规则标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的RA编组策略标识，用于区分不同的位置IP关联功能的RA编组策略。
 
@@ -24395,10 +24395,10 @@ RULEID|RA编组规则标识|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|RA编组规则标识|参数可选性:任选参数；参数类型:整数。|位置IP关联功能的RA编组策略标识，用于区分不同的位置IP关联功能的RA编组策略。
 RAGROUPIPLOC|RA编组是否支持用户IP地址和位置关联|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该位置IP关联RA编组是否启用位置IP关联功能。只有在“支持用户IP地址和位置关联功能”License设置为“支持”，且该参数也设置为“支持”时，SGSN才需要对该位置IP关联RA编组下的移动用户启用IP位置关联功能。
@@ -24413,7 +24413,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询位置IP关联功能的RA编组策略配置，查询所有已配置的位置IP关联功能的RA编组策略。 
@@ -24442,7 +24442,7 @@ SHOW RAGROUP RULE;
 
 
 
-父主题： [RA编组规则配置](../../zh-CN/tree/N_12661012.html)
+父主题： [RA编组规则配置]
 
 
 
@@ -24465,7 +24465,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 位置IP关联RA编组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -24494,7 +24494,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 通过配置RA编组，把同一个区（县）下的RA编为同一个位置IP关联功能的RA编组。一个RA编组与一个IP地址池一一对应，因此，UE在位置IP关联RA编组内移动时，不需要为UE的会话重新分配IP。 
@@ -24509,7 +24509,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -24542,7 +24542,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -24565,7 +24565,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增位置IP关联RA编组配置(ADD RAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加位置IP关联功能的RA编组，一般同一个区（县）下的RA/LA编为同一个位置IP关联功能的RA编组。 
@@ -24573,15 +24573,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联RA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号
 NAME|编组别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|用户自定义别名，便于记忆和识别各位置IP关联RA编组。 该参数不被其他命令引用，无其他意义。
@@ -24601,7 +24601,7 @@ RAC|路由区码(HEX)|参数可选性:必选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增位置IP关联RA编组配置，其中位置IP关联RA编组编号为1，编组别名为group1，位置区为"460"-"01"-"1A2D"，RA编组规则标识为1。 
@@ -24616,7 +24616,7 @@ ADD RAGROUP:GROUPID=1,NAME="group1",LAI="460"-"01"-"1A2D",RULEID=1;
 
 
 
-父主题： [位置IP关联RA编组配置](../../zh-CN/tree/N_12545917.html)
+父主题： [位置IP关联RA编组配置]
 
 
 
@@ -24639,7 +24639,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改位置IP关联RA编组配置(SET RAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改位置IP关联功能的RA编组，一般在同一个区（县）下的RA/LA发生改变时使用。 
@@ -24647,15 +24647,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联RA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号
 NAME|编组别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|用户自定义别名，便于记忆和识别各位置IP关联RA编组。 该参数不被其他命令引用，无其他意义。
@@ -24666,7 +24666,7 @@ RULEID|RA编组规则标识|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置IP关联RA编组配置，其中位置IP关联RA编组编号为1，RA编组规则标识为1。 
@@ -24681,7 +24681,7 @@ SET RAGROUP:GROUPID=1,RULEID=1;
 
 
 
-父主题： [位置IP关联RA编组配置](../../zh-CN/tree/N_12545917.html)
+父主题： [位置IP关联RA编组配置]
 
 
 
@@ -24704,7 +24704,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除位置IP关联RA编组配置(DEL RAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除位置IP关联功能的RA编组。 
@@ -24712,15 +24712,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联RA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号
 LAI|位置区|参数可选性:任意单选参数；参数类型:复合参数|该参数用于指示网络规划的位置区信息，包括移动国家码、移动网号与位置区域码。
@@ -24738,7 +24738,7 @@ RAC|路由区码(HEX)|参数可选性:必选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置IP关联RA编组配置，其中位置IP关联RA编组编号为1，位置区为"460"-"01"-"1A2D"。 
@@ -24753,7 +24753,7 @@ DEL RAGROUP:GROUPID=1,LAI="460"-"01"-"1A2D";
 
 
 
-父主题： [位置IP关联RA编组配置](../../zh-CN/tree/N_12545917.html)
+父主题： [位置IP关联RA编组配置]
 
 
 
@@ -24776,7 +24776,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询位置IP关联RA编组配置(SHOW RAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已配置位置IP关联功能的RA编组。 
@@ -24784,15 +24784,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联RA编组编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号
 AREATYPE|区域类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|标识是路由区还是位置区。
@@ -24802,10 +24802,10 @@ AREATYPE|区域类型|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联RA编组编号|参数可选性:任选参数；参数类型:整数。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号
 NAME|编组别名|参数可选性:任选参数；参数类型:字符型。|用户自定义别名，便于记忆和识别各位置IP关联RA编组。 该参数不被其他命令引用，无其他意义。
@@ -24818,7 +24818,7 @@ RAI|路由区|参数可选性:任选参数；参数类型:字符型。|该参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询位置IP关联RA编组配置，其中位置IP关联RA编组编号为1，区域类型为位置区。 
@@ -24847,7 +24847,7 @@ SHOW RAGROUP:GROUPID=1,AREATYPE="LAI";
 
 
 
-父主题： [位置IP关联RA编组配置](../../zh-CN/tree/N_12545917.html)
+父主题： [位置IP关联RA编组配置]
 
 
 
@@ -24870,7 +24870,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME IP和位置关联配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -24899,7 +24899,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块主要实现LTE用户IP和位置关联功能策略，包括： 
@@ -24953,7 +24953,7 @@ MME分离UE的方式。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -24976,7 +24976,7 @@ MME分离UE的方式。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -24999,7 +24999,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置MME IP地址和位置关联配置(SET MMEIPLOC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 本命令用于设置LTE用户IP和位置关联功能策略，包括： 
@@ -25034,7 +25034,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 设置开启IP和位置关联功能时，需要一并把IP和位置关联功能的策略也确定好。 
@@ -25042,10 +25042,10 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DETACH|功能开启时MME是否分离UE|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用户IP地址和位置关联功能开启时，MME是否分离UE。是：对所有在TA编组内的UE，MME强制分离UE。否：不分离用户。
 DETACHFUNCOFF|功能关闭时MME是否分离UE|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用户IP地址和位置关联功能关闭时，MME是否强制分离UE。是：对所有在TA编组内的UE，MME强制分离UE。否：不分离用户。
@@ -25060,7 +25060,7 @@ IFPRIVATETA|在私有字段携带TA|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME IP地址和位置关联功能的策略。其中功能开启时MME是否分离UE为“否”，功能关闭时MME是否分离UE为“是”，进入非TA编组位置时MME是否分离UE为“否”，位置IP关联功能是否去连接紧急呼叫为“是”，位置IP关联功能是否去连接IMS会话为“是”。 
@@ -25075,7 +25075,7 @@ SET MMEIPLOC:DETACH="NO",DETACHFUNCOFF="YES",NONTADETACH="NO",IMPACTEMERGFUN="YE
 
 
 
-父主题： [MME IP和位置关联配置](../../zh-CN/tree/N_12545918.html)
+父主题： [MME IP和位置关联配置]
 
 
 
@@ -25098,7 +25098,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询MME IP地址和位置关联配置(SHOW MMEIPLOC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询IP和位置关联功能的策略。 
@@ -25106,7 +25106,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25114,10 +25114,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DETACH|功能开启时MME是否分离UE|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用户IP地址和位置关联功能开启时，MME是否分离UE。是：对所有在TA编组内的UE，MME强制分离UE。否：不分离用户。
 DETACHFUNCOFF|功能关闭时MME是否分离UE|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用户IP地址和位置关联功能关闭时，MME是否强制分离UE。是：对所有在TA编组内的UE，MME强制分离UE。否：不分离用户。
@@ -25132,7 +25132,7 @@ IFPRIVATETA|在私有字段携带TA|参数可选性:任选参数；参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME IP地址和位置关联功能的策略。 
@@ -25162,7 +25162,7 @@ SHOW MMEIPLOC;
 
 
 
-父主题： [MME IP和位置关联配置](../../zh-CN/tree/N_12545918.html)
+父主题： [MME IP和位置关联配置]
 
 
 
@@ -25185,7 +25185,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### TA编组规则配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -25214,7 +25214,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能模块实现LTE用户在TA编组中，关联的IP和位置关联功能策略，包括： 
@@ -25248,7 +25248,7 @@ TA编组是否支持用户IP地址和位置关联开关。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -25281,7 +25281,7 @@ TA编组是否支持用户IP地址和位置关联开关。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -25304,7 +25304,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增TA编组规则配置(ADD TAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加位置IP关联功能的TA编组策略。 
@@ -25312,7 +25312,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 设置开启IP和位置关联功能时，需要一并把IP和位置关联功能的策略也确定好。 
@@ -25320,10 +25320,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|TA编组规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的TA编组策略标识，用于区分不同的位置IP关联功能的TA编组策略。
 TAGROUPIPLOC|TA编组是否支持用户IP地址和位置关联|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:YES。|该位置IP关联TA编组是否启用位置IP关联功能。只有在“支持用户IP地址和位置关联功能”License设置为“支持”，且该参数也设置为“支持”时，MME才需要对该位置IP关联TA编组下的移动用户启用IP位置关联功能。
@@ -25338,7 +25338,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增位置IP关联功能的TA编组策略配置，其中TA编组规则标识为“1”，TA编组是否支持用户IP地址和位置关联为“是”，MME位置IP关联功能是否限制国际漫游用户为“是”，MME位置IP关联功能是否限制国内漫游用户为“是”，MME由于位置IP关联功能拒绝国际漫游用户接入的原因值为“PLMN不允许”，MME由于位置IP关联功能拒绝国内漫游用户接入的原因值为“PLMN不允许”，用户别名为“area1”。 
@@ -25353,7 +25353,7 @@ ADD TAGROUP RULE:RULEID=1,TAGROUPIPLOC="YES",IMPACTINTERROAM="YES",IMPACTINTRARO
 
 
 
-父主题： [TA编组规则配置](../../zh-CN/tree/N_12661055.html)
+父主题： [TA编组规则配置]
 
 
 
@@ -25376,7 +25376,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改TA编组规则配置(SET TAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改位置IP关联功能的TA编组策略。 
@@ -25384,7 +25384,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25392,10 +25392,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|TA编组规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的TA编组策略标识，用于区分不同的位置IP关联功能的TA编组策略。
 TAGROUPIPLOC|TA编组是否支持用户IP地址和位置关联|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该位置IP关联TA编组是否启用位置IP关联功能。只有在“支持用户IP地址和位置关联功能”License设置为“支持”，且该参数也设置为“支持”时，MME才需要对该位置IP关联TA编组下的移动用户启用IP位置关联功能。
@@ -25410,7 +25410,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置IP关联功能的TA编组策略配置，其中TA编组规则标识为“1”，TA编组是否支持用户IP地址和位置关联为“否”。 
@@ -25425,7 +25425,7 @@ SET TAGROUP RULE:RULEID=1,TAGROUPIPLOC="NO";
 
 
 
-父主题： [TA编组规则配置](../../zh-CN/tree/N_12661055.html)
+父主题： [TA编组规则配置]
 
 
 
@@ -25448,7 +25448,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除TA编组规则配置(DEL TAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除位置IP关联功能的TA编组策略。 
@@ -25456,7 +25456,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25464,10 +25464,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|TA编组规则标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的TA编组策略标识，用于区分不同的位置IP关联功能的TA编组策略。
 
@@ -25476,7 +25476,7 @@ RULEID|TA编组规则标识|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置IP关联功能的TA编组策略配置，其中TA编组规则标识为“1”。 
@@ -25491,7 +25491,7 @@ DEL TAGROUP RULE:RULEID=1;
 
 
 
-父主题： [TA编组规则配置](../../zh-CN/tree/N_12661055.html)
+父主题： [TA编组规则配置]
 
 
 
@@ -25514,7 +25514,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询TA编组规则配置(SHOW TAGROUP RULE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已配置位置IP关联功能的TA编组策略。 
@@ -25522,7 +25522,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25530,10 +25530,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|TA编组规则标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|位置IP关联功能的TA编组策略标识，用于区分不同的位置IP关联功能的TA编组策略。
 
@@ -25542,10 +25542,10 @@ RULEID|TA编组规则标识|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|TA编组规则标识|参数可选性:任选参数；参数类型:整数。|位置IP关联功能的TA编组策略标识，用于区分不同的位置IP关联功能的TA编组策略。
 TAGROUPIPLOC|TA编组是否支持用户IP地址和位置关联|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该位置IP关联TA编组是否启用位置IP关联功能。只有在“支持用户IP地址和位置关联功能”License设置为“支持”，且该参数也设置为“支持”时，MME才需要对该位置IP关联TA编组下的移动用户启用IP位置关联功能。
@@ -25560,7 +25560,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询位置IP关联功能的TA编组策略配置，查询所有已配置的位置IP关联功能的TA编组策略。 
@@ -25589,7 +25589,7 @@ SHOW TAGROUP RULE;
 
 
 
-父主题： [TA编组规则配置](../../zh-CN/tree/N_12661055.html)
+父主题： [TA编组规则配置]
 
 
 
@@ -25612,7 +25612,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 位置IP关联TA编组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -25641,7 +25641,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 通过配置TA编组，把同一个区（县）下的TA编为同一个位置IP关联的TA编组。一个TA编组与一个IP地址池一一对应，因此，UE在位置IP关联TA编组内移动时，不需要为UE的会话重新分配IP。 
@@ -25656,7 +25656,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -25689,7 +25689,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -25712,7 +25712,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增位置IP关联TA编组配置(ADD TAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加位置IP关联的TA编组，一般同一个区（县）下的TA编为同一个位置IP关联的TA编组。 
@@ -25720,7 +25720,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25728,10 +25728,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联TA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联TA编组编号，一般一个区（县）对应一个位置IP关联TA编组编号。
 NAME|编组别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|用户自定义别名，便于记忆和识别各位置IP关联TA编组。 该参数不被其他命令引用，无其他意义。
@@ -25746,7 +25746,7 @@ TAC|跟踪区域码(HEX)|参数可选性:必选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增位置IP关联TA编组配置，其中位置IP关联TA编组编号为1，编组别名为group1，跟踪区为460-01-1ADC和460-01-1ADE，TA编组规则标识为1。 
@@ -25761,7 +25761,7 @@ ADD TAGROUP:GROUPID=1,NAME="group1",RULEID=1,TAI="460"-"01"-"1ADC"&"460"-"01"-"1
 
 
 
-父主题： [位置IP关联TA编组配置](../../zh-CN/tree/N_12545919.html)
+父主题： [位置IP关联TA编组配置]
 
 
 
@@ -25784,7 +25784,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改位置IP关联TA编组配置(SET TAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改位置IP关联的TA编组，一般在同一个区（县）下的TA发生改变时使用。 
@@ -25792,7 +25792,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25800,10 +25800,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联TA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联TA编组编号，一般一个区（县）对应一个位置IP关联TA编组编号。
 NAME|编组别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|用户自定义别名，便于记忆和识别各位置IP关联TA编组。 该参数不被其他命令引用，无其他意义。
@@ -25814,7 +25814,7 @@ RULEID|TA编组规则标识|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置IP关联TA编组配置，其中位置IP关联TA编组编号为1，TA编组规则标识为1。 
@@ -25829,7 +25829,7 @@ SET TAGROUP:GROUPID=1,RULEID=1;
 
 
 
-父主题： [位置IP关联TA编组配置](../../zh-CN/tree/N_12545919.html)
+父主题： [位置IP关联TA编组配置]
 
 
 
@@ -25852,7 +25852,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除位置IP关联TA编组配置(DEL TAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除位置IP关联的TA编组。 
@@ -25860,7 +25860,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25868,10 +25868,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联TA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联TA编组编号，一般一个区（县）对应一个位置IP关联TA编组编号。
 TAI|跟踪区|参数可选性:任选参数；参数类型:复合参数|EPC网络对用户的位置管理采用跟踪区TA（Tracking Area）， 跟踪区的划分由无线侧确定。一个位置区可以对应一个跟踪区，也可进一步划分为几个跟踪区。每个跟踪区由一到多个小区组成，跟踪区之间没有重叠区域。跟踪区标识TAI（Tracking Area Identity )由MCC、MNC、TAC（Tracking Area Code）组成，一般运营商对于TAC的编码方式都有明确的规定，需要提前确定TAC的分配和编码，在运营中较少改动。
@@ -25884,7 +25884,7 @@ TAC|跟踪区域码(HEX)|参数可选性:必选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置IP关联TA编组配置，其中位置IP关联TA编组编号为1，跟踪区为"460"-"01"-"1ADC"。 
@@ -25899,7 +25899,7 @@ DEL TAGROUP:GROUPID=1,TAI="460"-"01"-"1ADC";
 
 
 
-父主题： [位置IP关联TA编组配置](../../zh-CN/tree/N_12545919.html)
+父主题： [位置IP关联TA编组配置]
 
 
 
@@ -25922,7 +25922,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询位置IP关联TA编组配置(SHOW TAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已配置位置IP关联的TA编组。 
@@ -25930,7 +25930,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -25938,10 +25938,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联TA编组编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|位置IP关联TA编组编号，一般一个区（县）对应一个位置IP关联TA编组编号。
 
@@ -25950,10 +25950,10 @@ GROUPID|位置IP关联TA编组编号|参数可选性:任选参数；参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GROUPID|位置IP关联TA编组编号|参数可选性:任选参数；参数类型:整数。|位置IP关联TA编组编号，一般一个区（县）对应一个位置IP关联TA编组编号。
 NAME|编组别名|参数可选性:任选参数；参数类型:字符型。|用户自定义别名，便于记忆和识别各位置IP关联TA编组。 该参数不被其他命令引用，无其他意义。
@@ -25965,7 +25965,7 @@ TAI|跟踪区|参数可选性:任选参数；参数类型:字符型。|EPC网络
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询位置IP关联TA编组配置，其中位置IP关联TA编组编号为1。 
@@ -25995,7 +25995,7 @@ SHOW TAGROUP:GROUPID=1;
 
 
 
-父主题： [位置IP关联TA编组配置](../../zh-CN/tree/N_12545919.html)
+父主题： [位置IP关联TA编组配置]
 
 
 
@@ -26018,7 +26018,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 位置IP关联5G TA编组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -26047,7 +26047,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 5G TA编组配置，可以设置具体的5G TA区域和其对应的IP位置关联策略。 
@@ -26062,7 +26062,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -26095,7 +26095,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -26118,7 +26118,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增位置IP关联5G TA编组配置(ADD 5GTAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于增加位置IP关联的5G TA编组，一般同一个区（县）下的TA编为同一个位置IP关联的TA编组。 
@@ -26126,15 +26126,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAGRPID5G|5G TA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联5G TA编组编号，一般一个区（县）对应一个位置IP关联5G TA编组编号。
 TA5G|5G跟踪区|参数可选性:必选参数；参数类型:复合参数|5GC网络对用户的位置管理采用5G跟踪区（5G TA，5G Tracking Area），5G跟踪区的划分由无线侧确定。每个5G跟踪区由一到多个小区组成，5G跟踪区之间没有重叠区域。5G跟踪区标识5G TAI（5G Tracking Area Identity )由MCC、MNC、TAC（Tracking Area Code）组成，一般运营商对于TAC的编码方式都有明确的规定，需要提前确定TAC的分配和编码，在运营中较少改动。
@@ -26148,7 +26148,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增位置IP关联5G TA编组配置，其中位置IP关联5G TA编组编号为1，编组别名为group1，跟踪区为460-01-005001。 
@@ -26163,7 +26163,7 @@ ADD 5GTAGROUP:TAGRPID5G=1,TA5G="460"-"01"-"005001",NAME="group1";
 
 
 
-父主题： [位置IP关联5G TA编组配置](../../zh-CN/tree/N_12661455.html)
+父主题： [位置IP关联5G TA编组配置]
 
 
 
@@ -26186,7 +26186,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改位置IP关联5G TA编组配置(SET 5GTAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改位置IP关联的5G TA编组，一般在同一个区（县）下的5G TA发生改变时使用。 
@@ -26194,15 +26194,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAGRPID5G|5G TA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联5G TA编组编号，一般一个区（县）对应一个位置IP关联5G TA编组编号。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于指示用户名称。
@@ -26212,7 +26212,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置IP关联5G TA编组配置，其中位置IP关联5G TA编组编号为1，编组别名为group11。 
@@ -26227,7 +26227,7 @@ SET 5GTAGROUP:TAGRPID5G=1,NAME="group11";
 
 
 
-父主题： [位置IP关联5G TA编组配置](../../zh-CN/tree/N_12661455.html)
+父主题： [位置IP关联5G TA编组配置]
 
 
 
@@ -26250,7 +26250,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除位置IP关联5G TA编组配置(DEL 5GTAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除位置IP关联的5G TA编组。 
@@ -26258,15 +26258,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAGRPID5G|5G TA编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联5G TA编组编号，一般一个区（县）对应一个位置IP关联5G TA编组编号。
 TA5G|5G跟踪区|参数可选性:任选参数；参数类型:复合参数|5GC网络对用户的位置管理采用5G跟踪区（5G TA，5G Tracking Area），5G跟踪区的划分由无线侧确定。每个5G跟踪区由一到多个小区组成，5G跟踪区之间没有重叠区域。5G跟踪区标识5G TAI（5G Tracking Area Identity )由MCC、MNC、TAC（Tracking Area Code）组成，一般运营商对于TAC的编码方式都有明确的规定，需要提前确定TAC的分配和编码，在运营中较少改动。
@@ -26279,7 +26279,7 @@ TAC|跟踪区域码(HEX)|参数可选性:必选参数；参数类型:字符型�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置IP关联5G TA编组配置，其中位置IP关联5G TA编组编号为1。 
@@ -26294,7 +26294,7 @@ DEL 5GTAGROUP:TAGRPID5G=1;
 
 
 
-父主题： [位置IP关联5G TA编组配置](../../zh-CN/tree/N_12661455.html)
+父主题： [位置IP关联5G TA编组配置]
 
 
 
@@ -26317,7 +26317,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询位置IP关联5G TA编组配置(SHOW 5GTAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已配置位置IP关联的5G TA编组。 
@@ -26325,15 +26325,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAGRPID5G|5G TA编组编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|位置IP关联5G TA编组编号，一般一个区（县）对应一个位置IP关联5G TA编组编号。
 
@@ -26342,10 +26342,10 @@ TAGRPID5G|5G TA编组编号|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAGRPID5G|5G TA编组编号|参数可选性:必选参数；参数类型:整数。|位置IP关联5G TA编组编号，一般一个区（县）对应一个位置IP关联5G TA编组编号。
 TA5G|5G跟踪区|参数可选性:必选参数；参数类型:字符型。|5GC网络对用户的位置管理采用5G跟踪区（5G TA，5G Tracking Area），5G跟踪区的划分由无线侧确定。每个5G跟踪区由一到多个小区组成，5G跟踪区之间没有重叠区域。5G跟踪区标识5G TAI（5G Tracking Area Identity )由MCC、MNC、TAC（Tracking Area Code）组成，一般运营商对于TAC的编码方式都有明确的规定，需要提前确定TAC的分配和编码，在运营中较少改动。
@@ -26356,7 +26356,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询位置IP关联5G TA编组配置，其中位置IP关联5G TA编组编号为1。 
@@ -26386,7 +26386,7 @@ SHOW 5GTAGROUP:TAGRPID5G=1;
 
 
 
-父主题： [位置IP关联5G TA编组配置](../../zh-CN/tree/N_12661455.html)
+父主题： [位置IP关联5G TA编组配置]
 
 
 
@@ -26409,7 +26409,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 控制开关配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -26434,7 +26434,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 一个RA/TA编组与一个IP地址池一一对应，UE在位置IP关联的RA编组内或者TA编组内移动时，不需要为UE的会话重新分配IP；当用户所在编组发生变化，则需要为UE的会话重新分配IP。 
@@ -26445,7 +26445,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -26468,7 +26468,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -26491,7 +26491,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置控制开关配置(SET IPLOC SWITCHCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置“是否支持IP地址细分优化功能”。 
@@ -26502,17 +26502,17 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于COMBO网元 
 
 。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IPLOCRELATEOPTFLAG|是否支持IP地址细分优化功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置当UE在同一区域RA和TA编组之间移动时，是否为UE的会话重新分配IP。取值含义：否：当UE在同一区域RA和TA编组之间移动时，需要为UE的会话重新分配IP。是：当UE在同一区域RA和TA编组之间移动时，不需要为UE的会话重新分配IP。
 
@@ -26521,7 +26521,7 @@ IPLOCRELATEOPTFLAG|是否支持IP地址细分优化功能|参数可选性:任选
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置控制开关，设置“是否支持IP地址细分优化功能”为“是”。 
@@ -26536,7 +26536,7 @@ SET IPLOC SWITCHCFG:IPLOCRELATEOPTFLAG="YES";
 
 
 
-父主题： [控制开关配置](../../zh-CN/tree/N_12661056.html)
+父主题： [控制开关配置]
 
 
 
@@ -26559,7 +26559,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询控制开关配置(SHOW IPLOC SWITCHCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询“是否支持IP地址细分优化功能”。 
@@ -26567,17 +26567,17 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 该命令只适用于COMBO网元 
 
 。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IPLOCRELATEOPTFLAG|是否支持IP地址细分优化功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置当UE在同一区域RA和TA编组之间移动时，是否为UE的会话重新分配IP。取值含义：否：当UE在同一区域RA和TA编组之间移动时，需要为UE的会话重新分配IP。是：当UE在同一区域RA和TA编组之间移动时，不需要为UE的会话重新分配IP。
 
@@ -26586,7 +26586,7 @@ IPLOCRELATEOPTFLAG|是否支持IP地址细分优化功能|参数可选性:任选
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询控制开关配置。 
@@ -26616,7 +26616,7 @@ SHOW IPLOC SWITCHCFG
 
 
 
-父主题： [控制开关配置](../../zh-CN/tree/N_12661056.html)
+父主题： [控制开关配置]
 
 
 
@@ -26639,7 +26639,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 区域编组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -26664,7 +26664,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 通过区域编组配置，可以将同一个区域内的RA编组和TA编组关联在一起。 
@@ -26672,14 +26672,14 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
                 当UE在同一区域编组内不同的RA编组和TA编组之间移动时，根据控制开关配置（
-                [SET IPLOC SWITCHCFG](../mml/1266111.html)
+                [SET IPLOC SWITCHCFG]
                 ），判断是否需要为UE的会话重新分配IP。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -26712,7 +26712,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -26735,7 +26735,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增区域编组配置(ADD AREAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
  该命令用于新增区域编组配置。 
@@ -26749,7 +26749,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令的参数“位置IP关联RA编组编号”为网管配置的位置IP关联RA编组编号。通过SHOW RAGROUP命令可查询到“位置IP关联RA编组编号”。
@@ -26764,10 +26764,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAGROUPID|位置IP关联区域编组编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|位置IP关联区域编组编号，一般一个区（县）对应一个位置IP关联区域编组编号。
 RAGROUPID|位置IP关联RA编组编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~256。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号，关联ADD RAGROUP中的位置IP关联RA编组编号。默认值0为无效值。
@@ -26780,7 +26780,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增区域编组配置，其中位置IP关联RA编组编号为1，位置IP关联TA编组编号为1。 
@@ -26795,7 +26795,7 @@ ADD AREAGROUP:RAGROUPID=1,TAGROUPID=1;
 
 
 
-父主题： [区域编组配置](../../zh-CN/tree/N_12661057.html)
+父主题： [区域编组配置]
 
 
 
@@ -26818,7 +26818,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改区域编组配置(SET AREAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改区域编组配置。 
@@ -26832,7 +26832,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令的参数“位置IP关联RA编组编号”为网管配置的位置IP关联RA编组编号。通过SHOW RAGROUP命令可查询到“位置IP关联RA编组编号”。
@@ -26847,10 +26847,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAGROUPID|位置IP关联区域编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联区域编组编号，一般一个区（县）对应一个位置IP关联区域编组编号。
 RAGROUPID|位置IP关联RA编组编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~256。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号，关联ADD RAGROUP中的位置IP关联RA编组编号。默认值0为无效值。
@@ -26863,7 +26863,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改位置IP关联区域编组编号为1的配置数据，将位置IP关联TA编组编号修改为2。 
@@ -26878,7 +26878,7 @@ SET AREAGROUP:AREAGROUPID=1,TAGROUPID=2;
 
 
 
-父主题： [区域编组配置](../../zh-CN/tree/N_12661057.html)
+父主题： [区域编组配置]
 
 
 
@@ -26901,7 +26901,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除区域编组配置(DEL AREAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除区域编组配置。 
@@ -26909,15 +26909,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAGROUPID|位置IP关联区域编组编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~256。|位置IP关联区域编组编号，一般一个区（县）对应一个位置IP关联区域编组编号。
 
@@ -26926,7 +26926,7 @@ AREAGROUPID|位置IP关联区域编组编号|参数可选性:必选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除位置IP关联区域编组编号为1的配置数据。 
@@ -26941,7 +26941,7 @@ DEL AREAGROUP:AREAGROUPID=1;
 
 
 
-父主题： [区域编组配置](../../zh-CN/tree/N_12661057.html)
+父主题： [区域编组配置]
 
 
 
@@ -26964,7 +26964,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询区域编组配置(SHOW AREAGROUP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询区域编组配置。 
@@ -26972,15 +26972,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAGROUPID|位置IP关联区域编组编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~256。|位置IP关联区域编组编号，一般一个区（县）对应一个位置IP关联区域编组编号。
 
@@ -26989,10 +26989,10 @@ AREAGROUPID|位置IP关联区域编组编号|参数可选性:任选参数；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAGROUPID|位置IP关联区域编组编号|参数可选性:任选参数；参数类型:整数。|位置IP关联区域编组编号，一般一个区（县）对应一个位置IP关联区域编组编号。
 RAGROUPID|位置IP关联RA编组编号|参数可选性:任选参数；参数类型:整数。|位置IP关联RA编组编号，一般一个区（县）对应一个位置IP关联RA编组编号，关联ADD RAGROUP中的位置IP关联RA编组编号。默认值0为无效值。
@@ -27005,7 +27005,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有区域编组配置。 
@@ -27035,7 +27035,7 @@ SHOW AREAGROUP
 
 
 
-父主题： [区域编组配置](../../zh-CN/tree/N_12661057.html)
+父主题： [区域编组配置]
 
 
 
@@ -27058,7 +27058,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 省内用户IMSI号段配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域（细化到区县）的移动用户使用移动互联网数据业务的管理，需要针对在特定时间、特定区域内的移动用户，分配特定的IP地址段内的IP地址。 
@@ -27087,7 +27087,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 如果SGSN/MME需要限制在RA编组内或TA编组内的国内漫游用户访问数据业务，则需要配置省内用户的IMSI号段，识别出国内漫游用户。如果国内用户IMSI不在省内IMSI号段内，则认为该用户是国内漫游用户。 
@@ -27105,7 +27105,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -27138,7 +27138,7 @@ LTE用户接入的每一个特定区域称为一个TA编组。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -27161,7 +27161,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增省内用户IMSI号段配置(ADD PROVINCE IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置省内用户IMSI号段。如果国内用户的IMSI不在省内IMSI号段内，则认为该用户是国内漫游用户。 
@@ -27169,7 +27169,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27177,10 +27177,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于指定省内用户的IMSI号段。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于指定省内用户IMSI号段的别名。
@@ -27190,7 +27190,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增省内用户IMSI号段，其中IMSI号段为4600112345，用户别名为name1。 
@@ -27205,7 +27205,7 @@ ADD PROVINCE IMSI:IMSISEG="4600112345",NAME="name1";
 
 
 
-父主题： [省内用户IMSI号段配置](../../zh-CN/tree/N_12535926.html)
+父主题： [省内用户IMSI号段配置]
 
 
 
@@ -27228,7 +27228,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改省内用户IMSI号段配置(SET PROVINCE IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改省内用户IMSI号段，IMSI号段不能修改，只能修改用户别名。 
@@ -27236,7 +27236,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27244,10 +27244,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于指定省内用户的IMSI号段。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于指定省内用户IMSI号段的别名。
@@ -27257,7 +27257,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改省内用户IMSI号段，将IMSI号段4600112345的用户别名改为test1。 
@@ -27272,7 +27272,7 @@ SET PROVINCE IMSI:IMSISEG="4600112345",NAME="test1";
 
 
 
-父主题： [省内用户IMSI号段配置](../../zh-CN/tree/N_12535926.html)
+父主题： [省内用户IMSI号段配置]
 
 
 
@@ -27295,7 +27295,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除省内用户IMSI号段配置(DEL PROVINCE IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除省内用户IMSI号段。 
@@ -27303,7 +27303,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27311,10 +27311,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|该参数用于指定省内用户的IMSI号段。
 
@@ -27323,7 +27323,7 @@ IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除省内用户IMSI号段，IMSI号段为4600112345。 
@@ -27338,7 +27338,7 @@ DEL PROVINCE IMSI:IMSISEG="4600112345";
 
 
 
-父主题： [省内用户IMSI号段配置](../../zh-CN/tree/N_12535926.html)
+父主题： [省内用户IMSI号段配置]
 
 
 
@@ -27361,7 +27361,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询省内用户IMSI号段配置(SHOW PROVINCE IMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询已配置的省内用户IMSI号段。 
@@ -27369,7 +27369,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27377,10 +27377,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:0~15个字符。|该参数用于指定省内用户的IMSI号段。
 
@@ -27389,10 +27389,10 @@ IMSISEG|IMSI号段|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:任选参数；参数类型:字符型。|该参数用于指定省内用户的IMSI号段。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该参数用于指定省内用户IMSI号段的别名。
@@ -27402,7 +27402,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询省内用户IMSI号段。 
@@ -27432,7 +27432,7 @@ SHOW PROVINCE IMSI;
 
 
 
-父主题： [省内用户IMSI号段配置](../../zh-CN/tree/N_12535926.html)
+父主题： [省内用户IMSI号段配置]
 
 
 
@@ -27455,7 +27455,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 基于数据APN的IP地址细分配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 运营商需要对终端用户进行管理：包括基于终端用户所在的TA及分组来为其分配IP地址，便于在网络侧，可以分析终端用户IP地址和终端用户位置的关联关系。 
@@ -27472,7 +27472,7 @@ MME已经支持基于IMS APN的IP地址和用户位置关联关系的管理，�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 基于数据APN的IP地址细分配置，提供数据APN IP地址细分策略和数据APN IP地址细分配置。 
@@ -27500,7 +27500,7 @@ MME支持基于数据APN的IP地址细分。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -27543,7 +27543,7 @@ MME支持基于数据APN的IP地址细分。
 
 
 
-父主题： [IP和位置关联配置](../../zh-CN/tree/N_12545915.html)
+父主题： [IP和位置关联配置]
 
 
 
@@ -27566,7 +27566,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置数据APN IP地址细分策略(SET APN SUBDIVISION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置数据APN IP地址细分策略，包括MME支持基于数据APN的IP地址细分和默认基于数据APN是否去PDN连接的设置。 
@@ -27574,7 +27574,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27582,10 +27582,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMESUPDAPNIPSUB|MME支持基于数据APN的IP地址细分|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持基于数据APN的IP地址细分。不支持：MME不支持基于数据APN的IP地址细分。支持：MME支持基于数据APN的IP地址细分。
 DEFAPNDISC|默认基于数据APN是否去PDN连接|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持基于数据APN的IP地址细分时，该参数用于设置MME默认基于数据APN是否去PDN连接。
@@ -27595,7 +27595,7 @@ DEFAPNDISC|默认基于数据APN是否去PDN连接|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置数据APN IP地址细分策略。 
@@ -27610,7 +27610,7 @@ SET APN SUBDIVISION POLICY:MMESUPDAPNIPSUB="NO",DEFAPNDISC="YES";
 
 
 
-父主题： [基于数据APN的IP地址细分配置](../../zh-CN/tree/N_125359283.html)
+父主题： [基于数据APN的IP地址细分配置]
 
 
 
@@ -27633,7 +27633,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询数据APN IP地址细分策略(SHOW APN SUBDIVISION POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询APN IP地址细分策略。 
@@ -27641,7 +27641,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27649,10 +27649,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMESUPDAPNIPSUB|MME支持基于数据APN的IP地址细分|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持基于数据APN的IP地址细分。不支持：MME不支持基于数据APN的IP地址细分。支持：MME支持基于数据APN的IP地址细分。
 DEFAPNDISC|默认基于数据APN是否去PDN连接|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持基于数据APN的IP地址细分时，该参数用于设置MME默认基于数据APN是否去PDN连接。
@@ -27662,7 +27662,7 @@ DEFAPNDISC|默认基于数据APN是否去PDN连接|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询数据APN IP地址细分策略。 
@@ -27692,7 +27692,7 @@ SHOW APN SUBDIVISION POLICY;
 
 
 
-父主题： [基于数据APN的IP地址细分配置](../../zh-CN/tree/N_125359283.html)
+父主题： [基于数据APN的IP地址细分配置]
 
 
 
@@ -27715,7 +27715,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增数据APN IP地址细分配置(ADD APN SUBDIVISION) 
 
 
-[](None)命令功能 
+命令功能 
 
 
  该命令用于新增数据APN名称和对应的数据APN是否去PDN连接的配置。 
@@ -27723,7 +27723,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27731,10 +27731,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~62个字符。|当配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值与APN粒度下的位置IP关联配置不同时，需要配置相应的数据APN。
 APNDISC|APN是否去PDN连接|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|支持基于数据APN的IP地址细分时，该参数用于设置MME对特定数据APN是否去PDN连接。注意：此参数的设置值一般要求与配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值不同。
@@ -27744,7 +27744,7 @@ APNDISC|APN是否去PDN连接|参数可选性:必选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增数据APN IP地址细分配置，其中APN名称为zte.com，APN是否去PDN连接为否。 
@@ -27759,7 +27759,7 @@ ADD APN SUBDIVISION:APN="zte.com",APNDISC="NO";
 
 
 
-父主题： [基于数据APN的IP地址细分配置](../../zh-CN/tree/N_125359283.html)
+父主题： [基于数据APN的IP地址细分配置]
 
 
 
@@ -27782,7 +27782,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改数据APN IP地址细分配置(SET APN SUBDIVISION) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改数据APN IP地址细分配置数据。 
@@ -27790,7 +27790,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27798,10 +27798,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~62个字符。|当配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值与APN粒度下的位置IP关联配置不同时，需要配置相应的数据APN。
 APNDISC|APN是否去PDN连接|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|支持基于数据APN的IP地址细分时，该参数用于设置MME对特定数据APN是否去PDN连接。注意：此参数的设置值一般要求与配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值不同。
@@ -27811,7 +27811,7 @@ APNDISC|APN是否去PDN连接|参数可选性:必选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改数据APN IP地址细分配置。 
@@ -27826,7 +27826,7 @@ SET APN SUBDIVISION:APN="zte.com",APNDISC="YES";
 
 
 
-父主题： [基于数据APN的IP地址细分配置](../../zh-CN/tree/N_125359283.html)
+父主题： [基于数据APN的IP地址细分配置]
 
 
 
@@ -27849,7 +27849,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除数据APN IP地址细分配置(DEL APN SUBDIVISION) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除数据APN IP地址细分配置数据。 
@@ -27857,7 +27857,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27865,10 +27865,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~62个字符。|当配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值与APN粒度下的位置IP关联配置不同时，需要配置相应的数据APN。
 
@@ -27877,7 +27877,7 @@ APN|APN名称|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN名称为"zte.com"的数据APN IP地址细分配置记录。 
@@ -27892,7 +27892,7 @@ DEL APN SUBDIVISION:APN="zte.com";
 
 
 
-父主题： [基于数据APN的IP地址细分配置](../../zh-CN/tree/N_125359283.html)
+父主题： [基于数据APN的IP地址细分配置]
 
 
 
@@ -27915,7 +27915,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询数据APN IP地址细分配置(SHOW APN SUBDIVISION) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询数据APN IP地址细分配置数据。 
@@ -27923,7 +27923,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -27931,10 +27931,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|当配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值与APN粒度下的位置IP关联配置不同时，需要配置相应的数据APN。
 
@@ -27943,10 +27943,10 @@ APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|当配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值与APN粒度下的位置IP关联配置不同时，需要配置相应的数据APN。
 APNDISC|APN是否去PDN连接|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|支持基于数据APN的IP地址细分时，该参数用于设置MME对特定数据APN是否去PDN连接。注意：此参数的设置值一般要求与配置参数“默认基于数据APN是否去PDN连接（Default Disconnect PDN based on Data APN）”的设置值不同。
@@ -27956,7 +27956,7 @@ APNDISC|APN是否去PDN连接|参数可选性:任选参数；参数类型:枚举
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询数据APN IP地址细分配置。 
@@ -27986,7 +27986,7 @@ zte.com                                         是
 
 
 
-父主题： [基于数据APN的IP地址细分配置](../../zh-CN/tree/N_125359283.html)
+父主题： [基于数据APN的IP地址细分配置]
 
 
 
@@ -28009,7 +28009,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 话单存储空间配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当系统运行时，用户业务会持续产生话单，系统存储磁盘的占用空间会不断增加，最终导致磁盘可用空间不足，从而导致系统故障，可能的故障包括：配置数据存盘失败或者版本加载失败等。 
@@ -28020,7 +28020,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用于控制磁盘的剩余空间大小，避免存储过多的话单造成磁盘空间不足导致配置数据存盘或者版本加载失败，当磁盘剩余空间少于配置门限值并且需要进行话单本地存储的时候，则丢弃掉新生成的话单文件。为了保证不频繁的启停话单丢弃操作，对于之前启动了话单丢弃操作，并且磁盘剩余空间未恢复到停止丢弃门限的情况下会继续保持话单丢弃操作，直到磁盘剩余空间高于停止门限为止。其中门限配置的是开始丢弃话单的磁盘剩余空间百分比以及停止丢弃话单的磁盘剩余空间百分比。 
@@ -28028,7 +28028,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -28051,7 +28051,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -28074,20 +28074,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置话单存储空间(SET BILLSPACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置话单存储空间配置，配置用于控制磁盘的剩余空间大小，避免存储过多的话单造成磁盘空间不足导致配置数据存盘或者版本加载失败。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DISCARD|丢弃话单的磁盘剩余空间(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~30。|磁盘剩余空间少于配置的“丢弃话单的磁盘剩余空间”门限值并且需要进行话单本地存储的时候，则开始丢弃掉新生成的话单文件。
 STORE|存储话单的磁盘剩余空间(%)|参数可选性:任选参数；参数类型:整数；参数范围为:0~30。|磁盘剩余空间多于配置的“存储话单的磁盘剩余空间”门限值并且需要进行话单本地存储的时候，则停止丢弃掉新生成的话单文件。
@@ -28097,7 +28097,7 @@ STORE|存储话单的磁盘剩余空间(%)|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置话单存储空间配置，丢弃话单的磁盘剩余空间(%)为5存储话单的磁盘剩余空间(%)为6。 
@@ -28112,7 +28112,7 @@ SET BILLSPACE:DISCARD=5,STORE=6;
 
 
 
-父主题： [话单存储空间配置](../../zh-CN/tree/N_125063304.html)
+父主题： [话单存储空间配置]
 
 
 
@@ -28135,20 +28135,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询话单存储空间(SHOW BILLSPACE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询话单存储空间配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 DISCARD|丢弃话单的磁盘剩余空间(%)|参数可选性:任选参数；参数类型:整数。|磁盘剩余空间少于配置的“丢弃话单的磁盘剩余空间”门限值并且需要进行话单本地存储的时候，则开始丢弃掉新生成的话单文件。
 STORE|存储话单的磁盘剩余空间(%)|参数可选性:任选参数；参数类型:整数。|磁盘剩余空间多于配置的“存储话单的磁盘剩余空间”门限值并且需要进行话单本地存储的时候，则停止丢弃掉新生成的话单文件。
@@ -28158,7 +28158,7 @@ STORE|存储话单的磁盘剩余空间(%)|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询话单存储空间配置。 
@@ -28187,7 +28187,7 @@ SHOW BILLSPACE;
 
 
 
-父主题： [话单存储空间配置](../../zh-CN/tree/N_125063304.html)
+父主题： [话单存储空间配置]
 
 
 
@@ -28210,14 +28210,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 基于TAC的Gb加密算法配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             Gb接入加密：对于SGSN Gb接入，当MS发起附着和路由更新请求时，SGSN确认网络侧LLC加密开关已经打开，则根据手机支持的GPRS加密算法和SGSN支持的GPRS加密算法取交集，确定最终使用的GPRS加密算法。Gb口的信令和数据就使用密文进行交互，保证用户接入的安全性。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 一般情况下，启用Gb接入加密时，对所有用户采用同一种加密算法。但如果需要根据终端类型配置不同的加密算法时，可以通过设置“基于TAC的Gb加密算法”实现。 
@@ -28228,7 +28228,7 @@ IMEI中的TAC为类型分配代码，共8个十进制数值，其中前两位代
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -28261,7 +28261,7 @@ IMEI中的TAC为类型分配代码，共8个十进制数值，其中前两位代
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -28284,7 +28284,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增基于TAC的Gb加密算法配置(ADD TAC GEA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增基于TAC的Gb加密算法配置。当运营商需要根据终端类型设置不同的Gb加密算法时，使用此命令。 
@@ -28292,15 +28292,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-本功能受安全变量“支持基于IMEI配置Gb加密算法”控制。该安全变量属于“安全相关配置”，可以通过命令[SHOW SECURITY PARAMETER](1268036.html)查看。
-
-
-[](None)参数说明 
+本功能受安全变量“支持基于IMEI配置Gb加密算法”控制。该安全变量属于“安全相关配置”，可以通过命令[SHOW SECURITY PARAMETER]查看。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 TAC|类型分配码|参数可选性:必选参数；参数类型:字符型；参数范围为:8~8个字符。|IMEI中的类型分配码。TAC采用8个十进制数值表示，前两位代表不同的分配机构，后6位区分不同的机器类型。不同的手机型号TAC不同。
 GEA1|GPRS加密算法1|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|TAC是否支持GPRS加密算法1（GEA1）。
@@ -28316,7 +28316,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增基于TAC的Gb加密算法配置，类型分配码为46012665，支持GPRS加密算法1，支持GPRS加密算法2，支持GPRS加密算法3。 
@@ -28332,7 +28332,7 @@ ADD TAC GEA:TAC="46012665",GEA1="ON",GEA2="ON",GEA3="ON";
 
 
 
-父主题： [基于TAC的Gb加密算法配置](../../zh-CN/tree/N_125063305.html)
+父主题： [基于TAC的Gb加密算法配置]
 
 
 
@@ -28355,7 +28355,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改基于TAC的Gb加密算法配置(SET TAC GEA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改基于TAC的Gb加密算法配置。可以修改该TAC对Gb加密算法1、算法2、算法3的支持情况。 
@@ -28363,15 +28363,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
-本功能受安全变量“支持基于IMEI配置Gb加密算法”控制。该安全变量属于“安全相关配置”，可以通过命令[SHOW SECURITY PARAMETER](1268036.html)查看。
-
-
-[](None)参数说明 
+本功能受安全变量“支持基于IMEI配置Gb加密算法”控制。该安全变量属于“安全相关配置”，可以通过命令[SHOW SECURITY PARAMETER]查看。
 
 
-[](None)标识|名称|类型|说明
+参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 TAC|类型分配码|参数可选性:必选参数；参数类型:字符型；参数范围为:8~8个字符。|IMEI中的类型分配码。TAC采用8个十进制数值表示，前两位代表不同的分配机构，后6位区分不同的机器类型。不同的手机型号TAC不同。
 GEA1|GPRS加密算法1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|TAC是否支持GPRS加密算法1（GEA1）。
@@ -28387,7 +28387,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改基于TAC的Gb加密算法配置，类型分配码为46012665，支持GPRS加密算法1，支持GPRS加密算法2，不支持GPRS加密算法3。 
@@ -28403,7 +28403,7 @@ SET TAC GEA:TAC="46012665",GEA1="ON",GEA2="ON",GEA3="OFF";
 
 
 
-父主题： [基于TAC的Gb加密算法配置](../../zh-CN/tree/N_125063305.html)
+父主题： [基于TAC的Gb加密算法配置]
 
 
 
@@ -28426,15 +28426,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除基于TAC的Gb加密算法配置(DEL TAC GEA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于删除基于TAC的Gb加密算法配置。删除后，此TAC对应的加密算法不再生效，系统采用全局的Gb加密算法（查询命令为：[SHOW GPRS ENCRYPTION](1268051.html)）。
+该命令用于删除基于TAC的Gb加密算法配置。删除后，此TAC对应的加密算法不再生效，系统采用全局的Gb加密算法（查询命令为：[SHOW GPRS ENCRYPTION]）。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -28442,10 +28442,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAC|类型分配码|参数可选性:必选参数；参数类型:字符型；参数范围为:8~8个字符。|IMEI中的类型分配码。TAC采用8个十进制数值表示，前两位代表不同的分配机构，后6位区分不同的机器类型。不同的手机型号TAC不同。
 
@@ -28454,7 +28454,7 @@ TAC|类型分配码|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除基于TAC的Gb加密算法配置，类型分配码为46012665记录。
@@ -28471,7 +28471,7 @@ DEL TAC GEA:TAC="46012665";
 
 
 
-父主题： [基于TAC的Gb加密算法配置](../../zh-CN/tree/N_125063305.html)
+父主题： [基于TAC的Gb加密算法配置]
 
 
 
@@ -28494,7 +28494,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询基于TAC的Gb加密算法配置(SHOW TAC GEA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询SGSN网元已配置的基于TAC的Gb加密算法。 
@@ -28502,7 +28502,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -28510,10 +28510,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAC|类型分配码|参数可选性:任选参数；参数类型:字符型；参数范围为:8~8个字符。|IMEI中的类型分配码。TAC采用8个十进制数值表示，前两位代表不同的分配机构，后6位区分不同的机器类型。不同的手机型号TAC不同。
 
@@ -28522,10 +28522,10 @@ TAC|类型分配码|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TAC|类型分配码|参数可选性:任选参数；参数类型:字符型。|IMEI中的类型分配码。TAC采用8个十进制数值表示，前两位代表不同的分配机构，后6位区分不同的机器类型。不同的手机型号TAC不同。
 GEA1|GPRS加密算法1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|TAC是否支持GPRS加密算法1（GEA1）。
@@ -28541,7 +28541,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|起�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已经配置的基于TAC的Gb加密算法配置信息 
@@ -28570,7 +28570,7 @@ SHOW TAC GEA;
 
 
 
-父主题： [基于TAC的Gb加密算法配置](../../zh-CN/tree/N_125063305.html)
+父主题： [基于TAC的Gb加密算法配置]
 
 
 
@@ -28593,7 +28593,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 合法区域接入限制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为实现对特定区域的特定移动用户使用移动互联网数据业务的管理，需要针对在特定区域内的特定移动用户，设置特定的接入策略。 
@@ -28601,7 +28601,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 合法区域接入限制配置用于查询功能开关、设置管理策略等。 
@@ -28609,7 +28609,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -28652,7 +28652,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -28675,21 +28675,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 接入限制策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             为实现对特定区域的特定移动用户使用特定移动互联网数据业务的管理，需要针对在特定时间，特定区域内的特定移动用户或用户接入的特定业务，设置特定的接入策略。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             接入限制区域配置用于设置特定时间范围、特定移动用户范围等。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -28712,7 +28712,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [合法区域接入限制配置](../../zh-CN/tree/N_12645000.html)
+父主题： [合法区域接入限制配置]
 
 
 
@@ -28735,20 +28735,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置接入限制策略(SET CNLAR POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置接入限制策略。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 POLICY|策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|策略
 DRAU|路由更新时是否分离受限用户|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|路由更新时是否分离受限用户
@@ -28758,7 +28758,7 @@ DRAU|路由更新时是否分离受限用户|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置接入限制策略，策略为PASS，路由更新时是否分离受限用户为NO。 
@@ -28773,7 +28773,7 @@ SET CNLAR POLICY:POLICY="PASS",DRAU="NO";
 
 
 
-父主题： [接入限制策略配置](../../zh-CN/tree/N_126450001.html)
+父主题： [接入限制策略配置]
 
 
 
@@ -28796,20 +28796,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询接入限制策略(SHOW CNLAR POLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询接入限制策略。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 POLICY|策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|策略
 DRAU|路由更新时是否分离受限用户|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|路由更新时是否分离受限用户
@@ -28819,7 +28819,7 @@ DRAU|路由更新时是否分离受限用户|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询接入限制策略。 
@@ -28847,7 +28847,7 @@ SHOW CNLAR POLICY
 
 
 
-父主题： [接入限制策略配置](../../zh-CN/tree/N_126450001.html)
+父主题： [接入限制策略配置]
 
 
 
@@ -28870,21 +28870,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 本地GGSN配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             为实现对特定区域的特定移动用户使用移动互联网数据业务的管理，需要针对在特定时间，特定区域内的特定移动用户，设置特定的接入策略。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             本地GGSN配置用于设置把本地GGSN，特定时间、特定区域的特定移动用户的PDP激活，在接入策略为“转本地GGSN”时，使用本地GGSN激活PDP。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -28912,7 +28912,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [合法区域接入限制配置](../../zh-CN/tree/N_12645000.html)
+父主题： [合法区域接入限制配置]
 
 
 
@@ -28935,20 +28935,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增本地GGSN配置(ADD CNLAR LGGSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 新增本地GGSN配置
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN地址|参数可选性:必选参数；参数类型:地址|GGSN地址
 MASK|掩码|参数可选性:必选参数；参数类型:整数；参数范围为:0~128。|掩码
@@ -28959,7 +28959,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增本地GGSN配置，IP为0:0:0:0:0:0:0:10，掩码为0，用户别名为example。 
@@ -28974,7 +28974,7 @@ ADD CNLAR LGGSN:IP="0:0:0:0:0:0:0:10",MASK=0,NAME="example";
 
 
 
-父主题： [本地GGSN配置](../../zh-CN/tree/N_126450002.html)
+父主题： [本地GGSN配置]
 
 
 
@@ -28997,20 +28997,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除本地GGSN配置(DEL CNLAR LGGSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 删除本地GGSN配置
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN地址|参数可选性:必选参数；参数类型:地址|GGSN地址
 
@@ -29019,7 +29019,7 @@ IP|GGSN地址|参数可选性:必选参数；参数类型:地址|GGSN地址
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除本地GGSN配置，IP为0:0:0:0:0:0:0:10。 
@@ -29034,7 +29034,7 @@ DEL CNLAR LGGSN:IP="0:0:0:0:0:0:0:10";
 
 
 
-父主题： [本地GGSN配置](../../zh-CN/tree/N_126450002.html)
+父主题： [本地GGSN配置]
 
 
 
@@ -29057,20 +29057,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询本地GGSN配置(SHOW CNLAR LGGSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询本地GGSN配置
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN地址|参数可选性:任选参数；参数类型:地址|GGSN地址
 MASK|掩码|参数可选性:任选参数；参数类型:整数。|掩码
@@ -29081,7 +29081,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本地GGSN配置。 
@@ -29109,7 +29109,7 @@ SHOW CNLAR LGGSN
 
 
 
-父主题： [本地GGSN配置](../../zh-CN/tree/N_126450002.html)
+父主题： [本地GGSN配置]
 
 
 
@@ -29132,21 +29132,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 接入限制目标GGSN配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             为实现对特定区域的特定移动用户使用移动互联网数据业务的管理，需要针对在特定时间，特定区域内的特定移动用户，设置特定的接入策略。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             接入限制区域配置用于设置特定时间范围、特定移动用户范围等。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -29174,7 +29174,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [合法区域接入限制配置](../../zh-CN/tree/N_12645000.html)
+父主题： [合法区域接入限制配置]
 
 
 
@@ -29197,20 +29197,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增接入限制目标GGSN配置(ADD CNLAR DGGSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 新增管控目标GGSN配置
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN地址|参数可选性:必选参数；参数类型:地址|GGSN地址
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|用户别名
@@ -29220,7 +29220,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增管控目标GGSN配置 
@@ -29235,7 +29235,7 @@ ADD CNLAR DGGSN:IP="0:0:0:0:0:0:0:10",NAME="";
 
 
 
-父主题： [接入限制目标GGSN配置](../../zh-CN/tree/N_126450003.html)
+父主题： [接入限制目标GGSN配置]
 
 
 
@@ -29258,20 +29258,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除接入限制目标GGSN配置(DEL CNLAR DGGSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 删除管控目标GGSN配置
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN地址|参数可选性:必选参数；参数类型:地址|GGSN地址
 
@@ -29280,7 +29280,7 @@ IP|GGSN地址|参数可选性:必选参数；参数类型:地址|GGSN地址
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除管控目标GGSN配置 
@@ -29295,7 +29295,7 @@ DEL CNLAR DGGSN:IP="0:0:0:0:0:0:0:10";
 
 
 
-父主题： [接入限制目标GGSN配置](../../zh-CN/tree/N_126450003.html)
+父主题： [接入限制目标GGSN配置]
 
 
 
@@ -29318,20 +29318,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询接入限制目标GGSN配置(SHOW CNLAR DGGSN) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询管控目标GGSN配置
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GGSN地址|参数可选性:任选参数；参数类型:地址|GGSN地址
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用户别名
@@ -29341,7 +29341,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 SHOW CNLAR DGGSN 
@@ -29366,7 +29366,7 @@ SHOW CNLAR DGGSN
 
 
 
-父主题： [接入限制目标GGSN配置](../../zh-CN/tree/N_126450003.html)
+父主题： [接入限制目标GGSN配置]
 
 
 
@@ -29389,7 +29389,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询接入限制开关(SHOW ISMCCGXFLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 本参命令用于查询接入限制开关。 
@@ -29397,15 +29397,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RETCODE|执行结果码|参数可选性:任选参数；参数类型:整数。|执行结果码
 FLAG|Gx口开关状态标记|参数可选性:任选参数；参数类型:整数。|Gx口开关状态标记
@@ -29416,7 +29416,7 @@ RESULT|执行结果|参数可选性:任选参数；参数类型:字符型。|执
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询接入限制开关。 
@@ -29454,7 +29454,7 @@ Pass
 
 
 
-父主题： [合法区域接入限制配置](../../zh-CN/tree/N_12645000.html)
+父主题： [合法区域接入限制配置]
 
 
 
@@ -29477,21 +29477,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 接入限制区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             为实现对特定区域的特定移动用户使用移动互联网数据业务的管理，需要针对在特定区域内的特定移动用户，设置特定的接入策略。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             接入限制区域配置用于设置需要管理的特定区域。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -29529,7 +29529,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [合法区域接入限制配置](../../zh-CN/tree/N_12645000.html)
+父主题： [合法区域接入限制配置]
 
 
 
@@ -29552,20 +29552,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增接入限制区域配置(ADD SMCCSCA) 
 
 
-[](None)命令功能 
+命令功能 
 
 新增接入限制区域
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|区域索引
 AREANAME|区域名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|区域名称
@@ -29584,7 +29584,7 @@ ITEMNETTYPE|归属网络类型|参数可选性:必选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增接入限制区域 
@@ -29599,7 +29599,7 @@ ADD SMCCSCA:AREAID=1,AREANAME="1",AREADESCRP="0",NETTYPE=2,FLAG=0,AREAITEMS=1-"1
 
 
 
-父主题： [接入限制区域配置](../../zh-CN/tree/N_1264512000.html)
+父主题： [接入限制区域配置]
 
 
 
@@ -29622,20 +29622,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增接入限制区域位置项配置(ADD SMCCSCAITEM) 
 
 
-[](None)命令功能 
+命令功能 
 
 增加接入限制区域位置项
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|区域索引
 FLAG|对象追加标记|参数可选性:必选参数；参数类型:整数；参数范围为:0~1。|对象追加标记
@@ -29651,7 +29651,7 @@ ITEMNETTYPE|归属网络类型|参数可选性:必选参数；参数类型:整�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加接入限制区域位置项 
@@ -29666,7 +29666,7 @@ ADD SMCCSCAITEM:AREAID=1,FLAG=0,AREAITEMS="1"-""-"2"-"4"-"3";
 
 
 
-父主题： [接入限制区域配置](../../zh-CN/tree/N_1264512000.html)
+父主题： [接入限制区域配置]
 
 
 
@@ -29689,20 +29689,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改接入限制区域配置(SET SMCCSCA) 
 
 
-[](None)命令功能 
+命令功能 
 
 修改接入限制区域
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|区域索引
 AREANAME|区域名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|区域名称
@@ -29714,7 +29714,7 @@ NETTYPE|区域归属网络类型|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改接入限制区域 
@@ -29729,7 +29729,7 @@ SET SMCCSCA:AREAID=1,AREANAME="AREA_1",NETTYPE=2;
 
 
 
-父主题： [接入限制区域配置](../../zh-CN/tree/N_1264512000.html)
+父主题： [接入限制区域配置]
 
 
 
@@ -29752,20 +29752,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除接入限制区域配置(DEL SMCCSCA) 
 
 
-[](None)命令功能 
+命令功能 
 
 删除接入限制区域
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|区域索引
 
@@ -29774,7 +29774,7 @@ AREAID|区域索引|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除接入限制区域 
@@ -29789,7 +29789,7 @@ DEL SMCCSCA:AREAID="1";
 
 
 
-父主题： [接入限制区域配置](../../zh-CN/tree/N_1264512000.html)
+父主题： [接入限制区域配置]
 
 
 
@@ -29812,20 +29812,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询接入限制区域配置(SHOW ISMCCSCA) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询接入限制区域
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AREAID|区域索引|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|区域索引
 
@@ -29834,10 +29834,10 @@ AREAID|区域索引|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RETCODE|执行结果码|参数可选性:任选参数；参数类型:整数。|执行结果码
 RESULT|执行结果|参数可选性:任选参数；参数类型:字符型；参数范围为:0~500个字符。|执行结果
@@ -29847,7 +29847,7 @@ RESULT|执行结果|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询接入限制区域。 
@@ -29880,7 +29880,7 @@ sftp://ems:********@10.228.62.189:29029/Nfdata/uMAC_MME_B11/vru-mmesgsn-oam-dba/
 
 
 
-父主题： [接入限制区域配置](../../zh-CN/tree/N_1264512000.html)
+父主题： [接入限制区域配置]
 
 
 
@@ -29903,21 +29903,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 接入限制规则配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             为实现对特定区域的特定移动用户使用特定移动互联网数据业务的管理，需要针对在特定时间，特定区域内的特定移动用户或用户接入的特定业务，设置特定的接入策略。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             接入限制区域配置用于设置特定时间范围、特定移动用户范围等。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -29960,7 +29960,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [合法区域接入限制配置](../../zh-CN/tree/N_12645000.html)
+父主题： [合法区域接入限制配置]
 
 
 
@@ -29983,20 +29983,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增接入限制规则配置(ADD SMCCSCR) 
 
 
-[](None)命令功能 
+命令功能 
 
 新增接入限制规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|规则索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|规则索引
 RULENAME|规则名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|规则名称
@@ -30020,7 +30020,7 @@ SERVFLAG|业务管控标记|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增接入限制规则。 
@@ -30035,7 +30035,7 @@ ADD SMCCSCR:RULEID=1,RULENAME="RULE_1",RULEDESCRP="RULE_1",CREATOR="SMCC",CREATE
 
 
 
-父主题： [接入限制规则配置](../../zh-CN/tree/N_1264517000.html)
+父主题： [接入限制规则配置]
 
 
 
@@ -30058,20 +30058,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增接入限制规则位置项配置(ADD SMCCSCRITEM) 
 
 
-[](None)命令功能 
+命令功能 
 
 增加接入限制规则业务项
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|规则索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|规则索引
 FLAG|对象追加标记|参数可选性:必选参数；参数类型:整数；参数范围为:0~1。|对象追加标记
@@ -30086,7 +30086,7 @@ SERVFLAG|业务管控标记|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加接入限制规则业务项 
@@ -30101,7 +30101,7 @@ ADD SMCCSCRITEM:RULEID=1,FLAG=0,SERVITEMS="0"-"1"-"1"-"0"&"0"-"1"-"1"-"0";
 
 
 
-父主题： [接入限制规则配置](../../zh-CN/tree/N_1264517000.html)
+父主题： [接入限制规则配置]
 
 
 
@@ -30124,20 +30124,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改接入限制规则配置(SET SMCCSCR) 
 
 
-[](None)命令功能 
+命令功能 
 
 修改接入限制规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|规则索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|规则索引
 RULENAME|规则名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|规则名称
@@ -30154,7 +30154,7 @@ ENDTIME|管控规则结束时间|参数可选性:任选参数；参数类型:整
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改接入限制规则 
@@ -30169,7 +30169,7 @@ SET SMCCSCR:RULEID=1,AREAIDS=1,USERGRPIDS=1,NETTYPE=2;
 
 
 
-父主题： [接入限制规则配置](../../zh-CN/tree/N_1264517000.html)
+父主题： [接入限制规则配置]
 
 
 
@@ -30192,20 +30192,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除接入限制规则配置(DEL SMCCSCR) 
 
 
-[](None)命令功能 
+命令功能 
 
 删除接入限制规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|规则索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|规则索引
 
@@ -30214,7 +30214,7 @@ RULEID|规则索引|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除接入限制规则 
@@ -30229,7 +30229,7 @@ DEL SMCCSCR:RULEID="1";
 
 
 
-父主题： [接入限制规则配置](../../zh-CN/tree/N_1264517000.html)
+父主题： [接入限制规则配置]
 
 
 
@@ -30252,20 +30252,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询接入限制规则配置(SHOW ISMCCSCR) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询接入限制规则
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|规则索引|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|规则索引
 
@@ -30274,10 +30274,10 @@ RULEID|规则索引|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RETCODE|执行结果码|参数可选性:任选参数；参数类型:整数。|执行结果码
 RESULT|执行结果|参数可选性:任选参数；参数类型:字符型；参数范围为:0~500个字符。|执行结果
@@ -30287,7 +30287,7 @@ RESULT|执行结果|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询接入限制规则。 
@@ -30320,7 +30320,7 @@ SHOW ISMCCSCR
 
 
 
-父主题： [接入限制规则配置](../../zh-CN/tree/N_1264517000.html)
+父主题： [接入限制规则配置]
 
 
 
@@ -30343,20 +30343,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置接入限制规则状态配置(SET SMCCSCROPSTAT) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置接入限制规则状态
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RULEID|规则索引|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|规则索引
 OPSTATUS|规则操作状态|参数可选性:必选参数；参数类型:整数；参数范围为:0~1。|规则操作状态
@@ -30366,7 +30366,7 @@ OPSTATUS|规则操作状态|参数可选性:必选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置接入限制规则状态 
@@ -30381,7 +30381,7 @@ SET SMCCSCROPSTAT:RULEID=1,OPSTATUS=0;
 
 
 
-父主题： [接入限制规则配置](../../zh-CN/tree/N_1264517000.html)
+父主题： [接入限制规则配置]
 
 
 
@@ -30404,7 +30404,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## eNodeB告警配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 正常情况下，eNodeB局向链路断链时，MME上报eNodeB断链告警，告警码为：2114322696。当网络中存在一些异常情况时，需要进行一些特殊处理： 
@@ -30426,7 +30426,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 eNodeB告警配置包括： 
@@ -30448,7 +30448,7 @@ eNodeB告警参数配置：主要应用于eNodeB断链告警长期无法恢复�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -30471,7 +30471,7 @@ eNodeB断链告警过滤配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -30494,7 +30494,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### eNodeB告警参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 正常情况下，eNodeB局向链路断链时，MME上报eNodeB断链告警，告警码为：2114322696。 
@@ -30505,7 +30505,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当eNodeB局向链路断链持续时长超过配置的“eNodeB断链老化回收时长”时，MME恢复eNodeB断链告警。 
@@ -30513,7 +30513,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -30536,7 +30536,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [eNodeB告警配置](../../zh-CN/tree/N_12545920.html)
+父主题： [eNodeB告警配置]
 
 
 
@@ -30559,7 +30559,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置eNodeB告警参数配置(SET ENODEB ALARM PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置eNodeB告警参数，主要包括"eNodeB断链老化回收时长"，"TAList下eNodeB到达门限告警方式"，"TAList下eNodeB到达门限告警上报周期"，"TAList下eNodeB数量告警门限"，"一级告警阈值"，"二级告警阈值"。该命令执行成功后，MME将对断链告警持续时长超过这个时长的eNodeB进行告警恢复。 
@@ -30567,7 +30567,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该配置针对所有的eNodeB生效。配置后，所有eNodeB的断链告警持续时间达到这个时长时，告警会被恢复。 
@@ -30575,10 +30575,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CBDUR|eNodeB断链老化回收时长(小时)|参数可选性:任选参数；参数类型:整数；参数范围为:12~48。|当eNodeB断链告警的持续时长超过配置的"eNodeB断链老化回收时长", MME恢复eNodeB断链告警。参数范围为:12-48小时，缺省为24小时。
 TAENBOUTALMMODE|TAList下eNodeB到达门限告警方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME在寻呼UE时，寻呼TAList下eNodeB站点数量到达最大门限后是否上报告警。0：不上报（No）1：上报（Yes）
@@ -30592,7 +30592,7 @@ ALMTHRESHOLD2|二级告警阈值（%）|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改eNodeB告警参数配置，将eNodeB断链老化回收时长改为30小时。 
@@ -30607,7 +30607,7 @@ SET ENODEB ALARM PARA:CBDUR=30;
 
 
 
-父主题： [eNodeB告警参数配置](../../zh-CN/tree/N_12545921.html)
+父主题： [eNodeB告警参数配置]
 
 
 
@@ -30630,7 +30630,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询eNodeB告警参数配置(SHOW ENODEB ALARM PARA) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询eNodeB告警参数，主要包括"eNodeB断链老化回收时长"，"TAList下eNodeB到达门限告警方式"，"TAList下eNodeB到达门限告警上报周期"，"TAList下eNodeB数量告警门限"，"一级告警阈值"，"二级告警阈值"。 
@@ -30638,15 +30638,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CBDUR|eNodeB断链老化回收时长(小时)|参数可选性:任选参数；参数类型:整数。|当eNodeB断链告警的持续时长超过配置的"eNodeB断链老化回收时长", MME恢复eNodeB断链告警。参数范围为:12-48小时，缺省为24小时。
 TAENBOUTALMMODE|TAList下eNodeB到达门限告警方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME在寻呼UE时，寻呼TAList下eNodeB站点数量到达最大门限后是否上报告警。0：不上报（No）1：上报（Yes）
@@ -30660,7 +30660,7 @@ ALMTHRESHOLD2|二级告警阈值（%）|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询eNodeB告警参数配置。 
@@ -30689,7 +30689,7 @@ SHOW ENODEB ALARM PARA
 
 
 
-父主题： [eNodeB告警参数配置](../../zh-CN/tree/N_12545921.html)
+父主题： [eNodeB告警参数配置]
 
 
 
@@ -30712,7 +30712,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### eNodeB断链告警过滤配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 正常情况下，eNodeB局向链路断链时，MME网元上报eNodeB断链告警，告警码为：2114322696。但网络中可能存在少量不稳定的eNodeB长期处于断链状态，导致告警始终无法恢复，如果这些eNodeB不需要关注，MME提供屏蔽该eNodeB断链告警的功能。 
@@ -30720,7 +30720,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 在“eNodeB断链告警过滤配置”中指定的eNodeB，MME检测到该eNodeB局向链路断链时，不会上报eNodeB断链告警。 
@@ -30728,7 +30728,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -30761,7 +30761,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [eNodeB告警配置](../../zh-CN/tree/N_12545920.html)
+父主题： [eNodeB告警配置]
 
 
 
@@ -30784,7 +30784,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增eNodeB断链告警过滤配置(ADD ENODEB ALARM FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 网络中可能存在少量不稳定的eNodeB长期处于断链状态，导致告警始终无法恢复，如果这些eNodeB不需要关注，MME支持通过命令屏蔽eNodeB断链告警的功能。 
@@ -30795,7 +30795,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令最多可以配置1000个支持告警过滤功能的eNodeB。 
@@ -30806,10 +30806,10 @@ eNodeB被配置之后，当该eNodeB局向断链时，MME不会上报断链告�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。如中国为460。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号用来唯一识别不同的移动网络，由ITU统一分配和管理。比如中国电信为03，中国移动为00和02。
@@ -30821,7 +30821,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增eNodeB断链告警过滤配置，其中移动国家码为460，移动网号为01，eNodeB局向号为1000，用户别名为name1。 
@@ -30836,7 +30836,7 @@ ADD ENODEB ALARM FILTER:MCC="460",MNC="01",ENODEBID=1000,NAME="name1";
 
 
 
-父主题： [eNodeB断链告警过滤配置](../../zh-CN/tree/N_12545922.html)
+父主题： [eNodeB断链告警过滤配置]
 
 
 
@@ -30859,7 +30859,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改eNodeB断链告警过滤配置(SET ENODEB ALARM FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改不上报局向断链告警的eNodeB信息，只能修改该eNodeB的用户别名。 
@@ -30867,15 +30867,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。如中国为460。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号用来唯一识别不同的移动网络，由ITU统一分配和管理。比如中国电信为03，中国移动为00和02。
@@ -30887,7 +30887,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改eNodeB断链告警过滤配置，将用户别名改为name2。 
@@ -30902,7 +30902,7 @@ SET ENODEB ALARM FILTER:MCC="460",MNC="01",ENODEBID=1000,NAME="name2";
 
 
 
-父主题： [eNodeB断链告警过滤配置](../../zh-CN/tree/N_12545922.html)
+父主题： [eNodeB断链告警过滤配置]
 
 
 
@@ -30925,7 +30925,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除eNodeB断链告警过滤配置(DEL ENODEB ALARM FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除不上报局向断链告警的eNodeB信息。删除成功后，该eNodeB和MME断链时，MME上报断链告警。 
@@ -30933,15 +30933,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。如中国为460。
 MNC|移动网号|参数可选性:必选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号用来唯一识别不同的移动网络，由ITU统一分配和管理。比如中国电信为03，中国移动为00和02。
@@ -30952,7 +30952,7 @@ ENODEBID|eNodeB局向号|参数可选性:必选参数；参数类型:整数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除eNodeB断链告警过滤配置，其中移动国家码为460，移动网号为01，eNodeB局向号为1000。 
@@ -30967,7 +30967,7 @@ DEL ENODEB ALARM FILTER:MCC="460",MNC="01",ENODEBID=1000;
 
 
 
-父主题： [eNodeB断链告警过滤配置](../../zh-CN/tree/N_12545922.html)
+父主题： [eNodeB断链告警过滤配置]
 
 
 
@@ -30990,7 +30990,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询eNodeB断链告警过滤配置(SHOW ENODEB ALARM FILTER) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME已配置的不需要上报局向断链告警的eNodeB信息。 
@@ -30998,15 +30998,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:3~3个字符。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。如中国为460。
 MNC|移动网号|参数可选性:任选参数；参数类型:字符型；参数范围为:2~3个字符。|移动网号用来唯一识别不同的移动网络，由ITU统一分配和管理。比如中国电信为03，中国移动为00和02。
@@ -31018,10 +31018,10 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MCC|移动国家码|参数可选性:任选参数；参数类型:字符型。|移动国家码用来唯一识别移动用户所属的国家，由ITU统一分配和管理。如中国为460。
 MNC|移动网号|参数可选性:任选参数；参数类型:字符型。|移动网号用来唯一识别不同的移动网络，由ITU统一分配和管理。比如中国电信为03，中国移动为00和02。
@@ -31033,7 +31033,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|eNode
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询eNodeB断链告警过滤配置。 
@@ -31062,7 +31062,7 @@ SHOW ENODEB ALARM FILTER:MCC="460";
 
 
 
-父主题： [eNodeB断链告警过滤配置](../../zh-CN/tree/N_12545922.html)
+父主题： [eNodeB断链告警过滤配置]
 
 
 
@@ -31085,7 +31085,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## EMS局向链路配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GTP协议并无链路、局向的概念，GTP的邻接网元是动态发现的，但为了满足EMS上将MME/SGSN与邻接的SGW/GGSN的节点图形化显示在网管界面上，同时也显示各个网元之间的连接关系，于是增加了GTP链路以及局向的概念。 
@@ -31096,7 +31096,7 @@ GTP协议并无链路、局向的概念，GTP的邻接网元是动态发现的�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 EMS局向链路配置功能包括配置GTP链路和局向，详细功能如下： 
@@ -31121,7 +31121,7 @@ GTP链路使用的是对端网元的IP地址，同一网元可能有多个IP地�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -31144,7 +31144,7 @@ GTP局向链路配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -31167,7 +31167,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### GTP链路配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GTP协议并无链路、局向的概念，GTP的邻接网元是动态发现的，但为了满足EMS上将MME/SGSN与邻接的SGW/GGSN的节点图形化显示出来，同时也显示网元间的连接关系，于是增加了GTP链路以及局向的概念。配置了网元间的GTP链路及局向后，EMS才能绘制网元间的Topo关系。到一个邻接网元是一个局向，一个局向可以包含多条链路。 
@@ -31175,7 +31175,7 @@ GTP协议并无链路、局向的概念，GTP的邻接网元是动态发现的�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 GTP链路、局向用于EMS的进行核心网链路图渲染，区别网元Topo关系。GTP链路是使用的是对端网元的IP地址，同一网元可能有多个地址，就需要配置多条GTP链路并关联到同一个局向下。 
@@ -31183,7 +31183,7 @@ GTP链路、局向用于EMS的进行核心网链路图渲染，区别网元Topo�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -31216,7 +31216,7 @@ GTP链路、局向用于EMS的进行核心网链路图渲染，区别网元Topo�
 
 
 
-父主题： [EMS局向链路配置](../../zh-CN/tree/N_12545923.html)
+父主题： [EMS局向链路配置]
 
 
 
@@ -31239,7 +31239,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增GTP链路(ADD GTPIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增GTP链路配置。主要是配置链路号和 GTP IP地址信息。 
@@ -31247,7 +31247,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -31255,10 +31255,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路号|参数可选性:必选参数；参数类型:整数；参数范围为:1~8192。|GTP链路的标识号。
 IP|IP地址|参数可选性:必选参数；参数类型:地址|对应的对端网元（GTP节点）的IP地址，IPV4或IPV6格式,地址，且不同链路的IP地址不能重复。
@@ -31269,7 +31269,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增GTP链路，增加链路号为1，对应IP地址为129.1.1.5的GTP链路。 
@@ -31284,7 +31284,7 @@ ADD GTPIP:LINKID=1,IP="129.1.1.5";
 
 
 
-父主题： [GTP链路配置](../../zh-CN/tree/N_12545924.html)
+父主题： [GTP链路配置]
 
 
 
@@ -31307,7 +31307,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改GTP链路(SET GTPIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改GTP链路配置。主要是修改对应链路号的 GTP IP地址信息。 
@@ -31315,7 +31315,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -31323,10 +31323,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路号|参数可选性:必选参数；参数类型:整数；参数范围为:1~8192。|GTP链路的标识号。
 IP|IP地址|参数可选性:任选参数；参数类型:地址|对应的对端网元（GTP节点）的IP地址，IPV4或IPV6格式,地址，且不同链路的IP地址不能重复。
@@ -31337,7 +31337,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改GTP链路，修改1号GTP链路的IP地址为129.1.1.6。  
@@ -31352,7 +31352,7 @@ SET GTPIP:LINKID=1,IP="129.1.1.6";
 
 
 
-父主题： [GTP链路配置](../../zh-CN/tree/N_12545924.html)
+父主题： [GTP链路配置]
 
 
 
@@ -31375,7 +31375,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除GTP链路(DEL GTPIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除GTP链路配置。主要是删除链路号和其对应的IP地址信息。 
@@ -31383,7 +31383,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -31391,10 +31391,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路号|参数可选性:必选参数；参数类型:整数；参数范围为:1~8192。|GTP链路的标识号。
 
@@ -31403,7 +31403,7 @@ LINKID|链路号|参数可选性:必选参数；参数类型:整数；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GTP链路，删除1号GTP链路配置。 
@@ -31418,7 +31418,7 @@ DEL GTPIP:LINKID=1;
 
 
 
-父主题： [GTP链路配置](../../zh-CN/tree/N_12545924.html)
+父主题： [GTP链路配置]
 
 
 
@@ -31441,7 +31441,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询GTP链路(SHOW GTPIP) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询GTP链路配置。主要是查询链路号和 GTP IP地址信息。 
@@ -31449,7 +31449,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -31457,10 +31457,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路号|参数可选性:任选参数；参数类型:整数；参数范围为:1~8192。|GTP链路的标识号。
 
@@ -31469,10 +31469,10 @@ LINKID|链路号|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 LINKID|链路号|参数可选性:任选参数；参数类型:整数。|GTP链路的标识号。
 IP|IP地址|参数可选性:任选参数；参数类型:地址|对应的对端网元（GTP节点）的IP地址，IPV4或IPV6格式,地址，且不同链路的IP地址不能重复。
@@ -31483,7 +31483,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|起�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已经配置GTP链路信息。 
@@ -31512,7 +31512,7 @@ SHOW GTPIP;
 
 
 
-父主题： [GTP链路配置](../../zh-CN/tree/N_12545924.html)
+父主题： [GTP链路配置]
 
 
 
@@ -31535,7 +31535,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### GTP局向链路配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GTP协议并无链路、局向的概念，GTP的邻接网元是动态发现的，但为了满足EMS上将MME/SGSN与邻接的SGW/GGSN的节点图形化显示出来，同时也显示网元间的连接关系，于是增加了GTP链路以及局向的概念。配置了网元间的GTP链路及局向后，EMS才能绘制网元间的Topo关系。到一个邻接网元是一个局向，一个局向可以包含多条链路。 
@@ -31543,7 +31543,7 @@ GTP协议并无链路、局向的概念，GTP的邻接网元是动态发现的�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 GTP链路、局向用于EMS的进行核心网链路图渲染，区别网元Topo关系。GTP链路是使用的是对端网元的IP地址，同一网元可能有多个地址，就需要配置多条GTP链路并关联到同一个局向下。 
@@ -31551,7 +31551,7 @@ GTP链路、局向用于EMS的进行核心网链路图渲染，区别网元Topo�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -31579,7 +31579,7 @@ GTP链路、局向用于EMS的进行核心网链路图渲染，区别网元Topo�
 
 
 
-父主题： [EMS局向链路配置](../../zh-CN/tree/N_12545923.html)
+父主题： [EMS局向链路配置]
 
 
 
@@ -31602,7 +31602,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增GTP局向链路(ADD GTP OFFICE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增GTP局向链路配置。主要是配置 GTP局和GTP链路之关的对应关系。 
@@ -31610,7 +31610,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 本命令配置的GTP链路ID必须已经在GTP链路配置命令中提前配置。 
@@ -31618,10 +31618,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFFICEIDID|局向号|参数可选性:必选参数；参数类型:整数；参数范围为:1~8192。|GTP局向编号，用来标识局向用。
 LINKID|链路号|参数可选性:必选参数；参数类型:整数；参数范围为:1~8192。|GTP局向下的链路号，链路号通过ADD GTPIP配置，通过关联链路号，找到该到链路号对应的IP地址。
@@ -31632,7 +31632,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增GTP局向链接醘配置，局向号为1，链路号为1。 
@@ -31647,7 +31647,7 @@ ADD GTP OFFICE:OFFICEIDID=1,LINKID=1;
 
 
 
-父主题： [GTP局向链路配置](../../zh-CN/tree/N_12545925.html)
+父主题： [GTP局向链路配置]
 
 
 
@@ -31670,7 +31670,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除GTP局向链路(DEL GTP OFFICE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除GTP局向链路配置。主要是删除 GTP局和GTP链路之关的对应关系。 
@@ -31678,7 +31678,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -31686,10 +31686,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFFICEIDID|局向号|参数可选性:必选参数；参数类型:整数；参数范围为:1~8192。|GTP局向编号，用来标识局向用。
 LINKID|链路号|参数可选性:任选参数；参数类型:整数；参数范围为:1~8192。|GTP局向下的链路号，链路号通过ADD GTPIP配置，通过关联链路号，找到该到链路号对应的IP地址。
@@ -31699,7 +31699,7 @@ LINKID|链路号|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GTP局向链接醘配置，删除局向号为1，链路号为1记录。 
@@ -31714,7 +31714,7 @@ DEL GTP OFFICE:OFFICEIDID=1,LINKID=1;
 
 
 
-父主题： [GTP局向链路配置](../../zh-CN/tree/N_12545925.html)
+父主题： [GTP局向链路配置]
 
 
 
@@ -31737,7 +31737,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询GTP局向链路(SHOW GTP OFFICE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询GTP局向链路配置。主要是查询 GTP局和GTP链路之关的对应关系。 
@@ -31745,7 +31745,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -31753,10 +31753,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFFICEIDID|局向号|参数可选性:任选参数；参数类型:整数；参数范围为:1~8192。|GTP局向编号，用来标识局向用。
 LINKID|链路号|参数可选性:任选参数；参数类型:整数；参数范围为:1~8192。|GTP局向下的链路号，链路号通过ADD GTPIP配置，通过关联链路号，找到该到链路号对应的IP地址。
@@ -31766,10 +31766,10 @@ LINKID|链路号|参数可选性:任选参数；参数类型:整数；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OFFICEIDID|局向号|参数可选性:任选参数；参数类型:整数。|GTP局向编号，用来标识局向用。
 LINKID|链路号|参数可选性:任选参数；参数类型:整数。|GTP局向下的链路号，链路号通过ADD GTPIP配置，通过关联链路号，找到该到链路号对应的IP地址。
@@ -31780,7 +31780,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|起�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询已经配置GTP局向配置信息 
@@ -31809,7 +31809,7 @@ SHOW GTP OFFICE;
 
 
 
-父主题： [GTP局向链路配置](../../zh-CN/tree/N_12545925.html)
+父主题： [GTP局向链路配置]
 
 
 
@@ -31832,7 +31832,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## GTP节点白名单配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -31870,7 +31870,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -31893,7 +31893,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置是否支持GTP节点白名单(SET GTP WHITE NODE SPRT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置MME/SGSN是否支持GTP节点白名单功能。 
@@ -31904,15 +31904,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPGTPNWL|是否支持GTP节点白名单|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME/SGSN是否支持GTP节点白名单功能。不支持（OFF）：MME/SGSN不支持GTP节点白名单。支持（ON）：MME/SGSNE支持GTP节点白名单。
 
@@ -31921,7 +31921,7 @@ SUPGTPNWL|是否支持GTP节点白名单|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 配置MME/SGSN是否支持GTP节点白名单功能。 
@@ -31936,7 +31936,7 @@ SET GTP WHITE NODE SPRT:SUPGTPNWL=ON;
 
 
 
-父主题： [GTP节点白名单配置](../../zh-CN/tree/N_126078_operation_cm_mml_umacV4_cm_combo_gngp_advance_39.html)
+父主题： [GTP节点白名单配置]
 
 
 
@@ -31959,7 +31959,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询是否支持GTP节点白名单(SHOW GTP WHITE NODE SPRT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME/SGSN是否支持GTP节点白名单功能。可以查询出此功能处于开启还是关闭状态。 
@@ -31967,15 +31967,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPGTPNWL|是否支持GTP节点白名单|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME/SGSN是否支持GTP节点白名单功能。不支持（OFF）：MME/SGSN不支持GTP节点白名单。支持（ON）：MME/SGSNE支持GTP节点白名单。
 
@@ -31984,7 +31984,7 @@ SUPGTPNWL|是否支持GTP节点白名单|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询是否支持GTP节点白名单。 
@@ -32013,7 +32013,7 @@ SHOW GTP WHITE NODE SPRT;
 
 
 
-父主题： [GTP节点白名单配置](../../zh-CN/tree/N_126078_operation_cm_mml_umacV4_cm_combo_gngp_advance_39.html)
+父主题： [GTP节点白名单配置]
 
 
 
@@ -32036,7 +32036,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增GTP节点白名单(ADD GTP WHITE NODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于将不支持响应Echo消息的GTP节点增加到白名单中。 
@@ -32047,15 +32047,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GTP白名单节点IP地址|参数可选性:必选参数；参数类型:地址|该参数用于设置GTP白名单节点的IP地址，该地址为本地解析或DNS解析获取到的GGSN、SGSN、SGW、MME或MSC地址，可以是IPv4或者IPv6地址。
 
@@ -32064,7 +32064,7 @@ IP|GTP白名单节点IP地址|参数可选性:必选参数；参数类型:地址
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将不支持响应Echo消息的GTP节点，IP地址为192.168.1.1增加到白名单中。 
@@ -32079,7 +32079,7 @@ ADD GTP WHITE NODE:IP=192.168.1.1;
 
 
 
-父主题： [GTP节点白名单配置](../../zh-CN/tree/N_126078_operation_cm_mml_umacV4_cm_combo_gngp_advance_39.html)
+父主题： [GTP节点白名单配置]
 
 
 
@@ -32102,7 +32102,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除GTP节点白名单(DEL GTP WHITE NODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于将不支持响应Echo消息的GTP节点从白名单中删除。 
@@ -32110,15 +32110,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GTP白名单节点IP地址|参数可选性:必选参数；参数类型:地址|该参数用于设置GTP白名单节点的IP地址，该地址为本地解析或DNS解析获取到的GGSN、SGSN、SGW、MME或MSC地址，可以是IPv4或者IPv6地址。
 
@@ -32127,7 +32127,7 @@ IP|GTP白名单节点IP地址|参数可选性:必选参数；参数类型:地址
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将不支持响应Echo消息的GTP节点，IP地址为192.168.1.1，从白名单中删除。 
@@ -32142,7 +32142,7 @@ DEL GTP WHITE NODE:IP=192.168.1.1;
 
 
 
-父主题： [GTP节点白名单配置](../../zh-CN/tree/N_126078_operation_cm_mml_umacV4_cm_combo_gngp_advance_39.html)
+父主题： [GTP节点白名单配置]
 
 
 
@@ -32165,7 +32165,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP节点白名单(SHOW GTP WHITE NODE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询当前白名单中配置的所有GTP节点。 
@@ -32173,15 +32173,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GTP白名单节点IP地址|参数可选性:任选参数；参数类型:地址|该参数用于设置GTP白名单节点的IP地址，该地址为本地解析或DNS解析获取到的GGSN、SGSN、SGW、MME或MSC地址，可以是IPv4或者IPv6地址。
 
@@ -32190,10 +32190,10 @@ IP|GTP白名单节点IP地址|参数可选性:任选参数；参数类型:地址
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IP|GTP白名单节点IP地址|参数可选性:任选参数；参数类型:地址|该参数用于设置GTP白名单节点的IP地址，该地址为本地解析或DNS解析获取到的GGSN、SGSN、SGW、MME或MSC地址，可以是IPv4或者IPv6地址。
 
@@ -32202,7 +32202,7 @@ IP|GTP白名单节点IP地址|参数可选性:任选参数；参数类型:地址
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP节点白名单配置。 
@@ -32231,7 +32231,7 @@ SHOW GTP WHITE NODE;
 
 
 
-父主题： [GTP节点白名单配置](../../zh-CN/tree/N_126078_operation_cm_mml_umacV4_cm_combo_gngp_advance_39.html)
+父主题： [GTP节点白名单配置]
 
 
 
@@ -32254,7 +32254,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## MME信令风暴抑制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 信令风暴是由于网络收到的终端信令请求超过了网络各项信令资源的处理能力，引发网络拥塞甚至雪崩效应，导致网络不可用。 
@@ -32265,7 +32265,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME信令风暴抑制是用户级的且针对三种终端信令，包括附着请求信令、业务请求信令和PDN连接请求信令。 
@@ -32298,7 +32298,7 @@ MME在PDN连接请求信令单位统计周期内统计PDN连接请求信令数�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -32336,7 +32336,7 @@ MME在PDN连接请求信令单位统计周期内统计PDN连接请求信令数�
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -32359,7 +32359,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置MME是否支持信令风暴抑制配置(SET SIGSRESTRAIN FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 设置MME是否支持信令风暴抑制配置。 
@@ -32367,7 +32367,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 未打开MME信令风暴抑制本开关，“MME信令风暴抑制配置信息”不会生效。 
@@ -32375,10 +32375,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLAG|MME支持信令风暴抑制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于打开或者关闭MME支持信令风暴抑制开关。
 
@@ -32387,7 +32387,7 @@ FLAG|MME支持信令风暴抑制|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 打开MME信令风暴抑制配置开关。 
@@ -32402,7 +32402,7 @@ SET SIGSRESTRAIN FLAG:FLAG="YES"
 
 
 
-父主题： [MME信令风暴抑制配置](../../zh-CN/tree/N_126450034.html)
+父主题： [MME信令风暴抑制配置]
 
 
 
@@ -32425,7 +32425,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询MME是否支持信令风暴抑制配置(SHOW SIGSRESTRAIN FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询MME是否支持信令风暴抑制配置。 
@@ -32433,7 +32433,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -32441,10 +32441,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLAG|MME支持信令风暴抑制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于打开或者关闭MME支持信令风暴抑制开关。
 
@@ -32453,7 +32453,7 @@ FLAG|MME支持信令风暴抑制|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME信令风暴配置开关状态。 
@@ -32482,7 +32482,7 @@ SHOW SIGSRESTRAIN FLAG;
 
 
 
-父主题： [MME信令风暴抑制配置](../../zh-CN/tree/N_126450034.html)
+父主题： [MME信令风暴抑制配置]
 
 
 
@@ -32505,7 +32505,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置MME信令风暴抑制配置(SET SIGSRESTRAIN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置MME信令风暴抑制功能。当智能终端网络信令短时频繁成功或终端网络信令连续失败，造成MME收到的终端信令请求超过了网络各项信令资源的处理能力，引发网络拥塞甚至雪崩效应，MME需要进行信令风暴抑制管理时，使用该命令。MME信令风暴抑制配置成功后，MME可以根据MME信令风暴抑制各配置值，采取一定的措施，减少网络侧要处理的信令，化解信令风暴，避免网络拥塞，确保网络设备安全运行，有力保障不在信令黑名单中的用户使用数据业务和其他业务的成功率。 
@@ -32513,7 +32513,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 MME信令风暴抑制受License开关“MME支持信令风暴抑制”控制，启用此功能，需要打开此License开关。 
@@ -32521,10 +32521,10 @@ MME信令风暴抑制受License开关“MME支持信令风暴抑制”控制，�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ATTSTATISPERD|附着请求信令统计周期(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于设置MME统计附着请求信令的统计周期。
 ATTMAXSIGNUM|附着请求最大信令数|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于设置MME附着请求信令的统计周期内允许的附着请求最大信令数。
@@ -32545,7 +32545,7 @@ FAKEAPN|FAKE APN名称|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME信令风暴抑制配置。设置附着请求信令统计周期为100秒，附着请求最大信令数为2000，附着拒绝原因值为7，附着请求黑名单定时器时长3600秒；业务请求信令统计周期为200秒，业务请求最大信令数为1000，业务拒绝原因值为7，业务请求黑名单定时器时长3600秒；PDN连接请求信令统计周期为300秒，PDN连接请求最大信令数为100，PDN连接拒绝原因值为7，PDN连接请求黑名单定时器时长3600秒，FAKE APN名称为fake。 
@@ -32560,7 +32560,7 @@ SET SIGSRESTRAIN:ATTSTATISPERD=100,ATTMAXSIGNUM=2000,ATTREJCAUSE=7,ATTBLACKLISTD
 
 
 
-父主题： [MME信令风暴抑制配置](../../zh-CN/tree/N_126450034.html)
+父主题： [MME信令风暴抑制配置]
 
 
 
@@ -32583,12 +32583,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除MME信令风暴抑制Fake APN(DEL SIGSRESTRAIN FAKE APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除MME信令风暴抑制配置中已配置的Fake APN。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -32596,7 +32596,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除MME信令风暴抑制配置中已配置的Fake APN。 
@@ -32611,7 +32611,7 @@ DEL SIGSRESTRAIN FAKE APN;
 
 
 
-父主题： [MME信令风暴抑制配置](../../zh-CN/tree/N_126450034.html)
+父主题： [MME信令风暴抑制配置]
 
 
 
@@ -32634,7 +32634,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询MME信令风暴抑制配置(SHOW SIGSRESTRAIN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME信令风暴抑制配置信息，包括附着请求、业务请求和PDN连接请求三种信令的信令统计周期、最大信令数、拒绝原因值、黑名单定时器时长以及FAKE APN名称。 
@@ -32642,7 +32642,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -32650,10 +32650,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ATTSTATISPERD|附着请求信令统计周期(秒)|参数可选性:任选参数；参数类型:整数。|该参数用于设置MME统计附着请求信令的统计周期。
 ATTMAXSIGNUM|附着请求最大信令数|参数可选性:任选参数；参数类型:整数。|该参数用于设置MME附着请求信令的统计周期内允许的附着请求最大信令数。
@@ -32674,7 +32674,7 @@ FAKEAPN|FAKE APN名称|参数可选性:任选参数；参数类型:字符型。|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME信令风暴配置。 
@@ -32703,7 +32703,7 @@ SHOW SIGSRESTRAIN;
 
 
 
-父主题： [MME信令风暴抑制配置](../../zh-CN/tree/N_126450034.html)
+父主题： [MME信令风暴抑制配置]
 
 
 
@@ -32726,7 +32726,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## SGSN信令风暴抑制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 信令风暴是由于网络收到的终端信令请求超过了网络各项信令资源的处理能力，引发网络拥塞甚至雪崩效应，导致网络不可用。 
@@ -32737,7 +32737,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 SGSN信令风暴抑制是用户级的且针对三种终端信令，包括附着请求信令、业务请求信令和PDP激活请求信令。 
@@ -32770,7 +32770,7 @@ SGSN在PDP激活请求信令单位统计周期内统计PDP激活请求信令数�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -32808,7 +32808,7 @@ SGSN在PDP激活请求信令单位统计周期内统计PDP激活请求信令数�
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -32831,20 +32831,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置SGSN是否支持信令风暴抑制配置(SET SGSN SIGSRESTRAIN FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置SGSN信令风暴抑制开关。当智能终端网络信令短时频繁成功或终端网络信令连续失败，造成SGSN收到的终端信令请求超过了网络各项信令资源的处理能力，引发网络拥塞甚至雪崩效应，SGSN需要进行信令风暴抑制管理时，使用该命令。启用本功能后，SGSN信令风暴抑制配置成功后，SGSN可以根据SGSN信令风暴抑制各配置值，采取一定的措施，减少网络侧要处理的信令，化解信令风暴，避免网络拥塞，确保网络设备安全运行。
 
 
-[](None)注意事项 
+注意事项 
 
 未打开SGSN信令风暴抑制本开关，“SGSN信令风暴抑制配置信息”不会生效。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLAG|SGSN支持信令风暴抑制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN是否支持信令风暴抑制。
 
@@ -32853,7 +32853,7 @@ FLAG|SGSN支持信令风暴抑制|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 打开SGSN信令风暴抑制配置开关。 
@@ -32868,7 +32868,7 @@ SET SGSN SIGSRESTRAIN FLAG:FLAG="ON";
 
 
 
-父主题： [SGSN信令风暴抑制配置](../../zh-CN/tree/N_12608665.html)
+父主题： [SGSN信令风暴抑制配置]
 
 
 
@@ -32891,20 +32891,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询SGSN是否支持信令风暴抑制配置(SHOW SGSN SIGSRESTRAIN FLAG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SGSN信令风暴抑制配置开关状态。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLAG|SGSN支持信令风暴抑制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN是否支持信令风暴抑制。
 
@@ -32913,7 +32913,7 @@ FLAG|SGSN支持信令风暴抑制|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN信令风暴配置开关状态。 
@@ -32942,7 +32942,7 @@ SHOW SGSN SIGSRESTRAIN FLAG;
 
 
 
-父主题： [SGSN信令风暴抑制配置](../../zh-CN/tree/N_12608665.html)
+父主题： [SGSN信令风暴抑制配置]
 
 
 
@@ -32965,20 +32965,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置SGSN信令风暴抑制配置(SET SGSN SIGSRESTRAIN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置SGSN信令风暴抑制功能。当智能终端网络信令短时频繁成功或终端网络信令连续失败，造成SGSN收到的终端信令请求超过了网络各项信令资源的处理能力，引发网络拥塞甚至雪崩效应，SGSN需要进行信令风暴抑制管理时，使用该命令。SGSN信令风暴抑制配置成功后，SGSN可以根据SGSN信令风暴抑制各配置值，采取一定的措施，减少网络侧要处理的信令，化解信令风暴，避免网络拥塞，确保网络设备安全运行，有力保障不在信令黑名单中的用户使用数据业务和其他业务的成功率。
 
 
-[](None)注意事项 
+注意事项 
 
 SGSN信令风暴抑制受License开关“SGSN支持信令风暴抑制”控制，启用此功能，需要打开此License开关。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ATTSTATISPERD|附着请求信令统计周期(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于设置SGSN统计附着请求信令的统计周期。
 ATTMAXSIGNUM|附着请求最大信令数|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|该参数用于设置SGSN附着请求信令的统计周期内允许的附着请求最大信令数。
@@ -32999,7 +32999,7 @@ FAKEAPN|FAKE APN名称|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGSN信令风暴抑制配置的FAKE APN名称为zte。 
@@ -33014,7 +33014,7 @@ SET SGSN SIGSRESTRAIN:FAKEAPN="zte";
 
 
 
-父主题： [SGSN信令风暴抑制配置](../../zh-CN/tree/N_12608665.html)
+父主题： [SGSN信令风暴抑制配置]
 
 
 
@@ -33037,17 +33037,17 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除SGSN信令风暴抑制Fake APN(DEL SGSN SIGSRESTRAIN FAKE APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除SGSN信令风暴抑制配置中已配置的Fake APN。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除SGSN信令风暴抑制配置中已配置的Fake APN。 
@@ -33062,7 +33062,7 @@ DEL SGSN SIGSRESTRAIN FAKE APN;
 
 
 
-父主题： [SGSN信令风暴抑制配置](../../zh-CN/tree/N_12608665.html)
+父主题： [SGSN信令风暴抑制配置]
 
 
 
@@ -33085,20 +33085,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询SGSN信令风暴抑制配置(SHOW SGSN SIGSRESTRAIN) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询SGSN信令风暴抑制配置信息，包括附着请求、业务请求和PDP激活请求三种信令的信令统计周期、最大信令数、拒绝原因值、黑名单定时器时长以及FAKE APN名称。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ATTSTATISPERD|附着请求信令统计周期(秒)|参数可选性:任选参数；参数类型:整数。|该参数用于设置SGSN统计附着请求信令的统计周期。
 ATTMAXSIGNUM|附着请求最大信令数|参数可选性:任选参数；参数类型:整数。|该参数用于设置SGSN附着请求信令的统计周期内允许的附着请求最大信令数。
@@ -33119,7 +33119,7 @@ FAKEAPN|FAKE APN名称|参数可选性:任选参数；参数类型:字符型。|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN信令风暴抑制配置。 
@@ -33148,7 +33148,7 @@ SHOW SGSN SIGSRESTRAIN;
 
 
 
-父主题： [SGSN信令风暴抑制配置](../../zh-CN/tree/N_12608665.html)
+父主题： [SGSN信令风暴抑制配置]
 
 
 
@@ -33171,7 +33171,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 默认承载重建配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用拜访地的PGW接入拜访地的PDN网络情况下，当用户从不同区域移动时，由于PGW是业务的锚定点，用户的承载连接通道仍然采用之前接入区域的PGW，而SGW却是本地的，造成了承载资源的浪费。如果用户的业务是IMS业务，会造成语音的时延增加。 
@@ -33182,7 +33182,7 @@ EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “默认承载重建配置”用于设置MME是否支持重建默认承载以及重建默认承载的策略。配置后，用户在跨区域移动时，会发生SGW改变的TAU或Handover，MME检测在以下条件满足时，重建默认承载。 
@@ -33221,7 +33221,7 @@ EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -33244,7 +33244,7 @@ EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -33267,7 +33267,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 默认承载重建策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用拜访地的PGW接入拜访地的PDN网络情况下，当用户从不同区域移动时，由于PGW是业务的锚定点，用户的承载连接通道仍然采用之前接入区域的PGW，而SGW却是本地的，造成了承载资源的浪费。如果用户的业务是IMS业务，会造成语音的时延增加。 
@@ -33278,7 +33278,7 @@ EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “默认承载重建策略配置”用于设置MME是否支持重建默认承载、MME检测用户的SGW和PGW是否合设的依据、功能生效时存量用户是否重建默认承载。具体包括以下设置： 
@@ -33305,7 +33305,7 @@ MME是否支持默认承载重建功能。如果设置为支持，MME才会启�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -33328,7 +33328,7 @@ MME是否支持默认承载重建功能。如果设置为支持，MME才会启�
 
 
 
-父主题： [默认承载重建配置](../../zh-CN/tree/N_125459230.html)
+父主题： [默认承载重建配置]
 
 
 
@@ -33351,7 +33351,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置默认承载重建策略配置(SET DEFAULT BEARER REBUILD) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置用户发生SGW改变后，MME为用户重建默认承载的策略。 
@@ -33359,15 +33359,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RESETBEAR|支持默认承载重建|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指定MME是否支持默认承载重建功能。配置为支持后，当用户发生SGW改变流程后，MME根据配置的策略判断是否需要对该用户重建默认承载。
 SAMELABELNUM|SGW和PGW合一时FQDN相同的Label数|参数可选性:任选参数；参数类型:整数；参数范围为:1~20。|该参数用于MME判断用户连接的SGW和PGW是否合一。用户发生SGW改变的TAU或者Handover流程后，如果SGW和PGW是合一的，则MME不需要对该用户重建默认承载。MME根据SGW和PGW的FQDN判断SGW和PGW是否合一。FQDN由一个或多个Label组成，每个Label由长度和一串字符串组成，字符串是字母和数字的组合。如果SGW和PGW的FQDN从后往前，相同的Label个数大于等于“SGW和PGW合一时FQDN相同的Label数”，则MME认为SGW和PGW是合一的，否则认为SGW和PGW不是合一的。
@@ -33378,7 +33378,7 @@ IFRESETREGUSER|功能生效时存量用户重建默认承载|参数可选性:任
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置默认承载重建策略配置，其中支持默认承载重建为“是”，SGW和PGW合一时FQDN相同的Label数为10，功能生效时存量用户重建默认承载为“是”。 
@@ -33393,7 +33393,7 @@ SET DEFAULT BEARER REBUILD:RESETBEAR="YES",SAMELABELNUM=10,IFRESETREGUSER="YES";
 
 
 
-父主题： [默认承载重建策略配置](../../zh-CN/tree/N_125459240.html)
+父主题： [默认承载重建策略配置]
 
 
 
@@ -33416,7 +33416,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询默认承载重建策略配置(SHOW DEFAULT BEARER REBUILD) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询SGW改变时，MME为用户重建默认承载策略。 
@@ -33424,15 +33424,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RESETBEAR|支持默认承载重建|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指定MME是否支持默认承载重建功能。配置为支持后，当用户发生SGW改变流程后，MME根据配置的策略判断是否需要对该用户重建默认承载。
 SAMELABELNUM|SGW和PGW合一时FQDN相同的Label数|参数可选性:任选参数；参数类型:整数。|该参数用于MME判断用户连接的SGW和PGW是否合一。用户发生SGW改变的TAU或者Handover流程后，如果SGW和PGW是合一的，则MME不需要对该用户重建默认承载。MME根据SGW和PGW的FQDN判断SGW和PGW是否合一。FQDN由一个或多个Label组成，每个Label由长度和一串字符串组成，字符串是字母和数字的组合。如果SGW和PGW的FQDN从后往前，相同的Label个数大于等于“SGW和PGW合一时FQDN相同的Label数”，则MME认为SGW和PGW是合一的，否则认为SGW和PGW不是合一的。
@@ -33443,7 +33443,7 @@ IFRESETREGUSER|功能生效时存量用户重建默认承载|参数可选性:任
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询默认承载重建策略配置。 
@@ -33473,7 +33473,7 @@ SHOW DEFAULT BEARER REBUILD;
 
 
 
-父主题： [默认承载重建策略配置](../../zh-CN/tree/N_125459240.html)
+父主题： [默认承载重建策略配置]
 
 
 
@@ -33496,7 +33496,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 需重建默认承载的APN配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用拜访地的PGW接入拜访地的PDN网络情况下，当用户从不同区域移动时，由于PGW是业务的锚定点，用户的承载连接通道仍然采用之前接入区域的PGW，而SGW却是本地的，造成了承载资源的浪费。如果用户的业务是IMS业务，会造成语音的时延增加。 
@@ -33507,7 +33507,7 @@ EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “需重建默认承载的APN配置”用于在MME上指定APN，以及指定该APN的默认承载重建生效时间以及用户进入空闲态时长等条件。具体包括以下设置： 
@@ -33537,7 +33537,7 @@ EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -33570,7 +33570,7 @@ EPC网络，如果对于省间漫游用户采用Local Breakout方式，即采用
 
 
 
-父主题： [默认承载重建配置](../../zh-CN/tree/N_125459230.html)
+父主题： [默认承载重建配置]
 
 
 
@@ -33593,7 +33593,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增需重建默认承载的APN配置(ADD REBUILD BEARER APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于配置需重建默认承载的APN，以及该APN默认承载重建策略。配置后，针对使用该APN的用户，在发生SGW改变的流程后，MME判断是否需要对该用户重建默认承载。 
@@ -33601,18 +33601,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-此处配置的APN不能和“紧急数据配置”中的APN重复，“紧急数据配置”中的APN可以通过命令[SHOW EMERGDATA](1262200.html)查询。
+此处配置的APN不能和“紧急数据配置”中的APN重复，“紧急数据配置”中的APN可以通过命令[SHOW EMERGDATA]查询。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数用于配置在MME支持SGW改变时的默认承载重建功能时，需要重建默认承载的APN名称。用户使用的APN必须在此处配置后，MME才会对该用户进行默认承载重建。
 IFREBUILDBASEDCC|是否根据CC判断默认承载重建|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否根据CC（计费特性）判断默认承载重建。是：该APN是否重建默认承载需要基于用户签约CC值判断，对于特定CC值，重建默认承载；非特定CC值，不重建默认承载。否：该APN是否重建默认承载不需要基于用户签约CC值判断。
@@ -33626,7 +33626,7 @@ IMMIREBUILD|默认承载立即重建|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增需重建默认承载的APN配置，其中APN名称为test.com。 
@@ -33641,7 +33641,7 @@ ADD REBUILD BEARER APN:APNNAME="test.com"
 
 
 
-父主题： [需重建默认承载的APN配置](../../zh-CN/tree/N_125459250.html)
+父主题： [需重建默认承载的APN配置]
 
 
 
@@ -33664,7 +33664,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改需重建默认承载的APN配置(SET REBUILD BEARER APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改需重建默认承载的APN的重建策略。 
@@ -33672,15 +33672,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数用于配置在MME支持SGW改变时的默认承载重建功能时，需要重建默认承载的APN名称。用户使用的APN必须在此处配置后，MME才会对该用户进行默认承载重建。
 IFREBUILDBASEDCC|是否根据CC判断默认承载重建|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否根据CC（计费特性）判断默认承载重建。是：该APN是否重建默认承载需要基于用户签约CC值判断，对于特定CC值，重建默认承载；非特定CC值，不重建默认承载。否：该APN是否重建默认承载不需要基于用户签约CC值判断。
@@ -33694,7 +33694,7 @@ IMMIREBUILD|默认承载立即重建|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改需重建默认承载的APN配置，APN名称为test.com，是否根据CC判断默认承载重建选择是。 
@@ -33709,7 +33709,7 @@ SET REBUILD BEARER APN:APNNAME="test.com",IFREBUILDBASEDCC="YES"
 
 
 
-父主题： [需重建默认承载的APN配置](../../zh-CN/tree/N_125459250.html)
+父主题： [需重建默认承载的APN配置]
 
 
 
@@ -33732,7 +33732,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除需重建默认承载的APN配置(DEL REBUILD BEARER APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除需重建默认承载的APN。APN删除后，对使用该APN的用户，MME不会进行默认承载重建。 
@@ -33740,15 +33740,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~61个字符。|该参数用于配置在MME支持SGW改变时的默认承载重建功能时，需要重建默认承载的APN名称。用户使用的APN必须在此处配置后，MME才会对该用户进行默认承载重建。
 
@@ -33757,7 +33757,7 @@ APNNAME|APN名称|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除需重建默认承载的APN配置，其中APN名称为test.com。 
@@ -33772,7 +33772,7 @@ DEL REBUILD BEARER APN:APNNAME="test.com"
 
 
 
-父主题： [需重建默认承载的APN配置](../../zh-CN/tree/N_125459250.html)
+父主题： [需重建默认承载的APN配置]
 
 
 
@@ -33795,7 +33795,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询需重建默认承载的APN配置(SHOW REBUILD BEARER APN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME网元已经配置的的需要重建默认承载的APN，以及该APN默认承载重建策略。 
@@ -33803,15 +33803,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~61个字符。|该参数用于配置在MME支持SGW改变时的默认承载重建功能时，需要重建默认承载的APN名称。用户使用的APN必须在此处配置后，MME才会对该用户进行默认承载重建。
 
@@ -33820,10 +33820,10 @@ APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APNNAME|APN名称|参数可选性:任选参数；参数类型:字符型。|该参数用于配置在MME支持SGW改变时的默认承载重建功能时，需要重建默认承载的APN名称。用户使用的APN必须在此处配置后，MME才会对该用户进行默认承载重建。
 IFREBUILDBASEDCC|是否根据CC判断默认承载重建|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置是否根据CC（计费特性）判断默认承载重建。是：该APN是否重建默认承载需要基于用户签约CC值判断，对于特定CC值，重建默认承载；非特定CC值，不重建默认承载。否：该APN是否重建默认承载不需要基于用户签约CC值判断。
@@ -33837,7 +33837,7 @@ IMMIREBUILD|默认承载立即重建|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询需重建默认承载的APN配置。 
@@ -33867,7 +33867,7 @@ SHOW REBUILD BEARER APN
 
 
 
-父主题： [需重建默认承载的APN配置](../../zh-CN/tree/N_125459250.html)
+父主题： [需重建默认承载的APN配置]
 
 
 
@@ -33890,7 +33890,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 容灾恢复配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 容灾恢复是当MME、SGW、PGW或者P-CSCF、MSC/VLR发生故障后，MME通过指示UE重新附着、重建PDN连接或IMSI重新附着的方式，实现相关的业务恢复。这对于需要保持UE实时在线的VoLTE以及CSFB业务来说，尤为重要。 
@@ -33986,14 +33986,14 @@ MSC/VLR容灾恢复，MME支持以下功能：
 
 
 
-[](None)功能描述 
+功能描述 
 
             
             “容灾恢复配置”用来配置容灾恢复的全局参数，包括容灾恢复的功能开关、恢复速率、备份节点、备份速率、恢复方式等。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -34026,7 +34026,7 @@ MME支持用户全量数据备份容灾恢复策略配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -34049,7 +34049,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置容灾恢复配置(SET SERVRSTOCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置容灾恢复的功能开关、恢复速率、备份节点、备份速率等基本参数。 
@@ -34057,15 +34057,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWRSTOFLAG|支持SGW容灾恢复|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME是否支持当SGW故障或重启后对受影响用户进行业务恢复。
 PGWRSTOFLAG|支持PGW容灾恢复|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME是否支持当PGW故障或重启后对受影响用户进行业务恢复。
@@ -34088,7 +34088,7 @@ VLRDETCTIME|VLR局向故障恢复检测时长(分钟)|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置容灾恢复配置，设置MME支持MME容灾恢复，容灾恢复扫描速率为每模块每扫描周期40个用户，容灾业务恢复速率为每模块每扫描周期5个用户，备份MME的IP地址为“10.10.10.10”，数据备份消息发送频率为1000毫秒，数据备份消息包大小为4KB。 
@@ -34103,7 +34103,7 @@ SET SERVRSTOCFG:MMERSTOFLAG="YES",RSTOSCANRATE=40,RSTORATE=5,BAKMMEIP="10.10.10.
 
 
 
-父主题： [容灾恢复配置](../../zh-CN/tree/N_125459251.html)
+父主题： [容灾恢复配置]
 
 
 
@@ -34126,7 +34126,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询容灾恢复配置(SHOW SERVRSTOCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询容灾恢复的功能开关、恢复速率、备份节点、备份速率等基本参数。 
@@ -34134,15 +34134,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGWRSTOFLAG|支持SGW容灾恢复|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME是否支持当SGW故障或重启后对受影响用户进行业务恢复。
 PGWRSTOFLAG|支持PGW容灾恢复|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于配置MME是否支持当PGW故障或重启后对受影响用户进行业务恢复。
@@ -34165,7 +34165,7 @@ VLRDETCTIME|VLR局向故障恢复检测时长(分钟)|参数可选性:任选参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询容灾恢复配置。 
@@ -34191,7 +34191,7 @@ SHOW SERVRSTOCFG;
 
 
 
-父主题： [容灾恢复配置](../../zh-CN/tree/N_125459251.html)
+父主题： [容灾恢复配置]
 
 
 
@@ -34214,14 +34214,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### POOL内其他MME及其备份MME配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             MME故障容灾时，需要在POOL内的MME之间，进行用户动态信息的备份。通常情况下，采用链式备份的方式，即例如MME1备份MME2，MME2备份MME3，MME3备份MME1。在进行数据备份或查询时，就需要知道MME间的备份关系。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 本配置用来配置POOL内的所有其他MME节点及其对应的备份节点，以便在容灾恢复时可以： 
@@ -34243,7 +34243,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -34276,7 +34276,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [容灾恢复配置](../../zh-CN/tree/N_125459251.html)
+父主题： [容灾恢复配置]
 
 
 
@@ -34299,20 +34299,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增POOL内其他MME及其备份MME(ADD POOLBAKMMECFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增本MME所在POOL内的其他MME的GTPC地址，以及其他MME对应的备份MME的GTPC地址。
 
 
-[](None)注意事项 
+注意事项 
 
 执行该命令时，需要保证MME故障容灾的License功能开关打开，对应的License项为“MME支持MME容灾故障恢复功能 ”。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEIP|MME的GTPC地址|参数可选性:必选参数；参数类型:地址|该参数用于配置本MME所在的POOL内的其他MME的GTPC地址。
 BAKMMEIP|备份MME的GTPC地址|参数可选性:必选参数；参数类型:地址|该参数用于配置该MME（即为参数“MME的GTPC地址”所对应的MME）在POOL内的对应的备份MME的GTPC地址。
@@ -34323,7 +34323,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增本MME所在POOL内的其他MME的GTPC地址为1.1.1.1，该其他MME对应的备份MME的GTPC地址为2.2.2.2。 
@@ -34338,7 +34338,7 @@ ADD POOLBAKMMECFG:MMEIP="1.1.1.1",BAKMMEIP="2.2.2.2";
 
 
 
-父主题： [POOL内其他MME及其备份MME配置](../../zh-CN/tree/N_125359259.html)
+父主题： [POOL内其他MME及其备份MME配置]
 
 
 
@@ -34361,12 +34361,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改POOL内其他MME及其备份MME(SET POOLBAKMMECFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改本MME所在POOL内的其他MME的GTPC地址，以及其他MME对应的备份MME的GTPC地址。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -34374,10 +34374,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEIP|MME的GTPC地址|参数可选性:必选参数；参数类型:地址|该参数用于配置本MME所在的POOL内的其他MME的GTPC地址。
 BAKMMEIP|备份MME的GTPC地址|参数可选性:任选参数；参数类型:地址|该参数用于配置该MME（即为参数“MME的GTPC地址”所对应的MME）在POOL内的对应的备份MME的GTPC地址。
@@ -34388,7 +34388,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 本MME所在POOL内的其他MME的GTPC地址为1.1.1.1，将该其他MME对应的备份MME的GTPC地址改为3.3.3.3。 
@@ -34403,7 +34403,7 @@ SET POOLBAKMMECFG:MMEIP="1.1.1.1",BAKMMEIP="3.3.3.3";
 
 
 
-父主题： [POOL内其他MME及其备份MME配置](../../zh-CN/tree/N_125359259.html)
+父主题： [POOL内其他MME及其备份MME配置]
 
 
 
@@ -34426,12 +34426,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除POOL内其他MME及其备份MME(DEL POOLBAKMMECFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除本MME所在POOL内的其他MME的GTPC地址，以及其他MME对应的备份MME的GTPC地址。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -34439,10 +34439,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEIP|MME的GTPC地址|参数可选性:必选参数；参数类型:地址|该参数用于配置本MME所在的POOL内的其他MME的GTPC地址。
 
@@ -34451,7 +34451,7 @@ MMEIP|MME的GTPC地址|参数可选性:必选参数；参数类型:地址|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除本MME所在POOL内的其他MME信息，该其他MME的GTPC地址为1.1.1.1。 
@@ -34466,7 +34466,7 @@ DEL POOLBAKMMECFG:MMEIP="1.1.1.1";
 
 
 
-父主题： [POOL内其他MME及其备份MME配置](../../zh-CN/tree/N_125359259.html)
+父主题： [POOL内其他MME及其备份MME配置]
 
 
 
@@ -34489,12 +34489,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询POOL内其他MME及其备份MME(SHOW POOLBAKMMECFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询本MME所在POOL内的其他MME的GTPC地址，以及其他MME对应的备份MME的GTPC地址。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -34502,10 +34502,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEIP|MME的GTPC地址|参数可选性:任选参数；参数类型:地址|该参数用于配置本MME所在的POOL内的其他MME的GTPC地址。
 
@@ -34514,10 +34514,10 @@ MMEIP|MME的GTPC地址|参数可选性:任选参数；参数类型:地址|该参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEIP|MME的GTPC地址|参数可选性:任选参数；参数类型:地址|该参数用于配置本MME所在的POOL内的其他MME的GTPC地址。
 BAKMMEIP|备份MME的GTPC地址|参数可选性:任选参数；参数类型:地址|该参数用于配置该MME（即为参数“MME的GTPC地址”所对应的MME）在POOL内的对应的备份MME的GTPC地址。
@@ -34528,7 +34528,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询本MME所在POOL内的其他MME及其备份MME的GTPC地址。 
@@ -34556,7 +34556,7 @@ SHOW POOLBAKMMECFG;
 
 
 
-父主题： [POOL内其他MME及其备份MME配置](../../zh-CN/tree/N_125359259.html)
+父主题： [POOL内其他MME及其备份MME配置]
 
 
 
@@ -34579,7 +34579,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME支持用户全量数据备份容灾恢复策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME支持用户全量数据备份容灾时，MME会把用户的全量数据备份到另一个MME。当MME故障后，其他MME可以从故障MME的备份MME恢复用户全量数据。其他MME从备份MME恢复用户全量数据后，可以让用户不必重新附着、PDN连接建立等，即可使用户继续使用各种业务。 
@@ -34587,7 +34587,7 @@ MME支持用户全量数据备份容灾时，MME会把用户的全量数据备�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置设置MME支持用户全量数据备份容灾时的各种策略，包括功能开关等。 
@@ -34595,7 +34595,7 @@ MME支持用户全量数据备份容灾时，MME会把用户的全量数据备�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -34618,7 +34618,7 @@ MME支持用户全量数据备份容灾时，MME会把用户的全量数据备�
 
 
 
-父主题： [容灾恢复配置](../../zh-CN/tree/N_125459251.html)
+父主题： [容灾恢复配置]
 
 
 
@@ -34641,20 +34641,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置MME支持用户全量数据备份容灾恢复策略配置(SET CMPBACKUPRESTOPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改MME支持用户全量数据备份容灾恢复策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IFSPRTCMPBACKUP|MME支持用户全量数据备份容灾|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识MME是否支持用户全量数据备份容灾功能。该参数设置为开启，则MME会把用户的全量数据备份到另一个MME。当MME故障后，其他MME可以从备份MME恢复用户全量数据，用户不必重新附着即可继续业务。
 
@@ -34663,7 +34663,7 @@ IFSPRTCMPBACKUP|MME支持用户全量数据备份容灾|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME支持用户全量数据备份容灾恢复策略配置，MME支持用户全量数据备份容灾为否。 
@@ -34678,7 +34678,7 @@ SET CMPBACKUPRESTOPLY:IFSPRTCMPBACKUP="NO"
 
 
 
-父主题： [MME支持用户全量数据备份容灾恢复策略配置](../../zh-CN/tree/N_125359261.html)
+父主题： [MME支持用户全量数据备份容灾恢复策略配置]
 
 
 
@@ -34701,20 +34701,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询MME支持用户全量数据备份容灾恢复策略配置(SHOW CMPBACKUPRESTOPLY) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询MME支持用户全量数据备份容灾恢复策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IFSPRTCMPBACKUP|MME支持用户全量数据备份容灾|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数标识MME是否支持用户全量数据备份容灾功能。该参数设置为开启，则MME会把用户的全量数据备份到另一个MME。当MME故障后，其他MME可以从备份MME恢复用户全量数据，用户不必重新附着即可继续业务。
 
@@ -34723,7 +34723,7 @@ IFSPRTCMPBACKUP|MME支持用户全量数据备份容灾|参数可选性:任选�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME支持用户全量数据备份容灾恢复策略配置。 
@@ -34752,7 +34752,7 @@ SHOW CMPBACKUPRESTOPLY
 
 
 
-父主题： [MME支持用户全量数据备份容灾恢复策略配置](../../zh-CN/tree/N_125359261.html)
+父主题： [MME支持用户全量数据备份容灾恢复策略配置]
 
 
 
@@ -34775,7 +34775,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 信令跟踪消息上报限制配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 由于信令跟踪消息上报都需要通过OMP，最终上报给OMM。如果上报的消息不进行限制将会导致OMP的CPU持续冲高，影响OMP的正常功能甚至导致OMP宕机。 
@@ -34783,7 +34783,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 配置需要被限制的信令跟踪类型，允许通过的信令数量，CPU门限等。 
@@ -34791,7 +34791,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -34814,7 +34814,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -34837,12 +34837,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置信令跟踪消息上报限制(SET ST RESTRICTION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改信令跟踪消息上报限制的配置
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -34850,10 +34850,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICE|被限制的信令跟踪类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|被限制的信令跟踪类型：可选择STS跟踪，CTS跟踪
 MODE|限制方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|限制的信令上报的方式：可选择根据CPU占用限制，根据上报数目限制
@@ -34863,7 +34863,7 @@ MODE|限制方式|参数可选性:任选参数；参数类型:枚举。参见枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改被限制的信令跟踪类型为STS，命令如下： 
@@ -34878,7 +34878,7 @@ SET ST RESTRICTION:SERVICE="STS";
 
 
 
-父主题： [信令跟踪消息上报限制配置](../../zh-CN/tree/N_12535930.html)
+父主题： [信令跟踪消息上报限制配置]
 
 
 
@@ -34901,12 +34901,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询信令跟踪消息上报限制(SHOW ST RESTRICTION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询信令跟踪消息上报限制的配置
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -34914,10 +34914,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SERVICE|被限制的信令跟踪类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|被限制的信令跟踪类型：可选择STS跟踪，CTS跟踪
 MODE|限制方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|限制的信令上报的方式：可选择根据CPU占用限制，根据上报数目限制
@@ -34927,7 +34927,7 @@ MODE|限制方式|参数可选性:任选参数；参数类型:枚举。参见枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询信令跟踪消息上报限制，命令如下： 
@@ -34942,7 +34942,7 @@ SHOW ST RESTRICTION;
 
 
 
-父主题： [信令跟踪消息上报限制配置](../../zh-CN/tree/N_12535930.html)
+父主题： [信令跟踪消息上报限制配置]
 
 
 
@@ -34965,7 +34965,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## MME失败原因细化配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UE收到MME返回的拒绝消息后，会根据其中携带的EMM Cause完成相应的处理；不同的EMM Cause对于UE的影响不同；在某些特定场景下，需要携带特定的EMM Cause，以控制其对UE的影响。 
@@ -34973,7 +34973,7 @@ UE收到MME返回的拒绝消息后，会根据其中携带的EMM Cause完成相
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置特定失败场景下，MME返回给UE的拒绝消息中，携带的EMM Cause。 
@@ -34981,7 +34981,7 @@ UE收到MME返回的拒绝消息后，会根据其中携带的EMM Cause完成相
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -35014,7 +35014,7 @@ UE收到MME返回的拒绝消息后，会根据其中携带的EMM Cause完成相
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -35037,12 +35037,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置特定场景失败原因值(SET SPEC REJ CAUSE) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置特定场景失败原因值
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -35050,10 +35050,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SITUATION|场景|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|特定的失败场景。
 CAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该场景下，MME返回给UE的拒绝消息中携带的EMM Cause。
@@ -35063,7 +35063,7 @@ CAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置TAU鉴权超时后，返回给UE的TAU Reject消息中携带的EMM Cause为10 Implicitly detached。 
@@ -35078,7 +35078,7 @@ SET SPEC REJ CAUSE:SITUATION="TAU_AUTH_TIMEOUT",CAUSE="10_RejectCause";
 
 
 
-父主题： [MME失败原因细化配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance_52.html)
+父主题： [MME失败原因细化配置]
 
 
 
@@ -35101,12 +35101,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询特定场景失败原因值(SHOW SPEC REJ CAUSE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询特定场景失败原因值
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -35114,10 +35114,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SITUATION|场景|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|特定的失败场景。
 
@@ -35126,10 +35126,10 @@ SITUATION|场景|参数可选性:任选参数；参数类型:枚举。参见枚�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SITUATION|场景|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|特定的失败场景。
 CAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该场景下，MME返回给UE的拒绝消息中携带的EMM Cause。
@@ -35139,7 +35139,7 @@ CAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询当前特定场景的失败原因值配置。 
@@ -35173,7 +35173,7 @@ SHOW SPEC REJ CAUSE;
 
 
 
-父主题： [MME失败原因细化配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance_52.html)
+父主题： [MME失败原因细化配置]
 
 
 
@@ -35196,12 +35196,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置特定场景切换失败原因值(SET MME HANDOVER FAILCAUSE MAP) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置特定场景切换失败原因值。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -35209,10 +35209,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SITUATION|场景|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|特定的切换失败场景。
 S1APCAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|在切换失败时，给eNodeB的S1AP拒绝原因值。
@@ -35222,7 +35222,7 @@ S1APCAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置目标eNB返回原因值为“Cell not available”的切换失败”的场景的切换失败原因值为“Cell not available”。 
@@ -35237,7 +35237,7 @@ SET MME HANDOVER FAILCAUSE MAP:SITUATION="CellNotValid",S1APCAUSE="CellNotValid"
 
 
 
-父主题： [MME失败原因细化配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance_52.html)
+父主题： [MME失败原因细化配置]
 
 
 
@@ -35260,12 +35260,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询特定场景切换失败原因值(SHOW MME HANDOVER FAILCAUSE MAP) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询特定场景切换失败原因值。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -35273,10 +35273,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SITUATION|场景|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|特定的切换失败场景。
 
@@ -35285,10 +35285,10 @@ SITUATION|场景|参数可选性:任选参数；参数类型:枚举。参见枚�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SITUATION|场景|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|特定的切换失败场景。
 S1APCAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|在切换失败时，给eNodeB的S1AP拒绝原因值。
@@ -35298,7 +35298,7 @@ S1APCAUSE|拒绝原因值|参数可选性:必选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询切换失败原因值配置。 
@@ -35341,7 +35341,7 @@ SHOW MME HANDOVER FAILCAUSE MAP;
 
 
 
-父主题： [MME失败原因细化配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance_52.html)
+父主题： [MME失败原因细化配置]
 
 
 
@@ -35364,7 +35364,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## PGW重选配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PGW重选是指因为PGW的某些原因而导致PDN建立失败时，MME选择其他的PGW继续尝试PDN建立，而不是等UE再次发起PDN建立请求，MME重选PGW可以降低PDN建立的时延，提升用户感受度。 
@@ -35372,19 +35372,19 @@ PGW重选是指因为PGW的某些原因而导致PDN建立失败时，MME选择�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 
                 在运营商购买了PGW重选功能License情况下，可以通过命令
-                [SET SOFTWARE PARAMETER](../mml/1268001.html)
+                [SET SOFTWARE PARAMETER]
                 :PARAID=786762,PARAVALUE=1;打开PGW重选功能。打开后，通过本功能可以设置或查询重选PGW的PGW失败原因。
             
 
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -35407,7 +35407,7 @@ PGW重选是指因为PGW的某些原因而导致PDN建立失败时，MME选择�
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -35430,7 +35430,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置PGW重选原因值(SET RESELECTION CAUSE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 设置本局支持PGW重选功能后，必须要存在PGW重选原因配置，才能对相应原因的会话建立失败进行PGW重选，使用重选后的PGW继续会话创建。 
@@ -35441,7 +35441,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 如果本局是Combo局，该功能仅影响LTE网络的用户，对其他网络的用户不会产生影响。  
@@ -35449,10 +35449,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CAUSELIST|原因列表|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本局支持重选的会话创建失败原因列表。无默认值取值含义：System failure：PGW系统失败。No resources available：PGW没有资源可用了。Remote peer not responding：PGW无响应。APN Congestion ：PGW发生APN拥塞。
 
@@ -35461,7 +35461,7 @@ CAUSELIST|原因列表|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置PGW重选原因值：原因值列表为"PGW系统失败"。 
@@ -35476,7 +35476,7 @@ SET RESELECTION CAUSE:CAUSELIST="SYS_FAIL";
 
 
 
-父主题： [PGW重选配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance_54.html)
+父主题： [PGW重选配置]
 
 
 
@@ -35499,12 +35499,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询PGW重选原因值(SHOW RESELECTION CAUSE) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询PGW重选原因值
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -35512,10 +35512,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CAUSELIST|原因列表|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置本局支持重选的会话创建失败原因列表。无默认值取值含义：System failure：PGW系统失败。No resources available：PGW没有资源可用了。Remote peer not responding：PGW无响应。APN Congestion ：PGW发生APN拥塞。
 
@@ -35524,7 +35524,7 @@ CAUSELIST|原因列表|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询PGW重选原因值： 
@@ -35553,7 +35553,7 @@ SHOW RESELECTION CAUSE;
 
 
 
-父主题： [PGW重选配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance_54.html)
+父主题： [PGW重选配置]
 
 
 
@@ -35576,7 +35576,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 内部统计参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 业务前台有大量的内部统计，用于开发维护人员更详细的知悉系统运行状况、性能话务情况等，但是这些内部统计的采集获取很不方便。 
@@ -35587,7 +35587,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置内部统计上报参数，主要是内部统计上报周期和是否开启内部统计开关。 
@@ -35595,7 +35595,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -35618,7 +35618,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -35641,7 +35641,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置内部统计参数(SET INNER STAT PARAM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 设置内部统计参数。用于设置是否开启内部统计上报，及内部统计上报周期。开启内部统计上报后，前台会将内部统计数据周期性的上报给后台网管，后台网管保存在硬盘目录，供开发维护人员查询分析，方便更好的监控了解系统运行状况、性能话务情况。 
@@ -35649,15 +35649,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PERIOD|内部统计周期(分钟)|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示内部统计上报周期。
 ENABLE|启用内部统计|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持内部统计上报。
@@ -35667,7 +35667,7 @@ ENABLE|启用内部统计|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置内部统计参数，内部统计周期为30分钟，启用内部统计为是。 
@@ -35682,7 +35682,7 @@ SET INNER STAT PARAM:PERIOD="30MIN",ENABLE="YES";
 
 
 
-父主题： [内部统计参数配置](../../zh-CN/tree/N_126054604.html)
+父主题： [内部统计参数配置]
 
 
 
@@ -35705,7 +35705,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询内部统计参数(SHOW INNER STAT PARAM) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询内部统计参数。用于查询是否开启内部统计上报，及内部统计上报周期。 
@@ -35713,15 +35713,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PERIOD|内部统计周期(分钟)|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示内部统计上报周期。
 ENABLE|启用内部统计|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于指示是否支持内部统计上报。
@@ -35731,7 +35731,7 @@ ENABLE|启用内部统计|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询内部统计参数。 
@@ -35760,7 +35760,7 @@ SHOW INNER STAT PARAM;
 
 
 
-父主题： [内部统计参数配置](../../zh-CN/tree/N_126054604.html)
+父主题： [内部统计参数配置]
 
 
 
@@ -35783,14 +35783,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## GTP原因值与NAS原因值映射配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             3GPP TS 29.274协议规定的GTP原因值与NAS原因值的映射存在一对多的映射关系，不同客户可能倾向不同的映射关系，需要系统支持客户根据实际需要配置GTP到NAS的失败原因值映射关系。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 MME发起会话管理流程，SGW处理失败时，给MME返回的应答消息中携带GTP失败原因值，MME根据配置将GTP失败原因值映射成NASESM失败原因值发送给UE。 
@@ -35801,7 +35801,7 @@ GTP原因值对应的NAS原因值取值范围原则上根据协议要求进行�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -35824,7 +35824,7 @@ GTP原因值对应的NAS原因值取值范围原则上根据协议要求进行�
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -35847,20 +35847,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置GTP原因值与NAS原因值映射(SET GTP NAS CAUSE MAPPING) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改GTP原因值与NAS原因值映射关系。当需要修改GTP原因值与NAS原因值映射关系时，使用该命令。
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPCAUSE|GTP原因值|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP原因值。
 PROCEDURE|适用流程|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP原因值映射NAS原因值适用的流程。如果GTP原因值为“#64 "Context not found"”时，协议规定非3GPP到3GPP的初始PDN连接请求流程，与非3GPP到3GPP的初始PDN连接请求外其他流程映射的原因值不同。对于其他GTP原因值，映射NAS原因值不区分场景。
@@ -35871,7 +35871,7 @@ NASCAUSE|NAS原因值|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置GTP原因值与NAS原因值映射，GTP原因值为GTPCAUSE_64，适用流程为PROCEDURE_1，NAS原因值设置为NASCAUSE_54。 
@@ -35886,7 +35886,7 @@ SET GTP NAS CAUSE MAPPING:GTPCAUSE="GTPCAUSE_64",PROCEDURE="PROCEDURE_1",NASCAUS
 
 
 
-父主题： [GTP原因值与NAS原因值映射配置](../../zh-CN/tree/N_12608601.html)
+父主题： [GTP原因值与NAS原因值映射配置]
 
 
 
@@ -35909,20 +35909,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP原因值与NAS原因值映射(SHOW GTP NAS CAUSE MAPPING) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询配置的GTP原因值与NAS原因值映射关系。
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPCAUSE|GTP原因值|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP原因值。
 PROCEDURE|适用流程|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP原因值映射NAS原因值适用的流程。如果GTP原因值为“#64 "Context not found"”时，协议规定非3GPP到3GPP的初始PDN连接请求流程，与非3GPP到3GPP的初始PDN连接请求外其他流程映射的原因值不同。对于其他GTP原因值，映射NAS原因值不区分场景。
@@ -35932,10 +35932,10 @@ PROCEDURE|适用流程|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPCAUSE|GTP原因值|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP原因值。
 PROCEDURE|适用流程|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP原因值映射NAS原因值适用的流程。如果GTP原因值为“#64 "Context not found"”时，协议规定非3GPP到3GPP的初始PDN连接请求流程，与非3GPP到3GPP的初始PDN连接请求外其他流程映射的原因值不同。对于其他GTP原因值，映射NAS原因值不区分场景。
@@ -35946,7 +35946,7 @@ NASCAUSE|NAS原因值|参数可选性:任选参数；参数类型:枚举。参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP原因值与NAS原因值映射。 
@@ -35975,7 +35975,7 @@ SHOW GTP NAS CAUSE MAPPING:GTPCAUSE="GTPCAUSE_64",PROCEDURE="PROCEDURE_1";
 
 
 
-父主题： [GTP原因值与NAS原因值映射配置](../../zh-CN/tree/N_12608601.html)
+父主题： [GTP原因值与NAS原因值映射配置]
 
 
 
@@ -35998,7 +35998,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## KPI监控维护 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本功能开启时，持续监控业务各项KPI，在判断出某模块KPI异常时，上报告警或自动采取措施恢复业务。 
@@ -36006,7 +36006,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 配置KPI监控维护功能的全局参数，如是否开启本功能，检测周期参数等。 
@@ -36017,7 +36017,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -36045,7 +36045,7 @@ UP KPI监控维护策略
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -36068,7 +36068,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### KPI监控维护全局参数 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本功能开启时，持续监控业务各项KPI，在判断出某模块KPI异常时，上报告警或自动采取措施恢复业务。 
@@ -36076,7 +36076,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 配置KPI监控维护功能的全局参数，如是否开启本功能，检测周期和次数、冷却周期、最大闭塞模块个数。 
@@ -36084,7 +36084,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -36107,7 +36107,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [KPI监控维护](../../zh-CN/tree/N_12609183.html)
+父主题： [KPI监控维护]
 
 
 
@@ -36130,12 +36130,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置KPI监控维护全局参数(SET KPIMONCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置KPI监控维护功能的全局参数配置，包括是否开启本功能、检测周期和次数等参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -36143,10 +36143,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLAG|KPI监控维护开关|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|配置是否启用KPI监控维护功能。
 PERIOD|检测周期(分钟)|参数可选性:任选参数；参数类型:整数；参数范围为:1~10。|配置监控KPI的检测周期。
@@ -36158,7 +36158,7 @@ COOLING|冷却周期(分钟)|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置KPI监控维护功能的全局参数配置，KPI监控维护开关是开启，检测周期是4，检测次数是2，冷却周期(分钟)是12。 
@@ -36173,7 +36173,7 @@ SET KPIMONCFG:FLAG="ON",PERIOD=4,COLTIME=2,COOLING=12;
 
 
 
-父主题： [KPI监控维护全局参数](../../zh-CN/tree/N_126091813.html)
+父主题： [KPI监控维护全局参数]
 
 
 
@@ -36196,12 +36196,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询KPI监控维护全局参数(SHOW KPIMONCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询当前KPI监控维护功能的全局参数配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -36209,10 +36209,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FLAG|KPI监控维护开关|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|配置是否启用KPI监控维护功能。
 PERIOD|检测周期(分钟)|参数可选性:任选参数；参数类型:整数。|配置监控KPI的检测周期。
@@ -36224,7 +36224,7 @@ COOLING|冷却周期(分钟)|参数可选性:任选参数；参数类型:整数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询当前KPI监控维护功能的全局参数配置。 
@@ -36252,7 +36252,7 @@ SHOW KPIMONCFG;
 
 
 
-父主题： [KPI监控维护全局参数](../../zh-CN/tree/N_126091813.html)
+父主题： [KPI监控维护全局参数]
 
 
 
@@ -36275,7 +36275,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### KPI监控维护策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本功能开启时，持续监控业务各项KPI，在判断出某模块KPI异常时，上报告警或自动采取措施恢复业务。 
@@ -36283,7 +36283,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 配置KPI监控维护功能的策略，如附着流程的KPI策略，采用的维护动作。 
@@ -36291,7 +36291,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -36314,7 +36314,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [KPI监控维护](../../zh-CN/tree/N_12609183.html)
+父主题： [KPI监控维护]
 
 
 
@@ -36337,12 +36337,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置KPI监控维护策略(SET KPIMONPOLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 设置KPI监控维护功能的策略配置，如附着流程的KPI策略。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -36350,10 +36350,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 KPITYPE|KPI类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|使用的KPI类型。
 RATE|维护动作执行的过滤条件(最低业务次数)|参数可选性:任选参数；参数类型:整数；参数范围为:1~5000。|配置维护动作执行的过滤条件，必须要大于最低的条件才能启动功能，对业务KPI来说，就是指最低的业务发起次数/分钟/模块。
@@ -36365,7 +36365,7 @@ ACTION|维护动作|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置KPI监控维护功能的策略配置，KPI类型选择2G Attach，维护动作执行的过滤条件是50，维护执行过滤条件是10，维护动作是不启用。 
@@ -36380,7 +36380,7 @@ SET KPIMONPOLICY:KPITYPE="2G_ATTACH",RATE=50,PERCENT=10,ACTION="NO_ACTION";
 
 
 
-父主题： [KPI监控维护策略配置](../../zh-CN/tree/N_12609213.html)
+父主题： [KPI监控维护策略配置]
 
 
 
@@ -36403,12 +36403,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询KPI监控维护策略(SHOW KPIMONPOLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 查询当前KPI监控维护功能的策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -36416,10 +36416,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 KPITYPE|KPI类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|使用的KPI类型。
 
@@ -36428,10 +36428,10 @@ KPITYPE|KPI类型|参数可选性:任选参数；参数类型:枚举。参见枚
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 KPITYPE|KPI类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|使用的KPI类型。
 RATE|维护动作执行的过滤条件(最低业务次数)|参数可选性:任选参数；参数类型:整数。|配置维护动作执行的过滤条件，必须要大于最低的条件才能启动功能，对业务KPI来说，就是指最低的业务发起次数/分钟/模块。
@@ -36443,7 +36443,7 @@ ACTION|维护动作|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询当前KPI监控维护功能的策略配置。 
@@ -36478,7 +36478,7 @@ SHOW KPIMONPOLICY;
 
 
 
-父主题： [KPI监控维护策略配置](../../zh-CN/tree/N_12609213.html)
+父主题： [KPI监控维护策略配置]
 
 
 
@@ -36501,7 +36501,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### UP KPI监控维护策略 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本功能开启时，MME会持续监控UP的流量指标，在MME判断出某个UP模块流量异常时，会上报告警或自动采取措施，以避免影响业务。 
@@ -36509,7 +36509,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置UP 流量监控维护功能的策略，如2G的流量策略。 
@@ -36517,7 +36517,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -36540,7 +36540,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [KPI监控维护](../../zh-CN/tree/N_12609183.html)
+父主题： [KPI监控维护]
 
 
 
@@ -36563,7 +36563,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置UP KPI监控维护策略(SET UPKPIMONPOLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 本命令用于修改UP KPI监控维护功能的策略配置，如2G用户的流量策略。 
@@ -36571,15 +36571,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 KPITYPE|KPI类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|本参数用于配置监控的KPI类型。2G：监控网络的2G数据流量3G：监控网络的3G数据流量
 MINRATE|告警的最低流量(Mbps)|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|本参数用于配置MME上报告警的最小流量阈值，至少有其中一个UP模块超过了本参数配置的流量值，MME才会上报告警。
@@ -36590,7 +36590,7 @@ DIFPERCENT|差异门限|参数可选性:任选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置UP KPI监控维护策略，KPI类型选择2G流量，告警的最低流量为5Mbps，差异门限为50。 
@@ -36605,7 +36605,7 @@ SET UPKPIMONPOLICY:KPITYPE="2G",MINRATE=5,DIFPERCENT=50;
 
 
 
-父主题： [UP KPI监控维护策略](../../zh-CN/tree/N_12609793.html)
+父主题： [UP KPI监控维护策略]
 
 
 
@@ -36628,7 +36628,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询UP KPI监控维护策略(SHOW UPKPIMONPOLICY) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 本命令用于查询当前UP KPI监控维护功能的策略。 
@@ -36636,15 +36636,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 KPITYPE|KPI类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|本参数用于配置监控的KPI类型。2G：监控网络的2G数据流量3G：监控网络的3G数据流量
 
@@ -36653,10 +36653,10 @@ KPITYPE|KPI类型|参数可选性:任选参数；参数类型:枚举。参见枚
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 KPITYPE|KPI类型|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|本参数用于配置监控的KPI类型。2G：监控网络的2G数据流量3G：监控网络的3G数据流量
 MINRATE|告警的最低流量(Mbps)|参数可选性:任选参数；参数类型:整数。|本参数用于配置MME上报告警的最小流量阈值，至少有其中一个UP模块超过了本参数配置的流量值，MME才会上报告警。
@@ -36667,7 +36667,7 @@ DIFPERCENT|差异门限|参数可选性:任选参数；参数类型:整数。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询UP KPI监控维护策略。 
@@ -36695,7 +36695,7 @@ KPI类型   告警的最低流量(Mbps)  差异门限
 
 
 
-父主题： [UP KPI监控维护策略](../../zh-CN/tree/N_12609793.html)
+父主题： [UP KPI监控维护策略]
 
 
 
@@ -36718,7 +36718,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 内部资源监测配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME/SGSN系统中有各种数据区、缓存、标识索引等类型的临时资源，这种资源的生命周期是临时分配的，在使用时才申请，使用完毕后就会释放掉，正常情况下这种类型的资源可以重复循环使用。 
@@ -36732,7 +36732,7 @@ MME/SGSN系统中有各种数据区、缓存、标识索引等类型的临时资
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本节点用于配置MME/SGSN内部资源监测功能，可以对Buffer资源和索引资源进行监测。 
@@ -36740,7 +36740,7 @@ MME/SGSN系统中有各种数据区、缓存、标识索引等类型的临时资
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -36763,7 +36763,7 @@ MME/SGSN系统中有各种数据区、缓存、标识索引等类型的临时资
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -36786,20 +36786,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置内部资源监测配置(SET MME INNERRESCMONI) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置MME/SGSN内部资源监测配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|内部资源ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~65535。|内部资源的唯一标识。
 NAME|内部资源名称|参数可选性:任选参数；参数类型:字符型；参数范围为:1~64个字符。|内部资源的名称。
@@ -36811,7 +36811,7 @@ AGETIME|内部资源监测老化时长(分钟)|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将ID为1的内部资源的监测老化时长修改为60分钟。 
@@ -36826,7 +36826,7 @@ SET MME INNERRESCMONI:ID=1,AGETIME=60;
 
 
 
-父主题： [内部资源监测配置](../../zh-CN/tree/N_12696832.html)
+父主题： [内部资源监测配置]
 
 
 
@@ -36849,20 +36849,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询内部资源监测配置(SHOW MME INNERRESCMONI) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询MME/SGSN内部资源监测配置。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|内部资源ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~65535。|内部资源的唯一标识。
 
@@ -36871,10 +36871,10 @@ ID|内部资源ID|参数可选性:任选参数；参数类型:整数；参数范
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|内部资源ID|参数可选性:任选参数；参数类型:整数。|内部资源的唯一标识。
 NAME|内部资源名称|参数可选性:任选参数；参数类型:字符型。|内部资源的名称。
@@ -36886,7 +36886,7 @@ AGETIME|内部资源监测老化时长(分钟)|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询ID为1的内部资源是否支持监测以及监测老化时长。 
@@ -36914,7 +36914,7 @@ SHOW MME INNERRESCMONI:ID=1;
 
 
 
-父主题： [内部资源监测配置](../../zh-CN/tree/N_12696832.html)
+父主题： [内部资源监测配置]
 
 
 
@@ -36937,7 +36937,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## CDU租户配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 租户（Tenant）是指使用系统或计算资源的用户。不同租户的数据访问和数据存储都是隔离的，从而保证数据的安全。 
@@ -36945,7 +36945,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于设置MME/SGSN使用的CDU租户ID，默认情况下租户ID为1，必须和实际CDU上配置的租户ID保持一致。 
@@ -36953,7 +36953,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -36981,7 +36981,7 @@ POOL内其他MME的CDU租户配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -37004,7 +37004,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置CDU租户配置(SET CDUTENANTID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 设置当前MME/SGSN使用的CDU租户ID。 
@@ -37012,15 +37012,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CDUTENANTID|CDU租户ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~255。|该参数用于设置CDU租户ID。
 
@@ -37029,7 +37029,7 @@ CDUTENANTID|CDU租户ID|参数可选性:任选参数；参数类型:整数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置当前MME/SGSN使用的CDU租户ID为22。 
@@ -37044,7 +37044,7 @@ SET CDUTENANTID:CDUTENANTID=22;
 
 
 
-父主题： [CDU租户配置](../../zh-CN/tree/N_12696834.html)
+父主题： [CDU租户配置]
 
 
 
@@ -37067,7 +37067,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询CDU租户配置(SHOW CDUTENANTID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询当前MME/SGSN使用的CDU租户ID。 
@@ -37075,15 +37075,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CDUTENANTID|CDU租户ID|参数可选性:任选参数；参数类型:整数。|该参数用于设置CDU租户ID。
 
@@ -37092,7 +37092,7 @@ CDUTENANTID|CDU租户ID|参数可选性:任选参数；参数类型:整数。|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询当前MME/SGSN使用的CDU租户ID。 
@@ -37120,7 +37120,7 @@ CDU租户ID
 
 
 
-父主题： [CDU租户配置](../../zh-CN/tree/N_12696834.html)
+父主题： [CDU租户配置]
 
 
 
@@ -37143,7 +37143,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### POOL内其他MME的CDU租户配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME实现了计算和存储分离，数据存储在CDU单元。不同MME局向使用不同的CDU租户，实现数据隔离。 
@@ -37157,7 +37157,7 @@ MME从其他MME的CDU恢复用户全量数据，需要配置其他MME的CDU租�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 对于MME支持用户全量数据的容灾恢复时，MME POOL中每个MME需配置每个MME使用的CDU租户信息。 
@@ -37165,7 +37165,7 @@ MME从其他MME的CDU恢复用户全量数据，需要配置其他MME的CDU租�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -37198,7 +37198,7 @@ MME从其他MME的CDU恢复用户全量数据，需要配置其他MME的CDU租�
 
 
 
-父主题： [CDU租户配置](../../zh-CN/tree/N_12696834.html)
+父主题： [CDU租户配置]
 
 
 
@@ -37221,7 +37221,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增POOL内其他MME的CDU租户配置(ADD POOLCDUTENANTID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增POOL内其他MME的CDU租户。对MME POOL中其他MME，或MME POOL中新增了MME时，通过本命令增加其CDU租户信息。 
@@ -37229,15 +37229,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEC|MME编号|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|该参数用于在网络中标识MME的编号。
 CDUTENANTID|CDU租户ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|该参数用于设置CDU租户ID。
@@ -37248,7 +37248,7 @@ NAME|别名|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增POOL内其他MME的CDU租户配置，MME编号为1，CDU租户ID为1，别名为test。 
@@ -37263,7 +37263,7 @@ ADD POOLCDUTENANTID:MMEC=1,CDUTENANTID=1,NAME="test"
 
 
 
-父主题： [POOL内其他MME的CDU租户配置](../../zh-CN/tree/N_125359260.html)
+父主题： [POOL内其他MME的CDU租户配置]
 
 
 
@@ -37286,7 +37286,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改POOL内其他MME的CDU租户配置(SET POOLCDUTENANTID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改POOL内其他MME的CDU租户配置。 
@@ -37294,15 +37294,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEC|MME编号|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|该参数用于在网络中标识MME的编号。
 CDUTENANTID|CDU租户ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|该参数用于设置CDU租户ID。
@@ -37313,7 +37313,7 @@ NAME|别名|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改POOL内其他MME的CDU租户配置，MME编号为1，CDU租户ID为1，别名为test。 
@@ -37328,7 +37328,7 @@ SET POOLCDUTENANTID:MMEC=1,CDUTENANTID=1,NAME="test"
 
 
 
-父主题： [POOL内其他MME的CDU租户配置](../../zh-CN/tree/N_125359260.html)
+父主题： [POOL内其他MME的CDU租户配置]
 
 
 
@@ -37351,7 +37351,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除POOL内其他MME的CDU租户配置(DEL POOLCDUTENANTID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除POOL内其他MME的CDU租户配置。 
@@ -37359,15 +37359,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEC|MME编号|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|该参数用于在网络中标识MME的编号。
 
@@ -37376,7 +37376,7 @@ MMEC|MME编号|参数可选性:必选参数；参数类型:整数；参数范围
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除POOL内其他MME的CDU租户配置，MME编号为1。 
@@ -37391,7 +37391,7 @@ DEL POOLCDUTENANTID:MMEC=1
 
 
 
-父主题： [POOL内其他MME的CDU租户配置](../../zh-CN/tree/N_125359260.html)
+父主题： [POOL内其他MME的CDU租户配置]
 
 
 
@@ -37414,7 +37414,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询POOL内其他MME的CDU租户配置(SHOW POOLCDUTENANTID) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询POOL内其他MME的CDU租户配置。 
@@ -37422,15 +37422,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEC|MME编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于在网络中标识MME的编号。
 
@@ -37439,10 +37439,10 @@ MMEC|MME编号|参数可选性:任选参数；参数类型:整数；参数范围
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEC|MME编号|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|该参数用于在网络中标识MME的编号。
 CDUTENANTID|CDU租户ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~255。|该参数用于设置CDU租户ID。
@@ -37453,7 +37453,7 @@ NAME|别名|参数可选性:任选参数；参数类型:字符型；参数范围
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询POOL内其他MME的CDU租户配置，MME编号为1。 
@@ -37482,7 +37482,7 @@ SHOW POOLCDUTENANTID:MMEC=1
 
 
 
-父主题： [POOL内其他MME的CDU租户配置](../../zh-CN/tree/N_125359260.html)
+父主题： [POOL内其他MME的CDU租户配置]
 
 
 
@@ -37505,7 +37505,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 负荷卸载优化 
 
 
-[](None)背景知识 
+背景知识 
 
 
 Pool功能最初是在2G/3G时代引入的。移动网络支持Pool功能后，一个RAN节点连接到多个SGSN节点，由RAN实现节点选择和路由功能。SGSN在分配新P-TMSI给用户时，包含了本SGSN节点的标识NRI，用户通过RAN节点接入到SGSN时，RAN从P-TMSI/TLLI中分离出NRI，根据NRI将信令消息路由到正确的SGSN节点上。 
@@ -37513,7 +37513,7 @@ Pool功能最初是在2G/3G时代引入的。移动网络支持Pool功能后，�
 
 
                 对于SGSN POOL内节点的负荷重分配，将某个SGSN节点上的用户迁移到其他SGSN上时，可通过网管命令
-                [EXEC UNLOAD](../mml/1263022.html)
+                [EXEC UNLOAD]
                 对SGSN进行负荷卸载。通过触发用户发起附着或路由更新过程，分配NULL NRI给用户，从而在用户的下一次路由更新过程中将用户迁移到其他可用的SGSN局。
             
 
@@ -37545,7 +37545,7 @@ UE通过不携带MME节点信息给eNodeB的方式，指示eNodeB重选。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该节点用于配置负荷卸载过程中的卸载控制参数，包括： 
@@ -37575,7 +37575,7 @@ UE通过不携带MME节点信息给eNodeB的方式，指示eNodeB重选。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -37598,7 +37598,7 @@ SGSN卸载优化配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -37621,7 +37621,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME卸载优化配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME Pool区域是指UE在其间移动不需要改变服务MME的区域，一个MME Pool区域内有一个或多个对等的MME，MME池区是由多个TA汇聚，Pool区域内的每个eNB都与所有的MME互联。 
@@ -37671,7 +37671,7 @@ MME容灾功能，当Pool内某MME不可用后，Pool内其他MME能够支持故
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于对MME进行负荷卸载前，进行MME负荷卸载优化配置，设置负荷卸载控制周期、每周期令牌投放次数、允许卸载突发系数，然后进行负荷卸载，根据控制参数对负荷卸载过程进行速率控制。 
@@ -37679,7 +37679,7 @@ MME容灾功能，当Pool内某MME不可用后，Pool内其他MME能够支持故
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -37702,7 +37702,7 @@ MME容灾功能，当Pool内某MME不可用后，Pool内其他MME能够支持故
 
 
 
-父主题： [负荷卸载优化](../../zh-CN/tree/N_12605534.html)
+父主题： [负荷卸载优化]
 
 
 
@@ -37725,7 +37725,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置MME卸载优化配置(SET MME UNLOAD OPT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置MME卸载优化配置中的各个控制参数，当需要对MME进行负荷卸载时，使用此命令。配置成功后，可对MME负荷卸载过程的速率进行控制。 
@@ -37733,15 +37733,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEUNLOADOPT|支持负荷卸载优化|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持负荷卸载优化功能。
 MMECTLPERIOD|负荷卸载控制周期（s）|参数可选性:任选参数；参数类型:整数；参数范围为:1~60。|该参数用于在MME支持负荷卸载优化时，设置负荷卸载速率控制的周期。在控制周期内根据卸载速率提供固定的卸载令牌数。周期结束后，相应令牌数清0。默认值为10秒。
@@ -37753,7 +37753,7 @@ MMETOKENBKTTIMES|允许卸载突发系数|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置MME卸载优化配置，支持负荷卸载优化设置为支持。 
@@ -37768,7 +37768,7 @@ SET MME UNLOAD OPT:MMEUNLOADOPT="SUPPORT"
 
 
 
-父主题： [MME卸载优化配置](../../zh-CN/tree/N_12605544.html)
+父主题： [MME卸载优化配置]
 
 
 
@@ -37791,7 +37791,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询MME卸载优化配置(SHOW MME UNLOAD OPT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询MME卸载优化配置中的各个控制参数。 
@@ -37799,15 +37799,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 MMEUNLOADOPT|支持负荷卸载优化|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持负荷卸载优化功能。
 MMECTLPERIOD|负荷卸载控制周期（s）|参数可选性:任选参数；参数类型:整数。|该参数用于在MME支持负荷卸载优化时，设置负荷卸载速率控制的周期。在控制周期内根据卸载速率提供固定的卸载令牌数。周期结束后，相应令牌数清0。默认值为10秒。
@@ -37819,7 +37819,7 @@ MMETOKENBKTTIMES|允许卸载突发系数|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME卸载优化配置。 
@@ -37848,7 +37848,7 @@ SHOW MME UNLOAD OPT
 
 
 
-父主题： [MME卸载优化配置](../../zh-CN/tree/N_12605544.html)
+父主题： [MME卸载优化配置]
 
 
 
@@ -37871,7 +37871,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### SGSN卸载优化配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 RNC/BSC（Radio Network Controller/Base Station Controller，无线网络控制器/基站控制器）在启用Iu-Gb Flex功能的情况下，SGSN分配新PTMSI给用户时，包含了本SGSN节点的NRI。用户通过RNC/BSC接入到SGSN时，RNC/BSC从PTMSI中分离出NRI，根据NRI将信令消息路由到正确的SGSN节点。 
@@ -37885,7 +37885,7 @@ RNC/BSC（Radio Network Controller/Base Station Controller，无线网络控制�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于对SGSN进行负荷卸载前，进行SGSN负荷卸载优化配置，设置负荷卸载控制周期、周期令牌投放次数、允许卸载突发系数，然后进行负荷卸载，根据控制参数对负荷卸载过程进行速率控制。 
@@ -37893,7 +37893,7 @@ RNC/BSC（Radio Network Controller/Base Station Controller，无线网络控制�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -37916,7 +37916,7 @@ RNC/BSC（Radio Network Controller/Base Station Controller，无线网络控制�
 
 
 
-父主题： [负荷卸载优化](../../zh-CN/tree/N_12605534.html)
+父主题： [负荷卸载优化]
 
 
 
@@ -37939,7 +37939,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置SGSN卸载优化配置(SET SGSN UNLOAD OPT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置SGSN卸载优化配置中的各个控制参数，当需要对SGSN进行负荷卸载时，使用此命令。配置成功后，可对SGSN负荷卸载过程的速率进行控制。 
@@ -37947,15 +37947,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNUNLOADOPT|支持负荷卸载优化|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN是否支持负荷卸载优化功能。
 SGSNCTLPERIOD|负荷卸载控制周期（s）|参数可选性:任选参数；参数类型:整数；参数范围为:1~60。|该参数用于在SGSN支持负荷卸载优化时，设置负荷卸载速率控制的周期。在控制周期内根据卸载速率提供固定的卸载令牌数。周期结束后，相应令牌数清0。默认值为10秒。
@@ -37967,7 +37967,7 @@ SGSNTOKENBKTTIMES|允许卸载突发系数|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置SGSN卸载优化配置，支持负荷卸载优化设置为支持。 
@@ -37982,7 +37982,7 @@ SET SGSN UNLOAD OPT:SGSNUNLOADOPT="SUPPORT"
 
 
 
-父主题： [SGSN卸载优化配置](../../zh-CN/tree/N_12605545.html)
+父主题： [SGSN卸载优化配置]
 
 
 
@@ -38005,7 +38005,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询SGSN卸载优化配置(SHOW SGSN UNLOAD OPT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询SGSN卸载优化配置中的各个控制参数。 
@@ -38013,15 +38013,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SGSNUNLOADOPT|支持负荷卸载优化|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN是否支持负荷卸载优化功能。
 SGSNCTLPERIOD|负荷卸载控制周期（s）|参数可选性:任选参数；参数类型:整数。|该参数用于在SGSN支持负荷卸载优化时，设置负荷卸载速率控制的周期。在控制周期内根据卸载速率提供固定的卸载令牌数。周期结束后，相应令牌数清0。默认值为10秒。
@@ -38033,7 +38033,7 @@ SGSNTOKENBKTTIMES|允许卸载突发系数|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询SGSN卸载优化配置。 
@@ -38062,7 +38062,7 @@ SHOW SGSN UNLOAD OPT
 
 
 
-父主题： [SGSN卸载优化配置](../../zh-CN/tree/N_12605545.html)
+父主题： [SGSN卸载优化配置]
 
 
 
@@ -38085,7 +38085,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## GTP源端口策略配置 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -38128,7 +38128,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -38151,7 +38151,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置GTP源端口默认策略(SET DEFAULT GTP SRCPORT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置MME/SGSN在发送请求消息时，源端口号使用知名端口号还是非知名端口号。该配置适用于本局发送的所有GTP请求消息。 
@@ -38159,15 +38159,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPSRCPORTTYPE|GTP源端口默认策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP请求IP报文中源端口的默认类型。非知名端口知名端口
 
@@ -38176,7 +38176,7 @@ GTPSRCPORTTYPE|GTP源端口默认策略|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置GTP源端口默认策略为知名端口。 
@@ -38191,7 +38191,7 @@ SET DEFAULT GTP SRCPORT:GTPSRCPORTTYPE="KNOWN";
 
 
 
-父主题： [GTP源端口策略配置](../../zh-CN/tree/N_12609711.html)
+父主题： [GTP源端口策略配置]
 
 
 
@@ -38214,7 +38214,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP源端口默认策略(SHOW DEFAULT GTP SRCPORT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询GTP源端口默认策略，即GTP请求消息中源端口号默认使用知名端口号还是非知名端口号。 
@@ -38222,15 +38222,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPSRCPORTTYPE|GTP源端口默认策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP请求IP报文中源端口的默认类型。非知名端口知名端口
 
@@ -38239,7 +38239,7 @@ GTPSRCPORTTYPE|GTP源端口默认策略|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP源端口默认策略。 
@@ -38268,7 +38268,7 @@ GTP源端口默认策略
 
 
 
-父主题： [GTP源端口策略配置](../../zh-CN/tree/N_12609711.html)
+父主题： [GTP源端口策略配置]
 
 
 
@@ -38291,7 +38291,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增GTP源端口策略(ADD GTP SRCPORT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增GTP源端口策略，当MME/SGSN向指定GTP节点发送GTP请求消息时，指定GTP节点源端口号使用知名端口号还是非知名端口号。 
@@ -38299,15 +38299,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPIPADDR|GTP节点IP地址|参数可选性:必选参数；参数类型:地址|周边GTP协议网元（SGW、MME、GGSN等）的控制面IP地址。IP地址包括IPv4和IPv6类型。
 GTPSRCPORTTYPE|GTP源端口策略|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:UNKNOWN。|该参数用于设置GTP请求IP报文中源端口的类型。非知名端口知名端口
@@ -38318,7 +38318,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加GTP源端口策略，GTP节点IP地址为10.20.11.22，GTP源端口策略为知名端口。 
@@ -38333,7 +38333,7 @@ ADD GTP SRCPORT:GTPIPADDR="10.20.11.22",GTPSRCPORTTYPE="KNOWN";
 
 
 
-父主题： [GTP源端口策略配置](../../zh-CN/tree/N_12609711.html)
+父主题： [GTP源端口策略配置]
 
 
 
@@ -38356,7 +38356,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改GTP源端口策略(SET GTP SRCPORT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改GTP源端口策略，当MME/SGSN向指定GTP节点发送GTP请求消息时，修改指定GTP节点源端口号使用知名端口号还是非知名端口号。 
@@ -38364,15 +38364,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPIPADDR|GTP节点IP地址|参数可选性:必选参数；参数类型:地址|周边GTP协议网元（SGW、MME、GGSN等）的控制面IP地址。IP地址包括IPv4和IPv6类型。
 GTPSRCPORTTYPE|GTP源端口策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP请求IP报文中源端口的类型。非知名端口知名端口
@@ -38383,7 +38383,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改GTP源端口策略，GTP节点IP地址为10.20.11.22，GTP源端口策略为知名端口。 
@@ -38398,7 +38398,7 @@ SET GTP SRCPORT:GTPIPADDR="10.20.11.22",GTPSRCPORTTYPE="KNOWN";
 
 
 
-父主题： [GTP源端口策略配置](../../zh-CN/tree/N_12609711.html)
+父主题： [GTP源端口策略配置]
 
 
 
@@ -38421,7 +38421,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除GTP源端口策略(DEL GTP SRCPORT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除指定GTP节点的源端口号策略配置。 
@@ -38429,15 +38429,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPIPADDR|GTP节点IP地址|参数可选性:必选参数；参数类型:地址|周边GTP协议网元（SGW、MME、GGSN等）的控制面IP地址。IP地址包括IPv4和IPv6类型。
 
@@ -38446,7 +38446,7 @@ GTPIPADDR|GTP节点IP地址|参数可选性:必选参数；参数类型:地址|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除GTP源端口策略，GTP节点IP地址为10.20.11.22。 
@@ -38461,7 +38461,7 @@ DEL GTP SRCPORT:GTPIPADDR="10.20.11.22";
 
 
 
-父主题： [GTP源端口策略配置](../../zh-CN/tree/N_12609711.html)
+父主题： [GTP源端口策略配置]
 
 
 
@@ -38484,7 +38484,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP源端口策略(SHOW GTP SRCPORT) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询指定GTP节点源端口号策略配置。 
@@ -38492,15 +38492,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPIPADDR|GTP节点IP地址|参数可选性:任选参数；参数类型:地址|周边GTP协议网元（SGW、MME、GGSN等）的控制面IP地址。IP地址包括IPv4和IPv6类型。
 
@@ -38509,10 +38509,10 @@ GTPIPADDR|GTP节点IP地址|参数可选性:任选参数；参数类型:地址|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GTPIPADDR|GTP节点IP地址|参数可选性:任选参数；参数类型:地址|周边GTP协议网元（SGW、MME、GGSN等）的控制面IP地址。IP地址包括IPv4和IPv6类型。
 GTPSRCPORTTYPE|GTP源端口策略|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置GTP请求IP报文中源端口的类型。非知名端口知名端口
@@ -38523,7 +38523,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP源端口策略。 
@@ -38551,7 +38551,7 @@ GTP节点IP地址   GTP源端口策略   用户别名
 
 
 
-父主题： [GTP源端口策略配置](../../zh-CN/tree/N_12609711.html)
+父主题： [GTP源端口策略配置]
 
 
 
@@ -38574,7 +38574,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## PDN连接拒绝Back-off策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UE发起附着或者PDN连接请求，由于非拥塞控制被拒绝时，通过携带Back-off timer满足不同场景下的需求： 
@@ -38596,7 +38596,7 @@ MME由于其他原因拒绝PDN连接建立，通过在PDN connectivity reject消
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “PDN连接拒绝Back-off策略配置”包括： 
@@ -38618,7 +38618,7 @@ MME由于其他原因拒绝PDN连接建立，通过在PDN connectivity reject消
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -38661,7 +38661,7 @@ MME由于其他原因拒绝PDN连接建立，通过在PDN connectivity reject消
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -38684,7 +38684,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置缺省PDN连接拒绝Back-off策略配置(SET DEFAULT PDN REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置拒绝PDN连接建立时，Back-off策略的缺省配置。当附着或者PDN连接被拒绝，拒绝原因是非拥塞控制时，需要配置MME在PDN connectivity reject消息中是否携带Back-off timer时，使用该命令进行配置。 
@@ -38692,7 +38692,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 附着或者PDN连接由于拥塞控制被拒绝时，PDN connectivity reject消息中Back-off timer的携带不受本命令控制。 
@@ -38715,10 +38715,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPDNREJBACKOFFPLY|支持PDN连接拒绝Back-off策略控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持PDN连接拒绝Back-off策略控制。
 CARRYBACKOFF|携带Back-off timer|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME在PDN connectivity reject消息中是否携带Back-off timer。
@@ -38730,7 +38730,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置缺省PDN连接拒绝Back-off策略配置，其中支持PDN连接拒绝Back-off策略控制，APN未签约时不携带Back-off timer。 
@@ -38745,7 +38745,7 @@ SET DEFAULT PDN REJ BACKOFF:SUPPDNREJBACKOFFPLY="YES",CARRYBACKOFF="NO";
 
 
 
-父主题： [PDN连接拒绝Back-off策略配置](../../zh-CN/tree/N_12697431.html)
+父主题： [PDN连接拒绝Back-off策略配置]
 
 
 
@@ -38768,7 +38768,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询缺省PDN连接拒绝Back-off策略配置(SHOW DEFAULT PDN REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询拒绝PDN连接建立时，Back-off策略的缺省配置。 
@@ -38776,15 +38776,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPDNREJBACKOFFPLY|支持PDN连接拒绝Back-off策略控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME是否支持PDN连接拒绝Back-off策略控制。
 CARRYBACKOFF|携带Back-off timer|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置MME在PDN connectivity reject消息中是否携带Back-off timer。
@@ -38796,7 +38796,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询缺省PDN连接拒绝Back-off策略配置。 
@@ -38825,7 +38825,7 @@ SHOW DEFAULT PDN REJ BACKOFF;
 
 
 
-父主题： [PDN连接拒绝Back-off策略配置](../../zh-CN/tree/N_12697431.html)
+父主题： [PDN连接拒绝Back-off策略配置]
 
 
 
@@ -38848,7 +38848,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增PDN连接拒绝Back-off策略配置(ADD PDN REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增拒绝PDN连接建立时，Back-off策略的配置。当附着或者PDN连接由于非拥塞控制被拒绝，需要根据APN/ESM原因灵活配置MME在PDN connectivity reject消息中是否携带Back-off timer时，使用该命令进行配置。 
@@ -38856,7 +38856,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 附着或者PDN连接请求由于拥塞控制被拒绝时，PDN connectivity reject消息中Back-off timer的携带不受本命令控制。 
@@ -38885,10 +38885,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 ESMCAUSE|ESM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:ALLCAUSE。|ESM原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDN type29: user authentication or authorization failed30: request rejected by Serving GW or PDN GW31: request rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: PTI already in use38: network failure53: ESM information not received55: multiple PDN connections for a given APN not allowed66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -38901,7 +38901,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增PDN连接拒绝Back-off策略配置，APN名称为zte，ESM原因为ALL CAUSE，APN未签约时不携带Back-off timer。 
@@ -38916,7 +38916,7 @@ ADD PDN REJ BACKOFF:APN="zte",ESMCAUSE="ALLCAUSE",CARRYBACKOFF="NO";
 
 
 
-父主题： [PDN连接拒绝Back-off策略配置](../../zh-CN/tree/N_12697431.html)
+父主题： [PDN连接拒绝Back-off策略配置]
 
 
 
@@ -38939,7 +38939,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改PDN连接拒绝Back-off策略配置(SET PDN REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改拒绝PDN连接建立时，Back-off策略的配置。 
@@ -38947,15 +38947,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 ESMCAUSE|ESM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|ESM原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDN type29: user authentication or authorization failed30: request rejected by Serving GW or PDN GW31: request rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: PTI already in use38: network failure53: ESM information not received55: multiple PDN connections for a given APN not allowed66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -38968,7 +38968,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改“APN名称为zte，ESM原因为ALL CAUSE”的PDN连接拒绝Back-off策略配置记录，将APN未签约时携带Back-off timer修改为“是”。 
@@ -38983,7 +38983,7 @@ SET PDN REJ BACKOFF:APN="zte",ESMCAUSE="ALLCAUSE",CARRYBACKOFF="YES";
 
 
 
-父主题： [PDN连接拒绝Back-off策略配置](../../zh-CN/tree/N_12697431.html)
+父主题： [PDN连接拒绝Back-off策略配置]
 
 
 
@@ -39006,7 +39006,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除MME PDN连接拒绝Back-off策略配置(DEL PDN REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除拒绝PDN连接建立时，Back-off策略的配置。 
@@ -39014,15 +39014,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 ESMCAUSE|ESM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|ESM原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDN type29: user authentication or authorization failed30: request rejected by Serving GW or PDN GW31: request rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: PTI already in use38: network failure53: ESM information not received55: multiple PDN connections for a given APN not allowed66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39032,7 +39032,7 @@ ESMCAUSE|ESM原因|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除“APN名称为zte，ESM原因为ALL CAUSE”的PDN连接拒绝Back-off策略配置记录。 
@@ -39047,7 +39047,7 @@ DEL PDN REJ BACKOFF:APN="zte",ESMCAUSE="ALLCAUSE";
 
 
 
-父主题： [PDN连接拒绝Back-off策略配置](../../zh-CN/tree/N_12697431.html)
+父主题： [PDN连接拒绝Back-off策略配置]
 
 
 
@@ -39070,7 +39070,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询MME PDN连接拒绝Back-off策略配置(SHOW PDN REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询拒绝PDN连接建立时，Back-off策略的配置。 
@@ -39078,15 +39078,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 ESMCAUSE|ESM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|ESM原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDN type29: user authentication or authorization failed30: request rejected by Serving GW or PDN GW31: request rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: PTI already in use38: network failure53: ESM information not received55: multiple PDN connections for a given APN not allowed66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39096,10 +39096,10 @@ ESMCAUSE|ESM原因|参数可选性:任选参数；参数类型:枚举。参见�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~62个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 ESMCAUSE|ESM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|ESM原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDN type29: user authentication or authorization failed30: request rejected by Serving GW or PDN GW31: request rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: PTI already in use38: network failure53: ESM information not received55: multiple PDN connections for a given APN not allowed66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39112,7 +39112,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询PDN连接拒绝Back-off策略配置。 
@@ -39141,7 +39141,7 @@ SHOW PDN REJ BACKOFF;
 
 
 
-父主题： [PDN连接拒绝Back-off策略配置](../../zh-CN/tree/N_12697431.html)
+父主题： [PDN连接拒绝Back-off策略配置]
 
 
 
@@ -39164,7 +39164,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## PDP激活拒绝Back-off策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UE发起PDP激活请求，通过携带Back-off timer满足不同场景下的需求： 
@@ -39186,7 +39186,7 @@ SGSN由于其他原因拒绝PDP激活，通过在PDP激活拒绝消息中携带B
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 “PDP激活拒绝Back-off策略配置”包括： 
@@ -39208,7 +39208,7 @@ SGSN由于其他原因拒绝PDP激活，通过在PDP激活拒绝消息中携带B
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -39251,7 +39251,7 @@ SGSN由于其他原因拒绝PDP激活，通过在PDP激活拒绝消息中携带B
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -39274,7 +39274,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置缺省PDP激活拒绝Back-off策略配置(SET DEFAULT PDP REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置拒绝PDP激活时，Back-off策略的缺省配置。当PDP激活被拒绝，需要配置SGSN在PDP激活拒绝消息中是否携带Back-off timer时，使用该命令进行配置。 
@@ -39282,7 +39282,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 Back-off timer最小取值（秒）”和“Back-off timer最大取值（秒）”可以配置为不同或相同。 
@@ -39302,10 +39302,10 @@ Back-off timer最小取值（秒）”和“Back-off timer最大取值（秒）�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPDPREJBACKOFFPLY|支持PDP连接拒绝Back-off策略控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN是否支持PDP激活拒绝Back-off策略控制。
 CARRYBACKOFF|携带Back-off timer|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN在PDP激活拒绝消息中是否携带Back-off timer。
@@ -39317,7 +39317,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于设置缺省PDP激活拒绝Back-off策略配置，其中支持PDP连接拒绝Back-off策略控制，不携带Back-off timer。 
@@ -39332,7 +39332,7 @@ SET DEFAULT PDP REJ BACKOFF:SUPPDPREJBACKOFFPLY="YES",CARRYBACKOFF="NO";
 
 
 
-父主题： [PDP激活拒绝Back-off策略配置](../../zh-CN/tree/N_12697491.html)
+父主题： [PDP激活拒绝Back-off策略配置]
 
 
 
@@ -39355,7 +39355,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询缺省PDP激活拒绝Back-off策略配置(SHOW DEFAULT PDP REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询拒绝PDP激活时，Back-off策略的配置。 
@@ -39363,15 +39363,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SUPPDPREJBACKOFFPLY|支持PDP连接拒绝Back-off策略控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN是否支持PDP激活拒绝Back-off策略控制。
 CARRYBACKOFF|携带Back-off timer|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该参数用于设置SGSN在PDP激活拒绝消息中是否携带Back-off timer。
@@ -39383,7 +39383,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用于查询缺省PDP激活拒绝Back-off策略配置。 
@@ -39412,7 +39412,7 @@ SHOW DEFAULT PDP REJ BACKOFF;
 
 
 
-父主题： [PDP激活拒绝Back-off策略配置](../../zh-CN/tree/N_12697491.html)
+父主题： [PDP激活拒绝Back-off策略配置]
 
 
 
@@ -39435,7 +39435,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增PDP激活拒绝Back-off策略配置(ADD PDP REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增拒绝PDP激活时，Back-off策略的配置。当PDP激活被拒绝，需要根据APN/SM原因灵活配置SGSN在PDP激活拒绝消息中是否携带Back-off timer时，使用该命令进行配置。 
@@ -39443,7 +39443,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 “Back-off timer最小取值（秒）”和“Back-off timer最大取值（秒）”可以配置为不同或相同。 
@@ -39469,10 +39469,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 SMCAUSE|SM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。默认值:ALLCAUSE。|SM 原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDP address or PDP type29: user authentication failed30: activation rejected by GGSN, Serving GW or PDN GW31: activation rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: NSAPI already used66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39485,7 +39485,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增PDP激活拒绝Back-off策略配置，APN名称为apn1，SM原因为insufficient resources，携带Back-off timer。 
@@ -39500,7 +39500,7 @@ ADD PDP REJ BACKOFF:APN="apn1",SMCAUSE="INRESOURCES",CARRYBACKOFF="YES";
 
 
 
-父主题： [PDP激活拒绝Back-off策略配置](../../zh-CN/tree/N_12697491.html)
+父主题： [PDP激活拒绝Back-off策略配置]
 
 
 
@@ -39523,7 +39523,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改PDP激活拒绝Back-off策略配置(SET PDP REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改拒绝PDP激活时，Back-off策略的配置。 
@@ -39531,15 +39531,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 SMCAUSE|SM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|SM 原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDP address or PDP type29: user authentication failed30: activation rejected by GGSN, Serving GW or PDN GW31: activation rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: NSAPI already used66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39552,7 +39552,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改“APN名称为apn1，SM原因为insufficient resources”的PDP激活拒绝Back-off策略配置，携带Back-off timer修改为“否”。 
@@ -39567,7 +39567,7 @@ SET PDP REJ BACKOFF:APN="apn1",SMCAUSE="INRESOURCES",CARRYBACKOFF="NO";
 
 
 
-父主题： [PDP激活拒绝Back-off策略配置](../../zh-CN/tree/N_12697491.html)
+父主题： [PDP激活拒绝Back-off策略配置]
 
 
 
@@ -39590,7 +39590,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除PDP激活拒绝Back-off策略配置(DEL PDP REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除拒绝PDP激活时，Back-off策略的配置。 
@@ -39598,15 +39598,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 SMCAUSE|SM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|SM 原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDP address or PDP type29: user authentication failed30: activation rejected by GGSN, Serving GW or PDN GW31: activation rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: NSAPI already used66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39616,7 +39616,7 @@ SMCAUSE|SM原因|参数可选性:任选参数；参数类型:枚举。参见枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除“APN名称为apn1，SM原因为insufficient resources”的PDP激活拒绝Back-off策略配置。 
@@ -39631,7 +39631,7 @@ DEL PDP REJ BACKOFF:APN="apn1",SMCAUSE="INRESOURCES";
 
 
 
-父主题： [PDP激活拒绝Back-off策略配置](../../zh-CN/tree/N_12697491.html)
+父主题： [PDP激活拒绝Back-off策略配置]
 
 
 
@@ -39654,7 +39654,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询PDP激活拒绝Back-off策略配置(SHOW PDP REJ BACKOFF) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询拒绝PDP激活时，Back-off策略的配置。 
@@ -39662,15 +39662,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 SMCAUSE|SM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|SM 原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDP address or PDP type29: user authentication failed30: activation rejected by GGSN, Serving GW or PDN GW31: activation rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: NSAPI already used66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39680,10 +39680,10 @@ SMCAUSE|SM原因|参数可选性:任选参数；参数类型:枚举。参见枚�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 APN|APN名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|该参数用于设置APN NI即Network Identifier，格式为“Label1.Label2.Label3”，可包含多个的标签并且必须符合如下要求。不超过62个字符。不以“rac”、“lac”、“sgsn”或者“rnc”开头。不以“.gprs”结尾。不使用通配符“*”。
 SMCAUSE|SM原因|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|SM 原因0: ALL cause8: operator determined barring26: insufficient resources27: missing or unknown APN28: unknown PDP address or PDP type29: user authentication failed30: activation rejected by GGSN, Serving GW or PDN GW31: activation rejected, unspecified32: service option not supported33: requested service option not subscribed34: service option temporarily out of order35: NSAPI already used66: requested APN not supported in current RAT and PLMN combination95:Semantically incorrect message96:Invalid mandatory information97:Message type non-existent or not implemented98:Message type not compatible with the protocol state99:Information element non-existent or not implemented100:Conditional IE error101:Message not compatible with the protocol state111:Protocol error, unspecified112: APN restriction value incompatible with active EPS bearer context113: Multiple accesses to a PDN connection not allowed
@@ -39696,7 +39696,7 @@ MAXBACKOFF|Back-off timer最大取值（秒）|参数可选性:任选参数；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询PDP激活拒绝Back-off策略配置。 
@@ -39725,7 +39725,7 @@ SHOW PDP REJ BACKOFF;
 
 
 
-父主题： [PDP激活拒绝Back-off策略配置](../../zh-CN/tree/N_12697491.html)
+父主题： [PDP激活拒绝Back-off策略配置]
 
 
 
@@ -39748,7 +39748,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## S1MME接口管理 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当MME对接的i5GC故障或者MME自身故障时，需要闭塞本局MME，基站将UE消息转发给另外一套MME，达到触发容灾的目的。 
@@ -39756,7 +39756,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于管理S1MME 偶联，可以将偶联设置为闭塞，解闭塞。 
@@ -39764,7 +39764,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -39787,7 +39787,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -39810,7 +39810,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## HSS故障旁路配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 HSS存储了用户的签约数据，当用户接入4G时，MME从HSS获取签约数据。如果用户归属的HSS均故障，初始接入、跨制式（RAT）互操作、跨AMF/MME移动等移动性管理流程中，MME会由于无法从HSS获取到用户的签约信息，导致这些业务流程失败，从而影响数据、语音业务。 
@@ -39821,7 +39821,7 @@ HSS存储了用户的签约数据，当用户接入4G时，MME从HSS获取签约
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本配置用于配置HSS故障后旁路配置，包括旁路策略配置、本地用户最小签约配置。 
@@ -39829,7 +39829,7 @@ HSS存储了用户的签约数据，当用户接入4G时，MME从HSS获取签约
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -39862,7 +39862,7 @@ HSS故障本地签约数据配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -39885,7 +39885,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### HSS故障旁路策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 HSS存储了用户的签约数据，当用户接入4G时，MME从HSS获取签约数据。如果用户归属的HSS均故障，初始接入、跨制式（RAT）互操作、跨AMF/MME移动等移动性管理流程中，MME会由于无法从HSS获取到用户的签约信息，导致这些业务流程失败，从而影响数据、语音业务。 
@@ -39896,14 +39896,14 @@ HSS存储了用户的签约数据，当用户接入4G时，MME从HSS获取签约
 
 
 
-[](None)功能描述 
+功能描述 
 
             
             本功能用于配置HSS故障时的旁路策略，包括设置MME是否支持HSS故障时旁路用户、UE触发的附着\跟踪区更新\业务请求流程是否触发HSS恢复探测等。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -39926,7 +39926,7 @@ HSS存储了用户的签约数据，当用户接入4G时，MME从HSS获取签约
 
 
 
-父主题： [HSS故障旁路配置](../../zh-CN/tree/N_12697710.html)
+父主题： [HSS故障旁路配置]
 
 
 
@@ -39949,12 +39949,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置HSS故障旁路策略配置(SET HSSBPPLYCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置HSS故障旁路策略配置，包括设置MME是否支持HSS故障时旁路用户、DRA返回的错误响应中指示HSS故障的错误码等。
 
 
-[](None)注意事项 
+注意事项 
 
 
 该功能配置后立即生效。 
@@ -39962,10 +39962,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SPRTHSSFAULTBP|支持HSS故障旁路用户|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数用于控制MME是否支持当HSS故障时旁路用户。修改影响：当参数打开后，若MME检测到用户所述HSS故障，且用户存在有效的安全上下文，则设置用户进入旁路状态。旁路状态的用户触发业务时，业务流程跳过鉴权以及HSS交互过程，若用户无有效签约上下文，则使用本地配置的签约上下文。数据来源：本端规划。默认值：否。配置原则：无。
 ERRCODE|指示HSS故障错误码|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|参数作用：本参数用于在DRA组网模式下，MME收到DRA失败响应且失败码为本参数配置的错误码时，表示用户归属的HSS已经故障。常用错误码如下：3002：DIAMETER_UNABLE_TO_DELIVER3003：DIAMETER_REALM_NOT_SERVED5003：DIAMETER_AUTHORIZATION_REJECTED5012：DIAMETER_UNABLE_TO_COMPLY修改影响：无。数据来源：全网规划。默认值：3002。配置原则：无。
@@ -39977,7 +39977,7 @@ SCANINTERVAL|HSS恢复探测时间间隔(秒)|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置HSS故障旁路策略配置，支持HSS故障旁路用户为否，指示HSS故障错误码为666，HSS恢复探测扫描步长为30，HSS恢复探测时间间隔(秒)为50。 
@@ -39992,7 +39992,7 @@ SET HSSBPPLYCFG:SPRTHSSFAULTBP="NO",ERRCODE=666,SCANHSSSPEED=30,SCANINTERVAL=50
 
 
 
-父主题： [HSS故障旁路策略配置](../../zh-CN/tree/N_12697711.html)
+父主题： [HSS故障旁路策略配置]
 
 
 
@@ -40015,12 +40015,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询HSS故障旁路策略配置(SHOW HSSBPPLYCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询HSS故障旁路策略配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -40028,10 +40028,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SPRTHSSFAULTBP|支持HSS故障旁路用户|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：本参数用于控制MME是否支持当HSS故障时旁路用户。修改影响：当参数打开后，若MME检测到用户所述HSS故障，且用户存在有效的安全上下文，则设置用户进入旁路状态。旁路状态的用户触发业务时，业务流程跳过鉴权以及HSS交互过程，若用户无有效签约上下文，则使用本地配置的签约上下文。数据来源：本端规划。默认值：否。配置原则：无。
 ERRCODE|指示HSS故障错误码|参数可选性:任选参数；参数类型:整数。|参数作用：本参数用于在DRA组网模式下，MME收到DRA失败响应且失败码为本参数配置的错误码时，表示用户归属的HSS已经故障。常用错误码如下：3002：DIAMETER_UNABLE_TO_DELIVER3003：DIAMETER_REALM_NOT_SERVED5003：DIAMETER_AUTHORIZATION_REJECTED5012：DIAMETER_UNABLE_TO_COMPLY修改影响：无。数据来源：全网规划。默认值：3002。配置原则：无。
@@ -40043,7 +40043,7 @@ SCANINTERVAL|HSS恢复探测时间间隔(秒)|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询HSS故障旁路策略配置。 
@@ -40072,7 +40072,7 @@ SHOW HSSBPPLYCFG
 
 
 
-父主题： [HSS故障旁路策略配置](../../zh-CN/tree/N_12697711.html)
+父主题： [HSS故障旁路策略配置]
 
 
 
@@ -40095,7 +40095,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### EPS签约QoS模板配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为了保证用户所属HSS故障时用户基本的通信业务需求，可以通过本地配置用户签约数据。当检测到用户所属HSS故障时，直接使用本地配置的签约数据，继续用户业务流程。 
@@ -40103,7 +40103,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置EPS签约QoS模板。 
@@ -40111,7 +40111,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -40144,7 +40144,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [HSS故障旁路配置](../../zh-CN/tree/N_12697710.html)
+父主题： [HSS故障旁路配置]
 
 
 
@@ -40167,12 +40167,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增EPS签约QoS模板配置(ADD EPSSUBQOSPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增EPS签约QoS模板。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -40189,10 +40189,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|EPS签约QoS模板ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 QCI|服务质量业务类别标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|参数作用：该参数为用户QoS属性中的QoS业务类别标识（QoS Class Identifier，QCI）。QCI用于指示各EPS承载在确定分配和保留时的重要性。每个QCI值的具体说明，参见3GPP TS 23.203协议，6.1.7.2节描述。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
@@ -40206,7 +40206,7 @@ PREEMPVUL|被抢占能力标识|参数可选性:必选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增EPS签约QoS模板配置，EPS签约QoS模板ID为1，服务质量业务类别标识为255，优先级为2，抢占能力标识为启用，被抢占能力标识为禁用。 
@@ -40221,7 +40221,7 @@ ADD EPSSUBQOSPROCFG:PROID=1,QCI=255,ARP="2"-"ENABLE"-"DISABLE"
 
 
 
-父主题： [EPS签约QoS模板配置](../../zh-CN/tree/N_12697712.html)
+父主题： [EPS签约QoS模板配置]
 
 
 
@@ -40244,12 +40244,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改EPS签约QoS模板配置(SET EPSSUBQOSPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改指定EPS签约QoS模板中的签约信息。
 
 
-[](None)注意事项 
+注意事项 
 
 
 配置完成，且传送变化表或者全部表后生效。 
@@ -40257,10 +40257,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|EPS签约QoS模板ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 QCI|服务质量业务类别标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~255。|参数作用：该参数为用户QoS属性中的QoS业务类别标识（QoS Class Identifier，QCI）。QCI用于指示各EPS承载在确定分配和保留时的重要性。每个QCI值的具体说明，参见3GPP TS 23.203协议，6.1.7.2节描述。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
@@ -40274,7 +40274,7 @@ PREEMPVUL|被抢占能力标识|参数可选性:必选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改EPS签约QoS模板配置，EPS签约QoS模板ID为1，服务质量业务类别标识为123，优先级为5，抢占能力标识为启用，被抢占能力标识为禁用。 
@@ -40289,7 +40289,7 @@ SET EPSSUBQOSPROCFG:PROID=1,QCI=123,ARP="5"-"ENABLE"-"DISABLE"
 
 
 
-父主题： [EPS签约QoS模板配置](../../zh-CN/tree/N_12697712.html)
+父主题： [EPS签约QoS模板配置]
 
 
 
@@ -40312,12 +40312,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除EPS签约QoS模板配置(DEL EPSSUBQOSPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除指定EPS签约QoS模板。
 
 
-[](None)注意事项 
+注意事项 
 
 
 配置完成，且传送变化表或者全部表后生效。 
@@ -40325,10 +40325,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|EPS签约QoS模板ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~2048。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 
@@ -40337,7 +40337,7 @@ PROID|EPS签约QoS模板ID|参数可选性:必选参数；参数类型:整数；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除EPS签约QoS模板配置，EPS签约QoS模板ID为1。 
@@ -40352,7 +40352,7 @@ DEL EPSSUBQOSPROCFG:PROID=1
 
 
 
-父主题： [EPS签约QoS模板配置](../../zh-CN/tree/N_12697712.html)
+父主题： [EPS签约QoS模板配置]
 
 
 
@@ -40375,12 +40375,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询EPS签约QoS模板配置(SHOW EPSSUBQOSPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询EPS签约QoS模板配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -40388,10 +40388,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|EPS签约QoS模板ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~2048。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 
@@ -40400,10 +40400,10 @@ PROID|EPS签约QoS模板ID|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|EPS签约QoS模板ID|参数可选性:必选参数；参数类型:整数。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 QCI|服务质量业务类别标识|参数可选性:必选参数；参数类型:整数。|参数作用：该参数为用户QoS属性中的QoS业务类别标识（QoS Class Identifier，QCI）。QCI用于指示各EPS承载在确定分配和保留时的重要性。每个QCI值的具体说明，参见3GPP TS 23.203协议，6.1.7.2节描述。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
@@ -40416,7 +40416,7 @@ PREEMPVUL|被抢占能力标识|参数可选性:必选参数；参数类型:枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPS签约QoS模板配置，EPS签约QoS模板ID为1。 
@@ -40445,7 +40445,7 @@ SHOW EPSSUBQOSPROCFG:PROID=1
 
 
 
-父主题： [EPS签约QoS模板配置](../../zh-CN/tree/N_12697712.html)
+父主题： [EPS签约QoS模板配置]
 
 
 
@@ -40468,7 +40468,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### APN签约模板配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为了保证用户所属HSS故障时用户基本的通信业务需求，可以通过本地配置用户签约数据。当检测到用户所属HSS故障时，直接使用本地配置的签约数据，继续用户业务流程。 
@@ -40476,7 +40476,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于配置签约APN模板配置。 
@@ -40487,7 +40487,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -40520,7 +40520,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [HSS故障旁路配置](../../zh-CN/tree/N_12697710.html)
+父主题： [HSS故障旁路配置]
 
 
 
@@ -40543,12 +40543,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增APN签约模板配置(ADD APNSUBPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增APN签约模板，或者在已有的签约APN模板中新增签约APN。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -40565,10 +40565,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|APN签约模板ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|参数作用：该参数用于配置签约的APN名称。修改影响：无。数据来源：全网规划。默认值：无。配置原则：大小写不敏感，若配置的APN名称中包含大写字母，则传送到前台时自动转为小写。
@@ -40591,7 +40591,7 @@ EPSIWK|是否允许5G系统互操作|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN签约模板配置，APN签约模板ID为1，APN为APN1，PDN类型为IPv4和IPv6。 
@@ -40606,7 +40606,7 @@ ADD APNSUBPROCFG:PROID=1,APN="APN1",CNTXID=2,PDNTYPE="IPv4AndIPv6"
 
 
 
-父主题： [APN签约模板配置](../../zh-CN/tree/N_12697713.html)
+父主题： [APN签约模板配置]
 
 
 
@@ -40629,12 +40629,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改APN签约模板配置(SET APNSUBPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改指定APN签约模板中指定APN的签约信息。
 
 
-[](None)注意事项 
+注意事项 
 
 
 配置完成，且传送变化表或者全部表后生效。 
@@ -40642,10 +40642,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|APN签约模板ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|参数作用：该参数用于配置签约的APN名称。修改影响：无。数据来源：全网规划。默认值：无。配置原则：大小写不敏感，若配置的APN名称中包含大写字母，则传送到前台时自动转为小写。
@@ -40668,7 +40668,7 @@ EPSIWK|是否允许5G系统互操作|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改APN签约模板配置，将APN签约模板ID为1，APN为APN1的PDN类型修改为IPv4。 
@@ -40683,7 +40683,7 @@ SET APNSUBPROCFG:PROID=1,APN="APN1",PDNTYPE="IPv4"
 
 
 
-父主题： [APN签约模板配置](../../zh-CN/tree/N_12697713.html)
+父主题： [APN签约模板配置]
 
 
 
@@ -40706,12 +40706,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除APN签约模板配置(DEL APNSUBPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除指定APN签约模板中的指定APN。
 
 
-[](None)注意事项 
+注意事项 
 
 
 配置完成，且传送变化表或者全部表后生效。 
@@ -40719,10 +40719,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|APN签约模板ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|参数作用：该参数用于配置签约的APN名称。修改影响：无。数据来源：全网规划。默认值：无。配置原则：大小写不敏感，若配置的APN名称中包含大写字母，则传送到前台时自动转为小写。
@@ -40732,7 +40732,7 @@ APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN签约模板配置，将APN签约模板ID为1，APN为APN1的数据删除。 
@@ -40747,7 +40747,7 @@ DEL APNSUBPROCFG:PROID=1,APN="APN1"
 
 
 
-父主题： [APN签约模板配置](../../zh-CN/tree/N_12697713.html)
+父主题： [APN签约模板配置]
 
 
 
@@ -40770,12 +40770,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询APN签约模板配置(SHOW APNSUBPROCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询APN签约模板配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -40783,10 +40783,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|APN签约模板ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~1024。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:1~100个字符。|参数作用：该参数用于配置签约的APN名称。修改影响：无。数据来源：全网规划。默认值：无。配置原则：大小写不敏感，若配置的APN名称中包含大写字母，则传送到前台时自动转为小写。
@@ -40796,10 +40796,10 @@ APN|APN|参数可选性:任选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PROID|APN签约模板ID|参数可选性:必选参数；参数类型:整数。|参数作用：该参数用于配置EPS签约QoS模板ID。修改影响：无。数据来源：本端规划。默认值：无。配置原则：无。
 APN|APN|参数可选性:必选参数；参数类型:字符型。|参数作用：该参数用于配置签约的APN名称。修改影响：无。数据来源：全网规划。默认值：无。配置原则：大小写不敏感，若配置的APN名称中包含大写字母，则传送到前台时自动转为小写。
@@ -40821,7 +40821,7 @@ EPSIWK|是否允许5G系统互操作|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询APN签约模板配置APN签约模板ID为1的数据。 
@@ -40850,7 +40850,7 @@ SHOW APNSUBPROCFG:PROID=1
 
 
 
-父主题： [APN签约模板配置](../../zh-CN/tree/N_12697713.html)
+父主题： [APN签约模板配置]
 
 
 
@@ -40873,7 +40873,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### HSS故障本地签约数据配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 为了保证用户所属HSS故障时用户基本的通信业务需求，可以通过本地配置用户签约数据。当检测到用户所属HSS故障时，直接使用本地配置的签约数据，继续用户业务流程。 
@@ -40881,7 +40881,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能用于按号段进行本地签约基本数据配置。 
@@ -40892,7 +40892,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -40925,7 +40925,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [HSS故障旁路配置](../../zh-CN/tree/N_12697710.html)
+父主题： [HSS故障旁路配置]
 
 
 
@@ -40948,12 +40948,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增HSS故障本地签约数据配置(ADD HSSFAULTLOCALSUBCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于新增指定IMSI号段对应的本地签约数据。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -40970,10 +40970,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|参数作用：该参数用于配置用户的IMSI号段，该号段下用户本地签约配置遵循本配置记录。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
 UEAMBR|UE AMBR|参数可选性:任选参数；参数类型:复合参数|参数作用：该参数用于配置用户签约的UE AMBR。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
@@ -40994,7 +40994,7 @@ SUBAPNPROID|APN签约模板ID|参数可选性:任选参数；参数类型:整数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增HSS故障本地签约数据配置，IMSI号段为999，上行UE AMBR为4294967295，上行UE AMBR单位为bps，下行UE AMBR为4294967295，下行UE AMBR单位为bps。 
@@ -41009,7 +41009,7 @@ ADD HSSFAULTLOCALSUBCFG:IMSISEG="999",UEAMBR="4294967295"-"bps"-"4294967295"-"bp
 
 
 
-父主题： [HSS故障本地签约数据配置](../../zh-CN/tree/N_12697714.html)
+父主题： [HSS故障本地签约数据配置]
 
 
 
@@ -41032,12 +41032,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 修改HSS故障本地签约数据配置(SET HSSFAULTLOCALSUBCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于修改HSS故障本地签约数据配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 配置完成，且传送变化表或者全部表后生效。 
@@ -41045,10 +41045,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|参数作用：该参数用于配置用户的IMSI号段，该号段下用户本地签约配置遵循本配置记录。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
 UEAMBR|UE AMBR|参数可选性:任选参数；参数类型:复合参数|参数作用：该参数用于配置用户签约的UE AMBR。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
@@ -41069,7 +41069,7 @@ SUBAPNPROID|APN签约模板ID|参数可选性:任选参数；参数类型:整数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改HSS故障本地签约数据配置，IMSI号段为999，上行UE AMBR为128，上行UE AMBR单位为kbps，下行UE AMBR为256，下行UE AMBR单位为kbps。 
@@ -41084,7 +41084,7 @@ SET HSSFAULTLOCALSUBCFG:IMSISEG="999",UEAMBR="128"-"Kbps"-"256"-"Kbps"
 
 
 
-父主题： [HSS故障本地签约数据配置](../../zh-CN/tree/N_12697714.html)
+父主题： [HSS故障本地签约数据配置]
 
 
 
@@ -41107,12 +41107,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除HSS故障本地签约数据配置(DEL HSSFAULTLOCALSUBCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除HSS故障本地签约数据配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 配置完成，且传送变化表或者全部表后生效。 
@@ -41120,10 +41120,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参数范围为:1~15个字符。|参数作用：该参数用于配置用户的IMSI号段，该号段下用户本地签约配置遵循本配置记录。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
 
@@ -41132,7 +41132,7 @@ IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除HSS故障本地签约数据配置，IMSI号段为999。 
@@ -41147,7 +41147,7 @@ DEL HSSFAULTLOCALSUBCFG:IMSISEG="999"
 
 
 
-父主题： [HSS故障本地签约数据配置](../../zh-CN/tree/N_12697714.html)
+父主题： [HSS故障本地签约数据配置]
 
 
 
@@ -41170,12 +41170,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除HSS故障本地签约数据配置(SHOW HSSFAULTLOCALSUBCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询HSS故障本地签约数据配置。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -41183,10 +41183,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:任选参数；参数类型:字符型；参数范围为:1~15个字符。|参数作用：该参数用于配置用户的IMSI号段，该号段下用户本地签约配置遵循本配置记录。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
 
@@ -41195,10 +41195,10 @@ IMSISEG|IMSI号段|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 IMSISEG|IMSI号段|参数可选性:必选参数；参数类型:字符型。|参数作用：该参数用于配置用户的IMSI号段，该号段下用户本地签约配置遵循本配置记录。修改影响：无。数据来源：全网规划。默认值：无。配置原则：无。
 ULUEAMBR|上行UE AMBR|参数可选性:必选参数；参数类型:整数。|参数作用：该参数用于配置上行UE AMBR。本参数和"上行UE AMBR单位"结合，得到最终的上行UE AMBR。修改影响：当参数设置为4294967295，表示用户未配置签约上行UE AMBR。数据来源：全网规划。默认值：4294967295 。配置原则：无。
@@ -41218,7 +41218,7 @@ SUBAPNPROID|APN签约模板ID|参数可选性:任选参数；参数类型:整数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询HSS故障本地签约数据配置，IMSI号段为999。 
@@ -41247,7 +41247,7 @@ SHOW HSSFAULTLOCALSUBCFG:IMSISEG="999"
 
 
 
-父主题： [HSS故障本地签约数据配置](../../zh-CN/tree/N_12697714.html)
+父主题： [HSS故障本地签约数据配置]
 
 
 
@@ -41270,7 +41270,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## MME分级备份策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 备份功能是指将本MME的用户数据同步到备份MME，一旦本MME发生故障，备份MME可以使用已经同步的用户数据快速接管用户，恢复用户业务。 
@@ -41278,7 +41278,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 分级备份功能是指MME可以配置一些策略，对用户进行区别，将部分用户的数据，同步到备份MME，而其它用户的数据不会被同步，在本MME发生故障时，这些用户可以更快的恢复业务。 
@@ -41313,7 +41313,7 @@ IMSI/MSISDN
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -41346,7 +41346,7 @@ APN分级备份配置
 
 
 
-父主题： [高级配置](../../zh-CN/tree/N_126086_operation_cm_mml_umacV4_cm_combo_gngp_advance.html)
+父主题： [高级配置]
 
 
 
@@ -41369,7 +41369,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MME分级备份全局策略配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 分级备份功能是指MME可以配置一些策略，对用户进行区别，将筛选出来的部分用户的数据，同步到备份MME，而其它用户的数据不会被同步，在本MME发生故障时，这些用户可以更快的恢复业务。 
@@ -41380,7 +41380,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于设置MME是否开启分级备份功能，以及变化速率等全局配置。 
@@ -41388,7 +41388,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -41411,7 +41411,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME分级备份策略配置](../../zh-CN/tree/N_12698101.html)
+父主题： [MME分级备份策略配置]
 
 
 
@@ -41434,7 +41434,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置分级备份全局策略配置(SET MMEPOLYDRCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 设置是否开启各种分级备份功能，以及变化速率等全局配置。 
@@ -41442,7 +41442,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -41459,10 +41459,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FUNC|分级备份功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置MME是否开启分级备份功能以及开启MME分级部分功能后，采用的备份策略。备份策略可以是MME仅备份IMS用户或者MME根据不同的条件来区别备份哪些用户。
 TIME|分级配置变化生效时间（s）|参数可选性:任选参数；参数类型:整数；参数范围为:120~3600。|参数作用：该参数用于配置开启MME分级备份功能后，MME通过扫描的方式修改用户分级备份策略所需要的时间。MME是按SC的粒度来计算扫描速度的，各个SC（Service Component，服务组件）各自计算相应的扫描速度。生效时间需要在中兴通讯技术支持的指导下修改，避免生效时间设置过短，导致扫描太快，影响系统性能。
@@ -41472,7 +41472,7 @@ TIME|分级配置变化生效时间（s）|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置分级备份全局策略配置，分级备份功能为关闭，分级配置变化生效时间为600s。 
@@ -41487,7 +41487,7 @@ SET MMEPOLYDRCFG:FUNC="Close",TIME="600"
 
 
 
-父主题： [MME分级备份全局策略配置](../../zh-CN/tree/N_12698102.html)
+父主题： [MME分级备份全局策略配置]
 
 
 
@@ -41510,7 +41510,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询分级备份全局策略配置(SHOW  MMEPOLYDRCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询已配置的全局分级备份策略。 
@@ -41518,7 +41518,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令执行后立即生效。 
@@ -41526,10 +41526,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 FUNC|分级备份功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|参数作用：该参数用于配置MME是否开启分级备份功能以及开启MME分级部分功能后，采用的备份策略。备份策略可以是MME仅备份IMS用户或者MME根据不同的条件来区别备份哪些用户。
 TIME|分级配置变化生效时间（s）|参数可选性:任选参数；参数类型:整数；参数范围为:|参数作用：该参数用于配置开启MME分级备份功能后，MME通过扫描的方式修改用户分级备份策略所需要的时间。MME是按SC的粒度来计算扫描速度的，各个SC（Service Component，服务组件）各自计算相应的扫描速度。生效时间需要在中兴通讯技术支持的指导下修改，避免生效时间设置过短，导致扫描太快，影响系统性能。
@@ -41539,7 +41539,7 @@ TIME|分级配置变化生效时间（s）|参数可选性:任选参数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询分级备份全局策略配置。 
@@ -41565,7 +41565,7 @@ SHOW MMEPOLYDRCFG;
 
 
 
-父主题： [MME分级备份全局策略配置](../../zh-CN/tree/N_12698102.html)
+父主题： [MME分级备份全局策略配置]
 
 
 
@@ -41588,7 +41588,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### MSISDN号段分级备份配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 此命令用于配置在MME开启分级备份功能的情况下，MME支持根据MSISDN号段来配置分级备份策略，即配置了某个MSISDN号段，MME就会将此MSISDN号段用户的数据，同步到备份MME。 
@@ -41596,7 +41596,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 可以增加、删除查看MSISDN号段配置。 
@@ -41604,7 +41604,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -41632,7 +41632,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME分级备份策略配置](../../zh-CN/tree/N_12698101.html)
+父主题： [MME分级备份策略配置]
 
 
 
@@ -41655,7 +41655,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增MSISDN号段分级备份配置(ADD CONDISDN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于配置在MME开启分级备份功能的情况下，MME支持根据MSISDN号段来配置分级备份策略，即配置了某个MSISDN号段，MME就会将此MSISDN号段用户的数据，同步到备份MME。 
@@ -41663,7 +41663,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -41688,10 +41688,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定MSISDN号段分级备份策略的编号。
 MSISDN|MSISDN|参数可选性:必选参数；参数类型:字符型；参数范围为:5~15个字符。|本参数用于配置MSISDN号段。
@@ -41701,7 +41701,7 @@ MSISDN|MSISDN|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增MSISDN号段分级备份配置，ID为1，MSISDN为8613675138501。 
@@ -41716,7 +41716,7 @@ ADD CONDISDN:ID=1,MSISDN="8613675138501";
 
 
 
-父主题： [MSISDN号段分级备份配置](../../zh-CN/tree/N_12698103.html)
+父主题： [MSISDN号段分级备份配置]
 
 
 
@@ -41739,7 +41739,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除MSISDN号段分级备份配置(DEL CONDISDN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 删除已配置的ISDN号段。 
@@ -41747,7 +41747,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令执行后立即生效。 
@@ -41755,10 +41755,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定MSISDN号段分级备份策略的编号。
 
@@ -41767,7 +41767,7 @@ ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~409
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除MSISDN号段分级备份配置，ID为1。 
@@ -41782,7 +41782,7 @@ DEL CONDIMSI:ID=1;
 
 
 
-父主题： [MSISDN号段分级备份配置](../../zh-CN/tree/N_12698103.html)
+父主题： [MSISDN号段分级备份配置]
 
 
 
@@ -41805,7 +41805,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询MSISDN号段分级备份配置(SHOW CONDISDN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询已配置的ISDN号段。 
@@ -41813,7 +41813,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令执行后立即生效。 
@@ -41821,10 +41821,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定MSISDN号段分级备份策略的编号。
 
@@ -41833,10 +41833,10 @@ ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~409
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定MSISDN号段分级备份策略的编号。
 MSISDN|MSISDN|参数可选性:必选参数；参数类型:字符型。|本参数用于配置MSISDN号段。
@@ -41846,7 +41846,7 @@ MSISDN|MSISDN|参数可选性:必选参数；参数类型:字符型。|本参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MSISDN号段分级备份配置，ID为1。 
@@ -41875,7 +41875,7 @@ SHOW CONDISDN:ID=1;
 
 
 
-父主题： [MSISDN号段分级备份配置](../../zh-CN/tree/N_12698103.html)
+父主题： [MSISDN号段分级备份配置]
 
 
 
@@ -41898,7 +41898,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### IMSI号段分级备份配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 此命令用于配置在MME开启分级备份功能的情况下，MME支持根据IMSI号段来配置分级备份策略，即配置了某个IMSI号段，MME就会将此IMSI号段用户的数据，同步到备份MME。 
@@ -41906,7 +41906,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 可以增加、删除查看已经配置的IMSI号段。 
@@ -41914,7 +41914,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -41942,7 +41942,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME分级备份策略配置](../../zh-CN/tree/N_12698101.html)
+父主题： [MME分级备份策略配置]
 
 
 
@@ -41965,7 +41965,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增IMSI号段分级备份配置(ADD CONDIMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于配置在MME开启分级备份功能的情况下，MME支持根据IMSI号段来配置分级备份策略，即配置了某个IMSI号段，MME就会将此IMSI号段用户的数据，同步到备份MME。 
@@ -41973,7 +41973,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -41998,10 +41998,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定IMSI号段分级备份策略的编号。
 IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围为:5~15个字符。|本参数用于配置IMSI号段。
@@ -42011,7 +42011,7 @@ IMSI|IMSI|参数可选性:必选参数；参数类型:字符型；参数范围�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增IMSI号段分级备份配置，ID为1，IMSI为460020012700100。 
@@ -42026,7 +42026,7 @@ ADD CONDIMSI:ID=1,IMSI="460020012700100";
 
 
 
-父主题： [IMSI号段分级备份配置](../../zh-CN/tree/N_12698104.html)
+父主题： [IMSI号段分级备份配置]
 
 
 
@@ -42049,7 +42049,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除IMSI号段分级备份配置(DEL CONDIMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于删除已配置的IMSI号段。 
@@ -42057,7 +42057,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令执行后立即生效。 
@@ -42065,10 +42065,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定IMSI号段分级备份策略的编号。
 
@@ -42077,7 +42077,7 @@ ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~409
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除IMSI号段分级备份配置，ID为1。 
@@ -42092,7 +42092,7 @@ DEL CONDIMSI:ID=1;
 
 
 
-父主题： [IMSI号段分级备份配置](../../zh-CN/tree/N_12698104.html)
+父主题： [IMSI号段分级备份配置]
 
 
 
@@ -42115,7 +42115,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询IMSI号段分级备份配置(SHOW CONDIMSI) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 此命令用于查询已配置的IMSI号段。 
@@ -42123,7 +42123,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令执行后立即生效。 
@@ -42131,10 +42131,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定IMSI号段分级备份策略的编号。
 
@@ -42143,10 +42143,10 @@ ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~409
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:任选参数；参数类型:整数；参数范围为:1~4096。|参数作用：该参数用于配置指定IMSI号段分级备份策略的编号。
 IMSI|IMSI|参数可选性:任选参数；参数类型:字符型。|本参数用于配置IMSI号段。
@@ -42156,7 +42156,7 @@ IMSI|IMSI|参数可选性:任选参数；参数类型:字符型。|本参数用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询IMSI号段分级备份配置，ID为1。 
@@ -42185,7 +42185,7 @@ SHOW CONDIMSI:ID=1;
 
 
 
-父主题： [IMSI号段分级备份配置](../../zh-CN/tree/N_12698104.html)
+父主题： [IMSI号段分级备份配置]
 
 
 
@@ -42208,7 +42208,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### APN分级备份配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 该功能用于配置指定APN的分级备份策略，配置了某个APN，当用户签约的APN中包含配置的APN时，MME就会将此类用户的数据，同步到备份AMF。 
@@ -42216,7 +42216,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本功能主要用于增加、删除和查询指定APN配置的分级备份策略。 
@@ -42224,7 +42224,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -42252,7 +42252,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [MME分级备份策略配置](../../zh-CN/tree/N_12698101.html)
+父主题： [MME分级备份策略配置]
 
 
 
@@ -42275,7 +42275,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 新增APN分级备份配置(ADD CONDAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 MME支持配置指定APN的分级备份策略，即配置了某个APN，当用户签约的APN中包含配置的APN时，MME就会将此类用户的数据，同步到备份MME。 
@@ -42283,7 +42283,7 @@ MME支持配置指定APN的分级备份策略，即配置了某个APN，当用�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -42312,10 +42312,10 @@ MME支持配置指定APN的分级备份策略，即配置了某个APN，当用�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|该参数用于配置指定APN分级备份策略的编号。
 APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:1~99个字符。|本参数用于配置分级备份策略的APN，只需配置NI部分。
@@ -42325,7 +42325,7 @@ APN|APN|参数可选性:必选参数；参数类型:字符型；参数范围为:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增APN分级备份配置，ID为1，APN为ims。 
@@ -42340,7 +42340,7 @@ ADD CONDAPN:ID=1,APN="ims";
 
 
 
-父主题： [APN分级备份配置](../../zh-CN/tree/N_12698105.html)
+父主题： [APN分级备份配置]
 
 
 
@@ -42363,7 +42363,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 删除APN分级备份配置(DEL CONDAPN) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 删除已配置的APN。 
@@ -42371,7 +42371,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 此命令执行后，结果立即生效。 
@@ -42379,10 +42379,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~1024。|该参数用于配置指定APN分级备份策略的编号。
 
@@ -42391,7 +42391,7 @@ ID|ID|参数可选性:必选参数；参数类型:整数；参数范围为:1~102
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除APN分级备份配置，ID为1。 
@@ -42406,7 +42406,7 @@ DEL CONDAPN:ID=1;
 
 
 
-父主题： [APN分级备份配置](../../zh-CN/tree/N_12698105.html)
+父主题： [APN分级备份配置]
 
 
 
@@ -42429,7 +42429,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # 安全变量 
 
 
-[](None)背景知识 
+背景知识 
 
 
 系统运行过程中，需要设置安全相关的变量参数，以保障系统运行过程功能中灵活控制，保障系统安全。 
@@ -42437,7 +42437,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 安全变量的配置功能范围包括：鉴权参数、短消息参数、移动性管理参数、系统控制参数、LLC相关参数、分组域参数、GTP参数等配置。 
@@ -42445,7 +42445,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -42493,7 +42493,7 @@ GTP参数配置
 
 
 
-父主题： [配置管理](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm.html)
+父主题： [配置管理]
 
 
 
@@ -42516,7 +42516,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 短消息参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SGSN在处理短消息业务的过程中，为保障短消息业务成功，需要增加相关的短消息控制参数，来控制短消息是否进行分包，消息重发以及消息参数携带等。 
@@ -42524,7 +42524,7 @@ SGSN在处理短消息业务的过程中，为保障短消息业务成功，需�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 短消息参数配置主要完成的功能如下： 
@@ -42551,7 +42551,7 @@ SGSN在处理短消息业务的过程中，为保障短消息业务成功，需�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -42574,7 +42574,7 @@ SGSN在处理短消息业务的过程中，为保障短消息业务成功，需�
 
 
 
-父主题： [安全变量](../../zh-CN/tree/N_126087_operation_cm_mml_umacV4_cm_combo_gngp_sv.html)
+父主题： [安全变量]
 
 
 
@@ -42597,12 +42597,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置短消息参数(SET SMS PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置短消息参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -42610,10 +42610,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSPACKET|短消息分包长度|参数可选性:任选参数；参数类型:整数；参数范围为:1~200。|该安全变量用于设置短消息分包长度。29002协议规定，向短消息中心发送ForwardSMS Request消息时，根据终端发送短消息包长度和安全变量配置的短消息分包长度进行比较。如果超出设置的短消息分包长度，那么先向短消息中心发送map open request对话，对话建立后，再发送ForwardSMS Request消息给短消息中心。
 DLSMSRETRIES|下行短消息重发次数|参数可选性:任选参数；参数类型:整数；参数范围为:1~3。|该安全变量用于设置下行短消息重发次数。在SGSN处理短消息起呼和短消息终呼时，在SGSN下发CPDATA REQUEST消息给UE时，设置等待CPDATA ACK定时器，等待UE回 CPDATA ACK消息，定时器超时后，根据此安全变量判断是否重新发送CPDATA REQUEST。如果下发CPDATA REQUEST次数小于安全变量的设置的次数，那么重新下发CPDATA REQUEST，重新设置等待定时器。等待UE的响应。如果下发CPDATA REQUEST次数大于安全变量的设置的次数，那么通知短消息中心短消息发送失败。
@@ -42624,7 +42624,7 @@ GPRSSMSMO|GPRS的起呼短信是否携带IMSI|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置短消息参数，短消息分包长度为1，下行短消息重发次数为1。 
@@ -42639,7 +42639,7 @@ SET SMS PARAMETER:SMSPACKET=1,DLSMSRETRIES=1;
 
 
 
-父主题： [短消息参数配置](../../zh-CN/tree/N_1254601.html)
+父主题： [短消息参数配置]
 
 
 
@@ -42662,12 +42662,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询短消息参数(SHOW SMS PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询短消息参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -42675,10 +42675,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSPACKET|短消息分包长度|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置短消息分包长度。29002协议规定，向短消息中心发送ForwardSMS Request消息时，根据终端发送短消息包长度和安全变量配置的短消息分包长度进行比较。如果超出设置的短消息分包长度，那么先向短消息中心发送map open request对话，对话建立后，再发送ForwardSMS Request消息给短消息中心。
 DLSMSRETRIES|下行短消息重发次数|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置下行短消息重发次数。在SGSN处理短消息起呼和短消息终呼时，在SGSN下发CPDATA REQUEST消息给UE时，设置等待CPDATA ACK定时器，等待UE回 CPDATA ACK消息，定时器超时后，根据此安全变量判断是否重新发送CPDATA REQUEST。如果下发CPDATA REQUEST次数小于安全变量的设置的次数，那么重新下发CPDATA REQUEST，重新设置等待定时器。等待UE的响应。如果下发CPDATA REQUEST次数大于安全变量的设置的次数，那么通知短消息中心短消息发送失败。
@@ -42689,7 +42689,7 @@ GPRSSMSMO|GPRS的起呼短信是否携带IMSI|参数可选性:任选参数；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询短消息参数。 
@@ -42718,7 +42718,7 @@ SHOW SMS PARAMETER
 
 
 
-父主题： [短消息参数配置](../../zh-CN/tree/N_1254601.html)
+父主题： [短消息参数配置]
 
 
 
@@ -42741,7 +42741,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 移动管理参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在SGSN/MME网元中，移动性管理模块主要负责移动性管理（MM）子层协议的功能，包括用户的连接管理、接入控制、移动性管理、以及NAS层安全等。 
@@ -42755,7 +42755,7 @@ MME的移动性管理模块（EMM）主要负责处理协议（3GPP-24008-950 �
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 本命令用来设置SGSN/MME移动性管理相关的参数。包括协议（3GPP-24008-950 “11.2 Timers of mobility management "/3GPP-24301-950 “10.2 Timers of EPS mobility management"）规定的由SGSN/MME下发给UE的相关定时器时长，SGSN/MME自身的相关定时器时长以及是否支持Iu延迟释放，EPLMN组数等其它一些重要的移动性管理参数。 
@@ -42763,7 +42763,7 @@ MME的移动性管理模块（EMM）主要负责处理协议（3GPP-24008-950 �
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -42786,7 +42786,7 @@ MME的移动性管理模块（EMM）主要负责处理协议（3GPP-24008-950 �
 
 
 
-父主题： [安全变量](../../zh-CN/tree/N_126087_operation_cm_mml_umacV4_cm_combo_gngp_sv.html)
+父主题： [安全变量]
 
 
 
@@ -42809,20 +42809,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置移动管理参数(SET MOBILE MANAGEMENT) 
 
 
-[](None)命令功能 
+命令功能 
 
 本命令用于设置移动管理参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RTUPDATEPERIOD|路由周期性更新定时器(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:60~11160。|该定时器用于设置指示MS发起周期性路由更新的时间间隔。SGSN通过attach accept消息或者routing area update accept消息携带Periodic RA update timer字段，将该时长传递给MS，MS收到后将此时长作为MS周期性路由更新时长。Iu模式时，MS从PMM-CONNECTED变为PMM-IDLE mode时，该定时器重置并被启动，当MS重新进入PMM-CONNECTED时停止。A/Gb模式时，当MS进入Standby状态时，该定时器重置并被启动，当MS进入READY态时，定时器停止。当定时器超时时，MS发起周期性路由更新。
 READYTIMER|Ready定时器时长(秒)|参数可选性:任选参数；参数类型:整数；参数范围为:30~11160。|该定时器用于设置READY定时器的时长。SGSN通过attach accept消息或者routing area update accept消息携带Negotiated READY timer value字段，将该时长传递给MS，MS收到后将此时长作为Ready状态变为Standby状态的时长。在MS侧，当MS发起上行信令或数据包时定时器启动。定时器超时时进入Standby状态，定时器停止（复位）。在SGSN侧，当接收到上行信令或数据包时定时器启动。定时器超时时进入Standby状态，定时器停止（复位）。
@@ -42851,7 +42851,7 @@ T3412|是否支持小于系统缺省值的T3412值|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 [MME]：设置移动管理参数，移动管理NAS消息重发次数为1，周期性跟踪区更新定时器T3412时长（秒）为10，MME可达定时器时长（秒）为2100，MME隐式分离定时器时长（秒）为1000。 
@@ -42872,7 +42872,7 @@ T3412|是否支持小于系统缺省值的T3412值|参数可选性:任选参数�
 
 
 
-父主题： [移动管理参数配置](../../zh-CN/tree/N_12680084.html)
+父主题： [移动管理参数配置]
 
 
 
@@ -42895,20 +42895,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询移动管理参数(SHOW MOBILE MANAGEMENT) 
 
 
-[](None)命令功能 
+命令功能 
 
 本命令用于查询移动管理参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 RTUPDATEPERIOD|路由周期性更新定时器(秒)|参数可选性:任选参数；参数类型:整数。|该定时器用于设置指示MS发起周期性路由更新的时间间隔。SGSN通过attach accept消息或者routing area update accept消息携带Periodic RA update timer字段，将该时长传递给MS，MS收到后将此时长作为MS周期性路由更新时长。Iu模式时，MS从PMM-CONNECTED变为PMM-IDLE mode时，该定时器重置并被启动，当MS重新进入PMM-CONNECTED时停止。A/Gb模式时，当MS进入Standby状态时，该定时器重置并被启动，当MS进入READY态时，定时器停止。当定时器超时时，MS发起周期性路由更新。
 READYTIMER|Ready定时器时长(秒)|参数可选性:任选参数；参数类型:整数。|该定时器用于设置READY定时器的时长。SGSN通过attach accept消息或者routing area update accept消息携带Negotiated READY timer value字段，将该时长传递给MS，MS收到后将此时长作为Ready状态变为Standby状态的时长。在MS侧，当MS发起上行信令或数据包时定时器启动。定时器超时时进入Standby状态，定时器停止（复位）。在SGSN侧，当接收到上行信令或数据包时定时器启动。定时器超时时进入Standby状态，定时器停止（复位）。
@@ -42937,7 +42937,7 @@ T3412|是否支持小于系统缺省值的T3412值|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 该命令用来查询移动管理参数 
@@ -42967,7 +42967,7 @@ SHOW MOBILE MANAGEMENT;
 
 
 
-父主题： [移动管理参数配置](../../zh-CN/tree/N_12680084.html)
+父主题： [移动管理参数配置]
 
 
 
@@ -42990,7 +42990,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 系统控制参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 MME支持Last UE Activity Time功能是MME位置上报功能的一个子功能，是为了让HSS获知UE最后活动的时间。 
@@ -42998,7 +42998,7 @@ MME支持Last UE Activity Time功能是MME位置上报功能的一个子功能�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用于设置SGSN/MME的系统级控制参数，包括：的TM包尺寸和MME是否支持Last UE Activity Time功能。 
@@ -43006,7 +43006,7 @@ MME支持Last UE Activity Time功能是MME位置上报功能的一个子功能�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -43029,7 +43029,7 @@ MME支持Last UE Activity Time功能是MME位置上报功能的一个子功能�
 
 
 
-父主题： [安全变量](../../zh-CN/tree/N_126087_operation_cm_mml_umacV4_cm_combo_gngp_sv.html)
+父主题： [安全变量]
 
 
 
@@ -43052,12 +43052,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置系统控制参数(SET SYSTEM CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置系统控制参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -43065,10 +43065,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TMSIZE|TM包尺寸(B)|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MAP对话的包长度。SGSN向其他网元（如：HLR、SGSN等）发起MAP对话时，根据此安全变量限制对话的包长度。如果对话的包长度超过了安全变量设置的长度，那么在发起MAP对话时，将进行分包发送。保证每包的长度不超过此安全变量规定的长度。
 LATR|是否支持Last UE Activity Time功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于控制MME是否支持Last UE Activity Time功能。MME支持该功能时，MME可以通过在IDA（Insert Subscriber Data Answer）消息中携带Last UE Activity Time字段告知HSS UE最后活动的时间。取值含义如下：是：表示支持Last UE Activity Time功能，即MME在接收到HSS发送的IDR（Insert Subscriber Data Request）消息后，给HSS回IDA消息时携带Last UE Activity Time字段。否：表示不支持Last UE Activity Time功能，即MME在接收到HSS发送的IDR消息后，给HSS回IDA消息时不携带Last UE Activity Time字段。
@@ -43078,7 +43078,7 @@ LATR|是否支持Last UE Activity Time功能|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置系统控制参数，TM包尺寸（B）为150 byte。 
@@ -43093,7 +43093,7 @@ SET SYSTEM CONTROL:TMSIZE=150 Byte;
 
 
 
-父主题： [系统控制参数配置](../../zh-CN/tree/N_12680114.html)
+父主题： [系统控制参数配置]
 
 
 
@@ -43116,12 +43116,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询系统控制参数(SHOW SYSTEM CONTROL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询系统控制参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -43129,10 +43129,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 TMSIZE|TM包尺寸(B)|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MAP对话的包长度。SGSN向其他网元（如：HLR、SGSN等）发起MAP对话时，根据此安全变量限制对话的包长度。如果对话的包长度超过了安全变量设置的长度，那么在发起MAP对话时，将进行分包发送。保证每包的长度不超过此安全变量规定的长度。
 LATR|是否支持Last UE Activity Time功能|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于控制MME是否支持Last UE Activity Time功能。MME支持该功能时，MME可以通过在IDA（Insert Subscriber Data Answer）消息中携带Last UE Activity Time字段告知HSS UE最后活动的时间。取值含义如下：是：表示支持Last UE Activity Time功能，即MME在接收到HSS发送的IDR（Insert Subscriber Data Request）消息后，给HSS回IDA消息时携带Last UE Activity Time字段。否：表示不支持Last UE Activity Time功能，即MME在接收到HSS发送的IDR消息后，给HSS回IDA消息时不携带Last UE Activity Time字段。
@@ -43142,7 +43142,7 @@ LATR|是否支持Last UE Activity Time功能|参数可选性:任选参数；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询系统控制参数。 
@@ -43169,7 +43169,7 @@ SHOW SYSTEM CONTROL;
 
 
 
-父主题： [系统控制参数配置](../../zh-CN/tree/N_12680114.html)
+父主题： [系统控制参数配置]
 
 
 
@@ -43192,21 +43192,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 分组域参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             无。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             分组域参数配置主要提供会话管理和切换相关的安全变量参数配置。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -43229,7 +43229,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [安全变量](../../zh-CN/tree/N_126087_operation_cm_mml_umacV4_cm_combo_gngp_sv.html)
+父主题： [安全变量]
 
 
 
@@ -43252,12 +43252,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置分组域参数(SET PACKET DOMAIN PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置分组域参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -43265,10 +43265,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOADINLCS|MME/SGSN支持Override参数|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于控制在LCS（LoCation Services，定位业务）功能开启（通过命令SHOW LICENSE查看受控项标识为7011的LICENSE）的情况下，由H-GMLC(Home Gateway Mobile Location Centre, 归属地网关移动位置中心，参见3GPP 23.271协议6.3.3章节)发起的MR-LR流程(正常立即定位流程，参见3GPP 23.271协议9.1.6章节)中，SGSN是否保存LCS客户端携带的Override权限标记。Override权限：表示2/3G用户在LCS业务中的优先级权限(参见3GPP 23.271协议9.5.1章节，Privacy Override Indicator (POI)的描述)。该安全变量有如下取值：NO：表示不保存Override权限标记。无论LCS客户端是任何类型，系统都必须先进行私密性检查(由H-GMLC发起，详见3GPP 23.271协议 9.1.1 章节(step5))，私密性检查通过后才可以发起定位。YES：保存Override权限标记，根据POI的取值做如下处理：1：LCS客户端类型为紧急定位（emergency Services）或合法性定位（lawfulIntercept Services）两者之一时，系统对LCS客户端立即进行定位而不需要进行私密性检查；0：无论LCS客户端是任何类型，系统都必须先进行私密性检查(由H-GMLC发起，详见3GPP 23.271协议 9.1.1 章节(step5))，私密性检查通过后才可以发起定位。
 SERVICEHO|业务切换指示|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于控制协议3GPP 25413 章节9.1.3 RAB ASSIGNMENT REQUEST、9.1.10 RELOCATION REQUEST或9.1.81 RANAP ENHANCED RELOCATION INFORMATION REQUEST消息中Service Handover IE的取值。当SGSN之间切换时，SGSN需要根据该安全变量设置IE Service Handover的取值，Service Handover用于RAB指派消息中使用，从非接入层看来，当前的RAB是应该切换到GSM，还是不应该切换到GSM，还是如果有问题则不切换到GSM。Service Handover有如下三个取值：Switch  to GSM：应该切换至GSM。Should not switch  to GSM：不应该切换至GSM。Error Rab should not switch  to GSM：有问题的RAB将不切换至GSM。
@@ -43301,7 +43301,7 @@ S5S8IPTYPE|SGW S5S8口组网配置|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 [MME]：设置分组域参数，会话管理NAS消息重发次数为1，ESM信息请求消息重发次数为1，ARP高优先级权重值为1，ARP中优先级权重值为2。 
@@ -43322,7 +43322,7 @@ S5S8IPTYPE|SGW S5S8口组网配置|参数可选性:任选参数；参数类型:�
 
 
 
-父主题： [分组域参数配置](../../zh-CN/tree/N_1254605.html)
+父主题： [分组域参数配置]
 
 
 
@@ -43345,12 +43345,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询分组域参数(SHOW PACKET DOMAIN PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询分组域参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -43358,10 +43358,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 OVERLOADINLCS|MME/SGSN支持Override参数|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于控制在LCS（LoCation Services，定位业务）功能开启（通过命令SHOW LICENSE查看受控项标识为7011的LICENSE）的情况下，由H-GMLC(Home Gateway Mobile Location Centre, 归属地网关移动位置中心，参见3GPP 23.271协议6.3.3章节)发起的MR-LR流程(正常立即定位流程，参见3GPP 23.271协议9.1.6章节)中，SGSN是否保存LCS客户端携带的Override权限标记。Override权限：表示2/3G用户在LCS业务中的优先级权限(参见3GPP 23.271协议9.5.1章节，Privacy Override Indicator (POI)的描述)。该安全变量有如下取值：NO：表示不保存Override权限标记。无论LCS客户端是任何类型，系统都必须先进行私密性检查(由H-GMLC发起，详见3GPP 23.271协议 9.1.1 章节(step5))，私密性检查通过后才可以发起定位。YES：保存Override权限标记，根据POI的取值做如下处理：1：LCS客户端类型为紧急定位（emergency Services）或合法性定位（lawfulIntercept Services）两者之一时，系统对LCS客户端立即进行定位而不需要进行私密性检查；0：无论LCS客户端是任何类型，系统都必须先进行私密性检查(由H-GMLC发起，详见3GPP 23.271协议 9.1.1 章节(step5))，私密性检查通过后才可以发起定位。
 SERVICEHO|业务切换指示|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于控制协议3GPP 25413 章节9.1.3 RAB ASSIGNMENT REQUEST、9.1.10 RELOCATION REQUEST或9.1.81 RANAP ENHANCED RELOCATION INFORMATION REQUEST消息中Service Handover IE的取值。当SGSN之间切换时，SGSN需要根据该安全变量设置IE Service Handover的取值，Service Handover用于RAB指派消息中使用，从非接入层看来，当前的RAB是应该切换到GSM，还是不应该切换到GSM，还是如果有问题则不切换到GSM。Service Handover有如下三个取值：Switch  to GSM：应该切换至GSM。Should not switch  to GSM：不应该切换至GSM。Error Rab should not switch  to GSM：有问题的RAB将不切换至GSM。
@@ -43394,7 +43394,7 @@ S5S8IPTYPE|SGW S5S8口组网配置|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询分组域参数。 
@@ -43423,7 +43423,7 @@ SHOW PACKET DOMAIN PARAMETER;
 
 
 
-父主题： [分组域参数配置](../../zh-CN/tree/N_1254605.html)
+父主题： [分组域参数配置]
 
 
 
@@ -43446,7 +43446,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## LLC相关配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 协议栈中的逻辑链路控制（LLC Logical Link Control）层协议，类似于国际标准化组织7层参考模型中的第2层（数据链路层）。 
@@ -43502,7 +43502,7 @@ LLC 层的基本功能如下:
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 LLC相关配置提供了LLC分组消息数据单元的生存周期、LLC SAPI3、LLC SAPI5、LLC SAPI9、LLC SAPI11等参数的配置，控制LLC在消息分发和处理时，对数据区释放、消息重传、缓存等进行安全、稳定的传输。 
@@ -43510,7 +43510,7 @@ LLC相关配置提供了LLC分组消息数据单元的生存周期、LLC SAPI3�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -43548,7 +43548,7 @@ LLC SAPI11参数配置
 
 
 
-父主题： [安全变量](../../zh-CN/tree/N_126087_operation_cm_mml_umacV4_cm_combo_gngp_sv.html)
+父主题： [安全变量]
 
 
 
@@ -43571,7 +43571,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### LLC参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 协议栈中的逻辑链路控制（LLC Logical Link Control）层协议，类似于国际标准化组织7层参考模型中的第2层（数据链路层）。 
@@ -43582,7 +43582,7 @@ LLC主要作用是在移动台MS和GPRS业务支持节点SGSN的层3的实体之
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于设置LLC分组消息数据单元的生存周期，当为某个LLC消息数据单元分配数据区时开始计时，超过该配置时间则将分配的数据区释放 
@@ -43590,7 +43590,7 @@ LLC主要作用是在移动台MS和GPRS业务支持节点SGSN的层3的实体之
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -43613,7 +43613,7 @@ LLC主要作用是在移动台MS和GPRS业务支持节点SGSN的层3的实体之
 
 
 
-父主题： [LLC相关配置](../../zh-CN/tree/N_1254610.html)
+父主题： [LLC相关配置]
 
 
 
@@ -43636,20 +43636,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置LLC参数(SET LLC PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置LLC参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PDULIFE|LLC PDU生存期(10毫秒)|参数可选性:任选参数；参数类型:整数；参数范围为:0~65535。|该安全变量用于设置LLC分组消息数据单元的生存周期，单位为10ms。当为某个LLC消息数据单元分配数据区时开始计时，超过该配置时间则将分配的数据区释放。
 
@@ -43658,7 +43658,7 @@ PDULIFE|LLC PDU生存期(10毫秒)|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置LLC参数，LLC PDU生存期（毫秒）为1。 
@@ -43673,7 +43673,7 @@ SET LLC PARAMETER:PDULIFE=1;
 
 
 
-父主题： [LLC参数配置](../../zh-CN/tree/N_12526112.html)
+父主题： [LLC参数配置]
 
 
 
@@ -43696,20 +43696,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询LLC参数(SHOW LLC PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询LLC参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 PDULIFE|LLC PDU生存期(10毫秒)|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置LLC分组消息数据单元的生存周期，单位为10ms。当为某个LLC消息数据单元分配数据区时开始计时，超过该配置时间则将分配的数据区释放。
 
@@ -43718,7 +43718,7 @@ PDULIFE|LLC PDU生存期(10毫秒)|参数可选性:任选参数；参数类型:�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询LLC参数。 
@@ -43745,7 +43745,7 @@ SHOW LLC PARAMETER;
 
 
 
-父主题： [LLC参数配置](../../zh-CN/tree/N_12526112.html)
+父主题： [LLC参数配置]
 
 
 
@@ -43768,7 +43768,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### LLC SAPI3参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 协议栈中的逻辑链路控制（LLC Logical Link Control）层协议，类似于国际标准化组织7层参考模型中的第2层（数据链路层）。 
@@ -43779,7 +43779,7 @@ LLC主要作用是在移动台MS和GPRS业务支持节点SGSN的层3的实体之
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 LLC SAPI3参数配置提供LLC SAPI3参数的配置，控制消息超时重传时间，重传的最大次数、帧消息域码流的最大字节数、缓冲区大小等处理。 
@@ -43787,7 +43787,7 @@ LLC SAPI3参数配置提供LLC SAPI3参数的配置，控制消息超时重传�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -43810,7 +43810,7 @@ LLC SAPI3参数配置提供LLC SAPI3参数的配置，控制消息超时重传�
 
 
 
-父主题： [LLC相关配置](../../zh-CN/tree/N_1254610.html)
+父主题： [LLC相关配置]
 
 
 
@@ -43833,20 +43833,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置LLC SAPI3参数(SET LLC SAPI3 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置LLC SAPI3参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI3TIMER|SAPI3超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~4095。|该安全变量用于设置SAPI3消息超时重传时间，单位为0.1s。当发送SAPI3消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI3RETRIES|SAPI3超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~15。|该安全变量用于设置SAPI3消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -43862,7 +43862,7 @@ SAPI3ULWINDOW|SAPI3上行窗口大小（保留）|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置LLC SAPI3参数，SAPI3超时重传时间（0.1秒）为50，SAPI3超时重传最大次数为3，SAPI3I帧信息域最大长度（字节）为1503，SAPI3U帧，UI帧信息域最大长度（字节）为500，SAPI3下行I帧缓冲区大小（16字节）为1250，SAPI3上行I帧缓冲区大小（16字节）为1250，SAPI3下行窗口大小为16，SAPI3上行窗口大小为16。 
@@ -43877,7 +43877,7 @@ SET LLC SAPI3 PARAMETER:SAPI3TIMER=50,SAPI3RETRIES=3,SAPI3SIZE=1053,SAPI3UUI=500
 
 
 
-父主题： [LLC SAPI3参数配置](../../zh-CN/tree/N_1254612.html)
+父主题： [LLC SAPI3参数配置]
 
 
 
@@ -43900,20 +43900,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询LLC SAPI3参数(SHOW LLC SAPI3 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询LLC SAPI3参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI3TIMER|SAPI3超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI3消息超时重传时间，单位为0.1s。当发送SAPI3消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI3RETRIES|SAPI3超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI3消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -43929,7 +43929,7 @@ SAPI3ULWINDOW|SAPI3上行窗口大小（保留）|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询LLC SAPI3参数。 
@@ -43956,7 +43956,7 @@ SHOW LLC SAPI3 PARAMETER;
 
 
 
-父主题： [LLC SAPI3参数配置](../../zh-CN/tree/N_1254612.html)
+父主题： [LLC SAPI3参数配置]
 
 
 
@@ -43979,7 +43979,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### LLC SAPI5参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 协议栈中的逻辑链路控制（LLC Logical Link Control）层协议，类似于国际标准化组织7层参考模型中的第2层（数据链路层）。 
@@ -43990,7 +43990,7 @@ LLC主要作用是在移动台MS和GPRS业务支持节点SGSN的层3的实体之
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 LLC SAP5参数配置提供LLC SAPI5参数的配置，控制消息超时重传时间，重传的最大次数、帧消息域码流的最大字节数、缓冲区大小等处理。 
@@ -43998,7 +43998,7 @@ LLC SAP5参数配置提供LLC SAPI5参数的配置，控制消息超时重传时
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -44021,7 +44021,7 @@ LLC SAP5参数配置提供LLC SAPI5参数的配置，控制消息超时重传时
 
 
 
-父主题： [LLC相关配置](../../zh-CN/tree/N_1254610.html)
+父主题： [LLC相关配置]
 
 
 
@@ -44044,20 +44044,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置LLC SAPI5参数(SET LLC SAPI5 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置LLC SAPI5参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI5TIMER|SAPI5超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~4095。|该安全变量用于设置SAPI5消息超时重传时间，单位为0.1s。当发送SAPI5消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI5RETRIES|SAPI5超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~15。|该安全变量用于设置SAPI5消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -44073,7 +44073,7 @@ SAPI5ULWINDOW|SAPI5上行窗口大小（保留）|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置LLC SAPI5参数，SAPI5超时重传时间（0.1秒）为100，SAPI5超时重传最大次数为3，SAPI5I帧信息域最大长度（字节）为1503，SAPI5U帧，UI帧信息域最大长度（字节）为500，SAPI5下行I帧缓冲区大小（16字节）为760，SAPI5上行I帧缓冲区大小（16字节）为760，SAPI5下行窗口大小为8，SAPI5上行窗口大小为8。 
@@ -44088,7 +44088,7 @@ SET LLC SAPI5 PARAMETER:SAPI5TIMER=100,SAPI5RETRIES=3,SAPI5SIZE=1503,SAPI5UUI=50
 
 
 
-父主题： [LLC SAPI5参数配置](../../zh-CN/tree/N_1254613.html)
+父主题： [LLC SAPI5参数配置]
 
 
 
@@ -44111,20 +44111,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询LLC SAPI5参数(SHOW LLC SAPI5 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询LLC SAPI5参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI5TIMER|SAPI5超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI5消息超时重传时间，单位为0.1s。当发送SAPI5消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI5RETRIES|SAPI5超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI5消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -44140,7 +44140,7 @@ SAPI5ULWINDOW|SAPI5上行窗口大小（保留）|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询LLC SAPI5参数。 
@@ -44167,7 +44167,7 @@ SHOW LLC SAPI5 PARAMETER;
 
 
 
-父主题： [LLC SAPI5参数配置](../../zh-CN/tree/N_1254613.html)
+父主题： [LLC SAPI5参数配置]
 
 
 
@@ -44190,7 +44190,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### LLC SAPI9参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 协议栈中的逻辑链路控制（LLC Logical Link Control）层协议，类似于国际标准化组织7层参考模型中的第2层（数据链路层）。 
@@ -44201,7 +44201,7 @@ LLC主要作用是在移动台MS和GPRS业务支持节点SGSN的层3的实体之
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 LLC SAP9参数配置提供LLC SAPI9参数的配置，控制消息超时重传时间，重传的最大次数、帧消息域码流的最大字节数、缓冲区大小等处理。 
@@ -44209,7 +44209,7 @@ LLC SAP9参数配置提供LLC SAPI9参数的配置，控制消息超时重传时
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -44232,7 +44232,7 @@ LLC SAP9参数配置提供LLC SAPI9参数的配置，控制消息超时重传时
 
 
 
-父主题： [LLC相关配置](../../zh-CN/tree/N_1254610.html)
+父主题： [LLC相关配置]
 
 
 
@@ -44255,20 +44255,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置LLC SAPI9参数(SET LLC SAPI9 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置LLC SAPI9参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI9TIMER|SAPI9超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~4095。|该安全变量用于设置SAPI9消息超时重传时间，单位为0.1s。当发送SAPI9消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI9RETRIES|SAPI9超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~15。|该安全变量用于设置SAPI9消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -44284,7 +44284,7 @@ SAPI9ULWINDOW|SAPI9上行窗口大小（保留）|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置LLC SAPI9参数，SAPI9超时重传时间（0.1秒）为200，SAPI9超时重传最大次数为3，SAPI9I帧信息域最大长度(字节）为1503，SAPI9U帧，UI帧信息域最大长度（字节）为500，SAPI9下行I帧缓冲区大小（16字节）为380，SAPI9上行I帧缓冲区大小（16字节）为380，SAPI9下行窗口大小为4，SAPI9上行窗口大小为4。 
@@ -44299,7 +44299,7 @@ SET LLC SAPI9 PARAMETER:SAPI9TIMER=200,SAPI9RETRIES=3,SAPI9SIZE=1503,SAPI9UUI=50
 
 
 
-父主题： [LLC SAPI9参数配置](../../zh-CN/tree/N_1254614.html)
+父主题： [LLC SAPI9参数配置]
 
 
 
@@ -44322,20 +44322,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询LLC SAPI9参数(SHOW LLC SAPI9 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询LLC SAPI9参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI9TIMER|SAPI9超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI9消息超时重传时间，单位为0.1s。当发送SAPI9消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI9RETRIES|SAPI9超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI9消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -44351,7 +44351,7 @@ SAPI9ULWINDOW|SAPI9上行窗口大小（保留）|参数可选性:任选参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询LLC SAPI9参数。 
@@ -44378,7 +44378,7 @@ SHOW LLC SAPI9 PARAMETER;
 
 
 
-父主题： [LLC SAPI9参数配置](../../zh-CN/tree/N_1254614.html)
+父主题： [LLC SAPI9参数配置]
 
 
 
@@ -44401,7 +44401,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### LLC SAPI11参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 协议栈中的逻辑链路控制（LLC Logical Link Control）层协议，类似于国际标准化组织7层参考模型中的第2层（数据链路层）。 
@@ -44412,7 +44412,7 @@ LLC主要作用是在移动台MS和GPRS业务支持节点SGSN的层3的实体之
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 LLC SAPI11参数配置提供LLC SAPI11参数的配置，控制消息超时重传时间，重传的最大次数、帧消息域码流的最大字节数、缓冲区大小等处理。 
@@ -44420,7 +44420,7 @@ LLC SAPI11参数配置提供LLC SAPI11参数的配置，控制消息超时重传
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -44443,7 +44443,7 @@ LLC SAPI11参数配置提供LLC SAPI11参数的配置，控制消息超时重传
 
 
 
-父主题： [LLC相关配置](../../zh-CN/tree/N_1254610.html)
+父主题： [LLC相关配置]
 
 
 
@@ -44466,20 +44466,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置LLC SAPI11参数(SET LLC SAPI11 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置LLC SAPI11参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI11TIMER|SAPI11超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~4095。|该安全变量用于设置SAPI11消息超时重传时间，单位为0.1s。当发送SAPI11消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI11RETRIES|SAPI11超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数；参数范围为:1~15。|该安全变量用于设置SAPI11消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -44495,7 +44495,7 @@ SAPI11ULWINDOW|SAPI11上行窗口大小（保留）|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置LLC SAPI11参数，SAPI11超时重传时间（0.1秒）为400，SAPI11超时重传最大次数为3，SAPI11I帧信息域最大长度（字节）为1503，SAPI11U帧，UI帧信息域最大长度（字节）为500，SAPI11下行I帧缓冲区大小（16字节）为190，SAPI11上行I帧缓冲区大小（16字节）为190，SAPI11下行窗口大小为2，SAPI11上行窗口大小为2。 
@@ -44510,7 +44510,7 @@ SET LLC SAPI11 PARAMETER:SAPI11TIMER=400,SAPI11RETRIES=3,SAPI11SIZE=1503,SAPI11U
 
 
 
-父主题： [LLC SAPI11参数配置](../../zh-CN/tree/N_1254615.html)
+父主题： [LLC SAPI11参数配置]
 
 
 
@@ -44533,20 +44533,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询LLC SAPI11参数(SHOW LLC SAPI11 PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询LLC SAPI11参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SAPI11TIMER|SAPI11超时重传时间(0.1秒)（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI11消息超时重传时间，单位为0.1s。当发送SAPI11消息后，等待该配置时间，如果没有收到响应则发起重传。
 SAPI11RETRIES|SAPI11超时重传最大次数（保留）|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SAPI11消息超时重传的最大次数，该值不能超过15。当消息重传次数超过该配置值后，消息不再重传。
@@ -44562,7 +44562,7 @@ SAPI11ULWINDOW|SAPI11上行窗口大小（保留）|参数可选性:任选参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询LLC SAPI11参数。 
@@ -44589,7 +44589,7 @@ SHOW LLC SAPI11 PARAMETER;
 
 
 
-父主题： [LLC SAPI11参数配置](../../zh-CN/tree/N_1254615.html)
+父主题： [LLC SAPI11参数配置]
 
 
 
@@ -44612,7 +44612,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 安全相关配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 移动通信是我们现代生活中不可缺少的一部分，大家对通信中的信息安全也提出了更高的要求。 
@@ -44645,7 +44645,7 @@ LTE网络数据业务快速发展，对数据安全要求更高，为了避免�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 安全相关的配置中提供了如下和安全相关的功能配置： 
@@ -44687,7 +44687,7 @@ LTE网络数据业务快速发展，对数据安全要求更高，为了避免�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -44730,7 +44730,7 @@ GPRS加密参数配置
 
 
 
-父主题： [安全变量](../../zh-CN/tree/N_126087_operation_cm_mml_umacV4_cm_combo_gngp_sv.html)
+父主题： [安全变量]
 
 
 
@@ -44753,7 +44753,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 安全参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 对于移动性管理相关的流程，MME/SGSN会根据协议（3GPP-23401-950 “5.3.10 Security Function”/3GPP-23060-900 “6.8 Security Function”）的要求对用户进行鉴权、加密和IMEI检查。运营商也可以配置自己的鉴权、加密和IMEI检查策略。 
@@ -44761,7 +44761,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 当运营商需要配置自己的鉴权、加密和IMEI检查策略时需要使用该配置。该配置可以实现如下功能： 
@@ -44803,7 +44803,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -44826,7 +44826,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [安全相关配置](../../zh-CN/tree/N_1254620.html)
+父主题： [安全相关配置]
 
 
 
@@ -44849,12 +44849,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置安全参数(SET SECURITY PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置安全参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -44862,10 +44862,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AUTHSEG|SGSN允许sendAuthInfo操作分段|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持SGSN允许sendAuthInfo操作分段，取值含义如下：不支持：表示SGSN不允许sendAuthInfo操作分段。支持：表示SGSN允许sendAuthInfo操作分段。
 AUTHNUM|SGSN鉴权组数|参数可选性:任选参数；参数类型:整数；参数范围为:1~5。|该安全变量用于设置SGSN向HLR获取鉴权向量的组数，取值范围为1~5。
@@ -44889,7 +44889,7 @@ GEABASEDONIMEI|是否支持基于IMEI配置Gb加密算法|参数可选性:任选
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 [MME]:设置安全变量，MME IMSI附着时鉴权控制为系统判断，MME IMSI附着时鉴权控制频次为2，MME局内GUTI附着时鉴权控制为系统判断，MME局内GUTI附着时鉴权控制频次为2，MME局间附着时鉴权控制为系统判断，MME局间附着时鉴权控制频次为2，MME EPC TAU时鉴权为系统判断，MME EPC TAU时鉴权频次为2，MME业务请求时鉴权为系统判断，MME业务请求时鉴权频次为2，MME Detach时鉴权为强制不健全，MME Detach时鉴权频次为2，MME请求的E-UTRAN鉴权组数为1。
@@ -44906,7 +44906,7 @@ GEABASEDONIMEI|是否支持基于IMEI配置Gb加密算法|参数可选性:任选
 
 
 
-父主题： [安全参数配置](../../zh-CN/tree/N_1254621.html)
+父主题： [安全参数配置]
 
 
 
@@ -44929,12 +44929,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询安全参数(SHOW SECURITY PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询安全参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -44942,10 +44942,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 AUTHSEG|SGSN允许sendAuthInfo操作分段|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持SGSN允许sendAuthInfo操作分段，取值含义如下：不支持：表示SGSN不允许sendAuthInfo操作分段。支持：表示SGSN允许sendAuthInfo操作分段。
 AUTHNUM|SGSN鉴权组数|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置SGSN向HLR获取鉴权向量的组数，取值范围为1~5。
@@ -44969,7 +44969,7 @@ GEABASEDONIMEI|是否支持基于IMEI配置Gb加密算法|参数可选性:任选
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询安全参数。 
@@ -45000,7 +45000,7 @@ SHOW SECURITY PARAMETER;
 
 
 
-父主题： [安全参数配置](../../zh-CN/tree/N_1254621.html)
+父主题： [安全参数配置]
 
 
 
@@ -45023,7 +45023,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### UMTS AS加密控制参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当终端接入UMTS网络时，为了保证用户信令和数据的安全，网络需要对用户信令和数据进行加密。 
@@ -45034,7 +45034,7 @@ UMTS AS的加密是一项可选的功能，运营商可以根据自身网络的�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用于设置是否对UMTS AS信令进行加密。 
@@ -45045,7 +45045,7 @@ UMTS AS的加密是一项可选的功能，运营商可以根据自身网络的�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -45068,7 +45068,7 @@ UMTS AS的加密是一项可选的功能，运营商可以根据自身网络的�
 
 
 
-父主题： [安全相关配置](../../zh-CN/tree/N_1254620.html)
+父主题： [安全相关配置]
 
 
 
@@ -45091,12 +45091,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置UMTS AS加密控制参数(SET ENCRYCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置加密控制参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -45104,10 +45104,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ENCRYPTION|加密控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持加密控制，取值含义如下：不支持：表示不支持UMTS AS加密。支持：表示支持UMTS AS加密，将支持的所有加密算法通过Security Mode Command带给RNC。
 ENCRYALGO|支持无加密算法|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当“加密控制”参数设置为“支持”时，该安全变量用于设置SGSN是否支持无加密算法，取值含义如下：不支持：表示不支持无加密算法。支持：表示支持无加密算法。
@@ -45132,7 +45132,7 @@ ENCRYALGO15|支持加密算法15|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置加密控制参数，加密控制为支持，支持无加密算法为支持，支持加密算法1为支持，支持加密算法2为支持。 
@@ -45147,7 +45147,7 @@ SET ENCRYCTRL:ENCRYPTION="Support",ENCRYALGO="Support",ENCRYALGO1="Support",ENCR
 
 
 
-父主题： [UMTS AS加密控制参数配置](../../zh-CN/tree/N_1254622.html)
+父主题： [UMTS AS加密控制参数配置]
 
 
 
@@ -45170,12 +45170,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询UMTS AS加密控制参数(SHOW ENCRYCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询加密控制参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -45183,10 +45183,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ENCRYPTION|加密控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持加密控制，取值含义如下：不支持：表示不支持UMTS AS加密。支持：表示支持UMTS AS加密，将支持的所有加密算法通过Security Mode Command带给RNC。
 ENCRYALGO|支持无加密算法|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当“加密控制”参数设置为“支持”时，该安全变量用于设置SGSN是否支持无加密算法，取值含义如下：不支持：表示不支持无加密算法。支持：表示支持无加密算法。
@@ -45211,7 +45211,7 @@ ENCRYALGO15|支持加密算法15|参数可选性:任选参数；参数类型:枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询加密控制参数。 
@@ -45238,7 +45238,7 @@ SHOW ENCRYCTRL;
 
 
 
-父主题： [UMTS AS加密控制参数配置](../../zh-CN/tree/N_1254622.html)
+父主题： [UMTS AS加密控制参数配置]
 
 
 
@@ -45261,7 +45261,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### EPC NAS加密控制参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 一般认为，只有放在运营商机房的网元才可完全信任。由于eNodeB处于一个不完全信任区域，为了确保eNodeB和MME之间的NAS信令不会被非法窃听，因此需要对NAS信令进行加密。 
@@ -45272,7 +45272,7 @@ NAS信令的加密是一项可选的功能，运营商可以根据自身网络�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用于设置是否对EPC NAS信令进行加密。 
@@ -45289,7 +45289,7 @@ MME选择加密算法时，在UE和MME同时支持的加密算法中，选择优
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -45312,7 +45312,7 @@ MME选择加密算法时，在UE和MME同时支持的加密算法中，选择优
 
 
 
-父主题： [安全相关配置](../../zh-CN/tree/N_1254620.html)
+父主题： [安全相关配置]
 
 
 
@@ -45335,20 +45335,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置EPC NAS加密控制参数(SET NAS ENCRYCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置EPC NAS加密控制参数。
 
 
-[](None)注意事项 
+注意事项 
 
 MME目前支持的算法为NAS加密算法0~NAS加密算法3，按照协议要求其他的加密算法暂时是保留的。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ENCRYPTION|NAS加密控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持NAS加密，取值含义如下：不加密：表示不支持NAS加密，直接选择算法EEA0，即空算法。加密：表示支持NAS加密，加密算法根据设置从EEA0~EEA3中选择。
 EEA0|EEA0|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当“EPC加密”参数设置为“加密”时，该安全变量用于设置MME是否支持NAS加密算法EEA0，取值含义如下：不支持：表示不支持NAS加密算法EEA0。支持：表示支持NAS加密算法EEA0。
@@ -45365,7 +45365,7 @@ PRIORENCRY3|EEA3优先级|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置EPC NAS加密控制参数，EPC加密为加密，EEA0为支持，EEA1为支持，EEA0优先级为1，EEA1优先级为2。 
@@ -45380,7 +45380,7 @@ SET NAS ENCRYCTRL:ENCRYPTION="Encrypt",EEA0="Support",EEA1="Support",PRIORENCRY0
 
 
 
-父主题： [EPC NAS加密控制参数配置](../../zh-CN/tree/N_1254623.html)
+父主题： [EPC NAS加密控制参数配置]
 
 
 
@@ -45403,12 +45403,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询EPC NAS加密控制参数(SHOW NAS ENCRYCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询EPC NAS加密控制参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -45416,10 +45416,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ENCRYPTION|NAS加密控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持NAS加密，取值含义如下：不加密：表示不支持NAS加密，直接选择算法EEA0，即空算法。加密：表示支持NAS加密，加密算法根据设置从EEA0~EEA3中选择。
 EEA0|EEA0|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当“EPC加密”参数设置为“加密”时，该安全变量用于设置MME是否支持NAS加密算法EEA0，取值含义如下：不支持：表示不支持NAS加密算法EEA0。支持：表示支持NAS加密算法EEA0。
@@ -45436,7 +45436,7 @@ PRIORENCRY3|EEA3优先级|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC NAS加密控制参数。 
@@ -45463,7 +45463,7 @@ SHOW NAS ENCRYCTRL;
 
 
 
-父主题： [EPC NAS加密控制参数配置](../../zh-CN/tree/N_1254623.html)
+父主题： [EPC NAS加密控制参数配置]
 
 
 
@@ -45486,7 +45486,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### UMTS AS完整性保护参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当终端接入UMTS网络时，为了保证用户信令和数据不被非法篡改，网络需要对用户信令和数据进行完整性保护。 
@@ -45497,7 +45497,7 @@ UMTS AS的完整性保护是一项可选的功能，运营商可以根据自身�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用于设置是否支持UMTS AS完整性保护。 
@@ -45508,7 +45508,7 @@ UMTS AS的完整性保护是一项可选的功能，运营商可以根据自身�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -45531,7 +45531,7 @@ UMTS AS的完整性保护是一项可选的功能，运营商可以根据自身�
 
 
 
-父主题： [安全相关配置](../../zh-CN/tree/N_1254620.html)
+父主题： [安全相关配置]
 
 
 
@@ -45554,12 +45554,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置UMTS AS完整性保护参数(SET INTEGCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置完整性保护参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -45567,10 +45567,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INTEGCTRL|支持完整性控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持UMTS AS完整性保护，取值含义如下：不支持：表示不支持UMTS AS完整性保护。支持：表示支持UMTS AS完整性保护。
 INTEGALGO1|支持完整性保护算法1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当“支持完整性控制”参数设置为“支持”时，该安全变量用于设置SGSN是否支持完整性保护算法1，取值含义如下：不支持：表示不支持完整性保护算法1。支持：表示支持完整性保护算法1。
@@ -45595,7 +45595,7 @@ INTEGALGO16|支持完整性保护算法16|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置完整性保护参数，支持完整性控制为支持，支持完整性保护算法1为支持，支持完整性保护算法2为支持，支持完整性保护算法3为支持。 
@@ -45610,7 +45610,7 @@ SET INTEGCTRL:INTEGCTRL="Support",INTEGALGO1="Support",INTEGALGO2="Support",INTE
 
 
 
-父主题： [UMTS AS完整性保护参数配置](../../zh-CN/tree/N_1254624.html)
+父主题： [UMTS AS完整性保护参数配置]
 
 
 
@@ -45633,12 +45633,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询UMTS AS完整性保护参数(SHOW INTEGCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询完整性保护参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -45646,10 +45646,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INTEGCTRL|支持完整性控制|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置是否支持UMTS AS完整性保护，取值含义如下：不支持：表示不支持UMTS AS完整性保护。支持：表示支持UMTS AS完整性保护。
 INTEGALGO1|支持完整性保护算法1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|当“支持完整性控制”参数设置为“支持”时，该安全变量用于设置SGSN是否支持完整性保护算法1，取值含义如下：不支持：表示不支持完整性保护算法1。支持：表示支持完整性保护算法1。
@@ -45674,7 +45674,7 @@ INTEGALGO16|支持完整性保护算法16|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询完整性保护参数。 
@@ -45701,7 +45701,7 @@ SHOW INTEGCTRL;
 
 
 
-父主题： [UMTS AS完整性保护参数配置](../../zh-CN/tree/N_1254624.html)
+父主题： [UMTS AS完整性保护参数配置]
 
 
 
@@ -45724,7 +45724,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### EPC NAS完整性保护参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 一般认为，只有放在运营商机房的网元才可完全信任。由于eNodeB处于一个不完全信任区域，为了确保eNodeB和MME之间的NAS信令不会被非法篡改，因此需要对NAS信令进行完整性保护。 
@@ -45732,14 +45732,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 NAS信令的完整性是MME系统安全的基本保障，所以完整性保护功能应该一直开启。但是为了满足运营商的个性化需求，MME可通过
-                [SET SOFTWARE PARAMETER](../mml/1268001.html)
+                [SET SOFTWARE PARAMETER]
                 命令将软件参数ID为327761的软件参数值设置为0来关闭对NAS信令的完整性保护。
             
 
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该命令用于设置EPC NAS信令完整性保护的算法。 
@@ -45747,7 +45747,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
                 在软件参数ID为327761的软件参数值设置为1的情况下（该值通过
-                [SET SOFTWARE PARAMETER](../mml/1268001.html)
+                [SET SOFTWARE PARAMETER]
                 命令设置），可配置支持多种完整性保护算法和相应算法的优先级，优先级取值越小表示优先级越高。
             
 
@@ -45760,7 +45760,7 @@ MME选择完整性保护算法时，在UE和MME同时支持的完整性保护算
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -45783,7 +45783,7 @@ MME选择完整性保护算法时，在UE和MME同时支持的完整性保护算
 
 
 
-父主题： [安全相关配置](../../zh-CN/tree/N_1254620.html)
+父主题： [安全相关配置]
 
 
 
@@ -45806,12 +45806,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置EPC NAS完整性保护参数(SET NAS INTEGCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置EPC NAS完整性保护参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -45819,10 +45819,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INTEGALGO1|EIA1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MME是否支持NAS完整性保护算法EIA1（EIA1是基于SNOW 3G的完整性保护算法），取值含义如下：不支持：表示不支持NAS完整性保护算法EIA1。支持：表示支持NAS完整性保护算法EIA1。
 INTEGALGO2|EIA2|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MME是否支持NAS完整性保护算法EIA2（EIA2是基于AES的完整性保护算法），取值含义如下：不支持：表示不支持NAS完整性保护算法EIA2。支持：表示支持NAS完整性保护算法EIA2。
@@ -45836,7 +45836,7 @@ PRIORINTEG3|EIA3优先级|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置EPC NAS完整性保护参数，EIA1为不支持，EIA2为支持，EIA3为不支持，EIA1优先级为0，EIA2优先级为1，EIA3优先级为2。 
@@ -45851,7 +45851,7 @@ SET NAS INTEGCTRL:INTEGALGO1="Not support",INTEGALGO2="Support",INTEGALGO3="Not 
 
 
 
-父主题： [EPC NAS完整性保护参数配置](../../zh-CN/tree/N_1254625.html)
+父主题： [EPC NAS完整性保护参数配置]
 
 
 
@@ -45874,12 +45874,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询EPC NAS完整性保护参数(SHOW NAS INTEGCTRL) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询EPC NAS完整性保护参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -45887,10 +45887,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INTEGALGO1|EIA1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MME是否支持NAS完整性保护算法EIA1（EIA1是基于SNOW 3G的完整性保护算法），取值含义如下：不支持：表示不支持NAS完整性保护算法EIA1。支持：表示支持NAS完整性保护算法EIA1。
 INTEGALGO2|EIA2|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MME是否支持NAS完整性保护算法EIA2（EIA2是基于AES的完整性保护算法），取值含义如下：不支持：表示不支持NAS完整性保护算法EIA2。支持：表示支持NAS完整性保护算法EIA2。
@@ -45904,7 +45904,7 @@ PRIORINTEG3|EIA3优先级|参数可选性:任选参数；参数类型:枚举。�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询EPC NAS完整性保护参数。 
@@ -45931,7 +45931,7 @@ SHOW NAS INTEGCTRL;
 
 
 
-父主题： [EPC NAS完整性保护参数配置](../../zh-CN/tree/N_1254625.html)
+父主题： [EPC NAS完整性保护参数配置]
 
 
 
@@ -45954,7 +45954,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### GPRS加密参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当终端接入GPRS网络时，为了保证用户信令和数据的安全，网络需要对用户信令和数据进行加密。 
@@ -45962,7 +45962,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 该配置用于设置对GPRS信令进行加密所使用的加密算法和对应算法的优先级。 
@@ -45979,7 +45979,7 @@ SGSN选择加密算法时，在MS和SGSN同时支持的加密算法中，选择�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -46002,7 +46002,7 @@ SGSN选择加密算法时，在MS和SGSN同时支持的加密算法中，选择�
 
 
 
-父主题： [安全相关配置](../../zh-CN/tree/N_1254620.html)
+父主题： [安全相关配置]
 
 
 
@@ -46025,12 +46025,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 设置GPRS加密参数(SET GPRS ENCRYPTION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置GPRS加密参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -46038,10 +46038,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GEA1|GEA1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|TAC是否支持GPRS加密算法1（GEA1）。
 GEA2|GEA2|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|TAC是否支持GPRS加密算法2（GEA2）。
@@ -46055,7 +46055,7 @@ PRIORGEA3|GPRS加密算法3优先级|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置GPRS加密参数，GEA1为支持，GEA2为不支持，GEA3为不支持。 
@@ -46070,7 +46070,7 @@ SET GPRS ENCRYPTION:GEA1="Support",GEA2="Not support",GEA3="Not support";
 
 
 
-父主题： [GPRS加密参数配置](../../zh-CN/tree/N_1254626.html)
+父主题： [GPRS加密参数配置]
 
 
 
@@ -46093,12 +46093,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 #### 查询GPRS加密参数(SHOW GPRS ENCRYPTION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询GPRS加密参数。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -46106,10 +46106,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 GEA1|GEA1|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|TAC是否支持GPRS加密算法1（GEA1）。
 GEA2|GEA2|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|TAC是否支持GPRS加密算法2（GEA2）。
@@ -46123,7 +46123,7 @@ PRIORGEA3|GPRS加密算法3优先级|参数可选性:任选参数；参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GPRS加密参数。 
@@ -46150,7 +46150,7 @@ SHOW GPRS ENCRYPTION;
 
 
 
-父主题： [GPRS加密参数配置](../../zh-CN/tree/N_1254626.html)
+父主题： [GPRS加密参数配置]
 
 
 
@@ -46173,14 +46173,14 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## GTP参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             根据协议29060描述，GTP协议承载在UDP/IP之上，由于UDP是无连接的不可靠传输协议，所以协议要求GTP本身要实现重发机制。
         
 
 
-[](None)功能描述 
+功能描述 
 
 
 GTP参数配置是用来设置GTPC的信令消息的发送次数（包括首次发送和后续重发）， 是否主动发起ECHO消息，以及ECHO消息的发送次数（包括首次发送和后续重发）。 
@@ -46191,7 +46191,7 @@ GTP参数配置是用来设置GTPC的信令消息的发送次数（包括首次�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -46214,7 +46214,7 @@ GTP参数配置是用来设置GTPC的信令消息的发送次数（包括首次�
 
 
 
-父主题： [安全变量](../../zh-CN/tree/N_126087_operation_cm_mml_umacV4_cm_combo_gngp_sv.html)
+父主题： [安全变量]
 
 
 
@@ -46237,20 +46237,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置GTP参数(SET GTP PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于设置GTP参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSENDCOUNT|GTP会话管理信令发送次数|参数可选性:任选参数；参数类型:整数；参数范围为:1~10。|该安全变量用于设置GTP会话管理信令消息发送次数（包括首次发送和后续重发）。默认值为5。在SGW没有响应的情况下，MME会重发GTP会话管理信令消息，当重发达到最大次数，仍然没有收到对端Response消息，则停止发送，流程失败或选择其他SGW重新尝试。该参数仅对S11接口的GTP会话管理信令消息有效。
 ECHOREQ|主动发送ECHO消息|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MME是否主动发送Echo Request消息。如果设置为否，则本端MME不会主动发送Echo Request消息，但对于收到的Echo Request消息仍会回Echo Response响应消息。如果设置为是，则本端MME会主动发送Echo Request消息。
@@ -46264,7 +46264,7 @@ DELAYECHONUM|延迟检测Echo发送次数|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 设置GTP参数，GTP信令发送次数为3，主动发送ECHO消息为YES，ECHO信令发送次数为6。 
@@ -46279,7 +46279,7 @@ SET GTP PARAMETER:RESENDCOUNT=3,SGSNECHO="YES",ECHORESENDCOUNT=6
 
 
 
-父主题： [GTP参数配置](../../zh-CN/tree/N_1254630.html)
+父主题： [GTP参数配置]
 
 
 
@@ -46302,20 +46302,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询GTP参数(SHOW GTP PARAMETER) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询GTP参数。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 SMSENDCOUNT|GTP会话管理信令发送次数|参数可选性:任选参数；参数类型:整数。|该安全变量用于设置GTP会话管理信令消息发送次数（包括首次发送和后续重发）。默认值为5。在SGW没有响应的情况下，MME会重发GTP会话管理信令消息，当重发达到最大次数，仍然没有收到对端Response消息，则停止发送，流程失败或选择其他SGW重新尝试。该参数仅对S11接口的GTP会话管理信令消息有效。
 ECHOREQ|主动发送ECHO消息|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|该安全变量用于设置MME是否主动发送Echo Request消息。如果设置为否，则本端MME不会主动发送Echo Request消息，但对于收到的Echo Request消息仍会回Echo Response响应消息。如果设置为是，则本端MME会主动发送Echo Request消息。
@@ -46329,7 +46329,7 @@ DELAYECHONUM|延迟检测Echo发送次数|参数可选性:任选参数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GTP参数。 
@@ -46356,7 +46356,7 @@ SHOW GTP PARAMETER
 
 
 
-父主题： [GTP参数配置](../../zh-CN/tree/N_1254630.html)
+父主题： [GTP参数配置]
 
 
 
@@ -46379,7 +46379,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # DNS服务器配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在附着、RAU/TAU、切换、PDP激活/PDN连接等业务流程中，ZXUN uMAC需要获取与之交互的SGSN、MME、GGSN、SGW或PGW的地址。如果这些地址没有在本网元配置，则需要发送消息到DNS服务器进行查询，获取对应的地址，此时SGSN/MME需要具有DNS客户端的功能，作为DNS客户端，与DNS服务器进行交互。 
@@ -46390,7 +46390,7 @@ DNS服务器用于提供根据域名解析IP地址的功能，通常DNS服务器
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 在ZXUN uMAC，配置DNS（Domain Name System）服务器相关数据，可以提供DNS服务器运行需要的ZONE、视图、ACL和资源记录的功能。 
@@ -46398,7 +46398,7 @@ DNS服务器用于提供根据域名解析IP地址的功能，通常DNS服务器
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -46491,7 +46491,7 @@ DNS区域配置
 
 
 
-父主题： [配置管理](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm.html)
+父主题： [配置管理]
 
 
 
@@ -46514,7 +46514,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## DNS服务器节点配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNS服务器是运行DNS软件，提供DNS服务的一组网络服务器，为保证可靠性通常DNS服务器以主备方式运行。 
@@ -46522,7 +46522,7 @@ DNS服务器是运行DNS软件，提供DNS服务的一组网络服务器，为�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于配置DNS服务器的IP等基本信息。对DNS服务器操作时从本配置获取DNS服务器的IP等基本信息后发起对应的下载和上传请求。本配置为基础配置，删除前请确认。 
@@ -46530,7 +46530,7 @@ DNS服务器是运行DNS软件，提供DNS服务的一组网络服务器，为�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -46563,7 +46563,7 @@ DNS服务器是运行DNS软件，提供DNS服务的一组网络服务器，为�
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -46586,15 +46586,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增DNS服务器节点(ADD DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于增加DNS服务器节点。当用户需要管理DNS服务器配置数据时，为接入DNS服务器需要使用该命令配置DNS服务器节点，配置成功后，可以通过[SHOW DNS](1261882.html)查看当前已经配置的DNS服务器节点。
+该命令用于增加DNS服务器节点。当用户需要管理DNS服务器配置数据时，为接入DNS服务器需要使用该命令配置DNS服务器节点，配置成功后，可以通过[SHOW DNS]查看当前已经配置的DNS服务器节点。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -46602,10 +46602,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|用于指示被操作的DNS服务器编号。
 CONNTYPE|连接方式|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:SSH。|用于指示被操作的DNS服务器连接方式，支持2种接入方式：SSH或者TELNET。
@@ -46624,7 +46624,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加DNS服务器节点，指定服务器编号为1，连接方式为SSH，DNS服务器管理口IP为10.42.184.198，连接端口为22，ROOT密码为root123，FTP/SFTP服务器用户名为root，FTP/SFTP服务器密码为root123。  
@@ -46639,7 +46639,7 @@ ADD DNS:ID=1,CONNTYPE="SSH",IP="10.42.184.198",CONNPORT="22",PWD="root123",FTPUS
 
 
 
-父主题： [DNS服务器节点配置](../../zh-CN/tree/N_126060_oper_cm_mml_umacV4_cm_combo_gngp_dns_node.html)
+父主题： [DNS服务器节点配置]
 
 
 
@@ -46662,7 +46662,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改DNS服务器节点(SET DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改DNS服务器节点。当用户需要修改DNS服务器的基本信息时，使用该命令。 
@@ -46670,7 +46670,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -46678,10 +46678,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|用于指示被操作的DNS服务器编号。
 CONNTYPE|连接方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用于指示被操作的DNS服务器连接方式，支持2种接入方式：SSH或者TELNET。
@@ -46700,7 +46700,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改DNS服务器节点，指定服务器编号为1，服务器管理口IP为10.42.184.198，ROOT密码为"root123"。  
@@ -46715,7 +46715,7 @@ SET DNS:ID=1,IP="10.42.184.198",PWD="root123";
 
 
 
-父主题： [DNS服务器节点配置](../../zh-CN/tree/N_126060_oper_cm_mml_umacV4_cm_combo_gngp_dns_node.html)
+父主题： [DNS服务器节点配置]
 
 
 
@@ -46738,7 +46738,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除DNS服务器节点(DEL DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除DNS服务器节点。当用户不再需要管理该DNS服务器时，使用该命令删除该DNS服务器节点。 
@@ -46746,7 +46746,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 删除DNS服务器点将连带删除网管为此节点保存的配置数据，删除前请务必确认。 
@@ -46754,10 +46754,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|用于指示被操作的DNS服务器编号。
 
@@ -46766,7 +46766,7 @@ ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除DNS服务器节点，指定服务器编号为1。  
@@ -46781,7 +46781,7 @@ DEL DNS:ID=1;
 
 
 
-父主题： [DNS服务器节点配置](../../zh-CN/tree/N_126060_oper_cm_mml_umacV4_cm_combo_gngp_dns_node.html)
+父主题： [DNS服务器节点配置]
 
 
 
@@ -46804,7 +46804,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询DNS服务器节点(SHOW DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询DNS服务器节点。当用户需要查看已经配置的DNS服务器节点时使用该命令。 
@@ -46812,7 +46812,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -46820,10 +46820,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:任选参数；参数类型:整数；参数范围为:1~255。|用于指示被操作的DNS服务器编号。
 
@@ -46832,10 +46832,10 @@ ID|服务器编号|参数可选性:任选参数；参数类型:整数；参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:任选参数；参数类型:整数。|用于指示被操作的DNS服务器编号。
 CONNTYPE|连接方式|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|用于指示被操作的DNS服务器连接方式，支持2种接入方式：SSH或者TELNET。
@@ -46852,7 +46852,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|用�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询全部DNS服务器节点。  
@@ -46881,7 +46881,7 @@ SHOW DNS;
 
 
 
-父主题： [DNS服务器节点配置](../../zh-CN/tree/N_126060_oper_cm_mml_umacV4_cm_combo_gngp_dns_node.html)
+父主题： [DNS服务器节点配置]
 
 
 
@@ -46904,7 +46904,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## DNS基础配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNS服务器的全局选项保存在named.conf配置文件中，包括了DNS进程运行的最重要的设置信息，如DNS监听端口，是否允许转发等。 
@@ -46912,7 +46912,7 @@ DNS服务器的全局选项保存在named.conf配置文件中，包括了DNS进�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于配置DNS服务器的全局选项参数，包括允许查询的源地址，允许通知，监听接口，转发列表，递归查询，递归查询请求并发最大客户端，性能统计文件路径等。 
@@ -46920,7 +46920,7 @@ DNS服务器的全局选项保存在named.conf配置文件中，包括了DNS进�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -46943,7 +46943,7 @@ DNS服务器的全局选项保存在named.conf配置文件中，包括了DNS进�
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -46966,7 +46966,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 设置DNS基础配置(SET NAMEDCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于设置DNS基础配置。当用户需要设置DNS全局选项时，使用该命令。 
@@ -46974,7 +46974,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 本命令设置的全局选项非常重要，请确认后修改。 
@@ -46982,10 +46982,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ALLOWQUERY|允许查询的源地址|参数可选性:任选参数；参数类型:字符型；参数范围为:0~45个字符。|用来设定哪个主机可以进行普通的查询。该选项也能在DNS区域中设定，这样全局选项中的选项就不起作用了。默认的是允许所有主机进行查询。
 NOTIFY|允许通知|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|是否允许通知。有下面取值：yes：默认值，当一个授权的服务器修改了一个域后，DNS NOTIFY 信息被发送出去。此信息将会发给列在域NS 记录上的服务器和任何列在also-notify 选项中的服务器。no：不会发出任何报文。Notify 选项也可能设定在DNS区域中，这样就替代了本处的设置。
@@ -47001,7 +47001,7 @@ STATISTICSFILE|性能统计文件路径|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改DNS基础配置，指定递归查询为"YES"。  
@@ -47016,7 +47016,7 @@ SET NAMEDCFG:RECURSION="YES";
 
 
 
-父主题： [DNS基础配置](../../zh-CN/tree/N_126061_oper_cm_mml_umacV4_cm_combo_gngp_dns_named.html)
+父主题： [DNS基础配置]
 
 
 
@@ -47039,7 +47039,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询DNS基础配置(SHOW NAMEDCFG) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询DNS基础配置。当用户需要查看当前DNS基础配置使用该命令。 
@@ -47047,7 +47047,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47055,10 +47055,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ALLOWQUERY|允许查询的源地址|参数可选性:任选参数；参数类型:字符型。|用来设定哪个主机可以进行普通的查询。该选项也能在DNS区域中设定，这样全局选项中的选项就不起作用了。默认的是允许所有主机进行查询。
 NOTIFY|允许通知|参数可选性:任选参数；参数类型:枚举。参见枚举定义。|是否允许通知。有下面取值：yes：默认值，当一个授权的服务器修改了一个域后，DNS NOTIFY 信息被发送出去。此信息将会发给列在域NS 记录上的服务器和任何列在also-notify 选项中的服务器。no：不会发出任何报文。Notify 选项也可能设定在DNS区域中，这样就替代了本处的设置。
@@ -47074,7 +47074,7 @@ STATISTICSFILE|性能统计文件路径|参数可选性:任选参数；参数类
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询当前DNS基础配置。  
@@ -47103,7 +47103,7 @@ any;                          port  53  { any; }   only    221.177.173.1; 221.17
 
 
 
-父主题： [DNS基础配置](../../zh-CN/tree/N_126061_oper_cm_mml_umacV4_cm_combo_gngp_dns_named.html)
+父主题： [DNS基础配置]
 
 
 
@@ -47126,7 +47126,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## DNS ACL配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 访问控制列表（Access Control List, ACL）就是一个被命名的地址匹配列表。使用访问控制列表可以使配置简单而清晰，一次定义之后可以在多处使用，从而不会使配置文件因为大量的IP地址而变得混乱。 
@@ -47134,7 +47134,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于配置ACL的名称及其地址列表。 
@@ -47142,7 +47142,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -47175,7 +47175,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -47198,15 +47198,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增DNS ACL配置(ADD DNSACL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于增加ACL。当用户需要增加ACL时，使用该命令。配置成功后，可以通过[SHOW DNSACL](1261907.html)查看当前已经配置的DNS ACL。
+该命令用于增加ACL。当用户需要增加ACL时，使用该命令。配置成功后，可以通过[SHOW DNSACL]查看当前已经配置的DNS ACL。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47214,10 +47214,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACL|ACL名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|ACL名称，用于唯一标识一条ACL。
 MATCHLIST|地址列表|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|地址匹配列表，包括多个IP地址、网段或者ACL。引用ACL时不能是该ACL自身。
@@ -47227,7 +47227,7 @@ MATCHLIST|地址列表|参数可选性:必选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加ACL，指定ACL名称为our-nets，地址匹配列表为网段"169.254.0.0/16"和网段"192.0.2.0/24"。  
@@ -47242,7 +47242,7 @@ ADD DNSACL:ACL="our-nets" ,MATCHLIST="169.254.0.0/16"&"192.0.2.0/24";
 
 
 
-父主题： [DNS ACL配置](../../zh-CN/tree/N_126061_oper_cm_mml_umacV4_cm_combo_gngp_dns_acl.html)
+父主题： [DNS ACL配置]
 
 
 
@@ -47265,7 +47265,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改DNS ACL配置(SET DNSACL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改ACL。当用户需要修改DNS ACL的地址列表时，使用该命令。 
@@ -47273,7 +47273,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47281,10 +47281,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACL|ACL名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|ACL名称，用于唯一标识一条ACL。
 MATCHLIST|地址列表|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|地址匹配列表，包括多个IP地址、网段或者ACL。引用ACL时不能是该ACL自身。
@@ -47294,7 +47294,7 @@ MATCHLIST|地址列表|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改名称为"our-nets"的ACL，指定地址匹配列表为网段"169.254.0.0/16"。 
@@ -47309,7 +47309,7 @@ SET DNSACL:ACL="our-nets" ,MATCHLIST="169.254.0.0/16";
 
 
 
-父主题： [DNS ACL配置](../../zh-CN/tree/N_126061_oper_cm_mml_umacV4_cm_combo_gngp_dns_acl.html)
+父主题： [DNS ACL配置]
 
 
 
@@ -47332,7 +47332,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除DNS ACL配置(DEL DNSACL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除ACL。当用户不再需要某个ACL时，使用该命令删除该ACL。 
@@ -47340,18 +47340,18 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
-删除ACL前，请先检查该ACL不再被DNS VIEW或者ZONE引用。查询DNS视图命令为[SHOW DNSVIEW](1261903.html)，查询DNS区域命令。
+删除ACL前，请先检查该ACL不再被DNS VIEW或者ZONE引用。查询DNS视图命令为[SHOW DNSVIEW]，查询DNS区域命令。
 
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACL|ACL名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|ACL名称，用于唯一标识一条ACL。
 
@@ -47360,7 +47360,7 @@ ACL|ACL名称|参数可选性:必选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除名称为"our-nets"的ACL。 
@@ -47375,7 +47375,7 @@ DEL DNSACL:ACL="our-nets";
 
 
 
-父主题： [DNS ACL配置](../../zh-CN/tree/N_126061_oper_cm_mml_umacV4_cm_combo_gngp_dns_acl.html)
+父主题： [DNS ACL配置]
 
 
 
@@ -47398,7 +47398,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询DNS ACL配置(SHOW DNSACL) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询ACL。当用户需要查看已经配置的ACL时使用该命令。 
@@ -47406,7 +47406,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47414,10 +47414,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACL|ACL名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|ACL名称，用于唯一标识一条ACL。
 
@@ -47426,10 +47426,10 @@ ACL|ACL名称|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ACL|ACL名称|参数可选性:任选参数；参数类型:字符型。|ACL名称，用于唯一标识一条ACL。
 MATCHLIST|地址列表|参数可选性:任选参数；参数类型:字符型；参数范围为:0~1000个字符。|地址匹配列表，包括多个IP地址、网段或者ACL。引用ACL时不能是该ACL自身。
@@ -47439,7 +47439,7 @@ MATCHLIST|地址列表|参数可选性:任选参数；参数类型:字符型；�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询全部DNS ACL。 
@@ -47468,7 +47468,7 @@ our-nets   169.254.0.0/16;192.0.2.0/24;
 
 
 
-父主题： [DNS ACL配置](../../zh-CN/tree/N_126061_oper_cm_mml_umacV4_cm_combo_gngp_dns_acl.html)
+父主题： [DNS ACL配置]
 
 
 
@@ -47491,7 +47491,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## DNS视图配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNS视图允许名称服务器根据询问者的不同有区别的回答DNS查询，当运行拆分DNS设置而不需要运行多个服务器时特别有用。每个DNS视图定义了一个将会在用户的子集中见到的DNS名称空间。 
@@ -47499,7 +47499,7 @@ DNS视图允许名称服务器根据询问者的不同有区别的回答DNS查�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于配置DNS视图的基本参数，包括视图名称和匹配的源地址信息。 
@@ -47507,7 +47507,7 @@ DNS视图允许名称服务器根据询问者的不同有区别的回答DNS查�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -47540,7 +47540,7 @@ DNS视图允许名称服务器根据询问者的不同有区别的回答DNS查�
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -47563,15 +47563,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增DNS视图配置(ADD DNSVIEW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于增加DNS视图。当用户需要增加DNS视图时，使用该命令。配置成功后，可以通过[SHOW DNSVIEW](1261903.html)查看当前已经配置的DNS视图。
+该命令用于增加DNS视图。当用户需要增加DNS视图时，使用该命令。配置成功后，可以通过[SHOW DNSVIEW]查看当前已经配置的DNS视图。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47579,10 +47579,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VIEW|视图名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|DNS视图名称，唯一标识一个DNS视图。
 MATCHCLIENTS|匹配源地址|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|DNS视图匹配的源地址，可以是网段，ACL或者IP地址，包括4个预定义的ACL：any：所有地址none：所有地址都不允许localhost：本机localnets：本地网络
@@ -47592,7 +47592,7 @@ MATCHCLIENTS|匹配源地址|参数可选性:必选参数；参数类型:字符�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加DNS视图，指定视图名称为"internal"，匹配源地址为"10.0.0.0/8"。  
@@ -47607,7 +47607,7 @@ ADD DNSVIEW:VIEW="internal",MATCHCLIENTS="10.0.0.0/8";
 
 
 
-父主题： [DNS视图配置](../../zh-CN/tree/N_12619004.html)
+父主题： [DNS视图配置]
 
 
 
@@ -47630,7 +47630,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改DNS视图配置(SET DNSVIEW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改DNS视图。当用户需要修改DNS视图的匹配源地址时，使用该命令。 
@@ -47638,7 +47638,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47646,10 +47646,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VIEW|视图名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|DNS视图名称，唯一标识一个DNS视图。
 MATCHCLIENTS|匹配源地址|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图匹配的源地址，可以是网段，ACL或者IP地址，包括4个预定义的ACL：any：所有地址none：所有地址都不允许localhost：本机localnets：本地网络
@@ -47659,7 +47659,7 @@ MATCHCLIENTS|匹配源地址|参数可选性:任选参数；参数类型:字符�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改名称为"internal"的DNS视图，匹配源地址为"10.0.0.0/8"。  
@@ -47674,7 +47674,7 @@ SET DNSVIEW:VIEW="internal",MATCHCLIENTS="10.0.0.0/8";
 
 
 
-父主题： [DNS视图配置](../../zh-CN/tree/N_12619004.html)
+父主题： [DNS视图配置]
 
 
 
@@ -47697,7 +47697,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除DNS视图配置(DEL DNSVIEW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除DNS视图。当用户不再需要某个DNS视图时，使用该命令删除该视图。 
@@ -47705,7 +47705,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 删除DNS视图前，请先清除该视图下的区域。 
@@ -47713,10 +47713,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VIEW|视图名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|DNS视图名称，唯一标识一个DNS视图。
 
@@ -47725,7 +47725,7 @@ VIEW|视图名称|参数可选性:必选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除名称为"internal"的DNS视图。  
@@ -47740,7 +47740,7 @@ DEL DNSVIEW:VIEW="internal";
 
 
 
-父主题： [DNS视图配置](../../zh-CN/tree/N_12619004.html)
+父主题： [DNS视图配置]
 
 
 
@@ -47763,7 +47763,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询DNS视图配置(SHOW DNSVIEW) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询DNS视图。当用户需要查看已经配置的DNS视图时使用该命令。 
@@ -47771,7 +47771,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47779,10 +47779,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，唯一标识一个DNS视图。
 
@@ -47791,10 +47791,10 @@ VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型。|DNS视图名称，唯一标识一个DNS视图。
 MATCHCLIENTS|匹配源地址|参数可选性:任选参数；参数类型:字符型；参数范围为:0~1000个字符。|DNS视图匹配的源地址，可以是网段，ACL或者IP地址，包括4个预定义的ACL：any：所有地址none：所有地址都不允许localhost：本机localnets：本地网络
@@ -47804,7 +47804,7 @@ MATCHCLIENTS|匹配源地址|参数可选性:任选参数；参数类型:字符�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询全部DNS视图。 
@@ -47833,7 +47833,7 @@ internal   10.0.0.0/8;
 
 
 
-父主题： [DNS视图配置](../../zh-CN/tree/N_12619004.html)
+父主题： [DNS视图配置]
 
 
 
@@ -47856,7 +47856,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## DNS区域配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNS整个的域名空间可以被分成多个区域（zone）。区域开始于一个顶级域名，一直到一个子域名或是其它域名的开始。区域通常表示管理界限的划分，是DNS树状结构上的一个标识的点。一个区域包含了那些相邻的域名树结构的部分，并具有此部分的全部信息，并且它是真正授权的。区域包含了这个节点下的所有域名，但不包括其它域里已经指定的。 
@@ -47867,7 +47867,7 @@ SOA：起始授权机构（Start Of Authority，SOA）的资源记录，描述�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于配置DNS区域的基本信息，包括区域名称、所在视图名称、区域类型、区域资源记录存储的文件名称等信息。 
@@ -47875,7 +47875,7 @@ SOA：起始授权机构（Start Of Authority，SOA）的资源记录，描述�
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -47908,7 +47908,7 @@ SOA：起始授权机构（Start Of Authority，SOA）的资源记录，描述�
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -47931,15 +47931,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增DNS区域配置(ADD DNSZONE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于增加DNS区域。当用户需要增加DNS区域时，使用该命令。配置成功后，可以通过[SHOW DNSZONE](1261911.html)查看当前已经配置的DNS区域。
+该命令用于增加DNS区域。当用户需要增加DNS区域时，使用该命令。配置成功后，可以通过[SHOW DNSZONE]查看当前已经配置的DNS区域。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -47947,10 +47947,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|区域名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -47971,7 +47971,7 @@ MINIMUMTIME|最小TTL(秒)|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加DNS区域，指定区域名称为"129.16.172.in-addr.arpa"，区域类型为MASTER，文件保存在"named.172.16.129.txt"。  
@@ -47986,7 +47986,7 @@ ADD DNSZONE:ZONE="129.16.172.in-addr.arpa",TYPE="MASTER",FILE="named.172.16.129.
 
 
 
-父主题： [DNS区域配置](../../zh-CN/tree/N_12619011.html)
+父主题： [DNS区域配置]
 
 
 
@@ -48009,7 +48009,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 修改DNS区域配置(SET DNSZONE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于修改DNS区域。当用户需要修改DNS区域的类型，存储文件或者其他参数时，使用该命令。 
@@ -48017,7 +48017,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -48025,10 +48025,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|区域名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48047,7 +48047,7 @@ MINIMUMTIME|最小TTL(秒)|参数可选性:任选参数；参数类型:整数；
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改名称为"129.16.172.in-addr.arpa"的DNS区域，区域类型为SLAVE。  
@@ -48062,7 +48062,7 @@ SET DNSZONE:ZONE="129.16.172.in-addr.arpa",TYPE="SLAVE";
 
 
 
-父主题： [DNS区域配置](../../zh-CN/tree/N_12619011.html)
+父主题： [DNS区域配置]
 
 
 
@@ -48085,7 +48085,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除DNS区域配置(DEL DNSZONE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除DNS区域。当用户不再需要某个DNS区域时，使用该命令删除该区域。 
@@ -48093,7 +48093,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 删除DNS区域前，请先清除该区域下的资源记录。 
@@ -48101,10 +48101,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|区域名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~63个字符。|DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48114,7 +48114,7 @@ VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除名称为"129.16.172.in-addr.arpa"的DNS区域。  
@@ -48129,7 +48129,7 @@ DEL DNSZONE:ZONE="129.16.172.in-addr.arpa";
 
 
 
-父主题： [DNS区域配置](../../zh-CN/tree/N_12619011.html)
+父主题： [DNS区域配置]
 
 
 
@@ -48152,7 +48152,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询DNS区域配置(SHOW DNSZONE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询DNS区域。当用户需要查看已经配置的DNS区域时使用该命令。 
@@ -48160,7 +48160,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -48168,10 +48168,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|区域名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~63个字符。|DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48181,10 +48181,10 @@ VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|区域名称|参数可选性:任选参数；参数类型:字符型。|DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48205,7 +48205,7 @@ MINIMUMTIME|最小TTL(秒)|参数可选性:任选参数；参数类型:整数。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询全部DNS区域。  
@@ -48239,7 +48239,7 @@ zzszf.hn.mnc007.mcc460.gprs                                   master    VPN11.cm
 
 
 
-父主题： [DNS区域配置](../../zh-CN/tree/N_12619011.html)
+父主题： [DNS区域配置]
 
 
 
@@ -48262,7 +48262,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 资源记录配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNS server內的每一个DNS区域都有自己的文件（zone file），ZONE文件由多个记录組成，每一个记录称为资源记录（Resource Record，RR）。当在设置DNS名称解析、反向解析及其他的管理目的时，需要使用不同类型的RR。 
@@ -48292,7 +48292,7 @@ NAPTR记录：用来通过正则表达式方式去映射一个域名。
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 用于配置各种DNS资源记录。 
@@ -48300,7 +48300,7 @@ NAPTR记录：用来通过正则表达式方式去映射一个域名。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -48328,7 +48328,7 @@ NAPTR记录：用来通过正则表达式方式去映射一个域名。
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -48351,15 +48351,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 新增DNS服务器资源记录(ADD RR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
-该命令用于增加DNS资源记录。当用户需要增加DNS资源记录时，使用该命令。配置成功后，可以通过[SHOW RR](1261891.html)查看当前已经配置的DNS资源记录。
+该命令用于增加DNS资源记录。当用户需要增加DNS资源记录时，使用该命令。配置成功后，可以通过[SHOW RR]查看当前已经配置的DNS资源记录。
 
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -48367,10 +48367,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|ZONE名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|用于标识资源记录所在的DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48392,7 +48392,7 @@ TARGET|目标|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加DNS资源记录，指定视图名称为"zte"，区域为"hb.node.epc.mnc000.mcc460.3gppnetwork.org"，资源记录类型为"A"，域名为"wh.hb.node.epc.mnc000.mcc460.3gppnetwork.org."，IP地址为"223.103.20.96"。  
@@ -48407,7 +48407,7 @@ ADD RR:ZONE="hb.node.epc.mnc000.mcc460.3gppnetwork.org", VIEWNAME="zte",TYPE=A,D
 
 
 
-父主题： [资源记录配置](../../zh-CN/tree/N_12618894.html)
+父主题： [资源记录配置]
 
 
 
@@ -48430,7 +48430,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 删除DNS服务器资源记录(DEL RR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于删除DNS资源记录。当用户不再需要某条DNS资源记录时，使用该命令删除该资源记录。 
@@ -48438,7 +48438,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -48446,10 +48446,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|ZONE名称|参数可选性:必选参数；参数类型:字符型；参数范围为:1~100个字符。|用于标识资源记录所在的DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48465,7 +48465,7 @@ TARGET|目标|参数可选性:任选参数；参数类型:字符型；参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除一条资源记录，其视图名称为"zte"，区域为"hb.node.epc.mnc000.mcc460.3gppnetwork.org"，资源记录类型为"A"，域名为"wh.hb.node.epc.mnc000.mcc460.3gppnetwork.org."。  
@@ -48480,7 +48480,7 @@ DEL RR:ZONE="hb.node.epc.mnc000.mcc460.3gppnetwork.org", VIEWNAME="zte",TYPE=A,D
 
 
 
-父主题： [资源记录配置](../../zh-CN/tree/N_12618894.html)
+父主题： [资源记录配置]
 
 
 
@@ -48503,7 +48503,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ### 查询DNS服务器资源记录(SHOW RR) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询DNS资源记录。当用户需要查看已经配置的DNS资源记录时使用该命令。 
@@ -48511,7 +48511,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -48519,10 +48519,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|ZONE名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|用于标识资源记录所在的DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型；参数范围为:0~100个字符。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48534,10 +48534,10 @@ TYPE|类型|参数可选性:任选参数；参数类型:枚举。参见枚举定
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ZONE|ZONE名称|参数可选性:任选参数；参数类型:字符型。|用于标识资源记录所在的DNS区域名称，如果未划分不同视图，则唯一标识一个DNS区域；否则，DNS区域与DNS视图一起唯一确定一个DNS区域。
 VIEW|视图名称|参数可选性:任选参数；参数类型:字符型。|DNS视图名称，用于标识DNS区域所在的视图。
@@ -48559,7 +48559,7 @@ TARGET|目标|参数可选性:任选参数；参数类型:字符型。|用于描
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询全部类型为NAPTR的DNS资源记录。  
@@ -48591,7 +48591,7 @@ tac.epc.mnc000.mcc460.3gppnetwork.org                         tac-lb85.tac-hb74 
 
 
 
-父主题： [资源记录配置](../../zh-CN/tree/N_12618894.html)
+父主题： [资源记录配置]
 
 
 
@@ -48614,7 +48614,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 进入DNS模式(ENTER DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于进入DNS模式，当需要进行DNS服务器配置时，使用该命令。 
@@ -48625,7 +48625,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 执行DNS服务器配置命令，需要先进入DNS模式。 
@@ -48633,10 +48633,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|用于表示被操作的DNS服务器编号。
 
@@ -48645,7 +48645,7 @@ ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 进入DNS模式，DNS服务器编号为1。 
@@ -48660,7 +48660,7 @@ ENTER DNS:ID=1;
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -48683,7 +48683,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 退出DNS模式(EXIT DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于退出当前DNS模式，当操作员不再需要配置DNS相关数据时，使用该命令。 
@@ -48694,7 +48694,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令在用户需要退出DNS配置模式，返回普通模式时候使用。 
@@ -48702,7 +48702,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 退出DNS模式。 
@@ -48717,7 +48717,7 @@ EXIT DNS;
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -48740,12 +48740,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 备份DNS服务器数据(BACKUP DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于对指定的DNS服务器进行备份。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -48762,10 +48762,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|用于表示被操作的DNS服务器编号。
 OUTPUTTYPE|备份输出类型|参数可选性:必选参数；参数类型:枚举。参见枚举定义。默认值:DISK。|该参数用于设置备份文件的保存位置：FTP_OR_SFTP：备份文件保存到FTP/SFTP服务器上。DISK：备份文件保存到本地磁盘上。
@@ -48779,7 +48779,7 @@ PASSWORD|FTP/SFTP用户密码|参数可选性:任选参数；参数类型:字符
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 备份DNS服务器数据，DNS服务器编号是1，备份输出路径是/home，备份文件名称是backbind1.zip。 
@@ -48794,7 +48794,7 @@ BACKUP DNS:ID=1,OUTPUTPATH="/home",FILENAME="backbind1.zip";
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -48817,12 +48817,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 恢复DNS服务器数据(RESTORE DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于对指定的备份文件进行恢复。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -48830,10 +48830,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|服务器编号|参数可选性:必选参数；参数类型:整数；参数范围为:1~255。|用于表示被操作的DNS服务器编号。
 FILENAME|服务器备份文件全路径|参数可选性:必选参数；参数类型:字符型；参数范围为:1~128个字符。|对于服务器磁盘（备份输入类型：DISK），则备份文件来自服务器磁盘；对于FTP/SFTP服务器（备份输入类型：FTP_OR_SFTP），则来自FTP/SFTP服务器，例如：ftp://10.0.0.35/backup/comm_all.zip。
@@ -48846,7 +48846,7 @@ PASSWORD|FTP/SFTP用户密码|参数可选性:任选参数；参数类型:字符
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 恢复DNS服务器数据，DNS服务器编号为1，服务器备份文件全路径为/home/backbind1.zip。 
@@ -48861,7 +48861,7 @@ RESTORE DNS:ID=1,FILENAME="/home/backbind1.zip";
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -48884,7 +48884,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 刷新DNS服务器数据到本地数据库(REFRESH LOCALDNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于强制更新OMM网管的DNS配置数据，当ZXUN uMAC需要从DNS服务器重新下载配置数据时，使用该命令。 
@@ -48895,7 +48895,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 当配置DNS服务器数据后未同步到DNS服务器即退出后，下次进入DNS模式网管配置数据将会保留。如果用户需要重新以DNS服务器配置为准进行配置，需要执行刷新DNS服务器数据到本地数据库命令。 
@@ -48903,7 +48903,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 刷新DNS服务器数据到本地数据库命令。 
@@ -48918,7 +48918,7 @@ REFRESH LOCALDNS;
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -48941,7 +48941,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 同步DNS服务器配置(SYN DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于将本地OMM网管保存的DNS服务器配置数据同步到DNS服务器，当需要将本地OMM网管配置的DNS数据上传到DNS服务器时，使用该命令。 
@@ -48952,7 +48952,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 用户在退出DNS模式前需要先使用该命令，否则用户配置的数据不会上传到DNS服务器生效。下次进入DNS配置模式时，将会重新加载DNS服务器上的数据，即网管上原来的配置数据将会被覆盖。 
@@ -48960,7 +48960,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 同步网管DNS配置数据到DNS服务器。 
@@ -48975,7 +48975,7 @@ SYN DNS;
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -48998,7 +48998,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 强制退出DNS模式(EXIT DNS FORCE) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于强制退出DNS模式，当某个操作员使用DNS模式后没有退出而其他操作员需要配置DNS服务器数据时，使用该命令。 
@@ -49009,7 +49009,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令仅允许ADMIN用户执行。 
@@ -49017,7 +49017,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 强制退出DNS模式。 
@@ -49032,7 +49032,7 @@ EXIT DNS FORCE;
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -49055,7 +49055,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 重新加载DNS服务器(RELOAD DNS) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于重新加载DNS服务器的配置数据，当操作员在本地OMM网管修改DNS数据并且同步到DNS服务器，使配置数据生效时，使用该命令。 
@@ -49066,7 +49066,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令将配置更改正式生效，执行前请检查数据正确性。 
@@ -49074,7 +49074,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 重新加载DNS服务器配置文件。 
@@ -49089,7 +49089,7 @@ RELOAD DNS;
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -49112,12 +49112,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询DNS服务器版本(SHOW DNS SERVER VERSION) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询当前DNS服务器的版本。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -49125,10 +49125,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VERSION|版本信息|参数可选性:任选参数；参数类型:字符型；参数范围为:0~10240个字符。|DNS服务器版本的详细信息。
 
@@ -49137,7 +49137,7 @@ VERSION|版本信息|参数可选性:任选参数；参数类型:字符型；参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询DNS服务器版本。  
@@ -49166,7 +49166,7 @@ V5.17.10.B2
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 
@@ -49189,12 +49189,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询DNS服务器主从状态(SHOW DNS SERVER STATE) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询DNS服务器的主从状态。
 
 
-[](None)注意事项 
+注意事项 
 
 
 无。 
@@ -49202,10 +49202,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ISLEADER|是否为主节点|参数可选性:必选参数；参数类型:枚举。参见枚举定义。|DNS服务器主从状态。是：主节点。否：从节点。
 
@@ -49214,7 +49214,7 @@ ISLEADER|是否为主节点|参数可选性:必选参数；参数类型:枚举�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询DNS服务器主从状态。  
@@ -49243,7 +49243,7 @@ SHOW DNS SERVER STATE;
 
 
 
-父主题： [DNS服务器配置](../../zh-CN/tree/N_126060_operation_cm_mml_umacV4_cm_combo_gngp_dns.html)
+父主题： [DNS服务器配置]
 
 
 

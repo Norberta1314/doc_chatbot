@@ -4,7 +4,7 @@ TECS Director网管北向SNMP接口规范包括：公共接口规范、告警管
 本规范规定了中兴通讯TECS Director对上级NMS提供的标准北向SNMP接口的技术规范。
 本规范适用于中兴通讯TECS Director与上级NMS系统对接的规划和设计。
 ## 术语和缩略语 
-TECS Director网管北向SNMP接口规范包括：公共接口规范、告警管理接口规范。相关缩略语和术语参见[表1](b81b6306c0934483b4a398cd64515154.html#topicid7956331__tableid2180053)和[表2](b81b6306c0934483b4a398cd64515154.html#topicid7956331__tableid2765516)。
+TECS Director网管北向SNMP接口规范包括：公共接口规范、告警管理接口规范。相关缩略语和术语参见[表1]和[表2]。
 缩略语|中文解释|英文解释
 ---|---|---
 NMS|网络管理系统|Network Management System
@@ -22,18 +22,18 @@ OID|对象标识符|Object Identifier
 ### SNMP接口简介 
 简单网络管理协议（SNMP：Simple Network Management Protocol）是由互联网工程任务组（IETF：Internet Engineering Task Force ）定义的一套网络管理协议。使用SNMP，一个管理工作站可以远程管理支持这种协议的网络设备，包括监视网络状态、修改网络设备配置、接收网络事件警告等。SNMP接口适用于TECS Director北向对接第三方告警平台的情况。
 ### 接口位置和接口类型 
-TECS Director北向SNMP是中兴通讯提供的北向适配器，使NMS通过SNMP协议网管获取所需数据。它的位置如[图1](83302a90ad6c48a4905c3f5a014350f9.html#topicid7828799__827d3798-679c-4400-ae1a-39ad9ced291b)所示。
+TECS Director北向SNMP是中兴通讯提供的北向适配器，使NMS通过SNMP协议网管获取所需数据。它的位置如[图1]所示。
 图1  北向SNMP接口位置图
-[]images/image.png)
+
 ### 支持的SNMP协议 
-采用SNMP协议方式进行数据交互，相应的协议栈参见[表1](9ef66a112134464c8b16f3ae369ea823.html#topicid2710864__tableid6264460)。
+采用SNMP协议方式进行数据交互，相应的协议栈参见[表1]。
 应用层|SNMP
 ---|---
 传输层|UDP
 网络层|IP
 数据链路层|DL
 物理层|PHY
-SNMP接口支持IETF的SNMPv2c，SNMPv3协议。具体支持情况参见[表2](9ef66a112134464c8b16f3ae369ea823.html#topicid2710864__tableid7825651)。
+SNMP接口支持IETF的SNMPv2c，SNMPv3协议。具体支持情况参见[表2]。
 协议类型|支持类型
 ---|---
 SNMPv2c|SNMPv2c 协议标准操作SNMP GetSNMP Get NextSNMP Get BulkSNMP SetSNMPv2cTrapSNMPv2c 基于Community 的安全模型
@@ -43,9 +43,9 @@ SNMPv3|SNMPv3 协议标准操作SNMP GetSNMP Get NextSNMP Get BulkSNMP SetSNMPv3
 ZTE SNMP北向接口支持SNMP协议的V2C和V3版本，在实际开局时可根据需要通过配置的方式使系统提供不同的版本支持。
 ### ZTE MIB根节点定义 
 MIB即管理信息库（Management Information Base）是SNMP中管理数据的标准，在这个标准里规定了网络代理所使用的数据标识，数据类型，以及对数据的操作等信息。
-MIB中的数据标识以一种根在上的树状方式组织，称为对象命名树（Object Naming Tree）。树上的每个对象以从树根（虚拟根）开始到对象为止所经过结点的序列来唯一标识。如[图1](5fa72780da0543d6953c658b4b90f559.html#topicid7303964__38d60f91-5dd6-4882-9d33-4d9b9f560b8e)所示。
+MIB中的数据标识以一种根在上的树状方式组织，称为对象命名树（Object Naming Tree）。树上的每个对象以从树根（虚拟根）开始到对象为止所经过结点的序列来唯一标识。如[图1]所示。
 图1  MIB对象命名树
-[]images/1619517309486.png)
+
 图中“zteMIB”结点可用｛.1.3.6.1.4.1.3902｝标识，在实际的环境中该结点也是公司内定义自己对象标识起始点。为图示方便，本文画告警北向SNMP接口的对象命名树时，只画出完整对象树从enterprises结点开始的子树，子树的根结点直接用结点在完整对象树中的完整标识符{.1.3.6.1.4.1}表示。
 ## SNMP北向告警接口规范 
 ### 告警北向SNMP接口的MIB说明 
@@ -59,7 +59,7 @@ alarmFilter{.1.3.6.1.4.1.3902.4101.1.6}分支，用于定义告警北向SNMP接�
 alarmOperation{.1.3.6.1.4.1.3902.4101.1.7}分支，告警同步（alarmSync）。 
 #### csIRP部分 
 csIRP中定义来自于mib定义文件zxcomc-snmp-csirp-mib.txt，该库中主要定义北向接口中和协议控制相关的对象。
-[]images/1619517546161.png)主要包含： 
+主要包含： 
 csIRPInfo{.1.3.6.1.4.1.3902.4101.4.1}分支，其下属性用于定义cs集成参考点的一些基础信息，如版本、心跳Trap发送周期等。 
 csNotifications{.1.3.6.1.4.1.3902.4101.4.2}分支，其下属性用于定义心跳Trap标识。 
 ### 告警北向SNMP接口的功能 
@@ -67,7 +67,7 @@ csNotifications{.1.3.6.1.4.1.3902.4101.4.2}分支，其下属性用于定义心�
 #### 查看系统通讯监控版本 
 NMS系统可以通过对告警北向SNMP接口MIB中定义的csIRPVersion对象（.1.3.6.1.4.1.3902.4101.4.1.1.0 ）执行get操作获取系统通讯监控版本。目前系统返回版本值为"CS IRP V2.0"。
 #### 发送心跳Trap 
-TECS Director可以根据设定的心跳Trap周期，定时使用SNMP接口MIB中定义的heartbeatNotification标识发送心跳Trap到北向网管。不同序号的心跳Trap含义参见[表1](2e86b02c94204a91bf94dc4f0efb42bc.html#topicid9019728__tableid2580240)。
+TECS Director可以根据设定的心跳Trap周期，定时使用SNMP接口MIB中定义的heartbeatNotification标识发送心跳Trap到北向网管。不同序号的心跳Trap含义参见[表1]。
 序号|参数项名称|说明|参数值类型|值定义（OID）|备注
 ---|---|---|---|---|---
 1|-|时间戳|TimeTicks|.1.3.6.1.2.1.1.3.0|-
@@ -152,7 +152,7 @@ Set操作成功或告警对应的告警码为固定级别，Set操作返回输�
 .1.3.6.1.4.1.3902.4101.1.1.3 
 .1.3.6.1.4.1.3902.4101.1.1.2 
 #### 发送告警上报Trap 
-系统可以使用SNMP接口MIB中定义的alarmNew标识（.1.3.6.1.4.1.3902.4101.1.4.1.1）将未被Trap过滤条件过滤掉的告警上报消息Trap往北向网管。Trap消息中的告警属性值请参阅[当前告警表格查询](090b943ea3a74454a25b03bd7c6c4448.html)。
+系统可以使用SNMP接口MIB中定义的alarmNew标识（.1.3.6.1.4.1.3902.4101.1.4.1.1）将未被Trap过滤条件过滤掉的告警上报消息Trap往北向网管。Trap消息中的告警属性值请参阅[当前告警表格查询]。
 系统实际上报Trap信息中的字段顺序以文档表格中的顺序为准。默认情况下，可见性告警和不可见性告警均会上报。 
 序号|参数项名称|说明|参数值类型|值定义（OID）|备注
 ---|---|---|---|---|---
@@ -188,7 +188,7 @@ Set操作成功或告警对应的告警码为固定级别，Set操作返回输�
 30|alarmOtherInfo|告警自定义属性|DisplayString （SIZE(0..255)）|.1.3.6.1.4.1.3902.4101.1.3.1.25|-
 alarmProbableCause字段的值为0代表无北向原因码 
 #### 发送告警恢复Trap 
-系统可以使用SNMP接口MIB中定义的alarmCleared标识（.1.3.6.1.4.1.3902.4101.1.4.1.2）将未被Trap过滤条件过滤掉的告警恢复消息Trap往北向网管。Trap消息中的告警属性值更详细说明请参阅[当前告警表格查询](090b943ea3a74454a25b03bd7c6c4448.html)。系统实际上报Trap信息中的字段顺序以文档表格中的顺序为准。
+系统可以使用SNMP接口MIB中定义的alarmCleared标识（.1.3.6.1.4.1.3902.4101.1.4.1.2）将未被Trap过滤条件过滤掉的告警恢复消息Trap往北向网管。Trap消息中的告警属性值更详细说明请参阅[当前告警表格查询]。系统实际上报Trap信息中的字段顺序以文档表格中的顺序为准。
 序号|参数项名称|说明|参数值类型|值定义（OID）|备注
 ---|---|---|---|---|---
 1|-|时间戳|TimeTicks|.1.3.6.1.2.1.1.3.0|-
@@ -256,7 +256,7 @@ alarmProbableCause字段的值为0代表无北向原因码
 29|alarmComment|告警注释|STRING：0~255个字符|.1.3.6.1.4.1.3902.4101.1.3.1.10|-
 30|alarmOtherInfo|告警自定义属性|DisplayString (SIZE (0..255))|.1.3.6.1.4.1.3902.4101.1.3.1.25|-
 #### 发送告警注释变化Trap 
-系统可以使用SNMP接口MIB中定义的alarmCommentChange标识（.1.3.6.1.4.1.3902.4101.1.4.1.4）将未被Trap过滤条件过滤掉的告警注释改变消息Trap往北向网管。Trap消息中的告警属性值更详细说明请参阅[当前告警表格查询](090b943ea3a74454a25b03bd7c6c4448.html)。系统实际上报Trap信息中的字段顺序以文档表格中的顺序为准。
+系统可以使用SNMP接口MIB中定义的alarmCommentChange标识（.1.3.6.1.4.1.3902.4101.1.4.1.4）将未被Trap过滤条件过滤掉的告警注释改变消息Trap往北向网管。Trap消息中的告警属性值更详细说明请参阅[当前告警表格查询]。系统实际上报Trap信息中的字段顺序以文档表格中的顺序为准。
 序号|参数项名称|说明|参数值类型|值定义（OID）|备注
 ---|---|---|---|---|---
 1|-|时间戳|TimeTicks|.1.3.6.1.2.1.1.3.0|-
@@ -324,7 +324,7 @@ alarmProbableCause字段的值为0代表无北向原因码
 29|alarmComment|告警注释|STRING：0~255个字符|.1.3.6.1.4.1.3902.4101.1.3.1.10|-
 30|alarmOtherInfo|告警自定义属性|DisplayString （SIZE (0..255)）|.1.3.6.1.4.1.3902.4101.1.3.1.25|-
 #### 发送告警路径改变（关联业务）Trap 
-系统可以使用SNMP接口MIB中定义的alarmServiceChange标识 （.1.3.6.1.4.1.3902.4101.1.4.1.10）将未被Trap过滤条件过滤掉的告警路径改变消息Trap往北向网管。Trap消息中的告警属性值更详细说明请参阅[当前告警表格查询](090b943ea3a74454a25b03bd7c6c4448.html)。系统实际上报Trap信息中的字段顺序以文档表格中的顺序为准。
+系统可以使用SNMP接口MIB中定义的alarmServiceChange标识 （.1.3.6.1.4.1.3902.4101.1.4.1.10）将未被Trap过滤条件过滤掉的告警路径改变消息Trap往北向网管。Trap消息中的告警属性值更详细说明请参阅[当前告警表格查询]。系统实际上报Trap信息中的字段顺序以文档表格中的顺序为准。
 TECS Director在基础mib中增加了告警路径改变trap（alarmPathChange entry .1.3.6.1.4.1.3902.4101.1.4.1.13）,为冗余信息，V1.20.10.06P01版本中删除并在版本说明书中说明。
 序号|参数项名称|说明|参数值类型|值定义（OID）|备注
 ---|---|---|---|---|---
@@ -369,7 +369,7 @@ TECS Director在基础mib中增加了告警路径改变trap（alarmPathChange en
 3|systemDN|TECS Director|STRING|.1.3.6.1.4.1.3902.4101.1.1.3
 0~255个字符|3|systemDN|TECS Director|.1.3.6.1.4.1.3902.4101.1.1.3
 #### 基于网元位置的告警同步 
-当NMS需要和TECS Director进行全网告警同步，可以通过[当前告警表格查询](090b943ea3a74454a25b03bd7c6c4448.html)来获取所有TECS Director当前告警来完成。如果NMS只需要进行局部告警同步，比如只针对某一组网元位置的告警进行同步，则可以利用"基于网元位置的告警同步"功能来达成目标。具体操作是由NMS模块向SNMP北向接口MIB中定义中的syncAlarm节点执行set操作以传入本次需要同步的位置信息， 然后SNMP模块会查询TECS Director上该位置的所有告警，并封装成多条告警同步Trap，上报到NMS。
+当NMS需要和TECS Director进行全网告警同步，可以通过[当前告警表格查询]来获取所有TECS Director当前告警来完成。如果NMS只需要进行局部告警同步，比如只针对某一组网元位置的告警进行同步，则可以利用"基于网元位置的告警同步"功能来达成目标。具体操作是由NMS模块向SNMP北向接口MIB中定义中的syncAlarm节点执行set操作以传入本次需要同步的位置信息， 然后SNMP模块会查询TECS Director上该位置的所有告警，并封装成多条告警同步Trap，上报到NMS。
 ##### 触发网元位置同步的set操作 
 NMS需要向mib定义中的syncAlarm（.1.3.6.1.4.1.3902.4101.1.7.1.0）结点发出set动作以触发满足条件告警的TRAP同步上报.Set操作条件目前支持：发生开始时间条件，发生结束时间条件，网元条件。多个网元之间的关系是“或”的关系，网元条件和上报时间的条件是"与"的关系。 
 例如：beginraisetime:2017-07-04 15:30:00;endraisetime:2017-07-05 15:30:00;position:me,me2; 
@@ -456,8 +456,8 @@ alarmSystemTypeCodeExcludeFilter.1.3.6.1.4.1.3902.4101.1.6.3.9.0|（””）：
 alarmPosition1OrPosition2ExcludeFilter.1.3.6.1.4.1.3902.4101.1.6.3.10.0|（””）：过滤禁用，或者主位置，从位置格式的字符串表示这些特定主位置和从位置的告警不允许Trap上报
 alarmSystemTypeCauseExcludeFilter.1.3.6.1.4.1.3902.4101.1.6.3.11.0|（””）：过滤禁用，或者 【系统类型1，北向告警码1】【系统类型2，北向告警码2】格式的字符串表示这些特定系统类型和北向告警码的告警不允许Trap上报
 告警SNMP北向收到对过滤参数的设置命令后，除了修改本地过滤参数状态，还会持久化新状态到运行时文件中，以保证即使系统重启或者北向接口维护工具修改参数后，也不会丢失过滤状态设置。
-告警级别过滤条件设置时，应使用接口编码值，该值和TECS Director自身采用的告警级别编码值不同。参见[告警北向SNMP接口的告警级别和TECS 云管系统告警级别取值对照表](e7e1f4ae78794db7af8cccd51166dfe5.html)。
-告警类型过滤条件设置时，应使用接口编码值，该值和TECS Director自身采用的告警类型编码值不同。参见[告警北向SNMP接口的告警类型和TECS 云管系统告警类型的取值对照表](3a3993cdc3f64a27a85c2d8638875f6f.html)。
+告警级别过滤条件设置时，应使用接口编码值，该值和TECS Director自身采用的告警级别编码值不同。参见[告警北向SNMP接口的告警级别和TECS 云管系统告警级别取值对照表]。
+告警类型过滤条件设置时，应使用接口编码值，该值和TECS Director自身采用的告警类型编码值不同。参见[告警北向SNMP接口的告警类型和TECS 云管系统告警类型的取值对照表]。
 #### 发送异常消息通知 
 告警同步过程中，若遇到系统内部异常，系统会发送异常Trap消息。 
 序号|参数项名称|参数项说明|参数值类型|参数值定义（OID）|备注
@@ -520,7 +520,7 @@ NMS可以通过以下两个接口得到TECS Director的当前告警：
 NMS可以通过以下方法判断Trap消息是否丢失
 TECS Director发往NMS的所有告警Trap信息中都包括两个序号标识sendNotificationId（本次发送序列号）和lastSendNotificationId（上次发送序列号）。在启用单个代理且配置一个Trap目标地址的情况下，利用这两个标识NMS可以知道是否按序无遗漏的收到来自SNMP北向的告警Trap信息。其用法为，NMS收到第一条Trap信息时，保存此Trap的sendNotificationId值，不妨记为lastId，然后收到下一条Trap时比较新Trap的lastSendNotificationId值和前面记录的lastid是否一致，若一致则说明这两条Trap是按序连续发出的，此时NMS用新Trap的sendNotificationId值更新lastId值，然后重复前述检查过程，即可保证按序无遗漏接收告警信息。若检查时发现新Trap的lastSendNotificationId值和前面记录的lastid不一致，则意味着要么这两条Trap之间存在某些Trap丢失，要么发送方发出的多条Trap在接收方发生乱序(因为SNMP协议底层采用udp协议，这两种情况都可能发生)，此时NMS可以启动容错程序，比如缓存一段时间内的Trap信息看能否重整理排序或者接收到中间丢失的Trap信息，若经容错处理后还是未能收到丢失的Trap或者不能把顺序整理成功，则NMS可以通过获取当前告警接口重新和TECS Director同步。但在启用多个代理或者单个代理配置多个Trap目标地址的情况下，这两个标识只保证是递增的。 
 TECS Director重启后或在发送过程中出现异常，sendNotificationId和lastSendNotificationId会自动归零，NMS可以在一段时间后通过告警接口重新和TECS Director同步。 
-关于SNMP告警编号说明参见[表1](af2a22ac1b6045c1979073004e634705.html#topicid4103916__tableid6135409)。
+关于SNMP告警编号说明参见[表1]。
 名称|说明|OID
 ---|---|---
 alarmIndex|统一告警北向SNMP表格中告警的标识。|.1.3.6.1.4.1.3902.4101.1.3.1.9
@@ -535,7 +535,7 @@ ntsNotificationFilter{.1.3.6.1.4.1.3902.4101.10.3}分支，用于通知Trap消�
 #### 通知上报功能说明 
 ##### 开启通知上报 
 通知上报功能可以在agent中设置是否接收通知消息。 
-snmp agent中支持通知上报字段supportNotificationFlag的参数值，参数值含义参见[表1](c3f7aededaeb4efe897f09d40882a3d6.html#topicid5015011__e442d089-f8a4-4274-a528-117fed2bcd85)。
+snmp agent中支持通知上报字段supportNotificationFlag的参数值，参数值含义参见[表1]。
 参数值|含义
 ---|---
 0|停止通知Trap上报

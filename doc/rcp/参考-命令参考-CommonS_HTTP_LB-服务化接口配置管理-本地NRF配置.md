@@ -1,7 +1,7 @@
  本地NRF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在5G核心网系统中，服务使用者向NRF发现服务提供者，NRF在发现响应中携带满足条件的服务提供者的NFProfile。但某些场景下，运营商没有部署NRF或者NRF无法提供某些NF的发现结果，此时需要在服务使用者（本端）上把服务提供者（对端）的NFProfile配置出来。当服务使用者需要发现一个服务提供者时，就按照类似NRF的功能逻辑，在本地用服务发现请求里面的参数跟NFProfile里面的参数逐一匹配，如果全部匹配成功，则使用NFProfile里面的信息作为服务提供者的信息，上述功能称为本地NRF功能。 
@@ -9,7 +9,7 @@
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF配置目录包含了本地NRF功能所需要的所有配置，包括公共配置、对端NF配置、对端NF服务实例配置、NF扩展信息配置。当运营商没有部署NRF，或者部署了NRF但NRF无法提供某些NF的发现结果时，需要配置该组命令。如果不配置本地NRF配置目录下的命令，则本地NRF功能无法生效。 
@@ -17,7 +17,7 @@
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -28,7 +28,7 @@
 # 公共配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本地NRF配置中，有部分参数在对端NF配置、对端NF服务实例配置、NF扩展信息配置中都会出现，例如IP地址配置、PLMN ID配置等等，为了避免重复配置，将这些配置都放到公共配置命令树目录下，对端NF配置或NF实例配置等只需要引用这些公共配置的编号即可。 
@@ -36,7 +36,7 @@
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 公共配置命令树目录包含了本地NRF功能所需要的所有公共配置。当启用本地NRF功能时，需要配置该组命令。如果不配置公共配置，则上述NF配置或NF服务实例配置也无法配置成功，本地NRF功能无法生效。 
@@ -44,7 +44,7 @@
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -55,7 +55,7 @@
 ## PLMN ID配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识) 包含公共陆地移动网的移动国家码和移动网号。 
@@ -65,7 +65,7 @@ PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识)
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN ID配置用于配置服务提供者的公共陆地移动网的移动国家码和移动网号，当启用本地NRF功能时，需要配置该组命令。 
@@ -75,7 +75,7 @@ PLMN ID配置用于配置服务提供者的公共陆地移动网的移动国家�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -86,7 +86,7 @@ PLMN ID配置用于配置服务提供者的公共陆地移动网的移动国家�
 ### 新增PLMN ID配置(ADD SBIPLMNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN ID配置。当本地NRF配置中所配置的对端NFProfile需要携带使用移动国家码和移动网号所组成的公共陆地移动网信息时，使用该命令。 
 
@@ -105,15 +105,15 @@ PLMN ID配置用于配置服务提供者的公共陆地移动网的移动国家�
  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 MCC|移动国家码|参数可选性: 必选参数类型: 字符串参数范围: 3-3|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家/地区代码，包含3个数字。该参数由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。
@@ -122,10 +122,10 @@ MNC|移动网号|参数可选性: 必选参数类型: 字符串参数范围: 2-3
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 MCC|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家/地区代码，包含3个数字。该参数由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。
@@ -134,7 +134,7 @@ MNC|移动网号|参数可选性: 任选参数类型: 字符串参数范围: 2-3
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -147,20 +147,20 @@ ADD SBIPLMNID:INDEX=1,MCC="123",MNC="456";
 ### 修改PLMN ID配置(SET SBIPLMNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PLMN ID配置。当本地NRF配置中所配置的对端NFProfile携带的公共陆地移动网信息需要变更时，使用该命令。命令执行成功后，修改后的公共陆地移动网信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 MCC|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家/地区代码，包含3个数字。该参数由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。
@@ -169,10 +169,10 @@ MNC|移动网号|参数可选性: 任选参数类型: 字符串参数范围: 2-3
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 MCC|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家/地区代码，包含3个数字。该参数由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。
@@ -181,7 +181,7 @@ MNC|移动网号|参数可选性: 任选参数类型: 字符串参数范围: 2-3
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -194,12 +194,12 @@ SET SBIPLMNID:INDEX=1,MCC="123",MNC="456";
 ### 删除PLMN ID配置(DEL SBIPLMNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN ID配置。当本地NRF配置中所配置的对端NFProfile不需要携带该公共陆地移动网时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该公共陆地移动网。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该PLMN ID配置，需要先删除引用该配置的“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”。 
 
@@ -216,20 +216,20 @@ SET SBIPLMNID:INDEX=1,MCC="123",MNC="456";
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 MCC|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家/地区代码，包含3个数字。该参数由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。
@@ -238,7 +238,7 @@ MNC|移动网号|参数可选性: 任选参数类型: 字符串参数范围: 2-3
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -251,20 +251,20 @@ DEL SBIPLMNID:INDEX=1;
 ### 查询PLMN ID配置(SHOW SBIPLMNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN ID配置。当需要查询对端NFProfile携带的公共陆地移动网信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 MCC|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家/地区代码，包含3个数字。该参数由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。
@@ -273,10 +273,10 @@ MNC|移动网号|参数可选性: 任选参数类型: 字符串参数范围: 2-3
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID编号，该编号是PLMN ID配置的唯一标识。该参数被“PLMN ID组参数配置”、“PLMN NID配置”及“GUAMI组参数配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“PLMN NID配置”通过SHOW SBIPLMNNID命令查询。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 MCC|移动国家码|参数可选性: 任选参数类型: 字符串参数范围: 3-3|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家/地区代码，包含3个数字。该参数由运营商根据国际电联分配的国家码进行规划配置，用于在移动网络中，唯一标识一个国家信息，例如中国为460。MCC对于所有的记录都是唯一的。
@@ -285,7 +285,7 @@ MNC|移动网号|参数可选性: 任选参数类型: 字符串参数范围: 2-3
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -308,7 +308,7 @@ SHOW SBIPLMNID:INDEX=1
 ## PLMN ID组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识) 包含公共陆地移动网的移动国家码和移动网号。 
@@ -318,7 +318,7 @@ PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识)
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN ID组配置包括“PLMN ID组编号配置”和“PLMN ID组参数配置”，一个PLMN ID组下面可以包含若干个PLMN ID组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -328,7 +328,7 @@ PLMN ID组配置包括“PLMN ID组编号配置”和“PLMN ID组参数配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -339,7 +339,7 @@ PLMN ID组配置包括“PLMN ID组编号配置”和“PLMN ID组参数配置�
 ### PLMN ID组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识) 包含公共陆地移动网的移动国家码和移动网号。 
@@ -349,7 +349,7 @@ PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识)
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN ID组编号配置用于配置一个PLMN ID组，一个PLMN ID组包含了若干个PLMN ID组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -359,7 +359,7 @@ PLMN ID组编号配置用于配置一个PLMN ID组，一个PLMN ID组包含了�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -370,7 +370,7 @@ PLMN ID组编号配置用于配置一个PLMN ID组，一个PLMN ID组包含了�
 #### 新增PLMN ID组编号配置(ADD SBIPLMNIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN ID组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组PLMN ID时，使用该命令。 
 
@@ -389,32 +389,32 @@ PLMN ID组编号配置用于配置一个PLMN ID组，一个PLMN ID组包含了�
  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN ID组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号，该编号是PLMN ID组编号配置的唯一标识。该参数被“PLMN ID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号，该编号是PLMN ID组编号配置的唯一标识。该参数被“PLMN ID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -427,12 +427,12 @@ ADD SBIPLMNIDARRID:ARRAYID=1;
 #### 删除PLMN ID组编号配置(DEL SBIPLMNIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN ID组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组PLMN ID时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组PLMN ID。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该PLMN ID配置，需要先删除引用该配置的“PLMN ID组参数配置”，并在“对端NF基本信息配置”及“对端NF服务实例配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -449,27 +449,27 @@ ADD SBIPLMNIDARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN ID组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号，该编号是PLMN ID组编号配置的唯一标识。该参数被“PLMN ID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号，该编号是PLMN ID组编号配置的唯一标识。该参数被“PLMN ID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -482,37 +482,37 @@ DEL SBIPLMNIDARRID:ARRAYID=1;
 #### 查询PLMN ID组编号配置(SHOW SBIPLMNIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN ID组编号配置。当需要查询PLMN ID组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号，该编号是PLMN ID组编号配置的唯一标识。该参数被“PLMN ID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号，该编号是PLMN ID组编号配置的唯一标识。该参数被“PLMN ID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“PLMN ID组参数配置”通过SHOW SBIPLMNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -535,7 +535,7 @@ SHOW SBIPLMNIDARRID:ARRAYID=1
 ### PLMN ID组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识) 包含公共陆地移动网的移动国家码和移动网号。 
@@ -545,7 +545,7 @@ PLMN ID(Public Land Mobile Network Identification，公共陆地移动网标识)
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN ID组参数配置用于配置一个PLMN ID归属于哪个PLMN ID组。当启用本地NRF功能时，需要配置该组命令。 
@@ -555,7 +555,7 @@ PLMN ID组参数配置用于配置一个PLMN ID归属于哪个PLMN ID组。当�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -566,12 +566,12 @@ PLMN ID组参数配置用于配置一个PLMN ID归属于哪个PLMN ID组。当�
 #### 新增PLMN ID组参数配置(ADD SBIPLMNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN ID组参数配置。当PLMN ID配置需要归属于一个PLMN ID组时，使用该命令。命令执行成功后，PLMN ID组就可以包含PLMN ID配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该PLMN ID组参数配置，需要先新增“PLMN ID配置”和“PLMN ID组编号配置”。 
 
@@ -585,10 +585,10 @@ PLMN ID组参数配置用于配置一个PLMN ID归属于哪个PLMN ID组。当�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN ID组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号。PLMN ID组编号引用“PLMN ID组编号配置”中的配置，通过SHOW SBIPLMNIDARRID命令查询。
@@ -597,10 +597,10 @@ PLMNID|PLMN ID编号|参数可选性: 必选参数类型: 数字参数范围: 1-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号。PLMN ID组编号引用“PLMN ID组编号配置”中的配置，通过SHOW SBIPLMNIDARRID命令查询。
@@ -609,7 +609,7 @@ PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -622,20 +622,20 @@ ADD SBIPLMNIDARRPARAM:INDEX=1,ARRAYID=1,PLMNID=1;
 #### 修改PLMN ID组参数配置(SET SBIPLMNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PLMN ID组参数配置。当PLMN ID配置需要变更归属的PLMN ID组时，使用该命令。命令执行成功后，PLMN ID配置归属到变更后的PLMN ID组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号。PLMN ID组编号引用“PLMN ID组编号配置”中的配置，通过SHOW SBIPLMNIDARRID命令查询。
@@ -644,10 +644,10 @@ PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号。PLMN ID组编号引用“PLMN ID组编号配置”中的配置，通过SHOW SBIPLMNIDARRID命令查询。
@@ -656,7 +656,7 @@ PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -669,30 +669,30 @@ SET SBIPLMNIDARRPARAM:INDEX=1,ARRAYID=1,PLMNID=1;
 #### 删除PLMN ID组参数配置(DEL SBIPLMNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN ID组参数配置。当PLMN ID配置不需要归属于PLMN ID组时，使用该命令。命令执行成功后，原先的PLMN ID组不再携带该PLMN ID配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号。PLMN ID组编号引用“PLMN ID组编号配置”中的配置，通过SHOW SBIPLMNIDARRID命令查询。
@@ -701,7 +701,7 @@ PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -714,20 +714,20 @@ DEL SBIPLMNIDARRPARAM:INDEX=1;
 #### 查询PLMN ID组参数配置(SHOW SBIPLMNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN ID组参数配置。当需要查询PLMN ID组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号。PLMN ID组编号引用“PLMN ID组编号配置”中的配置，通过SHOW SBIPLMNIDARRID命令查询。
@@ -736,10 +736,10 @@ PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN ID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN ID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN ID组编号。PLMN ID组编号引用“PLMN ID组编号配置”中的配置，通过SHOW SBIPLMNIDARRID命令查询。
@@ -748,7 +748,7 @@ PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -771,7 +771,7 @@ SHOW SBIPLMNIDARRPARAM:INDEX=1
 ## PLMN NID配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网网络标识）表示使用公共陆地移动网和网络标识共同标识的SNPN（Standalone Non-Public Network，独立专网）。 
@@ -781,7 +781,7 @@ PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该组命令用于配置服务提供者的公共陆地移动网和网络标识共同标识的独立专网，当启用本地NRF功能时，需要配置该组命令。 
@@ -791,7 +791,7 @@ PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -802,7 +802,7 @@ PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网
 ### 新增PLMN NID配置(ADD SBIPLMNNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN NID配置。当本地NRF配置中所配置的对端NFProfile需要携带使用公共陆地移动网和网络标识共同标识的独立专网信息时，使用该命令。 
 
@@ -824,17 +824,17 @@ PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网
  
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该PLMN NID配置，需要先新增PLMN ID配置。 
 
-“PLMN ID配置”通过[SHOW SBIPLMNID](../mml/1220548.html)命令查询，通过[ADD SBIPLMNID](../mml/1220545.html)命令进行新增。
+“PLMN ID配置”通过[SHOW SBIPLMNID]命令查询，通过[ADD SBIPLMNID]命令进行新增。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 PLMNID|PLMN ID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家码和移动网号。PLMN ID编号引用“PLMN ID配置”中的配置，该编号是”PLMN ID配置“的唯一标识，通过SHOW SBIPLMNID命令查询。
@@ -843,10 +843,10 @@ NID|网络标识|参数可选性: 任选参数类型: 字符串参数范围: 0-1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家码和移动网号。PLMN ID编号引用“PLMN ID配置”中的配置，该编号是”PLMN ID配置“的唯一标识，通过SHOW SBIPLMNID命令查询。
@@ -855,7 +855,7 @@ NID|网络标识|参数可选性: 任选参数类型: 字符串参数范围: 0-1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -868,20 +868,20 @@ ADD SBIPLMNNID:INDEX=1,PLMNID=1,NID="net123";
 ### 修改PLMN NID配置(SET SBIPLMNNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PLMN NID配置。当本地NRF配置中所配置的对端NFProfile携带的独立专网信息需要变更时，使用该命令。命令执行成功后，修改后的独立专网信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家码和移动网号。PLMN ID编号引用“PLMN ID配置”中的配置，该编号是”PLMN ID配置“的唯一标识，通过SHOW SBIPLMNID命令查询。
@@ -890,10 +890,10 @@ NID|网络标识|参数可选性: 任选参数类型: 字符串参数范围: 0-1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家码和移动网号。PLMN ID编号引用“PLMN ID配置”中的配置，该编号是”PLMN ID配置“的唯一标识，通过SHOW SBIPLMNID命令查询。
@@ -902,7 +902,7 @@ NID|网络标识|参数可选性: 任选参数类型: 字符串参数范围: 0-1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -915,12 +915,12 @@ SET SBIPLMNNID:INDEX=1,PLMNID=1,NID="net123";
 ### 删除PLMN NID配置(DEL SBIPLMNNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN NID配置。当本地NRF配置中所配置的对端NFProfile不需要携带该独立专网信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该独立专网。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该PLMN NID配置，需要先删除引用该配置的“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”。 
 
@@ -940,20 +940,20 @@ SET SBIPLMNNID:INDEX=1,PLMNID=1,NID="net123";
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家码和移动网号。PLMN ID编号引用“PLMN ID配置”中的配置，该编号是”PLMN ID配置“的唯一标识，通过SHOW SBIPLMNID命令查询。
@@ -962,7 +962,7 @@ NID|网络标识|参数可选性: 任选参数类型: 字符串参数范围: 0-1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -975,20 +975,20 @@ DEL SBIPLMNNID:INDEX=1;
 ### 查询PLMN NID配置(SHOW SBIPLMNNID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN NID配置。当需要查询对端NFProfile携带的独立专网信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家码和移动网号。PLMN ID编号引用“PLMN ID配置”中的配置，该编号是”PLMN ID配置“的唯一标识，通过SHOW SBIPLMNID命令查询。
@@ -997,10 +997,10 @@ NID|网络标识|参数可选性: 任选参数类型: 字符串参数范围: 0-1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号。该编号是PLMN NID配置的唯一标识。该参数被“PLMN NID组参数配置”、“PLMN S-NSSAI配置”、“TAI组参数配置”及“TAI范围组参数配置”引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“TAI组参数配置”通过SHOW SBITAIARRPARAM命令查询。“TAI范围组参数配置”通过SHOW SBITAIRANGEARRPARAM命令查询。该参数用数字表示 ，无特殊配置原则。
 PLMNID|PLMN ID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN（Public Land Mobile Network，公共陆地移动网）的移动国家码和移动网号。PLMN ID编号引用“PLMN ID配置”中的配置，该编号是”PLMN ID配置“的唯一标识，通过SHOW SBIPLMNID命令查询。
@@ -1009,7 +1009,7 @@ NID|网络标识|参数可选性: 任选参数类型: 字符串参数范围: 0-1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1032,7 +1032,7 @@ SHOW SBIPLMNNID:INDEX=1
 ## PLMN NID组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网网络标识）表示使用公共陆地移动网和网络标识共同标识的SNPN（Standalone Non-Public Network，独立专网）。 
@@ -1042,7 +1042,7 @@ PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN NID组配置对应“本地NRF配置”的对端NFProfile的snpnList数组，如果不配置，则对端NFProfile缺少snpnList数组，本端如果需要请求对端提供的服务，则服务请求无法发送成功。当启用本地NRF功能时，需要配置该组命令。 
@@ -1052,7 +1052,7 @@ PLMN NID组配置包括“PLMN NID组编号配置”和“PLMN NID组参数配�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1063,7 +1063,7 @@ PLMN NID组配置包括“PLMN NID组编号配置”和“PLMN NID组参数配�
 ### PLMN NID组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网网络标识）表示使用公共陆地移动网和网络标识共同标识的SNPN（Standalone Non-Public Network，独立专网）。 
@@ -1073,7 +1073,7 @@ PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN NID组编号配置用于配置一个PLMN NID组，一个PLMN NID组包含了若干个PLMN NID组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -1083,7 +1083,7 @@ PLMN NID组编号配置用于配置一个PLMN NID组，一个PLMN NID组包含�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1094,7 +1094,7 @@ PLMN NID组编号配置用于配置一个PLMN NID组，一个PLMN NID组包含�
 #### 新增PLMN NID组编号配置(ADD SBIPLMNNIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN NID组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组PLMN NID时，使用该命令。 
 
@@ -1113,32 +1113,32 @@ PLMN NID组编号配置用于配置一个PLMN NID组，一个PLMN NID组包含�
  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN NID组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号，该编号是PLMN NID组编号配置的唯一标识。被“PLMN NID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号，该编号是PLMN NID组编号配置的唯一标识。被“PLMN NID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1151,12 +1151,12 @@ ADD SBIPLMNNIDARRID:ARRAYID=1;
 #### 删除PLMN NID组编号配置(DEL SBIPLMNNIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN NID组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组PLMN NID时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组PLMN NID。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该PLMN NID组编号配置，需要先删除引用该配置的“PLMN NID组参数配置”，并在“对端NF基本信息配置”及“对端NF服务实例配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -1173,27 +1173,27 @@ ADD SBIPLMNNIDARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN NID组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号，该编号是PLMN NID组编号配置的唯一标识。被“PLMN NID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号，该编号是PLMN NID组编号配置的唯一标识。被“PLMN NID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1206,37 +1206,37 @@ DEL SBIPLMNNIDARRID:ARRAYID=1;
 #### 查询PLMN NID组编号配置(SHOW SBIPLMNNIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN NID组编号配置。当需要查询PLMN NID组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号，该编号是PLMN NID组编号配置的唯一标识。被“PLMN NID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号，该编号是PLMN NID组编号配置的唯一标识。被“PLMN NID组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN NID组参数配置”通过SHOW SBIPLMNNIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1259,7 +1259,7 @@ SHOW SBIPLMNNIDARRID:ARRAYID=1
 ### PLMN NID组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网网络标识）表示使用公共陆地移动网和网络标识共同标识的SNPN（Standalone Non-Public Network，独立专网）。 
@@ -1269,7 +1269,7 @@ PLMN NID（Public Land Mobile Network Network Identifier，公共陆地移动网
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN NID组参数配置用于配置一个PLMN NID归属于哪个PLMN NID组。当启用本地NRF功能时，需要配置该组命令。 
@@ -1279,7 +1279,7 @@ PLMN NID组参数配置用于配置一个PLMN NID归属于哪个PLMN NID组。�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1290,12 +1290,12 @@ PLMN NID组参数配置用于配置一个PLMN NID归属于哪个PLMN NID组。�
 #### 新增PLMN NID组参数配置(ADD SBIPLMNNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN NID组参数配置。当一个PLMN NID配置需要归属于一个PLMN NID组时，使用该命令。命令执行成功后，PLMN NID组就可以包含PLMN NID配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该PLMN NID组参数配置，需要先新增“PLMN ID配置”和“PLMN NID组编号配置”。 
 
@@ -1309,10 +1309,10 @@ PLMN NID组参数配置用于配置一个PLMN NID归属于哪个PLMN NID组。�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN NID组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号。PLMN NID组编号引用“PLMN NID组编号配置”中的配置，通过SHOW SBIPLMNNIDARRID命令查询。
@@ -1321,10 +1321,10 @@ PLMNNID|PLMN NID编号|参数可选性: 必选参数类型: 数字参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号。PLMN NID组编号引用“PLMN NID组编号配置”中的配置，通过SHOW SBIPLMNNIDARRID命令查询。
@@ -1333,7 +1333,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1346,20 +1346,20 @@ ADD SBIPLMNNIDARRPARAM:INDEX=1,ARRAYID=1,PLMNNID=1;
 #### 修改PLMN NID组参数配置(SET SBIPLMNNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PLMN NID组参数配置。当一个PLMN NID配置需要变更归属的PLMN NID组时，使用该命令。命令执行成功后，PLMN NID配置归属到变更后的PLMN NID组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号。PLMN NID组编号引用“PLMN NID组编号配置”中的配置，通过SHOW SBIPLMNNIDARRID命令查询。
@@ -1368,10 +1368,10 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号。PLMN NID组编号引用“PLMN NID组编号配置”中的配置，通过SHOW SBIPLMNNIDARRID命令查询。
@@ -1380,7 +1380,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1393,30 +1393,30 @@ SET SBIPLMNNIDARRPARAM:INDEX=1,ARRAYID=1,PLMNNID=1;
 #### 删除PLMN NID组参数配置(DEL SBIPLMNNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN NID组参数配置。当一个PLMN NID配置不需要归属于PLMN NID组时，使用该命令。命令执行成功后，原先的PLMN NID组不再携带该PLMN NID配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号。PLMN NID组编号引用“PLMN NID组编号配置”中的配置，通过SHOW SBIPLMNNIDARRID命令查询。
@@ -1425,7 +1425,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1438,20 +1438,20 @@ DEL SBIPLMNNIDARRPARAM:INDEX=1;
 #### 查询PLMN NID组参数配置(SHOW SBIPLMNNIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN NID组参数配置。当需要查询PLMN NID组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号。PLMN NID组编号引用“PLMN NID组编号配置”中的配置，通过SHOW SBIPLMNNIDARRID命令查询。
@@ -1460,10 +1460,10 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN NID组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN NID组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID组编号。PLMN NID组编号引用“PLMN NID组编号配置”中的配置，通过SHOW SBIPLMNNIDARRID命令查询。
@@ -1472,7 +1472,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1495,7 +1495,7 @@ SHOW SBIPLMNNIDARRPARAM:INDEX=1
 ## S-NSSAI配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切片选择协助信息) 包含单个网络切片的切片区分符和切片/服务类型。 
@@ -1507,7 +1507,7 @@ S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI配置用于配置服务提供者的单个网络切片选择协助信息的切片区分符和切片/服务类型，当启用本地NRF功能时，需要配置该组命令。 
@@ -1517,7 +1517,7 @@ S-NSSAI配置用于配置服务提供者的单个网络切片选择协助信息�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1528,7 +1528,7 @@ S-NSSAI配置用于配置服务提供者的单个网络切片选择协助信息�
 ### 新增S-NSSAI配置(ADD SBISNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增S-NSSAI编号配置。当本地NRF配置中所配置的对端NFProfile需要添加携带切片/服务类型和切片区分符的单个网络切片选择协助信息时，使用该命令。 
 
@@ -1547,15 +1547,15 @@ S-NSSAI配置用于配置服务提供者的单个网络切片选择协助信息�
  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 SST|切片/服务 类型|参数可选性: 必选参数类型: 数字参数范围: 0-255|该参数用于设置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择协助信息）的切片/服务类型，该参数是在0到255之间的无符号整数，表示切片/服务类型。该参数用于了解期望的网络切片在功能和服务方面的行为。 值0到127对应于标准SST范围。值128到255对应运营商的特定范围。
@@ -1564,10 +1564,10 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 SST|切片/服务 类型|参数可选性: 任选参数类型: 数字参数范围: 0-255|该参数用于设置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择协助信息）的切片/服务类型，该参数是在0到255之间的无符号整数，表示切片/服务类型。该参数用于了解期望的网络切片在功能和服务方面的行为。 值0到127对应于标准SST范围。值128到255对应运营商的特定范围。
@@ -1576,7 +1576,7 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1589,20 +1589,20 @@ ADD SBISNSSAI:INDEX=1,SD="ABCdef",SST=255;
 ### 修改S-NSSAI配置(SET SBISNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改S-NSSAI配置。当本地NRF配置中所配置的对端NFProfile携带的单个网络切片选择协助信息需要变更时，使用该命令。命令执行成功后，修改后的单个网络切片选择协助信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 SST|切片/服务 类型|参数可选性: 任选参数类型: 数字参数范围: 0-255|该参数用于设置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择协助信息）的切片/服务类型，该参数是在0到255之间的无符号整数，表示切片/服务类型。该参数用于了解期望的网络切片在功能和服务方面的行为。 值0到127对应于标准SST范围。值128到255对应运营商的特定范围。
@@ -1611,10 +1611,10 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 SST|切片/服务 类型|参数可选性: 任选参数类型: 数字参数范围: 0-255|该参数用于设置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择协助信息）的切片/服务类型，该参数是在0到255之间的无符号整数，表示切片/服务类型。该参数用于了解期望的网络切片在功能和服务方面的行为。 值0到127对应于标准SST范围。值128到255对应运营商的特定范围。
@@ -1623,7 +1623,7 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1636,12 +1636,12 @@ SET SBISNSSAI:INDEX=1,SD="abcDEF",SST=255;
 ### 删除S-NSSAI配置(DEL SBISNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除S-NSSAI配置。当本地NRF配置中所配置的对端NFProfile不需要携带该单个网络切片选择协助信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该单个网络切片选择协助信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该S-NSSAI配置，需要先删除引用该配置的“S-NSSAI组参数配置”、“S-NSSAI SMF信息组参数配置”及“S-NSSAI UPF信息组参数配置”。 
 
@@ -1658,20 +1658,20 @@ SET SBISNSSAI:INDEX=1,SD="abcDEF",SST=255;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 SST|切片/服务 类型|参数可选性: 任选参数类型: 数字参数范围: 0-255|该参数用于设置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择协助信息）的切片/服务类型，该参数是在0到255之间的无符号整数，表示切片/服务类型。该参数用于了解期望的网络切片在功能和服务方面的行为。 值0到127对应于标准SST范围。值128到255对应运营商的特定范围。
@@ -1680,7 +1680,7 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1693,20 +1693,20 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 ### 查询S-NSSAI配置(SHOW SBISNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询S-NSSAI配置。当需要查询对端NFProfile携带的单个网络切片选择协助信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 SST|切片/服务 类型|参数可选性: 任选参数类型: 数字参数范围: 0-255|该参数用于设置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择协助信息）的切片/服务类型，该参数是在0到255之间的无符号整数，表示切片/服务类型。该参数用于了解期望的网络切片在功能和服务方面的行为。 值0到127对应于标准SST范围。值128到255对应运营商的特定范围。
@@ -1715,10 +1715,10 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI编号，该编号是S-NSSAI配置的唯一标识。该参数被“S-NSSAI组参数配置及“S-NSSAI UPF信息组参数配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“S-NSSAI SMF信息组参数配置”通过SHOW SBISNSSAISMFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 SST|切片/服务 类型|参数可选性: 任选参数类型: 数字参数范围: 0-255|该参数用于设置S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择协助信息）的切片/服务类型，该参数是在0到255之间的无符号整数，表示切片/服务类型。该参数用于了解期望的网络切片在功能和服务方面的行为。 值0到127对应于标准SST范围。值128到255对应运营商的特定范围。
@@ -1727,7 +1727,7 @@ SD|切片区分符|参数可选性: 任选参数类型: 字符串参数范围: 6
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1753,7 +1753,7 @@ SHOW SBISNSSAI
 ## S-NSSAI组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切片选择协助信息) 包含单个网络切片的切片区分符和切片/服务类型。 
@@ -1765,7 +1765,7 @@ S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI组配置包括“S-NSSAI组编号配置”和“S-NSSAI组参数配置”，一个S-NSSAI组可以包含若干个S-NSSAI组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -1775,7 +1775,7 @@ S-NSSAI组配置包括“S-NSSAI组编号配置”和“S-NSSAI组参数配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1786,7 +1786,7 @@ S-NSSAI组配置包括“S-NSSAI组编号配置”和“S-NSSAI组参数配置�
 ### S-NSSAI组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切片选择协助信息) 包含单个网络切片的切片区分符和切片/服务类型。 
@@ -1798,7 +1798,7 @@ S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI组编号配置用于配置一个S-NSSAI组，一个S-NSSAI组包含了若干个S-NSSAI组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -1808,7 +1808,7 @@ S-NSSAI组编号配置用于配置一个S-NSSAI组，一个S-NSSAI组包含了�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -1819,7 +1819,7 @@ S-NSSAI组编号配置用于配置一个S-NSSAI组，一个S-NSSAI组包含了�
 #### 新增S-NSSAI组编号配置(ADD SBISNSSAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增S-NSSAI组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组S-NSSAI时，使用该命令。 
 
@@ -1841,32 +1841,32 @@ S-NSSAI组编号配置用于配置一个S-NSSAI组，一个S-NSSAI组包含了�
  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，该编号是S-NSSAI组编号配置的唯一标识。该参数被“S-NSSAI组参数配置”、“PLMN S-NSSAI配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，该编号是S-NSSAI组编号配置的唯一标识。该参数被“S-NSSAI组参数配置”、“PLMN S-NSSAI配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1879,12 +1879,12 @@ ADD SBISNSSAIARRID:ARRAYID=1;
 #### 删除S-NSSAI组编号配置(DEL SBISNSSAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除S-NSSAI组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组S-NSSAI时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组S-NSSAI。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该S-NSSAI组编号配置，需要先删除引用该配置的“S-NSSAI组参数配置”和“PLMN S-NSSAI配置”，并在“对端NF基本信息配置”及“对端NF服务实例配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -1904,27 +1904,27 @@ ADD SBISNSSAIARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，该编号是S-NSSAI组编号配置的唯一标识。该参数被“S-NSSAI组参数配置”、“PLMN S-NSSAI配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，该编号是S-NSSAI组编号配置的唯一标识。该参数被“S-NSSAI组参数配置”、“PLMN S-NSSAI配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1937,37 +1937,37 @@ DEL SBISNSSAIARRID:ARRAYID=1;
 #### 查询S-NSSAI组编号配置(SHOW SBISNSSAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询S-NSSAI组编号配置。当需要查询S-NSSAI组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，该编号是S-NSSAI组编号配置的唯一标识。该参数被“S-NSSAI组参数配置”、“PLMN S-NSSAI配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，该编号是S-NSSAI组编号配置的唯一标识。该参数被“S-NSSAI组参数配置”、“PLMN S-NSSAI配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“S-NSSAI组参数配置”通过SHOW SBISNSSAIARRPARAM命令查询。“PLMN S-NSSAI配置”通过SHOW SBIPLMNSNSSAI命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -1989,7 +1989,7 @@ S-NSSAI组标识
 ### S-NSSAI组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切片选择协助信息) 包含单个网络切片的切片区分符和切片/服务类型。 
@@ -2001,7 +2001,7 @@ S-NSSAI(Single Network Slice Selection Assistance Information，单个网络切�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI组参数配置用于配置一个S-NSSAI归属于哪个S-NSSAI组。当启用本地NRF功能时，需要配置该组命令。 
@@ -2011,7 +2011,7 @@ S-NSSAI组参数配置用于配置一个S-NSSAI归属于哪个S-NSSAI组。当�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2022,12 +2022,12 @@ S-NSSAI组参数配置用于配置一个S-NSSAI归属于哪个S-NSSAI组。当�
 #### 新增S-NSSAI组参数配置(ADD SBISNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增S-NSSAI组参数配置。当S-NSSAI配置需要归属于一个S-NSSAI组时，使用该命令。命令执行成功后，S-NSSAI组就可以包含S-NSSAI配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该S-NSSAI组参数配置，需要先新增“S-NSSAI配置”和“S-NSSAI组编号配置”。 
 
@@ -2041,10 +2041,10 @@ S-NSSAI组参数配置用于配置一个S-NSSAI归属于哪个S-NSSAI组。当�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，S-NSSAI组编号引用“S-NSSAI组编号配置”中的配置，S-NSSAI组编号通过SHOW SBISNSSAIARRID命令查询。
@@ -2053,10 +2053,10 @@ SNSSAI|S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，S-NSSAI组编号引用“S-NSSAI组编号配置”中的配置，S-NSSAI组编号通过SHOW SBISNSSAIARRID命令查询。
@@ -2065,7 +2065,7 @@ SNSSAI|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2078,20 +2078,20 @@ ADD SBISNSSAIARRPARAM:INDEX=1,ARRAYID=1,SNSSAI=1;
 #### 修改S-NSSAI组参数配置(SET SBISNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改S-NSSAI组参数配置。当S-NSSAI配置需要变更归属的S-NSSAI组时，使用该命令。命令执行成功后，S-NSSAI配置归属到变更后的S-NSSAI组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，S-NSSAI组编号引用“S-NSSAI组编号配置”中的配置，S-NSSAI组编号通过SHOW SBISNSSAIARRID命令查询。
@@ -2100,10 +2100,10 @@ SNSSAI|S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，S-NSSAI组编号引用“S-NSSAI组编号配置”中的配置，S-NSSAI组编号通过SHOW SBISNSSAIARRID命令查询。
@@ -2112,7 +2112,7 @@ SNSSAI|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2125,30 +2125,30 @@ SET SBISNSSAIARRPARAM:INDEX=1,ARRAYID=1,SNSSAI=2;
 #### 删除S-NSSAI组参数配置(DEL SBISNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除S-NSSAI组参数配置。当S-NSSAI配置不需要归属于S-NSSAI组时，使用该命令。命令执行成功后，原先的S-NSSAI组不再携带该S-NSSAI配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，S-NSSAI组编号引用“S-NSSAI组编号配置”中的配置，S-NSSAI组编号通过SHOW SBISNSSAIARRID命令查询。
@@ -2157,7 +2157,7 @@ SNSSAI|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2170,20 +2170,20 @@ DEL SBISNSSAIARRPARAM:INDEX=1;
 #### 查询S-NSSAI组参数配置(SHOW SBISNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询S-NSSAI组参数配置。当需要查询S-NSSAI组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，S-NSSAI组编号引用“S-NSSAI组编号配置”中的配置，S-NSSAI组编号通过SHOW SBISNSSAIARRID命令查询。
@@ -2192,10 +2192,10 @@ SNSSAI|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“SNSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI组编号，S-NSSAI组编号引用“S-NSSAI组编号配置”中的配置，S-NSSAI组编号通过SHOW SBISNSSAIARRID命令查询。
@@ -2204,7 +2204,7 @@ SNSSAI|S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2227,7 +2227,7 @@ SHOW SBISNSSAIARRPARAM:INDEX=1
 ## PLMN S-NSSAI配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection Assistance Information，公共陆地移动网单一网络切片选择协助信息）表示使用独立专网和单一网络切片选择协助信息组编号共同标识的配置信息。 
@@ -2237,7 +2237,7 @@ PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该组命令用于配置服务提供者的独立专网和单一网络切片选择协助信息组编号共同标识的公共陆地移动网单一网络切片选择协助信息，当启用本地NRF功能时，需要配置该组命令。 
@@ -2247,7 +2247,7 @@ PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2258,26 +2258,26 @@ PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection
 ### 新增PLMN S-NSSAI配置(ADD SBIPLMNSNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN S-NSSAI配置。当本地NRF配置中所配置的对端NFProfile需要携带使用SNPN（Standalone Non-Public Network，独立专网）和S-NSSAI组编号共同标识的PLMN S-NSSAI时，使用该命令。 
 
-命令执行成功后，PLMN S-NSSAI编号可以被“PLMN S-NSSAI组参数配置”引用。“PLMN S-NSSAI组参数配置”通过[SHOW SBIPIMNSNSSAIARRPARAM](../mml/1220592.html)命令查询。
+命令执行成功后，PLMN S-NSSAI编号可以被“PLMN S-NSSAI组参数配置”引用。“PLMN S-NSSAI组参数配置”通过[SHOW SBIPIMNSNSSAIARRPARAM]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该PLMN S-NSSAI配置，需要先新增PLMN NID编号和S-NSSAI组编号。 
 
-“PLMN NID编号”通过[SHOW SBIPLMNNID](../mml/1220560.html)命令查询，通过[ADD SBIPLMNNID](../mml/1220557.html)命令进行新增。
+“PLMN NID编号”通过[SHOW SBIPLMNNID]命令查询，通过[ADD SBIPLMNNID]命令进行新增。
 
-“S-NSSAI组编号”通过[SHOW SBISNSSAIARRID](../mml/1220576.html)命令查询，通过[ADD SBISNSSAIARRID](../mml/1220573.html)命令进行新增。
-
-
-[](None)输入参数说明 
+“S-NSSAI组编号”通过[SHOW SBISNSSAIARRID]命令查询，通过[ADD SBISNSSAIARRID]命令进行新增。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 PLMINNID|PLMN NID编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号，PLMN NID编号是由NID（网络标识）与PLMN ID一起标识的SNPN（Standalone Non-Public Network，独立专网）的唯一标识。PLMN NID编号通过SHOW SBIPLMNNID命令查询。
@@ -2286,10 +2286,10 @@ SNSSAIARRAY|S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 PLMINNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号，PLMN NID编号是由NID（网络标识）与PLMN ID一起标识的SNPN（Standalone Non-Public Network，独立专网）的唯一标识。PLMN NID编号通过SHOW SBIPLMNNID命令查询。
@@ -2298,7 +2298,7 @@ SNSSAIARRAY|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2311,20 +2311,20 @@ ADD SBIPLMNSNSSAI:INDEX=1,PLMINNID=1,SNSSAIARRAY=123;
 ### 修改PLMN S-NSSAI配置(SET SBIPLMNSNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PLMN S-NSSAI配置。当本地NRF配置中所配置的对端NFProfile携带的PLMN S-NSSAI需要变更时，使用该命令。命令执行成功后，修改后的独立专网信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 PLMINNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号，PLMN NID编号是由NID（网络标识）与PLMN ID一起标识的SNPN（Standalone Non-Public Network，独立专网）的唯一标识。PLMN NID编号通过SHOW SBIPLMNNID命令查询。
@@ -2333,10 +2333,10 @@ SNSSAIARRAY|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 PLMINNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号，PLMN NID编号是由NID（网络标识）与PLMN ID一起标识的SNPN（Standalone Non-Public Network，独立专网）的唯一标识。PLMN NID编号通过SHOW SBIPLMNNID命令查询。
@@ -2345,7 +2345,7 @@ SNSSAIARRAY|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2358,32 +2358,32 @@ SET SBIPLMNSNSSAI:INDEX=1,PLMINNID=1,SNSSAIARRAY=123;
 ### 删除PLMN S-NSSAI配置(DEL SBIPLMNSNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN S-NSSAI配置。当本地NRF配置中所配置的对端NFProfile不需要携带该PLMN S-NSSAI时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该独立专网。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该PLMN S-NSSAI配置，需要先删除引用该配置的“PLMN S-NSSAI组参数配置”。 
 
-“PLMN S-NSSAI组参数配置”通过[SHOW SBIPIMNSNSSAIARRPARAM](../mml/1220592.html)命令查询，通过[DEL SBIPIMNSNSSAIARRPARAM](../mml/1220591.html)命令进行删除。
+“PLMN S-NSSAI组参数配置”通过[SHOW SBIPIMNSNSSAIARRPARAM]命令查询，通过[DEL SBIPIMNSNSSAIARRPARAM]命令进行删除。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 PLMINNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号，PLMN NID编号是由NID（网络标识）与PLMN ID一起标识的SNPN（Standalone Non-Public Network，独立专网）的唯一标识。PLMN NID编号通过SHOW SBIPLMNNID命令查询。
@@ -2392,7 +2392,7 @@ SNSSAIARRAY|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2405,20 +2405,20 @@ DEL SBIPLMNSNSSAI:INDEX=1;
 ### 查询PLMN S-NSSAI配置(SHOW SBIPLMNSNSSAI) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN S-NSSAI配置。当需要查询对端NFProfile携带的PLMN S-NSSAI时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 PLMINNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号，PLMN NID编号是由NID（网络标识）与PLMN ID一起标识的SNPN（Standalone Non-Public Network，独立专网）的唯一标识。PLMN NID编号通过SHOW SBIPLMNNID命令查询。
@@ -2427,10 +2427,10 @@ SNSSAIARRAY|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|PLMN  S-NSSAI编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI编号。该编号是PLMN S-NSSAI配置的唯一标识，被“PLMN SNSSAI组参数配置”引用。“PLMN SNSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。该参数用数字表示，无特殊配置原则。
 PLMINNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN NID编号，PLMN NID编号是由NID（网络标识）与PLMN ID一起标识的SNPN（Standalone Non-Public Network，独立专网）的唯一标识。PLMN NID编号通过SHOW SBIPLMNNID命令查询。
@@ -2439,7 +2439,7 @@ SNSSAIARRAY|S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2462,7 +2462,7 @@ SHOW SBIPLMNSNSSAI
 ## PLMN S-NSSAI组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection Assistance Information，公共陆地移动网单一网络切片选择协助信息）表示使用独立专网和单一网络切片选择协助信息组编号共同标识的配置信息。 
@@ -2472,7 +2472,7 @@ PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN S-NSSAI组配置对应“本地NRF配置”的对端NFProfile的plmnSnssnaiList数组，如果不配置，则对端NFProfile缺少plmnSnssnaiList数组，本端如果需要请求对端提供的服务，则服务请求无法发送成功。当启用本地NRF功能时，需要配置该组命令。 
@@ -2482,7 +2482,7 @@ PLMN S-NSSAI组配置包括“PLMN S-NSSAI组编号配置”和“PLMN S-NSSAI�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2493,7 +2493,7 @@ PLMN S-NSSAI组配置包括“PLMN S-NSSAI组编号配置”和“PLMN S-NSSAI�
 ### PLMN S-NSSAI组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection Assistance Information，公共陆地移动网单一网络切片选择协助信息）表示使用独立专网和单一网络切片选择协助信息组编号共同标识的配置信息。 
@@ -2503,7 +2503,7 @@ PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN S-NSSAI组编号配置用于配置一个PLMN S-NSSAI组，一个PLMN S-NSSAI组包含了若干个PLMN S-NSSAI组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -2513,7 +2513,7 @@ PLMN S-NSSAI组编号配置用于配置一个PLMN S-NSSAI组，一个PLMN S-NSSA
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2524,7 +2524,7 @@ PLMN S-NSSAI组编号配置用于配置一个PLMN S-NSSAI组，一个PLMN S-NSSA
 #### 新增PLMN S-NSSAI组编号配置(ADD SBIPIMNSNSSAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN S-NSSAI组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组PLMN S-NSSAI时，使用该命令。 
 
@@ -2543,32 +2543,32 @@ PLMN S-NSSAI组编号配置用于配置一个PLMN S-NSSAI组，一个PLMN S-NSSA
  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN  S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，该编号是PLMN S-NSSAI组编号配置的唯一标识。被“PLMN S-NSSAI组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN S-NSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN  S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，该编号是PLMN S-NSSAI组编号配置的唯一标识。被“PLMN S-NSSAI组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN S-NSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2581,12 +2581,12 @@ ADD SBIPIMNSNSSAIARRID:ARRAYID=1;
 #### 删除PLMN S-NSSAI组编号配置(DEL SBIPIMNSNSSAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN S-NSSAI组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组PLMN S-NSSAI时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组PLMN S-NSSAI。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该PLMN S-NSSAI组编号配置，需要先删除引用该配置的“PLMN S-NSSAI组参数配置”，并在“对端NF基本信息配置”及“对端NF服务实例配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -2603,27 +2603,27 @@ ADD SBIPIMNSNSSAIARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN  S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，该编号是PLMN S-NSSAI组编号配置的唯一标识。被“PLMN S-NSSAI组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN S-NSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN  S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，该编号是PLMN S-NSSAI组编号配置的唯一标识。被“PLMN S-NSSAI组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN S-NSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2636,37 +2636,37 @@ DEL SBIPIMNSNSSAIARRID:ARRAYID=1;
 #### 查询PLMN S-NSSAI组编号配置(SHOW SBIPIMNSNSSAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN S-NSSAI组编号配置。当需要查询PLMN S-NSSAI组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN  S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，该编号是PLMN S-NSSAI组编号配置的唯一标识。被“PLMN S-NSSAI组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN S-NSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN  S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，该编号是PLMN S-NSSAI组编号配置的唯一标识。被“PLMN S-NSSAI组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”等引用。“PLMN S-NSSAI组参数配置”通过SHOW SBIPIMNSNSSAIARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2689,7 +2689,7 @@ SHOW SBIPIMNSNSSAIARRID
 ### PLMN S-NSSAI组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection Assistance Information，公共陆地移动网单一网络切片选择协助信息）表示使用独立专网和单一网络切片选择协助信息组编号共同标识的配置信息。 
@@ -2699,7 +2699,7 @@ PLMN S-NSSAI（Public Land Mobile Network Network Single Network Slice Selection
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN S-NSSAI组参数配置用于配置一个PLMN S-NSSAI归属于哪个PLMN S-NSSAI组。当启用本地NRF功能时，需要配置该组命令。 
@@ -2709,7 +2709,7 @@ PLMN S-NSSAI组参数配置用于配置一个PLMN S-NSSAI归属于哪个PLMN S-N
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2720,12 +2720,12 @@ PLMN S-NSSAI组参数配置用于配置一个PLMN S-NSSAI归属于哪个PLMN S-N
 #### 新增PLMN S-NSSAI组参数配置(ADD SBIPIMNSNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN S-NSSAI组参数配置。当一个PLMN S-NSSAI配置需要归属于一个PLMN S-NSSAI组时，使用该命令。命令执行成功后，PLMN S-NSSAI组就可以包含PLMN S-NSSAI配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该PLMN S-NSSAI组参数配置，需要先新增“PLMN S-NSSAI配置”和“PLMN S-NSSAI组编号配置”。 
 
@@ -2739,10 +2739,10 @@ PLMN S-NSSAI组参数配置用于配置一个PLMN S-NSSAI归属于哪个PLMN S-N
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN S-NSSAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，PLMN S-NSSAI组编号引用“PLMN S-NSSAI组编号配置”中的配置，PLMN S-NSSAI组编号通过SHOW SBIPIMNSNSSAIARRID命令查询。
@@ -2751,10 +2751,10 @@ PLMNSNSSAI|PLMN S-NSSAI编号|参数可选性: 必选参数类型: 数字参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，PLMN S-NSSAI组编号引用“PLMN S-NSSAI组编号配置”中的配置，PLMN S-NSSAI组编号通过SHOW SBIPIMNSNSSAIARRID命令查询。
@@ -2763,7 +2763,7 @@ PLMNSNSSAI|PLMN S-NSSAI编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2776,20 +2776,20 @@ ADD SBIPIMNSNSSAIARRPARAM:INDEX=1,ARRAYID=1,PLMNSNSSAI=1;
 #### 修改PLMN S-NSSAI组参数配置(SET SBIPIMNSNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PLMN S-NSSAI组参数配置。当一个PLMN S-NSSAI配置需要变更归属的PLMN S-NSSAI组时，使用该命令。命令执行成功后，PLMN S-NSSAI配置归属到变更后的PLMN S-NSSAI组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，PLMN S-NSSAI组编号引用“PLMN S-NSSAI组编号配置”中的配置，PLMN S-NSSAI组编号通过SHOW SBIPIMNSNSSAIARRID命令查询。
@@ -2798,10 +2798,10 @@ PLMNSNSSAI|PLMN S-NSSAI编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，PLMN S-NSSAI组编号引用“PLMN S-NSSAI组编号配置”中的配置，PLMN S-NSSAI组编号通过SHOW SBIPIMNSNSSAIARRID命令查询。
@@ -2810,7 +2810,7 @@ PLMNSNSSAI|PLMN S-NSSAI编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2823,30 +2823,30 @@ SET SBIPIMNSNSSAIARRPARAM:INDEX=1,ARRAYID=1,PLMNSNSSAI=1;
 #### 删除PLMN S-NSSAI组参数配置(DEL SBIPIMNSNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN S-NSSAI组参数配置。当一个PLMN S-NSSAI配置不需要归属于PLMN S-NSSAI组时，使用该命令。命令执行成功后，原先的PLMN S-NSSAI组不再携带该PLMN NID配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，PLMN S-NSSAI组编号引用“PLMN S-NSSAI组编号配置”中的配置，PLMN S-NSSAI组编号通过SHOW SBIPIMNSNSSAIARRID命令查询。
@@ -2855,7 +2855,7 @@ PLMNSNSSAI|PLMN S-NSSAI编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2868,20 +2868,20 @@ DEL SBIPIMNSNSSAIARRPARAM:INDEX=1;
 #### 查询PLMN S-NSSAI组参数配置(SHOW SBIPIMNSNSSAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN S-NSSAI组参数配置。当需要查询PLMN S-NSSAI组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，PLMN S-NSSAI组编号引用“PLMN S-NSSAI组编号配置”中的配置，PLMN S-NSSAI组编号通过SHOW SBIPIMNSNSSAIARRID命令查询。
@@ -2890,10 +2890,10 @@ PLMNSNSSAI|PLMN S-NSSAI编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是“PLMN S-NSSAI组参数配置”的唯一标识。该参数用数字表示，无特殊配置原则。
 ARRAYID|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN S-NSSAI组编号，PLMN S-NSSAI组编号引用“PLMN S-NSSAI组编号配置”中的配置，PLMN S-NSSAI组编号通过SHOW SBIPIMNSNSSAIARRID命令查询。
@@ -2902,7 +2902,7 @@ PLMNSNSSAI|PLMN S-NSSAI编号|参数可选性: 任选参数类型: 数字参数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -2925,7 +2925,7 @@ SHOW SBIPIMNSNSSAIARRPARAM
 ## NSI组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NSI（Network Slice Instance，网络切片实例）表示一组网络功能实例和所需资源（例如计算，存储和网络资源），它们构成了已部署的网络切片。 
@@ -2935,7 +2935,7 @@ NSI（Network Slice Instance，网络切片实例）表示一组网络功能实�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NSI组配置即对应本地NRF配置的对端NFProfile的nsiList数组。当启用本地NRF功能时，需要配置该组命令。 
@@ -2947,7 +2947,7 @@ NSI组配置包括NSI组编号配置和NSI组参数配置，一个NSI组下面�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2958,7 +2958,7 @@ NSI组配置包括NSI组编号配置和NSI组参数配置，一个NSI组下面�
 ### NSI组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NSI（Network Slice Instance，网络切片实例）表示一组网络功能实例和所需资源（例如计算，存储和网络资源），它们构成了已部署的网络切片。 
@@ -2968,7 +2968,7 @@ NSI（Network Slice Instance，网络切片实例）表示一组网络功能实�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NSI组编号配置用于配置一个NSI组，一个NSI组包含了若干个NSI组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -2978,7 +2978,7 @@ NSI组编号配置用于配置一个NSI组，一个NSI组包含了若干个NSI�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -2989,39 +2989,39 @@ NSI组编号配置用于配置一个NSI组，一个NSI组包含了若干个NSI�
 #### 新增NSI组编号配置(ADD SBINSIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NSI组编号配置。当本地NRF配置的对端NFProfile需要携带一组NSI时，使用该命令。命令执行成功后，NSI组编号可以被NSI组参数配置及对端NF基本信息配置引用。 
 
-NSI组参数配置通过[SHOW SBINSIARRPARAM](../mml/1220600.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+NSI组参数配置通过[SHOW SBINSIARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NSI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号，该编号是NSI组编号配置的唯一标识，被NSI组参数配置及对端NF基本信息配置引用。NSI组参数配置通过SHOW SBINSIARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号，该编号是NSI组编号配置的唯一标识，被NSI组参数配置及对端NF基本信息配置引用。NSI组参数配置通过SHOW SBINSIARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3034,39 +3034,39 @@ ADD SBINSIARRID:ARRAYID=1;
 #### 删除NSI组编号配置(DEL SBINSIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NSI组编号配置。当本地NRF配置的对端NFProfile不需要携带该组NSI时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组NSI。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该NSI组编号配置，需要先删除引用该配置的NSI组参数配置和对端NF基本信息配置。 
 
-NSI组参数配置通过[SHOW SBIPLMNIDARRPARAM](../mml/1220556.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+NSI组参数配置通过[SHOW SBIPLMNIDARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NSI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号，该编号是NSI组编号配置的唯一标识，被NSI组参数配置及对端NF基本信息配置引用。NSI组参数配置通过SHOW SBINSIARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号，该编号是NSI组编号配置的唯一标识，被NSI组参数配置及对端NF基本信息配置引用。NSI组参数配置通过SHOW SBINSIARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3079,37 +3079,37 @@ DEL SBINSIARRID:ARRAYID=1;
 #### 查询NSI组编号配置(SHOW SBINSIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NSI组编号配置。当需要查询NSI组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号，该编号是NSI组编号配置的唯一标识，被NSI组参数配置及对端NF基本信息配置引用。NSI组参数配置通过SHOW SBINSIARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号，该编号是NSI组编号配置的唯一标识，被NSI组参数配置及对端NF基本信息配置引用。NSI组参数配置通过SHOW SBINSIARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3132,7 +3132,7 @@ SHOW SBINSIARRID:ARRAYID=1
 ### NSI组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NSI（Network Slice Instance，网络切片实例）表示一组网络功能实例和所需资源（例如计算，存储和网络资源），它们构成了已部署的网络切片。 
@@ -3142,19 +3142,19 @@ NSI（Network Slice Instance，网络切片实例）表示一组网络功能实�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NSI组参数配置用于配置一个NSI归属于哪个NSI组。当启用本地NRF功能时，需要配置该组命令。 
 
 配置完成后，在NF中引用该NSI组参数归属的NSI组编号。如果不配置NSI组参数，则一个NSI不能归属于一个具体的NSI组，导致对端NFProfile将缺少nsiList数组，本端如果需要向NRF发现可用的对端，则发现失败。 
 
-如果要新增NSI组参数配置，需要先使用命令 [ADD SBINSIARRID](../mml/1220593.html)新增NSI组编号配置。
+如果要新增NSI组参数配置，需要先使用命令 [ADD SBINSIARRID]新增NSI组编号配置。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3165,22 +3165,22 @@ NSI组参数配置用于配置一个NSI归属于哪个NSI组。当启用本地NR
 #### 新增NSI组参数配置(ADD SBINSIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NSI组参数配置。当一个NSI配置需要归属于一个NSI组时，使用该命令。命令执行成功后，NSI组就可以包含NSI配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该NSI组参数配置，需要先新增NSI组编号配置。 
 
-NSI组编号配置通过[SHOW SBINSIARRID](../mml/1220596.html)命令查询。
+NSI组编号配置通过[SHOW SBINSIARRID]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NSI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号。该参数引用了NSI组编号配置，可以通过SHOW SBINSIARRID命令查询。该参数无特殊配置原则。
@@ -3189,10 +3189,10 @@ NSI|NSI|参数可选性: 必选参数类型: 字符串参数范围: 0-127|该参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号。该参数引用了NSI组编号配置，可以通过SHOW SBINSIARRID命令查询。该参数无特殊配置原则。
@@ -3201,7 +3201,7 @@ NSI|NSI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3214,20 +3214,20 @@ ADD SBINSIARRPARAM:INDEX=1,ARRAYID=1,NSI="abc";
 #### 修改NSI组参数配置(SET SBINSIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NSI组参数配置。当一个NSI配置需要变更归属的NSI组时，使用该命令。命令执行成功后，NSI配置归属到变更后的NSI组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号。该参数引用了NSI组编号配置，可以通过SHOW SBINSIARRID命令查询。该参数无特殊配置原则。
@@ -3236,10 +3236,10 @@ NSI|NSI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号。该参数引用了NSI组编号配置，可以通过SHOW SBINSIARRID命令查询。该参数无特殊配置原则。
@@ -3248,7 +3248,7 @@ NSI|NSI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3261,30 +3261,30 @@ SET SBINSIARRPARAM:INDEX=1,ARRAYID=1,NSI="abc";
 #### 删除NSI组参数配置(DEL SBINSIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NSI组参数配置。当一个NSI配置不需要归属于NSI组时，使用该命令。命令执行成功后，原先的NSI组不再携带该NSI配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号。该参数引用了NSI组编号配置，可以通过SHOW SBINSIARRID命令查询。该参数无特殊配置原则。
@@ -3293,7 +3293,7 @@ NSI|NSI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3306,20 +3306,20 @@ DEL SBINSIARRPARAM:INDEX=1;
 #### 查询NSI组参数配置(SHOW SBINSIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NSI组参数配置。当需要查询NSI组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号。该参数引用了NSI组编号配置，可以通过SHOW SBINSIARRID命令查询。该参数无特殊配置原则。
@@ -3328,10 +3328,10 @@ NSI|NSI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NSI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NSI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NSI组编号。该参数引用了NSI组编号配置，可以通过SHOW SBINSIARRID命令查询。该参数无特殊配置原则。
@@ -3340,7 +3340,7 @@ NSI|NSI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3363,17 +3363,17 @@ SHOW SBINSIARRPARAM:INDEX=1
 ## 域组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 域是NF的FQDN（Fully Qualified Domain Name，全称域名），表示允许访问NF实例的NF域名。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF域列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置域，则允许任何NF域可以访问该NF实例。在本地NRF功能开启时，域配置会呈现在对端NFProfile的allowedNfDomains数组中
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF域列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置域，则允许任何NF域可以访问该NF实例。在本地NRF功能开启时，域配置会呈现在对端NFProfile的allowedNfDomains数组中
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 域组配置即对应本地NRF配置的对端NFProfile的allowedNfDomains数组。如果不配置，则对端NFProfile缺少allowedNfDomains数组，表示所有NF域的服务使用者都可以访问对端NF实例。当启用本地NRF功能时，需要配置该组命令。 
@@ -3383,7 +3383,7 @@ SHOW SBINSIARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3394,17 +3394,17 @@ SHOW SBINSIARRPARAM:INDEX=1
 ### 域组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 域是NF的FQDN（Fully Qualified Domain Name，全称域名），表示允许访问NF实例的NF域名。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF域列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置域，则允许任何NF域可以访问该NF实例。在本地NRF功能开启时，域配置会呈现在对端NFProfile的allowedNfDomains数组中
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF域列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置域，则允许任何NF域可以访问该NF实例。在本地NRF功能开启时，域配置会呈现在对端NFProfile的allowedNfDomains数组中
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 域组编号配置用于配置一个域组，一个域组包含了若干个域组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -3414,7 +3414,7 @@ SHOW SBINSIARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3425,39 +3425,39 @@ SHOW SBINSIARRPARAM:INDEX=1
 #### 新增域组编号配置(ADD SBIDOMAINARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增域组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组域时，使用该命令。命令执行成功后，域组编号可以被域组参数配置、对端NF基本信息配置及对端NF服务实例配置引用。 
 
-域组参数配置通过[SHOW SBIDOMAINARRPARAM](../mml/1220608.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE](../mml/1220816.html)命令查询。
+域组参数配置通过[SHOW SBIDOMAINARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|域组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号，该编号是域组编号配置的唯一标识。被域组参数配置、对端NF基本信息配置及对端NF服务实例配置引用。域组参数配置通过SHOW SBIDOMAINARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号，该编号是域组编号配置的唯一标识。被域组参数配置、对端NF基本信息配置及对端NF服务实例配置引用。域组参数配置通过SHOW SBIDOMAINARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3470,39 +3470,39 @@ ADD SBIDOMAINARRID:ARRAYID=1;
 #### 删除域组编号配置(DEL SBIDOMAINARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除域组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组域时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组域。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该域组编号配置，需要先删除引用该配置的域组参数配置、对端NF基本信息配置及对端NF服务实例配置。 
 
-域组参数配置通过[SHOW SBIDOMAINARRPARAM](../mml/1220608.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE](../mml/1220816.html)命令查询。
+域组参数配置通过[SHOW SBIDOMAINARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|域组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号，该编号是域组编号配置的唯一标识。被域组参数配置、对端NF基本信息配置及对端NF服务实例配置引用。域组参数配置通过SHOW SBIDOMAINARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号，该编号是域组编号配置的唯一标识。被域组参数配置、对端NF基本信息配置及对端NF服务实例配置引用。域组参数配置通过SHOW SBIDOMAINARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3515,37 +3515,37 @@ DEL SBIDOMAINARRID:ARRAYID=1;
 #### 查询域组编号配置(SHOW SBIDOMAINARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询域组编号配置。当需要查询域组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号，该编号是域组编号配置的唯一标识。被域组参数配置、对端NF基本信息配置及对端NF服务实例配置引用。域组参数配置通过SHOW SBIDOMAINARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号，该编号是域组编号配置的唯一标识。被域组参数配置、对端NF基本信息配置及对端NF服务实例配置引用。域组参数配置通过SHOW SBIDOMAINARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3568,17 +3568,17 @@ SHOW SBIDOMAINARRID:ARRAYID=1
 ### 域组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 域是NF的FQDN（Fully Qualified Domain Name，全称域名），表示允许访问NF实例的NF域名。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF域列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置域，则允许任何NF域可以访问该NF实例。在本地NRF功能开启时，域配置会呈现在对端NFProfile的allowedNfDomains数组中
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF域列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置域，则允许任何NF域可以访问该NF实例。在本地NRF功能开启时，域配置会呈现在对端NFProfile的allowedNfDomains数组中
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 域组参数配置用于配置一个域归属于哪个域组。当启用本地NRF功能时，需要配置该组命令。 
@@ -3588,7 +3588,7 @@ SHOW SBIDOMAINARRID:ARRAYID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3599,22 +3599,22 @@ SHOW SBIDOMAINARRID:ARRAYID=1
 #### 新增域组参数配置(ADD SBIDOMAINARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增域组参数配置。当一个域配置需要归属于一个域组时，使用该命令。命令执行成功后，域组就可以包含域配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该域组参数配置，需要先新增域组编号配置。 
 
-域组编号配置通过[SHOW SBIDOMAINARRID](../mml/1220604.html)命令查询。
+域组编号配置通过[SHOW SBIDOMAINARRID]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 ARRAYID|域组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号。该参数引用了域组编号配置，可以通过SHOW SBIDOMAINARRID命令查询。
@@ -3623,10 +3623,10 @@ DOMAIN|域|参数可选性: 必选参数类型: 字符串参数范围: 0-127|该
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号。该参数引用了域组编号配置，可以通过SHOW SBIDOMAINARRID命令查询。
@@ -3635,7 +3635,7 @@ DOMAIN|域|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3648,20 +3648,20 @@ ADD SBIDOMAINARRPARAM:INDEX=1,ARRAYID=1,DOMAIN="zte.com.cn";
 #### 修改域组参数配置(SET SBIDOMAINARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改域组参数配置。当一个域配置需要变更归属的域组时，使用该命令。命令执行成功后，域配置归属到变更后的域组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号。该参数引用了域组编号配置，可以通过SHOW SBIDOMAINARRID命令查询。
@@ -3670,10 +3670,10 @@ DOMAIN|域|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号。该参数引用了域组编号配置，可以通过SHOW SBIDOMAINARRID命令查询。
@@ -3682,7 +3682,7 @@ DOMAIN|域|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3695,30 +3695,30 @@ SET SBIDOMAINARRPARAM:INDEX=1,ARRAYID=1,DOMAIN="zte.com.cn";
 #### 删除域组参数配置(DEL SBIDOMAINARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除域组参数配置。当一个域配置不需要归属于域组时，使用该命令。命令执行成功后，原先的域组不再携带该域配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号。该参数引用了域组编号配置，可以通过SHOW SBIDOMAINARRID命令查询。
@@ -3727,7 +3727,7 @@ DOMAIN|域|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3740,20 +3740,20 @@ DEL SBIDOMAINARRPARAM:INDEX=1;
 #### 查询域组参数配置(SHOW SBIDOMAINARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询域组参数配置。当需要查询域组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号。该参数引用了域组编号配置，可以通过SHOW SBIDOMAINARRID命令查询。
@@ -3762,10 +3762,10 @@ DOMAIN|域|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是域组参数配置的唯一标识。
 ARRAYID|域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置域组编号。该参数引用了域组编号配置，可以通过SHOW SBIDOMAINARRID命令查询。
@@ -3774,7 +3774,7 @@ DOMAIN|域|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3797,17 +3797,17 @@ SHOW SBIDOMAINARRPARAM:INDEX=1
 ## NF类型组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF类型是协议规定的5GC（5G Core Network）中NF的类型。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF类型列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置NF类型，则允许任何NF类型可以访问该NF实例。在本地NRF功能开启时，NF类型配置会呈现在对端NFProfile的allowedNfTypes数组中。
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF类型列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置NF类型，则允许任何NF类型可以访问该NF实例。在本地NRF功能开启时，NF类型配置会呈现在对端NFProfile的allowedNfTypes数组中。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF类型组配置即对应本地NRF配置的对端NFProfile的allowedNfTypes数组。如果不配置，则对端NFProfile缺少allowedNfTypes数组，表示所有NF类型的服务使用者都可以访问对端NF实例。当启用本地NRF功能时，需要配置该组命令。 
@@ -3817,7 +3817,7 @@ NF类型组配置包括NF类型组编号配置和NF类型组参数配置，一�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3828,17 +3828,17 @@ NF类型组配置包括NF类型组编号配置和NF类型组参数配置，一�
 ### NF类型组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF类型是协议规定的5GC（5G Core Network）中NF的类型。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF类型列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置NF类型，则允许任何NF类型可以访问该NF实例。在本地NRF功能开启时，NF类型配置会呈现在对端NFProfile的allowedNfTypes数组中。
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF类型列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置NF类型，则允许任何NF类型可以访问该NF实例。在本地NRF功能开启时，NF类型配置会呈现在对端NFProfile的allowedNfTypes数组中。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF类型组编号配置用于配置一个NF类型组，一个NF类型组包含了若干个NF类型组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -3848,7 +3848,7 @@ NF类型组编号配置用于配置一个NF类型组，一个NF类型组包含�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -3859,39 +3859,39 @@ NF类型组编号配置用于配置一个NF类型组，一个NF类型组包含�
 #### 新增NF类型组编号配置(ADD SBINFTYPEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF类型组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组NF类型时，使用该命令。命令执行成功后，NF类型组编号可以被NF类型组参数配置和对端NF基本信息配置引用。 
 
-NF类型组参数配置通过[SHOW SBINFTYPEARRPARAM](../mml/1220616.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+NF类型组参数配置通过[SHOW SBINFTYPEARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF类型组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号，该编号是NF类型组编号配置的唯一标识。被NF类型组参数配置及对端NF基本信息配置引用。NF类型组参数配置通过SHOW SBINFTYPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号，该编号是NF类型组编号配置的唯一标识。被NF类型组参数配置及对端NF基本信息配置引用。NF类型组参数配置通过SHOW SBINFTYPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3904,39 +3904,39 @@ ADD SBINFTYPEARRID:ARRAYID=1;
 #### 删除NF类型组编号配置(DEL SBINFTYPEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NF类型组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组NF类型时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组NF类型。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该NF类型组编号配置，需要先删除引用该配置的NF类型组参数配置和对端NF基本信息配置。 
 
-NF类型组参数配置通过[SHOW SBINFTYPEARRPARAM](../mml/1220616.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+NF类型组参数配置通过[SHOW SBINFTYPEARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF类型组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号，该编号是NF类型组编号配置的唯一标识。被NF类型组参数配置及对端NF基本信息配置引用。NF类型组参数配置通过SHOW SBINFTYPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号，该编号是NF类型组编号配置的唯一标识。被NF类型组参数配置及对端NF基本信息配置引用。NF类型组参数配置通过SHOW SBINFTYPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -3949,37 +3949,37 @@ DEL SBINFTYPEARRID:ARRAYID=1;
 #### 查询NF类型组编号配置(SHOW SBINFTYPEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF类型组编号配置。当需要查询NF类型组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号，该编号是NF类型组编号配置的唯一标识。被NF类型组参数配置及对端NF基本信息配置引用。NF类型组参数配置通过SHOW SBINFTYPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号，该编号是NF类型组编号配置的唯一标识。被NF类型组参数配置及对端NF基本信息配置引用。NF类型组参数配置通过SHOW SBINFTYPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4002,17 +4002,17 @@ SHOW SBINFTYPEARRID:ARRAYID=1
 ### NF类型组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF类型是协议规定的5GC（5G Core Network）中NF的类型。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF类型列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置NF类型，则允许任何NF类型可以访问该NF实例。在本地NRF功能开启时，NF类型配置会呈现在对端NFProfile的allowedNfTypes数组中。
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的NF类型列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置NF类型，则允许任何NF类型可以访问该NF实例。在本地NRF功能开启时，NF类型配置会呈现在对端NFProfile的allowedNfTypes数组中。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF类型组参数配置用于配置一个NF类型归属于哪个NF类型组。当启用本地NRF功能时，需要配置该组命令。 
@@ -4022,7 +4022,7 @@ NF类型组参数配置用于配置一个NF类型归属于哪个NF类型组。�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4033,22 +4033,22 @@ NF类型组参数配置用于配置一个NF类型归属于哪个NF类型组。�
 #### 新增NF类型组参数配置(ADD SBINFTYPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF类型组参数配置。当一个NF类型配置需要归属于一个NF类型组时，使用该命令。命令执行成功后，NF类型组就可以包含NF类型配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该NF类型组参数配置，需要先新增NF类型组编号配置。 
 
-NF类型组编号配置通过[SHOW SBINFTYPEARRID](../mml/1220612.html)命令查询。
+NF类型组编号配置通过[SHOW SBINFTYPEARRID]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 ARRAYID|NF类型组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号。该参数引用了NF类型组编号配置，可以通过SHOW SBINFTYPEARRID命令查询。
@@ -4057,10 +4057,10 @@ NFTYPE|NF类型|参数可选性: 必选参数类型: 枚举，参见枚举定义
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号。该参数引用了NF类型组编号配置，可以通过SHOW SBINFTYPEARRID命令查询。
@@ -4069,7 +4069,7 @@ NFTYPE|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4082,20 +4082,20 @@ ADD SBINFTYPEARRPARAM:INDEX=1,ARRAYID=1,NFTYPE="NRF_TYPE";
 #### 修改NF类型组参数配置(SET SBINFTYPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NF类型组参数配置。当一个NF类型配置需要变更归属的NF类型组时，使用该命令。命令执行成功后，NF类型配置归属到变更后的NF类型组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号。该参数引用了NF类型组编号配置，可以通过SHOW SBINFTYPEARRID命令查询。
@@ -4104,10 +4104,10 @@ NFTYPE|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号。该参数引用了NF类型组编号配置，可以通过SHOW SBINFTYPEARRID命令查询。
@@ -4116,7 +4116,7 @@ NFTYPE|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4129,30 +4129,30 @@ SET SBINFTYPEARRPARAM:INDEX=1,ARRAYID=1,NFTYPE="NRF_TYPE";
 #### 删除NF类型组参数配置(DEL SBINFTYPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NF类型组参数配置。当一个NF类型配置不需要归属于NF类型组时，使用该命令。命令执行成功后，原先的NF类型组不再携带该NF类型配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号。该参数引用了NF类型组编号配置，可以通过SHOW SBINFTYPEARRID命令查询。
@@ -4161,7 +4161,7 @@ NFTYPE|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4174,20 +4174,20 @@ DEL SBINFTYPEARRPARAM:INDEX=1;
 #### 查询NF类型组参数配置(SHOW SBINFTYPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF类型组参数配置。当需要查询NF类型组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号。该参数引用了NF类型组编号配置，可以通过SHOW SBINFTYPEARRID命令查询。
@@ -4196,10 +4196,10 @@ NFTYPE|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF类型组参数配置的唯一标识。
 ARRAYID|NF类型组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF类型组编号。该参数引用了NF类型组编号配置，可以通过SHOW SBINFTYPEARRID命令查询。
@@ -4208,7 +4208,7 @@ NFTYPE|NF类型|参数可选性: 任选参数类型: 枚举，参见枚举定义
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4231,17 +4231,17 @@ SHOW SBINFTYPEARRPARAM:INDEX=1
 ## 服务范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 服务范围表示在PLMN中NF实例可以服务的区域，可以指示地理区域，例如可以在集中式数据中心中用来发现和选择NF，这些NF可为位于特定地区或省份的用户提供服务。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的服务范围列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置服务范围，则不为NF实例提供特定的服务区域，但不意味着NF实例可以服务PLMN中的每个区域。在本地NRF功能开启时，服务范围配置会呈现在对端NFProfile的servingScope数组中。
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的服务范围列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置服务范围，则不为NF实例提供特定的服务区域，但不意味着NF实例可以服务PLMN中的每个区域。在本地NRF功能开启时，服务范围配置会呈现在对端NFProfile的servingScope数组中。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 服务范围组配置即对应本地NRF配置的对端NFProfile的servingScope数组。如果不配置，则对端NFProfile缺少servingScope数组，表示不为NF实例提供特定的服务区域。当启用本地NRF功能时，需要配置该组命令。 
@@ -4251,7 +4251,7 @@ SHOW SBINFTYPEARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4262,17 +4262,17 @@ SHOW SBINFTYPEARRPARAM:INDEX=1
 ### 服务范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 服务范围表示在PLMN中NF实例可以服务的区域，可以指示地理区域，例如可以在集中式数据中心中用来发现和选择NF，这些NF可为位于特定地区或省份的用户提供服务。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的服务范围列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置服务范围，则不为NF实例提供特定的服务区域，但不意味着NF实例可以服务PLMN中的每个区域。在本地NRF功能开启时，服务范围配置会呈现在对端NFProfile的servingScope数组中。
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的服务范围列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置服务范围，则不为NF实例提供特定的服务区域，但不意味着NF实例可以服务PLMN中的每个区域。在本地NRF功能开启时，服务范围配置会呈现在对端NFProfile的servingScope数组中。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 服务范围组编号配置用于配置一个服务范围组，一个服务范围组包含了若干个服务范围组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -4282,7 +4282,7 @@ SHOW SBINFTYPEARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4293,39 +4293,39 @@ SHOW SBINFTYPEARRPARAM:INDEX=1
 #### 新增服务范围组编号配置(ADD SBISERVSCOPEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增服务范围组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组服务范围时，使用该命令。命令执行成功后，服务范围组编号可以被服务范围组参数配置和对端NF基本信息配置引用。 
 
-服务范围组参数配置通过[SHOW SBISERVSCOPEARRPARAM](../mml/1220624.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+服务范围组参数配置通过[SHOW SBISERVSCOPEARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|服务范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号，该编号是服务范围组编号配置的唯一标识。被服务范围组参数配置及对端NF基本信息配置引用。服务范围组参数配置通过SHOW SBISERVSCOPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号，该编号是服务范围组编号配置的唯一标识。被服务范围组参数配置及对端NF基本信息配置引用。服务范围组参数配置通过SHOW SBISERVSCOPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4338,39 +4338,39 @@ ADD SBISERVSCOPEARRID:ARRAYID=1;
 #### 删除服务范围组编号配置(DEL SBISERVSCOPEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除服务范围组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组服务范围时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组服务范围。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该服务范围组编号配置，需要先删除引用该配置的服务范围组参数配置和对端NF基本信息配置。 
 
-服务范围组参数配置通过[SHOW SBISERVSCOPEARRPARAM](../mml/1220624.html)命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+服务范围组参数配置通过[SHOW SBISERVSCOPEARRPARAM]命令查询。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|服务范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号，该编号是服务范围组编号配置的唯一标识。被服务范围组参数配置及对端NF基本信息配置引用。服务范围组参数配置通过SHOW SBISERVSCOPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号，该编号是服务范围组编号配置的唯一标识。被服务范围组参数配置及对端NF基本信息配置引用。服务范围组参数配置通过SHOW SBISERVSCOPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4383,37 +4383,37 @@ DEL SBISERVSCOPEARRID:ARRAYID=1;
 #### 查询服务范围组编号配置(SHOW SBISERVSCOPEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询服务范围组编号配置。当需要查询服务范围组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号，该编号是服务范围组编号配置的唯一标识。被服务范围组参数配置及对端NF基本信息配置引用。服务范围组参数配置通过SHOW SBISERVSCOPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号，该编号是服务范围组编号配置的唯一标识。被服务范围组参数配置及对端NF基本信息配置引用。服务范围组参数配置通过SHOW SBISERVSCOPEARRPARAM命令查询。对端NF基本信息配置通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4436,17 +4436,17 @@ SHOW SBISERVSCOPEARRID:ARRAYID=1
 ### 服务范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 服务范围表示在PLMN中NF实例可以服务的区域，可以指示地理区域，例如可以在集中式数据中心中用来发现和选择NF，这些NF可为位于特定地区或省份的用户提供服务。 
 
-本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的服务范围列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置服务范围，则不为NF实例提供特定的服务区域，但不意味着NF实例可以服务PLMN中的每个区域。在本地NRF功能开启时，服务范围配置会呈现在对端NFProfile的servingScope数组中。
+本地NRF功能中，该配置主要用于对端NF基本信息配置中。用于限定可以访问NF实例的服务范围列表，其中，对端NF基本信息配置可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置服务范围，则不为NF实例提供特定的服务区域，但不意味着NF实例可以服务PLMN中的每个区域。在本地NRF功能开启时，服务范围配置会呈现在对端NFProfile的servingScope数组中。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 服务范围组参数配置用于配置一个服务范围归属于哪个服务范围组。当启用本地NRF功能时，需要配置该组命令。 
@@ -4456,7 +4456,7 @@ SHOW SBISERVSCOPEARRID:ARRAYID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4467,22 +4467,22 @@ SHOW SBISERVSCOPEARRID:ARRAYID=1
 #### 新增服务范围组参数配置(ADD SBISERVSCOPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增服务范围组参数配置。当一个服务范围配置需要归属于一个服务范围组时，使用该命令。命令执行成功后，服务范围组就可以包含服务范围配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该服务范围组参数配置，需要先新增服务范围组编号配置。 
 
-服务范围组编号配置通过[SHOW SBISERVSCOPEARRID](../mml/1220620.html)命令查询。
+服务范围组编号配置通过[SHOW SBISERVSCOPEARRID]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 ARRAYID|服务范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号。该参数引用了服务范围组编号配置，可以通过SHOW SBISERVSCOPEARRID命令查询。
@@ -4491,10 +4491,10 @@ SERVSCOPE|服务范围|参数可选性: 必选参数类型: 字符串参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号。该参数引用了服务范围组编号配置，可以通过SHOW SBISERVSCOPEARRID命令查询。
@@ -4503,7 +4503,7 @@ SERVSCOPE|服务范围|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4516,20 +4516,20 @@ ADD SBISERVSCOPEARRPARAM:INDEX=1,ARRAYID=1,SERVSCOPE="123000";
 #### 修改服务范围组参数配置(SET SBISERVSCOPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改服务范围组参数配置。当一个服务范围配置需要变更归属的服务范围组时，使用该命令。命令执行成功后，服务范围配置归属到变更后的服务范围组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号。该参数引用了服务范围组编号配置，可以通过SHOW SBISERVSCOPEARRID命令查询。
@@ -4538,10 +4538,10 @@ SERVSCOPE|服务范围|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号。该参数引用了服务范围组编号配置，可以通过SHOW SBISERVSCOPEARRID命令查询。
@@ -4550,7 +4550,7 @@ SERVSCOPE|服务范围|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4563,30 +4563,30 @@ SET SBISERVSCOPEARRPARAM:INDEX=1,ARRAYID=1,SERVSCOPE="123000";
 #### 删除服务范围组参数配置(DEL SBISERVSCOPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除服务范围组参数配置。当一个服务范围配置不需要归属于服务范围组时，使用该命令。命令执行成功后，原先的服务范围组不再携带该服务范围配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号。该参数引用了服务范围组编号配置，可以通过SHOW SBISERVSCOPEARRID命令查询。
@@ -4595,7 +4595,7 @@ SERVSCOPE|服务范围|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4608,20 +4608,20 @@ DEL SBISERVSCOPEARRPARAM:INDEX=1;
 #### 查询服务范围组参数配置(SHOW SBISERVSCOPEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询服务范围组参数配置。当需要查询服务范围组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号。该参数引用了服务范围组编号配置，可以通过SHOW SBISERVSCOPEARRID命令查询。
@@ -4630,10 +4630,10 @@ SERVSCOPE|服务范围|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是服务范围组参数配置的唯一标识。
 ARRAYID|服务范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置服务范围组编号。该参数引用了服务范围组编号配置，可以通过SHOW SBISERVSCOPEARRID命令查询。
@@ -4642,7 +4642,7 @@ SERVSCOPE|服务范围|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4665,7 +4665,7 @@ SHOW SBISERVSCOPEARRPARAM:INDEX=1
 ## NF集标识组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF集由相同用户或业务区/服务区提供服务的多个NF组成。当某个NF故障后，其所承担话务可以由集内的其他NF接管，继续提供服务。NF集标识即表示为一组可用来提供分发、冗余和可伸缩性的既有网络中相等且可互换的NF集合的全局唯一标识。 
@@ -4675,7 +4675,7 @@ NF集由相同用户或业务区/服务区提供服务的多个NF组成。当某
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF集标识组配置对应“本地NRF配置”的对端NFProfile的nfSetIdList数组，如果不配置，则对端NFProfile缺少nfSetIdList数组，本端如果需要请求对端提供的服务，则服务请求无法发送成功。当启用本地NRF功能时，需要配置该组命令。 
@@ -4685,7 +4685,7 @@ NF集标识组配置包括“NF集标识组编号配置”和“NF集标识组�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4696,7 +4696,7 @@ NF集标识组配置包括“NF集标识组编号配置”和“NF集标识组�
 ### NF集标识组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF集由相同用户或业务区/服务区提供服务的多个NF组成。当某个NF故障后，其所承担话务可以由集内的其他NF接管，继续提供服务。NF集标识即表示为一组可用来提供分发、冗余和可伸缩性的既有网络中相等且可互换的NF集合的全局唯一标识。 
@@ -4706,7 +4706,7 @@ NF集由相同用户或业务区/服务区提供服务的多个NF组成。当某
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF集标识组编号配置用于配置一个NF集标识组，一个NF集标识组包含了若干个NF集标识组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -4716,7 +4716,7 @@ NF集标识组编号配置用于配置一个NF集标识组，一个NF集标识�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4727,7 +4727,7 @@ NF集标识组编号配置用于配置一个NF集标识组，一个NF集标识�
 #### 新增NF集标识组编号配置(ADD SBINFSETIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF集标识组编号配置。当本地NRF配置中所配置的对端NFProfile需要携带一组NF集标识时，使用该命令。 
 
@@ -4743,32 +4743,32 @@ NF集标识组编号配置用于配置一个NF集标识组，一个NF集标识�
  
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF集标识组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号，该编号是NF集标识组编号配置的唯一标识。被“NF集标识组参数配置”及“对端NF基本信息配置”引用。“NF集标识组参数配置”通过SHOW SBINFSETIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号，该编号是NF集标识组编号配置的唯一标识。被“NF集标识组参数配置”及“对端NF基本信息配置”引用。“NF集标识组参数配置”通过SHOW SBINFSETIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4781,12 +4781,12 @@ ADD SBINFSETIDARRID:ARRAYID=1;
 #### 删除NF集标识组编号配置(DEL SBINFSETIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NF集标识组编号配置。当本地NRF配置中所配置的对端NFProfile不需要携带该组NF集标识时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该组NF集标识。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该NF集标识组编号配置，需要先删除引用该配置的“NF集标识组参数配置”，并在“对端NF基本信息配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -4800,27 +4800,27 @@ ADD SBINFSETIDARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF集标识组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号，该编号是NF集标识组编号配置的唯一标识。被“NF集标识组参数配置”及“对端NF基本信息配置”引用。“NF集标识组参数配置”通过SHOW SBINFSETIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号，该编号是NF集标识组编号配置的唯一标识。被“NF集标识组参数配置”及“对端NF基本信息配置”引用。“NF集标识组参数配置”通过SHOW SBINFSETIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4833,37 +4833,37 @@ DEL SBINFSETIDARRID:ARRAYID=1;
 #### 查询NF集标识组编号配置(SHOW SBINFSETIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF集标识组编号配置。当需要查询NF集标识组编号配置时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号，该编号是NF集标识组编号配置的唯一标识。被“NF集标识组参数配置”及“对端NF基本信息配置”引用。“NF集标识组参数配置”通过SHOW SBINFSETIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号，该编号是NF集标识组编号配置的唯一标识。被“NF集标识组参数配置”及“对端NF基本信息配置”引用。“NF集标识组参数配置”通过SHOW SBINFSETIDARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4886,7 +4886,7 @@ SHOW SBINFSETIDARRID:ARRAYID=1
 ### NF集标识组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF集由相同用户或业务区/服务区提供服务的多个NF组成。当某个NF故障后，其所承担话务可以由集内的其他NF接管，继续提供服务。NF集标识即表示为一组可用来提供分发、冗余和可伸缩性的既有网络中相等且可互换的NF集合的全局唯一标识。 
@@ -4896,7 +4896,7 @@ NF集由相同用户或业务区/服务区提供服务的多个NF组成。当某
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF集标识组参数配置用于配置一个NF集标识归属于哪个NF集标识组。当启用本地NRF功能时，需要配置该组命令。 
@@ -4906,7 +4906,7 @@ NF集标识组参数配置用于配置一个NF集标识归属于哪个NF集标�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -4917,12 +4917,12 @@ NF集标识组参数配置用于配置一个NF集标识归属于哪个NF集标�
 #### 新增NF集标识组参数配置(ADD SBINFSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF集标识组参数配置。当一个NF集标识配置需要归属于一个NF集标识组时，使用该命令。命令执行成功后，NF集标识组就可以包含NF集标识配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该NF集标识组参数配置，需要先新增“NF集标识组编号配置”。 
 
@@ -4933,10 +4933,10 @@ NF集标识组参数配置用于配置一个NF集标识归属于哪个NF集标�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NF集标识组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号。NF集标识组编号引用了“NF集标识组编号配置”中的配置，通过SHOW SBINFSETIDARRID命令查询。
@@ -4945,10 +4945,10 @@ NFSETID|NF集标识|参数可选性: 必选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号。NF集标识组编号引用了“NF集标识组编号配置”中的配置，通过SHOW SBINFSETIDARRID命令查询。
@@ -4957,7 +4957,7 @@ NFSETID|NF集标识|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -4970,20 +4970,20 @@ ADD SBINFSETIDARRPARAM:INDEX=1,ARRAYID=1,NFSETID="setxyz.smfset.5gc.mnc012.mcc34
 #### 修改NF集标识组参数配置(SET SBINFSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NF集标识组参数配置。当一个NF集标识配置需要变更归属的NF集标识组时，使用该命令。命令执行成功后，NF集标识配置归属到变更后的NF集标识组。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号。NF集标识组编号引用了“NF集标识组编号配置”中的配置，通过SHOW SBINFSETIDARRID命令查询。
@@ -4992,10 +4992,10 @@ NFSETID|NF集标识|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号。NF集标识组编号引用了“NF集标识组编号配置”中的配置，通过SHOW SBINFSETIDARRID命令查询。
@@ -5004,7 +5004,7 @@ NFSETID|NF集标识|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5017,30 +5017,30 @@ SET SBINFSETIDARRPARAM:INDEX=1,ARRAYID=1,NFSETID="setxyz.smfset.5gc.mnc012.mcc34
 #### 删除NF集标识组参数配置(DEL SBINFSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NF集标识组参数配置。当一个NF集标识配置不需要归属于NF集标识组时，使用该命令。命令执行成功后，原先的NF集标识组不再携带该NF集标识配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号。NF集标识组编号引用了“NF集标识组编号配置”中的配置，通过SHOW SBINFSETIDARRID命令查询。
@@ -5049,7 +5049,7 @@ NFSETID|NF集标识|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5062,20 +5062,20 @@ DEL SBINFSETIDARRPARAM:INDEX=1;
 #### 查询NF集标识组参数配置(SHOW SBINFSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF集标识组参数配置。当需要查询NF集标识组参数时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号。NF集标识组编号引用了“NF集标识组编号配置”中的配置，通过SHOW SBINFSETIDARRID命令查询。
@@ -5084,10 +5084,10 @@ NFSETID|NF集标识|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是NF集标识组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|NF集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF集标识组编号。NF集标识组编号引用了“NF集标识组编号配置”中的配置，通过SHOW SBINFSETIDARRID命令查询。
@@ -5096,7 +5096,7 @@ NFSETID|NF集标识|参数可选性: 任选参数类型: 字符串参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5119,7 +5119,7 @@ SHOW SBINFSETIDARRPARAM:INDEX=1
 ## IPv4地址配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv4（Internet Protocol version 4，网际协议版本4）通常被写作点分十进制的形式，即四个字节被分开用十进制写出，中间用点分隔，比如：192.168.1.1。 
@@ -5131,7 +5131,7 @@ IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于配置服务提供者的IPv4地址，当启用本地NRF功能时，需要使用该组命令。IPv4地址配置被IPv4地址组参数配置、IP端点配置引用。 
@@ -5139,7 +5139,7 @@ IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5150,7 +5150,7 @@ IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信�
 ### 新增IPv4地址配置(ADD SBIIPV4ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增IPv4地址配置，即给IPv4地址增加编号。 
 
@@ -5161,15 +5161,15 @@ IPv4地址组是一个或多个IPv4地址的集合。一个网络功能可能拥
 IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信息。当服务使用者（本端）向NRF发现可用的服务提供者（对端）时，NRF返回对端的NF Profile包含的服务中会携带IP End Points参数（包含一个或多个IP端点信息的IP端点信息组）。 
 
 
-[](None)注意事项 
+注意事项 
 
 系统支持的该配置项的最大记录数为8192。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置IPv4地址编号对应的IPv4地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv4地址。
@@ -5177,10 +5177,10 @@ IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv4地址编号对应的IPv4地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv4地址。
@@ -5188,7 +5188,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5201,20 +5201,20 @@ ADD SBIIPV4ADDR:ID=1,IP="192.168.20.100"
 ### 修改IPv4地址配置(SET SBIIPV4ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改IPv4地址配置，即变更IPv4地址编号所标识的IPv4地址。当服务提供者（对端）网络功能（NF）的IPv4地址发生变更时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 IPv4地址编号无法修改，只允许修改IPv4地址。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置IPv4地址编号对应的IPv4地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv4地址。
@@ -5222,10 +5222,10 @@ IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv4地址编号对应的IPv4地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv4地址。
@@ -5233,7 +5233,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5246,30 +5246,30 @@ SET SBIIPV4ADDR:ID=1,IP="192.168.20.100"
 ### 删除IPv4地址配置(DEL SBIIPV4ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IPv4地址配置。当服务提供者（对端）网络功能（NF）的IPv4地址不再使用时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 IPv4地址配置编号被IPv4地址组参数配置、IP端点配置引用，必须先去除IPv4地址组参数、IP端点配置配置中的引用，才能删除IPv4地址配置编号。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv4地址编号对应的IPv4地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv4地址。
@@ -5277,7 +5277,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5290,20 +5290,20 @@ DEL SBIIPV4ADDR:ID=1
 ### 查询IPv4地址配置(SHOW SBIIPV4ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询IPv4地址配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv4地址编号对应的IPv4地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv4地址。
@@ -5311,10 +5311,10 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址的编号，用于标识一个IPv4地址。IPv4地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv4地址编号对应的IPv4地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv4地址。
@@ -5322,7 +5322,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5345,7 +5345,7 @@ SHOW SBIIPV4ADDR:ID=1
 ## IPv4地址组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv4（Internet Protocol version 4，网际协议版本4），它通常被写作点分十进制的形式，即四个字节被分开用十进制写出，中间用点分隔，比如：192.168.1.1。 
@@ -5355,7 +5355,7 @@ IPv4地址组是一个或者多个IPv4地址的集合。当服务使用者（本
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IPv4地址组配置是给IPv4地址组指定一个编号，便于在其它配置（例如，对端NF基本信息配置）中引用IPv4地址组。 
@@ -5367,7 +5367,7 @@ IPv4地址组配置是给IPv4地址组指定一个编号，便于在其它配置
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5378,7 +5378,7 @@ IPv4地址组配置是给IPv4地址组指定一个编号，便于在其它配置
 ### IPv4地址组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv4（Internet Protocol version 4，网际协议版本4）通常被写作点分十进制的形式，即四个字节被分开用十进制写出，中间用点分隔，比如：192.168.1.1。 
@@ -5390,7 +5390,7 @@ IPv4地址组是一个或多个IPv4地址的集合。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于配置IPv4地址组编号。IPv4地址组是一个或多个IPv4地址的集合。为便于在其它配置命令中引用IPv4地址组，需要给IPv4地址组指定一个编号。 
@@ -5400,7 +5400,7 @@ IPv4地址组是一个或多个IPv4地址的集合。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5411,43 +5411,43 @@ IPv4地址组是一个或多个IPv4地址的集合。
 #### 新增IPv4地址组编号配置(ADD SBIIPV4ADDRARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增IPv4地址组编号。IPv4地址组是一个或多个IPv4地址的集合。为了便于在其它配置命令中引用IPv4地址组，需要给IPv4地址组指定一个编号。 
 
 当启用本地NRF功能，且需要添加一个新的IPv4地址组编号时，使用该命令。命令执行成功，再将对端网络功能（NF）的IPv4地址加入新增的IPv4地址组后，IPv4地址组编号可以被对端NF基本信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
-通过IPv4地址组参数配置（[ADD SBIIPV4ADDRARRPARAM](../mml/1220641.html)命令）在IPv4地址组内添加对端NF一个或多个IPv4地址后，IPv4地址组才能正常使用。
+通过IPv4地址组参数配置（[ADD SBIIPV4ADDRARRPARAM]命令）在IPv4地址组内添加对端NF一个或多个IPv4地址后，IPv4地址组才能正常使用。
 
 如果IPv4地址组内无对端NF的IPv4地址，当对端NF基本信息配置引用了该IPv4地址组后，会导致该NF的NF Profile组装失败，本地NRF发现失败。 
 
 系统支持的该配置项的最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5460,37 +5460,37 @@ ADD SBIIPV4ADDRARRID:ARRAYID=1
 #### 删除IPv4地址组编号配置(DEL SBIIPV4ADDRARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IPv4地址组编号。当IPv4地址组编号不再使用时，使用该命令删除。 
 
 
-[](None)注意事项 
+注意事项 
 
 IPv4地址编号被对端NF基本信息配置引用，必须先去除对端NF基本信息配置中的引用，才能删除IPv4地址编号。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5503,37 +5503,37 @@ DEL SBIIPV4ADDRARRID:ARRAYID=1
 #### 查询IPv4地址组编号配置(SHOW SBIIPV4ADDRARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询IPv4地址组编号。当需要查询IPv4地址组编号的配置情况时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5556,7 +5556,7 @@ SHOW SBIIPV4ADDRARRID:ARRAYID=1
 ### IPv4地址组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv4（Internet Protocol version 4，网际协议版本4）通常被写作点分十进制的形式，即四个字节被分开用十进制写出，中间用点分隔，比如：192.168.1.1。 
@@ -5568,7 +5568,7 @@ IPv4地址组是一个或多个IPv4地址的集合。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于对IPv4地址组内的IPv4地址进行管理。当启用本地NRF功能时，需要配置该组命令。 
@@ -5578,7 +5578,7 @@ IPv4地址组是一个或多个IPv4地址的集合。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5589,7 +5589,7 @@ IPv4地址组是一个或多个IPv4地址的集合。
 #### 新增IPv4地址组参数配置(ADD SBIIPV4ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增IPv4地址组参数配置。 
 
@@ -5598,7 +5598,7 @@ IPv4地址组是一个或多个IPv4地址的集合。
 新增的IPv4地址组，需要使用本命令在组内添加一个或者多个IPv4地址才可以被对端NF基本信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 组内无IPv4地址的地址组被对端NF基本信息配置引用后，会导致对端NF的NF Profile组装失败，影响本地NRF发现。 
 
@@ -5607,10 +5607,10 @@ IPv4地址组是一个或多个IPv4地址的集合。
 配置索引只用来标识该配置记录，不会被其他配置引用。配置索引不可以重复。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv4地址组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号，该编号通过SHOW SBIIPV4ADDRARRID命令查询。
@@ -5619,10 +5619,10 @@ IPV4|IPv4地址编号|参数可选性: 必选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号，该编号通过SHOW SBIIPV4ADDRARRID命令查询。
@@ -5631,7 +5631,7 @@ IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5644,20 +5644,20 @@ ADD SBIIPV4ADDRARRPARAM:INDEX=1,ARRAYID=1,IPV4=1
 #### 修改IPv4地址组参数配置(SET SBIIPV4ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改IPv4地址组参数配置，当需要修改IPv4地址组内的IPv4地址时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号，该编号通过SHOW SBIIPV4ADDRARRID命令查询。
@@ -5666,10 +5666,10 @@ IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号，该编号通过SHOW SBIIPV4ADDRARRID命令查询。
@@ -5678,7 +5678,7 @@ IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5691,32 +5691,32 @@ SET SBIIPV4ADDRARRPARAM:INDEX=1,ARRAYID=1,IPV4=1
 #### 删除IPv4地址组参数配置(DEL SBIIPV4ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IPv4地址组参数配置，当需要删除IPv4地址组内的IPv4地址时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除IPv4地址组内的最后一个IPv4地址时，需要先去除对端NF基本信息配置中对地址组编号的引用，再删除该IPv4地址。 
 
 不含IPv4地址的地址组在被对端NF基本信息配置所引用后，会导致对端NF的NF Profile组装失败，本地NRF发现失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号，该编号通过SHOW SBIIPV4ADDRARRID命令查询。
@@ -5725,7 +5725,7 @@ IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5738,20 +5738,20 @@ DEL SBIIPV4ADDRARRPARAM:INDEX=1
 #### 查询IPv4地址组参数配置(SHOW SBIIPV4ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询IPv4地址组参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号，该编号通过SHOW SBIIPV4ADDRARRID命令查询。
@@ -5760,10 +5760,10 @@ IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv4地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv4地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址组编号，该编号通过SHOW SBIIPV4ADDRARRID命令查询。
@@ -5772,7 +5772,7 @@ IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5795,7 +5795,7 @@ SHOW SBIIPV4ADDRARRPARAM:INDEX=1
 ## IPv6地址配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv6（Internet Protocol version 6，网际协议版本6），是用于替代IPv4（Internet Protocol version 4，网际协议版本4）的新一代IP协议。IPv6的地址长度为128位，典型的IPv6地址表示方法：A345:1026:B3F5:0000:DCAA:1122:3344:5678。  
@@ -5807,7 +5807,7 @@ IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于配置服务提供者的IPv6地址，当启用本地NRF功能时，需要使用该组命令。IPv6地址配置被IPv6地址组参数配置、IP端点配置引用。 
@@ -5815,7 +5815,7 @@ IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -5826,7 +5826,7 @@ IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信�
 ### 新增IPv6地址配置(ADD SBIIPV6ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增IPv6地址配置，即给IPv6地址增加编号。 
 
@@ -5837,15 +5837,15 @@ IPv6地址组是一个或多个IPv6地址的集合。一个网络功能可能拥
 IP端点是网络功能服务侦听入向侧服务请求的IP地址和端口信息。当服务使用者（本端）向NRF发现可用的服务提供者（对端）时，NRF返回对端的NF Profile包含的服务中会携带IP End Points参数（包含一个或多个IP端点信息的IP端点信息组）。 
 
 
-[](None)注意事项 
+注意事项 
 
 系统支持的该配置项的最大记录数为8192。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置IPv6地址编号对应的IPv6地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv6地址。
@@ -5853,10 +5853,10 @@ IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv6地址编号对应的IPv6地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv6地址。
@@ -5864,7 +5864,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5877,20 +5877,20 @@ ADD SBIIPV6ADDR:ID=1,IP="3480:e024::1"
 ### 修改IPv6地址配置(SET SBIIPV6ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改IPv6地址配置，即变更IPv6地址编号所标识的IPv6地址。当服务提供者（对端）网络功能（NF）的IPv6地址发生变更时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 IPv6地址编号无法修改，只允许修改IPv6地址。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置IPv6地址编号对应的IPv6地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv6地址。
@@ -5898,10 +5898,10 @@ IP|IP地址|参数可选性: 必选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv6地址编号对应的IPv6地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv6地址。
@@ -5909,7 +5909,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5922,30 +5922,30 @@ SET SBIIPV6ADDR:ID=1,IP="3480:e024::1"
 ### 删除IPv6地址配置(DEL SBIIPV6ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IPv6地址配置。当服务提供者（对端）网络功能（NF）的IPv6地址不再使用时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 IPv6地址配置编号被IPv6地址组参数配置、IP端点配置引用，必须先去除IPv6地址组参数、IP端点配置配置中的引用，才能删除IPv6地址配置编号。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv6地址编号对应的IPv6地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv6地址。
@@ -5953,7 +5953,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -5966,20 +5966,20 @@ DEL SBIIPV6ADDR:ID=1
 ### 查询IPv6地址配置(SHOW SBIIPV6ADDR) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询IPv6地址配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv6地址编号对应的IPv6地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv6地址。
@@ -5987,10 +5987,10 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址的编号，用于标识一个IPv6地址。IPv6地址编号不可重复。
 IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置IPv6地址编号对应的IPv6地址，该地址通常是服务提供者（对端）网络功能（NF）的IPv6地址。
@@ -5998,7 +5998,7 @@ IP|IP地址|参数可选性: 任选参数类型: 字符串|该参数用于设置
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6021,7 +6021,7 @@ SHOW SBIIPV6ADDR:ID=1
 ## IPv6地址组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv6（Internet Protocol version 6，网际协议版本6），是用于替代IPv4（Internet Protocol version 4，网际协议版本4）的新一代IP协议。IPv6的地址长度为128位，典型的IPv6地址表示方法：A345:1026:B3F5:0000:DCAA:1122:3344:5678。  
@@ -6031,7 +6031,7 @@ IPv6地址组是一个或多个IPv6地址的集合。当服务使用者（本端
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IPv6地址组配置是给IPv6地址组指定一个编号，便于在其它配置（例如，对端NF基本信息配置）中引用IPv6地址组。 
@@ -6043,7 +6043,7 @@ IPv6地址组配置是给IPv6地址组指定一个编号，便于在其它配置
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6054,7 +6054,7 @@ IPv6地址组配置是给IPv6地址组指定一个编号，便于在其它配置
 ### IPv6地址组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv6（Internet Protocol version 6，网际协议版本6），是用于替代IPv4（Internet Protocol version 4，网际协议版本4）的新一代IP协议。IPv6的地址长度为128位，典型的IPv6地址表示方法：A345:1026:B3F5:0000:DCAA:1122:3344:5678。  
@@ -6066,7 +6066,7 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于配置IPv6地址组编号。IPv6地址组是一个或多个IPv6地址的集合。为便于在其它配置命令中引用IPv6地址组，需要给IPv6地址组指定一个编号。 
@@ -6076,7 +6076,7 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6087,43 +6087,43 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 #### 新增IPv6地址组编号配置(ADD SBIIPV6ADDRARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增IPv6地址组编号。IPv6地址组是一个或多个IPv6地址的集合。为了便于在其它配置命令中引用IPv6地址组，需要给IPv6地址组指定一个编号。 
 
 当启用本地NRF功能，且需要添加一个新的IPv6地址组编号时，使用该命令。命令执行成功，再将对端网络功能（NF）的IPv6地址加入新增的IPv6地址组后，IPv6地址组编号可以被对端NF基本信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
-通过IPv6地址组参数配置（[ADD SBIIPV6ADDRARRPARAM](../mml/1220653.html)命令）在IPv6地址组内添加对端NF一个或多个IPv6地址后，IPv6地址组才能正常使用。
+通过IPv6地址组参数配置（[ADD SBIIPV6ADDRARRPARAM]命令）在IPv6地址组内添加对端NF一个或多个IPv6地址后，IPv6地址组才能正常使用。
 
 如果IPv6地址组内无对端NF的IPv6地址，当对端NF基本信息配置引用了该IPv6地址组后，会导致该NF的NF Profile组装失败，本地NRF发现失败。 
 
 系统支持的该配置项的最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6地址组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6136,37 +6136,37 @@ ADD SBIIPV6ADDRARRID:ARRAYID=1
 #### 删除IPv6地址组编号配置(DEL SBIIPV6ADDRARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IPv6地址组编号。当IPv6地址组编号不再使用时，使用该命令删除。 
 
 
-[](None)注意事项 
+注意事项 
 
 IPv6地址编号被对端NF基本信息配置引用，必须先去除对端NF基本信息配置中的引用，才能删除IPv6地址编号。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6地址组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6179,37 +6179,37 @@ DEL SBIIPV6ADDRARRID:ARRAYID=1
 #### 查询IPv6地址组编号配置(SHOW SBIIPV6ADDRARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询IPv6地址组编号。当需要查询IPv6地址组编号的配置情况时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6232,7 +6232,7 @@ SHOW SBIIPV6ADDRARRID:ARRAYID=1
 ### IPv6地址组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IPv6（Internet Protocol version 6，网际协议版本6），是用于替代IPv4（Internet Protocol version 4，网际协议版本4）的新一代IP协议。IPv6的地址长度为128位，典型的IPv6地址表示方法：A345:1026:B3F5:0000:DCAA:1122:3344:5678。  
@@ -6244,7 +6244,7 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本配置用于对IPv6地址组内的IPv6地址进行管理。当启用本地NRF功能时，需要配置该组命令。 
@@ -6254,7 +6254,7 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6265,7 +6265,7 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 #### 新增IPv6地址组参数配置(ADD SBIIPV6ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增IPv6地址组参数配置。 
 
@@ -6274,7 +6274,7 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 新增的IPv6地址组，需要使用本命令在组内添加一个或者多个IPv6地址才可以被对端NF基本信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 组内无IPv6地址的地址组被对端NF基本信息配置引用后，会导致对端NF的NF Profile组装失败，影响本地NRF发现。 
 
@@ -6283,10 +6283,10 @@ IPv6地址组是一个或者多个IPv6地址的集合。
 配置索引只用来标识该配置记录，不会被其他配置引用。配置索引不可以重复。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv6地址组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号，该编号通过SHOW SBIIPV6ADDRARRID命令查询。
@@ -6295,10 +6295,10 @@ IPV6|IPv6地址编号|参数可选性: 必选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号，该编号通过SHOW SBIIPV6ADDRARRID命令查询。
@@ -6307,7 +6307,7 @@ IPV6|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6320,20 +6320,20 @@ ADD SBIIPV6ADDRARRPARAM:INDEX=1,ARRAYID=1,IPV6=1
 #### 修改IPv6地址组参数配置(SET SBIIPV6ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改IPv6地址组参数配置，当需要修改IPv6地址组内的IPv6地址时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号，该编号通过SHOW SBIIPV6ADDRARRID命令查询。
@@ -6342,10 +6342,10 @@ IPV6|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号，该编号通过SHOW SBIIPV6ADDRARRID命令查询。
@@ -6354,7 +6354,7 @@ IPV6|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6367,32 +6367,32 @@ SET SBIIPV6ADDRARRPARAM:INDEX=1,ARRAYID=1,IPV6=1
 #### 删除IPv6地址组参数配置(DEL SBIIPV6ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IPv6地址组参数配置，当需要删除IPv6地址组内的IPv6地址时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除IPv6地址组内的最后一个IPv6地址时，需要先去除对端NF基本信息配置中对地址组编号的引用，再删除该IPv6地址。 
 
 不含IPv6地址的地址组在被对端NF基本信息配置所引用后，会导致对端NF的NF Profile组装失败，本地NRF发现失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号，该编号通过SHOW SBIIPV6ADDRARRID命令查询。
@@ -6401,7 +6401,7 @@ IPV6|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6414,20 +6414,20 @@ DEL SBIIPV6ADDRARRPARAM:INDEX=1
 #### 查询IPv6地址组参数配置(SHOW SBIIPV6ADDRARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询IPv6地址组参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号，该编号通过SHOW SBIIPV6ADDRARRID命令查询。
@@ -6436,10 +6436,10 @@ IPV6|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是IPv6地址组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|IPv6地址组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6地址组编号，该编号通过SHOW SBIIPV6ADDRARRID命令查询。
@@ -6448,7 +6448,7 @@ IPV6|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6471,7 +6471,7 @@ SHOW SBIIPV6ADDRARRPARAM:INDEX=1
 ## IP端点配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址和端口信息（包括IPv4和/或IPv6地址）。 
@@ -6481,7 +6481,7 @@ IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该组命令用于配置服务提供者用于侦听入向侧服务请求的IP地址和端口信息（包括IPv4或IPv6地址），当启用本地NRF功能时，需要配置该组命令。 
@@ -6491,7 +6491,7 @@ IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6502,20 +6502,20 @@ IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址
 ### 新增IP端点配置(ADD SBIIPENDPOINT) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IP端点配置。当启用本地NRF功能时，执行该命令。命令执行成功后，本配置可以被IP端点组参数配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点编号。
 IPV4|IPv4地址编号|参数可选性: 必须单选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址编号，IPv4地址编号通过SHOW SBIIPV4ADDR命令查询。
@@ -6525,10 +6525,10 @@ PORT|端口|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点配置编号。
 IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址编号，IPv4地址编号通过SHOW SBIIPV4ADDR命令查询。
@@ -6538,7 +6538,7 @@ PORT|端口|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6551,20 +6551,20 @@ ADD SBIIPENDPOINT:INDEX=1,IPV4=1,PORT=8080
 ### 修改IP端点配置(SET SBIIPENDPOINT) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改IP端点配置。当IP端点编号关联的IPv4地址编号、IPv6地址编号、端口发生变更时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 IP端点配置编号被IP端点组参数配置引用后，修改IP端点配置对IP端点组参数配置无影响。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点编号。
 IPV4|IPv4地址编号|参数可选性: 必须单选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址编号，IPv4地址编号通过SHOW SBIIPV4ADDR命令查询。
@@ -6574,10 +6574,10 @@ PORT|端口|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点配置编号。
 IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址编号，IPv4地址编号通过SHOW SBIIPV4ADDR命令查询。
@@ -6587,7 +6587,7 @@ PORT|端口|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6600,30 +6600,30 @@ SET SBIIPENDPOINT:INDEX=1,IPV4=2
 ### 删除IP端点配置(DEL SBIIPENDPOINT) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IP端点配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点配置编号。
 IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址编号，IPv4地址编号通过SHOW SBIIPV4ADDR命令查询。
@@ -6633,7 +6633,7 @@ PORT|端口|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6646,20 +6646,20 @@ DEL SBIIPENDPOINT:INDEX=1
 ### 查询IP端点配置(SHOW SBIIPENDPOINT) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询IP端点配置，包括IP端点编号，及其关联的IPv4地址编号、IPv6地址编号、端口。 
 
 
-[](None)注意事项 
+注意事项 
 
 IP端点配置编号被IP端点组参数配置引用后，必须先删除IP端点组参数配置，才能删除被引用的IP端点配置。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点编号。
 IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址编号，IPv4地址编号通过SHOW SBIIPV4ADDR命令查询。
@@ -6668,10 +6668,10 @@ IPV6|IPv6地址编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|IP端点编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点配置编号。
 IPV4|IPv4地址编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址编号，IPv4地址编号通过SHOW SBIIPV4ADDR命令查询。
@@ -6681,7 +6681,7 @@ PORT|端口|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6704,7 +6704,7 @@ SHOW SBIIPENDPOINT:INDEX=1
 ## IP端点组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址和端口信息（包括IPv4和/或IPv6地址）。 
@@ -6714,7 +6714,7 @@ IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IP端点组配置即对应本地NRF配置的对端NFProfile的ipEndPoints数组，如果不配置，则对端NFProfile缺少ipEndPoints数组，本端如果需要请求对端提供的服务，则服务请求无法发送成功。当启用本地NRF功能时，需要配置该组命令。 
@@ -6724,7 +6724,7 @@ IP端点组配置包括IP端点组编号配置和IP端点组参数配置，一�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6735,7 +6735,7 @@ IP端点组配置包括IP端点组编号配置和IP端点组参数配置，一�
 ### IP端点组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址和端口信息（包括IPv4和/或IPv6地址）。 
@@ -6745,7 +6745,7 @@ IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IP端点组编号配置用于配置一个IP端点组，一个IP端点组包含了若干个IP端点组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -6755,7 +6755,7 @@ IP端点组编号配置用于配置一个IP端点组，一个IP端点组包含�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6766,37 +6766,37 @@ IP端点组编号配置用于配置一个IP端点组，一个IP端点组包含�
 #### 新增IP端点组编号配置(ADD SBIIPENDPOINTARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IP端点组编号。当启用本地NRF功能时，执行该命令。命令执行成功后，本配置被IP端点组参数配置引用。命令执行成功后，服务使用者如果需要使用服务提供者提供的服务，则根据配置的组信息向服务提供者发送服务请求。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IP端点组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6809,37 +6809,37 @@ ADD SBIIPENDPOINTARRID:ARRAYID=1
 #### 删除IP端点组编号配置(DEL SBIIPENDPOINTARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IP端点组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 IP端点组编号被IP端点组参数配置引用后，必须先删除IP端点组参数配置，才能删除被引用的IP端点组配置。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IP端点组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6852,37 +6852,37 @@ DEL SBIIPENDPOINTARRID:ARRAYID=1
 #### 查询IP端点组编号配置(SHOW SBIIPENDPOINTARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询IP端点组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6905,7 +6905,7 @@ SHOW SBIIPENDPOINTARRID:ARRAYID=1
 ### IP端点组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址和端口信息（包括IPv4和/或IPv6地址）。 
@@ -6915,7 +6915,7 @@ IP端点是网络功能(NF)的服务用于侦听入向侧服务请求的IP地址
 
 
 
-[](None)功能说明 
+功能说明 
 
 IP端点组参数配置用于配置一个IP端点归属于哪个IP端点组。当启用本地NRF功能时，需要配置该组命令。
 如果不配置IP端点组参数，则一个IP端点不能归属于一个具体的IP端点组，本端无法获取对端的IP端点信息，本端如果需要请求对端提供的服务，服务请求无法发送成功。 
@@ -6923,7 +6923,7 @@ IP端点组参数配置用于配置一个IP端点归属于哪个IP端点组。�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -6934,20 +6934,20 @@ IP端点组参数配置用于配置一个IP端点归属于哪个IP端点组。�
 #### 新增IP端点组参数配置(ADD SBIIPENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IP端点组参数配置。当启用本地NRF功能时，执行该命令。命令执行成功后，服务使用者如果需要使用服务提供者提供的服务，则根据配置的组信息向服务提供者发送服务请求。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|IP端点组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号，IP端点组编号通过SHOW SBIIPENDPOINTARRID命令查询。
@@ -6956,10 +6956,10 @@ IPENDPOINT|IP端点编号|参数可选性: 必选参数类型: 数字参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号，IP端点组编号通过SHOW SBIIPENDPOINTARRID命令查询。
@@ -6968,7 +6968,7 @@ IPENDPOINT|IP端点编号|参数可选性: 任选参数类型: 数字参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -6981,20 +6981,20 @@ ADD SBIIPENDPOINTARRPARAM:INDEX=1,ARRAYID=1,IPENDPOINT=1
 #### 修改IP端点组参数配置(SET SBIIPENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改IP端点组参数配置。当配置索引关联的IP端点组编号、IP端点编号发生变更时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号，IP端点组编号通过SHOW SBIIPENDPOINTARRID命令查询。
@@ -7003,10 +7003,10 @@ IPENDPOINT|IP端点编号|参数可选性: 任选参数类型: 数字参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号，IP端点组编号通过SHOW SBIIPENDPOINTARRID命令查询。
@@ -7015,7 +7015,7 @@ IPENDPOINT|IP端点编号|参数可选性: 任选参数类型: 数字参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7028,30 +7028,30 @@ SET SBIIPENDPOINTARRPARAM:INDEX=1,ARRAYID=1,IPENDPOINT=2
 #### 删除IP端点组参数配置(DEL SBIIPENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除IP端点组参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果删除IP端点组参数配置，则在服务使用者请求服务时，无法通过ipEndPoints获取到服务提供者的IpEndPoint，也就无法向该IpEndPoint的服务提供者发送服务请求。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号，IP端点组编号通过SHOW SBIIPENDPOINTARRID命令查询。
@@ -7060,7 +7060,7 @@ IPENDPOINT|IP端点编号|参数可选性: 任选参数类型: 数字参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7073,20 +7073,20 @@ DEL SBIIPENDPOINTARRPARAM:INDEX=1
 #### 查询IP端点组参数配置(SHOW SBIIPENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询IP端点组参数配置，即查询配置索引关联的IP端点组编号、IP端点编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号，IP端点组编号通过SHOW SBIIPENDPOINTARRID命令查询。
@@ -7095,10 +7095,10 @@ IPENDPOINT|IP端点编号|参数可选性: 任选参数类型: 数字参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|IP端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IP端点组编号，IP端点组编号通过SHOW SBIIPENDPOINTARRID命令查询。
@@ -7107,7 +7107,7 @@ IPENDPOINT|IP端点编号|参数可选性: 任选参数类型: 数字参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7130,7 +7130,7 @@ SHOW SBIIPENDPOINTARRPARAM:INDEX=1
 ## NF服务版本组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF（网络功能，Network Function）服务版本是NF服务支持的API版本号，包含了URI中用于访问API的服务实例的版本号和API完整版本号。 
@@ -7140,7 +7140,7 @@ NF（网络功能，Network Function）服务版本是NF服务支持的API版本
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF服务版本组配置对应本地NRF配置出来的对端NFProfile的versions数组。如果不配置，则对端NFProfile缺少versions数组，本端如果需要请求对端提供的服务，服务请求的URI不能携带正确的版本号，可能导致服务请求发送失败以及业务流程失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -7150,7 +7150,7 @@ NF服务版本组配置包括NF服务版本组编号配置和NF服务版本组�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7161,7 +7161,7 @@ NF服务版本组配置包括NF服务版本组编号配置和NF服务版本组�
 ### NF服务版本组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF（网络功能，Network Function）服务版本是NF服务支持的API版本号，包含了URI中用于访问API的服务实例的版本号和API完整版本号。 
@@ -7171,7 +7171,7 @@ NF（网络功能，Network Function）服务版本是NF服务支持的API版本
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF服务版本组编号配置用于配置一个NF服务版本组的编号，一个NF服务版本组包含了若干个NF服务版本组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -7181,7 +7181,7 @@ NF服务版本组编号配置用于配置一个NF服务版本组的编号，一�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7192,37 +7192,37 @@ NF服务版本组编号配置用于配置一个NF服务版本组的编号，一�
 #### 新增NF服务版本组编号配置(ADD SBINFSVERSIONARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF服务版本组编号。当启用本地NRF功能时，执行该命令。命令执行成功后，当服务使用者从NRF获取到服务提供者的服务版本组时，把其中一个的API URI版本号作为本次服务请求的URI中使用的版本号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务版本组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7235,37 +7235,37 @@ ADD SBINFSVERSIONARRID:ARRAYID=1
 #### 删除NF服务版本组编号配置(DEL SBINFSVERSIONARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除NF服务版本组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除后，服务使用者（本端）无法获取服务提供者（对端）的API URI版本号，本端如果需要请求对端提供的服务，服务请求的URI不能携带正确的版本号，可能导致服务请求发送失败以及业务流程失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务版本组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7278,37 +7278,37 @@ DEL SBINFSVERSIONARRID:ARRAYID=1
 #### 查询NF服务版本组编号配置(SHOW SBINFSVERSIONARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询NF服务版本组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7331,7 +7331,7 @@ SHOW SBINFSVERSIONARRID;
 ### NF服务版本组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF（网络功能，Network Function）服务版本是NF服务支持的API版本号，包含了URI中用于访问API的服务实例的版本号和API完整版本号。 
@@ -7341,7 +7341,7 @@ NF（网络功能，Network Function）服务版本是NF服务支持的API版本
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF服务版本组参数配置包含一个API URI版本号和一个API完整版本号，以及该组参数归属于哪个NF服务版本组。当启用本地NRF功能时，需要配置该组命令。 
@@ -7351,7 +7351,7 @@ NF服务版本组参数配置包含一个API URI版本号和一个API完整版�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7362,20 +7362,20 @@ NF服务版本组参数配置包含一个API URI版本号和一个API完整版�
 #### 新增NF服务版本组参数配置(ADD SBINFSVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF服务版本组参数配置。当启用本地NRF功能时，执行该命令。命令执行成功后，当服务使用者从NRF获取到服务提供者的服务版本组时，把其中一个的API URI版本号作为本次服务请求的URI中使用的版本号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|NF服务版本组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号，NF服务版本组编号通过SHOW SBINFSVERSIONARRID命令查询。
@@ -7385,10 +7385,10 @@ APIFULLVERSION|API完整版本号|参数可选性: 必选参数类型: 字符串
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号，NF服务版本组编号通过SHOW SBINFSVERSIONARRID命令查询。
@@ -7398,7 +7398,7 @@ APIFULLVERSION|API完整版本号|参数可选性: 任选参数类型: 字符串
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7411,20 +7411,20 @@ ADD SBINFSVERSIONARRPARAM:INDEX=1,ARRAYID=1,APIVERSIONINURI="v1.0",APIFULLVERSIO
 #### 修改NF服务版本组参数配置(SET SBINFSVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NF服务版本组参数配置。当配置索引关联的NF服务版本组编号、API URI版本号、API完整版本号发生变更时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号，NF服务版本组编号通过SHOW SBINFSVERSIONARRID命令查询。
@@ -7434,10 +7434,10 @@ APIFULLVERSION|API完整版本号|参数可选性: 任选参数类型: 字符串
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号，NF服务版本组编号通过SHOW SBINFSVERSIONARRID命令查询。
@@ -7447,7 +7447,7 @@ APIFULLVERSION|API完整版本号|参数可选性: 任选参数类型: 字符串
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7460,30 +7460,30 @@ SET SBINFSVERSIONARRPARAM:INDEX=1,ARRAYID=1,APIVERSIONINURI="v1.1"
 #### 删除NF服务版本组参数配置(DEL SBINFSVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NF服务版本组参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果删除NF服务版本组编号，则在服务使用者请求服务时，无法通过NF服务版本组编号获取到服务提供者的API版本号。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号，NF服务版本组编号通过SHOW SBINFSVERSIONARRID命令查询。
@@ -7493,7 +7493,7 @@ APIFULLVERSION|API完整版本号|参数可选性: 任选参数类型: 字符串
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7506,20 +7506,20 @@ DEL SBINFSVERSIONARRPARAM:INDEX=1
 #### 查询NF服务版本组参数配置(SHOW SBINFSVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF服务版本组参数配置，即查询配置索引关联的NF服务版本组编号、API URI版本号、API完整版本号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号，NF服务版本组编号通过SHOW SBINFSVERSIONARRID命令查询。
@@ -7529,10 +7529,10 @@ APIFULLVERSION|API完整版本号|参数可选性: 任选参数类型: 字符串
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。
 ARRAYID|NF服务版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务版本组编号，NF服务版本组编号通过SHOW SBINFSVERSIONARRID命令查询。
@@ -7542,7 +7542,7 @@ APIFULLVERSION|API完整版本号|参数可选性: 任选参数类型: 字符串
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7565,7 +7565,7 @@ SHOW SBINFSVERSIONARRPARAM;
 ## NF服务集标识组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 多个同类型NF（网络功能，Network Function）内为相同用户或业务区/服务区提供服务的一组同类型NF服务称为NF服务集，NF服务集标识是这个集合的全局唯一标识符。NF服务集内的服务共享上下文，当某个服务故障后，其所承担业务可以由服务集内的其他负荷分担的服务接管。 
@@ -7575,7 +7575,7 @@ SHOW SBINFSVERSIONARRPARAM;
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF服务集标识组配置对应本地NRF配置出来的对端NFProfile的nfServiceSetIdList数组。如果不配置，则对端NFProfile缺少nfServiceSetIdList数组，本端选择的对端NF服务出现故障时，只能尝试切换到其他的非共享上下文的NF服务，不能在同一个NF服务集中选择负荷分担的服务继续使用，可能造成业务中断。 
@@ -7585,7 +7585,7 @@ NF服务集标识组配置包括NF服务集标识组编号配置和NF服务集�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7596,7 +7596,7 @@ NF服务集标识组配置包括NF服务集标识组编号配置和NF服务集�
 ### NF服务集标识组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 多个同类型NF（网络功能，Network Function）内为相同用户或业务区/服务区提供服务的一组同类型NF服务称为NF服务集，NF服务集标识是这个集合的全局唯一标识符。NF服务集内的服务共享上下文，当某个服务故障后，其所承担业务可以由服务集内的其他负荷分担的服务接管。 
@@ -7606,7 +7606,7 @@ NF服务集标识组配置包括NF服务集标识组编号配置和NF服务集�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF服务集标识组编号配置用于配置一个NF服务集标识组的编号。一个NF服务集标识组包含了若干个NF服务集标识组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -7616,7 +7616,7 @@ NF服务集标识组编号配置用于配置一个NF服务集标识组的编号�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7627,37 +7627,37 @@ NF服务集标识组编号配置用于配置一个NF服务集标识组的编号�
 #### 新增NF服务集标识组编号配置(ADD SBINFSSETIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF服务集标识组编号配置。当启用本地NRF功能时，执行该命令。命令执行成功后，当服务使用者选择了其中一个NF服务集标识表示的NF服务集后，如果NF服务出现故障时，可以选择同一服务集内的其他服务继续使用。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务集标识组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7670,37 +7670,37 @@ ADD SBINFSSETIDARRID:ARRAYID=1;
 #### 删除NF服务集标识组编号配置(DEL SBINFSSETIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NF服务集标识组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除后，服务使用者（本端）无法获取服务提供者（对端）的NF服务集标识，本端选择的对端NF服务出现故障时，只能尝试切换到其他的非共享上下文的NF服务，不能在同一个NF服务集中选择负荷分担的服务继续使用，可能造成业务中断。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务集标识组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7713,37 +7713,37 @@ DEL SBINFSSETIDARRID:ARRAYID=1;
 #### 查询NF服务集标识组编号配置(SHOW SBINFSSETIDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF服务集标识组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7766,7 +7766,7 @@ SHOW SBINFSSETIDARRID
 ### NF服务集标识组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 多个同类型NF（网络功能，Network Function）内为相同用户或业务区/服务区提供服务的一组同类型NF服务称为NF服务集，NF服务集标识是这个集合的全局唯一标识符。NF服务集内的服务共享上下文，当某个服务故障后，其所承担业务可以由服务集内的其他负荷分担的服务接管。 
@@ -7776,7 +7776,7 @@ SHOW SBINFSSETIDARRID
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NF服务集标识组参数配置包含一个NF服务集标识，以及该参数归属于哪个NF服务集标识组。当启用本地NRF功能时，需要配置该组命令。 
@@ -7786,7 +7786,7 @@ NF服务集标识组参数配置包含一个NF服务集标识，以及该参数�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -7797,20 +7797,20 @@ NF服务集标识组参数配置包含一个NF服务集标识，以及该参数�
 #### 新增NF服务集标识组参数配置(ADD SBINFSSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增NF服务集标识组参数配置。当启用本地NRF功能时，执行该命令。命令执行成功后，当服务使用者选择了其中一个NF服务集标识表示的NF服务集后，如果NF服务出现故障时，可以选择同一服务集内的其他服务继续使用。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 ARRAYID|NF服务集标识组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号，NF服务集标识组编号通过SHOW SBINFSSETIDARRID命令查询。
@@ -7819,10 +7819,10 @@ NFSERVSETID|NF服务集标识|参数可选性: 必选参数类型: 字符串参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号，NF服务集标识组编号通过SHOW SBINFSSETIDARRID命令查询。
@@ -7831,7 +7831,7 @@ NFSERVSETID|NF服务集标识|参数可选性: 任选参数类型: 字符串参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7844,20 +7844,20 @@ ADD SBINFSSETIDARRPARAM:INDEX=1,ARRAYID=1,NFSERVSETID="setxyz.snnsmf-pdusession.
 #### 修改NF服务集标识组参数配置(SET SBINFSSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NF服务集标识组参数配置。当配置索引关联的NF服务集标识组编号、NF服务集标识发生变更时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号，NF服务集标识组编号通过SHOW SBINFSSETIDARRID命令查询。
@@ -7866,10 +7866,10 @@ NFSERVSETID|NF服务集标识|参数可选性: 任选参数类型: 字符串参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号，NF服务集标识组编号通过SHOW SBINFSSETIDARRID命令查询。
@@ -7878,7 +7878,7 @@ NFSERVSETID|NF服务集标识|参数可选性: 任选参数类型: 字符串参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7891,30 +7891,30 @@ SET SBINFSSETIDARRPARAM:INDEX=1,ARRAYID=1,NFSERVSETID="setabc.snnsmf-pdusession.
 #### 删除NF服务集标识组参数配置(DEL SBINFSSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NF服务集标识组参数配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果删除NF服务集标识组参数配置，则在服务使用者请求服务时，无法通过NF服务集标识组编号获取到服务提供者的NF服务集标识，也就无法获取提供服务的NF服务集。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号，NF服务集标识组编号通过SHOW SBINFSSETIDARRID命令查询。
@@ -7923,7 +7923,7 @@ NFSERVSETID|NF服务集标识|参数可选性: 任选参数类型: 字符串参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7936,20 +7936,20 @@ DEL SBINFSSETIDARRPARAM:INDEX=1;
 #### 查询NF服务集标识组参数配置(SHOW SBINFSSETIDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NF服务集标识组参数配置，即查询配置索引关联的NF服务集标识组编号、NF服务集标识。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号，NF服务集标识组编号通过SHOW SBINFSSETIDARRID命令查询。
@@ -7958,10 +7958,10 @@ NFSERVSETID|NF服务集标识|参数可选性: 任选参数类型: 字符串参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引
 ARRAYID|NF服务集标识组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NF服务集标识组编号，NF服务集标识组编号通过SHOW SBINFSSETIDARRID命令查询。
@@ -7970,7 +7970,7 @@ NFSERVSETID|NF服务集标识|参数可选性: 任选参数类型: 字符串参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -7993,7 +7993,7 @@ SHOW SBINFSSETIDARRPARAM
 ## SUPI范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SUPI（Subscription Permanent Identifier， 用户永久标识符）必须包含IMSI（International Mobile Subscriber Identity，国际移动用户标识）、NSI（network specific identifier，网络特定标识符）、GCI（Global Cable Identifier，全局电缆标识符）或GLI（Global Line Identifier，全局线路标识符）之一，目前系统支持的是IMSI。 
@@ -8005,7 +8005,7 @@ SupiRanges在AUSF、CHF、PCF、UDM、UDR、OCS这6个NF特有信息中携带。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 SUPI范围组数据配置包括SUPI范围组编号配置和SUPI范围组参数配置，一个SUPI范围组编号可以被若干个SUPI范围组参数引用。 
@@ -8015,7 +8015,7 @@ SUPI范围组数据配置包括SUPI范围组编号配置和SUPI范围组参数�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8026,7 +8026,7 @@ SUPI范围组数据配置包括SUPI范围组编号配置和SUPI范围组参数�
 ### SUPI范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SUPI（Subscription Permanent Identifier， 用户永久标识符）必须包含IMSI（International Mobile Subscriber Identity，国际移动用户标识）、NSI（network specific identifier，网络特定标识符）、GCI（Global Cable Identifier，全局电缆标识符）或GLI（Global Line Identifier，全局线路标识符）之一，目前系统支持的是IMSI。 
@@ -8038,7 +8038,7 @@ SupiRanges在AUSF、CHF、PCF、UDM、UDR、OCS这6个NF特有信息中携带。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 SUPI范围组编号配置用于配置一个SUPI范围组，一个SUPI范围组包含了若干个SUPI范围参数。 
@@ -8048,7 +8048,7 @@ SUPI范围组编号配置用于配置一个SUPI范围组，一个SUPI范围组�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8059,37 +8059,37 @@ SUPI范围组编号配置用于配置一个SUPI范围组，一个SUPI范围组�
 #### 新增SUPI范围组编号配置(ADD SBISUPIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增SUPI范围组编号。当启用本地NRF功能，且需要限定AUSF、CHF、PCF、UDM、UDR、OCS这6个NF可以服务的SUPI范围时，使用该命令。命令执行成功后，可以在上述NF配置信息中关联该组编号，从而达到限制SUPI服务范围的目的。 
 
 
-[](None)注意事项 
+注意事项 
 
 仅当启用本地NRF功能，且需要限定AUSF、CHF、PCF、UDM、UDR、OCS这6个NF可以服务的SUPI范围时，才需配置；否则不配置。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SUPI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组的编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组的编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8102,37 +8102,37 @@ ADD SBISUPIRANGEARRID:ARRAYID=1
 #### 删除SUPI范围组编号配置(DEL SBISUPIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SUPI范围组编号。当该SUPI组编号不再被任何NF关联时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除前需要把归属于该SUPI组编号的所有SUPI组参数配置删除。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SUPI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组的编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组的编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8145,37 +8145,37 @@ DEL SBISUPIRANGEARRID:ARRAYID=1
 #### 查询SUPI范围组编号配置(SHOW SBISUPIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SUPI范围组的编号。查询时，可以指定SUPI组编号查询对应的SUPI组编号信息；如果不指定SUPI组编号，则查询所有已配置的SUPI组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组的编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组的编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8198,7 +8198,7 @@ SHOW SBISUPIRANGEARRID:ARRAYID=1
 ### SUPI范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SUPI（Subscription Permanent Identifier， 用户永久标识符）必须包含IMSI（International Mobile Subscriber Identity，国际移动用户标识）、NSI（network specific identifier，网络特定标识符）、GCI（Global Cable Identifier，全局电缆标识符）或GLI（Global Line Identifier，全局线路标识符）之一，目前系统支持的是IMSI。 
@@ -8210,7 +8210,7 @@ SupiRanges在AUSF、CHF、PCF、UDM、UDR、OCS这6个NF特有信息中携带。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 SUPI范围组参数配置用于配置SUPI范围组的具体信息，包括SUPI范围的开始和结束，并通过SUPI范围组编号标识该SUPI范围参数归属于哪个SUPI范围组。 
@@ -8222,7 +8222,7 @@ SUPI范围组参数配置用于配置SUPI范围组的具体信息，包括SUPI�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8233,22 +8233,22 @@ SUPI范围组参数配置用于配置SUPI范围组的具体信息，包括SUPI�
 #### 新增SUPI范围组参数配置(ADD SBISUPIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增SUPI范围组参数配置。当某个SUPI范围组需要增加NF（AUSF、CHF、PCF、UDM、UDR、OCS）可以服务的SUPI范围时，执行该命令。命令执行成功后，关联该SUPI范围组的NF（AUSF、CHF、PCF、UDM、UDR、OCS）仅能为组范围内的SUPI提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
-新增归属的SUPI范围组编号参数，需要保证该组参数归属的SUPI范围组编号已经存在，该组编号通过[SHOW SBISUPIRANGEARRID](../mml/1220688.html)命令查询。
+新增归属的SUPI范围组编号参数，需要保证该组参数归属的SUPI范围组编号已经存在，该组编号通过[SHOW SBISUPIRANGEARRID]命令查询。
 
 SUPI范围组参数配置中的START、END从高位开始，不足32位时，START在低位补0，END在低位补9，补齐后再比较START是否小于END。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|SUPI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8258,10 +8258,10 @@ END|结束|参数可选性: 必选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8271,7 +8271,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8284,22 +8284,22 @@ ADD SBISUPIRANGEARRPARAM:INDEX=1,ARRAYID=1,START="460012340000",END="46001234500
 #### 修改SUPI范围组参数配置(SET SBISUPIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改SUPI范围组参数配置。当NF（AUSF、CHF、PCF、UDM、UDR、OCS）服务的SUPI范围信息发生变更时，执行该命令修改NF关联的SUPI范围组内的SUPI范围。命令执行成功后，关联该SUPI范围组的NF（AUSF、CHF、PCF、UDM、UDR、OCS）为修改后的组范围内的SUPI提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
 修改SUPI范围组参数配置会导致NF（AUSF、CHF、PCF、UDM、UDR、OCS）服务的SUPI范围发生变化，需慎重。 
 
 SUPI范围组参数配置中的START、END从高位开始，不足32位时，START在低位补0，END在低位补9，补齐后再比较START是否小于END。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8309,10 +8309,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8322,7 +8322,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8335,30 +8335,30 @@ SET SBISUPIRANGEARRPARAM:INDEX=1,ARRAYID=1,START="460012340000",END="46001234600
 #### 删除SUPI范围组参数配置(DEL SBISUPIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SUPI范围组参数配置。当NF（AUSF、CHF、PCF、UDM、UDR、OCS）不再对某个SUPI范围提供服务时，使用该命令删除NF所关联的SUPI范围组中该SUPI范围信息。命令执行成功后，NF不再对该SUPI范围提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除SUPI范围组参数配置，需要先查询对应的配置索引，再使用配置索引进行删除。配置索引通过[SHOW SBISUPIRANGEARRPARAM](../mml/1220692.html)命令查询。
-
-
-[](None)输入参数说明 
+删除SUPI范围组参数配置，需要先查询对应的配置索引，再使用配置索引进行删除。配置索引通过[SHOW SBISUPIRANGEARRPARAM]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8368,7 +8368,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8381,20 +8381,20 @@ DEL SBISUPIRANGEARRPARAM:INDEX=1
 #### 查询SUPI范围组参数配置(SHOW SBISUPIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SUPI范围组参数配置，包括范围组编号、及开始结束范围。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8404,10 +8404,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8417,7 +8417,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8441,7 +8441,7 @@ SHOW SBISUPIRANGEARRPARAM:INDEX=1
 ## GPSI范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GPSI（Generic Public Subscription Identifier，一般公共用户标识）应该包含一个MSISDN或者扩展标识符，简单地说就是手机号。 
@@ -8453,7 +8453,7 @@ GpsiRanges在CHF、PCF、UDM、UDR、OCS这5个NF特有信息中携带。如果�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GPSI范围组数据配置包括GPSI范围组编号配置和GPSI范围组参数配置，一个GPSI范围组编号可以被若干个GPSI范围组参数引用。 
@@ -8463,7 +8463,7 @@ GPSI范围组数据配置包括GPSI范围组编号配置和GPSI范围组参数�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8474,7 +8474,7 @@ GPSI范围组数据配置包括GPSI范围组编号配置和GPSI范围组参数�
 ### GPSI范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GPSI（Generic Public Subscription Identifier，一般公共用户标识）应该包含一个MSISDN或者扩展标识符，简单地说就是手机号。 
@@ -8486,7 +8486,7 @@ GpsiRanges在CHF、PCF、UDM、UDR、OCS这5个NF特有信息中携带。如果�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GPSI范围组编号配置用于配置一个GPSI范围组，一个GPSI范围组包含了若干个GPSI范围参数。 
@@ -8496,7 +8496,7 @@ GPSI范围组编号配置用于配置一个GPSI范围组，一个GPSI范围组�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8507,37 +8507,37 @@ GPSI范围组编号配置用于配置一个GPSI范围组，一个GPSI范围组�
 #### 新增GPSI范围组编号配置(ADD SBIGPSIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增GPSI范围组编号。当启用本地NRF功能，且需要限定CHF、PCF、UDM、UDR、OCS这5个NF可以服务的GPSI范围时，使用该命令。执行成功后，可以在上述NF配置信息中关联该组编号，从而达到限制GSPI服务范围的目的。 
 
 
-[](None)注意事项 
+注意事项 
 
 仅当启用本地NRF功能，且需要限定CHF、PCF、UDM、UDR、OCS这5个NF可以服务的GSPI范围时，才需配置；否则不配置。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GPSI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8550,37 +8550,37 @@ ADD SBIGPSIRANGEARRID:ARRAYID=1
 #### 删除GPSI范围组编号配置(DEL SBIGPSIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除GPSI范围组编号。当该GPSI组编号不再被任何NF关联时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除前需要把归属于该GPSI组编号的所有GPSI组参数配置删除。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GPSI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8593,37 +8593,37 @@ DEL SBIGPSIRANGEARRID:ARRAYID=1
 #### 查询GPSI范围组编号配置(SHOW SBIGPSIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询GPSI范围组的编号。查询时，可以指定GPSI组编号查询对应的GPSI组编号信息；如果不指定GPSI组编号，则查询所有已配置的GPSI组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，该编号全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8646,7 +8646,7 @@ SHOW SBIGPSIRANGEARRID:ARRAYID=1
 ### GPSI范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GPSI（Generic Public Subscription Identifier，一般公共用户标识）应该包含一个MSISDN或者扩展标识符，简单地说就是手机号。 
@@ -8658,7 +8658,7 @@ GpsiRanges在CHF、PCF、UDM、UDR、OCS这5个NF特有信息中携带。如果�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GPSI范围组参数配置用于配置GPSI范围组的具体信息，包括GPSI范围的开始和结束，并通过GPSI范围组编号标识该GPSI范围参数归属于哪个GPSI范围组。 
@@ -8670,7 +8670,7 @@ GPSI范围组参数配置用于配置GPSI范围组的具体信息，包括GPSI�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8681,22 +8681,22 @@ GPSI范围组参数配置用于配置GPSI范围组的具体信息，包括GPSI�
 #### 新增GPSI范围组参数配置(ADD SBIGPSIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增GPSI范围组参数配置。当某个GPSI范围组需要增加NF（CHF、PCF、UDM、UDR、OCS）可以服务的GPSI范围时，执行该命令。命令执行成功后，关联该GPSI范围组的NF（CHF、PCF、UDM、UDR、OCS）仅能为组范围内的GPSI提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
-新增归属的GPSI范围组编号参数，需要保证该组参数归属的GPSI范围组编号已经存在，该组编号通过[SHOW SBIGPSIRANGEARRID](../mml/1220696.html)命令查询。
+新增归属的GPSI范围组编号参数，需要保证该组参数归属的GPSI范围组编号已经存在，该组编号通过[SHOW SBIGPSIRANGEARRID]命令查询。
 
 GPSI范围组参数配置中的START、END从高位开始，不足32位时，START在低位补0，END在低位补9，补齐后再比较START是否小于END。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|GPSI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，表示该GPSI范围组参数配置归属于哪个GPSI范围组。该编号通过SHOW SBIGPSIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8706,10 +8706,10 @@ END|结束|参数可选性: 必选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，表示该GPSI范围组参数配置归属于哪个GPSI范围组。该编号通过SHOW SBIGPSIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8719,7 +8719,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8732,22 +8732,22 @@ ADD SBIGPSIRANGEARRPARAM:INDEX=1,ARRAYID=1,START="8613900000000",END="8613910000
 #### 修改GPSI范围组参数配置(SET SBIGPSIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改GPSI范围组参数配置。当NF（CHF、PCF、UDM、UDR、OCS）服务的GPSI范围信息发生变更时，执行该命令修改NF关联的GPSI范围组内的GPSI范围。命令执行成功后，关联该GPSI范围组的NF（CHF、PCF、UDM、UDR、OCS）为修改后的组范围内的GPSI提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
 修改SUPI范围组参数配置会导致NF（CHF、PCF、UDM、UDR、OCS）服务的GPSI范围发生变化，需慎重。 
 
 GPSI范围组参数配置中的START、END从高位开始，不足32位时，START在低位补0，END在低位补9，补齐后再比较START是否小于END。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，表示该GPSI范围组参数配置归属于哪个GPSI范围组。该编号通过SHOW SBIGPSIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8757,10 +8757,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，表示该GPSI范围组参数配置归属于哪个GPSI范围组。该编号通过SHOW SBIGPSIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8770,7 +8770,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8783,30 +8783,30 @@ SET SBIGPSIRANGEARRPARAM:INDEX=1,START="8613900000000",END="8613920000000"
 #### 删除GPSI范围组参数配置(DEL SBIGPSIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除GPSI范围组参数配置。当NF（CHF、PCF、UDM、UDR、OCS）不再对某个GPSI范围提供服务时，使用该命令删除NF所关联的GPSI范围组中该GPSI范围信息。命令执行成功后，NF不再对该GPSI范围提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除GPSI范围组参数配置，需要先查询对应的配置索引，再使用配置索引进行删除。配置索引通过[SHOW SBIGPSIRANGEARRPARAM](../mml/1220700.html)命令查询。
-
-
-[](None)输入参数说明 
+删除GPSI范围组参数配置，需要先查询对应的配置索引，再使用配置索引进行删除。配置索引通过[SHOW SBIGPSIRANGEARRPARAM]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，表示该GPSI范围组参数配置归属于哪个GPSI范围组。该编号通过SHOW SBIGPSIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8816,7 +8816,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8829,20 +8829,20 @@ DEL SBIGPSIRANGEARRPARAM:INDEX=1
 #### 查询GPSI范围组参数配置(SHOW SBIGPSIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询GPSI范围组参数配置，包括范围组编号、及开始结束范围。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，表示该GPSI范围组参数配置归属于哪个GPSI范围组。该编号通过SHOW SBIGPSIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8852,10 +8852,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-4294967295|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|GPSI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GPSI范围组编号，表示该GPSI范围组参数配置归属于哪个GPSI范围组。该编号通过SHOW SBIGPSIRANGEARRID命令查询。该参数无特殊配置原则。
@@ -8865,7 +8865,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-31|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8888,7 +8888,7 @@ SHOW SBIGPSIRANGEARRPARAM:ARRAYID=1
 ## 数据集组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 数据集是一种类型的数据集合，数据集的类型有订阅数据、策略数据、结构化开放数据以及应用程序数据。 
@@ -8900,7 +8900,7 @@ SHOW SBIGPSIRANGEARRPARAM:ARRAYID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 数据集范围组数据配置包括数据集组编号配置和数据集组参数配置，一个数据集组编号可以被若干个数据集组参数引用。 
@@ -8910,7 +8910,7 @@ SHOW SBIGPSIRANGEARRPARAM:ARRAYID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8921,7 +8921,7 @@ SHOW SBIGPSIRANGEARRPARAM:ARRAYID=1
 ### 数据集组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 数据集是一种类型的数据集合，数据集的类型有订阅数据、策略数据、结构化开放数据以及应用程序数据。 
@@ -8933,7 +8933,7 @@ SHOW SBIGPSIRANGEARRPARAM:ARRAYID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 数据集组编号配置用于配置一个数据集组，一个数据集组包含了若干个数据集参数。 
@@ -8945,7 +8945,7 @@ SHOW SBIGPSIRANGEARRPARAM:ARRAYID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -8956,37 +8956,37 @@ SHOW SBIGPSIRANGEARRPARAM:ARRAYID=1
 #### 新增数据集组编号配置(ADD SBIDATASETARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增数据集组编号。当UDR需要新增限定可以服务的数据集组时，使用该命令。执行成功后，可以在上述UDR信息配置中关联该组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 系统支持的该配置项最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|数据集组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -8999,37 +8999,37 @@ ADD SBIDATASETARRID:ARRAYID=1
 #### 删除数据集组编号配置(DEL SBIDATASETARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除数据集组编号。当该数据集组编号不再被任何UDR关联时，可以使用该命令删除数据集组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除前需要把归属于该数据集组编号的所有数据集组参数配置删除。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|数据集组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9042,37 +9042,37 @@ DEL SBIDATASETARRID:ARRAYID=1
 #### 查询数据集组编号配置(SHOW SBIDATASETARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询数据集组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9095,7 +9095,7 @@ SHOW SBIDATASETARRID:ARRAYID=1
 ### 数据集组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 数据集是一种类型的数据集合，数据集的类型有订阅数据、策略数据、结构化开放数据以及应用程序数据。 
@@ -9107,7 +9107,7 @@ SHOW SBIDATASETARRID:ARRAYID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 数据集组参数配置用于配置数据集组的具体信息，包括数据集类型，并通过数据集组编号标识该数据集参数归属于哪个数据集组。 
@@ -9119,7 +9119,7 @@ SHOW SBIDATASETARRID:ARRAYID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9130,22 +9130,22 @@ SHOW SBIDATASETARRID:ARRAYID=1
 #### 新增数据集组参数配置(ADD SBIDATASETARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增数据集组参数配置。当某个数据集组中需要增加UDR可以支持的数据集时，使用该命令在数据集组内增加数据集。命令执行成功后，关联该数据集组的UDR将支持新增的数据集。 
 
 
-[](None)注意事项 
+注意事项 
 
-新增归属的数据集组编号参数，需要保证该组参数归属的数据集组编号已经存在，该组编号通过[SHOW SBIDATASETARRID](../mml/1220704.html)命令查询。
+新增归属的数据集组编号参数，需要保证该组参数归属的数据集组编号已经存在，该组编号通过[SHOW SBIDATASETARRID]命令查询。
 
 系统支持的该配置项最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|数据集组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号，该编号通过SHOW SBIDATASETARRID命令查询。
@@ -9154,10 +9154,10 @@ DATASETID|数据集标识|参数可选性: 必选参数类型: 枚举，参见�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号，该编号通过SHOW SBIDATASETARRID命令查询。
@@ -9166,7 +9166,7 @@ DATASETID|数据集标识|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9179,20 +9179,20 @@ ADD SBIDATASETARRPARAM:INDEX=1,ARRAYID=1,DATASETID=POLICY
 #### 修改数据集组参数配置(SET SBIDATASETARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改数据集组参数配置。当UDR支持的数据集发生变更时，使用该命令修改UDR关联的数据集组内的数据集。命令执行成功后，关联该数据集组的UDR支持的数据集也会发生变化。 
 
 
-[](None)注意事项 
+注意事项 
 
-修改归属的数据集组编号参数，需要保证该组参数归属的数据集组编号已经存在，该组编号通过[SHOW SBIDATASETARRID](../mml/1220704.html)命令查询。
-
-
-[](None)输入参数说明 
+修改归属的数据集组编号参数，需要保证该组参数归属的数据集组编号已经存在，该组编号通过[SHOW SBIDATASETARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号，该编号通过SHOW SBIDATASETARRID命令查询。
@@ -9201,10 +9201,10 @@ DATASETID|数据集标识|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号，该编号通过SHOW SBIDATASETARRID命令查询。
@@ -9213,7 +9213,7 @@ DATASETID|数据集标识|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9226,30 +9226,30 @@ SET SBIDATASETARRPARAM:INDEX=1,ARRAYID=1,DATASETID=POLICY
 #### 删除数据集组参数配置(DEL SBIDATASETARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除数据集组参数配置。当UDR不再对某个数据集提供服务时，使用该命令删除UDR所关联的数据集组中该数据集信息。命令执行成功后，UDR不再对该数据集提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除数据集组参数配置，需要先查询对应的配置索引，再使用配置索引进行删除。配置索引通过[SHOW SBIDATASETARRPARAM](../mml/1220708.html)命令查询。
-
-
-[](None)输入参数说明 
+删除数据集组参数配置，需要先查询对应的配置索引，再使用配置索引进行删除。配置索引通过[SHOW SBIDATASETARRPARAM]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号，该编号通过SHOW SBIDATASETARRID命令查询。
@@ -9258,7 +9258,7 @@ DATASETID|数据集标识|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9271,20 +9271,20 @@ DEL SBIDATASETARRPARAM:INDEX=1
 #### 查询数据集组参数配置(SHOW SBIDATASETARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询数据集组参数配置，包括：数据集组编号和数据集标识。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号，该编号通过SHOW SBIDATASETARRID命令查询。
@@ -9293,10 +9293,10 @@ DATASETID|数据集标识|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|数据集组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置数据集组编号，该编号通过SHOW SBIDATASETARRID命令查询。
@@ -9305,7 +9305,7 @@ DATASETID|数据集标识|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9328,7 +9328,7 @@ SHOW SBIDATASETARRPARAM:INDEX=1
 ## 路由指示组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 路由指示组表示一组路由指示器，路由指示器允许使用SUCI（Subscription Concealed Identifier，用户匿名标识）将网络信令路由到能够为用户服务的AUSF和UDM实例。 
@@ -9338,7 +9338,7 @@ SHOW SBIDATASETARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 路由指示组配置对应AUSF和UDM配置的routingIndicators数组。如果不配置，则相关NF配置缺少routingIndicators数组，表示该NF可以服务于任何路由指示器。当启用本地NRF功能时，需要配置该组命令。 
@@ -9348,7 +9348,7 @@ SHOW SBIDATASETARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9359,7 +9359,7 @@ SHOW SBIDATASETARRPARAM:INDEX=1
 ### 路由指示组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 路由指示组表示一组路由指示器，路由指示器允许使用SUCI（Subscription Concealed Identifier，用户匿名标识）将网络信令路由到能够为用户服务的AUSF和UDM实例。 
@@ -9369,7 +9369,7 @@ SHOW SBIDATASETARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 路由指示组编号配置用于配置一个路由指示组，一个路由指示组包含了若干个路由指示组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -9379,7 +9379,7 @@ SHOW SBIDATASETARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9390,39 +9390,39 @@ SHOW SBIDATASETARRPARAM:INDEX=1
 #### 新增路由指示组编号配置(ADD SBIROUTINDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增路由指示组编号配置。当NF（AUSF、UDM）需要新增限定可以服务的路由指示器列表时，使用该命令。 
 
 命令执行成功后，路由指示组编号可以被“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该路由指示组编号，才能在“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”中引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|路由指示组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号，该编号是路由指示组编号配置的唯一标识。被“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”引用。“路由指示组参数配置”通过SHOW SBIROUTINDARRPARAM命令查询。“AUSF信息配置”通过SHOW SBIAUSFINFO命令查询。“UDM信息配置”通过SHOW SBIUDMINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号，该编号是路由指示组编号配置的唯一标识。被“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”引用。“路由指示组参数配置”通过SHOW SBIROUTINDARRPARAM命令查询。“AUSF信息配置”通过SHOW SBIAUSFINFO命令查询。“UDM信息配置”通过SHOW SBIUDMINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9435,12 +9435,12 @@ ADD SBIROUTINDARRID:ARRAYID=1;
 #### 删除路由指示组编号配置(DEL SBIROUTINDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除路由指示组编号配置。当该路由指示组编号不再被任何NF引用时，使用该命令。命令执行成功后，该组配置无法被查询，也无法再被引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该路由指示配置，需要先删除引用该配置的“路由指示组参数配置”，并在“AUSF信息配置”及“UDM信息配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -9457,27 +9457,27 @@ ADD SBIROUTINDARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|路由指示组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号，该编号是路由指示组编号配置的唯一标识。被“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”引用。“路由指示组参数配置”通过SHOW SBIROUTINDARRPARAM命令查询。“AUSF信息配置”通过SHOW SBIAUSFINFO命令查询。“UDM信息配置”通过SHOW SBIUDMINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号，该编号是路由指示组编号配置的唯一标识。被“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”引用。“路由指示组参数配置”通过SHOW SBIROUTINDARRPARAM命令查询。“AUSF信息配置”通过SHOW SBIAUSFINFO命令查询。“UDM信息配置”通过SHOW SBIUDMINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9490,39 +9490,39 @@ DEL SBIROUTINDARRID:ARRAYID=1;
 #### 查询路由指示组编号配置(SHOW SBIROUTINDARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询路由指示组编号配置。当需要查询路由指示组编号配置时，使用该命令。 
 
 指定路由指示组编号，可以查询指定的路由指示组信息；不指定路由指示组编号，可以查询已经配置的所有路由指示组信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号，该编号是路由指示组编号配置的唯一标识。被“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”引用。“路由指示组参数配置”通过SHOW SBIROUTINDARRPARAM命令查询。“AUSF信息配置”通过SHOW SBIAUSFINFO命令查询。“UDM信息配置”通过SHOW SBIUDMINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号，该编号是路由指示组编号配置的唯一标识。被“路由指示组参数配置”、“AUSF信息配置”及“UDM信息配置”引用。“路由指示组参数配置”通过SHOW SBIROUTINDARRPARAM命令查询。“AUSF信息配置”通过SHOW SBIAUSFINFO命令查询。“UDM信息配置”通过SHOW SBIUDMINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9545,7 +9545,7 @@ SHOW SBIROUTINDARRID:ARRAYID=1
 ### 路由指示组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 路由指示组表示一组路由指示器，路由指示器允许使用SUCI（Subscription Concealed Identifier，用户匿名标识）将网络信令路由到能够为用户服务的AUSF和UDM实例。 
@@ -9555,7 +9555,7 @@ SHOW SBIROUTINDARRID:ARRAYID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 路由指示组参数配置用于配置一个路由指示归属于哪个路由指示组。当启用本地NRF功能时，需要配置该组命令。 
@@ -9565,7 +9565,7 @@ SHOW SBIROUTINDARRID:ARRAYID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9576,22 +9576,22 @@ SHOW SBIROUTINDARRID:ARRAYID=1
 #### 新增路由指示组参数配置(ADD SBIROUTINDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增路由指示组参数配置。当NF（AUSF、UDM）已配置可以服务的路由指示组编号，需要新增归属于该路由指示组编号的参数时，使用该命令。命令执行成功后，NF（AUSF、UDM）新增了可以服务的该组路由指示信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该路由指示组参数配置，需要先新增“路由指示组编号配置”。如果没有配置路由指示组参数的路由指示组，被“AUSF信息配置”或“UDM信息配置”引用后，会导致组装NFProfile失败。 
 
-“路由指示组编号配置”通过[ADD SBIROUTINDARRID](../mml/1220709.html)命令进行新增。
+“路由指示组编号配置”通过[ADD SBIROUTINDARRID]命令进行新增。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|路由指示组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号。路由指示组编号通过SHOW SBIROUTINDARRID命令查询。
@@ -9600,10 +9600,10 @@ ROUTINGINDICATOR|路由指示器|参数可选性: 必选参数类型: 字符串�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号。路由指示组编号通过SHOW SBIROUTINDARRID命令查询。
@@ -9612,7 +9612,7 @@ ROUTINGINDICATOR|路由指示器|参数可选性: 任选参数类型: 字符串�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9625,22 +9625,22 @@ ADD SBIROUTINDARRPARAM:INDEX=1,ARRAYID=1,ROUTINGINDICATOR="1234";
 #### 修改路由指示组参数配置(SET SBIROUTINDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改路由指示组参数配置。当NF（AUSF、UDM）已配置可以服务的路由指示组编号，需要修改归属于该路由指示组编号的参数时，使用该命令。命令执行成功后，NF（AUSF、UDM）修改了可以服务的该组路由指示信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要修改如下配置项，则需要保证如下配置都已经存在： 
 
-“路由指示组编号配置”通过[SHOW SBIROUTINDARRID](../mml/1220712.html)命令查询。
+“路由指示组编号配置”通过[SHOW SBIROUTINDARRID]命令查询。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号。路由指示组编号通过SHOW SBIROUTINDARRID命令查询。
@@ -9649,10 +9649,10 @@ ROUTINGINDICATOR|路由指示器|参数可选性: 任选参数类型: 字符串�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号。路由指示组编号通过SHOW SBIROUTINDARRID命令查询。
@@ -9661,7 +9661,7 @@ ROUTINGINDICATOR|路由指示器|参数可选性: 任选参数类型: 字符串�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9674,30 +9674,30 @@ SET SBIROUTINDARRPARAM:INDEX=1,ARRAYID=1,ROUTINGINDICATOR="1234";
 #### 删除路由指示组参数配置(DEL SBIROUTINDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除路由指示组参数配置。当NF（AUSF、UDM）已配置可以服务的路由指示组编号，需要删除归属于该路由指示组编号的参数时，使用该命令。命令执行成功后，NF（AUSF、UDM）删除了可以服务的该组路由指示信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个路由指示组编号的所有路由指示组参数配置都已经删除，建议删除该路由指示组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号。路由指示组编号通过SHOW SBIROUTINDARRID命令查询。
@@ -9706,7 +9706,7 @@ ROUTINGINDICATOR|路由指示器|参数可选性: 任选参数类型: 字符串�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9719,22 +9719,22 @@ DEL SBIROUTINDARRPARAM:INDEX=1;
 #### 查询路由指示组参数配置(SHOW SBIROUTINDARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询路由指示组参数配置。当需要查询路由指示组参数时，使用该命令。 
 
 指定路由指示组编号，可以查询指定的路由指示组的参数信息；不指定路由指示组编号，可以查询所有已经配置的路由指示组的参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号。路由指示组编号通过SHOW SBIROUTINDARRID命令查询。
@@ -9743,10 +9743,10 @@ ROUTINGINDICATOR|路由指示器|参数可选性: 任选参数类型: 字符串�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是路由指示组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|路由指示组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置路由指示组编号。路由指示组编号通过SHOW SBIROUTINDARRID命令查询。
@@ -9755,7 +9755,7 @@ ROUTINGINDICATOR|路由指示器|参数可选性: 任选参数类型: 字符串�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9778,7 +9778,7 @@ SHOW SBIROUTINDARRPARAM:INDEX=1
 ## GUAMI组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GUAMI（Globally Unique AMF Identifier，全球唯一AMF标识）用于标识AMF，由MCC、MNC及AMF ID组成。 
@@ -9797,7 +9797,7 @@ AMFID由6个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的“PLMN ID编号”中配置，该编号可以通过[SHOW SBIPLMNID](../mml/1220548.html)命令查询。
+其中，MCC和MNC在关联的“PLMN ID编号”中配置，该编号可以通过[SHOW SBIPLMNID]命令查询。
 
 本地NRF功能中，该配置主要用于”AMF信息配置“中。服务使用者（本端）会携带用户当前的GUAMI。 
 当服务使用者向NRF发现可用的服务提供者（对端）时，NRF根据发现请求的GUAMI与NFProfile的GUAMI列表进行比较，找到匹配的GUAMI时，就认为发现AMF成功。 
@@ -9808,7 +9808,7 @@ AMFID由6个字节的字符串组成，以十六进制表示。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GUAMI组配置应用于“AMF信息配置”中。如果不配置，则AMF配置将缺少guamiList、backupInfoAmfFailure和backupInfoAmfRemoval数组，表示无法为服务使用者提供可发现AMF的GUAMI列表、用作AMF失败备用GUAMI列表和AMF迁移备用GUAMI列表。当启用本地NRF功能时，需要配置该组命令。 
@@ -9818,7 +9818,7 @@ GUAMI组配置包括GUAMI组编号配置和GUAMI组参数配置，一个GUAMI组
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9829,7 +9829,7 @@ GUAMI组配置包括GUAMI组编号配置和GUAMI组参数配置，一个GUAMI组
 ### GUAMI组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GUAMI（Globally Unique AMF Identifier，全球唯一AMF标识）用于标识AMF，由MCC、MNC及AMF ID组成。 
@@ -9848,7 +9848,7 @@ AMFID由6个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的“PLMN ID编号”中配置，该编号可以通过[SHOW SBIPLMNID](../mml/1220548.html)命令查询。
+其中，MCC和MNC在关联的“PLMN ID编号”中配置，该编号可以通过[SHOW SBIPLMNID]命令查询。
 
 本地NRF功能中，该配置主要用于”AMF信息配置“中。服务使用者（本端）会携带用户当前的GUAMI。 
 当服务使用者向NRF发现可用的服务提供者（对端）时，NRF根据发现请求的GUAMI与NFProfile的GUAMI列表进行比较。找到匹配的GUAMI时，就认为发现AMF成功。 
@@ -9859,7 +9859,7 @@ AMFID由6个字节的字符串组成，以十六进制表示。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GUAMI组编号配置用于配置一个GUAMI组，一个GUAMI组包含了若干个GUAMI组参数。当启用本地NRF功能时，需要配置该组命令。 
@@ -9869,7 +9869,7 @@ GUAMI组编号配置用于配置一个GUAMI组，一个GUAMI组包含了若干�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -9880,39 +9880,39 @@ GUAMI组编号配置用于配置一个GUAMI组，一个GUAMI组包含了若干�
 #### 新增GUAMI组编号配置(ADD SBIGUAMIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增GUAMI组编号配置。当AMF需要新增限定可以支持的GUAMI列表、用作AMF失败备用GUAMI列表和AMF迁移备用GUAMI列表时，使用该命令。 
 
 命令执行成功后，GUAMI组编号可以被“GUAMI组参数配置”及“AMF信息配置”引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该GUAMI组编号，才能在“GUAMI组参数配置”及“AMF信息配置”中引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GUAMI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号，该编号是GUAMI组编号配置的唯一标识。被“GUAMI组参数配置”及“AMF信息配置”引用。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。“AMF信息配置”通过SHOW SBIAMFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号，该编号是GUAMI组编号配置的唯一标识。被“GUAMI组参数配置”及“AMF信息配置”引用。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。“AMF信息配置”通过SHOW SBIAMFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9925,12 +9925,12 @@ ADD SBIGUAMIARRID:ARRAYID=1;
 #### 删除GUAMI组编号配置(DEL SBIGUAMIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除GUAMI组编号配置。当该GUAMI组编号不再被任何NF引用时，使用该命令。命令执行成功后，该组配置无法被查询，也无法再被引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该GUAMI组编号配置，需要先删除引用该配置的“GUAMI组参数配置”，并在“AMF信息配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -9944,27 +9944,27 @@ ADD SBIGUAMIARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GUAMI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号，该编号是GUAMI组编号配置的唯一标识。被“GUAMI组参数配置”及“AMF信息配置”引用。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。“AMF信息配置”通过SHOW SBIAMFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号，该编号是GUAMI组编号配置的唯一标识。被“GUAMI组参数配置”及“AMF信息配置”引用。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。“AMF信息配置”通过SHOW SBIAMFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -9977,39 +9977,39 @@ DEL SBIGUAMIARRID:ARRAYID=1;
 #### 查询GUAMI组编号配置(SHOW SBIGUAMIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询GUAMI组编号配置。当需要查询GUAMI组编号配置时，使用该命令。 
 
 指定GUAMI组编号，可以查询指定的GUAMI组信息；不指定GUAMI组编号，可以查询已经配置的所有GUAMI组信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号，该编号是GUAMI组编号配置的唯一标识。被“GUAMI组参数配置”及“AMF信息配置”引用。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。“AMF信息配置”通过SHOW SBIAMFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号，该编号是GUAMI组编号配置的唯一标识。被“GUAMI组参数配置”及“AMF信息配置”引用。“GUAMI组参数配置”通过SHOW SBIGUAMIARRPARAM命令查询。“AMF信息配置”通过SHOW SBIAMFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10032,7 +10032,7 @@ SHOW SBIGUAMIARRID:ARRAYID=1
 ### GUAMI组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GUAMI（Globally Unique AMF Identifier，全球唯一AMF标识）用于标识AMF，由MCC、MNC及AMF ID组成。 
@@ -10051,7 +10051,7 @@ AMFID由6个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的“PLMN ID编号”中配置，该编号可以通过[SHOW SBIPLMNID](../mml/1220548.html)命令查询。
+其中，MCC和MNC在关联的“PLMN ID编号”中配置，该编号可以通过[SHOW SBIPLMNID]命令查询。
 
 本地NRF功能中，该配置主要用于”AMF信息配置“中。服务使用者（本端）会携带用户当前的GUAMI。 
 当服务使用者向NRF发现可用的服务提供者（对端）时，NRF根据发现请求的GUAMI与NFProfile的GUAMI列表进行比较。找到匹配的GUAMI时，就认为发现AMF成功。 
@@ -10062,7 +10062,7 @@ AMFID由6个字节的字符串组成，以十六进制表示。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GUAMI组参数配置用于配置一个GUAMI归属于哪个GUAMI组。当启用本地NRF功能时，需要配置该组命令。 
@@ -10072,7 +10072,7 @@ GUAMI组参数配置用于配置一个GUAMI归属于哪个GUAMI组。当启用�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -10083,22 +10083,22 @@ GUAMI组参数配置用于配置一个GUAMI归属于哪个GUAMI组。当启用�
 #### 新增GUAMI组参数配置(ADD SBIGUAMIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增GUAMI组参数配置。当AMF已配置可以服务的GUAMI组编号，需要新增归属于该GUAMI组编号的参数时，使用该命令。命令执行成功后，AMF新增了可以服务的该组GUAMI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该GUAMI组参数配置，需要先新增“GUAMI组编号配置”。如果没有配置GUAMI组参数的GUAMI组，被“AMF信息配置”引用后，会导致组装NFProfile失败。 
 
-“GUAMI组编号配置”通过[ADD SBIGUAMIARRID](../mml/1220725.html)命令进行新增。
+“GUAMI组编号配置”通过[ADD SBIGUAMIARRID]命令进行新增。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|GUAMI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号。GUAMI组编号引用“GUAMI组编号配置”中的配置，通过SHOW SBIGUAMIARRID命令查询。
@@ -10108,10 +10108,10 @@ AMFID|AMF标识|参数可选性: 必选参数类型: 字符串参数范围: 6-6|
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号。GUAMI组编号引用“GUAMI组编号配置”中的配置，通过SHOW SBIGUAMIARRID命令查询。
@@ -10121,7 +10121,7 @@ AMFID|AMF标识|参数可选性: 任选参数类型: 字符串参数范围: 6-6|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10134,12 +10134,12 @@ ADD SBIGUAMIARRPARAM:INDEX=1,ARRAYID=1,PLMNID=1,AMFID="000001";
 #### 修改GUAMI组参数配置(SET SBIGUAMIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改GUAMI组参数配置。当AMF已配置可以服务的GUAMI组编号，需要修改归属于该GUAMI组编号的参数时，使用该命令。命令执行成功后，AMF修改了可以服务的该组GUAMI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要修改如下配置项，则需要保证如下配置都已经存在： 
 
@@ -10153,10 +10153,10 @@ ADD SBIGUAMIARRPARAM:INDEX=1,ARRAYID=1,PLMNID=1,AMFID="000001";
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号。GUAMI组编号引用“GUAMI组编号配置”中的配置，通过SHOW SBIGUAMIARRID命令查询。
@@ -10166,10 +10166,10 @@ AMFID|AMF标识|参数可选性: 任选参数类型: 字符串参数范围: 6-6|
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号。GUAMI组编号引用“GUAMI组编号配置”中的配置，通过SHOW SBIGUAMIARRID命令查询。
@@ -10179,7 +10179,7 @@ AMFID|AMF标识|参数可选性: 任选参数类型: 字符串参数范围: 6-6|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10192,30 +10192,30 @@ SET SBIGUAMIARRPARAM:INDEX=1,ARRAYID=1,PLMNID=1,AMFID="000001";
 #### 删除GUAMI组参数配置(DEL SBIGUAMIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除GUAMI组参数配置。当AMF已配置可以服务的GUAMI组编号，需要删除归属于该GUAMI组编号的参数时，使用该命令。命令执行成功后，AMF删除了可以服务的该组GUAMI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个GUAMI组编号的所有GUAMI组参数配置都已经删除，建议删除该GUAMI组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号。GUAMI组编号引用“GUAMI组编号配置”中的配置，通过SHOW SBIGUAMIARRID命令查询。
@@ -10225,7 +10225,7 @@ AMFID|AMF标识|参数可选性: 任选参数类型: 字符串参数范围: 6-6|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10238,22 +10238,22 @@ DEL SBIGUAMIARRPARAM:INDEX=1;
 #### 查询GUAMI组参数配置(SHOW SBIGUAMIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询GUAMI组参数配置。当需要查询GUAMI组参数时，使用该命令。 
 
 指定GUAMI组编号，可以查询指定的GUAMI组的参数信息；不指定GUAMI组编号，可以查询所有已经配置GUAMI组的参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号。GUAMI组编号引用“GUAMI组编号配置”中的配置，通过SHOW SBIGUAMIARRID命令查询。
@@ -10263,10 +10263,10 @@ AMFID|AMF标识|参数可选性: 任选参数类型: 字符串参数范围: 6-6|
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是GUAMI组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|GUAMI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GUAMI组编号。GUAMI组编号引用“GUAMI组编号配置”中的配置，通过SHOW SBIGUAMIARRID命令查询。
@@ -10276,7 +10276,7 @@ AMFID|AMF标识|参数可选性: 任选参数类型: 字符串参数范围: 6-6|
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10299,7 +10299,7 @@ SHOW SBIGUAMIARRPARAM:INDEX=1
 ## TAC范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAC是跟踪区代码（Tracking Area Code，TAC），由运营商管理分配，定义某一运营商唯一的跟踪区代码。 
@@ -10311,7 +10311,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。在实际配置
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAC范围组配置包括TAC范围组编号配置和TAC范围组参数配置，一个TAC范围组编号可以被若干个TAC范围组参数引用。 
@@ -10321,7 +10321,7 @@ TAC范围组配置主要用于在TAI范围组配置中限定TAC的范围，为TA
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -10332,7 +10332,7 @@ TAC范围组配置主要用于在TAI范围组配置中限定TAC的范围，为TA
 ### TAC范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAC是跟踪区代码（Tracking Area Code，TAC），由运营商管理分配，定义某一运营商唯一的跟踪区代码。 
@@ -10344,7 +10344,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。在实际配置
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAC范围组编号配置用于配置一个TAC范围组，一个TAC范围组编号可以被若干个TAC范围组参数引用。 
@@ -10354,7 +10354,7 @@ TAC范围组编号配置用于配置一个TAC范围组，一个TAC范围组编�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -10365,37 +10365,37 @@ TAC范围组编号配置用于配置一个TAC范围组，一个TAC范围组编�
 #### 新增TAC范围组编号配置(ADD SBITACRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增TAC范围组编号配置。当需要新增TAI范围组用于限定NF（SMF、AMF、NWDAF）可以服务的TAI范围时，使用该命令。执行成功后，可以在TAI范围组参数配置中关联该TAC范围组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAC范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10408,37 +10408,37 @@ ADD SBITACRANGEARRID:ARRAYID=1;
 #### 删除TAC范围组编号配置(DEL SBITACRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除TAC范围组编号配置。当不再需要该TAC范围组时，例如引用该TAC范围组编号的TAI范围组参数已经删除，则使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除TAC范围组编号前，需要把引用该TAC范围组编号的所有TAI范围组参数配置全部删除。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAC范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10451,37 +10451,37 @@ DEL SBITACRANGEARRID:ARRAYID=1;
 #### 查询TAC范围组编号配置(SHOW SBITACRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询TAC范围组编号配置。当需要查询已经配置的TAC范围组编号信息时，使用该命令。查询时，可以指定TAC范围组编号，查询成功后，会回显对应的TAC范围组编号信息；如果不指定TAC范围组编号，则回显已经配置的所有TAC范围组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10504,7 +10504,7 @@ SHOW SBITACRANGEARRID:ARRAYID=1
 ### TAC范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAC是跟踪区代码（Tracking Area Code，TAC），由运营商管理分配，定义某一运营商唯一的跟踪区代码。 
@@ -10516,7 +10516,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。在实际配置
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAC范围组参数配置用于配置TAC范围的开始和结束，并通过TAC范围组编号标识该TAC范围组参数归属于哪个TAC范围组。 
@@ -10528,7 +10528,7 @@ TAC范围组参数配置用于配置TAC范围的开始和结束，并通过TAC�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -10539,12 +10539,12 @@ TAC范围组参数配置用于配置TAC范围的开始和结束，并通过TAC�
 #### 新增TAC范围组参数配置(ADD SBITACRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增TAC范围组参数配置。用于表示一个具体的TAC范围，被TAI范围组参数配置引用。当需要新增TAI范围组参数配置且需要引用的TAC范围不存在时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 目前不支持检查参数START和END的大小关系。如果配置错误，则会导致在本地NRF匹配时失败，达不到预期的匹配效果。 
 
@@ -10552,10 +10552,10 @@ TAC范围组参数配置用于配置TAC范围的开始和结束，并通过TAC�
 需要保证该组参数归属的组编号已经存在，可以通过SHOW SBITACRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。该索引全局唯一。
 ARRAYID|TAC范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号，该编号通过SHOW SBITACRANGEARRID命令查询。
@@ -10565,10 +10565,10 @@ END|结束|参数可选性: 必选参数类型: 字符串参数范围: 4-6|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号，该编号通过SHOW SBITACRANGEARRID命令查询。
@@ -10578,7 +10578,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 4-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10591,12 +10591,12 @@ ADD SBITACRANGEARRPARAM:INDEX=1,ARRAYID=1,START="1234",END="4567";
 #### 修改TAC范围组参数配置(SET SBITACRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改TAC范围组参数配置。用于修改已经存在的TAC范围，或者修改归属的TAC范围组编号。当需要修改上述两项内容时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 目前不支持检查参数START和END的大小关系。如果配置错误，则会导致在本地NRF匹配时失败，达不到预期的匹配效果。 
 
@@ -10604,10 +10604,10 @@ ADD SBITACRANGEARRPARAM:INDEX=1,ARRAYID=1,START="1234",END="4567";
 如果修改归属的组编号配置，需要保证该组编号已经存在，可以通过SHOW SBITACRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。该索引全局唯一。
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号，该编号通过SHOW SBITACRANGEARRID命令查询。
@@ -10617,10 +10617,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 4-6|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号，该编号通过SHOW SBITACRANGEARRID命令查询。
@@ -10630,7 +10630,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 4-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10643,30 +10643,30 @@ SET SBITACRANGEARRPARAM:INDEX=1,ARRAYID=1,START="5678",END="6789";
 #### 删除TAC范围组参数配置(DEL SBITACRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除TAC范围组参数配置。因为TAC范围组参数配置是为TAI范围组参数配置服务的，其所归属的TAC范围组编号被TAI范围组参数配置所引用。所以当其归属的TAC范围组编号不再被任何TAI范围组参数配置引用时，可以执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。该索引全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号，该编号通过SHOW SBITACRANGEARRID命令查询。
@@ -10676,7 +10676,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 4-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10689,20 +10689,20 @@ DEL SBITACRANGEARRPARAM:INDEX=1;
 #### 查询TAC范围组参数配置(SHOW SBITACRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询TAC范围组参数配置。当需要查询已经配置的TAC范围组参数信息时，执行该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有TAC范围组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。该索引全局唯一。
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号，该编号通过SHOW SBITACRANGEARRID命令查询。
@@ -10712,10 +10712,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 4-6|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组参数配置索引。
 ARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAC范围组编号，该编号通过SHOW SBITACRANGEARRID命令查询。
@@ -10725,7 +10725,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 4-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10748,7 +10748,7 @@ SHOW SBITACRANGEARRPARAM:INDEX=1
 ## TAI组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAI（Tracking Area Identity，跟踪区识别码）用于标识跟踪区域，由MCC、MNC及TAC（Tracking Area Code，跟踪区代码）组成。 
@@ -10767,7 +10767,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID](../mml/1220560.html)命令查询。
+其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID]命令查询。
 
 本地NRF功能中，通过TAI组配置，可以限定SMF、AMF、UPF、NWDAF四个NF可以服务的TAI列表。通过TAI范围组该配置可以限定SMF、AMF、NWDAF三个NF可以服务的TAI范围列表。TAI组配置和TAI范围组配置一般配合使用,用于限定NF可以服务的TAI信息。 
 
@@ -10779,7 +10779,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAI组数据配置包括TAI组编号配置和TAI组参数配置，一个TAI组编号可以被若干个TAI组参数引用。 
@@ -10789,7 +10789,7 @@ TAI组配置应用于SMF、AMF、UPF、NWDAF四个NF信息配置中，用于限�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -10800,7 +10800,7 @@ TAI组配置应用于SMF、AMF、UPF、NWDAF四个NF信息配置中，用于限�
 ### TAI组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAI（Tracking Area Identity，跟踪区识别码）用于标识跟踪区域，由MCC、MNC及TAC（Tracking Area Code，跟踪区代码）组成。 
@@ -10819,7 +10819,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID](../mml/1220560.html)命令查询。
+其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID]命令查询。
 
 本地NRF功能中，通过TAI组配置，可以限定SMF、AMF、UPF、NWDAF四个NF可以服务的TAI列表。通过TAI范围组该配置可以限定SMF、AMF、NWDAF三个NF可以服务的TAI范围列表。TAI组配置和TAI范围组配置一般配合使用,用于限定NF可以服务的TAI信息。 
 
@@ -10831,7 +10831,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAI组编号配置用于配置一个TAI组，一个TAI组包含了若干个TAI组参数。 
@@ -10843,7 +10843,7 @@ TAI组编号配置用于配置一个TAI组，一个TAI组包含了若干个TAI�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -10854,37 +10854,37 @@ TAI组编号配置用于配置一个TAI组，一个TAI组包含了若干个TAI�
 #### 新增TAI组编号配置(ADD SBITAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增TAI组编号配置。当SMF、AMF、UPF、NWDAF四个NF需要新增限定可以服务的TAI列表时，使用该命令。执行成功后，可以在上述四个NF配置信息中关联该组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10897,37 +10897,37 @@ ADD SBITAIARRID:ARRAYID=9;
 #### 删除TAI组编号配置(DEL SBITAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除TAI组编号配置。当该TAI组编号不再被任何NF关联时，可以使用该命令删除TAI组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除前需要把归属于该TAI组编号的所有TAI组参数配置删除。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10940,37 +10940,37 @@ DEL SBITAIARRID:ARRAYID=9;
 #### 查询TAI组编号配置(SHOW SBITAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询TAI组编号配置。当需要查询已经配置的TAI组编号信息时，使用该命令。查询时，可以指定TAI组编号，查询成功后，会回显对应的TAI组编号信息；如果不指定TAI组编号，则回显已经配置的所有TAI组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号。该编号全局唯一。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -10993,7 +10993,7 @@ SHOW SBITAIARRID:ARRAYID=9
 ### TAI组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAI（Tracking Area Identity，跟踪区识别码）用于标识跟踪区域，由MCC、MNC及TAC（Tracking Area Code，跟踪区代码）组成。 
@@ -11012,7 +11012,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID](../mml/1220560.html)命令查询。
+其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID]命令查询。
 
 本地NRF功能中，通过TAI组配置，可以限定SMF、AMF、UPF、NWDAF四个NF可以服务的TAI列表。通过TAI范围组该配置可以限定SMF、AMF、NWDAF三个NF可以服务的TAI范围列表。TAI组配置和TAI范围组配置一般配合使用,用于限定NF可以服务的TAI信息。 
 
@@ -11024,7 +11024,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAI组参数配置用于配置TAI组的具体信息，包括：MCC、MNC和TAC，并通过TAI组编号标识该TAI组参数归属于哪个TAI组。 
@@ -11036,7 +11036,7 @@ TAI组参数配置用于配置TAI组的具体信息，包括：MCC、MNC和TAC�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -11047,12 +11047,12 @@ TAI组参数配置用于配置TAI组的具体信息，包括：MCC、MNC和TAC�
 #### 新增TAI组参数配置(ADD SBITAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增TAI组参数配置。当某个TAI组中需要增加NF（SMF、AMF、UPF、NWDAF）可以服务的TAI时，使用该命令在TAI组内增加TAI组参数。命令执行成功后，关联该TAI组的NF（SMF、AMF、UPF、NWDAF）对新增的TAI提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
 需要保证该组参数归属的TAI组编号已经存在，该组编号通过SHOW SBITAIARRID命令查询。 
 
@@ -11060,10 +11060,10 @@ TAI组参数配置用于配置TAI组的具体信息，包括：MCC、MNC和TAC�
 需要保证关联的PLMN NID编号已经存在，该编号可以通过SHOW SBIPLMNNID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 ARRAYID|TAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。表示该TAI组参数配置归属于哪个TAI组。
@@ -11073,10 +11073,10 @@ PLMNNID|PLMN NID编号|参数可选性: 必选参数类型: 数字参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。表示该TAI组参数配置归属于哪个TAI组。
@@ -11086,7 +11086,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11099,12 +11099,12 @@ ADD SBITAIARRPARAM:INDEX=1,ARRAYID=9,PLMNNID=1,TAC="1234";
 #### 修改TAI组参数配置(SET SBITAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改TAI组参数配置。当NF（SMF、AMF、UPF、NWDAF）服务的TAI信息发生变更时，使用该命令修改NF关联的TAI组内的TAI组参数信息。命令执行成功后，关联该TAI组的NF（SMF、AMF、UPF、NWDAF）对TAI组内的TAI提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果修改归属的TAI组编号，需要保证该组编号已经存在，可以通过SHOW SBITAIARRID命令查询。 
 
@@ -11112,10 +11112,10 @@ ADD SBITAIARRPARAM:INDEX=1,ARRAYID=9,PLMNNID=1,TAC="1234";
 如果修改关联的PLMN NID编号，需要保证该编号已经存在，可以通过SHOW SBIPLMNNID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。表示该TAI组参数配置归属于哪个TAI组。
@@ -11125,10 +11125,10 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。表示该TAI组参数配置归属于哪个TAI组。
@@ -11138,7 +11138,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11151,30 +11151,30 @@ SET SBITAIARRPARAM:INDEX=1,ARRAYID=9,PLMNNID=1,TAC="5678";
 #### 删除TAI组参数配置(DEL SBITAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除TAI组参数配置。当NF（SMF、AMF、UPF、NWDAF）不再对某个TAI提供服务时，使用该命令删除NF所关联的TAI组中该TAI的参数组信息。命令执行成功后，NF不再对该TAI提供服务。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。表示该TAI组参数配置归属于哪个TAI组。
@@ -11184,7 +11184,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11197,20 +11197,20 @@ DEL SBITAIARRPARAM:INDEX=1;
 #### 查询TAI组参数配置(SHOW SBITAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询TAI组参数配置。当需要查询已经配置的TAI组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有TAI组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。表示该TAI组参数配置归属于哪个TAI组。
@@ -11220,10 +11220,10 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组参数配置索引。该索引全局唯一。
 ARRAYID|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。表示该TAI组参数配置归属于哪个TAI组。
@@ -11233,7 +11233,7 @@ PLMNNID|PLMN NID编号|参数可选性: 任选参数类型: 数字参数范围: 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11256,7 +11256,7 @@ SHOW SBITAIARRPARAM:INDEX=1
 ## TAI范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAI（Tracking Area Identity，跟踪区识别码）用于标识跟踪区域，由MCC、MNC及TAC（Tracking Area Code，跟踪区代码）组成。 
@@ -11275,7 +11275,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID](../mml/1220560.html)命令查询。TAC在TAC范围组编号中配置，该编号可以通过[SHOW SBITACRANGEARRID](../mml/1220744.html)命令查询。
+其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID]命令查询。TAC在TAC范围组编号中配置，该编号可以通过[SHOW SBITACRANGEARRID]命令查询。
 
 本地NRF功能中，该配置以组编号的方式对外呈现，在NF（SMF、AMF、NWDAF）扩展信息配置中引用该组编号，用于表示该NF可以服务的TAI范围列表。 
 
@@ -11284,7 +11284,7 @@ TAI范围组配置与TAI组配置配合使用，表示对应NF可以服务的TAI
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，TAI范围组是以一组数据配置呈现的，该组数据配置包括TAI范围组编号配置和TAI范围组参数配置，一个TAI范围组编号可以被若干个TAI范围组参数引用。 
@@ -11294,7 +11294,7 @@ TAI范围组配置应用于NF（SMF、AMF、NWDAF）扩展信息配置中，用�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -11305,7 +11305,7 @@ TAI范围组配置应用于NF（SMF、AMF、NWDAF）扩展信息配置中，用�
 ### TAI范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAI（Tracking Area Identity，跟踪区识别码）用于标识跟踪区域，由MCC、MNC及TAC（Tracking Area Code，跟踪区代码）组成。 
@@ -11324,7 +11324,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID](../mml/1220560.html)命令查询。TAC在TAC范围组编号中配置，该编号可以通过[SHOW SBITACRANGEARRID](../mml/1220744.html)命令查询。
+其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID]命令查询。TAC在TAC范围组编号中配置，该编号可以通过[SHOW SBITACRANGEARRID]命令查询。
 
 本地NRF功能中，该配置以组编号的方式对外呈现，在NF（SMF、AMF、NWDAF）扩展信息配置中引用该组编号，用于表示该NF可以服务的TAI范围列表。 
 
@@ -11333,7 +11333,7 @@ TAI范围组配置与TAI组配置配合使用，表示对应NF可以服务的TAI
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAI范围组编号配置用于配置一个TAI范围组，一个TAI范围组包含了若干个TAI范围组参数。 
@@ -11343,7 +11343,7 @@ TAI范围组编号配置用于配置一个TAI范围组，一个TAI范围组包�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -11354,39 +11354,39 @@ TAI范围组编号配置用于配置一个TAI范围组，一个TAI范围组包�
 #### 新增TAI范围组编号配置(ADD SBITAIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增TAI范围组编号配置。当NF（SMF、AMF、NWDAF）需要新增可以服务的TAI范围组时，使用该命令。执行成功后，可以在NF扩展信息配置中关联该TAI范围组编号。 
 
-其中，SMF信息配置使用[ADD SBISMFINFO](../mml/1220865.html)命令，AMF信息配置使用[ADD SBIAMFINFO](../mml/1220853.html)命令，NWDAF信息配置使用[ADD SBINWDAFINFO](../mml/1220981.html)命令。
+其中，SMF信息配置使用[ADD SBISMFINFO]命令，AMF信息配置使用[ADD SBIAMFINFO]命令，NWDAF信息配置使用[ADD SBINWDAFINFO]命令。
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该TAI范围组编号，才能在NF（SMF、AMF、NWDAF）扩展信息配置中引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，该编号全局唯一。TAI范围组编号被以下配置引用：NF扩展信息配置：用于新增NF（SMF、AMF、NWDAF）可以服务的TAI范围列表。SMF信息配置可以使用SHOW SBISMFINFO命令查询，AMF信息配置可以使用SHOW SBIAMFINFO命令查询，NWDAF信息配置可以使用SHOW SBINWDAFINFO命令查询。TAI范围组参数配置：一个TAI范围组编号可以被若干个TAI范围组参数引用。TAI范围组参数配置可以使用SHOW SBITAIRANGEARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，该编号全局唯一。TAI范围组编号被以下配置引用：NF扩展信息配置：用于新增NF（SMF、AMF、NWDAF）可以服务的TAI范围列表。SMF信息配置可以使用SHOW SBISMFINFO命令查询，AMF信息配置可以使用SHOW SBIAMFINFO命令查询，NWDAF信息配置可以使用SHOW SBINWDAFINFO命令查询。TAI范围组参数配置：一个TAI范围组编号可以被若干个TAI范围组参数引用。TAI范围组参数配置可以使用SHOW SBITAIRANGEARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11399,37 +11399,37 @@ ADD SBITAIRANGEARRID:ARRAYID=1;
 #### 删除TAI范围组编号配置(DEL SBITAIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除TAI范围组编号配置。当SMF、AMF、NWDAF三个NF不再关联该TAI范围组编号时，可以使用该命令删除TAI范围组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除前需要把归属于该TAI范围组编号的所有TAI范围组参数配置删除。可以使用命令[SHOW SBITAIRANGEARRPARAM](../mml/1220756.html):ARRAYID=TAI范围组编号查询归属于该TAI范围组编号的所有TAI范围组参数配置。
-
-
-[](None)输入参数说明 
+删除前需要把归属于该TAI范围组编号的所有TAI范围组参数配置删除。可以使用命令[SHOW SBITAIRANGEARRPARAM]:ARRAYID=TAI范围组编号查询归属于该TAI范围组编号的所有TAI范围组参数配置。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，该编号全局唯一。TAI范围组编号被以下配置引用：NF扩展信息配置：用于新增NF（SMF、AMF、NWDAF）可以服务的TAI范围列表。SMF信息配置可以使用SHOW SBISMFINFO命令查询，AMF信息配置可以使用SHOW SBIAMFINFO命令查询，NWDAF信息配置可以使用SHOW SBINWDAFINFO命令查询。TAI范围组参数配置：一个TAI范围组编号可以被若干个TAI范围组参数引用。TAI范围组参数配置可以使用SHOW SBITAIRANGEARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，该编号全局唯一。TAI范围组编号被以下配置引用：NF扩展信息配置：用于新增NF（SMF、AMF、NWDAF）可以服务的TAI范围列表。SMF信息配置可以使用SHOW SBISMFINFO命令查询，AMF信息配置可以使用SHOW SBIAMFINFO命令查询，NWDAF信息配置可以使用SHOW SBINWDAFINFO命令查询。TAI范围组参数配置：一个TAI范围组编号可以被若干个TAI范围组参数引用。TAI范围组参数配置可以使用SHOW SBITAIRANGEARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11442,37 +11442,37 @@ DEL SBITAIRANGEARRID:ARRAYID=1;
 #### 查询TAI范围组编号配置(SHOW SBITAIRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询TAI范围组编号配置。查询时，可以指定TAI范围组编号，查询成功后，会回显对应的TAI范围组编号信息；如果不指定TAI范围组编号，则回显已经配置的所有TAI范围组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，该编号全局唯一。TAI范围组编号被以下配置引用：NF扩展信息配置：用于新增NF（SMF、AMF、NWDAF）可以服务的TAI范围列表。SMF信息配置可以使用SHOW SBISMFINFO命令查询，AMF信息配置可以使用SHOW SBIAMFINFO命令查询，NWDAF信息配置可以使用SHOW SBINWDAFINFO命令查询。TAI范围组参数配置：一个TAI范围组编号可以被若干个TAI范围组参数引用。TAI范围组参数配置可以使用SHOW SBITAIRANGEARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，该编号全局唯一。TAI范围组编号被以下配置引用：NF扩展信息配置：用于新增NF（SMF、AMF、NWDAF）可以服务的TAI范围列表。SMF信息配置可以使用SHOW SBISMFINFO命令查询，AMF信息配置可以使用SHOW SBIAMFINFO命令查询，NWDAF信息配置可以使用SHOW SBINWDAFINFO命令查询。TAI范围组参数配置：一个TAI范围组编号可以被若干个TAI范围组参数引用。TAI范围组参数配置可以使用SHOW SBITAIRANGEARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11495,7 +11495,7 @@ SHOW SBITAIRANGEARRID:ARRAYID=1
 ### TAI范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 TAI（Tracking Area Identity，跟踪区识别码）用于标识跟踪区域，由MCC、MNC及TAC（Tracking Area Code，跟踪区代码）组成。 
@@ -11514,7 +11514,7 @@ TAC由2或3个字节的字符串组成，以十六进制表示。
 
  
 
-其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID](../mml/1220560.html)命令查询。TAC在TAC范围组编号中配置，该编号可以通过[SHOW SBITACRANGEARRID](../mml/1220744.html)命令查询。
+其中，MCC和MNC在关联的PLMN NID编号中配置，该编号可以通过[SHOW SBIPLMNNID]命令查询。TAC在TAC范围组编号中配置，该编号可以通过[SHOW SBITACRANGEARRID]命令查询。
 
 本地NRF功能中，该配置以组编号的方式对外呈现，在NF（SMF、AMF、NWDAF）扩展信息配置中引用该组编号，用于表示该NF可以服务的TAI范围列表。 
 
@@ -11523,7 +11523,7 @@ TAI范围组配置与TAI组配置配合使用，表示对应NF可以服务的TAI
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 TAI范围组参数配置用于配置TAI范围组的三个组成部分的具体信息：MCC、MNC和TAC范围。同时，会在“TAI范围组编号”中配置该TAI范围组参数归属于哪个TAI范围组。 
@@ -11533,7 +11533,7 @@ TAI范围组参数配置用于配置TAI范围组的三个组成部分的具体�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -11544,12 +11544,12 @@ TAI范围组参数配置用于配置TAI范围组的三个组成部分的具体�
 #### 新增TAI范围组参数配置(ADD SBITAIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增TAI范围组参数配置。当NF（SMF、AMF、NWDAF）已配置可以服务的TAI范围组编号，需要新增归属于该TAI范围组编号的参数时，使用该命令。执行成功后，NF（SMF、AMF、NWDAF）新增了可以服务的该范围组参数的TAI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 需要保证该范围组参数归属的TAI范围组编号已经存在，该编号通过SHOW SBITAIRANGEARRID命令查询。 
 
@@ -11560,10 +11560,10 @@ TAI范围组参数配置用于配置TAI范围组的三个组成部分的具体�
 需要保证关联的TAC范围组编号已经存在，该编号通过SHOW SBITACRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 ARRAYID|TAI范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBITAIRANGEARRID命令查询。
@@ -11573,10 +11573,10 @@ TACRANGEARRAYID|TAC范围组编号|参数可选性: 必选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBITAIRANGEARRID命令查询。
@@ -11586,7 +11586,7 @@ TACRANGEARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11599,12 +11599,12 @@ ADD SBITAIRANGEARRPARAM:INDEX=1,ARRAYID=1,PLMNNID=1,TACRANGEARRAYID=1;
 #### 修改TAI范围组参数配置(SET SBITAIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改TAI范围组参数配置。当NF（SMF、AMF、NWDAF）已配置可以服务的TAI范围组编号，需要修改归属于该TAI范围组编号的参数时，使用该命令。执行成功后，NF（SMF、AMF、NWDAF）修改了可以服务的该范围组参数的TAI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果修改该范围组参数归属的TAI范围组编号，则需要保证该范围组编号已经存在，该编号通过SHOW SBITAIRANGEARRID命令查询。 
 
@@ -11615,10 +11615,10 @@ ADD SBITAIRANGEARRPARAM:INDEX=1,ARRAYID=1,PLMNNID=1,TACRANGEARRAYID=1;
 如果修改关联的TAC范围组编号，则需要保证该编号已经存在，该编号通过SHOW SBITACRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBITAIRANGEARRID命令查询。
@@ -11628,10 +11628,10 @@ TACRANGEARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBITAIRANGEARRID命令查询。
@@ -11641,7 +11641,7 @@ TACRANGEARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11654,30 +11654,30 @@ SET SBITAIRANGEARRPARAM:INDEX=1,ARRAYID=1,PLMNNID=1,TACRANGEARRAYID=7;
 #### 删除TAI范围组参数配置(DEL SBITAIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增TAI范围组参数配置。当NF（SMF、AMF、NWDAF）已配置可以服务的TAI范围组编号，需要删除归属于该TAI范围组编号的参数时，使用该命令。执行成功后，NF（SMF、AMF、NWDAF）删除了可以服务的该范围组参数的TAI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个TAI范围组编号的所有TAI范围组参数配置都已经删除，建议删除该TAI范围组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBITAIRANGEARRID命令查询。
@@ -11687,7 +11687,7 @@ TACRANGEARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11700,20 +11700,20 @@ DEL SBITAIRANGEARRPARAM:INDEX=1;
 #### 查询TAI范围组参数配置(SHOW SBITAIRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询TAI范围组参数配置。当需要查询已经配置的TAI范围组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有TAI范围组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBITAIRANGEARRID命令查询。
@@ -11723,10 +11723,10 @@ TACRANGEARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组参数配置索引，该索引全局唯一。
 ARRAYID|TAI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置TAI范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBITAIRANGEARRID命令查询。
@@ -11736,7 +11736,7 @@ TACRANGEARRAYID|TAC范围组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11759,7 +11759,7 @@ SHOW SBITAIRANGEARRPARAM:INDEX=1
 ## DNN组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由网络标识符和运营商标识符两部分组成。DNN被编码为字符串格式，且由点进行分割（例如 Label1.Label2.Label3）。 
@@ -11775,12 +11775,12 @@ DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由�
 
 本地NRF功能中，该配置以组编号的方式对外呈现，在NF（例如：PCF、BSF）扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表。 
 
-如果DNN不包括运营商标识符，则NF配置的PLMN组中的所有PLMN都支持DNN。其中，NF配置的PLMN组可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置DNN，则说明其可以服务于任何DNN。
+如果DNN不包括运营商标识符，则NF配置的PLMN组中的所有PLMN都支持DNN。其中，NF配置的PLMN组可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置DNN，则说明其可以服务于任何DNN。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，DNN组是以一组数据配置呈现的，该组数据配置包括DNN组编号配置和DNN组参数配置，一个DNN组编号可以被若干个DNN组参数引用。 
@@ -11790,7 +11790,7 @@ DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -11801,7 +11801,7 @@ DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由�
 ### DNN组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由网络标识符和运营商标识符两部分组成。DNN被编码为字符串格式，且由点进行分割（例如 Label1.Label2.Label3）。 
@@ -11817,12 +11817,12 @@ DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由�
 
 本地NRF功能中，该配置以组编号的方式对外呈现，在NF（例如：PCF、BSF）扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表。 
 
-如果DNN不包括运营商标识符，则NF配置的PLMN组中的所有PLMN都支持DNN。其中，NF配置的PLMN组可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置DNN，则说明其可以服务于任何DNN。
+如果DNN不包括运营商标识符，则NF配置的PLMN组中的所有PLMN都支持DNN。其中，NF配置的PLMN组可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置DNN，则说明其可以服务于任何DNN。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 DNN组编号配置用于配置一个DNN组，一个DNN组包含了若干个DNN组参数。 
@@ -11832,7 +11832,7 @@ DNN组编号配置用于配置一个DNN组，一个DNN组包含了若干个DNN�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -11843,39 +11843,39 @@ DNN组编号配置用于配置一个DNN组，一个DNN组包含了若干个DNN�
 #### 新增DNN组编号配置(ADD SBIDNNARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增DNN组编号配置。当NF（例如：PCF、BSF）需要新增可以服务的DNN组时，使用该命令。执行成功后，可以在NF扩展信息配置中关联该DNN组编号。 
 
-其中，PCF扩展信息配置使用[ADD SBIPCFINFO](../mml/1220937.html)命令，BSF扩展信息配置使用[ADD SBIBSFINFO](../mml/1220949.html)命令。
+其中，PCF扩展信息配置使用[ADD SBIPCFINFO]命令，BSF扩展信息配置使用[ADD SBIBSFINFO]命令。
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该DNN组编号，才能在NF（例如：PCF、BSF）扩展信息配置中引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，该编号全局唯一。DNN组编号被以下配置引用：NF扩展信息配置：用于新增NF（PCF、BSF等）可以服务的DNN列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询，PCF扩展信息配置可以使用SHOW SBIPCFINFO命令查询。DNN组参数配置：一个DNN组编号可以被若干个DNN组参数引用。DNN组参数配置可以使用SHOW SBIDNNARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，该编号全局唯一。DNN组编号被以下配置引用：NF扩展信息配置：用于新增NF（PCF、BSF等）可以服务的DNN列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询，PCF扩展信息配置可以使用SHOW SBIPCFINFO命令查询。DNN组参数配置：一个DNN组编号可以被若干个DNN组参数引用。DNN组参数配置可以使用SHOW SBIDNNARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11888,37 +11888,37 @@ ADD SBIDNNARRID:ARRAYID=1
 #### 删除DNN组编号配置(DEL SBIDNNARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除DNN组编号配置。当NF（例如：PCF、BSF）不再关联该DNN组编号时，可以使用该命令删除DNN组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除前需要把归属于该DNN组编号的所有DNN组参数配置删除。可以使用命令[SHOW SBIDNNARRPARAM](../mml/1220764.html)指定DNN组编号的方式，查询归属于该DNN组编号的所有DNN组参数配置。
-
-
-[](None)输入参数说明 
+删除前需要把归属于该DNN组编号的所有DNN组参数配置删除。可以使用命令[SHOW SBIDNNARRPARAM]指定DNN组编号的方式，查询归属于该DNN组编号的所有DNN组参数配置。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，该编号全局唯一。DNN组编号被以下配置引用：NF扩展信息配置：用于新增NF（PCF、BSF等）可以服务的DNN列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询，PCF扩展信息配置可以使用SHOW SBIPCFINFO命令查询。DNN组参数配置：一个DNN组编号可以被若干个DNN组参数引用。DNN组参数配置可以使用SHOW SBIDNNARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，该编号全局唯一。DNN组编号被以下配置引用：NF扩展信息配置：用于新增NF（PCF、BSF等）可以服务的DNN列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询，PCF扩展信息配置可以使用SHOW SBIPCFINFO命令查询。DNN组参数配置：一个DNN组编号可以被若干个DNN组参数引用。DNN组参数配置可以使用SHOW SBIDNNARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11931,37 +11931,37 @@ DEL SBIDNNARRID:ARRAYID=1
 #### 查询DNN组编号配置(SHOW SBIDNNARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询DNN组编号配置。查询时，可以指定DNN组编号，查询成功后，会回显对应的DNN组编号信息；如果不指定DNN组编号，则回显已经配置的所有DNN组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，该编号全局唯一。DNN组编号被以下配置引用：NF扩展信息配置：用于新增NF（PCF、BSF等）可以服务的DNN列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询，PCF扩展信息配置可以使用SHOW SBIPCFINFO命令查询。DNN组参数配置：一个DNN组编号可以被若干个DNN组参数引用。DNN组参数配置可以使用SHOW SBIDNNARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，该编号全局唯一。DNN组编号被以下配置引用：NF扩展信息配置：用于新增NF（PCF、BSF等）可以服务的DNN列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询，PCF扩展信息配置可以使用SHOW SBIPCFINFO命令查询。DNN组参数配置：一个DNN组编号可以被若干个DNN组参数引用。DNN组参数配置可以使用SHOW SBIDNNARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -11984,7 +11984,7 @@ SHOW SBIDNNARRID:ARRAYID=1
 ### DNN组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由网络标识符和运营商标识符两部分组成。DNN被编码为字符串格式，且由点进行分割（例如 Label1.Label2.Label3）。 
@@ -12000,12 +12000,12 @@ DNN（Data Network Name，数据网络名称）用于标识5G网络名称，由�
 
 本地NRF功能中，该配置以组编号的方式对外呈现，在NF（例如：PCF、BSF）扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表。 
 
-如果DNN不包括运营商标识符，则NF配置的PLMN组中的所有PLMN都支持DNN。其中，NF配置的PLMN组可以通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。如果该NF中没有配置DNN，则说明其可以服务于任何DNN。
+如果DNN不包括运营商标识符，则NF配置的PLMN组中的所有PLMN都支持DNN。其中，NF配置的PLMN组可以通过[SHOW SBIPEERNFBASEINFO]命令查询。如果该NF中没有配置DNN，则说明其可以服务于任何DNN。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 DNN组参数配置用于配置DNN的具体信息。同时，会在“DNN组编号”中配置该DNN组参数归属于哪个DNN组。 
@@ -12015,7 +12015,7 @@ DNN组参数配置用于配置DNN的具体信息。同时，会在“DNN组编�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -12026,20 +12026,20 @@ DNN组参数配置用于配置DNN的具体信息。同时，会在“DNN组编�
 #### 新增DNN组参数配置(ADD SBIDNNARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增DNN组参数配置。当NF（PCF、BSF等）已配置可以服务的DNN组编号，需要新增归属于该DNN组编号的参数时，使用该命令。执行成功后，NF（PCF、BSF等）新增了可以服务的该范围组参数的DNN信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-需要保证该范围组参数归属的DNN组编号已经存在，该编号通过[SHOW SBIDNNARRID](../mml/1220760.html)命令查询。
-
-
-[](None)输入参数说明 
+需要保证该范围组参数归属的DNN组编号已经存在，该编号通过[SHOW SBIDNNARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 ARRAYID|DNN组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIDNNARRID命令查询。
@@ -12048,10 +12048,10 @@ DNN|数据网络标识|参数可选性: 必选参数类型: 字符串参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIDNNARRID命令查询。
@@ -12060,7 +12060,7 @@ DNN|数据网络标识|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12073,20 +12073,20 @@ ADD SBIDNNARRPARAM:INDEX=1,ARRAYID=2,DNN="1"
 #### 修改DNN组参数配置(SET SBIDNNARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改DNN组参数配置。当NF（PCF、BSF等）已配置可以服务的DNN组编号，需要修改归属于该DNN组编号的参数时，使用该命令。执行成功后，NF（PCF、BSF等）修改了可以服务的该范围组参数的DNN信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果修改该范围组参数归属的DNN组编号，则需要保证该范围组编号已经存在，该编号通过[SHOW SBIDNNARRID](../mml/1220760.html)命令查询。
-
-
-[](None)输入参数说明 
+如果修改该范围组参数归属的DNN组编号，则需要保证该范围组编号已经存在，该编号通过[SHOW SBIDNNARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIDNNARRID命令查询。
@@ -12095,10 +12095,10 @@ DNN|数据网络标识|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIDNNARRID命令查询。
@@ -12107,7 +12107,7 @@ DNN|数据网络标识|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12120,30 +12120,30 @@ SET SBIDNNARRPARAM:INDEX=1,ARRAYID=2,DNN="123"
 #### 删除DNN组参数配置(DEL SBIDNNARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增DNN组参数配置。当NF（PCF、BSF等）已配置可以服务的DNN组编号，需要删除归属于该DNN组编号的参数时，使用该命令。执行成功后，NF（PCF、BSF等）删除了可以服务的该范围组参数的DNN信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个DNN组编号的所有DNN组参数配置都已经删除，建议删除该DNN组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIDNNARRID命令查询。
@@ -12152,7 +12152,7 @@ DNN|数据网络标识|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12165,20 +12165,20 @@ DEL SBIDNNARRPARAM:INDEX=1
 #### 查询DNN组参数配置(SHOW SBIDNNARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询DNN组参数配置。当需要查询已经配置的DNN组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有DNN组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIDNNARRID命令查询。
@@ -12187,10 +12187,10 @@ DNN|数据网络标识|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组参数配置索引，该索引为DNN组参数配置的全局唯一索引。
 ARRAYID|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIDNNARRID命令查询。
@@ -12199,7 +12199,7 @@ DNN|数据网络标识|参数可选性: 任选参数类型: 字符串参数范�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12222,25 +12222,25 @@ SHOW SBIDNNARRPARAM:INDEX=1
 ## IPv4地址范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
-本地NRF功能中，IPv4地址范围组配置用于配置一组IPv4地址范围，这一组地址范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv4地址范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO](../mml/1220949.html)命令完成。
+本地NRF功能中，IPv4地址范围组配置用于配置一组IPv4地址范围，这一组地址范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv4地址范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO]命令完成。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，IPv4地址范围组是以一组数据配置呈现的，该组数据配置包括IPv4地址范围组编号配置和IPv4地址范围组参数配置，一个IPv4地址范围组编号可以被若干个IPv4地址范围组参数配置引用。 
 
-IPv4地址范围组配置应用于BSF扩展信息配置中，用于标识该BSF可以提供服务的IPv4地址范围。BSF扩展信息可以通过[SHOW SBIBSFINFO](../mml/1220952.html)命令查询。
+IPv4地址范围组配置应用于BSF扩展信息配置中，用于标识该BSF可以提供服务的IPv4地址范围。BSF扩展信息可以通过[SHOW SBIBSFINFO]命令查询。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -12251,25 +12251,25 @@ IPv4地址范围组配置应用于BSF扩展信息配置中，用于标识该BSF�
 ### IPv4地址范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
-本地NRF功能中，IPv4地址范围组配置用于配置一组IPv4地址范围，这一组地址范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv4地址范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO](../mml/1220949.html)命令完成。
+本地NRF功能中，IPv4地址范围组配置用于配置一组IPv4地址范围，这一组地址范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv4地址范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO]命令完成。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IPv4地址范围组编号配置用于配置一个IPv4地址范围组，一个IPv4地址范围组包含了若干个IPv4地址范围组参数。 
 
-当启用本地NRF功能时，如果BSF需要新增可以服务的IPv4地址范围列表，则需要配置IPv4地址范围组编号。配置后，最终呈现在本地NRF配置的BSF扩展信息的IPv4地址范围数组中。如果不配置，则说明该BSF可以为服务网络中的所有IPv4地址服务。BSF扩展信息可以通过[SHOW SBIBSFINFO](../mml/1220952.html)命令查询。
+当启用本地NRF功能时，如果BSF需要新增可以服务的IPv4地址范围列表，则需要配置IPv4地址范围组编号。配置后，最终呈现在本地NRF配置的BSF扩展信息的IPv4地址范围数组中。如果不配置，则说明该BSF可以为服务网络中的所有IPv4地址服务。BSF扩展信息可以通过[SHOW SBIBSFINFO]命令查询。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -12280,39 +12280,39 @@ IPv4地址范围组编号配置用于配置一个IPv4地址范围组，一个IPv
 #### 新增IPv4地址范围组编号配置(ADD SBIIPV4ADDRRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IPv4地址范围组编号配置。当BSF需要新增可以服务的IPv4地址范围组时，使用该命令。执行成功后，可以在BSF扩展信息配置中关联该IPv4地址范围组编号。 
 
-BSF扩展信息配置使用[ADD SBIBSFINFO](../mml/1220949.html)命令。
+BSF扩展信息配置使用[ADD SBIBSFINFO]命令。
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该IPv4地址范围组编号，才能在BSF扩展信息配置中引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，该编号全局唯一。IPv4地址范围组编号被以下配置引用：BSF扩展信息配置：用于新增BSF可以服务的IPv4地址范围列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询。IPv4地址范围组参数配置：一个IPv4地址范围组编号可以被若干个IPv4地址范围组参数引用。IPv4地址范围组参数配置可以使用SHOW SBIIPV4ADDRRANGEARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，该编号全局唯一。IPv4地址范围组编号被以下配置引用：BSF扩展信息配置：用于新增BSF可以服务的IPv4地址范围列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询。IPv4地址范围组参数配置：一个IPv4地址范围组编号可以被若干个IPv4地址范围组参数引用。IPv4地址范围组参数配置可以使用SHOW SBIIPV4ADDRRANGEARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12325,37 +12325,37 @@ ADD SBIIPV4ADDRRANGEARRID:ARRAYID=1
 #### 删除IPv4地址范围组编号配置(DEL SBIIPV4ADDRRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除IPv4地址范围组编号配置。当BSF不再关联该IPv4地址范围组编号时，可以使用该命令删除IPv4地址范围组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除前需要把归属于该IPv4地址范围组编号的所有IPv4地址范围组参数配置删除。可以使用命令[SHOW SBIIPV4ADDRRANGEARRPARAM](../mml/1220772.html)指定IPv4地址范围组编号，查询归属于该IPv4地址范围组编号的所有IPv4地址范围组参数配置。
-
-
-[](None)输入参数说明 
+删除前需要把归属于该IPv4地址范围组编号的所有IPv4地址范围组参数配置删除。可以使用命令[SHOW SBIIPV4ADDRRANGEARRPARAM]指定IPv4地址范围组编号，查询归属于该IPv4地址范围组编号的所有IPv4地址范围组参数配置。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，该编号全局唯一。IPv4地址范围组编号被以下配置引用：BSF扩展信息配置：用于新增BSF可以服务的IPv4地址范围列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询。IPv4地址范围组参数配置：一个IPv4地址范围组编号可以被若干个IPv4地址范围组参数引用。IPv4地址范围组参数配置可以使用SHOW SBIIPV4ADDRRANGEARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，该编号全局唯一。IPv4地址范围组编号被以下配置引用：BSF扩展信息配置：用于新增BSF可以服务的IPv4地址范围列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询。IPv4地址范围组参数配置：一个IPv4地址范围组编号可以被若干个IPv4地址范围组参数引用。IPv4地址范围组参数配置可以使用SHOW SBIIPV4ADDRRANGEARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12368,37 +12368,37 @@ DEL SBIIPV4ADDRRANGEARRID:ARRAYID=1
 #### 查询IPv4地址范围组编号配置(SHOW SBIIPV4ADDRRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询IPv4地址范围组编号配置。查询时，可以指定IPv4地址范围组编号，查询成功后，会回显对应的IPv4地址范围组编号信息；如果不指定IPv4地址范围组编号，则回显已经配置的所有IPv4地址范围组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，该编号全局唯一。IPv4地址范围组编号被以下配置引用：BSF扩展信息配置：用于新增BSF可以服务的IPv4地址范围列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询。IPv4地址范围组参数配置：一个IPv4地址范围组编号可以被若干个IPv4地址范围组参数引用。IPv4地址范围组参数配置可以使用SHOW SBIIPV4ADDRRANGEARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，该编号全局唯一。IPv4地址范围组编号被以下配置引用：BSF扩展信息配置：用于新增BSF可以服务的IPv4地址范围列表。BSF扩展信息配置可以使用SHOW SBIBSFINFO命令查询。IPv4地址范围组参数配置：一个IPv4地址范围组编号可以被若干个IPv4地址范围组参数引用。IPv4地址范围组参数配置可以使用SHOW SBIIPV4ADDRRANGEARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12421,15 +12421,15 @@ SHOW SBIIPV4ADDRRANGEARRID:ARRAYID=1
 ### IPv4地址范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
-本地NRF功能中，IPv4地址范围组配置用于配置一组IPv4地址范围，这一组地址范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv4地址范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO](../mml/1220949.html)命令完成。
+本地NRF功能中，IPv4地址范围组配置用于配置一组IPv4地址范围，这一组地址范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv4地址范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO]命令完成。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IPv4地址范围组参数配置用于配置IPv4地址范围组的具体信息，包括：IPv4的起始地址和结束地址。同时，会在“IPv4地址范围组编号”中配置该IPv4地址范围组参数归属于哪个IPv4地址范围组。 
@@ -12439,7 +12439,7 @@ IPv4地址范围组参数配置用于配置IPv4地址范围组的具体信息，
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -12450,12 +12450,12 @@ IPv4地址范围组参数配置用于配置IPv4地址范围组的具体信息，
 #### 新增IPv4地址范围组参数配置(ADD SBIIPV4ADDRRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IPv4地址范围组参数配置。当BSF已配置可以服务的IPv4地址范围组编号，需要新增归属于该IPv4地址范围组编号的参数时，使用该命令。执行成功后，BSF新增了可以服务的该范围组参数的IPv4地址信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 目前不支持检查参数START和END的大小关系。如果配置错误，则会导致在本地NRF匹配时失败，达不到预期的匹配效果。 
 
@@ -12463,10 +12463,10 @@ IPv4地址范围组参数配置用于配置IPv4地址范围组的具体信息，
 需要保证该组参数归属的IPv4地址范围组编号已经存在，该组编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|IPv4地址范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -12476,10 +12476,10 @@ END|结束|参数可选性: 必选参数类型: 字符串|该参数用于设置I
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -12489,7 +12489,7 @@ END|结束|参数可选性: 任选参数类型: 字符串|该参数用于设置I
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12502,12 +12502,12 @@ ADD SBIIPV4ADDRRANGEARRPARAM:INDEX=1,ARRAYID=1,START="1.2.3.4",END="3.4.5.6"
 #### 修改IPv4地址范围组参数配置(SET SBIIPV4ADDRRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改IPv4地址范围组参数配置。当BSF已配置可以服务的IPv4地址范围组编号，需要修改归属于该IPv4地址范围组编号的参数时，使用该命令。执行成功后，BSF修改了可以服务的该范围组参数的IPv4地址信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 目前不支持检查参数START和END的大小关系。如果配置错误，则会导致在本地NRF匹配时失败，达不到预期的匹配效果。 
 
@@ -12515,10 +12515,10 @@ ADD SBIIPV4ADDRRANGEARRPARAM:INDEX=1,ARRAYID=1,START="1.2.3.4",END="3.4.5.6"
 如果修改归属的组编号配置，需要保证该组编号已经存在，可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -12528,10 +12528,10 @@ END|结束|参数可选性: 任选参数类型: 字符串|该参数用于设置I
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -12541,7 +12541,7 @@ END|结束|参数可选性: 任选参数类型: 字符串|该参数用于设置I
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12554,30 +12554,30 @@ SET SBIIPV4ADDRRANGEARRPARAM:INDEX=1,ARRAYID=1,START="5.6.7.8",END="9.1.2.3"
 #### 删除IPv4地址范围组参数配置(DEL SBIIPV4ADDRRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IPv4地址范围组参数配置。当BSF已配置可以服务的IPv4地址范围组编号，需要删除归属于该IPv4地址范围组编号的参数时，使用该命令。执行成功后，BSF删除了可以服务的该范围组参数的IPv4地址信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个IPv4地址范围组编号的所有IPv4地址范围组参数配置都已经删除，建议删除该IPv4地址范围组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -12587,7 +12587,7 @@ END|结束|参数可选性: 任选参数类型: 字符串|该参数用于设置I
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12600,20 +12600,20 @@ DEL SBIIPV4ADDRRANGEARRPARAM:INDEX=1
 #### 查询IPv4地址范围组参数配置(SHOW SBIIPV4ADDRRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询IPv4地址范围组参数配置。当需要查询已经配置的IPv4地址范围组参数信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -12623,10 +12623,10 @@ END|结束|参数可选性: 任选参数类型: 字符串|该参数用于设置I
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|IPv4地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv4地址范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -12636,7 +12636,7 @@ END|结束|参数可选性: 任选参数类型: 字符串|该参数用于设置I
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12659,25 +12659,25 @@ SHOW SBIIPV4ADDRRANGEARRPARAM:INDEX=1
 ## IPv6前缀范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
-本地NRF功能中，该配置用于配置一组IPv6前缀范围，这一组IPv6前缀范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv6范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO](../mml/1220949.html)命令完成。
+本地NRF功能中，该配置用于配置一组IPv6前缀范围，这一组IPv6前缀范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv6范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO]命令完成。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，IPv6前缀范围组是以一组数据配置呈现的，该组数据配置包括IPv6前缀范围组编号配置和IPv6前缀范围组参数配置，一个IPv6前缀范围组编号可以被若干个IPv6前缀范围组参数配置引用。 
 
-IPv6前缀范围组配置应用于BSF扩展信息配置中，用于标识该BSF可以提供服务的IPv6地址范围。BSF扩展信息可以通过[SHOW SBIBSFINFO](../mml/1220952.html)命令查询。
+IPv6前缀范围组配置应用于BSF扩展信息配置中，用于标识该BSF可以提供服务的IPv6地址范围。BSF扩展信息可以通过[SHOW SBIBSFINFO]命令查询。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -12688,25 +12688,25 @@ IPv6前缀范围组配置应用于BSF扩展信息配置中，用于标识该BSF�
 ### IPv6前缀范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
-本地NRF功能中，该配置用于配置一组IPv6前缀范围，这一组IPv6前缀范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv6范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO](../mml/1220949.html)命令完成。
+本地NRF功能中，该配置用于配置一组IPv6前缀范围，这一组IPv6前缀范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv6范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO]命令完成。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IPv6前缀范围组编号配置用于配置一个IPv6前缀范围组，一个IPv6前缀范围组包含了若干个IPv6前缀范围组参数。 
 
-当启用本地NRF功能时，如果BSF需要新增可以服务的IPv6地址范围列表，则需要配置IPv6前缀范围组编号。配置后，最终呈现在本地NRF配置的BSF扩展信息的IPv6前缀范围数组中。如果不配置，则说明该BSF可以为服务网络中的所有IPv6地址服务。BSF扩展信息可以通过[SHOW SBIBSFINFO](../mml/1220952.html)命令查询。
+当启用本地NRF功能时，如果BSF需要新增可以服务的IPv6地址范围列表，则需要配置IPv6前缀范围组编号。配置后，最终呈现在本地NRF配置的BSF扩展信息的IPv6前缀范围数组中。如果不配置，则说明该BSF可以为服务网络中的所有IPv6地址服务。BSF扩展信息可以通过[SHOW SBIBSFINFO]命令查询。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -12717,14 +12717,14 @@ IPv6前缀范围组编号配置用于配置一个IPv6前缀范围组，一个IPv
 #### 新增IPv6前缀范围组编号配置(ADD SBIIPV6PREFIXRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IPv6前缀范围组编号配置。当BSF需要新增可以服务的IPv6前缀范围组时，使用该命令。执行成功后，可以在BSF扩展信息配置中关联该IPv6前缀范围组编号。 
 
-BSF扩展信息配置使用[ADD SBIBSFINFO](../mml/1220949.html)命令。
+BSF扩展信息配置使用[ADD SBIBSFINFO]命令。
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该IPv6前缀范围组编号，才能在IPv6前缀范围组参数配置和BSF扩展信息配置中引用。 
 
@@ -12738,27 +12738,27 @@ BSF扩展信息配置使用[ADD SBIBSFINFO](../mml/1220949.html)命令。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6前缀范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识配置的IPv6前缀范围信息归属于哪个IPv6前缀范围组。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识配置的IPv6前缀范围信息归属于哪个IPv6前缀范围组。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12771,12 +12771,12 @@ ADD SBIIPV6PREFIXRANGEARRID:ARRAYID=1
 #### 删除IPv6前缀范围组编号配置(DEL SBIIPV6PREFIXRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除IPv6前缀范围组编号配置。当BSF不再关联该IPv6前缀范围组编号时，可以使用该命令删除IPv6前缀范围组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -12788,27 +12788,27 @@ BSF扩展信息中引用该IPv6前缀范围组编号的配置设置为0。使用
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6前缀范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识配置的IPv6前缀范围信息归属于哪个IPv6前缀范围组。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识配置的IPv6前缀范围信息归属于哪个IPv6前缀范围组。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12821,37 +12821,37 @@ DEL SBIIPV6PREFIXRANGEARRID:ARRAYID=1
 #### 查询IPv6前缀范围组编号配置(SHOW SBIIPV6PREFIXRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询IPv6前缀范围组编号配置。查询时，可以指定IPv6前缀范围组编号，查询成功后，会回显对应的IPv6前缀范围组编号信息；如果不指定IPv6前缀范围组编号，则回显已经配置的所有IPv6前缀范围组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识配置的IPv6前缀范围信息归属于哪个IPv6前缀范围组。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识配置的IPv6前缀范围信息归属于哪个IPv6前缀范围组。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12874,15 +12874,15 @@ SHOW SBIIPV6PREFIXRANGEARRID:ARRAYID=1
 ### IPv6前缀范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
-本地NRF功能中，该配置用于配置一组IPv6前缀范围，这一组IPv6前缀范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv6范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO](../mml/1220949.html)命令完成。
+本地NRF功能中，该配置用于配置一组IPv6前缀范围，这一组IPv6前缀范围以组编号的方式对外呈现。当BSF需要新增可以服务的IPv6范围时，使用该配置，并在BSF扩展信息配置中引用该组编号。BSF扩展信息配置可以通过[ADD SBIBSFINFO]命令完成。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 IPv6前缀范围组参数配置用于配置IPv6前缀范围组的具体信息，包括：IPv6的起始前缀和结束前缀。同时，会在“IPv6前缀范围组编号”中配置该IPv6前缀范围组参数归属于哪个IPv6前缀范围组。 
@@ -12892,7 +12892,7 @@ IPv6前缀范围组参数配置用于配置IPv6前缀范围组的具体信息，
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -12903,12 +12903,12 @@ IPv6前缀范围组参数配置用于配置IPv6前缀范围组的具体信息，
 #### 新增IPv6前缀范围组参数配置(ADD SBIIPV6PREFIXRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增IPv6前缀范围组参数配置。当BSF需要新增可以服务的IPv6前缀范围时，使用该命令配置IPv6前缀范围组参数，该参数配置IPv6前缀范围信息以及归属的IPv6前缀范围组。执行成功后，BSF新增了一个可以服务的IPv6地址范围信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 目前不支持检查参数START和END的大小关系。如果配置错误，则会导致在本地NRF匹配时失败，达不到预期的匹配效果。 
 
@@ -12916,10 +12916,10 @@ IPv6前缀范围组参数配置用于配置IPv6前缀范围组的具体信息，
 需要保证该组参数归属的IPv6前缀范围组编号已经存在，该组编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|IPv6前缀范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
@@ -12929,10 +12929,10 @@ END|结束|参数可选性: 必选参数类型: 字符串参数范围: 0-71|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
@@ -12942,7 +12942,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-71|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -12955,12 +12955,12 @@ ADD SBIIPV6PREFIXRANGEARRPARAM:INDEX=666,ARRAYID=1,START="1:2::/96",END="a::b/96
 #### 修改IPv6前缀范围组参数配置(SET SBIIPV6PREFIXRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改IPv6前缀范围组参数配置。当BSF已配置可以服务的IPv6前缀范围组编号，需要修改归属于该IPv6前缀范围组编号的IPv6前缀范围信息时，使用该命令。执行成功后，BSF修改了一个可以服务的IPv6地址范围信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 目前不支持检查参数START和END的大小关系。如果配置错误，则会导致在本地NRF匹配时失败，达不到预期的匹配效果。 
 
@@ -12968,10 +12968,10 @@ ADD SBIIPV6PREFIXRANGEARRPARAM:INDEX=666,ARRAYID=1,START="1:2::/96",END="a::b/96
 如果修改归属的组编号配置，需要保证该组编号已经存在，可以通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
@@ -12981,10 +12981,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-71|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
@@ -12994,7 +12994,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-71|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13007,30 +13007,30 @@ SET SBIIPV6PREFIXRANGEARRPARAM:INDEX=666,ARRAYID=1,START="1:2::/96",END="a::c/96
 #### 删除IPv6前缀范围组参数配置(DEL SBIIPV6PREFIXRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除IPv6前缀范围组参数配置。当BSF已配置可以服务的IPv6前缀范围组编号，需要删除归属于该IPv6前缀范围组编号的IPv6前缀范围信息时，使用该命令。执行成功后，BSF删除了一个可以服务的IPv6地址范围信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个IPv6前缀范围组编号的所有IPv6前缀范围组参数配置都已经删除，建议删除该IPv6前缀范围组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
@@ -13040,7 +13040,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-71|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13053,20 +13053,20 @@ DEL SBIIPV6PREFIXRANGEARRPARAM:INDEX=666
 #### 查询IPv6前缀范围组参数配置(SHOW SBIIPV6PREFIXRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询IPv6前缀范围组参数配置。当需要查询已经配置的IPv6前缀范围组参数信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
@@ -13076,10 +13076,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-71|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。该参数无特殊配置原则。
 ARRAYID|IPv6前缀范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置IPv6前缀范围组编号，标识该范围组参数归属于哪个范围组编号。该编号通过SHOW SBIIPV6PREFIXRANGEARRID命令查询。
@@ -13089,7 +13089,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 0-71|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13112,7 +13112,7 @@ SHOW SBIIPV6PREFIXRANGEARRPARAM:INDEX=666
 ## PLMN范围组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN（Public Land Mobile Network，公共陆地移动网) 范围用于标识一段公共陆地移动网区域，由移动国家码和移动网号组成。 
@@ -13130,24 +13130,24 @@ MNC由2个或3个十进制数组成，编码范围为十进制的00～99或000�
 
 本地NRF功能中，该配置主要用于限定PLMN的范围，应用于PLMN范围组配置中，用于表示PLMN的范围。该配置以组编号的方式对外呈现，在CHF信息配置中引用该组编号，用于表示该NF可以服务的PLMN范围列表。 
 
-其中，CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
+其中，CHF信息配置通过[SHOW SBICHFINFO]命令查询。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，PLMN范围组是以一组数据配置呈现的，该组数据配置包括PLMN范围组编号配置和PLMN范围组参数配置，一个PLMN范围组编号可以被若干个PLMN范围组参数引用。 
 
 当CHF需要新增该NF可以服务的PLMN范围列表时，使用该配置。 
 
-CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
+CHF信息配置通过[SHOW SBICHFINFO]命令查询。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -13158,7 +13158,7 @@ CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
 ### PLMN范围组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN（Public Land Mobile Network，公共陆地移动网) 范围用于标识一段公共陆地移动网区域，由移动国家码和移动网号组成。 
@@ -13176,24 +13176,24 @@ MNC由2个或3个十进制数组成，编码范围为十进制的00～99或000�
 
 本地NRF功能中，该配置主要用于限定PLMN的范围，应用于PLMN范围组配置中，用于表示PLMN的范围。该配置以组编号的方式对外呈现，在CHF信息配置中引用该组编号，用于表示该NF可以服务的PLMN范围列表。 
 
-其中，CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
+其中，CHF信息配置通过[SHOW SBICHFINFO]命令查询。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN范围组编号配置用于配置一个PLMN范围组，一个PLMN范围组包含了若干个PLMN范围组参数。 
 
 当启用本地NRF功能时，如果CHF需要新增该NF可以服务的PLMN范围列表，则需要配置PLMN范围范围组编号。配置后，最终呈现在本地NRF配置的CHF的PLMN范围数组中。如果没有配置，则说明该CHF可以服务于所有PLMN。 
 
-CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
+CHF信息配置通过[SHOW SBICHFINFO]命令查询。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -13204,12 +13204,12 @@ CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
 #### 新增PLMN范围组编号配置(ADD SBIPLMNRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN范围组编号配置。当CHF需要新增限定可以服务的PLMN范围组时，使用该命令。执行成功后，可以在CHF信息配置中关联该PLMN范围组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该PLMN范围组编号，才能在“PLMN范围组参数配置”及“CHF信息配置”中引用。 
 
@@ -13223,27 +13223,27 @@ CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号，该编号是PLMN范围组编号配置的唯一标识。被“PLMN范围组参数配置”及“CHF信息配置”引用。“PLMN范围组参数配置”通过SHOW SBIPLMNRANGEARRPARAM命令查询。“CHF信息配置”通过SHOW SBICHFINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号，该编号是PLMN范围组编号配置的唯一标识。被“PLMN范围组参数配置”及“CHF信息配置”引用。“PLMN范围组参数配置”通过SHOW SBIPLMNRANGEARRPARAM命令查询。“CHF信息配置”通过SHOW SBICHFINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13256,12 +13256,12 @@ ADD SBIPLMNRANGEARRID:ARRAYID=1;
 #### 删除PLMN范围组编号配置(DEL SBIPLMNRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN范围组编号配置。当CHF不再关联该PLMN范围组编号时，可以使用该命令删除PLMN范围组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该PLMN范围组编号配置，需要先删除引用该配置的“PLMN范围组参数配置”，并在“CHF信息配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -13275,27 +13275,27 @@ ADD SBIPLMNRANGEARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号，该编号是PLMN范围组编号配置的唯一标识。被“PLMN范围组参数配置”及“CHF信息配置”引用。“PLMN范围组参数配置”通过SHOW SBIPLMNRANGEARRPARAM命令查询。“CHF信息配置”通过SHOW SBICHFINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号，该编号是PLMN范围组编号配置的唯一标识。被“PLMN范围组参数配置”及“CHF信息配置”引用。“PLMN范围组参数配置”通过SHOW SBIPLMNRANGEARRPARAM命令查询。“CHF信息配置”通过SHOW SBICHFINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13308,37 +13308,37 @@ DEL SBIPLMNRANGEARRID:ARRAYID=1;
 #### 查询PLMN范围组编号配置(SHOW SBIPLMNRANGEARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN范围组编号配置。查询时，可以指定PLMN范围组编号，查询成功后，会回显对应的PLMN范围组编号信息；如果不指定PLMN范围组编号，则回显已经配置的所有PLMN范围组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号，该编号是PLMN范围组编号配置的唯一标识。被“PLMN范围组参数配置”及“CHF信息配置”引用。“PLMN范围组参数配置”通过SHOW SBIPLMNRANGEARRPARAM命令查询。“CHF信息配置”通过SHOW SBICHFINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号，该编号是PLMN范围组编号配置的唯一标识。被“PLMN范围组参数配置”及“CHF信息配置”引用。“PLMN范围组参数配置”通过SHOW SBIPLMNRANGEARRPARAM命令查询。“CHF信息配置”通过SHOW SBICHFINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13361,7 +13361,7 @@ SHOW SBIPLMNRANGEARRID:ARRAYID=1
 ### PLMN范围组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PLMN（Public Land Mobile Network，公共陆地移动网) 范围用于标识一段公共陆地移动网区域，由移动国家码和移动网号组成。 
@@ -13379,24 +13379,24 @@ MNC由2个或3个十进制数组成，编码范围为十进制的00～99或000�
 
 本地NRF功能中，该配置主要用于限定PLMN的范围，应用于PLMN范围组配置中，用于表示PLMN的范围。该配置以组编号的方式对外呈现，在CHF信息配置中引用该组编号，用于表示该NF可以服务的PLMN范围列表。 
 
-其中，CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
+其中，CHF信息配置通过[SHOW SBICHFINFO]命令查询。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PLMN范围组参数配置用于配置PLMN范围的具体信息。同时，会在“PLMN范围组编号”中配置该PLMN范围组参数归属于哪个PLMN范围组。 
 
 当CHF需要新增该NF可以服务的PLMN范围列表时，需要配置PLMN范围组参数，该参数配置PLMN范围信息以及归属的PLMN范围组。配置完成后，在CHF中引用该PLMN范围组参数归属的PLMN范围组编号。如果不配置PLMN范围组参数，则无法配置具体的PLMN范围信息，已经配置的PLMN范围组编号只能是一个孤立配置。如果CHF引用了该PLMN范围组编号，那么在组装NFProfile时会失败。 
 
-CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
+CHF信息配置通过[SHOW SBICHFINFO]命令查询。
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -13407,20 +13407,20 @@ CHF信息配置通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
 #### 新增PLMN范围组参数配置(ADD SBIPLMNRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增PLMN范围组参数配置。当CHF需要新增可以提供服务的PLMN范围时，使用该命令配置PLMN范围组参数，该参数配置PLMN范围信息以及归属的PLMN范围组。执行成功后，CHF新增了一个可以服务的PLMN范围信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-需要保证该范围组参数归属的PLMN范围组编号已经存在，该编号通过[SHOW SBIPLMNRANGEARRID](../mml/1220784.html)命令查询。
-
-
-[](None)输入参数说明 
+需要保证该范围组参数归属的PLMN范围组编号已经存在，该编号通过[SHOW SBIPLMNRANGEARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 ARRAYID|PLMN范围组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号。标识配置的PLMN范围信息归属于哪个PLMN范围组。该编号通过SHOW SBIPLMNRANGEARRID命令查询。
@@ -13430,10 +13430,10 @@ END|结束|参数可选性: 必选参数类型: 字符串参数范围: 5-6|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号。标识配置的PLMN范围信息归属于哪个PLMN范围组。该编号通过SHOW SBIPLMNRANGEARRID命令查询。
@@ -13443,7 +13443,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 5-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13456,20 +13456,20 @@ ADD SBIPLMNRANGEARRPARAM:INDEX=1,ARRAYID=1,START="12300",END="123999";
 #### 修改PLMN范围组参数配置(SET SBIPLMNRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PLMN范围组参数配置。当CHF已配置可以服务的PLMN范围组编号，需要修改归属于该PLMN范围组编号的PLMN范围信息时，使用该命令。执行成功后，CHF修改了一个可以服务的PLMN范围信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果修改该范围组参数归属的PLMN范围组编号，则需要保证该范围组编号已经存在，该编号通过[SHOW SBIPLMNRANGEARRID](../mml/1220784.html)命令查询。
-
-
-[](None)输入参数说明 
+如果修改该范围组参数归属的PLMN范围组编号，则需要保证该范围组编号已经存在，该编号通过[SHOW SBIPLMNRANGEARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号。标识配置的PLMN范围信息归属于哪个PLMN范围组。该编号通过SHOW SBIPLMNRANGEARRID命令查询。
@@ -13479,10 +13479,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 5-6|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号。标识配置的PLMN范围信息归属于哪个PLMN范围组。该编号通过SHOW SBIPLMNRANGEARRID命令查询。
@@ -13492,7 +13492,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 5-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13505,30 +13505,30 @@ SET SBIPLMNRANGEARRPARAM:INDEX=1,ARRAYID=1,START="12300",END="123999";
 #### 删除PLMN范围组参数配置(DEL SBIPLMNRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PLMN范围组参数配置。当CHF已配置可以服务的PLMN范围组编号，需要删除归属于该PLMN范围组编号的PLMN范围信息时，使用该命令。执行成功后，CHF删除了一个可以服务的PLMN范围信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个PLMN范围组编号的所有PLMN范围组参数配置都已经删除，建议删除该PLMN范围组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号。标识配置的PLMN范围信息归属于哪个PLMN范围组。该编号通过SHOW SBIPLMNRANGEARRID命令查询。
@@ -13538,7 +13538,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 5-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13551,20 +13551,20 @@ DEL SBIPLMNRANGEARRPARAM:INDEX=1;
 #### 查询PLMN范围组参数配置(SHOW SBIPLMNRANGEARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PLMN范围组参数配置。当需要查询已经配置的PLMN范围组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有PLMN范围组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号。标识配置的PLMN范围信息归属于哪个PLMN范围组。该编号通过SHOW SBIPLMNRANGEARRID命令查询。
@@ -13574,10 +13574,10 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 5-6|该�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是PLMN范围组参数配置的唯一标识。
 ARRAYID|PLMN范围组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PLMN范围组编号。标识配置的PLMN范围信息归属于哪个PLMN范围组。该编号通过SHOW SBIPLMNRANGEARRID命令查询。
@@ -13587,7 +13587,7 @@ END|结束|参数可选性: 任选参数类型: 字符串参数范围: 5-6|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13610,17 +13610,17 @@ SHOW SBIPLMNRANGEARRPARAM:INDEX=1
 ## API版本组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 API版本表示应用程序接口对应的版本。 
 
-本地NRF功能中，API版本组配置用于配置一组API版本，这一组版本以组编号的方式对外呈现。当缺省通知端点组配置需要新增缺省通知类型可以支持的API版本时，使用该配置。如果缺省通知端点组配置中没有配置API版本组，则不为缺省通知类型提供特定的API版本，缺省通知类型可以支持任何API版本。缺省通知端点组参数配置可以通过[ADD SBIDLFTNOTEENDPOINTARRPARAM](../mml/1220801.html)命令完成
+本地NRF功能中，API版本组配置用于配置一组API版本，这一组版本以组编号的方式对外呈现。当缺省通知端点组配置需要新增缺省通知类型可以支持的API版本时，使用该配置。如果缺省通知端点组配置中没有配置API版本组，则不为缺省通知类型提供特定的API版本，缺省通知类型可以支持任何API版本。缺省通知端点组参数配置可以通过[ADD SBIDLFTNOTEENDPOINTARRPARAM]命令完成
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，API版本组是以一组数据配置呈现的，该组数据配置包括API版本组编号配置和API版本组参数配置，一个API版本组编号可以被若干个API版本组参数引用。 
@@ -13630,7 +13630,7 @@ API版本表示应用程序接口对应的版本。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -13641,17 +13641,17 @@ API版本表示应用程序接口对应的版本。
 ### API版本组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 API版本表示应用程序接口对应的版本。 
 
-本地NRF功能中，API版本组配置用于配置一组API版本，这一组版本以组编号的方式对外呈现。当缺省通知端点组配置需要新增缺省通知类型可以支持的API版本时，使用该配置。如果缺省通知端点组配置中没有配置API版本组，则不为缺省通知类型提供特定的API版本，缺省通知类型可以支持任何API版本。缺省通知端点组参数配置可以通过[ADD SBIDLFTNOTEENDPOINTARRPARAM](../mml/1220801.html)命令完成
+本地NRF功能中，API版本组配置用于配置一组API版本，这一组版本以组编号的方式对外呈现。当缺省通知端点组配置需要新增缺省通知类型可以支持的API版本时，使用该配置。如果缺省通知端点组配置中没有配置API版本组，则不为缺省通知类型提供特定的API版本，缺省通知类型可以支持任何API版本。缺省通知端点组参数配置可以通过[ADD SBIDLFTNOTEENDPOINTARRPARAM]命令完成
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 API版本组编号配置用于配置一个API版本组，一个API版本组包含了若干个API版本组参数。 
@@ -13661,7 +13661,7 @@ API版本组编号配置用于配置一个API版本组，一个API版本组包�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -13672,12 +13672,12 @@ API版本组编号配置用于配置一个API版本组，一个API版本组包�
 #### 新增API版本组编号配置(ADD SBIAPIVERSIONARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增API版本组编号配置。当缺省通知端点组配置需要新增限定默认通知类型所支持的API版本组时，使用该命令。执行成功后，可以在缺省通知端点组配置中关联该API版本组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该API版本组编号，才能在“API版本组参数配置”及“缺省通知端点组参数配置”中引用。 
 
@@ -13691,27 +13691,27 @@ API版本组编号配置用于配置一个API版本组，一个API版本组包�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|API版本组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，该编号是API版本组编号配置的唯一标识。被“API版本组参数配置”及“缺省通知端点组参数配置”引用。“API版本组参数配置”通过SHOW SBIAPIVERSIONARRPARAM命令查询。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，该编号是API版本组编号配置的唯一标识。被“API版本组参数配置”及“缺省通知端点组参数配置”引用。“API版本组参数配置”通过SHOW SBIAPIVERSIONARRPARAM命令查询。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13724,12 +13724,12 @@ ADD SBIAPIVERSIONARRID:ARRAYID=1;
 #### 删除API版本组编号配置(DEL SBIAPIVERSIONARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除API版本组编号配置。当缺省通知端点组配置不再关联该API版本组编号时，可以使用该命令删除API版本组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该API版本组编号配置，需要先删除引用该配置的“API版本组参数配置”，并在“缺省通知端点组参数配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -13743,27 +13743,27 @@ ADD SBIAPIVERSIONARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|API版本组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，该编号是API版本组编号配置的唯一标识。被“API版本组参数配置”及“缺省通知端点组参数配置”引用。“API版本组参数配置”通过SHOW SBIAPIVERSIONARRPARAM命令查询。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，该编号是API版本组编号配置的唯一标识。被“API版本组参数配置”及“缺省通知端点组参数配置”引用。“API版本组参数配置”通过SHOW SBIAPIVERSIONARRPARAM命令查询。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13776,37 +13776,37 @@ DEL SBIAPIVERSIONARRID:ARRAYID=1;
 #### 查询API版本组编号配置(SHOW SBIAPIVERSIONARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询API版本组编号配置。查询时，可以指定API版本组编号，查询成功后，会回显对应的API版本组编号信息；如果不指定API版本组编号，则回显已经配置的所有API版本组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，该编号是API版本组编号配置的唯一标识。被“API版本组参数配置”及“缺省通知端点组参数配置”引用。“API版本组参数配置”通过SHOW SBIAPIVERSIONARRPARAM命令查询。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，该编号是API版本组编号配置的唯一标识。被“API版本组参数配置”及“缺省通知端点组参数配置”引用。“API版本组参数配置”通过SHOW SBIAPIVERSIONARRPARAM命令查询。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13829,17 +13829,17 @@ SHOW SBIAPIVERSIONARRID:ARRAYID=1
 ### API版本组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 API版本表示应用程序接口对应的版本。 
 
-本地NRF功能中，API版本组配置用于配置一组API版本，这一组版本以组编号的方式对外呈现。当缺省通知端点组配置需要新增缺省通知类型可以支持的API版本时，使用该配置。如果缺省通知端点组配置中没有配置API版本组，则不为缺省通知类型提供特定的API版本，缺省通知类型可以支持任何API版本。缺省通知端点组参数配置可以通过[ADD SBIDLFTNOTEENDPOINTARRPARAM](../mml/1220801.html)命令完成
+本地NRF功能中，API版本组配置用于配置一组API版本，这一组版本以组编号的方式对外呈现。当缺省通知端点组配置需要新增缺省通知类型可以支持的API版本时，使用该配置。如果缺省通知端点组配置中没有配置API版本组，则不为缺省通知类型提供特定的API版本，缺省通知类型可以支持任何API版本。缺省通知端点组参数配置可以通过[ADD SBIDLFTNOTEENDPOINTARRPARAM]命令完成
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 API版本组参数配置用于配置API版本的具体信息。同时，会在“API版本组编号”中配置该API版本组参数归属于哪个API版本组。 
@@ -13849,7 +13849,7 @@ API版本组参数配置用于配置API版本的具体信息。同时，会在�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -13860,20 +13860,20 @@ API版本组参数配置用于配置API版本的具体信息。同时，会在�
 #### 新增API版本组参数配置(ADD SBIAPIVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增API版本组参数配置。当缺省通知端点组参数配置需要新增可以提供服务的API版本时，使用该命令配置API版本组参数，该参数配置API版本信息以及归属的API版本组。执行成功后，缺省通知端点组参数配置新增了一个可以服务的API版本信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-需要保证该范围组参数归属的API版本组编号已经存在，该编号通过[SHOW SBIAPIVERSIONARRID](../mml/1220792.html)命令查询。
-
-
-[](None)输入参数说明 
+需要保证该范围组参数归属的API版本组编号已经存在，该编号通过[SHOW SBIAPIVERSIONARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 ARRAYID|API版本组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，标识该API版本组参数归属于哪个API版本组编号。该编号通过SHOW SBIAPIVERSIONARRID命令查询。
@@ -13882,10 +13882,10 @@ VERSION|版本|参数可选性: 必选参数类型: 字符串参数范围: 1-7|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，标识该API版本组参数归属于哪个API版本组编号。该编号通过SHOW SBIAPIVERSIONARRID命令查询。
@@ -13894,7 +13894,7 @@ VERSION|版本|参数可选性: 任选参数类型: 字符串参数范围: 1-7|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13907,20 +13907,20 @@ ADD SBIAPIVERSIONARRPARAM:INDEX=1,ARRAYID=1,VERSION="v1";
 #### 修改API版本组参数配置(SET SBIAPIVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改API版本组参数配置。当缺省通知端点组参数配置已配置可以服务的API版本组编号，需要修改归属于该API版本组编号的API版本信息时，使用该命令。执行成功后，缺省通知端点组参数配置修改了一个可以服务的API版本信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果修改该组参数归属的API版本组编号，则需要保证该API版本组编号已经存在，该编号通过[SHOW SBIAPIVERSIONARRID](../mml/1220792.html)命令查询。
-
-
-[](None)输入参数说明 
+如果修改该组参数归属的API版本组编号，则需要保证该API版本组编号已经存在，该编号通过[SHOW SBIAPIVERSIONARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，标识该API版本组参数归属于哪个API版本组编号。该编号通过SHOW SBIAPIVERSIONARRID命令查询。
@@ -13929,10 +13929,10 @@ VERSION|版本|参数可选性: 任选参数类型: 字符串参数范围: 1-7|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，标识该API版本组参数归属于哪个API版本组编号。该编号通过SHOW SBIAPIVERSIONARRID命令查询。
@@ -13941,7 +13941,7 @@ VERSION|版本|参数可选性: 任选参数类型: 字符串参数范围: 1-7|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13954,30 +13954,30 @@ SET SBIAPIVERSIONARRPARAM:INDEX=1,ARRAYID=1,VERSION="v1";
 #### 删除API版本组参数配置(DEL SBIAPIVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除API版本组参数配置。当缺省通知端点组参数配置已配置可以服务的API版本组编号，需要删除归属于该API版本组编号的API版本信息时，使用该命令。执行成功后，缺省通知端点组参数配置删除了一个可以服务的API版本信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个API版本组编号的所有API版本组参数配置都已经删除，建议删除该API版本组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，标识该API版本组参数归属于哪个API版本组编号。该编号通过SHOW SBIAPIVERSIONARRID命令查询。
@@ -13986,7 +13986,7 @@ VERSION|版本|参数可选性: 任选参数类型: 字符串参数范围: 1-7|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -13999,20 +13999,20 @@ DEL SBIAPIVERSIONARRPARAM:INDEX=1;
 #### 查询API版本组参数配置(SHOW SBIAPIVERSIONARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询API版本组参数配置。当需要查询已经配置的API版本组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有API版本组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，标识该API版本组参数归属于哪个API版本组编号。该编号通过SHOW SBIAPIVERSIONARRID命令查询。
@@ -14021,10 +14021,10 @@ VERSION|版本|参数可选性: 任选参数类型: 字符串参数范围: 1-7|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是API版本组参数配置的唯一标识。
 ARRAYID|API版本组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置API版本组编号，标识该API版本组参数归属于哪个API版本组编号。该编号通过SHOW SBIAPIVERSIONARRID命令查询。
@@ -14033,7 +14033,7 @@ VERSION|版本|参数可选性: 任选参数类型: 字符串参数范围: 1-7|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14056,7 +14056,7 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
 ## 缺省通知端点组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本地NRF功能中，缺省通知端点组配置用于配置一组可回调URI的通知类型的通知端点。通常服务使用者（本端）向服务提供者（对端）订阅时，会显式地在请求中携带回调URI，对端在需要发送通知时，通过该回调URI将通知消息发往本端。当本端在订阅时，未在请求中显式地携带回调URI，那么对端在需要发送通知时，可以使用本配置的缺省回调URI将通知消息发往本端。此时如果对端NF中没有配置缺省通知端点组，则可能导致对应业务流程失败。 
@@ -14064,7 +14064,7 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，缺省通知端点组是以一组数据配置呈现的，该组数据配置包括缺省通知端点组编号配置和缺省通知端点组参数配置，一个缺省通知端点组编号可以被若干个缺省通知端点组参数引用。 
@@ -14074,7 +14074,7 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -14085,7 +14085,7 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
 ### 缺省通知端点组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本地NRF功能中，缺省通知端点组配置用于配置一组可回调URI的通知类型的通知端点。通常服务使用者（本端）向服务提供者（对端）订阅时，会显式地在请求中携带回调URI，对端在需要发送通知时，通过该回调URI将通知消息发往本端。当本端在订阅时，未在请求中显式地携带回调URI，那么对端在需要发送通知时，可以使用本配置的缺省回调URI将通知消息发往本端。此时如果对端NF中没有配置缺省通知端点组，则可能导致对应业务流程失败。 
@@ -14093,7 +14093,7 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 缺省通知端点组编号配置用于配置一个缺省通知端点组，一个缺省通知端点组包含了若干个缺省通知端点组参数。 
@@ -14104,7 +14104,7 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -14115,12 +14115,12 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
 #### 新增缺省通知端点组编号配置(ADD SBIDLFTNOTEENDPOINTARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增缺省通知端点组编号配置。当需要新增对端NF支持的缺省通知端点组时，使用该命令。执行成功后，可以在缺省通知端点组参数配置、对端NF基本信息配置和对端NF服务实例配置中关联该缺省通知端点组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该缺省通知端点组编号，才能在“缺省通知端点组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”中引用。 
 
@@ -14137,27 +14137,27 @@ SHOW SBIAPIVERSIONARRPARAM:INDEX=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|缺省通知端点组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，该编号是缺省通知端点组编号配置的唯一标识。被“缺省通知端点组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，该编号是缺省通知端点组编号配置的唯一标识。被“缺省通知端点组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14170,12 +14170,12 @@ ADD SBIDLFTNOTEENDPOINTARRID:ARRAYID=1;
 #### 删除缺省通知端点组编号配置(DEL SBIDLFTNOTEENDPOINTARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除缺省通知端点组编号配置。当缺省通知端点组配置不再关联该缺省通知端点组编号时，可以使用该命令删除缺省通知端点组编号配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该缺省通知端点组配置，需要先删除引用该配置的“缺省通知端点组参数配置”，并在“对端NF基本信息配置”及“对端NF服务实例配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -14192,27 +14192,27 @@ ADD SBIDLFTNOTEENDPOINTARRID:ARRAYID=1;
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|缺省通知端点组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，该编号是缺省通知端点组编号配置的唯一标识。被“缺省通知端点组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，该编号是缺省通知端点组编号配置的唯一标识。被“缺省通知端点组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14225,37 +14225,37 @@ DEL SBIDLFTNOTEENDPOINTARRID:ARRAYID=1;
 #### 查询缺省通知端点组编号配置(SHOW SBIDLFTNOTEENDPOINTARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询缺省通知端点组编号配置。查询时，可以指定缺省通知端点组编号，查询成功后，会回显对应的缺省通知端点组编号信息；如果不指定缺省通知端点组编号，则回显已经配置的所有缺省通知端点组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，该编号是缺省通知端点组编号配置的唯一标识。被“缺省通知端点组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，该编号是缺省通知端点组编号配置的唯一标识。被“缺省通知端点组参数配置”、“对端NF基本信息配置”及“对端NF服务实例配置”引用。“缺省通知端点组参数配置”通过SHOW SBIDLFTNOTEENDPOINTARRPARAM命令查询。“对端NF基本信息配置”通过SHOW SBIPEERNFBASEINFO命令查询。“对端NF服务实例配置”通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14278,7 +14278,7 @@ SHOW SBIDLFTNOTEENDPOINTARRID:ARRAYID=1
 ### 缺省通知端点组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本地NRF功能中，缺省通知端点组配置用于配置一组可回调URI的通知类型的通知端点。通常服务使用者（本端）向服务提供者（对端）订阅时，会显式地在请求中携带回调URI，对端在需要发送通知时，通过该回调URI将通知消息发往本端。当本端在订阅时，未在请求中显式地携带回调URI，那么对端在需要发送通知时，可以使用本配置的缺省回调URI将通知消息发往本端。此时如果对端NF中没有配置缺省通知端点组，则可能导致对应业务流程失败。 
@@ -14286,7 +14286,7 @@ SHOW SBIDLFTNOTEENDPOINTARRID:ARRAYID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 缺省通知端点组参数配置用于配置缺省通知端点的具体信息。同时，会在“缺省通知端点组编号”中配置该缺省通知端点组参数归属于哪个缺省通知端点组。 
@@ -14296,7 +14296,7 @@ SHOW SBIDLFTNOTEENDPOINTARRID:ARRAYID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -14307,12 +14307,12 @@ SHOW SBIDLFTNOTEENDPOINTARRID:ARRAYID=1
 #### 新增缺省通知端点组参数配置(ADD SBIDLFTNOTEENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增缺省通知端点组参数配置。当服务使用者（本端）在订阅时，未在请求中显式地携带回调URI，那么服务提供者（对端）在需要发送通知时，需要使用缺省回调URI将通知消息发往本端，可以使用该命令新增缺省通知端点组参数，该参数配置缺省通知端点信息以及归属的缺省通知端点组。执行成功后，对端NF新增了一个可以支持的缺省通知端点信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -14324,10 +14324,10 @@ SHOW SBIDLFTNOTEENDPOINTARRID:ARRAYID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 ARRAYID|缺省通知端点组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，标识该缺省通知端点组参数归属于哪个缺省通知端点组编号。该编号通过SHOW SBIDLFTNOTEENDPOINTARRID命令查询。
@@ -14340,10 +14340,10 @@ VERSIONARRAY|API版本组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，标识该缺省通知端点组参数归属于哪个缺省通知端点组编号。该编号通过SHOW SBIDLFTNOTEENDPOINTARRID命令查询。
@@ -14356,7 +14356,7 @@ VERSIONARRAY|API版本组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14369,12 +14369,12 @@ ADD SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1,ARRAYID=1,NOTIFICATIONTYPE="N1_MESSAGES"
 #### 修改缺省通知端点组参数配置(SET SBIDLFTNOTEENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改缺省通知端点组参数配置。当对端NF已配置可以支持的缺省通知端点组编号，需要修改归属于该缺省通知端点组编号的缺省通知端点信息时，使用该命令。执行成功后，对端NF修改了一个可以支持的缺省通知端点信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -14386,10 +14386,10 @@ ADD SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1,ARRAYID=1,NOTIFICATIONTYPE="N1_MESSAGES"
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，标识该缺省通知端点组参数归属于哪个缺省通知端点组编号。该编号通过SHOW SBIDLFTNOTEENDPOINTARRID命令查询。
@@ -14402,10 +14402,10 @@ VERSIONARRAY|API版本组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，标识该缺省通知端点组参数归属于哪个缺省通知端点组编号。该编号通过SHOW SBIDLFTNOTEENDPOINTARRID命令查询。
@@ -14418,7 +14418,7 @@ VERSIONARRAY|API版本组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14431,30 +14431,30 @@ SET  SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1,ARRAYID=1,NOTIFICATIONTYPE="N1_MESSAGES
 #### 删除缺省通知端点组参数配置(DEL SBIDLFTNOTEENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除缺省通知端点组参数配置。当对端NF已配置可以支持的缺省通知端点组编号，需要删除归属于该缺省通知端点组编号的缺省通知端点信息时，使用该命令。执行成功后，对端NF删除了一个可以支持的缺省通知端点信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个缺省通知端点组编号的所有缺省通知端点组参数配置都已经删除，建议删除该缺省通知端点组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，标识该缺省通知端点组参数归属于哪个缺省通知端点组编号。该编号通过SHOW SBIDLFTNOTEENDPOINTARRID命令查询。
@@ -14467,7 +14467,7 @@ VERSIONARRAY|API版本组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14480,20 +14480,20 @@ DEL SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1;
 #### 查询缺省通知端点组参数配置(SHOW SBIDLFTNOTEENDPOINTARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询缺省通知端点组参数配置。当需要查询已经配置的缺省通知端点组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有缺省通知端点组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，标识该缺省通知端点组参数归属于哪个缺省通知端点组编号。该编号通过SHOW SBIDLFTNOTEENDPOINTARRID命令查询。
@@ -14506,10 +14506,10 @@ VERSIONARRAY|API版本组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是缺省通知端点组参数配置的唯一标识。
 ARRAYID|缺省通知端点组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置缺省通知端点组编号，标识该缺省通知端点组参数归属于哪个缺省通知端点组编号。该编号通过SHOW SBIDLFTNOTEENDPOINTARRID命令查询。
@@ -14522,7 +14522,7 @@ VERSIONARRAY|API版本组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14545,7 +14545,7 @@ SHOW SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1
 # 对端NF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 本地NRF功能需要配置出服务提供者（对端）的完整NFProfile，NFProfile中包含了基本信息参数、与特定NF类型有关的NF扩展信息参数以及服务实例参数。对端NF配置包含了与上述所有参数对应的一系列配置。 
@@ -14553,7 +14553,7 @@ SHOW SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该组命令用于配置对端NFProfile包含的NF基本信息、NF扩展信息和NF服务实例。当启用本地NRF功能时，需要配置该组命令。如果不配置该组命令，则无法生成对端NFProfile，导致服务使用者从本地NRF配置信息中发现服务提供者失败，从而导致发现流程失败。 
@@ -14561,7 +14561,7 @@ SHOW SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -14572,7 +14572,7 @@ SHOW SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1
 ## 对端NF基本信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 在5GC的实际使用中，存在服务使用者（本端）无法通过NRF发现服务提供者（对端）的场景，此时服务使用者通过本地NRF配置可以发现服务提供者。 
@@ -14586,7 +14586,7 @@ SHOW SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 对端NF基本信息配置即对应本地NRF配置的对端NFProfile的基本信息参数。当启用本地NRF功能时，需要配置该组命令。如果不配置该组命令，则NFProfile不能携带NF基本信息，当服务使用者从本地NRF配置信息中发现服务提供者时，无法根据NF基本信息中的参数进行匹配，可能导致发现失败。 
@@ -14594,7 +14594,7 @@ SHOW SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -14605,22 +14605,22 @@ SHOW SBIDLFTNOTEENDPOINTARRPARAM:INDEX=1
 ### 新增对端NF基本信息配置(ADD SBIPEERNFBASEINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增对端NF基本信息配置。当本地NRF配置中所配置的对端NFProfile需要携带基本信息字段时，使用该命令。命令执行成功后，本地NRF配置中会新增一个对端NFProfile及其基本信息字段。该配置中的“对端NF基本信息编号”可以被对端NF扩展信息配置及对端NF服务实例配置引用。 
 
-对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE](../mml/1220816.html)命令查询。
+对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 NFINSTANCEID|NF实例标识|参数可选性: 必选参数类型: 字符串参数范围: 0-63|该参数用于设置NF实例的唯一标识。必须全局范围内唯一。
@@ -14655,10 +14655,10 @@ SCPDOMAIN|NF归属的SCP域|参数可选性: 任选参数类型: 字符串参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 NFINSTANCEID|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-63|该参数用于设置NF实例的唯一标识。必须全局范围内唯一。
@@ -14693,7 +14693,7 @@ SCPDOMAIN|NF归属的SCP域|参数可选性: 任选参数类型: 字符串参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14706,20 +14706,20 @@ ADD SBIPEERNFBASEINFO:ID=1,NFINSTANCEID="aaa00a00-0a00-000a-a0a0-00aa00a00aa0",N
 ### 修改对端NF基本信息配置(SET SBIPEERNFBASEINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改对端NF基本信息配置。当本地NRF配置中所配置的对端NFProfile中的基本信息字段需要修改时，使用该命令。命令执行成功后，修改后的基本信息字段会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 NFSTATUS|NF状态|参数可选性: 任选参数类型: 枚举，参见枚举定义参数范围: 0-3|该参数用于设置NF实例的状态。INVALID：NF实例的状态为无效的。REGISTERED：NF实例的状态为已注册的。表示NF实例已在NRF中注册，并且可以被其他NF发现SUSPENDED：NF实例的状态为已中止的。表示NF实例已在NRF中注册，但无法运行，无法被其他NF发现。UNDISCOVERABLE：NF实例的状态为无法被发现的。表示NF实例已在NRF中注册，可以运行，但是无法被其他NF发现。
@@ -14752,10 +14752,10 @@ SCPDOMAIN|NF归属的SCP域|参数可选性: 任选参数类型: 字符串参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 NFINSTANCEID|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-63|该参数用于设置NF实例的唯一标识。必须全局范围内唯一。
@@ -14790,7 +14790,7 @@ SCPDOMAIN|NF归属的SCP域|参数可选性: 任选参数类型: 字符串参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14803,30 +14803,30 @@ SET SBIPEERNFBASEINFO:ID=1,NFSTATUS="REGISTERED",NFINSTANCENAME="abc",PLMNLARRAY
 ### 删除对端NF基本信息配置(DEL SBIPEERNFBASEINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除对端NF基本信息配置。当本地NRF配置不再需要配置该对端NFProfile时，使用该命令。命令执行成功后，本地NRF配置中将不包含该对端NFProfile。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除对端NF基本信息配置，需要先删除引用该配置的对端NF扩展信息配置和对端NF服务实例配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询，对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE](../mml/1220816.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除对端NF基本信息配置，需要先删除引用该配置的对端NF扩展信息配置和对端NF服务实例配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询，对端NF服务实例配置通过[SHOW SBIPEERNFSERVICEINSTANCE]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 NFINSTANCEID|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-63|该参数用于设置NF实例的唯一标识。必须全局范围内唯一。
@@ -14861,7 +14861,7 @@ SCPDOMAIN|NF归属的SCP域|参数可选性: 任选参数类型: 字符串参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14874,20 +14874,20 @@ DEL SBIPEERNFBASEINFO:ID=1;
 ### 查询对端NF基本信息配置(SHOW SBIPEERNFBASEINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询对端NF基本信息配置。当需要查询本地NRF配置中所配置的对端NFProfile中的基本信息字段时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 NFINSTANCEID|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-63|该参数用于设置NF实例的唯一标识。必须全局范围内唯一。
@@ -14922,10 +14922,10 @@ SCPDOMAIN|NF归属的SCP域|参数可选性: 任选参数类型: 字符串参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF基本信息编号，该编号是对端NF基本信息的唯一标识，被对端NF扩展信息配置及对端NF服务实例配置引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。对端NF服务实例配置通过SHOW SBIPEERNFSERVICEINSTANCE命令查询。
 NFINSTANCEID|NF实例标识|参数可选性: 任选参数类型: 字符串参数范围: 0-63|该参数用于设置NF实例的唯一标识。必须全局范围内唯一。
@@ -14960,7 +14960,7 @@ SCPDOMAIN|NF归属的SCP域|参数可选性: 任选参数类型: 字符串参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -14983,7 +14983,7 @@ SHOW SBIPEERNFBASEINFO:ID=1
 ## 对端NF扩展信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 对端NF扩展信息配置即对应所有与特定NF类型有关的NF扩展信息，例如AMF信息、SMF信息等等。 
@@ -14991,7 +14991,7 @@ SHOW SBIPEERNFBASEINFO:ID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该配置通过引用“NF扩展信息配置”中单个NF信息配置编号的方式，来组织成NFProfile中的NF扩展信息，注意必须引用与NFProfile中NF类型参数一致的NF信息配置编号。当启用本地NRF功能时，需要配置该组命令。如果不配置该组命令，则NFProfile不能携带NF扩展信息，当服务使用者从本地NRF配置信息中发现服务提供者时，无法根据NF扩展信息中的参数进行匹配，可能导致发现失败。 
@@ -14999,7 +14999,7 @@ SHOW SBIPEERNFBASEINFO:ID=1
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -15010,22 +15010,22 @@ SHOW SBIPEERNFBASEINFO:ID=1
 ### 新增对端NF扩展信息配置(ADD SBIPEERNFEXTINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增对端NF扩展信息。当本地NRF配置中所配置的对端NFProfile需要携带扩展信息字段时，使用该命令。命令执行成功后，在本地NRF发现的对端NFProfile中将包含NF扩展信息字段。 
 
 
-[](None)注意事项 
+注意事项 
 
-在配置NF扩展信息之前需要先配置对端NF基本信息，二者通过对端NF信息编号做关联。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+在配置NF扩展信息之前需要先配置对端NF基本信息，二者通过对端NF信息编号做关联。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 系统支持的该配置项最大记录数为1024。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 AMFINFO|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置AMF信息编号，AMF信息编号通过SHOW SBIAMFINFO命令查询。当对端NF类型是AMF时，配置此参数。如果不配置，则对端NFProfile不包含AMF信息。
@@ -15045,10 +15045,10 @@ OCSINFO|OCS信息编号|参数可选性: 任选参数类型: 数字参数范围:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 AMFINFO|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置AMF信息编号，AMF信息编号通过SHOW SBIAMFINFO命令查询。当对端NF类型是AMF时，配置此参数。如果不配置，则对端NFProfile不包含AMF信息。
@@ -15068,7 +15068,7 @@ OCSINFO|OCS信息编号|参数可选性: 任选参数类型: 数字参数范围:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15081,20 +15081,20 @@ ADD SBIPEERNFEXTINFO:ID=1,UDRINFO=1
 ### 修改对端NF扩展信息配置(SET SBIPEERNFEXTINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改对端NF扩展信息。当本地NRF配置中所配置的对端NFProfile携带的扩展信息字段需要修改时，使用该命令。命令执行成功后，修改后的基本信息字段会呈现在本地NRF配置中所配置的对端NFProfile的扩展信息字段中。 
 
 
-[](None)注意事项 
+注意事项 
 
-修改对端NF扩展信息，需要保证对端NF扩展信息已经存在，该信息通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+修改对端NF扩展信息，需要保证对端NF扩展信息已经存在，该信息通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 AMFINFO|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置AMF信息编号，AMF信息编号通过SHOW SBIAMFINFO命令查询。当对端NF类型是AMF时，配置此参数。如果不配置，则对端NFProfile不包含AMF信息。
@@ -15114,10 +15114,10 @@ OCSINFO|OCS信息编号|参数可选性: 任选参数类型: 数字参数范围:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 AMFINFO|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置AMF信息编号，AMF信息编号通过SHOW SBIAMFINFO命令查询。当对端NF类型是AMF时，配置此参数。如果不配置，则对端NFProfile不包含AMF信息。
@@ -15137,7 +15137,7 @@ OCSINFO|OCS信息编号|参数可选性: 任选参数类型: 数字参数范围:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15150,30 +15150,30 @@ SET SBIPEERNFEXTINFO:ID=1,UDRINFO=1
 ### 删除对端NF扩展信息配置(DEL SBIPEERNFEXTINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除对端NF扩展信息。当本地NRF配置中所配置的对端NFProfile不需要携带扩展信息字段时，使用该命令。命令执行成功后，在本地NRF发现的对端NFProfile将不再包含NF扩展信息字段。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除对端NF扩展信息配置，需要先查询对应的对端NF信息编号，再使用对端NF信息编号进行删除。对端NF信息编号通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+删除对端NF扩展信息配置，需要先查询对应的对端NF信息编号，再使用对端NF信息编号进行删除。对端NF信息编号通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 AMFINFO|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置AMF信息编号，AMF信息编号通过SHOW SBIAMFINFO命令查询。当对端NF类型是AMF时，配置此参数。如果不配置，则对端NFProfile不包含AMF信息。
@@ -15193,7 +15193,7 @@ OCSINFO|OCS信息编号|参数可选性: 任选参数类型: 数字参数范围:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15206,20 +15206,20 @@ DEL SBIPEERNFEXTINFO:ID=1
 ### 查询对端NF扩展信息配置(SHOW SBIPEERNFEXTINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-本命令用于查询对端NF扩展信息。通常使用对端NF信息编号查询对应的NF扩展信息编号，即网元特有的信息编号，比如AMF信息编号、SMF信息编号等。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+本命令用于查询对端NF扩展信息。通常使用对端NF信息编号查询对应的NF扩展信息编号，即网元特有的信息编号，比如AMF信息编号、SMF信息编号等。对端NF基本信息配置通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 AMFINFO|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置AMF信息编号，AMF信息编号通过SHOW SBIAMFINFO命令查询。当对端NF类型是AMF时，配置此参数。如果不配置，则对端NFProfile不包含AMF信息。
@@ -15239,10 +15239,10 @@ OCSINFO|OCS信息编号|参数可选性: 任选参数类型: 数字参数范围:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|对端NF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置对端NF扩展信息关联的对端NF信息编号，该编号通过SHOW SBIPEERNFBASEINFO命令查询。
 AMFINFO|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置AMF信息编号，AMF信息编号通过SHOW SBIAMFINFO命令查询。当对端NF类型是AMF时，配置此参数。如果不配置，则对端NFProfile不包含AMF信息。
@@ -15262,7 +15262,7 @@ OCSINFO|OCS信息编号|参数可选性: 任选参数类型: 数字参数范围:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15285,7 +15285,7 @@ SHOW SBIPEERNFEXTINFO:ID=1
 # 对端NF服务实例配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 5GC采用了SBA（Service Based Architecture，基于服务的架构）架构，基于服务的设计理念，每个NF以服务的方式进行呈现，该服务为NF可以提供的一组服务。 
@@ -15295,19 +15295,19 @@ SHOW SBIPEERNFEXTINFO:ID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能中，需要配置对端NF可以提供的服务信息时，需要使用该命令。 
 
-该配置依赖于对端NF配置，归属NF编号标识了该服务的归属关系。该编号通过[SHOW SBIPEERNFBASEINFO](../mml/1220808.html)命令查询。
+该配置依赖于对端NF配置，归属NF编号标识了该服务的归属关系。该编号通过[SHOW SBIPEERNFBASEINFO]命令查询。
 
 如果对端NF配置没有关联任何一个对端NF服务实例配置，则在服务发现时，不会匹配到该NF。 
 
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -15318,12 +15318,12 @@ SHOW SBIPEERNFEXTINFO:ID=1
 ## 新增对端NF服务实例配置(ADD SBIPEERNFSERVICEINSTANCE) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增对端NF服务实例配置。当本地NRF配置的NF实例需要增加可以为5GC网络中其他NF提供的服务时，使用该命令。执行成功后，该NF实例新增了一个可以提供的服务，该服务在被其他NF服务发现时进行匹配和使用。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -15335,10 +15335,10 @@ SHOW SBIPEERNFEXTINFO:ID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 NFINDEX|归属NF编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置本次配置的服务实例归属的NF，用NF编号进行标识，该NF编号通过SHOW SBIPEERNFBASEINFO命令查询。
@@ -15369,10 +15369,10 @@ PLMNSNSSAIARRAY|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 NFINDEX|归属NF编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置本次配置的服务实例归属的NF，用NF编号进行标识，该NF编号通过SHOW SBIPEERNFBASEINFO命令查询。
@@ -15403,7 +15403,7 @@ PLMNSNSSAIARRAY|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15416,12 +15416,12 @@ ADD SBIPEERNFSERVICEINSTANCE:INDEX=1,NFINDEX=1,SRVINSTANCEID="1",SERVICENAME="NN
 ## 修改对端NF服务实例配置(SET SBIPEERNFSERVICEINSTANCE) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改对端NF服务实例配置。当本地NRF配置的NF实例需要修改可以为5GC网络中其他NF提供的服务时，例如：服务实例状态、协议模式等，使用该命令。执行成功，该NF实例修改了一个可以提供的服务，该服务在被其他NF服务发现时进行匹配和使用。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -15433,10 +15433,10 @@ ADD SBIPEERNFSERVICEINSTANCE:INDEX=1,NFINDEX=1,SRVINSTANCEID="1",SERVICENAME="NN
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 NFINDEX|归属NF编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置本次配置的服务实例归属的NF，用NF编号进行标识，该NF编号通过SHOW SBIPEERNFBASEINFO命令查询。
@@ -15467,10 +15467,10 @@ PLMNSNSSAIARRAY|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 NFINDEX|归属NF编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置本次配置的服务实例归属的NF，用NF编号进行标识，该NF编号通过SHOW SBIPEERNFBASEINFO命令查询。
@@ -15501,7 +15501,7 @@ PLMNSNSSAIARRAY|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15514,30 +15514,30 @@ SET SBIPEERNFSERVICEINSTANCE:INDEX=1,NFINDEX=1,SRVINSTANCEID="1",SERVICENAME="NN
 ## 删除对端NF服务实例配置(DEL SBIPEERNFSERVICEINSTANCE) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除对端NF服务实例配置。当本地NRF配置的NF实例不再为5GC网络中其他NF提供某个服务时，使用该命令。执行成功后，该NF删除了一个可以提供的服务，在被其他NF服务发现时也不会再匹配和使用该服务。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 NFINDEX|归属NF编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置本次配置的服务实例归属的NF，用NF编号进行标识，该NF编号通过SHOW SBIPEERNFBASEINFO命令查询。
@@ -15568,7 +15568,7 @@ PLMNSNSSAIARRAY|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15581,20 +15581,20 @@ DEL SBIPEERNFSERVICEINSTANCE:INDEX=1
 ## 查询对端NF服务实例配置(SHOW SBIPEERNFSERVICEINSTANCE) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询对端NF服务实例配置。当需要查询某个服务的具体信息时，使用该命令。执行成功后，会返回该服务实例的具体配置信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 NFINDEX|归属NF编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置本次配置的服务实例归属的NF，用NF编号进行标识，该NF编号通过SHOW SBIPEERNFBASEINFO命令查询。
@@ -15625,10 +15625,10 @@ PLMNSNSSAIARRAY|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该配置索引全局唯一。用于唯一标识一个服务实例。
 NFINDEX|归属NF编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置本次配置的服务实例归属的NF，用NF编号进行标识，该NF编号通过SHOW SBIPEERNFBASEINFO命令查询。
@@ -15659,7 +15659,7 @@ PLMNSNSSAIARRAY|PLMN S-NSSAI组编号|参数可选性: 任选参数类型: 数�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15682,7 +15682,7 @@ SHOW SBIPEERNFSERVICEINSTANCE:INDEX=1
 # NF扩展信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NF扩展信息配置包含了所有单个NF扩展信息配置，例如AMF信息、SMF信息等等。单个NF扩展信息配置编号被“对端NF扩展信息配置”引用，表现为NFProfile中的单个NF扩展信息参数。 
@@ -15690,7 +15690,7 @@ NF扩展信息配置包含了所有单个NF扩展信息配置，例如AMF信息�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 该组命令用于配置所有的单个NF扩展信息。当启用本地NRF功能时，需要配置该组命令。如果不配置该组命令，则NFProfile不能携带NF扩展信息，当服务使用者从本地NRF配置信息中发现服务提供者时，无法根据NF扩展信息中的参数进行匹配，可能导致发现失败。 
@@ -15698,7 +15698,7 @@ NF扩展信息配置包含了所有单个NF扩展信息配置，例如AMF信息�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -15709,7 +15709,7 @@ NF扩展信息配置包含了所有单个NF扩展信息配置，例如AMF信息�
 ## AMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF注册时，如果对端的NF(网络功能，Network Function)类型为AMF，注册请求中携带的对端NFProfile参数可以包含AMF信息(AmfInfo)参数，该参数又包含了一些通用或AMF特有的参数。 
@@ -15719,7 +15719,7 @@ NF扩展信息配置包含了所有单个NF扩展信息配置，例如AMF信息�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 AMF配置为命令树目录，下面包含了AMF信息配置。AMF信息配置即对应本地NRF配置的对端NFProfile的AMF信息参数，如果不配置，则对端NFProfile缺少AMF信息参数，本端如果需要发现可用的对端AMF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -15727,7 +15727,7 @@ AMF配置为命令树目录，下面包含了AMF信息配置。AMF信息配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -15738,7 +15738,7 @@ AMF配置为命令树目录，下面包含了AMF信息配置。AMF信息配置�
 ### AMF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF注册时，如果对端的NF(网络功能，Network Function)类型为AMF，注册请求中携带的对端NFProfile参数可以包含AMF信息(AmfInfo)参数，该参数又包含了一些通用或AMF特有的参数。 
@@ -15748,7 +15748,7 @@ AMF配置为命令树目录，下面包含了AMF信息配置。AMF信息配置�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 AMF信息配置即对应本地NRF配置的对端NFProfile的AMF信息参数，如果不配置，则对端NFProfile缺少AMF信息参数，本端如果需要发现可用的对端AMF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -15756,7 +15756,7 @@ AMF信息配置即对应本地NRF配置的对端NFProfile的AMF信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -15767,20 +15767,20 @@ AMF信息配置即对应本地NRF配置的对端NFProfile的AMF信息参数，�
 #### 新增AMF信息配置(ADD SBIAMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增AMF信息配置。当启用本地NRF功能时，执行该命令。命令执行成功后，本配置可以被对端NF扩展信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 AMFREGIONID|AMF区域标识|参数可选性: 必选参数类型: 字符串参数范围: 2-2|该参数用于设置AMF区域标识，格式为2个十六进制字符，范围是A-F或a-f或0-9。当本地NRF功能处理服务发现请求时，会比较发现请求中的AMF区域标识与配置的AMF区域标识是否一致，如果一致则认为匹配成功。
@@ -15794,10 +15794,10 @@ RMVBAKGUAMIARRAY|迁移备用GUAMI组编号|参数可选性: 任选参数类型:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 AMFREGIONID|AMF区域标识|参数可选性: 任选参数类型: 字符串参数范围: 2-2|该参数用于设置AMF区域标识，格式为2个十六进制字符，范围是A-F或a-f或0-9。当本地NRF功能处理服务发现请求时，会比较发现请求中的AMF区域标识与配置的AMF区域标识是否一致，如果一致则认为匹配成功。
@@ -15811,7 +15811,7 @@ RMVBAKGUAMIARRAY|迁移备用GUAMI组编号|参数可选性: 任选参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15824,20 +15824,20 @@ ADD SBIAMFINFO:ID=1,AMFREGIONID="12",AMFSETIDENT="3a1",GUAMIARRAY=1,TAIARRAY=1,T
 #### 修改AMF信息配置(SET SBIAMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改AMF信息配置。当AMF信息编号关联的AMF区域标识等参数发生变更时，执行该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 AMFREGIONID|AMF区域标识|参数可选性: 任选参数类型: 字符串参数范围: 2-2|该参数用于设置AMF区域标识，格式为2个十六进制字符，范围是A-F或a-f或0-9。当本地NRF功能处理服务发现请求时，会比较发现请求中的AMF区域标识与配置的AMF区域标识是否一致，如果一致则认为匹配成功。
@@ -15851,10 +15851,10 @@ RMVBAKGUAMIARRAY|迁移备用GUAMI组编号|参数可选性: 任选参数类型:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 AMFREGIONID|AMF区域标识|参数可选性: 任选参数类型: 字符串参数范围: 2-2|该参数用于设置AMF区域标识，格式为2个十六进制字符，范围是A-F或a-f或0-9。当本地NRF功能处理服务发现请求时，会比较发现请求中的AMF区域标识与配置的AMF区域标识是否一致，如果一致则认为匹配成功。
@@ -15868,7 +15868,7 @@ RMVBAKGUAMIARRAY|迁移备用GUAMI组编号|参数可选性: 任选参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15881,30 +15881,30 @@ SET  SBIAMFINFO:ID=1,AMFREGIONID="34",AMFSETIDENT="3bc"
 #### 删除AMF信息配置(DEL SBIAMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除AMF信息配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除后，服务使用者如果需要发现可用的AMF时，就无法进行有效的发现参数匹配，可能导致业务失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 AMFREGIONID|AMF区域标识|参数可选性: 任选参数类型: 字符串参数范围: 2-2|该参数用于设置AMF区域标识，格式为2个十六进制字符，范围是A-F或a-f或0-9。当本地NRF功能处理服务发现请求时，会比较发现请求中的AMF区域标识与配置的AMF区域标识是否一致，如果一致则认为匹配成功。
@@ -15918,7 +15918,7 @@ RMVBAKGUAMIARRAY|迁移备用GUAMI组编号|参数可选性: 任选参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15931,20 +15931,20 @@ DEL SBIAMFINFO:ID=1
 #### 查询AMF信息配置(SHOW SBIAMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询AMF信息配置，包括AMF信息编号，及其关联的AMF区域标识等参数。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 AMFREGIONID|AMF区域标识|参数可选性: 任选参数类型: 字符串参数范围: 2-2|该参数用于设置AMF区域标识，格式为2个十六进制字符，范围是A-F或a-f或0-9。当本地NRF功能处理服务发现请求时，会比较发现请求中的AMF区域标识与配置的AMF区域标识是否一致，如果一致则认为匹配成功。
@@ -15958,10 +15958,10 @@ RMVBAKGUAMIARRAY|迁移备用GUAMI组编号|参数可选性: 任选参数类型:
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AMF信息编号。
 AMFREGIONID|AMF区域标识|参数可选性: 任选参数类型: 字符串参数范围: 2-2|该参数用于设置AMF区域标识，格式为2个十六进制字符，范围是A-F或a-f或0-9。当本地NRF功能处理服务发现请求时，会比较发现请求中的AMF区域标识与配置的AMF区域标识是否一致，如果一致则认为匹配成功。
@@ -15975,7 +15975,7 @@ RMVBAKGUAMIARRAY|迁移备用GUAMI组编号|参数可选性: 任选参数类型:
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -15998,7 +15998,7 @@ SHOW SBIAMFINFO:ID=1
 ## AUSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF注册时，如果对端的NF(网络功能，Network Function)类型为AUSF，注册请求中携带的对端NFProfile参数可以包含AUSF信息(AusfInfo)参数，该参数又包含了一些通用或AUSF特有的参数。 
@@ -16008,7 +16008,7 @@ SHOW SBIAMFINFO:ID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 AUSF配置为命令树目录，下面包含了AUSF信息配置。AUSF信息配置即对应本地NRF配置的对端NFProfile的AUSF信息参数，如果不配置，则对端NFProfile缺少AUSF信息参数，本端如果需要发现可用的对端AUSF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -16016,7 +16016,7 @@ AUSF配置为命令树目录，下面包含了AUSF信息配置。AUSF信息配�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16027,7 +16027,7 @@ AUSF配置为命令树目录，下面包含了AUSF信息配置。AUSF信息配�
 ### AUSF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF注册时，如果对端的NF(网络功能，Network Function)类型为AUSF，注册请求中携带的对端NFProfile参数可以包含AUSF信息(AusfInfo)参数，该参数又包含了一些通用或AUSF特有的参数。 
@@ -16037,7 +16037,7 @@ AUSF配置为命令树目录，下面包含了AUSF信息配置。AUSF信息配�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 AUSF信息配置即对应本地NRF配置的对端NFProfile的AUSF信息参数，如果不配置，则对端NFProfile缺少AUSF信息参数，本端如果需要发现可用的对端AUSF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -16045,7 +16045,7 @@ AUSF信息配置即对应本地NRF配置的对端NFProfile的AUSF信息参数，
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16056,20 +16056,20 @@ AUSF信息配置即对应本地NRF配置的对端NFProfile的AUSF信息参数，
 #### 新增AUSF信息配置(ADD SBIAUSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增AUSF信息配置。当启用本地NRF功能时，执行该命令。命令执行成功后，本配置可以被对端NF扩展信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置NF组标识，NF组标识是一组AUSF的标识符。如果不配置，则该AUSF不属于任何AUSF组。
@@ -16079,10 +16079,10 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置NF组标识，NF组标识是一组AUSF的标识符。如果不配置，则该AUSF不属于任何AUSF组。
@@ -16092,7 +16092,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16105,20 +16105,20 @@ ADD SBIAUSFINFO:ID=1,GROUPID="nfGroup1",SUPIRANGEARRAY=1,ROUTINDARRAY=1
 #### 修改AUSF信息配置(SET SBIAUSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改AUSF信息配置。当AUSF信息编号关联的NF组标识、SUPI范围组编号、路由指示组编号发生变更时，执行该命令 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置NF组标识，NF组标识是一组AUSF的标识符。如果不配置，则该AUSF不属于任何AUSF组。
@@ -16128,10 +16128,10 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置NF组标识，NF组标识是一组AUSF的标识符。如果不配置，则该AUSF不属于任何AUSF组。
@@ -16141,7 +16141,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16154,30 +16154,30 @@ SET SBIAUSFINFO:ID=1,GROUPID="nfGroup2"
 #### 删除AUSF信息配置(DEL SBIAUSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除AUSF信息配置。 
 
 
-[](None)注意事项 
+注意事项 
 
 删除后，服务使用者如果需要发现可用的AUSF时，就无法进行有效的发现参数匹配，可能导致业务失败。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置NF组标识，NF组标识是一组AUSF的标识符。如果不配置，则该AUSF不属于任何AUSF组。
@@ -16187,7 +16187,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16200,20 +16200,20 @@ DEL SBIAUSFINFO:ID=1
 #### 查询AUSF信息配置(SHOW SBIAUSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询AUSF信息配置，包括AUSF信息编号，及其关联的NF组标识、SUPI范围组编号、路由指示组编号参数。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置NF组标识，NF组标识是一组AUSF的标识符。如果不配置，则该AUSF不属于任何AUSF组。
@@ -16223,10 +16223,10 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|AUSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置AUSF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置NF组标识，NF组标识是一组AUSF的标识符。如果不配置，则该AUSF不属于任何AUSF组。
@@ -16236,7 +16236,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16259,7 +16259,7 @@ SHOW SBIAUSFINFO:ID=1
 ## BSF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF注册时，如果对端的NF（网络功能，Network Function）类型为BSF，注册请求中携带的对端NFProfile参数可以包含BSF信息（BsfInfo）参数，该参数又包含了一些通用或BSF特有的参数。 
@@ -16269,7 +16269,7 @@ SHOW SBIAUSFINFO:ID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能中，BSF配置包括： 
@@ -16283,7 +16283,7 @@ BSF信息配置：用于配置具体的BSF信息，如：IPv4 域名组标识、
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16294,7 +16294,7 @@ BSF信息配置：用于配置具体的BSF信息，如：IPv4 域名组标识、
 ### BSF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF注册时，如果对端的NF（网络功能，Network Function）类型为BSF，注册请求中携带的对端NFProfile参数可以包含BSF信息（BsfInfo）参数，该参数又包含了一些通用或BSF特有的参数。 
@@ -16304,7 +16304,7 @@ BSF信息配置：用于配置具体的BSF信息，如：IPv4 域名组标识、
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 BSF信息配置即对应本地NRF配置的对端NFProfile的BSF信息参数。当启用本地NRF功能时，需要配置该组命令。如果不配置，则对端NFProfile缺少BSF信息参数，本端如果需要发现可用的对端BSF时，就无法进行有效的发现参数匹配，可能导致业务失败。 
@@ -16312,7 +16312,7 @@ BSF信息配置即对应本地NRF配置的对端NFProfile的BSF信息参数。�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16323,28 +16323,28 @@ BSF信息配置即对应本地NRF配置的对端NFProfile的BSF信息参数。�
 #### 新增BSF信息配置(ADD SBIBSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增BSF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带BSF信息时，使用该命令。命令执行成功后，BSF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
+该命令用于新增BSF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带BSF信息时，使用该命令。命令执行成功后，BSF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该BSF信息配置，需要先新增域组编号、DNN组编号、IPv4地址范围组编号和IPv6前缀范围组编号。 
 
-域组编号通过[SHOW SBIDOMAINARRID](../mml/1220604.html)命令查询。
+域组编号通过[SHOW SBIDOMAINARRID]命令查询。
 
-DNN组编号通过[SHOW SBIDNNARRID](../mml/1220760.html)命令查询。
+DNN组编号通过[SHOW SBIDNNARRID]命令查询。
 
-IPv4地址范围组编号通过[SHOW SBIIPV4ADDRRANGEARRID](../mml/1220768.html)命令查询。
+IPv4地址范围组编号通过[SHOW SBIIPV4ADDRRANGEARRID]命令查询。
 
-IPv6前缀范围组编号通过[SHOW SBIIPV6PREFIXRANGEARRID](../mml/1220776.html)命令查询。
-
-
-[](None)输入参数说明 
+IPv6前缀范围组编号通过[SHOW SBIIPV6PREFIXRANGEARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 IPV4RNGARRAY|IPv4 地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置IPv4地址范围组编号，指BSF处理的IPv4地址范围的列表。该编号可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -16355,10 +16355,10 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 0
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 IPV4RNGARRAY|IPv4 地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置IPv4地址范围组编号，指BSF处理的IPv4地址范围的列表。该编号可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -16369,7 +16369,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 0
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16382,20 +16382,20 @@ ADD SBIBSFINFO:ID=3,IPV4RNGARRAY=1,IPDOMAINARRAY=1,IPV6PREFIXRNGARRAY=1,DNNARRAY
 #### 修改BSF信息配置(SET SBIBSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改BSF信息配置。当本地NRF配置中所配置的对端NFProfile携带的BSF信息需要变更时，使用该命令。命令执行成功后，修改后的BSF信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 IPV4RNGARRAY|IPv4 地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置IPv4地址范围组编号，指BSF处理的IPv4地址范围的列表。该编号可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -16406,10 +16406,10 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 0
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 IPV4RNGARRAY|IPv4 地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置IPv4地址范围组编号，指BSF处理的IPv4地址范围的列表。该编号可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -16420,7 +16420,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 0
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16433,30 +16433,30 @@ SET SBIBSFINFO:ID=1,IPV4RNGARRAY=65535
 #### 删除BSF信息配置(DEL SBIBSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除BSF信息配置。当本地NRF配置中所配置的对端NFProfile不需要携带该BSF信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该BSF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该BSF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该BSF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 IPV4RNGARRAY|IPv4 地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置IPv4地址范围组编号，指BSF处理的IPv4地址范围的列表。该编号可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -16467,7 +16467,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 0
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16480,20 +16480,20 @@ DEL SBIBSFINFO:ID=1
 #### 查询BSF信息配置(SHOW SBIBSFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询BSF信息配置。当需要查询对端NFProfile携带的BSF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 IPV4RNGARRAY|IPv4 地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置IPv4地址范围组编号，指BSF处理的IPv4地址范围的列表。该编号可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -16504,10 +16504,10 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 0
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|BSF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置BSF信息编号。
 IPV4RNGARRAY|IPv4 地址范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置IPv4地址范围组编号，指BSF处理的IPv4地址范围的列表。该编号可以通过SHOW SBIIPV4ADDRRANGEARRID命令查询。
@@ -16518,7 +16518,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 0
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16541,7 +16541,7 @@ SHOW SBIBSFINFO:ID=1
 ## CHF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF（网络存储功能，Network Repository Function）注册时，如果对端的NF(网络功能，Network Function)类型为CHF（计费功能，Charging Function），注册请求中携带的对端NFProfile参数可以包含CHF信息（ChfInfo）参数，该参数又包含了一些通用或CHF特有的参数。 
@@ -16551,7 +16551,7 @@ SHOW SBIBSFINFO:ID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 CHF配置为命令树目录，下面包含了CHF信息配置。CHF信息配置即对应本地NRF配置的对端NFProfile的CHF信息参数，如果不配置，则对端NFProfile缺少CHF信息参数，本端如果需要发现可用的对端CHF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -16559,7 +16559,7 @@ CHF配置为命令树目录，下面包含了CHF信息配置。CHF信息配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16570,7 +16570,7 @@ CHF配置为命令树目录，下面包含了CHF信息配置。CHF信息配置�
 ### CHF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF（网络存储功能，Network Repository Function）注册时，如果对端的NF(网络功能，Network Function)类型为CHF（计费功能，Charging Function），注册请求中携带的对端NFProfile参数可以包含CHF信息（ChfInfo）参数，该参数又包含了一些通用或CHF特有的参数。 
@@ -16580,7 +16580,7 @@ CHF配置为命令树目录，下面包含了CHF信息配置。CHF信息配置�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 CHF信息配置即对应本地NRF配置的对端NFProfile的CHF信息参数，如果不配置，则对端NFProfile缺少CHF信息参数，本端如果需要发现可用的对端CHF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -16588,7 +16588,7 @@ CHF信息配置即对应本地NRF配置的对端NFProfile的CHF信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16599,20 +16599,20 @@ CHF信息配置即对应本地NRF配置的对端NFProfile的CHF信息参数，�
 #### 新增CHF信息配置(ADD SBICHFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增CHF信息。当本地NRF配置中所配置的对端NFProfile需要携带CHF信息时，使用该命令。命令执行成功后，CHF信息编号可以被对端NF扩展信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 系统支持的该配置项最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组CHF的标识符。如果不配置，则该CHF不属于任何CHF组。测试使用
@@ -16623,10 +16623,10 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组CHF的标识符。如果不配置，则该CHF不属于任何CHF组。
@@ -16637,7 +16637,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16650,20 +16650,20 @@ ADD SBICHFINFO:ID=1,GPSIRANGEARRAY=1
 #### 修改CHF信息配置(SET SBICHFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改CHF信息。当本地NRF配置中所配置的对端NFProfile携带的CHF信息需要变更时，使用该命令。命令执行成功后，修改后的CHF信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
-修改CHF信息，需要保证CHF信息编号已经存在，该编号通过[SHOW SBICHFINFO](../mml/1220964.html)命令查询。
-
-
-[](None)输入参数说明 
+修改CHF信息，需要保证CHF信息编号已经存在，该编号通过[SHOW SBICHFINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组CHF的标识符。如果不配置，则该CHF不属于任何CHF组。测试使用
@@ -16674,10 +16674,10 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组CHF的标识符。如果不配置，则该CHF不属于任何CHF组。
@@ -16688,7 +16688,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16701,30 +16701,30 @@ SET  SBICHFINFO:ID=1,GPSIRANGEARRAY=1
 #### 删除CHF信息配置(DEL SBICHFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除CHF信息。当本地NRF配置中所配置的对端NFProfile不需要携带该CHF信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该CHF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该CHF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该CHF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组CHF的标识符。如果不配置，则该CHF不属于任何CHF组。
@@ -16735,7 +16735,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16748,20 +16748,20 @@ DEL SBICHFINFO:ID=1
 #### 查询CHF信息配置(SHOW SBICHFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询CHF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组CHF的标识符。如果不配置，则该CHF不属于任何CHF组。测试使用
@@ -16772,10 +16772,10 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CHF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置CHF信息编号。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组CHF的标识符。如果不配置，则该CHF不属于任何CHF组。
@@ -16786,7 +16786,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16809,7 +16809,7 @@ SHOW SBICHFINFO:ID=1
 ## GMLC配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GMLC（Gateway for Mobile Location Center，移动定位中心网关）设备用于与定位客户端交互，执行定位客户端的定位请求并向其回送定位结果。 
@@ -16821,7 +16821,7 @@ GMLC（Gateway for Mobile Location Center，移动定位中心网关）设备用
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GMLC配置为命令树目录，下面包含了GMLC信息配置。 
@@ -16831,7 +16831,7 @@ GMLC信息配置用于配置具体的GMLC信息。GMLC信息配置包含两个�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16842,7 +16842,7 @@ GMLC信息配置用于配置具体的GMLC信息。GMLC信息配置包含两个�
 ### GMLC信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 GMLC（Gateway for Mobile Location Center，移动定位中心网关）设备用于与定位客户端交互，执行定位客户端的定位请求并向其回送定位结果。 
@@ -16854,7 +16854,7 @@ GMLC（Gateway for Mobile Location Center，移动定位中心网关）设备用
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 GMLC信息配置即对应本地NRF配置的对端NFProfile的GMLC信息参数。本地NRF功能中，当NF需要和GMLC进行交互时，需要使用该配置。配置完成后，NF可以通过服务发现，发现GMLC并进行交互。如果不配置，则对端NFProfile缺少GMLC信息参数，本端如果需要发现可用的对端GMLC时，就无法进行有效的发现参数匹配，可能导致业务失败。 
@@ -16862,7 +16862,7 @@ GMLC信息配置即对应本地NRF配置的对端NFProfile的GMLC信息参数。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -16873,22 +16873,22 @@ GMLC信息配置即对应本地NRF配置的对端NFProfile的GMLC信息参数。
 #### 新增GMLC信息配置(ADD SBIGMLCINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增GMLC信息配置。当本地NRF配置中所配置的对端NFProfile需要携带GMLC信息时，使用该命令。命令执行成功后，GMLC信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
+该命令用于新增GMLC信息配置。当本地NRF配置中所配置的对端NFProfile需要携带GMLC信息时，使用该命令。命令执行成功后，GMLC信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 对端NF扩展信息配置中引用GMLC信息编号后，则该对端NF具备了GMLC能力。本端可以通过服务发现，发现GMLC并进行交互。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 必选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置GMLC服务的特定的定位客户端类型，如果不配置，则GMLC实例不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -16896,10 +16896,10 @@ CLIENTTYPE|客户端类型|参数可选性: 必选参数类型: 枚举，参见�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置GMLC服务的特定的定位客户端类型，如果不配置，则GMLC实例不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -16907,7 +16907,7 @@ CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16920,20 +16920,20 @@ ADD SBIGMLCINFO:ID=1,CLIENTTYPE="EMERGENCY_SERVICES"&"VALUE_ADDED_SERVICES"&"PLM
 #### 修改GMLC信息配置(SET SBIGMLCINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改GMLC信息配置。当本地NRF配置中所配置的对端NFProfile携带的GMLC信息需要变更时，使用该命令。命令执行成功后，修改后的GMLC信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 必选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置GMLC服务的特定的定位客户端类型，如果不配置，则GMLC实例不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -16941,10 +16941,10 @@ CLIENTTYPE|客户端类型|参数可选性: 必选参数类型: 枚举，参见�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置GMLC服务的特定的定位客户端类型，如果不配置，则GMLC实例不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -16952,7 +16952,7 @@ CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -16965,30 +16965,30 @@ SET SBIGMLCINFO:ID=1,CLIENTTYPE="EMERGENCY_SERVICES"
 #### 删除GMLC信息配置(DEL SBIGMLCINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除GMLC信息配置。当本地NRF配置中所配置的对端NFProfile不需要携带该GMLC信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该GMLC信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该GMLC信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该GMLC信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置GMLC服务的特定的定位客户端类型，如果不配置，则GMLC实例不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -16996,7 +16996,7 @@ CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17009,20 +17009,20 @@ DEL SBIGMLCINFO:ID=1
 #### 查询GMLC信息配置(SHOW SBIGMLCINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询GMLC信息配置。当需要查询对端NFProfile携带的GMLC信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置GMLC服务的特定的定位客户端类型，如果不配置，则GMLC实例不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17030,10 +17030,10 @@ CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|GMLC信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置GMLC信息编号。该编号全局唯一。提供给对端NF扩展信息配置使用。对端NF扩展信息配置可以使用SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置GMLC服务的特定的定位客户端类型，如果不配置，则GMLC实例不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17041,7 +17041,7 @@ CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17064,7 +17064,7 @@ SHOW SBIGMLCINFO:ID=1
 ## LMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LMF（Location Management Function，定位管理功能）是5G核心网中的网络实体，用于具体收集、计算和决定UE的相关位置信息，如：小区信息、接入基站等。 
@@ -17076,7 +17076,7 @@ LMF（Location Management Function，定位管理功能）是5G核心网中的�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 LMF配置为命令树目录，下面包含了LMF信息配置。LMF信息配置即对应本地NRF配置的对端NFProfile的LMF信息参数，如果不配置，则对端NFProfile缺少LMF信息参数，本端如果需要发现可用的对端LMF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该命令。 
@@ -17084,7 +17084,7 @@ LMF配置为命令树目录，下面包含了LMF信息配置。LMF信息配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -17095,7 +17095,7 @@ LMF配置为命令树目录，下面包含了LMF信息配置。LMF信息配置�
 ### LMF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 LMF（Location Management Function，定位管理功能）是5G核心网中的网络实体，用于具体收集、计算和决定UE的相关位置信息，如：小区信息、接入基站等。 
@@ -17107,7 +17107,7 @@ LMF（Location Management Function，定位管理功能）是5G核心网中的�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 LMF信息配置即对应本地NRF配置的对端NFProfile的LMF信息参数，如果不配置，则对端NFProfile缺少LMF信息参数，本端如果需要发现可用的对端LMF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该命令。 
@@ -17115,7 +17115,7 @@ LMF信息配置即对应本地NRF配置的对端NFProfile的LMF信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -17126,20 +17126,20 @@ LMF信息配置即对应本地NRF配置的对端NFProfile的LMF信息参数，�
 #### 新增LMF信息配置(ADD SBILMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增LMF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带LMF信息（例如：服务的客户端类型、支持的接入类型等）时，使用该命令。命令执行成功后，LMF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
+该命令用于新增LMF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带LMF信息（例如：服务的客户端类型、支持的接入类型等）时，使用该命令。命令执行成功后，LMF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 LMF信息配置表最大容量为1024。新增LMF信息时注意不要超过最大容量。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置LMF服务的特定的客户端类型。参数类型为位枚举，默认全选，支持位枚举中所有的客户端类型。如果该参数设置为NULL，则不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17151,10 +17151,10 @@ RATTYPE|支持RAT类型|参数可选性: 任选参数类型: 枚举，参见枚�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置LMF服务的特定的客户端类型。参数类型为位枚举，默认全选，支持位枚举中所有的客户端类型。如果该参数设置为NULL，则不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17166,7 +17166,7 @@ RATTYPE|支持RAT类型|参数可选性: 任选参数类型: 枚举，参见枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17179,20 +17179,20 @@ ADD SBILMFINFO:ID=655,CLIENTTYPE="EMERGENCY_SERVICES",LMFID="lmf_5gc",ACCESSTYPE
 #### 修改LMF信息配置(SET SBILMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改LMF信息配置。当本地NRF配置中所配置的对端NFProfile携带的LMF信息（例如：服务的客户端类型、支持的接入类型等）需要变更时，使用该命令。命令执行成功后，修改后的LMF信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
-LMF信息配置一般与对端NF扩展信息配置配合使用。可以使用命令[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)查询对端NF扩展信息配置。
-
-
-[](None)输入参数说明 
+LMF信息配置一般与对端NF扩展信息配置配合使用。可以使用命令[SHOW SBIPEERNFEXTINFO]查询对端NF扩展信息配置。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置LMF服务的特定的客户端类型。参数类型为位枚举，默认全选，支持位枚举中所有的客户端类型。如果该参数设置为NULL，则不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17204,10 +17204,10 @@ RATTYPE|支持RAT类型|参数可选性: 任选参数类型: 枚举，参见枚�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置LMF服务的特定的客户端类型。参数类型为位枚举，默认全选，支持位枚举中所有的客户端类型。如果该参数设置为NULL，则不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17219,7 +17219,7 @@ RATTYPE|支持RAT类型|参数可选性: 任选参数类型: 枚举，参见枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17232,30 +17232,30 @@ SET SBILMFINFO:ID=655,CLIENTTYPE="EMERGENCY_SERVICES",LMFID="lmf_5gc",ACCESSTYPE
 #### 删除LMF信息配置(DEL SBILMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除LMF信息配置。当本地NRF配置中所配置的对端NFProfile不需要携带该LMF信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该LMF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该LMF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该LMF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置LMF服务的特定的客户端类型。参数类型为位枚举，默认全选，支持位枚举中所有的客户端类型。如果该参数设置为NULL，则不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17267,7 +17267,7 @@ RATTYPE|支持RAT类型|参数可选性: 任选参数类型: 枚举，参见枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17280,20 +17280,20 @@ DEL SBILMFINFO:ID=655
 #### 查询LMF信息配置(SHOW SBILMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询LMF信息配置。当需要查询对端NFProfile携带的LMF信息（例如：服务的客户端类型、支持的接入类型等）时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置LMF服务的特定的客户端类型。参数类型为位枚举，默认全选，支持位枚举中所有的客户端类型。如果该参数设置为NULL，则不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17305,10 +17305,10 @@ RATTYPE|支持RAT类型|参数可选性: 任选参数类型: 枚举，参见枚�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|LMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置LMF信息编号，该编号是LMF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 CLIENTTYPE|客户端类型|参数可选性: 任选参数类型: 枚举，参见枚举定义默认值: EMERGENCY_SERVICES&VALUE_ADDED_SERVICES&PLMN_OPERATOR_SERVICES&LAWFUL_INTERCEPT_SERVICES&PLMN_OPERATOR_BROADCAST_SERVICES&PLMN_OPERATOR_OM&PLMN_OPERATOR_ANONYMOUS_STATISTICS&PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT|该参数用于设置LMF服务的特定的客户端类型。参数类型为位枚举，默认全选，支持位枚举中所有的客户端类型。如果该参数设置为NULL，则不专用于服务特定的客户端类型。注意，如果该参数的值全部都不勾选（包括NULL），即该值缺省，依然默认全选。EMERGENCY_SERVICES：紧急服务。VALUE_ADDED_SERVICES：增值服务。PLMN_OPERATOR_SERVICES：运营商自有服务。LAWFUL_INTERCEPT_SERVICES：合法拦截服务。PLMN_OPERATOR_BROADCAST_SERVICES：运营商广播服务。PLMN_OPERATOR_OM：运营商运维。PLMN_OPERATOR_ANONYMOUS_STATISTICS：运营商匿名统计。PLMN_OPERATOR_TARGET_MS_SERVICE_SUPPORT：运营商终端服务支持。
@@ -17320,7 +17320,7 @@ RATTYPE|支持RAT类型|参数可选性: 任选参数类型: 枚举，参见枚�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17343,7 +17343,7 @@ SHOW SBILMFINFO:ID=655
 ## NWDAF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NWDAF（网络数据分析功能，Network Data Analytics Function）是3GPP在Rel 15的5G标准中引入的网络功能，主要用于网络相关数据的分析。 
@@ -17355,7 +17355,7 @@ NWDAF（网络数据分析功能，Network Data Analytics Function）是3GPP在R
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NWDAF配置为命令树目录，下面包含了NWDAF信息配置。 
@@ -17383,7 +17383,7 @@ TAI范围组编号。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -17394,7 +17394,7 @@ TAI范围组编号。
 ### NWDAF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 NWDAF（网络数据分析功能，Network Data Analytics Function）是3GPP在Rel 15的5G标准中引入的网络功能，主要用于网络相关数据的分析。 
@@ -17406,7 +17406,7 @@ NWDAF（网络数据分析功能，Network Data Analytics Function）是3GPP在R
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 NWDAF信息配置即对应本地NRF配置的对端NFProfile的NWDAF信息参数。本地NRF功能中，当NF需要和NWDAF进行交互时，需要使用该配置。配置完成后，NF可以通过服务发现，发现NWDAF并进行交互。如果不配置，则对端NFProfile缺少NWDAF信息参数，本端如果需要发现可用的对端NWDAF时，就无法进行有效的发现参数匹配，可能导致业务失败。 
@@ -17414,7 +17414,7 @@ NWDAF信息配置即对应本地NRF配置的对端NFProfile的NWDAF信息参数�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -17425,14 +17425,14 @@ NWDAF信息配置即对应本地NRF配置的对端NFProfile的NWDAF信息参数�
 #### 新增NWDAF信息配置(ADD SBINWDAFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增NWDAF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带NWDAF信息时，使用该命令。命令执行成功后，NWDAF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
+该命令用于新增NWDAF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带NWDAF信息时，使用该命令。命令执行成功后，NWDAF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 对端NF扩展信息配置中引用NWDAF信息编号后，则该对端NF具备了NWDAF能力。本端可以通过服务发现，发现NWDAF并进行交互。 
 
 
-[](None)注意事项 
+注意事项 
 
 需要保证引用的如下配置已经存在： 
 
@@ -17446,10 +17446,10 @@ TAI范围组编号：通过命令SHOW SBITAIRANGEARRID查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 TAIARRAY|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。
@@ -17460,10 +17460,10 @@ NWDAFEVENTS|订阅支持的事件|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 TAIARRAY|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。
@@ -17474,7 +17474,7 @@ NWDAFEVENTS|订阅支持的事件|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17487,12 +17487,12 @@ ADD SBINWDAFINFO:ID=655,TAIARRAY=1,TAIRNGARRAY=65535,EVENTIDS="LOAD_LEVEL_INFORM
 #### 修改NWDAF信息配置(SET SBINWDAFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改NWDAF信息配置。当本地NRF配置中所配置的对端NFProfile携带的NWDAF信息需要变更时，使用该命令。命令执行成功后，修改后的NWDAF信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果修改TAI信息，需要保证引用的如下配置已经存在： 
 
@@ -17506,10 +17506,10 @@ TAI范围组编号：通过命令SHOW SBITAIRANGEARRID查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 TAIARRAY|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。
@@ -17520,10 +17520,10 @@ NWDAFEVENTS|订阅支持的事件|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 TAIARRAY|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。
@@ -17534,7 +17534,7 @@ NWDAFEVENTS|订阅支持的事件|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17547,30 +17547,30 @@ SET SBINWDAFINFO:ID=655,TAIARRAY=1,TAIRNGARRAY=1,EVENTIDS="LOAD_LEVEL_INFORMATIO
 #### 删除NWDAF信息配置(DEL SBINWDAFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除NWDAF信息配置。当本地NRF配置中所配置的对端NFProfile不需要携带该NWDAF信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该NWDAF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该NWDAF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该NWDAF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 TAIARRAY|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。
@@ -17581,7 +17581,7 @@ NWDAFEVENTS|订阅支持的事件|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17594,20 +17594,20 @@ DEL SBINWDAFINFO:ID=655
 #### 查询NWDAF信息配置(SHOW SBINWDAFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询NWDAF信息配置。当需要查询对端NFProfile携带的NWDAF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 TAIARRAY|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。
@@ -17618,10 +17618,10 @@ NWDAFEVENTS|订阅支持的事件|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|NWDAF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置NWDAF信息编号，该编号是NWDAF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 TAIARRAY|TAI组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置TAI组编号，该编号通过SHOW SBITAIARRID命令查询。
@@ -17632,7 +17632,7 @@ NWDAFEVENTS|订阅支持的事件|参数可选性: 任选参数类型: 枚举，
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17655,7 +17655,7 @@ SHOW SBINWDAFINFO:ID=655
 ## PCF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PCF（Policy Control Function，策略控制功能）是5G核心网中的网络实体，提供统一的策略框架和控制平面功能的策略规则。 
@@ -17667,7 +17667,7 @@ PCF（Policy Control Function，策略控制功能）是5G核心网中的网络�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PCF配置为命令树目录，下面包含了PCF信息配置。PCF信息配置即对应本地NRF配置的对端NFProfile的PCF信息参数，如果不配置，则对端NFProfile缺少PCF信息参数，本端如果需要发现可用的对端PCF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该命令。 
@@ -17675,7 +17675,7 @@ PCF配置为命令树目录，下面包含了PCF信息配置。PCF信息配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -17686,7 +17686,7 @@ PCF配置为命令树目录，下面包含了PCF信息配置。PCF信息配置�
 ### PCF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 PCF（Policy Control Function，策略控制功能）是5G核心网中的网络实体，提供统一的策略框架和控制平面功能的策略规则。 
@@ -17698,7 +17698,7 @@ PCF（Policy Control Function，策略控制功能）是5G核心网中的网络�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 PCF信息配置即对应本地NRF配置的对端NFProfile的PCF信息参数，如果不配置，则对端NFProfile缺少PCF信息参数，本端如果需要发现可用的对端PCF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该命令。 
@@ -17706,7 +17706,7 @@ PCF信息配置即对应本地NRF配置的对端NFProfile的PCF信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -17717,12 +17717,12 @@ PCF信息配置即对应本地NRF配置的对端NFProfile的PCF信息参数，�
 #### 新增PCF信息配置(ADD SBIPCFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增PCF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带PCF信息（例如：可以提供服务的DNN信息、GPSI范围信息以及SUPI范围信息等）时，使用该命令。命令执行成功后，PCF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
+该命令用于新增PCF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带PCF信息（例如：可以提供服务的DNN信息、GPSI范围信息以及SUPI范围信息等）时，使用该命令。命令执行成功后，PCF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该PCF信息配置，需要保证引用的如下组编号已经存在： 
 
@@ -17739,10 +17739,10 @@ SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 NFGROUPID|NF组编号|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置该PCF实例归属的PCF组标识。PCF组标识表示一组PCF实例。如果未配置，则该PCF实例不属于任何PCF组。该参数无特殊配置原则。
@@ -17756,10 +17756,10 @@ V2XSUPPORTED|是否支持V2X策略/参数|参数可选性: 任选参数类型: �
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 NFGROUPID|NF组编号|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置该PCF实例归属的PCF组标识。PCF组标识表示一组PCF实例。如果未配置，则该PCF实例不属于任何PCF组。该参数无特殊配置原则。
@@ -17773,7 +17773,7 @@ V2XSUPPORTED|是否支持V2X策略/参数|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17786,12 +17786,12 @@ ADD SBIPCFINFO:ID=1,NFGROUPID=1,DNNARRAY=1,GPSIRANGEARRAY=65535,SUPIRANGEARRAY=6
 #### 修改PCF信息配置(SET SBIPCFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改PCF信息配置。当本地NRF配置中所配置的对端NFProfile携带的PCF信息（例如：可以提供服务的DNN信息、GPSI范围信息以及SUPI范围信息等）需要变更时，使用该命令。命令执行成功后，修改后的PCF信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要修改PCF信息配置，需要保证引用的组编号已经存在： 
 
@@ -17808,10 +17808,10 @@ SUPI范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 NFGROUPID|NF组编号|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置该PCF实例归属的PCF组标识。PCF组标识表示一组PCF实例。如果未配置，则该PCF实例不属于任何PCF组。该参数无特殊配置原则。
@@ -17825,10 +17825,10 @@ V2XSUPPORTED|是否支持V2X策略/参数|参数可选性: 任选参数类型: �
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 NFGROUPID|NF组编号|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置该PCF实例归属的PCF组标识。PCF组标识表示一组PCF实例。如果未配置，则该PCF实例不属于任何PCF组。该参数无特殊配置原则。
@@ -17842,7 +17842,7 @@ V2XSUPPORTED|是否支持V2X策略/参数|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17855,30 +17855,30 @@ SET SBIPCFINFO:ID=1,NFGROUPID="1",DNNARRAY=1,GPSIRANGEARRAY=65535,SUPIRANGEARRAY
 #### 删除PCF信息配置(DEL SBIPCFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除PCF信息配置。当本地NRF配置中所配置的对端NFProfile不需要携带该PCF信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该PCF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该PCF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该PCF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 NFGROUPID|NF组编号|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置该PCF实例归属的PCF组标识。PCF组标识表示一组PCF实例。如果未配置，则该PCF实例不属于任何PCF组。该参数无特殊配置原则。
@@ -17892,7 +17892,7 @@ V2XSUPPORTED|是否支持V2X策略/参数|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17905,20 +17905,20 @@ DEL SBIPCFINFO:ID=1
 #### 查询PCF信息配置(SHOW SBIPCFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询PCF信息配置。当需要查询对端NFProfile携带的PCF信息（例如：可以提供服务的DNN信息、GPSI范围信息以及SUPI范围信息等）时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 NFGROUPID|NF组编号|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置该PCF实例归属的PCF组标识。PCF组标识表示一组PCF实例。如果未配置，则该PCF实例不属于任何PCF组。该参数无特殊配置原则。
@@ -17932,10 +17932,10 @@ V2XSUPPORTED|是否支持V2X策略/参数|参数可选性: 任选参数类型: �
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|PCF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置PCF信息编号，该编号是PCF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 NFGROUPID|NF组编号|参数可选性: 任选参数类型: 字符串参数范围: 0-127|该参数用于设置该PCF实例归属的PCF组标识。PCF组标识表示一组PCF实例。如果未配置，则该PCF实例不属于任何PCF组。该参数无特殊配置原则。
@@ -17949,7 +17949,7 @@ V2XSUPPORTED|是否支持V2X策略/参数|参数可选性: 任选参数类型: �
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -17972,7 +17972,7 @@ SHOW SBIPCFINFO:ID=1
 ## SMF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SMF（Session Management Function，会话管理功能）是5G核心网中的网络实体，负责处理用户的业务，可以看成是MME承载管理部分以及SGW和PGW的控制面功能的组合。 
@@ -17994,7 +17994,7 @@ Nsmf_NIDD：传送非IP数据的服务。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能中，SMF配置包括： 
@@ -18011,7 +18011,7 @@ S-NSSAI SMF信息组配置：用于配置DNN组和S-NSSAI信息，对外提供SM
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -18022,7 +18022,7 @@ S-NSSAI SMF信息组配置：用于配置DNN组和S-NSSAI信息，对外提供SM
 ### SMF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 SMF（Session Management Function，会话管理功能）是5G核心网中的网络实体，负责处理用户的业务，可以看成是MME承载管理部分以及SGW和PGW的控制面功能的组合。 
@@ -18044,7 +18044,7 @@ Nsmf_NIDD：传送非IP数据的服务。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能中，当PCF、AMF等NF需要通过SBI-GW向SMF发送请求消息时，需要使用该配置。 
@@ -18069,7 +18069,7 @@ Nsmf_NIDD：传送非IP数据的服务。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -18080,12 +18080,12 @@ Nsmf_NIDD：传送非IP数据的服务。
 #### 新增SMF信息配置(ADD SBISMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增SMF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带SMF信息时，使用该命令。命令执行成功后，SMF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
+该命令用于新增SMF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带SMF信息时，使用该命令。命令执行成功后，SMF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)注意事项 
+注意事项 
 
 需要保证如下配置都已经存在： 
 
@@ -18102,10 +18102,10 @@ TAI范围组编号配置：可以通过SHOW SBITAIRANGEARRID命令查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 SNSSAISMFINFOARRAY|S-NSSAI SMF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18118,10 +18118,10 @@ PRIORITY|优先级|参数可选性: 任选参数类型: 数字参数范围: 0-65
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 SNSSAISMFINFOARRAY|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18134,7 +18134,7 @@ PRIORITY|优先级|参数可选性: 任选参数类型: 数字参数范围: 0-65
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18147,12 +18147,12 @@ ADD SBISMFINFO:ID=1,SNSSAISMFINFOARRAY=1,TAIARRAY=65535,TAIRNGARRAY=65535,ACCESS
 #### 修改SMF信息配置(SET SBISMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改SMF信息配置。当本地NRF配置中所配置的对端NFProfile携带的SMF信息需要变更时，使用该命令。命令执行成功后，修改后的SMF信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要修改如下配置，则需要需要保证该配置都已经存在： 
 
@@ -18169,10 +18169,10 @@ TAI范围组编号配置：可以通过SHOW SBITAIRANGEARRID命令查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 SNSSAISMFINFOARRAY|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18185,10 +18185,10 @@ PRIORITY|优先级|参数可选性: 任选参数类型: 数字参数范围: 0-65
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 SNSSAISMFINFOARRAY|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18201,7 +18201,7 @@ PRIORITY|优先级|参数可选性: 任选参数类型: 数字参数范围: 0-65
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18214,30 +18214,30 @@ SET SBISMFINFO:ID=1,SNSSAISMFINFOARRAY=1,TAIARRAY=65535,TAIRNGARRAY=65535,ACCESS
 #### 删除SMF信息配置(DEL SBISMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SMF信息配置。当本地NRF配置中所配置的对端NFProfile不需要携带该SMF信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该SMF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该SMF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该SMF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 SNSSAISMFINFOARRAY|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18250,7 +18250,7 @@ PRIORITY|优先级|参数可选性: 任选参数类型: 数字参数范围: 0-65
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18263,20 +18263,20 @@ DEL SBISMFINFO:ID=1
 #### 查询SMF信息配置(SHOW SBISMFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMF信息配置。当需要查询对端NFProfile携带的SMF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 SNSSAISMFINFOARRAY|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18289,10 +18289,10 @@ PRIORITY|优先级|参数可选性: 任选参数类型: 数字参数范围: 0-65
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|SMF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF信息编号。
 SNSSAISMFINFOARRAY|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18305,7 +18305,7 @@ PRIORITY|优先级|参数可选性: 任选参数类型: 数字参数范围: 0-65
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18328,7 +18328,7 @@ SHOW SBISMFINFO:ID=1
 ### S-NSSAI SMF信息组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 S-NSSAI SMF信息组为SMF信息配置的必选部分，包括： 
@@ -18342,12 +18342,12 @@ DNN（Data Network Name，数据网络名称）：可以参见配置SHOW SBIDNNA
 
  
 
-本地NRF功能中，该配置以组编号的方式对外呈现，在SMF扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表和S-NSSAI信息。SMF扩展信息配置可以通过配置[SHOW SBISMFINFO](../mml/1220868.html)命令查看。
+本地NRF功能中，该配置以组编号的方式对外呈现，在SMF扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表和S-NSSAI信息。SMF扩展信息配置可以通过配置[SHOW SBISMFINFO]命令查看。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，S-NSSAI SMF信息组是以一组数据配置呈现的，该组数据配置包括S-NSSAI SMF信息组编号配置和S-NSSAI SMF信息组参数配置，一个S-NSSAI SMF信息组编号可以被若干个S-NSSAI SMF信息组参数引用。 
@@ -18357,7 +18357,7 @@ S-NSSAI SMF信息组配置应用于SMF扩展信息配置中，用于表示该SMF
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -18368,7 +18368,7 @@ S-NSSAI SMF信息组配置应用于SMF扩展信息配置中，用于表示该SMF
 #### S-NSSAI SMF信息组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 S-NSSAI SMF信息组为SMF信息配置的必选部分，包括： 
@@ -18382,12 +18382,12 @@ DNN（Data Network Name，数据网络名称）：可以参见配置SHOW SBIDNNA
 
  
 
-本地NRF功能中，该配置以组编号的方式对外呈现，在SMF扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表和S-NSSAI信息。SMF扩展信息配置可以通过配置[SHOW SBISMFINFO](../mml/1220868.html)命令查看。
+本地NRF功能中，该配置以组编号的方式对外呈现，在SMF扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表和S-NSSAI信息。SMF扩展信息配置可以通过配置[SHOW SBISMFINFO]命令查看。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI SMF信息组编号配置用于配置一个S-NSSAI SMF信息组，一个S-NSSAI SMF信息组包含了若干个S-NSSAI SMF信息组参数。 
@@ -18397,7 +18397,7 @@ S-NSSAI SMF信息组编号配置用于配置一个S-NSSAI SMF信息组，一个S
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -18408,37 +18408,37 @@ S-NSSAI SMF信息组编号配置用于配置一个S-NSSAI SMF信息组，一个S
 ##### 新增S-NSSAI SMF信息组编号配置(ADD SBISNSSAISMFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增S-NSSAI SMF信息组编号。当新增SMF扩展信息时，使用该命令。执行成功后，可以在SMF扩展信息配置中关联该S-NSSAI SMF信息组编号。SMF信息配置使用[ADD SBISMFINFO](../mml/1220865.html)命令。
+该命令用于新增S-NSSAI SMF信息组编号。当新增SMF扩展信息时，使用该命令。执行成功后，可以在SMF扩展信息配置中关联该S-NSSAI SMF信息组编号。SMF信息配置使用[ADD SBISMFINFO]命令。
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该S-NSSAI SMF信息组编号，才能在SMF扩展信息配置中引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI SMF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号。该编号全局唯一。S-NSSAI SMF信息组编号被以下配置引用：SMF扩展信息配置：用于表示该SMF可以服务的DNN列表和S-NSSAI信息。该配置可以使用SHOW SBISMFINFO命令查询。S-NSSAI SMF信息组参数配置：一个S-NSSAI SMF信息组编号可以被若干个S-NSSAI SMF信息组参数引用。S-NSSAI SMF信息组参数配置可以使用SHOW SBISNSSAISMFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号。该编号全局唯一。S-NSSAI SMF信息组编号被以下配置引用：SMF扩展信息配置：用于表示该SMF可以服务的DNN列表和S-NSSAI信息。该配置可以使用SHOW SBISMFINFO命令查询。S-NSSAI SMF信息组参数配置：一个S-NSSAI SMF信息组编号可以被若干个S-NSSAI SMF信息组参数引用。S-NSSAI SMF信息组参数配置可以使用SHOW SBISNSSAISMFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18451,37 +18451,37 @@ ADD SBISNSSAISMFINFOARRID:ARRAYID=1
 ##### 删除S-NSSAI SMF信息组编号配置(DEL SBISNSSAISMFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除S-NSSAI SMF信息组编号。当没有SMF扩展信息关联S-NSSAI SMF信息组编号时，可以执行该命令删除S-NSSAI SMF信息组编号。 
 
 
-[](None)注意事项 
+注意事项 
 
-删除前需要把归属于该S-NSSAI SMF信息组编号的所有S-NSSAI SMF信息组参数配置删除。可以使用命令[SHOW SBISNSSAISMFINFOARRPARAM](../mml/1220884.html)指定S-NSSAI SMF信息组编号，查询归属于该S-NSSAI SMF信息组编号的所有S-NSSAI SMF信息组参数配置。
-
-
-[](None)输入参数说明 
+删除前需要把归属于该S-NSSAI SMF信息组编号的所有S-NSSAI SMF信息组参数配置删除。可以使用命令[SHOW SBISNSSAISMFINFOARRPARAM]指定S-NSSAI SMF信息组编号，查询归属于该S-NSSAI SMF信息组编号的所有S-NSSAI SMF信息组参数配置。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI SMF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号。该编号全局唯一。S-NSSAI SMF信息组编号被以下配置引用：SMF扩展信息配置：用于表示该SMF可以服务的DNN列表和S-NSSAI信息。该配置可以使用SHOW SBISMFINFO命令查询。S-NSSAI SMF信息组参数配置：一个S-NSSAI SMF信息组编号可以被若干个S-NSSAI SMF信息组参数引用。S-NSSAI SMF信息组参数配置可以使用SHOW SBISNSSAISMFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号。该编号全局唯一。S-NSSAI SMF信息组编号被以下配置引用：SMF扩展信息配置：用于表示该SMF可以服务的DNN列表和S-NSSAI信息。该配置可以使用SHOW SBISMFINFO命令查询。S-NSSAI SMF信息组参数配置：一个S-NSSAI SMF信息组编号可以被若干个S-NSSAI SMF信息组参数引用。S-NSSAI SMF信息组参数配置可以使用SHOW SBISNSSAISMFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18494,37 +18494,37 @@ DEL SBISNSSAISMFINFOARRID:ARRAYID=1
 ##### 查询S-NSSAI SMF信息组编号配置(SHOW SBISNSSAISMFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询S-NSSAI SMF信息组编号。查询时，可以指定S-NSSAI SMF信息组编号，查询成功后，会回显对应的S-NSSAI SMF信息组编号信息；如果不指定S-NSSAI SMF信息组编号，则回显已经配置的所有S-NSSAI SMF信息组编号信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号。该编号全局唯一。S-NSSAI SMF信息组编号被以下配置引用：SMF扩展信息配置：用于表示该SMF可以服务的DNN列表和S-NSSAI信息。该配置可以使用SHOW SBISMFINFO命令查询。S-NSSAI SMF信息组参数配置：一个S-NSSAI SMF信息组编号可以被若干个S-NSSAI SMF信息组参数引用。S-NSSAI SMF信息组参数配置可以使用SHOW SBISNSSAISMFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI SMF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号。该编号全局唯一。S-NSSAI SMF信息组编号被以下配置引用：SMF扩展信息配置：用于表示该SMF可以服务的DNN列表和S-NSSAI信息。该配置可以使用SHOW SBISMFINFO命令查询。S-NSSAI SMF信息组参数配置：一个S-NSSAI SMF信息组编号可以被若干个S-NSSAI SMF信息组参数引用。S-NSSAI SMF信息组参数配置可以使用SHOW SBISNSSAISMFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18547,7 +18547,7 @@ SHOW SBISNSSAISMFINFOARRID:ARRAYID=1
 #### S-NSSAI SMF信息组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 S-NSSAI SMF信息组为SMF信息配置的必选部分，包括： 
@@ -18561,12 +18561,12 @@ DNN（Data Network Name，数据网络名称）：可以参见配置SHOW SBIDNNA
 
  
 
-本地NRF功能中，该配置以组编号的方式对外呈现，在SMF扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表和S-NSSAI信息。SMF扩展信息配置可以通过配置[SHOW SBISMFINFO](../mml/1220868.html)命令查看。
+本地NRF功能中，该配置以组编号的方式对外呈现，在SMF扩展信息配置中引用该组编号，用于表示该NF可以服务的DNN列表和S-NSSAI信息。SMF扩展信息配置可以通过配置[SHOW SBISMFINFO]命令查看。
 
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI SMF信息组参数配置用于配置DNN组和S-NSSAI的具体信息以及该S-NSSAI SMF信息组参数归属于哪个S-NSSAI SMF信息组编号。其中： 
@@ -18588,7 +18588,7 @@ S-NSSAI SMF信息组可以通过SHOW SBISNSSAISMFINFOARRID命令查询。
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -18599,12 +18599,12 @@ S-NSSAI SMF信息组可以通过SHOW SBISNSSAISMFINFOARRID命令查询。
 ##### 新增S-NSSAI SMF信息组参数配置(ADD SBISNSSAISMFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增S-NSSAI SMF信息组参数配置。当SMF已配置可以服务的S-NSSAI SMF信息组编号，需要新增归属于该S-NSSAI SMF信息组编号的参数时，使用该命令。执行成功后，SMF新增了可以服务的该S-NSSAI SMF信息组参数的DNN和S-NSSAI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 需要保证如下配置都已经存在： 
 
@@ -18621,10 +18621,10 @@ DNN组编号配置：可以通过SHOW SBIDNNARRID命令查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|S-NSSAI SMF 信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18634,10 +18634,10 @@ DNNARRAY|DNN组编号|参数可选性: 必选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|S-NSSAI SMF 信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18647,7 +18647,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18660,12 +18660,12 @@ ADD SBISNSSAISMFINFOARRPARAM:INDEX=1,ARRAYID=1,SNSSAI=1,DNNARRAY=1
 ##### 修改S-NSSAI SMF信息组参数配置(SET SBISNSSAISMFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改S-NSSAI SMF信息组参数配置。当SMF已配置可以服务的S-NSSAI SMF信息组编号，需要修改归属于该S-NSSAI SMF信息组编号的参数时，使用该命令。执行成功后，SMF新修改了可以服务的该S-NSSAI SMF信息组参数的DNN和S-NSSAI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果是修改如下配置项，则需要保证如下配置都已经存在： 
 
@@ -18682,10 +18682,10 @@ DNN组编号配置：可以通过SHOW SBIDNNARRID命令查询。
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|S-NSSAI SMF 信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18695,10 +18695,10 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|S-NSSAI SMF 信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18708,7 +18708,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18721,30 +18721,30 @@ SET SBISNSSAISMFINFOARRPARAM:INDEX=1,ARRAYID=1,SNSSAI=65535,DNNARRAY=65535
 ##### 删除S-NSSAI SMF信息组参数配置(DEL SBISNSSAISMFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除S-NSSAI SMF信息组参数配置。当SMF已配置可以服务的S-NSSAI SMF信息组编号，需要删除归属于该S-NSSAI SMF信息组编号的参数时，使用该命令。执行成功后，SMF删除了可以服务的该范围组参数的DNN和S-NSSAI信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个S-NSSAI SMF信息组编号的所有S-NSSAI SMF信息组参数配置都已经删除，建议删除该S-NSSAI SMF信息组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|S-NSSAI SMF 信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18754,7 +18754,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18767,20 +18767,20 @@ DEL SBISNSSAISMFINFOARRPARAM:INDEX=1
 ##### 查询S-NSSAI SMF信息组参数配置(SHOW SBISNSSAISMFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询S-NSSAI SMF信息组参数配置。当需要查询已经配置的S-NSSAI SMF信息组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会回显对应的配置信息；如果不指定配置索引，则回显已经配置的所有S-NSSAI SMF信息组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|S-NSSAI SMF 信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18790,10 +18790,10 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引。该索引全局唯一。
 ARRAYID|S-NSSAI SMF 信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI SMF信息组编号，该编号通过SHOW SBISNSSAISMFINFOARRID命令查询。
@@ -18803,7 +18803,7 @@ DNNARRAY|DNN组编号|参数可选性: 任选参数类型: 数字参数范围: 1
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18826,7 +18826,7 @@ SHOW SBISNSSAISMFINFOARRPARAM:INDEX=1
 ## UDM配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF（网络存储功能，Network Repository Function）注册时，如果对端的NF（网络功能，Network Function）类型为UDM（统一数据管理，Unified Data Management ），注册请求中携带的对端NFProfile参数可以包含UDM信息（UdmInfo）参数，该参数又包含了一些通用或UDM特有的参数。 
@@ -18836,7 +18836,7 @@ SHOW SBISNSSAISMFINFOARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UDM配置为命令树目录，下面包含了UDM信息配置。UDM信息配置即对应本地NRF配置的对端NFProfile的UDM信息参数，如果不配置，则对端NFProfile缺少UDM信息参数，本端如果需要发现可用的对端UDM时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -18844,7 +18844,7 @@ UDM配置为命令树目录，下面包含了UDM信息配置。UDM信息配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -18855,7 +18855,7 @@ UDM配置为命令树目录，下面包含了UDM信息配置。UDM信息配置�
 ### UDM信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF（网络存储功能，Network Repository Function）注册时，如果对端的NF（网络功能，Network Function）类型为UDM（统一数据管理，Unified Data Management ），注册请求中携带的对端NFProfile参数可以包含UDM信息（UdmInfo）参数，该参数又包含了一些通用或UDM特有的参数。 
@@ -18865,7 +18865,7 @@ UDM配置为命令树目录，下面包含了UDM信息配置。UDM信息配置�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UDM信息配置即对应本地NRF配置的对端NFProfile的UDM信息参数，如果不配置，则对端NFProfile缺少UDM信息参数，本端如果需要发现可用的对端UDM时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -18873,7 +18873,7 @@ UDM信息配置即对应本地NRF配置的对端NFProfile的UDM信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -18884,20 +18884,20 @@ UDM信息配置即对应本地NRF配置的对端NFProfile的UDM信息参数，�
 #### 新增UDM信息配置(ADD SBIUDMINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增UDM信息。当本地NRF配置中所配置的对端NFProfile需要携带UDM信息时，使用该命令。命令执行成功后，UDM信息编号可以被对端NF扩展信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 系统支持的该配置项最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDM的标识符。如果不配置，则该UDM不属于任何UDM组。
@@ -18908,10 +18908,10 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDM的标识符。如果不配置，则该UDM不属于任何UDM组。
@@ -18922,7 +18922,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18935,20 +18935,20 @@ ADD SBIUDMINFO:ID=1,GPSIRANGEARRAY=1
 #### 修改UDM信息配置(SET SBIUDMINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改UDM信息。当本地NRF配置中所配置的对端NFProfile携带的UDM信息需要变更时，使用该命令。命令执行成功后，修改后的UDM信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
-修改UDM信息，需要保证UDM信息编号已经存在，该编号通过[SHOW SBIUDMINFO](../mml/1220832.html)命令查询。
-
-
-[](None)输入参数说明 
+修改UDM信息，需要保证UDM信息编号已经存在，该编号通过[SHOW SBIUDMINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDM的标识符。如果不配置，则该UDM不属于任何UDM组。
@@ -18959,10 +18959,10 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDM的标识符。如果不配置，则该UDM不属于任何UDM组。
@@ -18973,7 +18973,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -18986,30 +18986,30 @@ SET SBIUDMINFO:ID=1,GPSIRANGEARRAY=1
 #### 删除UDM信息配置(DEL SBIUDMINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除UDM信息。当本地NRF配置中所配置的对端NFProfile不需要携带该UDM信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该UDM信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该UDM信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该UDM信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDM的标识符。如果不配置，则该UDM不属于任何UDM组。
@@ -19020,7 +19020,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19033,20 +19033,20 @@ DEL SBIUDMINFO:ID=1
 #### 查询UDM信息配置(SHOW SBIUDMINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询UDM信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDM的标识符。如果不配置，则该UDM不属于任何UDM组。
@@ -19057,10 +19057,10 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDM信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDM信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDM的标识符。如果不配置，则该UDM不属于任何UDM组。
@@ -19071,7 +19071,7 @@ ROUTINDARRAY|路由指示组编号|参数可选性: 任选参数类型: 数字�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19094,7 +19094,7 @@ SHOW SBIUDMINFO:ID=1
 ## UDR配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF（网络存储功能，Network Repository Function）注册时，如果对端的NF(网络功能，Network Function)类型为UDR（统一数据仓库，Unified Data Repository），注册请求中携带的对端NFProfile参数可以包含UDR信息（UdrInfo）参数，该参数又包含了一些通用或UDR特有的参数。 
@@ -19104,7 +19104,7 @@ SHOW SBIUDMINFO:ID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UDR配置为命令树目录，下面包含了UDR信息配置。UDR信息配置即对应本地NRF配置的对端NFProfile的UDR信息参数，如果不配置，则对端NFProfile缺少UDR信息参数，本端如果需要发现可用的对端UDR时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -19112,7 +19112,7 @@ UDR配置为命令树目录，下面包含了UDR信息配置。UDR信息配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -19123,7 +19123,7 @@ UDR配置为命令树目录，下面包含了UDR信息配置。UDR信息配置�
 ### UDR信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当服务提供者（对端）向NRF（网络存储功能，Network Repository Function）注册时，如果对端的NF(网络功能，Network Function)类型为UDR（统一数据仓库，Unified Data Repository），注册请求中携带的对端NFProfile参数可以包含UDR信息（UdrInfo）参数，该参数又包含了一些通用或UDR特有的参数。 
@@ -19133,7 +19133,7 @@ UDR配置为命令树目录，下面包含了UDR信息配置。UDR信息配置�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UDR信息配置即对应本地NRF配置的对端NFProfile的UDR信息参数，如果不配置，则对端NFProfile缺少UDR信息参数，本端如果需要发现可用的对端UDR时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -19141,7 +19141,7 @@ UDR信息配置即对应本地NRF配置的对端NFProfile的UDR信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -19152,20 +19152,20 @@ UDR信息配置即对应本地NRF配置的对端NFProfile的UDR信息参数，�
 #### 新增UDR信息配置(ADD SBIUDRINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增UDR信息。当本地NRF配置中所配置的对端NFProfile需要携带UDR信息时，使用该命令。命令执行成功后，UDR信息编号可以被对端NF扩展信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 系统支持的该配置项最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDR的标识符。如果不配置，则该UDR不属于任何UDR组。
@@ -19176,10 +19176,10 @@ SUPPDATASETARRAY|支持的数据集组编号|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDR的标识符。如果不配置，则该UDR不属于任何UDR组。
@@ -19190,7 +19190,7 @@ SUPPDATASETARRAY|支持的数据集组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19203,20 +19203,20 @@ ADD SBIUDRINFO:ID=1,GPSIRANGEARRAY=1
 #### 修改UDR信息配置(SET SBIUDRINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改UDR信息。当本地NRF配置中所配置的对端NFProfile携带的UDR信息需要变更时，使用该命令。命令执行成功后，修改后的UDR信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
-修改UDR信息，需要保证UDR信息编号已经存在，该编号通过[SHOW SBIUDRINFO](../mml/1220820.html)命令查询。
-
-
-[](None)输入参数说明 
+修改UDR信息，需要保证UDR信息编号已经存在，该编号通过[SHOW SBIUDRINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDR的标识符。如果不配置，则该UDR不属于任何UDR组。
@@ -19227,10 +19227,10 @@ SUPPDATASETARRAY|支持的数据集组编号|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDR的标识符。如果不配置，则该UDR不属于任何UDR组。
@@ -19241,7 +19241,7 @@ SUPPDATASETARRAY|支持的数据集组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19254,30 +19254,30 @@ SET SBIUDRINFO:ID=1,GPSIRANGEARRAY=1
 #### 删除UDR信息配置(DEL SBIUDRINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除UDR信息。当本地NRF配置中所配置的对端NFProfile不需要携带该UDR信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该UDR信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该UDR信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该UDR信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDR的标识符。如果不配置，则该UDR不属于任何UDR组。
@@ -19288,7 +19288,7 @@ SUPPDATASETARRAY|支持的数据集组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19301,20 +19301,20 @@ DEL SBIUDRINFO:ID=1
 #### 查询UDR信息配置(SHOW SBIUDRINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询UDR信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDR的标识符。如果不配置，则该UDR不属于任何UDR组。
@@ -19325,10 +19325,10 @@ SUPPDATASETARRAY|支持的数据集组编号|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UDR信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UDR信息编号。该编号全局唯一。
 GROUPID|NF组标识|参数可选性: 任选参数类型: 字符串参数范围: 1-127|该参数用于设置NF组标识，NF组标识是一组UDR的标识符。如果不配置，则该UDR不属于任何UDR组。
@@ -19339,7 +19339,7 @@ SUPPDATASETARRAY|支持的数据集组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19362,7 +19362,7 @@ SHOW SBIUDRINFO:ID=1
 ## UPF配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UPF（User Plane Function，用户平面功能）是5G核心网中的网络实体，相当于SGW和PGW的用户面功能的集合，可提供数据分流及流量统计、IP报文的分片与重组、用户数据跟踪等功能。 
@@ -19374,7 +19374,7 @@ UPF（User Plane Function，用户平面功能）是5G核心网中的网络实�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UPF配置为命令树目录，下面包含了UPF信息配置和UPF相关的S-NSSAI UPF信息组配置、SMF服务区域组配置、UPF接口信息组配置、DNAI组配置和DNN UPF信息组配置。UPF信息配置即对应本地NRF配置的对端NFProfile的UPF信息参数，如果不配置，则对端NFProfile缺少UPF信息参数，本端如果需要发现可用的对端UPF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -19382,7 +19382,7 @@ UPF配置为命令树目录，下面包含了UPF信息配置和UPF相关的S-NSS
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -19393,7 +19393,7 @@ UPF配置为命令树目录，下面包含了UPF信息配置和UPF相关的S-NSS
 ### UPF信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 UPF（User Plane Function，用户平面功能）是5G核心网中的网络实体，相当于SGW和PGW的用户面功能的集合，可提供数据分流及流量统计、IP报文的分片与重组、用户数据跟踪等功能。 
@@ -19405,7 +19405,7 @@ UPF（User Plane Function，用户平面功能）是5G核心网中的网络实�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UPF信息配置即对应本地NRF配置的对端NFProfile的UPF信息参数，如果不配置，则对端NFProfile缺少UPF信息参数，本端如果需要发现可用的对端UPF时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -19413,7 +19413,7 @@ UPF信息配置即对应本地NRF配置的对端NFProfile的UPF信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -19424,20 +19424,20 @@ UPF信息配置即对应本地NRF配置的对端NFProfile的UPF信息参数，�
 #### 新增UPF信息配置(ADD SBIUPFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
-该命令用于新增UPF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带UPF信息时，使用该命令。命令执行成功后，UPF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)注意事项 
-
-如果要新增该UPF信息配置，需要先新增S-NSSAI UPF信息组编号配置。S-NSSAI UPF信息组编号通过[SHOW SBISNSSAIUPFINFOARRID](../mml/1220924.html)命令查询。
+该命令用于新增UPF信息配置。当本地NRF配置中所配置的对端NFProfile需要携带UPF信息时，使用该命令。命令执行成功后，UPF信息编号可以被对端NF扩展信息配置引用。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)输入参数说明 
+注意事项 
+
+如果要新增该UPF信息配置，需要先新增S-NSSAI UPF信息组编号配置。S-NSSAI UPF信息组编号通过[SHOW SBISNSSAIUPFINFOARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 SNSSAIUPFARRAY|S-NSSAI UPF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，表示UPF所支持的每个S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的参数列表。如果UPF信息配置和NFProfile中都存在此S-NSSAI时，则以UPF信息配置中的S-NSSAI为准。该参数引用了S-NSSAI UPF信息组编号配置，可以通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -19464,10 +19464,10 @@ SUPREDUNDANTGTPU|是否支持GTP-U冗余路径|参数可选性: 任选参数类�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 SNSSAIUPFARRAY|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，表示UPF所支持的每个S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的参数列表。如果UPF信息配置和NFProfile中都存在此S-NSSAI时，则以UPF信息配置中的S-NSSAI为准。该参数引用了S-NSSAI UPF信息组编号配置，可以通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -19494,7 +19494,7 @@ SUPREDUNDANTGTPU|是否支持GTP-U冗余路径|参数可选性: 任选参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19507,20 +19507,20 @@ ADD SBIUPFINFO:ID=1,SNSSAIUPFARRAY=1,SMFSRVAREAARRAY=1,UPFITFARRAY=1,IWKEPSIND="
 #### 修改UPF信息配置(SET SBIUPFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改UPF信息配置。当本地NRF配置中所配置的对端NFProfile携带的UPF信息需要变更时，使用该命令。命令执行成功后，修改后的UPF信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 SNSSAIUPFARRAY|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，表示UPF所支持的每个S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的参数列表。如果UPF信息配置和NFProfile中都存在此S-NSSAI时，则以UPF信息配置中的S-NSSAI为准。该参数引用了S-NSSAI UPF信息组编号配置，可以通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -19547,10 +19547,10 @@ SUPREDUNDANTGTPU|是否支持GTP-U冗余路径|参数可选性: 任选参数类�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 SNSSAIUPFARRAY|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，表示UPF所支持的每个S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的参数列表。如果UPF信息配置和NFProfile中都存在此S-NSSAI时，则以UPF信息配置中的S-NSSAI为准。该参数引用了S-NSSAI UPF信息组编号配置，可以通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -19577,7 +19577,7 @@ SUPREDUNDANTGTPU|是否支持GTP-U冗余路径|参数可选性: 任选参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19590,30 +19590,30 @@ SET SBIUPFINFO:ID=1,SNSSAIUPFARRAY=1,SMFSRVAREAARRAY=1,UPFITFARRAY=1,IWKEPSIND="
 #### 删除UPF信息配置(DEL SBIUPFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除UPF信息配置。当本地NRF配置中所配置的对端NFProfile不需要携带该UPF信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该UPF信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该UPF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该UPF信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 SNSSAIUPFARRAY|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，表示UPF所支持的每个S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的参数列表。如果UPF信息配置和NFProfile中都存在此S-NSSAI时，则以UPF信息配置中的S-NSSAI为准。该参数引用了S-NSSAI UPF信息组编号配置，可以通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -19640,7 +19640,7 @@ SUPREDUNDANTGTPU|是否支持GTP-U冗余路径|参数可选性: 任选参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19653,20 +19653,20 @@ DEL SBIUPFINFO:ID=1;
 #### 查询UPF信息配置(SHOW SBIUPFINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询UPF信息配置。当需要查询对端NFProfile携带的UPF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 SNSSAIUPFARRAY|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，表示UPF所支持的每个S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的参数列表。如果UPF信息配置和NFProfile中都存在此S-NSSAI时，则以UPF信息配置中的S-NSSAI为准。该参数引用了S-NSSAI UPF信息组编号配置，可以通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -19693,10 +19693,10 @@ SUPREDUNDANTGTPU|是否支持GTP-U冗余路径|参数可选性: 任选参数类�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|UPF信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF信息编号，该编号是UPF信息配置的唯一标识，被对端NF扩展信息配置所引用。对端NF扩展信息配置通过SHOW SBIPEERNFEXTINFO命令查询。
 SNSSAIUPFARRAY|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，表示UPF所支持的每个S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）的参数列表。如果UPF信息配置和NFProfile中都存在此S-NSSAI时，则以UPF信息配置中的S-NSSAI为准。该参数引用了S-NSSAI UPF信息组编号配置，可以通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -19723,7 +19723,7 @@ SUPREDUNDANTGTPU|是否支持GTP-U冗余路径|参数可选性: 任选参数类�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19746,7 +19746,7 @@ SHOW SBIUPFINFO:ID=1
 ### SMF服务区域组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，SMF与发现的UPF进行通信。SMF服务区域表示UPF可以服务的SMF服务区域。 
@@ -19756,7 +19756,7 @@ SHOW SBIUPFINFO:ID=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，SMF服务区域组是以一组数据配置呈现的，该组数据配置包括SMF服务区域组编号配置和SMF服务区域组参数配置，一个SMF服务区域组编号可以被若干个SMF服务区域组参数引用。 
@@ -19766,7 +19766,7 @@ SMF服务区域组配置应用于UPF扩展信息配置中，用于表示该UPF�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -19777,7 +19777,7 @@ SMF服务区域组配置应用于UPF扩展信息配置中，用于表示该UPF�
 #### SMF服务区域组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，SMF与发现的UPF进行通信。SMF服务区域表示UPF可以服务的SMF服务区域。 
@@ -19788,7 +19788,7 @@ SMF服务区域组数据配置包括SMF服务区域组编号配置和SMF服务�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 SMF服务区域组编号配置用于配置一个SMF服务区域组，一个SMF服务区域组包含了若干个SMF服务区域组参数。 
@@ -19798,7 +19798,7 @@ SMF服务区域组编号配置用于配置一个SMF服务区域组，一个SMF�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -19809,14 +19809,14 @@ SMF服务区域组编号配置用于配置一个SMF服务区域组，一个SMF�
 ##### 新增SMF服务区域组编号配置(ADD SBISMFSRVAREAARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增SMF服务区域组编号配置。当UPF信息配置需要携带一组SMF服务区域列表时，使用该命令。 
 
 命令执行成功后，SMF服务区域组编号可以被“SMF服务区域组参数配置”及“UPF信息配置”引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该SMF服务区域组编号，才能在“SMF服务区域组参数配置”及“UPF信息配置”中引用。 
 
@@ -19830,27 +19830,27 @@ SMF服务区域组编号配置用于配置一个SMF服务区域组，一个SMF�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SMF服务区域组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号，该编号是SMF服务区域组编号配置的唯一标识，被“SMF服务区域组参数配置”及“UPF信息配置”引用。“SMF服务区域组参数配置”通过SHOW SBISMFSRVAREAARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号，该编号是SMF服务区域组编号配置的唯一标识，被“SMF服务区域组参数配置”及“UPF信息配置”引用。“SMF服务区域组参数配置”通过SHOW SBISMFSRVAREAARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19863,12 +19863,12 @@ ADD SBISMFSRVAREAARRID:ARRAYID=1
 ##### 删除SMF服务区域组编号配置(DEL SBISMFSRVAREAARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SMF服务区域组编号配置。当该组SMF服务区域列表不被任何UPF信息配置所引用时，建议使用该命令。命令执行成功后，该组配置无法被查询，也无法再被引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该SMF服务区域组编号配置，需要先删除引用该配置的“SMF服务区域组参数配置”，并在“UPF信息配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -19882,27 +19882,27 @@ ADD SBISMFSRVAREAARRID:ARRAYID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SMF服务区域组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号，该编号是SMF服务区域组编号配置的唯一标识，被“SMF服务区域组参数配置”及“UPF信息配置”引用。“SMF服务区域组参数配置”通过SHOW SBISMFSRVAREAARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号，该编号是SMF服务区域组编号配置的唯一标识，被“SMF服务区域组参数配置”及“UPF信息配置”引用。“SMF服务区域组参数配置”通过SHOW SBISMFSRVAREAARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19915,37 +19915,37 @@ DEL SBISMFSRVAREAARRID:ARRAYID=1
 ##### 查询SMF服务区域组编号配置(SHOW SBISMFSRVAREAARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMF服务区域组编号配置。当配置SMF服务区域组参数及UPF信息时，需要获取已配置的SMF服务区域组编号，此时可执行该命令查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号，该编号是SMF服务区域组编号配置的唯一标识，被“SMF服务区域组参数配置”及“UPF信息配置”引用。“SMF服务区域组参数配置”通过SHOW SBISMFSRVAREAARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号，该编号是SMF服务区域组编号配置的唯一标识，被“SMF服务区域组参数配置”及“UPF信息配置”引用。“SMF服务区域组参数配置”通过SHOW SBISMFSRVAREAARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -19968,7 +19968,7 @@ SHOW SBISMFSRVAREAARRID:ARRAYID=1
 #### SMF服务区域组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，SMF与发现的UPF进行通信。SMF服务区域表示UPF可以服务的SMF服务区域。 
@@ -19979,7 +19979,7 @@ SMF服务区域组数据配置包括SMF服务区域组编号配置和SMF服务�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 SMF服务区域组参数配置用于配置一个SMF服务区域归属于哪个SMF服务区域组。当启用本地NRF功能时，需要配置该组命令。 
@@ -19989,7 +19989,7 @@ SMF服务区域组参数配置用于配置一个SMF服务区域归属于哪个SM
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -20000,22 +20000,22 @@ SMF服务区域组参数配置用于配置一个SMF服务区域归属于哪个SM
 ##### 新增SMF服务区域组参数配置(ADD SBISMFSRVAREAARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增SMF服务区域组参数配置。当需要新增UPF可支持的SMF服务区域列表时，使用该命令配置SMF服务区域组参数，该参数配置SMF服务区域信息及其归属的SMF服务区域组。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该SMF服务区域组参数配置，需要先新增“SMF服务区域组编号配置”。 
 
-“SMF服务区域组编号配置”通过[ADD SBISMFSRVAREAARRID](../mml/1220897.html)命令进行新增。
+“SMF服务区域组编号配置”通过[ADD SBISMFSRVAREAARRID]命令进行新增。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|SMF服务区域组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号。SMF服务区域组编号引用了“SMF服务区域组编号配置”中的配置，通过SHOW SBISMFSRVAREAARRID命令查询。
@@ -20024,10 +20024,10 @@ AREA|服务区域|参数可选性: 必选参数类型: 字符串参数范围: 0-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号。SMF服务区域组编号引用了“SMF服务区域组编号配置”中的配置，通过SHOW SBISMFSRVAREAARRID命令查询。
@@ -20036,7 +20036,7 @@ AREA|服务区域|参数可选性: 任选参数类型: 字符串参数范围: 0-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20049,20 +20049,20 @@ ADD SBISMFSRVAREAARRPARAM:INDEX=1,ARRAYID=1,AREA="01"
 ##### 修改SMF服务区域组参数配置(SET SBISMFSRVAREAARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改SMF服务区域组参数配置。当UPF已配置可以支持的SMF服务区域组编号，需要修改归属于该SMF服务区域组编号的SMF服务区域信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果修改该组参数归属的SMF服务区域组编号，则需要保证该SMF服务区域组编号已经存在，该编号通过[SHOW SBISMFSRVAREAARRID](../mml/1220900.html)命令查询。
-
-
-[](None)输入参数说明 
+如果修改该组参数归属的SMF服务区域组编号，则需要保证该SMF服务区域组编号已经存在，该编号通过[SHOW SBISMFSRVAREAARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号。SMF服务区域组编号引用了“SMF服务区域组编号配置”中的配置，通过SHOW SBISMFSRVAREAARRID命令查询。
@@ -20071,10 +20071,10 @@ AREA|服务区域|参数可选性: 任选参数类型: 字符串参数范围: 0-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号。SMF服务区域组编号引用了“SMF服务区域组编号配置”中的配置，通过SHOW SBISMFSRVAREAARRID命令查询。
@@ -20083,7 +20083,7 @@ AREA|服务区域|参数可选性: 任选参数类型: 字符串参数范围: 0-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20096,30 +20096,30 @@ SET SBISMFSRVAREAARRPARAM:INDEX=1,ARRAYID=1,AREA="01"
 ##### 删除SMF服务区域组参数配置(DEL SBISMFSRVAREAARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除SMF服务区域组参数配置。当UPF已配置可以支持的SMF服务区域组编号，需要删除归属于该SMF服务区域组编号的SMF服务区域信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个SMF服务区域组编号的所有SMF服务区域组参数配置都已经删除，建议删除该SMF服务区域组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号。SMF服务区域组编号引用了“SMF服务区域组编号配置”中的配置，通过SHOW SBISMFSRVAREAARRID命令查询。
@@ -20128,7 +20128,7 @@ AREA|服务区域|参数可选性: 任选参数类型: 字符串参数范围: 0-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20141,20 +20141,20 @@ DEL SBISMFSRVAREAARRPARAM:INDEX=1
 ##### 查询SMF服务区域组参数配置(SHOW SBISMFSRVAREAARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询SMF服务区域组参数配置。当需要查询已经配置的SMF服务区域组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会显示对应的配置信息；如果不指定配置索引，则显示已经配置的所有SMF服务区域组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号。SMF服务区域组编号引用了“SMF服务区域组编号配置”中的配置，通过SHOW SBISMFSRVAREAARRID命令查询。
@@ -20163,10 +20163,10 @@ AREA|服务区域|参数可选性: 任选参数类型: 字符串参数范围: 0-
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是SMF服务区域组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|SMF服务区域组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置SMF服务区域组编号。SMF服务区域组编号引用了“SMF服务区域组编号配置”中的配置，通过SHOW SBISMFSRVAREAARRID命令查询。
@@ -20175,7 +20175,7 @@ AREA|服务区域|参数可选性: 任选参数类型: 字符串参数范围: 0-
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20198,7 +20198,7 @@ SHOW SBISMFSRVAREAARRPARAM:INDEX=1
 ### DNAI组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNAI（Data Network Access Identifier，数据网络接入标识符）表示可以接入一个数据网络的用户平面的标识。 
@@ -20208,7 +20208,7 @@ DNAI（Data Network Access Identifier，数据网络接入标识符）表示可�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，DNAI组是以一组数据配置呈现的，该组数据配置包括DNAI组编号配置和DNAI组参数配置，一个DNAI组编号可以被若干个DNAI组参数引用。 
@@ -20218,7 +20218,7 @@ DNAI组配置被“DNN UPF信息组参数配置”引用，最终应用于UPF扩
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -20229,7 +20229,7 @@ DNAI组配置被“DNN UPF信息组参数配置”引用，最终应用于UPF扩
 #### DNAI组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNAI（Data Network Access Identifier，数据网络接入标识符）表示可以接入一个数据网络的用户平面的标识。 
@@ -20240,7 +20240,7 @@ DNAI组数据配置包括DNAI组编号配置和DNAI组参数配置。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 DNAI组编号配置用于配置一个DNAI组，一个DNAI组包含了若干个DNAI组参数。 
@@ -20250,7 +20250,7 @@ DNAI组编号配置用于配置一个DNAI组，一个DNAI组包含了若干个DN
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -20261,14 +20261,14 @@ DNAI组编号配置用于配置一个DNAI组，一个DNAI组包含了若干个DN
 ##### 新增DNAI组编号配置(ADD SBIDNAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增DNAI组编号配置。当UPF信息中的DNN UPF信息组配置需要携带一组DNAI列表时，使用该命令。 
 
 命令执行成功后，DNAI组编号可以被“DNAI组参数配置”及“DNN UPF信息组参数配置”引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该DNAI组编号，才能在“DNAI组参数配置”及“DNN UPF信息组参数配置”中引用。 
 
@@ -20282,27 +20282,27 @@ DNAI组编号配置用于配置一个DNAI组，一个DNAI组包含了若干个DN
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号，该编号是DNAI组编号配置的唯一标识，表示一组接入数据网络的用户平面的标识。该参数被“DNAI组参数配置”及“DNN UPF信息组参数配置”引用。“DNAI组参数配置”通过SHOW SBIDNAIARRPARAM命令查询。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号，该编号是DNAI组编号配置的唯一标识，表示一组接入数据网络的用户平面的标识。该参数被“DNAI组参数配置”及“DNN UPF信息组参数配置”引用。“DNAI组参数配置”通过SHOW SBIDNAIARRPARAM命令查询。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20315,12 +20315,12 @@ ADD SBIDNAIARRID:ARRAYID=1
 ##### 删除DNAI组编号配置(DEL SBIDNAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除DNAI组编号配置。当该组DNAI列表不被任何DNN UPF信息组参数配置所引用时，建议使用该命令。命令执行成功后，该组配置无法被查询，也无法再被引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该DNAI组编号配置，需要先删除引用该配置的“DNAI组参数配置”，并在“DNN UPF信息组参数配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -20334,27 +20334,27 @@ ADD SBIDNAIARRID:ARRAYID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号，该编号是DNAI组编号配置的唯一标识，表示一组接入数据网络的用户平面的标识。该参数被“DNAI组参数配置”及“DNN UPF信息组参数配置”引用。“DNAI组参数配置”通过SHOW SBIDNAIARRPARAM命令查询。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号，该编号是DNAI组编号配置的唯一标识，表示一组接入数据网络的用户平面的标识。该参数被“DNAI组参数配置”及“DNN UPF信息组参数配置”引用。“DNAI组参数配置”通过SHOW SBIDNAIARRPARAM命令查询。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20367,37 +20367,37 @@ DEL SBIDNAIARRID:ARRAYID=1
 ##### 查询DNAI组编号配置(SHOW SBIDNAIARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询DNAI组编号配置。当配置DNAI组参数及DNN UPF信息组参数时，需要获取已配置的DNAI组编号，此时可执行该命令查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号，该编号是DNAI组编号配置的唯一标识，表示一组接入数据网络的用户平面的标识。该参数被“DNAI组参数配置”及“DNN UPF信息组参数配置”引用。“DNAI组参数配置”通过SHOW SBIDNAIARRPARAM命令查询。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号，该编号是DNAI组编号配置的唯一标识，表示一组接入数据网络的用户平面的标识。该参数被“DNAI组参数配置”及“DNN UPF信息组参数配置”引用。“DNAI组参数配置”通过SHOW SBIDNAIARRPARAM命令查询。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20420,7 +20420,7 @@ SHOW SBIDNAIARRID:ARRAYID=1
 #### DNAI组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNAI（Data Network Access Identifier，数据网络接入标识符）表示可以接入一个数据网络的用户平面的标识。 
@@ -20432,7 +20432,7 @@ DNAI组数据配置包括DNAI组编号配置和DNAI组参数配置。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 DNAI组参数配置用于配置一个DNAI归属于哪个DNAI组。当启用本地NRF功能时，需要配置该组命令。 
@@ -20442,7 +20442,7 @@ DNAI组参数配置用于配置一个DNAI归属于哪个DNAI组。当启用本�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -20453,22 +20453,22 @@ DNAI组参数配置用于配置一个DNAI归属于哪个DNAI组。当启用本�
 ##### 新增DNAI组参数配置(ADD SBIDNAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增DNAI组参数配置。当需要新增某个DNN（Data Network Name，数据网名称）中的UPF可支持的DNAI列表时，使用该命令配置DNAI组参数，该参数配置DNAI信息及其归属的DNAI组。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该DNAI组参数配置，需要先新增“DNAI组编号配置”。 
 
-“DNAI组编号配置”通过[ADD SBIDNAIARRID](../mml/1220905.html)命令进行新增。
+“DNAI组编号配置”通过[ADD SBIDNAIARRID]命令进行新增。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 ARRAYID|DNAI组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号。DNAI组编号引用了“DNAI组编号配置”中的配置，通过SHOW SBIDNAIARRID命令查询。
@@ -20477,10 +20477,10 @@ DATANAI|DNAI|参数可选性: 必选参数类型: 字符串参数范围: 0-127|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号。DNAI组编号引用了“DNAI组编号配置”中的配置，通过SHOW SBIDNAIARRID命令查询。
@@ -20489,7 +20489,7 @@ DATANAI|DNAI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20502,20 +20502,20 @@ ADD SBIDNAIARRPARAM:INDEX=1,ARRAYID=1,DATANAI="abc"
 ##### 修改DNAI组参数配置(SET SBIDNAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改DNAI组参数配置。当UPF已配置可以支持的DNAI组编号，需要修改归属于该DNAI组编号的DNAI信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果修改该组参数归属的DNAI组编号，则需要保证该DNAI组编号已经存在，该编号通过[SHOW SBIDNAIARRID](../mml/1220908.html)命令查询。
-
-
-[](None)输入参数说明 
+如果修改该组参数归属的DNAI组编号，则需要保证该DNAI组编号已经存在，该编号通过[SHOW SBIDNAIARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号。DNAI组编号引用了“DNAI组编号配置”中的配置，通过SHOW SBIDNAIARRID命令查询。
@@ -20524,10 +20524,10 @@ DATANAI|DNAI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号。DNAI组编号引用了“DNAI组编号配置”中的配置，通过SHOW SBIDNAIARRID命令查询。
@@ -20536,7 +20536,7 @@ DATANAI|DNAI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20549,30 +20549,30 @@ SET SBIDNAIARRPARAM:INDEX=1,ARRAYID=1,DATANAI="abc"
 ##### 删除DNAI组参数配置(DEL SBIDNAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除DNAI组参数配置。当UPF已配置可以支持的DNAI组编号，需要删除归属于该DNAI组编号的DNAI信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个DNAI组编号的所有DNAI组参数配置都已经删除，建议删除该DNAI组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号。DNAI组编号引用了“DNAI组编号配置”中的配置，通过SHOW SBIDNAIARRID命令查询。
@@ -20581,7 +20581,7 @@ DATANAI|DNAI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20594,20 +20594,20 @@ DEL SBIDNAIARRPARAM:INDEX=1
 ##### 查询DNAI组参数配置(SHOW SBIDNAIARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询DNAI组参数配置。当需要查询已经配置的DNAI组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会显示对应的配置信息；如果不指定配置索引，则显示已经配置的所有DNAI组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号。DNAI组编号引用了“DNAI组编号配置”中的配置，通过SHOW SBIDNAIARRID命令查询。
@@ -20616,10 +20616,10 @@ DATANAI|DNAI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNAI组参数配置的唯一标识。
 ARRAYID|DNAI组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNAI组编号。DNAI组编号引用了“DNAI组编号配置”中的配置，通过SHOW SBIDNAIARRID命令查询。
@@ -20628,7 +20628,7 @@ DATANAI|DNAI|参数可选性: 任选参数类型: 字符串参数范围: 0-127|�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20651,7 +20651,7 @@ SHOW SBIDNAIARRPARAM:INDEX=1
 ### DNN UPF信息组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNN UPF信息组为S-NSSAI UPF信息组配置的必选部分，表示UPF所支持给定DNN的参数集，参数包括： 
@@ -20679,7 +20679,7 @@ IPv6PrefixRange：UPF可处理的IPv6前缀范围列表。
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，DNN UPF信息组是以一组数据配置呈现的，该组数据配置包括DNN UPF信息组编号配置和DNN UPF信息组参数配置，一个DNN UPF信息组编号可以被若干个DNN UPF信息组参数引用。 
@@ -20689,7 +20689,7 @@ DNN UPF信息组配置被“S-NSSAI UPF信息组参数配置”引用，最终�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -20700,7 +20700,7 @@ DNN UPF信息组配置被“S-NSSAI UPF信息组参数配置”引用，最终�
 #### DNN UPF信息组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNN UPF信息组为S-NSSAI UPF信息组配置的必选部分，表示UPF所支持给定DNN的参数集，参数包括： 
@@ -20730,7 +20730,7 @@ DNN UPF信息组数据配置包括DNN UPF信息组编号配置和DNN UPF信息�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 DNN UPF信息组编号配置用于配置一个DNN UPF信息组，一个DNN UPF信息组包含了若干个DNN UPF信息组参数。 
@@ -20740,7 +20740,7 @@ DNN UPF信息组编号配置用于配置一个DNN UPF信息组，一个DNN UPF�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -20751,14 +20751,14 @@ DNN UPF信息组编号配置用于配置一个DNN UPF信息组，一个DNN UPF�
 ##### 新增DNN UPF信息组编号配置(ADD SBIDNNUPFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增DNN UPF信息组编号配置。当UPF信息中的S-NSSAI UPF信息组配置需要携带一组DNN UPF信息列表时，使用该命令。 
 
 命令执行成功后，DNN UPF信息组编号可以被“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该DNN UPF信息组编号，才能在“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”中引用。 
 
@@ -20772,27 +20772,27 @@ DNN UPF信息组编号配置用于配置一个DNN UPF信息组，一个DNN UPF�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN UPF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号，该编号是DNN UPF信息组编号配置的唯一标识，表示UPF所支持的一组DNN参数集。该参数被“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”引用。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号，该编号是DNN UPF信息组编号配置的唯一标识，表示UPF所支持的一组DNN参数集。该参数被“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”引用。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20805,12 +20805,12 @@ ADD SBIDNNUPFINFOARRID:ARRAYID=1
 ##### 删除DNN UPF信息组编号配置(DEL SBIDNNUPFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除DNN UPF信息组编号配置。当该组DNN UPF信息列表不被任何S-NSSIA UPF信息组参数配置所引用时，建议使用该命令。命令执行成功后，该组配置无法被查询，也无法再被引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该DNN UPF信息组编号配置，需要先删除引用该配置的“DNN UPF信息组参数配置”，并在“S-NSSAI UPF信息组参数配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -20824,27 +20824,27 @@ ADD SBIDNNUPFINFOARRID:ARRAYID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN UPF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号，该编号是DNN UPF信息组编号配置的唯一标识，表示UPF所支持的一组DNN参数集。该参数被“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”引用。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号，该编号是DNN UPF信息组编号配置的唯一标识，表示UPF所支持的一组DNN参数集。该参数被“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”引用。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20857,37 +20857,37 @@ DEL SBIDNNUPFINFOARRID:ARRAYID=1
 ##### 查询DNN UPF信息组编号配置(SHOW SBIDNNUPFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询DNN UPF信息组编号配置。当配置DNN UPF信息组参数及S-NSSAI UPF信息组参数时，需要获取已配置的DNN UPF信息组编号，此时可执行该命令查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号，该编号是DNN UPF信息组编号配置的唯一标识，表示UPF所支持的一组DNN参数集。该参数被“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”引用。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号，该编号是DNN UPF信息组编号配置的唯一标识，表示UPF所支持的一组DNN参数集。该参数被“DNN UPF信息组参数配置”及“S-NSSAI UPF信息组参数配置”引用。“DNN UPF信息组参数配置”通过SHOW SBIDNNUPFINFOARRPARAM命令查询。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -20910,7 +20910,7 @@ SHOW SBIDNNUPFINFOARRID:ARRAYID=1
 #### DNN UPF信息组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 DNN UPF信息组为S-NSSAI UPF信息组配置的必选部分，表示UPF所支持给定DNN的参数集，参数包括： 
@@ -20940,7 +20940,7 @@ DNN UPF信息组数据配置包括DNN UPF信息组编号配置和DNN UPF信息�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 DNN UPF信息组参数配置用于配置一个DNN UPF信息归属于哪个DNN UPF信息组。当启用本地NRF功能时，需要配置该组命令。 
@@ -20950,7 +20950,7 @@ DNN UPF信息组参数配置用于配置一个DNN UPF信息归属于哪个DNN UP
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -20961,22 +20961,22 @@ DNN UPF信息组参数配置用于配置一个DNN UPF信息归属于哪个DNN UP
 ##### 新增DNN UPF信息组参数配置(ADD SBIDNNUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增DNN UPF信息组参数配置。当需要新增UPF可支持的DNN UPF信息列表时，使用该命令配置DNN UPF信息组参数，该参数配置DNN UPF信息及其归属的DNN UPF信息组。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该DNN UPF信息组参数配置，需要先新增“DNN UPF信息组编号配置”。 
 
-“DNN UPF信息组编号配置”通过[ADD SBIDNNUPFINFOARRID](../mml/1220913.html)命令进行新增。
+“DNN UPF信息组编号配置”通过[ADD SBIDNNUPFINFOARRID]命令进行新增。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|DNN UPF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号。DNN UPF信息组编号引用了“DNN UPF信息组编号配置”中的配置，通过SHOW SBIDNNUPFINFOARRID命令查询。
@@ -20989,10 +20989,10 @@ IPV6PREFIXRNGARRAY|IPv6前缀范围组编号|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号。DNN UPF信息组编号引用了“DNN UPF信息组编号配置”中的配置，通过SHOW SBIDNNUPFINFOARRID命令查询。
@@ -21005,7 +21005,7 @@ IPV6PREFIXRNGARRAY|IPv6前缀范围组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21018,20 +21018,20 @@ ADD SBIDNNUPFINFOARRPARAM:INDEX=1,ARRAYID=1,DNN="Label1.Label2.Label3",DNAIARRAY
 ##### 修改DNN UPF信息组参数配置(SET SBIDNNUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改DNN UPF信息组参数配置。当UPF已配置可以支持的DNN UPF信息组编号，需要修改归属于该DNN UPF信息组编号的DNN UPF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果修改该组参数归属的DNN UPF信息组编号，则需要保证该DNN UPF信息组编号已经存在，该编号通过[SHOW SBIDNNUPFINFOARRID](../mml/1220916.html)命令查询。
-
-
-[](None)输入参数说明 
+如果修改该组参数归属的DNN UPF信息组编号，则需要保证该DNN UPF信息组编号已经存在，该编号通过[SHOW SBIDNNUPFINFOARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号。DNN UPF信息组编号引用了“DNN UPF信息组编号配置”中的配置，通过SHOW SBIDNNUPFINFOARRID命令查询。
@@ -21044,10 +21044,10 @@ IPV6PREFIXRNGARRAY|IPv6前缀范围组编号|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号。DNN UPF信息组编号引用了“DNN UPF信息组编号配置”中的配置，通过SHOW SBIDNNUPFINFOARRID命令查询。
@@ -21060,7 +21060,7 @@ IPV6PREFIXRNGARRAY|IPv6前缀范围组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21073,30 +21073,30 @@ SET SBIDNNUPFINFOARRPARAM:INDEX=1,ARRAYID=1,DNN="Label1.Label2.Label3",DNAIARRAY
 ##### 删除DNN UPF信息组参数配置(DEL SBIDNNUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除DNN UPF信息组参数配置。当UPF已配置可以支持的DNN UPF信息组编号，需要删除归属于该DNN UPF信息组编号的DNN UPF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个DNN UPF信息组编号的所有DNN UPF信息组参数配置都已经删除，建议删除该DNN UPF信息组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号。DNN UPF信息组编号引用了“DNN UPF信息组编号配置”中的配置，通过SHOW SBIDNNUPFINFOARRID命令查询。
@@ -21109,7 +21109,7 @@ IPV6PREFIXRNGARRAY|IPv6前缀范围组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21122,20 +21122,20 @@ DEL SBIDNNUPFINFOARRPARAM:INDEX=1
 ##### 查询DNN UPF信息组参数配置(SHOW SBIDNNUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询DNN UPF信息组参数配置。当需要查询已经配置的DNN UPF信息组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会显示对应的配置信息；如果不指定配置索引，则显示已经配置的所有DNN UPF信息组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号。DNN UPF信息组编号引用了“DNN UPF信息组编号配置”中的配置，通过SHOW SBIDNNUPFINFOARRID命令查询。
@@ -21148,10 +21148,10 @@ IPV6PREFIXRNGARRAY|IPv6前缀范围组编号|参数可选性: 任选参数类型
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是DNN UPF信息组参数配置的唯一标识。该参数无特殊配置原则。
 ARRAYID|DNN UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置DNN UPF信息组编号。DNN UPF信息组编号引用了“DNN UPF信息组编号配置”中的配置，通过SHOW SBIDNNUPFINFOARRID命令查询。
@@ -21164,7 +21164,7 @@ IPV6PREFIXRNGARRAY|IPv6前缀范围组编号|参数可选性: 任选参数类型
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21187,7 +21187,7 @@ SHOW SBIDNNUPFINFOARRPARAM:INDEX=1
 ### S-NSSAI UPF信息组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，之后SMF与发现的UPF进行通信。S-NSSAI UPF信息表示UPF可以支持的S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）信息。 
@@ -21197,7 +21197,7 @@ SHOW SBIDNNUPFINFOARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，S-NSSAI UPF信息组是以一组数据配置呈现的，该组数据配置包括S-NSSAI UPF信息组编号配置和S-NSSAI UPF信息组参数配置，一个S-NSSAI UPF信息组编号可以被若干个S-NSSAI UPF信息组参数引用。 
@@ -21207,7 +21207,7 @@ S-NSSAI UPF信息组配置应用于UPF扩展信息配置中，用于表示该UPF
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -21218,7 +21218,7 @@ S-NSSAI UPF信息组配置应用于UPF扩展信息配置中，用于表示该UPF
 #### S-NSSAI UPF信息组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，之后SMF与发现的UPF进行通信。S-NSSAI UPF信息表示UPF可以支持的S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）信息。 
@@ -21230,7 +21230,7 @@ S-NSSAI UPF信息组数据配置包括S-NSSAI UPF信息组编号配置和S-NSSAI
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI UPF信息组编号配置用于配置一个S-NSSAI UPF信息组，一个S-NSSAI UPF信息组包含了若干个S-NSSAI UPF信息组参数。 
@@ -21240,7 +21240,7 @@ S-NSSAI UPF信息组编号配置用于配置一个S-NSSAI UPF信息组，一个S
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -21251,14 +21251,14 @@ S-NSSAI UPF信息组编号配置用于配置一个S-NSSAI UPF信息组，一个S
 ##### 新增S-NSSAI UPF信息组编号配置(ADD SBISNSSAIUPFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增S-NSSAI UPF信息组编号配置。当UPF信息需要携带一组S-NSSAI UPF信息列表时，使用该命令。 
 
 命令执行成功后，S-NSSAI UPF信息组编号可以被“S-NSSAI UPF信息组参数配置”及“UPF信息配置”引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该S-NSSAI UPF信息组编号，才能在“S-NSSAI UPF信息组参数配置”及“UPF信息配置”中引用。 
 
@@ -21272,27 +21272,27 @@ S-NSSAI UPF信息组编号配置用于配置一个S-NSSAI UPF信息组，一个S
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，该编号是S-NSSAI UPF信息组编号配置的唯一标识，表示UPF可以服务的一组S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）。该参数被“S-NSSAI UPF信息组参数配置”及“UPF信息配置”引用。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，该编号是S-NSSAI UPF信息组编号配置的唯一标识，表示UPF可以服务的一组S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）。该参数被“S-NSSAI UPF信息组参数配置”及“UPF信息配置”引用。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21305,12 +21305,12 @@ ADD SBISNSSAIUPFINFOARRID:ARRAYID=1
 ##### 删除S-NSSAI UPF信息组编号配置(DEL SBISNSSAIUPFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除S-NSSAI UPF信息组编号配置。当该组S-NSSAI UPF信息列表不被任何UPF所引用时，建议使用该命令。命令执行成功后，该组配置无法被查询，也无法再被引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该S-NSSAI UPF信息组编号配置，需要先删除引用该配置的“S-NSSAI UPF信息组参数配置”，并在“UPF信息配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -21324,27 +21324,27 @@ ADD SBISNSSAIUPFINFOARRID:ARRAYID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，该编号是S-NSSAI UPF信息组编号配置的唯一标识，表示UPF可以服务的一组S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）。该参数被“S-NSSAI UPF信息组参数配置”及“UPF信息配置”引用。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，该编号是S-NSSAI UPF信息组编号配置的唯一标识，表示UPF可以服务的一组S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）。该参数被“S-NSSAI UPF信息组参数配置”及“UPF信息配置”引用。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21357,37 +21357,37 @@ DEL SBISNSSAIUPFINFOARRID:ARRAYID=1
 ##### 查询S-NSSAI UPF信息组编号配置(SHOW SBISNSSAIUPFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询S-NSSAI UPF信息组编号配置。当配置S-NSSAI UPF信息组参数及UPF信息时，需要获取已配置的S-NSSAI UPF信息组编号，此时可执行该命令查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，该编号是S-NSSAI UPF信息组编号配置的唯一标识，表示UPF可以服务的一组S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）。该参数被“S-NSSAI UPF信息组参数配置”及“UPF信息配置”引用。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号，该编号是S-NSSAI UPF信息组编号配置的唯一标识，表示UPF可以服务的一组S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）。该参数被“S-NSSAI UPF信息组参数配置”及“UPF信息配置”引用。“S-NSSAI UPF信息组参数配置”通过SHOW SBISNSSAIUPFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21410,7 +21410,7 @@ SHOW SBISNSSAIUPFINFOARRID:ARRAYID=1
 #### S-NSSAI UPF信息组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，之后SMF与发现的UPF进行通信。S-NSSAI UPF信息表示UPF可以支持的S-NSSAI（Single Network Slice Selection Assistance Information，单个网络切片选择辅助信息）信息。 
@@ -21422,7 +21422,7 @@ S-NSSAI UPF信息组数据配置包括S-NSSAI UPF信息组编号配置和S-NSSAI
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 S-NSSAI UPF信息组参数配置用于配置一个S-NSSAI UPF信息归属于哪个S-NSSAI UPF信息组。当启用本地NRF功能时，需要配置该组命令。 
@@ -21432,7 +21432,7 @@ S-NSSAI UPF信息组参数配置用于配置一个S-NSSAI UPF信息归属于哪�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -21443,12 +21443,12 @@ S-NSSAI UPF信息组参数配置用于配置一个S-NSSAI UPF信息归属于哪�
 ##### 新增S-NSSAI UPF信息组参数配置(ADD SBISNSSAIUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增S-NSSAI UPF信息组参数配置。当UPF需要新增可服务的S-NSSAI信息列表时，使用该命令配置S-NSSAI UPF信息组参数，该参数配置S-NSSAI UPF信息及其归属的S-NSSAI UPF信息组。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -21463,10 +21463,10 @@ S-NSSAI UPF信息组参数配置用于配置一个S-NSSAI UPF信息归属于哪�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号。S-NSSAI UPF信息组编号引用了“S-NSSAI UPF信息组编号配置”中的配置，通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -21477,10 +21477,10 @@ REDUNDANTTRANS|是否支持冗余传输|参数可选性: 任选参数类型: 枚
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号。S-NSSAI UPF信息组编号引用了“S-NSSAI UPF信息组编号配置”中的配置，通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -21491,7 +21491,7 @@ REDUNDANTTRANS|是否支持冗余传输|参数可选性: 任选参数类型: 枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21504,12 +21504,12 @@ ADD SBISNSSAIUPFINFOARRPARAM:INDEX=1,ARRAYID=1,SNSSAI=1,DNNUPFARRAY=1,REDUNDANTT
 ##### 修改S-NSSAI UPF信息组参数配置(SET SBISNSSAIUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改S-NSSAI UPF信息组参数配置。当UPF已配置可以支持的S-NSSAI UPF信息组编号，需要修改归属于该S-NSSAI UPF信息组编号的S-NSSAI UPF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 
  
@@ -21524,10 +21524,10 @@ ADD SBISNSSAIUPFINFOARRPARAM:INDEX=1,ARRAYID=1,SNSSAI=1,DNNUPFARRAY=1,REDUNDANTT
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号。S-NSSAI UPF信息组编号引用了“S-NSSAI UPF信息组编号配置”中的配置，通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -21538,10 +21538,10 @@ REDUNDANTTRANS|是否支持冗余传输|参数可选性: 任选参数类型: 枚
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号。S-NSSAI UPF信息组编号引用了“S-NSSAI UPF信息组编号配置”中的配置，通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -21552,7 +21552,7 @@ REDUNDANTTRANS|是否支持冗余传输|参数可选性: 任选参数类型: 枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21565,30 +21565,30 @@ SET SBISNSSAIUPFINFOARRPARAM:INDEX=1,ARRAYID=1,SNSSAI=1,DNNUPFARRAY=1,REDUNDANTT
 ##### 删除S-NSSAI UPF信息组参数配置(DEL SBISNSSAIUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除S-NSSAI UPF信息组参数配置。当UPF已配置可以支持的S-NSSAI UPF信息组编号，需要删除归属于该S-NSSAI UPF信息组编号的S-NSSAI UPF信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个S-NSSAI UPF信息组编号的所有S-NSSAI UPF信息组参数配置都已经删除，建议删除该S-NSSAI UPF信息组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号。S-NSSAI UPF信息组编号引用了“S-NSSAI UPF信息组编号配置”中的配置，通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -21599,7 +21599,7 @@ REDUNDANTTRANS|是否支持冗余传输|参数可选性: 任选参数类型: 枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21612,20 +21612,20 @@ DEL SBISNSSAIUPFINFOARRPARAM:INDEX=1
 ##### 查询S-NSSAI UPF信息组参数配置(SHOW SBISNSSAIUPFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询S-NSSAI UPF信息组参数配置。当需要查询已经配置的S-NSSAI UPF信息组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会显示对应的配置信息；如果不指定配置索引，则显示已经配置的所有S-NSSAI UPF信息组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号。S-NSSAI UPF信息组编号引用了“S-NSSAI UPF信息组编号配置”中的配置，通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -21636,10 +21636,10 @@ REDUNDANTTRANS|是否支持冗余传输|参数可选性: 任选参数类型: 枚
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是S-NSSAI UPF信息组参数配置的唯一标识。
 ARRAYID|S-NSSAI UPF信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置S-NSSAI UPF信息组编号。S-NSSAI UPF信息组编号引用了“S-NSSAI UPF信息组编号配置”中的配置，通过SHOW SBISNSSAIUPFINFOARRID命令查询。
@@ -21650,7 +21650,7 @@ REDUNDANTTRANS|是否支持冗余传输|参数可选性: 任选参数类型: 枚
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21673,7 +21673,7 @@ SHOW SBISNSSAIUPFINFOARRPARAM:INDEX=1
 ### UPF接口信息组配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，之后SMF与发现的UPF进行通信。UPF接口信息表示UPF可以支持的用户平面接口列表。 
@@ -21683,7 +21683,7 @@ SHOW SBISNSSAIUPFINFOARRPARAM:INDEX=1
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 本地NRF功能打开时，UPF接口信息组是以一组数据配置呈现的，该组数据配置包括UPF接口信息组编号配置和UPF接口信息组参数配置，一个UPF接口信息组编号可以被若干个UPF接口信息组参数引用。 
@@ -21693,7 +21693,7 @@ UPF接口信息组配置应用于UPF扩展信息配置中，用于表示该UPF�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -21704,7 +21704,7 @@ UPF接口信息组配置应用于UPF扩展信息配置中，用于表示该UPF�
 #### UPF接口信息组编号配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，之后SMF与发现的UPF进行通信。UPF接口信息表示UPF可以支持的用户平面接口列表。 
@@ -21716,7 +21716,7 @@ UPF接口信息组数据配置包括UPF接口信息组编号配置和UPF接口�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UPF接口信息组编号配置用于配置一个UPF接口信息组，一个UPF接口信息组包含了若干个UPF接口信息组参数。 
@@ -21726,7 +21726,7 @@ UPF接口信息组编号配置用于配置一个UPF接口信息组，一个UPF�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -21737,14 +21737,14 @@ UPF接口信息组编号配置用于配置一个UPF接口信息组，一个UPF�
 ##### 新增UPF接口信息组编号配置(ADD SBIUPFITFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增UPF接口信息组编号配置。当UPF信息配置需要携带一组UPF接口信息列表时，使用该命令。 
 
 命令执行成功后，UPF接口信息组编号可以被“UPF接口信息组参数配置”及“UPF信息配置”引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 必须先配置该UPF接口信息组编号，才能在“UPF接口信息组参数配置”及“UPF信息配置”中引用。 
 
@@ -21758,27 +21758,27 @@ UPF接口信息组编号配置用于配置一个UPF接口信息组，一个UPF�
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|UPF接口信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号，该编号是UPF接口信息组编号配置的唯一标识，表示UPF可以支持的一组用户平面接口列表。该参数被“UPF接口信息组参数配置”及“UPF信息配置”引用。“UPF接口信息组参数配置”通过SHOW SBIUPFITFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号，该编号是UPF接口信息组编号配置的唯一标识，表示UPF可以支持的一组用户平面接口列表。该参数被“UPF接口信息组参数配置”及“UPF信息配置”引用。“UPF接口信息组参数配置”通过SHOW SBIUPFITFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21791,12 +21791,12 @@ ADD SBIUPFITFINFOARRID:ARRAYID=1
 ##### 删除UPF接口信息组编号配置(DEL SBIUPFITFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除UPF接口信息组编号配置。当该组UPF接口信息列表不被任何UPF所引用时，建议使用该命令。命令执行成功后，该组配置无法被查询，也无法再被引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要删除该UPF接口信息组编号配置，需要先删除引用该配置的“UPF接口信息组参数配置”，并在“UPF信息配置”中将引用该配置的参数值设置为0来删除引用关系。 
 
@@ -21810,27 +21810,27 @@ ADD SBIUPFITFINFOARRID:ARRAYID=1
  
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|UPF接口信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号，该编号是UPF接口信息组编号配置的唯一标识，表示UPF可以支持的一组用户平面接口列表。该参数被“UPF接口信息组参数配置”及“UPF信息配置”引用。“UPF接口信息组参数配置”通过SHOW SBIUPFITFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号，该编号是UPF接口信息组编号配置的唯一标识，表示UPF可以支持的一组用户平面接口列表。该参数被“UPF接口信息组参数配置”及“UPF信息配置”引用。“UPF接口信息组参数配置”通过SHOW SBIUPFITFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21843,37 +21843,37 @@ DEL SBIUPFITFINFOARRID:ARRAYID=1
 ##### 查询UPF接口信息组编号配置(SHOW SBIUPFITFINFOARRID) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询UPF接口信息组编号配置。当配置UPF接口信息组参数及UPF信息时，需要获取已配置的UPF接口信息组编号，此时可执行该命令查询。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号，该编号是UPF接口信息组编号配置的唯一标识，表示UPF可以支持的一组用户平面接口列表。该参数被“UPF接口信息组参数配置”及“UPF信息配置”引用。“UPF接口信息组参数配置”通过SHOW SBIUPFITFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号，该编号是UPF接口信息组编号配置的唯一标识，表示UPF可以支持的一组用户平面接口列表。该参数被“UPF接口信息组参数配置”及“UPF信息配置”引用。“UPF接口信息组参数配置”通过SHOW SBIUPFITFINFOARRPARAM命令查询。“UPF信息配置”通过SHOW SBIUPFINFO命令查询。该参数无特殊配置原则。
 
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21896,7 +21896,7 @@ SHOW SBIUPFITFINFOARRID:ARRAYID=1
 #### UPF接口信息组参数配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 当UPF向NRF注册了自己的相关配置信息，SMF可以通过向NRF订阅发现UPF，之后SMF与发现的UPF进行通信。UPF接口信息表示UPF可以支持的用户平面接口列表。 
@@ -21908,7 +21908,7 @@ UPF接口信息组数据配置包括UPF接口信息组编号配置和UPF接口�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 UPF接口信息组参数配置用于配置一个UPF接口信息归属于哪个UPF接口信息组。当启用本地NRF功能时，需要配置该组命令。 
@@ -21918,7 +21918,7 @@ UPF接口信息组参数配置用于配置一个UPF接口信息归属于哪个UP
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -21929,22 +21929,22 @@ UPF接口信息组参数配置用于配置一个UPF接口信息归属于哪个UP
 ##### 新增UPF接口信息组参数配置(ADD SBIUPFITFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于新增UPF接口信息组参数配置。当需要新增UPF可支持的UPF接口信息列表时，使用该命令配置UPF接口信息组参数，该参数配置UPF接口信息及其归属的UPF接口信息组。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果要新增该UPF接口信息组参数配置，需要先新增“UPF接口信息组编号配置”。 
 
-“UPF接口信息组编号配置”通过[ADD SBIUPFITFINFOARRID](../mml/1220929.html)命令进行新增。
+“UPF接口信息组编号配置”通过[ADD SBIUPFITFINFOARRID]命令进行新增。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 ARRAYID|UPF接口信息组编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号。UPF接口信息组编号引用了“UPF接口信息组编号配置”中的配置，通过SHOW SBIUPFITFINFOARRID命令查询。
@@ -21957,10 +21957,10 @@ NETWORKINST|网络实例|参数可选性: 任选参数类型: 字符串参数范
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号。UPF接口信息组编号引用了“UPF接口信息组编号配置”中的配置，通过SHOW SBIUPFITFINFOARRID命令查询。
@@ -21973,7 +21973,7 @@ NETWORKINST|网络实例|参数可选性: 任选参数类型: 字符串参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -21986,20 +21986,20 @@ ADD SBIUPFITFINFOARRPARAM:INDEX=1,ARRAYID=1,ITFTYPE="N3",IPV4=1,IPV6=1,FQDN="upf
 ##### 修改UPF接口信息组参数配置(SET SBIUPFITFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于修改UPF接口信息组参数配置。当UPF已配置可以支持的UPF接口信息组编号，需要修改归属于该UPF接口信息组编号的UPF接口信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果修改该组参数归属的UPF接口信息组编号，则需要保证该UPF接口信息组编号已经存在，该编号通过[SHOW SBIUPFITFINFOARRID](../mml/1220932.html)命令查询。
-
-
-[](None)输入参数说明 
+如果修改该组参数归属的UPF接口信息组编号，则需要保证该UPF接口信息组编号已经存在，该编号通过[SHOW SBIUPFITFINFOARRID]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号。UPF接口信息组编号引用了“UPF接口信息组编号配置”中的配置，通过SHOW SBIUPFITFINFOARRID命令查询。
@@ -22012,10 +22012,10 @@ NETWORKINST|网络实例|参数可选性: 任选参数类型: 字符串参数范
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号。UPF接口信息组编号引用了“UPF接口信息组编号配置”中的配置，通过SHOW SBIUPFITFINFOARRID命令查询。
@@ -22028,7 +22028,7 @@ NETWORKINST|网络实例|参数可选性: 任选参数类型: 字符串参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -22041,30 +22041,30 @@ SET SBIUPFITFINFOARRPARAM:INDEX=1,ARRAYID=1,ITFTYPE="N3",IPV4=1,IPV6=1,FQDN="upf
 ##### 删除UPF接口信息组参数配置(DEL SBIUPFITFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于删除UPF接口信息组参数配置。当UPF已配置可以支持的UPF接口信息组编号，需要删除归属于该UPF接口信息组编号的UPF接口信息时，使用该命令。 
 
 
-[](None)注意事项 
+注意事项 
 
 如果归属于某个UPF接口信息组编号的所有UPF接口信息组参数配置都已经删除，建议删除该UPF接口信息组编号配置，防止被误引用。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号。UPF接口信息组编号引用了“UPF接口信息组编号配置”中的配置，通过SHOW SBIUPFITFINFOARRID命令查询。
@@ -22077,7 +22077,7 @@ NETWORKINST|网络实例|参数可选性: 任选参数类型: 字符串参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -22090,20 +22090,20 @@ DEL SBIUPFITFINFOARRPARAM:INDEX=1
 ##### 查询UPF接口信息组参数配置(SHOW SBIUPFITFINFOARRPARAM) 
 
 
-[](None)功能说明 
+功能说明 
 
 该命令用于查询UPF接口信息组参数配置。当需要查询已经配置的UPF接口信息组参数信息时，使用该命令。查询时，可以指定配置索引，查询成功后，会显示对应的配置信息；如果不指定配置索引，则显示已经配置的所有UPF接口信息组参数信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号。UPF接口信息组编号引用了“UPF接口信息组编号配置”中的配置，通过SHOW SBIUPFITFINFOARRID命令查询。
@@ -22116,10 +22116,10 @@ NETWORKINST|网络实例|参数可选性: 任选参数类型: 字符串参数范
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 INDEX|配置索引|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置配置索引，该索引是UPF接口信息组参数配置的唯一标识。
 ARRAYID|UPF接口信息组编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置UPF接口信息组编号。UPF接口信息组编号引用了“UPF接口信息组编号配置”中的配置，通过SHOW SBIUPFITFINFOARRID命令查询。
@@ -22132,7 +22132,7 @@ NETWORKINST|网络实例|参数可选性: 任选参数类型: 字符串参数范
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -22155,7 +22155,7 @@ SHOW SBIUPFITFINFOARRPARAM:INDEX=1
 ## OCS配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 OCS（在线计费系统，Online Charging System），是指参与通信过程控制的计费系统，是在线计费系统的融合，能够解决用户实时信用控制、预付费使用数据业务和增值业务实时计费等问题。 
@@ -22167,7 +22167,7 @@ OCS（在线计费系统，Online Charging System），是指参与通信过程�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 OCS配置为命令树目录，下面包含了OCS信息配置。OCS信息配置即对应本地NRF配置的对端NFProfile的OCS信息参数，如果不配置，则对端NFProfile缺少OCS信息参数，本端如果需要发现可用的对端OCS时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -22175,7 +22175,7 @@ OCS配置为命令树目录，下面包含了OCS信息配置。OCS信息配置�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -22186,7 +22186,7 @@ OCS配置为命令树目录，下面包含了OCS信息配置。OCS信息配置�
 ### OCS信息配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 OCS（在线计费系统，Online Charging System），是指参与通信过程控制的计费系统，是在线计费系统的融合，能够解决用户实时信用控制、预付费使用数据业务和增值业务实时计费等问题。 
@@ -22198,7 +22198,7 @@ OCS（在线计费系统，Online Charging System），是指参与通信过程�
 
 
 
-[](None)功能说明 
+功能说明 
 
 
 OCS信息配置即对应本地NRF配置的对端NFProfile的OCS信息参数，如果不配置，则对端NFProfile缺少OCS信息参数，本端如果需要发现可用的对端OCS时，就无法进行有效的发现参数匹配，可能导致业务失败。当启用本地NRF功能时，需要配置该组命令。 
@@ -22206,7 +22206,7 @@ OCS信息配置即对应本地NRF配置的对端NFProfile的OCS信息参数，�
 
 
 
-[](None)子主题： 
+子主题： 
 
 
 
@@ -22217,20 +22217,20 @@ OCS信息配置即对应本地NRF配置的对端NFProfile的OCS信息参数，�
 #### 新增OCS信息配置(ADD SBIOCSINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于新增OCS信息。当本地NRF配置中所配置的对端NFProfile需要携带OCS信息时，使用该命令。命令执行成功后，OCS信息编号可以被对端NF扩展信息配置引用。 
 
 
-[](None)注意事项 
+注意事项 
 
 系统支持的该配置项最大记录数为2048。 
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 SUPIRANGEARRAY|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置SUPI（Subscriber Permanent Identifier，用户永久标识）范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。如果不配置，则该OCS实例可以对任何SUPI对应的用户提供计费。
@@ -22240,10 +22240,10 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 SUPIRANGEARRAY|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置SUPI（Subscriber Permanent Identifier，用户永久标识）范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。如果不配置，则该OCS实例可以对任何SUPI对应的用户提供计费。
@@ -22253,7 +22253,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -22266,20 +22266,20 @@ ADD SBIOCSINFO:ID=1,GPSIRANGEARRAY=1
 #### 修改OCS信息配置(SET SBIOCSINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于修改OCS信息。当本地NRF配置中所配置的对端NFProfile携带的OCS信息需要变更时，使用该命令。命令执行成功后，修改后的OCS信息会呈现在本地NRF配置中所配置的对端NFProfile中。 
 
 
-[](None)注意事项 
+注意事项 
 
-修改OCS信息，需要保证OCS信息编号已经存在，该编号通过[SHOW SBIOCSINFO](../mml/1224011.html)命令查询。
-
-
-[](None)输入参数说明 
+修改OCS信息，需要保证OCS信息编号已经存在，该编号通过[SHOW SBIOCSINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 SUPIRANGEARRAY|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置SUPI（Subscriber Permanent Identifier，用户永久标识）范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。如果不配置，则该OCS实例可以对任何SUPI对应的用户提供计费。
@@ -22289,10 +22289,10 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 SUPIRANGEARRAY|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置SUPI（Subscriber Permanent Identifier，用户永久标识）范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。如果不配置，则该OCS实例可以对任何SUPI对应的用户提供计费。
@@ -22302,7 +22302,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -22315,30 +22315,30 @@ SET SBIOCSINFO:ID=1,GPSIRANGEARRAY=1
 #### 删除OCS信息配置(DEL SBIOCSINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于删除OCS信息。当本地NRF配置中所配置的对端NFProfile不需要携带该OCS信息时，使用该命令。命令执行成功后，本地NRF配置中所配置的对端NFProfile将不携带该OCS信息。 
 
 
-[](None)注意事项 
+注意事项 
 
-如果要删除该OCS信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO](../mml/1220812.html)命令查询。
-
-
-[](None)输入参数说明 
+如果要删除该OCS信息配置，需要先删除引用该配置的对端NF扩展信息配置。对端NF扩展信息配置通过[SHOW SBIPEERNFEXTINFO]命令查询。
 
 
-[](None)标识|名称|类型|说明
+输入参数说明 
+
+
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 必选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 SUPIRANGEARRAY|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置SUPI（Subscriber Permanent Identifier，用户永久标识）范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。如果不配置，则该OCS实例可以对任何SUPI对应的用户提供计费。
@@ -22348,7 +22348,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `
@@ -22361,20 +22361,20 @@ DEL SBIOCSINFO:ID=1
 #### 查询OCS信息配置(SHOW SBIOCSINFO) 
 
 
-[](None)功能说明 
+功能说明 
 
 本命令用于查询OCS信息。 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)输入参数说明 
+输入参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 SUPIRANGEARRAY|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置SUPI（Subscriber Permanent Identifier，用户永久标识）范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。如果不配置，则该OCS实例可以对任何SUPI对应的用户提供计费。
@@ -22384,10 +22384,10 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ID|CUSTOM_OCS信息编号|参数可选性: 任选参数类型: 数字参数范围: 1-65535|该参数用于设置OCS信息编号。该编号全局唯一。
 SUPIRANGEARRAY|SUPI范围组编号|参数可选性: 任选参数类型: 数字参数范围: 0-65535|该参数用于设置SUPI（Subscriber Permanent Identifier，用户永久标识）范围组编号，该编号通过SHOW SBISUPIRANGEARRID命令查询。如果不配置，则该OCS实例可以对任何SUPI对应的用户提供计费。
@@ -22397,7 +22397,7 @@ PLMNRNGARRAY|PLMN范围组编号|参数可选性: 任选参数类型: 数字参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 `

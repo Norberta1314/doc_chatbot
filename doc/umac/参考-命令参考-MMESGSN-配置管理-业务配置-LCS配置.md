@@ -1,7 +1,7 @@
  LCS配置 
 
 
-[](None)背景知识 
+背景知识 
 
 
 移动位置业务是一种提供移动用户位置信息的业务，也叫定位业务(LCS)。它提供的位置信息可以被网络内部使用，也可以被第三方使用，其典型的应用包括： 
@@ -36,7 +36,7 @@ LCS涉及的实体包括LCS服务方、LCS客户方，以及被定位的目标�
 
 
 
-[](None)功能描述 
+功能描述 
 
 
 实现LCS功能，在SGSN网元上需要进行如下配置： 
@@ -70,7 +70,7 @@ ESMLC的配置：配置与MME相连的ESMLC路由。
 
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -103,7 +103,7 @@ E-SMLC配置
 
 
 
-父主题： [业务配置](../../zh-CN/tree/N_126085_operation_cm_mml_umacV4_cm_combo_gngp_service.html)
+父主题： [业务配置]
 
 
 
@@ -126,21 +126,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # SGSN GMLC配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             GMLC（Gateway Mobile Location Center，网关移动位置中心）是外部位置程序访问PLMN的第一个结点，它执行注册授权检查和从HLR/HSS请求路由信息。根据协议和运营商的要求，SGSN能够识别其他国家或者本国其他PLMN的GMLC号码，同时限制某些GMLC接入到SGSN执行定位。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             进行定位GMLC配置后，SGSN通过国家码或者GMLC的号码能够识别哪些GMLC允许接入SGSN执行定位操作，哪些GMLC不允许接入SGSN执行定位操作。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -173,7 +173,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [LCS配置](../../zh-CN/tree/N_1261680.html)
+父主题： [LCS配置]
 
 
 
@@ -196,20 +196,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增SGSN GMLC(ADD GMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于在SGSN上新增一个受限制的GMLC。当运营商需要新增限制接入的GMLC时，使用该命令。该命令执行成功后，在SGSN上增加一个受限制的GMLC。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CC|国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一国家或地区编码，如86代表中国。
 NDC|国家目的码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一类网络，如139代表移动。
@@ -221,7 +221,7 @@ SELMODE|判断选择标志|参数可选性:必选参数；参数类型:枚举。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一个受限制的GMLC，国家码为"86"，国家目的码为"138"，允许标志为"YES",判断选择标志为“CC”。 
@@ -236,7 +236,7 @@ ADD GMLC:CC="86",NDC="138",ENABLE="YES",SELMODE="CC";
 
 
 
-父主题： [SGSN GMLC配置](../../zh-CN/tree/N_1251455.html)
+父主题： [SGSN GMLC配置]
 
 
 
@@ -259,20 +259,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改SGSN GMLC(SET GMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于在SGSN上修改已配置GMLC的属性。当运营商需要修改已配置GMLC的属性时，使用该命令。该命令执行成功后，GMLC属性发生改变。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CC|国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一国家或地区编码，如86代表中国。
 NDC|国家目的码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一类网络，如139代表移动。
@@ -284,7 +284,7 @@ SELMODE|判断选择标志|参数可选性:任选参数；参数类型:枚举。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将国家码为"86"，国家目的码为"138"的GMLC判断选择标志修改为"CC+NDC"。 
@@ -299,7 +299,7 @@ SET GMLC:CC="86",NDC="138",ENABLE="YES",SELMODE="CC+NDC";
 
 
 
-父主题： [SGSN GMLC配置](../../zh-CN/tree/N_1251455.html)
+父主题： [SGSN GMLC配置]
 
 
 
@@ -322,20 +322,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除SGSN GMLC(DEL GMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除SGSN上的GMLC。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CC|国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一国家或地区编码，如86代表中国。
 NDC|国家目的码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一类网络，如139代表移动。
@@ -345,7 +345,7 @@ NDC|国家目的码|参数可选性:必选参数；参数类型:字符型；参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除国家码为"86"，国家目的码为"138"的GMLC。 
@@ -360,7 +360,7 @@ DEL GMLC:CC="86",NDC="138";
 
 
 
-父主题： [SGSN GMLC配置](../../zh-CN/tree/N_1251455.html)
+父主题： [SGSN GMLC配置]
 
 
 
@@ -383,20 +383,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询SGSN GMLC(SHOW GMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询受限制的GMLC配置信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CC|国家码|参数可选性:任选参数；参数类型:字符型；参数范围为:0~4个字符。|该参数代表某一国家或地区编码，如86代表中国。
 NDC|国家目的码|参数可选性:任选参数；参数类型:字符型；参数范围为:0~4个字符。|该参数代表某一类网络，如139代表移动。
@@ -406,10 +406,10 @@ NDC|国家目的码|参数可选性:任选参数；参数类型:字符型；参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 CC|国家码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一国家或地区编码，如86代表中国。
 NDC|国家目的码|参数可选性:必选参数；参数类型:字符型；参数范围为:1~4个字符。|该参数代表某一类网络，如139代表移动。
@@ -421,7 +421,7 @@ SELMODE|判断选择标志|参数可选性:任选参数；参数类型:枚举。
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询GMLC配置信息。 
@@ -451,7 +451,7 @@ SHOW GMLC;
 
 
 
-父主题： [SGSN GMLC配置](../../zh-CN/tree/N_1251455.html)
+父主题： [SGSN GMLC配置]
 
 
 
@@ -474,21 +474,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # SGSN VGMLC配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             VGMLC（Visited GMLC，拜访GMLC）是和SGSN直接相连的GMLC，定位消息通过VGMLC和SGSN进行通讯。当用户附着到网络时，SGSN给用户分配一个VGMLC的IP地址，该地址通过位置更新请求消息带给HLR。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             完成SGSN VGMLC配置后，SGSN可实现不同的用户使用不同的VGMLC，从而实现定位的VGMLC的负荷分担。VGMLC的IP地址是和SGSN实际相连的GMLC地址，由运营商统一规划。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -521,7 +521,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [LCS配置](../../zh-CN/tree/N_1261680.html)
+父主题： [LCS配置]
 
 
 
@@ -544,7 +544,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增SGSN VGMLC(ADD SGSN VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于新增拜访移动定位中心地址。该地址为用户所在无线区域下归属的定位中心的地址，移动定位中心完成对区域下用户提供定位相关服务。新增该地址，表明SGSN支持所配置的VGMLC，允许该VGMLC通过本SGSN局，向本局用户进行定位业务。 
@@ -552,7 +552,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -573,10 +573,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|该参数用于指定VGMLC对应的IP地址。地址类型为IPV4或IPV6，配置时会有地址格式的检查。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于指定一个特定的名称，可以设置成该设备所在地名或者局点等信息，主要起备注作用。
@@ -586,7 +586,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 增加VGMLC地址为1.1.1.1。 
@@ -601,7 +601,7 @@ ADD SGSN VGMLC:VGMLCADDR="1.1.1.1";
 
 
 
-父主题： [SGSN VGMLC配置](../../zh-CN/tree/N_1261681.html)
+父主题： [SGSN VGMLC配置]
 
 
 
@@ -624,7 +624,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改SGSN VGMLC(SET SGSN VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据VGMLC地址修改SGSN VGMLC。该命令由于只有两个参数，而VGMLC地址是必须字段，所以只能依据该字段修改用户别名。 
@@ -632,15 +632,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|该参数用于指定VGMLC对应的IP地址。地址类型为IPV4或IPV6，配置时会有地址格式的检查。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该参数用于指定一个特定的名称，可以设置成该设备所在地名或者局点等信息，主要起备注作用。
@@ -650,7 +650,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 修改VGMLC地址为1.1.1.1。 
@@ -665,7 +665,7 @@ SET SGSN VGMLC:VGMLCADDR="1.1.1.1";
 
 
 
-父主题： [SGSN VGMLC配置](../../zh-CN/tree/N_1261681.html)
+父主题： [SGSN VGMLC配置]
 
 
 
@@ -688,7 +688,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除SGSN VGMLC(DEL SGSN VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 根据VGMLC地址删除SGSN VGMLC。当SGSN不再支持该VGMLC的定位业务时，执行该删除命令。 
@@ -696,15 +696,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|该参数用于指定VGMLC对应的IP地址。地址类型为IPV4或IPV6，配置时会有地址格式的检查。
 
@@ -713,7 +713,7 @@ VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|该参�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除VGMLC地址为1.1.1.1。 
@@ -728,7 +728,7 @@ DEL SGSN VGMLC:VGMLCADDR="1.1.1.1";
 
 
 
-父主题： [SGSN VGMLC配置](../../zh-CN/tree/N_1261681.html)
+父主题： [SGSN VGMLC配置]
 
 
 
@@ -751,7 +751,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询SGSN VGMLC(SHOW SGSN VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 查询SGSN VGMLC，如果不带任何参数，则查询所有已配置的SGSN VGMLC信息，如果参数中填写VGMLC地址，则为查询该VGMLC。 
@@ -759,15 +759,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:任选参数；参数类型:地址|该参数用于指定VGMLC对应的IP地址。地址类型为IPV4或IPV6，配置时会有地址格式的检查。
 
@@ -776,10 +776,10 @@ VGMLCADDR|VGMLC地址|参数可选性:任选参数；参数类型:地址|该参�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:任选参数；参数类型:地址|该参数用于指定VGMLC对应的IP地址。地址类型为IPV4或IPV6，配置时会有地址格式的检查。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该参数用于指定一个特定的名称，可以设置成该设备所在地名或者局点等信息，主要起备注作用。
@@ -789,7 +789,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询所有的SGSN VGMLC地址。 
@@ -818,7 +818,7 @@ SHOW SGSN VGMLC;
 
 
 
-父主题： [SGSN VGMLC配置](../../zh-CN/tree/N_1261681.html)
+父主题： [SGSN VGMLC配置]
 
 
 
@@ -841,21 +841,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # MME VGMLC配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             VGMLC（Visited GMLC，拜访GMLC）是和MME直接相连的GMLC，定位消息通过VGMLC和MME进行通讯。当用户附着到网络时，MME给用户分配一个VGMLC的IP地址，该地址通过位置更新请求消息带给HSS。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             完成MME VGMLC配置后，MME可实现不同的用户使用不同的VGMLC，从而实现定位的VGMLC的负荷分担。VGMLC的IP地址是和MME实际相连的GMLC地址，由运营商统一规划。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -888,7 +888,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [LCS配置](../../zh-CN/tree/N_1261680.html)
+父主题： [LCS配置]
 
 
 
@@ -911,12 +911,12 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增MME VGMLC(ADD MME VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于在MME上新增一个VGMLC地址。当运营商需要使用定位业务时，使用该命令。该命令执行成功后，当用户附着时，MME会分配一个VGMLC的IP地址给该用户。
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -933,10 +933,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|VGMLC的地址，只能填写一个ipv4地址或者一个ipv6地址，不能为全0。IP地址设置为IPv6类型地址时，需要license的支持，对应的license项为“IPv6功能”。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该条配置记录的名称，可以说明配置含义，便于理解。
@@ -946,7 +946,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一个VGMLC，地址为"192.168.0.1"，用户别名为"test"。 
@@ -961,7 +961,7 @@ ADD MME VGMLC:VGMLCADDR=192.168.0.1,NAME="test";
 
 
 
-父主题： [MME VGMLC配置](../../zh-CN/tree/N_1261687.html)
+父主题： [MME VGMLC配置]
 
 
 
@@ -984,20 +984,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改MME VGMLC(SET MME VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于在MME上修改已配置VGMLC的属性。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|VGMLC的地址，只能填写一个ipv4地址或者一个ipv6地址，不能为全0。IP地址设置为IPv6类型地址时，需要license的支持，对应的license项为“IPv6功能”。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数范围为:0~50个字符。|该条配置记录的名称，可以说明配置含义，便于理解。
@@ -1007,7 +1007,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将VGMLC地址为"192.168.0.1"的用户别名修改为"test1"。 
@@ -1022,7 +1022,7 @@ SET MME VGMLC:VGMLCADDR=192.168.0.1,NAME="test1";
 
 
 
-父主题： [MME VGMLC配置](../../zh-CN/tree/N_1261687.html)
+父主题： [MME VGMLC配置]
 
 
 
@@ -1045,20 +1045,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除MME VGMLC(DEL MME VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于删除MME上的VGMLC。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|VGMLC的地址，只能填写一个ipv4地址或者一个ipv6地址，不能为全0。IP地址设置为IPv6类型地址时，需要license的支持，对应的license项为“IPv6功能”。
 
@@ -1067,7 +1067,7 @@ VGMLCADDR|VGMLC地址|参数可选性:必选参数；参数类型:地址|VGMLC�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除地址为"192.168.0.1"的VGMLC。 
@@ -1082,7 +1082,7 @@ DEL MME VGMLC:VGMLCADDR=192.168.0.1;
 
 
 
-父主题： [MME VGMLC配置](../../zh-CN/tree/N_1261687.html)
+父主题： [MME VGMLC配置]
 
 
 
@@ -1105,20 +1105,20 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询MME VGMLC(SHOW MME VGMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 该命令用于查询已配置的VGMLC信息。
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:任选参数；参数类型:地址|VGMLC的地址，只能填写一个ipv4地址或者一个ipv6地址，不能为全0。IP地址设置为IPv6类型地址时，需要license的支持，对应的license项为“IPv6功能”。
 
@@ -1127,10 +1127,10 @@ VGMLCADDR|VGMLC地址|参数可选性:任选参数；参数类型:地址|VGMLC�
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 VGMLCADDR|VGMLC地址|参数可选性:任选参数；参数类型:地址|VGMLC的地址，只能填写一个ipv4地址或者一个ipv6地址，不能为全0。IP地址设置为IPv6类型地址时，需要license的支持，对应的license项为“IPv6功能”。
 NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该条配置记录的名称，可以说明配置含义，便于理解。
@@ -1140,7 +1140,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|该�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询MME上已配置的VGMLC信息。 
@@ -1170,7 +1170,7 @@ SHOW MME VGMLC;
 
 
 
-父主题： [MME VGMLC配置](../../zh-CN/tree/N_1261687.html)
+父主题： [MME VGMLC配置]
 
 
 
@@ -1193,21 +1193,21 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 # E-SMLC配置 
 
 
-[](None)背景知识 
+背景知识 
 
             
             E-SMLC（Evolved Serving Mobile Location Centre，演进服务移动定位中心）实现用户当前位置的计算。ESMLC ID作为ESMLC的一个标识，由运营商统一规划。MME通过ESMLC ID进行路由的选择。
         
 
 
-[](None)功能描述 
+功能描述 
 
             
             E-MSLC配置用于设置MME到E-SMLC的路由，实现MME与E-SMLC之间的路由选择和负荷分担。
         
 
 
-[](None)相关主题 
+相关主题 
 
 
 
@@ -1240,7 +1240,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-父主题： [LCS配置](../../zh-CN/tree/N_1261680.html)
+父主题： [LCS配置]
 
 
 
@@ -1263,7 +1263,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 新增E-SMLC(ADD ESMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于在MME上新增一个E-SMLC 标识。 
@@ -1277,7 +1277,7 @@ E-SMLC是无线侧定位服务中使用的一个网元，当运营商需要投�
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 
@@ -1294,10 +1294,10 @@ E-SMLC是无线侧定位服务中使用的一个网元，当运营商需要投�
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ESMLCID|E-SMLC标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|E-SMLC网元标识，全局唯一。
 SCTPID|SCTP标识|参数可选性:必选参数；参数类型:整数；参数范围为:1~4112。|SCTP标识，一个E-SMLC最多可使用16个SCTP与MME建立连接。新增SCTP命令为： ADD SCTPIDCFG。
@@ -1308,7 +1308,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 新增一个E-SMLC，E-SMLC ID为"1"，关联SCTP有四条，ID分别为"1&2&3&4"，NAME为"E1"。 
@@ -1323,7 +1323,7 @@ ADD ESMLC:ESMLCID=1,SCTPID=1&2&3&4,NAME="E1";
 
 
 
-父主题： [E-SMLC配置](../../zh-CN/tree/N_1261693.html)
+父主题： [E-SMLC配置]
 
 
 
@@ -1346,7 +1346,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 修改E-SMLC(SET ESMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于在MME上设置已有E-SMLC的属性。 
@@ -1360,7 +1360,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 
 该命令中只有SCTP ID和用户别名可以修改。 
@@ -1368,10 +1368,10 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ESMLCID|E-SMLC标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|E-SMLC网元标识，全局唯一。
 SCTPID|SCTP标识|参数可选性:任选参数；参数类型:整数；参数范围为:1~4112。|SCTP标识，一个E-SMLC最多可使用16个SCTP与MME建立连接。新增SCTP命令为： ADD SCTPIDCFG。
@@ -1382,7 +1382,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 将ID为"1"的E-SMLC关联的SCTP ID设置为"1&2"，NAME设置为"E2"。 
@@ -1397,7 +1397,7 @@ SET ESMLC:ESMLCID=1,SCTPID=1&2,NAME="E2";
 
 
 
-父主题： [E-SMLC配置](../../zh-CN/tree/N_1261693.html)
+父主题： [E-SMLC配置]
 
 
 
@@ -1420,7 +1420,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 删除E-SMLC(DEL ESMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于根据E-SMLC标识删除MME上的E-SMLC。 
@@ -1431,15 +1431,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ESMLCID|E-SMLC标识|参数可选性:必选参数；参数类型:整数；参数范围为:0~255。|E-SMLC网元标识，全局唯一。
 
@@ -1448,7 +1448,7 @@ ESMLCID|E-SMLC标识|参数可选性:必选参数；参数类型:整数；参数
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 删除ID为"1"的E-SMLC。 
@@ -1463,7 +1463,7 @@ DEL ESMLC:ESMLCID=1;
 
 
 
-父主题： [E-SMLC配置](../../zh-CN/tree/N_1261693.html)
+父主题： [E-SMLC配置]
 
 
 
@@ -1486,7 +1486,7 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 ## 查询E-SMLC(SHOW ESMLC) 
 
 
-[](None)命令功能 
+命令功能 
 
 
 该命令用于查询当前可用的E-SMLC信息。 
@@ -1494,15 +1494,15 @@ PPDN Online KnowledgeBase Powered by DITA.   Technology Management Dept, Central
 
 
 
-[](None)注意事项 
+注意事项 
 
 无。
 
 
-[](None)参数说明 
+参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ESMLCID|E-SMLC标识|参数可选性:任选参数；参数类型:整数；参数范围为:0~255。|E-SMLC网元标识，全局唯一。
 
@@ -1511,10 +1511,10 @@ ESMLCID|E-SMLC标识|参数可选性:任选参数；参数类型:整数；参数
 
 
 
-[](None)输出参数说明 
+输出参数说明 
 
 
-[](None)标识|名称|类型|说明
+标识|名称|类型|说明
 ---|---|---|---
 ESMLCID|E-SMLC标识|参数可选性:任选参数；参数类型:整数。|E-SMLC网元标识，全局唯一。
 SCTP1|SCTP标识1|参数可选性:任选参数；参数类型:字符型。|MME与E-SMLC连接的SCTP标识1。一个E-SMLC最多可使用16个SCTP与MME建立连接。每个SCTP都是同样的作用，没有任何区别。
@@ -1540,7 +1540,7 @@ NAME|用户别名|参数可选性:任选参数；参数类型:字符型。|运�
 
 
 
-[](None)命令举例 
+命令举例 
 
 
 查询ID为"1"的E-SMLC。 
@@ -1569,7 +1569,7 @@ SHOW ESMLC:ESMLCID=1;
 
 
 
-父主题： [E-SMLC配置](../../zh-CN/tree/N_1261693.html)
+父主题： [E-SMLC配置]
 
 
 

@@ -1,11 +1,11 @@
-概述 功能描述 移动物联网快速发展，在各行各业的应用越来越广泛，包括：金融、智慧城市、工业应用、农业、教育、医疗等领域。它具有广覆盖、大连接、低功耗、低成本的优势，解决了传统物联网存在的技术碎片化、覆盖不足的问题，极大提升了物联网的应用能力，获得了业内的广泛支持，将成为物联网主流技术。 
+概述 :功能描述 :移动物联网快速发展，在各行各业的应用越来越广泛，包括：金融、智慧城市、工业应用、农业、教育、医疗等领域。它具有广覆盖、大连接、低功耗、低成本的优势，解决了传统物联网存在的技术碎片化、覆盖不足的问题，极大提升了物联网的应用能力，获得了业内的广泛支持，将成为物联网主流技术。 
 目前3GPP定义的移动物联网的主要技术： 
 NB-IoT：窄带物联网技术，主要用于低功耗、高时延、深覆盖的物网设备的通信。 
 eMTC：增强的物联网通信技术，主要用于高可靠、低时延的物和物之间的通信。 
-3GPP定义的CIoT网络架构如[图1](#zbde7d2d0c9414a459b8ab57a8c3e6680__5c499d8e-a129-4241-95e5-9a3891b45180)所示：
+3GPP定义的CIoT网络架构如[图1]所示：
 图1  物联网架构
-[]images/1611628671650.png)
-功能特性简介 针对物联网的应用特点、接入方式和应用场景，核心网为满足物联网用户的要求，提供了可靠、有效的解决方案。详细的解决方案特性如下表： 
+
+功能特性简介 :针对物联网的应用特点、接入方式和应用场景，核心网为满足物联网用户的要求，提供了可靠、有效的解决方案。详细的解决方案特性如下表： 
 方案特性|实现简述|特导链接
 ---|---|---
 NB-IoT接入|MME支持NB-IoT接入，并支持基于UE当前的RAT类型进行接入控制。|ZUF-78-17-001 NB-IoT接入
@@ -26,62 +26,62 @@ CN辅助eNodeB参数|核心网辅助无线参数优化机制，可以减少MTC�
 无线覆盖增强限制|覆盖增强限制功能是指运营商不允许特定终端和无线使用深度覆盖，以达到减少终端的能量损耗。根据签约信息，对终端和eNodeB进行覆盖增强限制。根据UE's usage（终端指示）、签约信息、本地配置综合判断并对终端和eNodeB进行覆盖增强限制。|ZUF-78-17-016 覆盖增强限制
 SCEF事件订阅上报|SCEF连接是指MME启动用户状态检测，检测到用户相应的订阅事件，直接与SCEF网元建立连接，将对应的用户移动状态事件上报给SCEF网元。|ZUF-78-17-017 SCEF连接
 # ZUF-78-17-001 NB-IoT接入 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 IoT|物联网，即物物相连的互联网，是互联网从人向物的延伸。物联网的核心和基础仍然是互联网，其用户端延伸和扩展到了任何物品与物品之间。物联网进行信息交换和通信，是基于特定的终端，如射频识别装置、红外感应器、全球定位系统、激光扫描器等，以有线或无线等接入手段，为企业和家庭用户提供机器到机器、机器到人的解决方案，满足用户对生产过程/家居生活监控、指挥调度、远程数据采集和测量、远程诊断等方面的信息化需求。国际电信联盟ITU在2005年《物联网》报告中将“物联网”定义为：一个无所不在的计算及通信网络，在任何时间、任何地方、任何人、任何物体之间都可以相互联结。
 CIoT|蜂窝物联网，专指在移动网络上实现物联网。
 NB-IoT|窄带物联网，是由3GPP定义的基于蜂窝网络的窄带物联网技术标准，是一种专为物联网设计的窄带射频技术，以广连接、低功耗、低成本、低移动和深覆盖为特点，可应用于GSM网络、UMTS网络和LTE网络中。
-描述 定义 NB-IoT是由3GPP定义的基于蜂窝网络的窄带物联网技术标准，是一种专为物联网设计的窄带射频技术，以广连接、低功耗、低成本、低移动和深覆盖为特点。 
+描述 :定义 :NB-IoT是由3GPP定义的基于蜂窝网络的窄带物联网技术标准，是一种专为物联网设计的窄带射频技术，以广连接、低功耗、低成本、低移动和深覆盖为特点。 
 MME支持NB-IoT接入，并支持基于UE当前的RAT类型进行接入控制。 
-背景知识 物联网话务模型具有海量接入和业务突发性的特点。据咨询公司预测，2020年物联网终端将达到近300亿连接，是人网的5~6倍；年增值率达30%，增长速度是人终端的近10倍。 
+背景知识 :物联网话务模型具有海量接入和业务突发性的特点。据咨询公司预测，2020年物联网终端将达到近300亿连接，是人网的5~6倍；年增值率达30%，增长速度是人终端的近10倍。 
 MME对物联网终端支持海量接入，单网元将会达到亿级接入。当某类行业终端放号后，可能在某个时间集中突发性上线及收发数据，对网络集中处理性能有很高要求。因此，MME需要对物联网终端进行接入控制限制。 
-应用场景 场景1：HSS对NB-IoT接入进行控制场景描述：当UE的签约ARD为“NB-IoT Not Allowed”时，如果HSS需要对UE进行接入控制，则拒绝UE接入，返回失败的ULA消息，携带失败原因值：DIAMETER_ERROR_RAT_NOT_ALLOWED。MME根据此失败原因值，拒绝UE接入。 
+应用场景 :场景1：HSS对NB-IoT接入进行控制场景描述：当UE的签约ARD为“NB-IoT Not Allowed”时，如果HSS需要对UE进行接入控制，则拒绝UE接入，返回失败的ULA消息，携带失败原因值：DIAMETER_ERROR_RAT_NOT_ALLOWED。MME根据此失败原因值，拒绝UE接入。 
 场景2：MME根据签约ARD对NB-IoT接入进行控制场景描述：当UE的签约ARD为“NB-IoT Not Allowed”时，HSS不对UE进行接入控制，则HSS返回成功的ULA消息，其中携带UE的签约ARD。如果MME配置开启了ARD功能，则会限制UE接入。 
 场景3：MME根据本地号段限制区域配置对NB-IoT接入进行控制场景描述：如果MME的“移动管理参数配置”中的以下任一参数设置为“支持”，那么MME需要根据“MME号段限制区域配置”对NB-IoT接入进行控制。“支持基于IMSI号段的TAI区域限制”“MME支持基于MSISDN号段的TAI区域限制”“MME支持基于IMEI的TAI区域限制” 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|运营商可以根据配置灵活控制是否允许NB-IoT受限用户接入。
 物联网终端用户|不需要更换硬件，只需要升级软件就可以享受更多的服务。
-实现原理 系统架构 NB-IoT接入所对应的组网架构如下图所示。 
-[]images/8594a3ca7950473d96a2cb14866c4414.png)
-涉及的网元 网元名称|网元作用
+实现原理 :系统架构 :NB-IoT接入所对应的组网架构如下图所示。 
+
+涉及的网元 :网元名称|网元作用
 ---|---
 NB-IoT UE|窄带物联网终端，发起接入物联网等流程，用NAS PDU发送和接收小包数据。
 E-UTRAN|支持NB-IoT UE的接入，传递NAS PDU。
 MME|支持NB-IoT UE的接入，并基于UE当前的RAT类型进行接入控制。
 HSS|提供UE的签约数据。
-协议栈 []images/a242357a64014c85ae7375f05f572ea0.png)
-本网元实现 当HSS对NB-IoT接入进行控制时：HSS在收到MME发送的ULR消息后，如果UE的签约ARD为“NB-IoT
+协议栈 :
+本网元实现 :当HSS对NB-IoT接入进行控制时：HSS在收到MME发送的ULR消息后，如果UE的签约ARD为“NB-IoT
 Not Allowed”，则拒绝UE接入，返回失败的ULA消息。MME根据HSS返回的ULA中的失败原因值“DIAMETER_ERROR_RAT_NOT_ALLOWED”，限制UE接入，限制原因值可以通过“用户接入限制拒绝原因值配置”进行配置。
 当HSS不对NB-IoT接入进行控制时：HSS在收到MME发送的ULR消息后，返回成功的ULA消息，其中携带UE的签约ARD。MME通过“移动管理参数配置”中的“MME支持LTE用户接入限制”参数控制是否开启ARD功能。当“MME支持LTE用户接入限制”参数设置为“支持”时，即表示开启ARD功能。如果UE的签约ARD为“NB-IoT Not Allowed”，则MME限制UE接入，限制原因值可以通过“移动管理参数配置”中的“LTE用户接入EUTRAN网络失败原因”参数配置。
 MME根据号段和用户当前所在位置，检查本地配置策略，判断是否允许UE通过NB-IoT接入。“MME号段限制区域配置”中的“是否允许接入”参数增加了新的取值，需要根据UE的接入类型和配置来决定是否允许用户接入。
 在NB-IoT用户号段能匹配到配置的情况下，只有当“是否允许接入”参数配置为“只允许NB-IoT接入”或“都允许接入”时，才允许用户接入。
-业务流程 NB-IoT的接入控制发生在附着流程中，如下图所示。 
-[]images/fa18235caee64d1f91f0762c8a8f7ac5.png)流程描述如下： 
+业务流程 :NB-IoT的接入控制发生在附着流程中，如下图所示。 
+流程描述如下： 
 UE发送Attach Request消息，S1AP消息中携带的RAT类型为NB-IoT。 
 MME收到Attach Request后，执行原有的鉴权和安全流程，包括通过分配GUTI以减少IMSI的暴露。 
 MME进行位置更新和获取UE的签约数据。 
 MME基于NB-IoT RAT类型进行接入控制，允许或拒绝UE接入。 
-系统影响 对于数量庞大的物联网设备终端，其话务模型可能只有公众网络智能手机类的终端的5%～10%甚至更低，因此从系统的CPU处理能力上来说，理应可以容纳10～20倍以上的终端接入。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 协议名称|章节
+系统影响 :对于数量庞大的物联网设备终端，其话务模型可能只有公众网络智能手机类的终端的5%～10%甚至更低，因此从系统的CPU处理能力上来说，理应可以容纳10～20倍以上的终端接入。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :协议名称|章节
 ---|---
 3GPP TS 23.720（Study on architecture enhancements for CellularInternet of Things）|6 Solutions
 3GPP TS 29.272 （Mobility Management Entity (MME) and ServingGPRS Support Node (SGSN) related interfaces based on Diameter protocol）|7.3.31 Access-Restriction-Data
 3GPP TS 23.401 （General Packet Radio Service (GPRS) enhancementsfor  Evolved Universal Terrestrial Radio Access Network (E-UTRAN)access）|5.3.2 Attach procedure
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 需要申请了“NB-IoT注册用户数”和“NB-IoT在线用户数”的License许可后，运营商才能获得NB-IoT用户接入核心网的服务。
-对其他网元的要求 UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
+License要求 :需要申请了“NB-IoT注册用户数”和“NB-IoT在线用户数”的License许可后，运营商才能获得NB-IoT用户接入核心网的服务。
+对其他网元的要求 :UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
 ---|---|---|---|---
 √|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-O&M相关 命令 配置项新增配置项参见表1。表1  新增配置项配置项命令物联网业务配置SET MME IOT CFGSHOW MME IOT CFGMME号段限制区域配置SET MME NUMSEG RESTRICT AREA POLICYSHOW MME NUMSEG RESTRICT AREA POLICY修改配置项参见表2。表2  修改配置项配置项命令新增参数MME号段限制区域配置ADD MME NUMSEG RESTRICT AREA“是否允许接入”参数中增加三个取值：只允许WB-EUTRAN接入、只允许NB-IoT接入、都允许接入。 
-性能统计 测量类型|描述
+O&M相关 :命令 :配置项新增配置项参见表1。表1  新增配置项配置项命令物联网业务配置SET MME IOT CFGSHOW MME IOT CFGMME号段限制区域配置SET MME NUMSEG RESTRICT AREA POLICYSHOW MME NUMSEG RESTRICT AREA POLICY修改配置项参见表2。表2  修改配置项配置项命令新增参数MME号段限制区域配置ADD MME NUMSEG RESTRICT AREA“是否允许接入”参数中增加三个取值：只允许WB-EUTRAN接入、只允许NB-IoT接入、都允许接入。 
+性能统计 :测量类型|描述
 ---|---
 基于接入类型附着流程测量|编号为46501开头的所有计数器
 基于接入类型跟踪区更新流程测量|编号为46502开头的所有计数器
@@ -96,15 +96,15 @@ O&M相关 命令 配置项新增配置项参见表1。表1  新增配置项配�
 基于接入类型用户数测量|编号为46531开头的所有计数器
 基于接入类型承载数测量|编号为46532开头的所有计数器
 基于接入类型Diameter消息测量|编号为46541开头的所有计数器
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过NB-IoT接入控制的相关配置，实现MME对物联网终端基于RAT类型的接入控制。 
-配置前提 MME网元各项对接和业务配置完毕。 
-配置过程 执行命令[SET MME NUMSEG RESTRICT AREA POLICY](../../MMESGSN\zh-CN\mml\1266171.html)，配置移动管理参数，将“MME支持基于IMSI号段的TAI区域限制”、“MME支持基于MSISDN号段的TAI区域限制”、“MME支持基于IMEI的TAI区域限制”设置为“支持”。
-执行命令[ADD MME RESTRICT AREA](../../MMESGSN\zh-CN\mml\1262210.html)，配置MME限制区域。
-执行命令[ADD MME NUMSEG RESTRICT AREA](../../MMESGSN\zh-CN\mml\1262332.html)，配置MME号段限制区域。
-配置实例 配置MME对NB-IoT UE进行接入控制。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过NB-IoT接入控制的相关配置，实现MME对物联网终端基于RAT类型的接入控制。 
+配置前提 :MME网元各项对接和业务配置完毕。 
+配置过程 :执行命令[SET MME NUMSEG RESTRICT AREA POLICY]，配置移动管理参数，将“MME支持基于IMSI号段的TAI区域限制”、“MME支持基于MSISDN号段的TAI区域限制”、“MME支持基于IMEI的TAI区域限制”设置为“支持”。
+执行命令[ADD MME RESTRICT AREA]，配置MME限制区域。
+执行命令[ADD MME NUMSEG RESTRICT AREA]，配置MME号段限制区域。
+配置实例 :配置MME对NB-IoT UE进行接入控制。 
 限制IMSI号段为460021234的UE，在跟踪区标识为1的跟踪区中，只允许通过WB-EUTRAN接入。 
 限制IMSI号段为460025678的UE，在跟踪区标识为1的跟踪区中，只允许通过NB-IoT接入。 
 配置步骤|配置说明
@@ -113,7 +113,7 @@ SET MME NUMSEG RESTRICT AREA POLICY:MMESPTIMSISEGREST="YES"|配置移动管理�
 ADD MME RESTRICT AREA:AREAID=1,TAID=1,NAME="TA1"|配置MME限制区域，其中“限制区域标识”为1，“跟踪区标识”为1。跟踪区标识需要通过ADD TA命令预先配置。
 ADD MME NUMSEG RESTRICT AREA:NUMSEG="460021234",NUMTYPE="IMSI",ISALLTA="NO",AREAID=1,ACCESS="WB_EUTRAN"|配置MME号段限制区域，其中需要限制的IMSI号段为460021234，该号段用户在“限制区域标识”为1的跟踪区中，只允许通过WB-EUTRAN接入。
 ADD MME NUMSEG RESTRICT AREA:NUMSEG="460025678",NUMTYPE="IMSI",ISALLTA="NO",AREAID=1,ACCESS="NB_IOT"|配置MME号段限制区域，其中需要限制的IMSI号段为460025678，该号段用户在“限制区域标识”为1的跟踪区中，只允许通过NB-IoT接入。
-测试用例 ##### MME支持根据UE签约数据控制NB-IoT接入 
+测试用例 :##### MME支持根据UE签约数据控制NB-IoT接入 
 测试项目|MME支持根据UE签约数据控制NB-IoT接入
 测试目的|测试MME支持根据UE签约数据控制NB-IoT接入
 预置条件|MME各项对接和业务配置完毕。取得NB-IoT注册用户数的license授权，并更新了license。取得NB-IoT在线用户数的license授权，并更新了license。取得MME支持物联网小包数据控制面传输优化功能的license授权，并更新了license。开启支持物联网小包数据控制面传输优化功能开关，对应命令为SET MME IOT CFG:CPSW="YES"。MME支持ARD功能开关打开，对应命令为SET MOBILE MANAGEMENT:SPTIMSITAIRST="YES"。UE在HSS签约为NB-IoT Not Allowed。
@@ -127,25 +127,25 @@ ADD MME NUMSEG RESTRICT AREA:NUMSEG="460025678",NUMTYPE="IMSI",ISALLTA="NO",AREA
 测试过程|物联网终端开机，从配置的被限制的TA发起附着，使用控制面传输优化模式接入。MME拒绝终端接入，拒绝原因为TA Not Allowed。
 通过准则|MME拒绝NB-IoT用户接入，拒绝原因为TA Not Allowed。
 测试结果|
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-002 eMTC接入 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 IoT|物联网（Internet of Things），即物物相连的互联网，是互联网从人向物的延伸。物联网的核心和基础仍然是互联网，其用户端延伸和扩展到了任何物品与物品之间，进行信息交换和通信，是基于特定的终端，如射频识别装置、红外感应器、全球定位系统、激光扫描器等，以有线或无线等为接入手段，为企业和家庭客户提供机器到机器、机器到人的解决方案，满足客户对生产过程/家居生活监控、指挥调度、远程数据采集和测量、远程诊断等方面的信息化需求。国际电信联盟ITU在2005年物联网报告中将“物联网”定义为：一个无所不在的计算及通信网络，在任何时间、任何地方、任何人、任何物体之间都可以相互联结。
 CIoT|蜂窝物联网，专指在移动网络上实现物联网。
-描述 定义 eMTC是指增强的物联网通信，是基于LTE协议演进而来，主要用于高可靠、低时延的物和物之间的通信。
-背景知识 目前移动物联网的主要技术是3GPP定义的标准窄带物联网技术NB-IoT和非窄带物联网技术MTC，eMTC是增强的物联网通信技术。
+描述 :定义 :eMTC是指增强的物联网通信，是基于LTE协议演进而来，主要用于高可靠、低时延的物和物之间的通信。
+背景知识 :目前移动物联网的主要技术是3GPP定义的标准窄带物联网技术NB-IoT和非窄带物联网技术MTC，eMTC是增强的物联网通信技术。
 eMTC主要用于高可靠、低时延的物和物之间的通信。在智能物流上，具有防盗、防调换、实时温度传感和可定位优势；在智能可穿戴设备中，可支持健康监测、视频业务、数据回传和定位；也可以用于智能充电桩和智能公交站牌等方面。 
 eMTC是基于LTE协议演进而来，eMTC接入同普通的LTE接入，相对于NB-IoT，可用于中高速率、低时延的物网场景，因此具有同人网的业务特性；也可能传送小包数据，所以也具有物网小包数据传输的业务特性。 
 eMTC大包数据传输同LTE网络，通过传统EPC网络S1-U用户面通道，在eNodeB和SGW间传输IP数据。数据传输架构如下图所示。 
 图1  数据传输架构
-[]images/1591691779838.png)
+
 eMTC小包数据可以通过用户面传输，也可以通过控制面传输，小包数据控制面传输架构如下图所示。 
 图2  小包数据控制面传输架构图
-[]images/1591691779958.png)
+
 MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SGW间通过S11-U用户面通道传输IP小包数据。小包数据传输类型也可以是NoN-IP数据。 
 eMTC是基于LTE协议演进而来，与NB-IoT不同，eMTC接入同普通的LTE接入；eMTC移动性处理和数据传输同传统LTE网络，另外物联网小包数据控制面传输同NB-IoT；eMTC中高速率、低时延的物联网特性，MME映射为不同的承载QoS处理；对MME来说，没有引入新的网络处理技术。 
-应用场景 eMTC主要应用于中高速率、低时延的物联网场景，这类物联网设备终端发送和接收的可能是大包数据也可能是小包数据。MME针对eMTC的应用提供： 
+应用场景 :eMTC主要应用于中高速率、低时延的物联网场景，这类物联网设备终端发送和接收的可能是大包数据也可能是小包数据。MME针对eMTC的应用提供： 
 普通LTE接入处理，通过传统EPC网络S1-U用户面通道传输大包数据。 
 普通LTE接入处理，通过传统EPC网络S1-U用户面通道或控制面通道传输小包数据。 
 支持eMTC终端移动性。 
@@ -163,30 +163,30 @@ eMTC中高速率、低时延的物联网特性，MME映射为不同的承载QoS�
 QCI|Resource Type|Priority|Packet Delay Budget|Packet Error LossRate|Example Services
 ---|---|---|---|---|---
 8|-|8|300 ms|10-6|Video (Buffered Streaming)TCP-based (e.g., www, e-mail,chat, ftp, p2p file
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|增加收入：未来物联网将成为运营商收入的主要来源，基于LTE网络的物联网技术eMTC为其提供重要的技术支撑。节约成本：复用已部署的LTE网络，无需重新建网；小包数据传输，可以和NB-IoT用户共用改造后的核心网。
 物联网终端用户|丰富多样的物联网应用使得终端用户的生活更加便捷。
-实现原理 系统架构 数据传输架构如下图所示。 
+实现原理 :系统架构 :数据传输架构如下图所示。 
 图3  数据传输架构图
-[]images/1591691780508.png)
+
 小包数据控制面传输架构如下图所示。 
 图4  小包数据控制面传输架构图
-[]images/1591691780628.png)
-涉及的网元 eMTC由UE、eNodeB、MME和SGW/PGW配合完成。 
+
+涉及的网元 :eMTC由UE、eNodeB、MME和SGW/PGW配合完成。 
 网元名称|网元作用
 ---|---
 UE|物联网终端，可以用NAS PDU发送和接收小包数据IP Data或NoN-IP Data；并携带S1释放辅助信息。
 eNodeB|支持eMTC终端接入，传递NAS PDU；通过S1-U面传输数据。
 MME|对用户进行接入控制和安全管理，完成SGW和PGW的选择和承载管理。传输上行和下行小包数据IP Data、NoN-IPData或短消息；完成S1-MME到S11-U面的小包数据IP Data、NoN-IP Data转换传输。
 SGW/PGW|管理和存储UE的承载信息。负责将UE接入PDN，分配用户IP地址。通过S11-U面传输小包数据IP Data或NoN-IPData；通过S1-U面传输大包或小包数据。
-协议栈 eMTC控制面小包数据传输协议栈如下图所示。 
+协议栈 :eMTC控制面小包数据传输协议栈如下图所示。 
 图5  eMTC控制面小包数据传输协议栈
-[]images/1591691780758.png)
-本网元实现 传输上行和下行小包数据IP Data、NoN-IP Data或短消息。 
+
+本网元实现 :传输上行和下行小包数据IP Data、NoN-IP Data或短消息。 
 完成S1-MME到S11-U面的小包数据IP Data、NoN-IP Data转换传输。 
 其他eMTC同普通LTE接入处理，业务流程同传统LTE网络。 
-业务流程 eMTC同普通LTE接入处理，MME处理流程包括： 
+业务流程 :eMTC同普通LTE接入处理，MME处理流程包括： 
 普通LTE接入处理，通过传统EPC网络S1-U用户面通道传输大包数据。 
 普通LTE接入处理，通过传统EPC网络S1-U用户面通道或控制面通道传输小包数据。 
 支持eMTC终端移动性。 
@@ -201,7 +201,7 @@ IP小包数据传输流程
 IP小包数据传输流程
 IP小包数据传输流程的附着流程如下图所示。 
 图6  附着
-[]images/1591691780908.png)
+
 流程描述： 
 UE发送Attach Request消息，消息中指示： 
 UE network capability参数包含“支持CP模式”的指示（“Control plane CIoT EPS
@@ -229,7 +229,7 @@ Complete给MME。
 RRC连接释放。 
 控制面传输MO流程如下图所示。 
 图7  控制面传输MO
-[]images/1591691781068.png)
+
 流程描述： 
 用户附着完成。UE发起的RRC连接建立，消息中携带有NAS PDU；NAS PDU中携带有EBI，用来标识同时携带的加密的上行数据；NAS
 PDU用来携带小包数据IP Data。 
@@ -246,7 +246,7 @@ Data Transport，对消息进行加密和完整性保护后，投递给eNB。根
 eNB发送Downlink Information Transfer（包括NAS消息）给UE，并且在RRC连接检测定时器到时释放RRC连接。如果MME根据释放指示的决策没有释放S1连接，且一定时间内没有NAS消息投递，则eNB发起S1释放。 
 控制面传输MT流程如下图所示。 
 图8  控制面传输MT
-[]images/1591691781208.png)
+
 流程描述： 
 用户附着完成。SGW收到下行数据报文，但发现没有S11-U承载，则缓存报文。SGW发送DDN消息给MME，消息中携带有EBI和ARP。 
 （可选）当UE已注册且可达，MME发送寻呼消息给eNB。eNB寻呼UE；UE收到寻呼消息后，发起业务请求。eNB发送Initial
@@ -262,7 +262,7 @@ SUSPEND
 RESUME 
 SUSPEND流程如下图所示。 
 图9  SUSPEND
-[]images/1591691781348.png)
+
 流程描述： 
 eNB使用新增的S1AP消息“UE Context Suspend Request”向MME发起挂起流程；UE进入IDLE态；MME为UE保留有S1AP上下文和承载上下文，包括MME和eNB的S1AP
 ID，eNB的S1-U地址和TEID，SGW的地址和TEID等。 
@@ -272,7 +272,7 @@ MME收到释放接入承载响应后，向eNB发送“UE Context Suspend Respons
 eNB发送RRC Connection Suspend消息。 
 RESUME流程如下图所示。 
 图10  RESUME>>
-[]images/1591691781488.png)
+
 流程描述： 
 Radnom Access。 
 UE因上行业务或寻呼，引发连接恢复流程。 
@@ -293,29 +293,29 @@ MME在创建会话请求消息中携带Non-IP的PDN类型，PGW不分配IP地址
 eMTC接入MME同普通LTE接入处理，TAU、切换等移动性处理同传统LTE网络。 
 提供特定QoS
 eMTC中高速率、低时延的物联网特性，MME映射为不同的承载QoS处理；eMTC接入MME同普通LTE接入处理，承载QoS流程的处理同传统LTE网络。 
-系统影响 物联网终端数量庞大，随着越来越多的eMTC终端接入系统，系统负荷越大。 
-应用限制 该特性基于3GPP R15 2018年3月份版本实现，与MME对接的周边网元支持eMTC接入时需要对齐到该协议版本。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+系统影响 :物联网终端数量庞大，随着越来越多的eMTC终端接入系统，系统负荷越大。 
+应用限制 :该特性基于3GPP R15 2018年3月份版本实现，与MME对接的周边网元支持eMTC接入时需要对齐到该协议版本。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401: " General Packet Radio Service (GPRS) enhancements for Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access"|4.3.17节: Support for Machine Type Communications
 3GPP TS 22.368: “Service requirements for Machine-Type Communications(MTC)”|全部
 3GPP TS 29.272: “Mobility Management Entity (MME) and Serving GPRS Support Node (SGSN) related interfaces based on Diameter protocol”|7.3节：Information Elements
 3GPP TS 24.301: “Non-Access-Stratum (NAS) protocol for Evolved Packet System (EPS)”|5.3.15节：CIoT EPS optimizations
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 该特性需要申请了“MME支持物联网小包数据控制面传输优化”和“MME支持物联网小包数据用户面传输优化”的License许可后，运营商才能获得物联网小包数据控制面和用户面传输优化特性的服务。 
+License要求 :该特性需要申请了“MME支持物联网小包数据控制面传输优化”和“MME支持物联网小包数据用户面传输优化”的License许可后，运营商才能获得物联网小包数据控制面和用户面传输优化特性的服务。 
 需要申请“MME支持EPS注册态无PDN连接功能”的License许可后，运营商才能获得MME支持物联网用户仅使用短消息时不建PDN连接特性的服务。 
 需要申请“MME支持Non-IP数据SGi口传输” 的License许可后，运营商才能获得MME支持物联网用户Non-IP数据通过SGi口传输 特性的服务。 
-对其他网元的要求 UE|eNodeB|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB|SGW|PGW|HSS
 ---|---|---|---|---
 √|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-工程规划要求 SGW/PGW升级通过S11-U面传输小包数据IP Data或NoN-IP Data。 
-O&M相关 命令 配置项该特性不涉及命令的变化。 
+工程规划要求 :SGW/PGW升级通过S11-U面传输小包数据IP Data或NoN-IP Data。 
+O&M相关 :命令 :配置项该特性不涉及命令的变化。 
 软件参数 
 软件参数ID|软件参数名称
 ---|---
@@ -329,12 +329,12 @@ O&M相关 命令 配置项该特性不涉及命令的变化。
 262540|Paging消息里WB用户是否携带UE_ID字段
 262533|Context Req和Context Rsp消息是否携带RatType
 262535|Sgi PDN情况下MME是否下发CP Only Indication给WB用户
-性能统计 该特性不涉及计数器的变化。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过eMTC的相关配置，实现MME对使用eMTC技术的用户的接入控制。 
-配置前提 MME网元与其他网元的对接和业务配置已完成。 
+性能统计 :该特性不涉及计数器的变化。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过eMTC的相关配置，实现MME对使用eMTC技术的用户的接入控制。 
+配置前提 :MME网元与其他网元的对接和业务配置已完成。 
 eMTC与NB-IoT的相关功能的基本配置是相同的，由于eMTC是WB类型的终端，MME侧对相应的特性增加了开关。 
 启用eMTC时先参照NB-IoT功能的文档设置好基本的配置。 
 启用物联网小包数据控制面传输优化功能时，需要规划好MME和SGW间的S11-U用户面地址，MME License需要开启MME支持物联网小包数据控制面传输优化。物联网相关业务开关中设置支持控制面优化。 
@@ -347,7 +347,7 @@ eMTC与NB-IoT的相关功能的基本配置是相同的，由于eMTC是WB类型�
 启用速率控制功能时，MME license需要开启MME支持速率控制。 
 启用DECOR功能时，MME license需要开启MME支持DECOR。MME DECOR控制策略配置中设置MME支持DECOR。 
 启用eDECOR功能时，MME license需要开启MME支持eDECOR。MME eDRCOR控制策略配置中设置MME支持eDRCOR。 
-配置过程 通过SET SOFTWARE PARAMETER:PARAID=262539,PARAVALUE=0;命令，允许WB用户接入时，MME支持CP模式。 
+配置过程 :通过SET SOFTWARE PARAMETER:PARAID=262539,PARAVALUE=0;命令，允许WB用户接入时，MME支持CP模式。 
 通过SET SOFTWARE PARAMETER:PARAID=786850,PARAVALUE=0;命令，允许允许WB用户接入时，MME支持UP模式。 
 通过SET SOFTWARE PARAMETER:PARAID=262541,PARAVALUE=1;命令，打开WB用户接入时MME启用eDRX功能。 
 通过SET SOFTWARE PARAMETER:PARAID=262542,PARAVALUE=1;命令，打开WB用户接入时MME启用PSM功能。 
@@ -357,7 +357,7 @@ eMTC与NB-IoT的相关功能的基本配置是相同的，由于eMTC是WB类型�
 通过SET SOFTWARE PARAMETER:PARAID=262540,PARAVALUE=1;命令，允许Paging消息里WB用户携带UE_ID字段。 
 通过SET SOFTWARE PARAMETER:PARAID=262533,PARAVALUE=1;命令，允许Context Req和Context Rsp消息携带RatType字段。 
 通过SET SOFTWARE PARAMETER:PARAID=262535,PARAVALUE=1;命令，允许SGi PDN情况下MME下发CP Only Indication给WB用户。 
-配置实例 配置eMTC接入时通过控制面通道使用NAS消息传输小包数据。 
+配置实例 :配置eMTC接入时通过控制面通道使用NAS消息传输小包数据。 
 MME需要打开“支持物联网小包数据控制面传输优化”功能开关，并配置MME S11-U的用户面地址，以及允许WB用户使用CP模式。
 配置步骤|配置说明
 ---|---
@@ -365,8 +365,8 @@ SET MME IOT CFG:CPSW="YES";|打开MME“支持物联网小包数据控制面传�
 SET MME GTPU IP:S11UIPADDR=192.20.66.210;|配置MME S11-U用户面地址。
 SET SOFTWARE PARAMETER:PARAID=262539,PARAVALUE=0;|允许WB用户CP模式。
 数据传输（大包）、支持eMTC终端移动性、提供特定QoS这三个场景，保证MME网元与其他网元的对接和业务配置完成即可，不需要额外配置。 
-调整特性 无 
-测试用例 测试项目|UE优选控制面的附着
+调整特性 :无 
+测试用例 :测试项目|UE优选控制面的附着
 ---|---
 测试目的|验证网络和终端同时支持控制面用户面方案情况下选择控制面附着
 预置条件|网络中各网元系统及操作维护台运行正常。MME、SAE-GW同时支持CIOT控制面和用户面优化方案。CIOT UE同时支持CIOT控制面和用户面优化方案。在MME上建立S1、S6a、S5接口跟踪，单用户跟踪。
@@ -380,12 +380,12 @@ SET SOFTWARE PARAMETER:PARAID=262539,PARAVALUE=0;|允许WB用户CP模式。
 测试过程|UE发起附着流程。Attach request中携带的UE network capability指示UE同时支持“Control plane CIoT EPS optimization supported” 及“User plane CIoT EPS optimization supported” 。Attach request中携带的Additional update type指示UE优选用户面附着。Attach request中PDN Type为IPv4。同时支持控制面和用户面的MME返回Attach accept消息，网络侧接受UE的用户面附着。
 通过准则|UE attach request 中 UE Network Capability 的 Control-plane CIOT optimization is supported和User plane CIOT optimization is supported同时置位。UE attach request 中Additional update type中bit 4,3 为10  User plane CIoT EPS optimization。Create Session Request消息中Indication字段中S11TF为0或不携带，Modify Bearer Request消息中Indication字段中S11TF为0或不携带。
 测试结果|UE attach成功。选择用户面附着。
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-003 物联网控制面EPS优化 
-特性描述 特性描述 描述 定义 物联网控制面EPS优化功能，适用eMTC，也适用NB-IoT。MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据。
-背景知识 NB-IoT小包数据传输架构
+特性描述 :特性描述 :描述 :定义 :物联网控制面EPS优化功能，适用eMTC，也适用NB-IoT。MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据。
+背景知识 :NB-IoT小包数据传输架构
 NB-IoT小包数据传输架构如下图所示，图中的C-SGN包括MME和SAE-GW。
-[]images/1598002170581.png)NB-IoT应用于低吞吐量的物联网场景，因此这类物联网设备终端发送和接收的是小包数据。 
+NB-IoT应用于低吞吐量的物联网场景，因此这类物联网设备终端发送和接收的是小包数据。 
 小包数据传输的方式有以下几种： 
 方式一：通过传统EPC网络的S1-U用户面通道经由SAE-GW可以传输IP小包数据。 
 但由于小包数据本身数据量小，为了节省无线网络承载资源，可在UE和MME之间使用控制面通道来传输小包数据。因此可以使用方式二。 
@@ -400,33 +400,33 @@ SMSMME和SMSC/IWMSC建立控制面通道投递上下行短消息数据。
 Non-IP EPS连接
 ；SMS相关的详细内容参见ZUF-78-12 语音和短消息
 。
-应用场景 物联网设备终端种类繁多，其中有相当一部分是低速率/低复杂度终端，如：各种定点探测设备（智能井盖、智能水表、智能电表、智能气表等）、环境监控设备（水质、水位监控）等。对于这类设备终端，网络侧在业务流程上进行优化，减少接口信令，加快小包数据传输。 
+应用场景 :物联网设备终端种类繁多，其中有相当一部分是低速率/低复杂度终端，如：各种定点探测设备（智能井盖、智能水表、智能电表、智能气表等）、环境监控设备（水质、水位监控）等。对于这类设备终端，网络侧在业务流程上进行优化，减少接口信令，加快小包数据传输。 
 控制面EPS优化功能适用于上述低复杂度、非频发的小包数据传输场景。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|使用控制面传输小包数据，MME不新增用户面进程，架构简单，部署方便。
 物联网终端用户|不建立数据的无线承载，降低消耗。
-实现原理 系统架构 控制面EPS优化的网络架构如下图所示。
-[]images/1598002171141.png)MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据。
-涉及网元 网元名称|网元作用
+实现原理 :系统架构 :控制面EPS优化的网络架构如下图所示。
+MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据。
+涉及网元 :网元名称|网元作用
 ---|---
 NB-IoTUE|物联网终端，用NASPDU发送和接收小包数据（IP Data或Non-IP Data），并携带S1释放辅助信息。
 E-UTRAN|支持NB-IoT终端接入，传递NAS PDU。通过S1-MME接口传输小包数据。
 MME|传输上行和下行小包数据。完成S1-MME到S11-U面小包数据的转换传输。
 SAE-GW|通过S11-U面传输小包数据。
-协议栈 NB-IoT控制面小包数据传输协议栈如下图所示。 
+协议栈 :NB-IoT控制面小包数据传输协议栈如下图所示。 
 图1  NB-IoT控制面小包数据传输协议栈
-[]images/1598002171261.png)
-本网元实现 控制面小包数据传输优化的实现原理如下图所示。 
+
+本网元实现 :控制面小包数据传输优化的实现原理如下图所示。 
 图2  控制面小包数据传输优化
-[]images/1598002171381.png)
+
 传统的用户面数据传输，在UE IDLE态发起数据传输，流程复杂，信令开销远远大于数据包本身。优化如下： 
 MME和UE间采用控制面通道，使用NAS信令传输小包数据，NAS信令小包数据通过空口RRC连接信令和S1初始化消息传输，MME和eNodeB间的S1接口信令可减少50%以上。 
 MME和SAE-GW间通过S11-U用户面通道传输小包数据，MME通过控制面进程传输数据，极大简化了内部信令处理，提升了小包数据传输效率，完成NAS到GTP-U的协议转换。 
-业务流程 IP小包控制面传输流程包括：MO流程和MT流程。
+业务流程 :IP小包控制面传输流程包括：MO流程和MT流程。
 控制面传输MO流程如下图所示。 
 图3  控制面传输MO流程
-[]images/1598002171501.png)
+
 控制面传输MO流程描述如下： 
 UE附着完成后，UE发起RRC连接建立，消息中携带有NAS PDU。NAS
 PDU中携带有EBI，用来标识同时携带的加密上行数据。NAS PDU用来携带小包数据IP Data。
@@ -443,7 +443,7 @@ Data Transport，对消息进行加密和完整性保护后，投递给eNodeB。
 eNodeB发送Downlink Information Transfer（包括NAS消息）给UE，并且在RRC连接检测定时器到时释放RRC连接。如果MME根据释放指示的决策没有释放S1连接，且一定时间内没有NAS消息投递，则eNodeB发起S1释放。 
 控制面传输MT流程如下图所示。 
 图4  控制面传输MT流程
-[]images/1598002171621.png)
+
 控制面传输MT流程描述如下： 
 UE附着完成。SGW收到下行数据报文，但发现没有S11-U承载，则缓存报文。SGW发送Downlink Data Notification消息给MME，消息中携带有EBI和ARP。
 如果MME发现UE处于节电状态（PSM或者eDRX），无法响应寻呼，则计算用户能够建立无线承载的时间，通过Downlink
@@ -456,7 +456,7 @@ UE发送上行RRC消息携带NAS消息ESM Data Transport通过eNodeB给MME，MME
 MME将上行数据报文通过S11-U发送给SGW，并根据消息中的释放辅助信息决策是否需要立即释放S1连接。如果MME根据释放指示的决策没有释放S1连接，且一定时间内没有NAS消息投递，则eNodeB发起S1释放。 
 EDT（Early Data Transmission）数据流程如下图所示。 
 图5  控制面优化MO EDT流程
-[]images/1598002171751.png)
+
 EDT流程关键步骤描述如下，其他步骤同现有流程： 
 步骤2： eNB收到UE的RRCEarlyDataRequest请求，在Initial UE message中携带 "EDT Session" indication给MME。 
 步骤11： 
@@ -467,7 +467,7 @@ EDT流程关键步骤描述如下，其他步骤同现有流程：
 步骤12b：如果MME在S1AP消息中携带End Indication指示no further data，eNB可发送RRCEarlyDataComplete给UE。 
 区分UE业务流程图如下图所示。 
 图6  区分UE业务流程图
-[]images/1612858523535.png)
+
 区分UE业务流程关键步骤描述如下： 
 UE发起Attach业务流程，附着成功。 
 SCC/AS向SCEF发送Update Request消息，携带CP（Communication-Pattern）参数。
@@ -488,28 +488,28 @@ MME向HSS返回Insert Subscriber Data Ack，插入用户数据过程成功。
 MME向HSS发送Update Location Request消息。 
 HSS向MME返回Update Location Response消息，携带有效的CP参数集。 
 eNodeB在第10步中通过过UE Differentiation Information信元接收终端Communication-Pattern信息，并进行资源调度与DRX策略操作。 
-系统影响 该特性不涉及对系统的影响。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 协议名称|章节
+系统影响 :该特性不涉及对系统的影响。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :协议名称|章节
 ---|---
 3GPP TS 23.720（Study on architecture enhancements for CellularInternet of Things）|6 Solutions
 3GPP TS 23.401 （General Packet Radio Service (GPRS) enhancementsfor  Evolved Universal Terrestrial Radio Access Network (E-UTRAN)access）|4.10 Introduction of CIoT EPS Optimisations
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
 ##### LICENSE要求 
 需要申请了“NB-IoT注册用户数”和“NB-IoT在线用户数”的License许可后，运营商才能获得NB-IoT用户接入核心网的服务。
 需要申请了“MME支持物联网小包数据控制面传输优化”的License许可后，运营商才能获得物联网小包数据控制面传输优化特性的服务。
-对其他网元的要求 UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
 ---|---|---|---|---
 √|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-O&M相关 命令 配置项表1  新增配置项配置项命令MME GTPU地址配置SET MME GTPU IPSHOW MME GTPU IP表2  修改配置项配置项命令新增参数物联网业务配置SET MME IOT CFG支持控制面优化SHOW MME IOT CFG支持控制面优化VRF配置SET VRFCFGS11-U口VRF标识SHOW VRFCFGS11-U口VRF标识 
+O&M相关 :命令 :配置项表1  新增配置项配置项命令MME GTPU地址配置SET MME GTPU IPSHOW MME GTPU IP表2  修改配置项配置项命令新增参数物联网业务配置SET MME IOT CFG支持控制面优化SHOW MME IOT CFG支持控制面优化VRF配置SET VRFCFGS11-U口VRF标识SHOW VRFCFGS11-U口VRF标识 
 软件参数表3  新增软件参数软件参数ID软件参数名称262527NBIoT条件下ULR消息中RATType字段填写 
-性能统计 性能计数器名称
+性能统计 :性能计数器名称
 ---
 C430000150 EPS附着(CP)请求次数
 C430000151 EPS附着(CP)成功次数
@@ -526,18 +526,18 @@ C432070019 S11-U口GTP下行字节峰值速率(KB/s)
 C432000084 Connection EstablishmentIndication消息发送次数
 C432090002 接收ESM DATA Transport消息次数
 C432090003 发送ESM DATA Transport消息次数
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过该配置，可实现物联网小包数据控制面传输优化功能。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过该配置，可实现物联网小包数据控制面传输优化功能。 
 通过该配置，可实现MME通过Subscription Based UE Differentiation Information信元向eNB传递NB IoT的数据传输周期、传输时间分布、数据传输模式、移动还是静止、节电要求等，基站可以通过这些信息，匹配不同的调度、DRX等策略。 
-配置前提 对于物联网小包数据控制面传输优化功能，需要规划好MME和SGW间的S11-U用户面地址。 
-配置过程 打开MME“支持物联网小包数据控制面传输优化”功能开关。
+配置前提 :对于物联网小包数据控制面传输优化功能，需要规划好MME和SGW间的S11-U用户面地址。 
+配置过程 :打开MME“支持物联网小包数据控制面传输优化”功能开关。
 配置MME S11-U用户面地址。 
 实现MME向无线传递Subscription Based UE Differentiation Information信元的功能。 
-执行[SET MME IOT CFG](../../MMESGSN\zh-CN\mml\1260333.html)命令，MME开启支持NB-IoT网络UE differentiation功能。
-执行[ADD SUPFEATURE](../../MMESGSN\zh-CN\mml\1262600.html)命令或者[SET SUPFEATURE](../../MMESGSN\zh-CN\mml\1262601.html)命令，配置Support Feature 2支持CP ，用于指示MME支持AESE communication patterns能力。
-配置实例 ##### 配置MME使用物联网小包数据控制面传输 
+执行[SET MME IOT CFG]命令，MME开启支持NB-IoT网络UE differentiation功能。
+执行[ADD SUPFEATURE]命令或者[SET SUPFEATURE]命令，配置Support Feature 2支持CP ，用于指示MME支持AESE communication patterns能力。
+配置实例 :##### 配置MME使用物联网小包数据控制面传输 
 MME需要打开“支持物联网小包数据控制面传输优化”功能开关，并配置MME S11-U的用户面地址。
 配置步骤|配置说明
 ---|---
@@ -550,7 +550,7 @@ MME需要打开“支持UE differentiation功能”功能开关，并配置Suppo
 SET MME IOT CFG: SPRUEDIFFERENTIATION="ON"|打开MME“支持UE differentiation功能”功能开关。
 ADD SUPFEATURE: FEATUREID=10,SUPFEATURE="NULL",SUPFEATURE2="CP"|增加Support Feature模板配置，基于用户的IMSI或用户所在HSS局向ID选择支持"Communication Pattern"功能的模板，支持"Communication Pattern"。
 SET SUPFEATURE:FEATUREID=10,SUPFEATURE2="CP"|修改已有的Support Feature模板配置，改变现有Support Feature模板中的能力，支持"Communication Pattern"。
-测试用例 测试项目|MME支持物联网小包数据控制面传输优化
+测试用例 :测试项目|MME支持物联网小包数据控制面传输优化
 ---|---
 测试目的|测试MME支持物联网小包数据控制面传输优化。
 预置条件|MME网元各项对接和业务配置完毕。用户取得MME网元支持物联网小包数据控制面传输优化功能的license授权，并更新了license。
@@ -578,11 +578,11 @@ SET SUPFEATURE:FEATUREID=10,SUPFEATURE2="CP"|修改已有的Support Feature模�
 测试过程|NB-IoT Control Plane用户携带SMSOnly发起CP模式附着，ULA下发签约信息中携带UE通信模式参数AESE-Communication-Pattern，存在多组CP参数，CP参数中SCEF-Reference-ID有效。SGS口更新成功。附着成功后，HSS向MME发送IDR消息，签约信息中携带UE通信模式参数AESE-Communication-Pattern，没有SCEF-Reference-ID，存在多个SCEF-ReferenceID-Deletion，其中一个SCEF-Reference-ID-for-Deletion有效与附着时ULA下发的一致。IDR成功后，eNB发起RetrieveUEInfomation请求。用户在CONNECTED状态下SGS口收发短消息。
 通过准则|附着过程中MME向HSS发起位置更新流程，发送的ULR消息中支持Communication Pattern（CP）Feature，MME接收到成功的ULA消息后选取第一组CP模式参数存储到上下文中。MME通过attach accept的DNT消息和Connection Establishment Indication消息下发ULA签约的Subscription Based UE Differentiation Information给eNB。查询MME用户签约信息返回的“AESE-Communication-Pattern”是ULA签约的保存值。IDR流程判断上下文中的SCEF-Reference-ID和SCEF-Reference-ID-for-Deletion一致，删除用户上下文中老的UE通信模式数据。UEInfomationTransfer消息不会下发Subscription Based UE Differentiation Information给ENB。短消息的DNT消息不会下发Subscription Based UE Differentiation Information给ENB。查询MME用户签约信息不返回“AESE-Communication-Pattern”。
 测试结果|-
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-004 物联网用户面EPS优化 
-特性描述 特性描述 描述 定义 物联网用户面EPS优化功能，适用eMTC，也适用NB-IoT。UE在ECM-IDLE和ECM-CONNECTED态之间转换时，MME使用Suspend和Resume流程，代替了S1
+特性描述 :特性描述 :描述 :定义 :物联网用户面EPS优化功能，适用eMTC，也适用NB-IoT。UE在ECM-IDLE和ECM-CONNECTED态之间转换时，MME使用Suspend和Resume流程，代替了S1
 Release和Service Request流程，大大减少了无线信令。 
-应用场景 物联网用户面EPS优化适用于低移动性、频繁的数据发送接收场景。 
+应用场景 :物联网用户面EPS优化适用于低移动性、频繁的数据发送接收场景。 
 物联网用户面优化的主要目的是：解决UE在IDLE态到CONNECT态转换时，业务请求过程中重建承载和上下文所带来的信令和资源消耗。 
 物联网用户面优化可实现：当UE建立好承载和上下文，随后就可以使用挂起和恢复流程来替代原有的释放和重建流程。 
 当使用挂起流程时： 
@@ -593,31 +593,31 @@ MME保存S1AP连接以及承载上下文，进入IDLE态。
 UE使用挂起时保存的AS信息进行恢复。 
 eNodeB通知MME恢复。 
 MME侧进入连接态。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|用户在IDLE态和CONNECT态之间转换时，可减少无线信令消耗。
 物联网终端用户|能快速恢复无线承载。
-实现原理 系统架构 用户面EPS优化的网络架构如下图所示。
-[]images/1591692170612.png)
-涉及的网元 网元名称|网元作用
+实现原理 :系统架构 :用户面EPS优化的网络架构如下图所示。
+
+涉及的网元 :网元名称|网元作用
 ---|---
 CIoTUE|物联网终端，用NASPDU发送和接收小包数据，并携带S1释放辅助信息。
 E-UTRAN|支持NB-IoT终端接入，传递NAS PDU。通过S1-U面传输小包数据（IP Data）。
 MME|支持物联网终端接入，辅助创建S1-U面。
 SAE-GW|通过S1-U面传输小包数据（IP Data）。
-协议栈 NB-IoT用户面小包数据传输协议栈如下图所示。 
+协议栈 :NB-IoT用户面小包数据传输协议栈如下图所示。 
 图1  NB-IoT用户面小包数据传输协议栈
-[]images/1591692170732.png)
-本网元实现 用户面小包数据传输优化的实现原理如下图所示。 
+
+本网元实现 :用户面小包数据传输优化的实现原理如下图所示。 
 图2  用户面小包数据传输优化
-[]images/1591692170852.png)
+
 MME利用为UE保留的S1AP上下文和承载上下文，快速恢复无线承载和网关承载，提升数据传输速度。 
-业务流程 IP小包数据用户面传输流程：eNodeB和SAE-GW间使用S1-U面进行数据传送，和普通EPC网络数据传送一样。
+业务流程 :IP小包数据用户面传输流程：eNodeB和SAE-GW间使用S1-U面进行数据传送，和普通EPC网络数据传送一样。
 用户面小包数据传输优化关键流程包括：SUSPEND和RESUME。 
 SUSPEND
 SUSPEND流程如下图所示。 
 图3  SUSPEND流程
-[]images/1591692170972.png)
+
 SUSPEND流程描述如下： 
 eNodeB使用新增的S1AP消息UE Context Suspend Request向MME发起挂起流程，UE进入IDLE态。MME为UE保留有S1AP上下文和承载上下文，包括MME和eNodeB的S1AP
 ID，eNodeB的S1-U地址和TEID，SGW的地址和TEID等。
@@ -628,7 +628,7 @@ eNodeB发送RRC Connection Suspend消息。
 RESUME流程
 RESUME流程如下图所示。 
 图4  RESUME流程
-[]images/1591692171102.png)
+
 RESUME流程描述如下： 
 Random Access。 
 UE因上行业务或寻呼，引发连接恢复流程。 
@@ -639,27 +639,27 @@ ID，eNodeB的S1-U地址和TEID，SGW的地址和TEID等。
 上行数据此时可根据之前保存的SGW地址和TEID进行发送。 
 MME发送Modify Bearer Request消息给SGW，消息中携带保存的eNodeB的S1-U地址和下行TEID，此时SGW可以发送下行报文给eNodeB。 
 SGW向MME返回Modify Bearer Response消息，SGW的S1-U地址和上行TEID保持不变。 
-系统影响 该特性不涉及对系统的影响。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 协议名称|章节
+系统影响 :该特性不涉及对系统的影响。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :协议名称|章节
 ---|---
 3GPP TS 23.720（Study on architecture enhancements for CellularInternet of Things）|6 Solutions
 3GPP TS 23.401 （General Packet Radio Service (GPRS) enhancementsfor  Evolved Universal Terrestrial Radio Access Network (E-UTRAN)access）|4.11 User Plane CIoT EPS Optimization
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
 ##### LICENSE要求 
 需要申请了“MME支持物联网小包数据用户面传输优化”的License许可后，运营商才能获得物联网小包数据用户面传输优化特性的服务。
-对其他网元的要求 UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
 ---|---|---|---|---
 √|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-O&M相关 命令 配置项表1  修改配置项配置项命令新增参数物联网业务配置SET MME IOT CFG支持用户面优化SHOW MME IOT CFG支持用户面优化 
+O&M相关 :命令 :配置项表1  修改配置项配置项命令新增参数物联网业务配置SET MME IOT CFG支持用户面优化SHOW MME IOT CFG支持用户面优化 
 软件参数表2  新增软件参数软件参数ID软件参数名称262527NBIoT条件下ULR消息中RATType字段填写 
-性能统计 性能计数器名称
+性能统计 :性能计数器名称
 ---
 C430000152 EPS附着(UP)请求次数
 C430000153 EPS附着(UP)成功次数
@@ -668,41 +668,41 @@ C432000086 UE CONTEXT SUSPEND RESPONSE消息发送次数
 C432000087 UE CONTEXT RESUME REQUEST消息接收次数
 C432000088 UE CONTEXT RESUME RESPONSE消息发送次数
 C432000089 UE CONTEXT RESUME FAILURE消息发送次数
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过该配置，可实现物联网小包数据用户面传输优化功能。 
-配置前提 EPC各网元正常工作，用户可接入EPC核心网进行数据业务。 
-配置过程 打开MME“支持物联网小包数据用户面传输优化”功能开关。
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过该配置，可实现物联网小包数据用户面传输优化功能。 
+配置前提 :EPC各网元正常工作，用户可接入EPC核心网进行数据业务。 
+配置过程 :打开MME“支持物联网小包数据用户面传输优化”功能开关。
 打开MME“支持NB-IoT接入时采用S1-U承载进行数据传输”功能开关。
-配置实例 配置MME使用物联网小包数据用户面传输，支持物联网用户NB-IoT接入时采用S1-U承载进行数据传输。 
+配置实例 :配置MME使用物联网小包数据用户面传输，支持物联网用户NB-IoT接入时采用S1-U承载进行数据传输。 
 MME需要打开“支持物联网小包数据用户面传输优化”功能开关，打开“支持NB-IoT接入时采用S1-U承载进行数据传输”功能开关。
 配置步骤|配置说明
 ---|---
 SET MME IOT CFG:UPSW="YES";|打开MME“支持物联网小包数据用户面传输优化”功能开关。
 SET MME IOT CFG:NBS1U="YES";|打开MME“支持NB-IoT接入时采用S1-U承载进行数据传输”功能开关。
-测试用例 测试项目|MME支持物联网小包数据用户面传输优化
+测试用例 :测试项目|MME支持物联网小包数据用户面传输优化
 ---|---
 测试目的|测试MME支持物联网小包数据用户面传输优化
 预置条件|MME网元各项对接和业务配置完毕。用户取得MME网元支持物联网小包数据用户面传输优化功能的license授权，并更新了license。
 测试过程|开启支持物联网小包数据用户面传输优化功能开关。物联网终端开机发起附着，使用用户面传输优化模式接入。终端和应用服务器间无用户数据传输，eNodeB发起S1上下文的Suspend流程。终端和应用服务器间有数据交互，触发了S1上下文的Resume流程。终端和应用服务器间传输用户数据。
 通过准则|终端使用用户面传输优化模式接入到MME成功。eNodeB发起Suspend流程，MME保存S1上下文，并通知SGW释放S1用户面。用户触发Resume流程，MME恢复S1用户面。终端和应用服务器间的用户数据使用用户面模式传输成功。
 测试结果|–
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-005 海量接入 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 NB-IoT|窄带物联网，是由3GPP定义的基于蜂窝网络的窄带物联网技术标准，是一种专为物联网设计的窄带射频技术，以广连接、低功耗、低成本、低移动和深覆盖为特点，可应用于GSM网络、UMTS网络和LTE网络。
-描述 定义 NB-IoT海量接入，是指低复杂度、低功耗、低速率的物联网终端基于NB-IoT物联网技术接入EPC网络，其数量为亿级单位，是智能手机终端的数十甚至上百倍。
-背景知识 预测2025年全球物联网连接数量达270亿个，来自市场研究公司MachinaResearch的最新数据如[图1](1591692173472.html#ZUF-78-17-003%E6%94%AF%E6%8C%81%E6%B5%B7%E9%87%8F%E6%8E%A5%E5%85%A5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E6%8F%8F%E8%BF%B0-BD69BC45__NB-IoT%E5%9C%A8%E7%BA%BF%E7%94%A8%E6%88%B7%E6%95%B0-82B20707)所示。
+描述 :定义 :NB-IoT海量接入，是指低复杂度、低功耗、低速率的物联网终端基于NB-IoT物联网技术接入EPC网络，其数量为亿级单位，是智能手机终端的数十甚至上百倍。
+背景知识 :预测2025年全球物联网连接数量达270亿个，来自市场研究公司MachinaResearch的最新数据如[图1]所示。
 图1  NB-IoT在线用户数
-[]images/1591692173822.png)
+
 2015年，全球物联网连接数量为60亿个。根据预期，到2025年这一数字将增至270亿个，中国将占据21%的全球物联网连接数。据预测2015-2025年10年间全球人口增长约10亿，相对人网的发展，物联网连接数是急剧增长的。 
 在巨大的物联网连接总数中，移动物联网设备终端将会占据不少份额，因为电信运营商不仅是基础网络的拥有者，同时还拥有大量企业用户，最有望成为物联网产业的主导者，而网络连接数也终将取代用户数成为衡量运营商增长的全新指标。 
 全球物联网连接数量及物联网收入在2015年-2025年之间将增长三倍，从而为电信运营商提供一个拓展新业务收入的机会，尤其是那些在企业IT服务领域具有经验的电信运营商，既是机会也是挑战，运营商首当其冲面临电信网络如何容纳数百亿物联网连接的问题。 
 目前占据物联网市场主要的应用需求聚焦在海量接入、低速率、高时延应用，采用NB-IoT技术解决此类应用需求。但是数量庞大的NB-IoT物联网设备终端，如大量的水电表监测、水质/水位监测、井盖监测设备、烟雾报警等设备，其话务模型虽然小，可能只有公众网络智能手机类的终端的5%～10%甚至更低，个体上却存在和人网手机类终端一样的存储需求，而且其数量可能是人网终端的10~20倍，甚至更多，目前的2G、3G和4G系统存储容量受限，物网终端的接入和人网用户的接入无法完全隔离，容量上相互制约，满足不了海量的终端信息存储需求。 
 另外，海量的物联网终端接入EPS网络后，如果发生物联网服务器故障、终端特殊应用、突发事件等，使得这些终端的业务在同一时间段内爆发，其业务量短时急剧增加，某类物网用户或某项应用挤占了大量的网络资源，影响了其他用户的正常业务，引发系统拥塞。目前的2G、3G和4G系统，不区分人和物以及不同的业务和应用，满足不了分级实施拥塞控制的需求。 
-应用场景 NB-IoT海量接入需要解决两类应用问题：
+应用场景 :NB-IoT海量接入需要解决两类应用问题：
 海量接入。 
 特定业务和用户的拥塞。 
 编号|应用|需求|解决策略
@@ -716,15 +716,15 @@ NB-IoT|窄带物联网，是由3GPP定义的基于蜂窝网络的窄带物联网
 对于数量庞大的物联网设备终端，其话务模型虽然小，可能只有公众网络智能手机类的终端的5%～10%甚至更低，个体上却存在和人网手机类终端一样的存储需求，而且其数量可能是人网终端的10~20倍，甚至更多，如何容纳亿级终端接入，是核心网需要解决的关键问题；这类物联网设备终端的话务量很低，但用户信息需要长时间保存在MME上，因此MME要支持海量接入，关键要解决海量存储。 
 海量存储优化
 海量存储优化：基于用户分类/分组实现用户数据共享管理。 
-MME依据物网终端和人网用户的业务特征不同，将物网终端用户和人网终端用户数据管理和存储隔离，实现用户数据的分类，对用户数据分类管理和存储，如[图2](1591692173472.html#ZUF-78-17-003%E6%94%AF%E6%8C%81%E6%B5%B7%E9%87%8F%E6%8E%A5%E5%85%A5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-BD69DF1F__%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%A8%A1%E5%9E%8B-82AEB3B6)所示。
+MME依据物网终端和人网用户的业务特征不同，将物网终端用户和人网终端用户数据管理和存储隔离，实现用户数据的分类，对用户数据分类管理和存储，如[图2]所示。
 图2  用户数据存储模型
-[]images/1591692174532.png)
+
 用户数据的分类依据： 
 用户终端特性。 
 用户签约的业务特性。 
-将同特性的用户数据，使用模板共享管理，业务层共享数据管理。如[图3](1591692173472.html#ZUF-78-17-003%E6%94%AF%E6%8C%81%E6%B5%B7%E9%87%8F%E6%8E%A5%E5%85%A5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-BD69DF1F__%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9E%8B-82AE6A1D)所示。
+将同特性的用户数据，使用模板共享管理，业务层共享数据管理。如[图3]所示。
 图3  用户数据管理模型
-[]images/1591692174652.png)
+
 签约上下文共享存储：同一设备组签约数据共享，MME完成数据共享的分析，基于模板共享数据管理。 
 用户上下文精简：设置独立的上下文，根据NB-IoT业务特性进行精简。设备能力共享存储。变长存储。 
 MME通过共享数据管理和存储，大幅降低每用户数据的存储需求以及签约数据传输消耗，在同等硬件资源条件下，使得终端接入数大幅提升，满足海量接入需求。 
@@ -735,29 +735,29 @@ MME通过共享数据管理和存储，大幅降低每用户数据的存储需�
 某类物网用户或某项应用挤占了大量的网络资源，影响了其他用户的正常业务，网络区分人与物，区分不同的业务和应用，分级实施拥塞控制，限制挤占了大量的网络资源的用户业务和应用。 
 拥塞控制优化
 拥塞控制优化：包括特定业务和用户的拥塞控制、业务接入优先级控制，基于终端类别和优先级的分级业务保障。 
-MME实现智能化分级的拥塞控制和业务保障，在多个维度区分人与物以及不同的业务和应用，精细控制，保证不会因某类用户或某项应用挤占大量的网络资源，通过分级的拥塞控制，既保障了正常的业务通过量，又确保网络的负荷平衡。如[图4](1591692173472.html#ZUF-78-17-003%E6%94%AF%E6%8C%81%E6%B5%B7%E9%87%8F%E6%8E%A5%E5%85%A5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-BD69DF1F__%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E4%BC%98%E5%8C%96-82AEE98A)所示。
+MME实现智能化分级的拥塞控制和业务保障，在多个维度区分人与物以及不同的业务和应用，精细控制，保证不会因某类用户或某项应用挤占大量的网络资源，通过分级的拥塞控制，既保障了正常的业务通过量，又确保网络的负荷平衡。如[图4]所示。
 图4  拥塞控制优化
-[]images/1591692174772.png)
+
 智能化分级的多个维度如下： 
 用户应用优先级，如：物联网应用、普通应用。 
 用户签约优先级，如：签约了特定Group ID的用户。 
 业务优先级，如：语音、MPS等。 
 接入优先级，分高低优先级。 
 业务流程优先级，如：附着、TAU、PDN连接。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|增加收入：网络容纳亿级物联网终端接入，有助于运营商增加来自物联网的收入。提高系统可靠性：防止设备被突发的大量业务冲击，在突发大话务情况下，不会异常或者崩溃，提高网络的稳定性。
 物联网终端用户|用户享受更稳定和更可靠的网络服务。
-实现原理 系统架构 3GPP定义的NB-IoT网络架构如下图所示。
+实现原理 :系统架构 :3GPP定义的NB-IoT网络架构如下图所示。
 图5  NB-IoT网络架构图
-[]images/1591692175192.png)
-涉及的网元 NB-IoT由UE、CIoT-BS和MME配合完成。
+
+涉及的网元 :NB-IoT由UE、CIoT-BS和MME配合完成。
 网元名称|网元作用
 ---|---
 UE|物联网终端，以NB-IoT方式接入网络。接收MME的拒绝消息，启动back-off timer，超时前不发起业务。
 CIoT-BS|支持NB-IoT终端接入，传递NAS PDU。
 MME|基于用户分类/分组实现用户数据共享管理，容纳亿级物联网终端接入。完成基于APN和MTC Group Identifier的拥塞控制；完成业务接入优先级控制。
-本网元实现 MME网元NB-IoT海量接入包括如下处理： 
+本网元实现 :MME网元NB-IoT海量接入包括如下处理： 
 海量存储优化 
 特定业务和用户的拥塞基于APN的拥塞控制优化基于MTC用户的拥塞控制优化业务接入优先级控制（LAPI）优化 
 海量存储优化
@@ -792,38 +792,38 @@ MME中签约此Group ID与使用此APN的这类用户建立承载数超过门限
 MME中签约此Group ID与签约此APN的这类用户发送NAS信令速率超过门限；MME将限制签约此Group ID与签约此APN的用户不再发起移动性管理业务：附着TAU业务请求 
 业务接入优先级控制（LAPI）优化
 当系统拥塞时MME对于低优先接入的业务优先拒绝，或主动下线，并在一段时间内禁止进行低优先级接入业务，保障其他非低优先级接入的业务。 
-系统影响 开启拥塞控制后，当系统处于拥塞的情况下，会采用简单有效的方法拒绝部分业务处理，从而降低系统负荷；拥塞控制本身对系统处理能力和资源消耗可以忽略。 
-应用限制 如果UE不支持退避时间（Backoff Time）的处理，将会一定程度上弱化拥塞控制的效果；虽然MME可以对处于退避时间内的UE实施持续的接入控制，但是如果UE在短时间内多次发起尝试，还是对网络处理能力和资源有少许消耗。
-特性交互 无。 
-遵循标准 协议|章节号及章节名称
+系统影响 :开启拥塞控制后，当系统处于拥塞的情况下，会采用简单有效的方法拒绝部分业务处理，从而降低系统负荷；拥塞控制本身对系统处理能力和资源消耗可以忽略。 
+应用限制 :如果UE不支持退避时间（Backoff Time）的处理，将会一定程度上弱化拥塞控制的效果；虽然MME可以对处于退避时间内的UE实施持续的接入控制，但是如果UE在短时间内多次发起尝试，还是对网络处理能力和资源有少许消耗。
+特性交互 :无。 
+遵循标准 :协议|章节号及章节名称
 ---|---
 3GPP TS 23.720: " Study on architecture enhancements forCellular Internet of Things"|6节: Solutions
 3GPP TS 23.401: “General Packet Radio Service (GPRS) enhancementsfor Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access”|4.3.7.4 MME control of overload
-特性能力 特性|能力
+特性能力 :特性|能力
 ---|---
 支持APN拥塞控制的最大APN个数|256（个）
-可获得性 License要求 该特性需要申请了License “NB-IoT注册用户数”和“NB-IoT在线用户数”许可后，运营商才能获得NB-IoT海量接入的服务。 
+可获得性 :License要求 :该特性需要申请了License “NB-IoT注册用户数”和“NB-IoT在线用户数”许可后，运营商才能获得NB-IoT海量接入的服务。 
 该特性需要申请了License “MME支持基于APN拥塞控制功能”、“MME支持基于MTC用户拥塞控制功能”和“MME支持LAPI”许可后，运营商才能获得特定业务和用户的拥塞控制的服务。 
-对其他网元的要求 UE需要支持Back-off Timer和低优先级指示。 
+对其他网元的要求 :UE需要支持Back-off Timer和低优先级指示。 
 SGW/PGW需要支持GTP-C过负荷控制功能。 
-O&M相关 命令 新增配置项参见表2。表2  新增配置项配置项命令基于APN拥塞控制开关SET APN CONGESTION SWITCHSHOW APN CONGESTION SWITCHAPN拥塞控制策略配置ADD APN CONGESTION POLICYSET APN CONGESTION POLICYDEL APN CONGESTION POLICYSHOW APN CONGESTION POLICY基于MTC用户的MME网元拥塞控制开关SET MTCMME CONGESTION SWITCHSHOW MTCMME CONGESTION SWITCHMTC用户的MME网元拥塞控制策略配置ADD MTCMME CONGESTION POLICYSET MTCMME CONGESTION POLICYDEL MTCMME CONGESTION POLICYSHOW MTCMME CONGESTION POLICY基于MTC用户的APN拥塞控制开关SET MTCAPN CONGESTION SWITCHSHOW MTCAPN CONGESTION SWITCHMTC用户的APN拥塞控制策略配置ADD MTCAPN CONGESTION POLICYSET MTCAPN CONGESTION POLICYDEL MTCAPN CONGESTION POLICYSHOW MTCAPN CONGESTION POLICY 
+O&M相关 :命令 :新增配置项参见表2。表2  新增配置项配置项命令基于APN拥塞控制开关SET APN CONGESTION SWITCHSHOW APN CONGESTION SWITCHAPN拥塞控制策略配置ADD APN CONGESTION POLICYSET APN CONGESTION POLICYDEL APN CONGESTION POLICYSHOW APN CONGESTION POLICY基于MTC用户的MME网元拥塞控制开关SET MTCMME CONGESTION SWITCHSHOW MTCMME CONGESTION SWITCHMTC用户的MME网元拥塞控制策略配置ADD MTCMME CONGESTION POLICYSET MTCMME CONGESTION POLICYDEL MTCMME CONGESTION POLICYSHOW MTCMME CONGESTION POLICY基于MTC用户的APN拥塞控制开关SET MTCAPN CONGESTION SWITCHSHOW MTCAPN CONGESTION SWITCHMTC用户的APN拥塞控制策略配置ADD MTCAPN CONGESTION POLICYSET MTCAPN CONGESTION POLICYDEL MTCAPN CONGESTION POLICYSHOW MTCAPN CONGESTION POLICY 
 软件参数新增软件参数参见表3。表3  新增软件参数软件参数ID软件参数名称262493TAU业务是否支持NAS拥塞控制262494业务请求是否支持NAS拥塞控制262495承载修改是否支持NAS拥塞控制262496已下发移动性管理BackOff Time再次接入拒绝携带原因262497已下发会话管理BackOff Time再次接入拒绝携带原因262498MME过负荷控制是否拒绝连接态262570控制面业务请求是否支持NAS拥塞控制 
-性能统计 该特性暂不涉及性能统计。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过NB-IoT海量接入特性的相关配置，实现MME对物联网终端的海量存储，支持海量物联网终端接入。
-配置前提 MME网元各项对接和业务配置完毕。
-配置过程 配置基于APN的拥塞控制过程。
-使用[SET APN CONGESTION SWITCH](../../MMESGSN\zh-CN\mml\1261214.html)命令，开启基于APN拥塞控制功能。
-使用[ADD APN CONGESTION POLICY](../../MMESGSN\zh-CN\mml\1261217.html)命令，配置基于APN拥塞控制策略。
+性能统计 :该特性暂不涉及性能统计。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过NB-IoT海量接入特性的相关配置，实现MME对物联网终端的海量存储，支持海量物联网终端接入。
+配置前提 :MME网元各项对接和业务配置完毕。
+配置过程 :配置基于APN的拥塞控制过程。
+使用[SET APN CONGESTION SWITCH]命令，开启基于APN拥塞控制功能。
+使用[ADD APN CONGESTION POLICY]命令，配置基于APN拥塞控制策略。
 配置基于MTC用户的MME网元拥塞控制功能过程。
-使用[SET MTCMME CONGESTION SWITCH](../../MMESGSN\zh-CN\mml\1261222.html)命令，开启基于MTC用户的MME网元拥塞控制功能。
-使用[ADD MTCMME CONGESTION POLICY](../../MMESGSN\zh-CN\mml\1261225.html)命令，配置基于MTC用户的MME网元拥塞控制策略。
+使用[SET MTCMME CONGESTION SWITCH]命令，开启基于MTC用户的MME网元拥塞控制功能。
+使用[ADD MTCMME CONGESTION POLICY]命令，配置基于MTC用户的MME网元拥塞控制策略。
 配置基于MTC用户的APN拥塞控制功能。 
-使用[SET MTCAPN CONGESTION SWITCH](../../MMESGSN\zh-CN\mml\1261230.html)命令，开启基于MTC用户的APN拥塞控制功能。
-使用[ADD MTCAPN CONGESTION POLICY](../../MMESGSN\zh-CN\mml\1261233.html)命令，配置基于MTC用户的APN拥塞控制策略。
-配置实例 ##### 配置基于APN的拥塞控制 
+使用[SET MTCAPN CONGESTION SWITCH]命令，开启基于MTC用户的APN拥塞控制功能。
+使用[ADD MTCAPN CONGESTION POLICY]命令，配置基于MTC用户的APN拥塞控制策略。
+配置实例 :##### 配置基于APN的拥塞控制 
 配置过程如下： 
 步骤|命令|说明
 ---|---|---
@@ -841,7 +841,7 @@ O&M相关 命令 新增配置项参见表2。表2  新增配置项配置项命�
 ---|---|---
 1|SET MTCAPN CONGESTION SWITCH:ISSUPCONMTCAPN="YES";|打开基于MTC用户的APN拥塞控制功能。
 2|ADD MTCAPN CONGESTION POLICY:MTCGRPID="460"-"02"-1,APN="pc1.auto.local.apn.epc.mnc011.mcc460.3gppnetwork.org",TYPE="BEARERNUM",MAXBEAR=100,GUABEAR=60,LOWMIN=60,LOWMAX=180;|配置基于MTC用户的APN拥塞控制策略，MTC组ID为"460"-"02"-1、APN名称为pc1.auto.local.apn.epc.mnc011.mcc460.3gppnetwork.org、拥塞控制类型为承载建立数、最大建立承载数为100、可保障建立承载数为60、统计周期默认为秒，也支持分钟，低优先级拒绝时携带的Back-offTimer最小取值为60秒、低优先级拒绝时携带的Back-off Timer最大取值为180秒。
-测试用例 MME支持物联网终端海量接入
+测试用例 :MME支持物联网终端海量接入
 测试项目|MME支持物联网终端海量接入
 ---|---
 测试目的|测试MME支持物联网终端海量接入
@@ -873,17 +873,17 @@ MME支持针对物联网终端业务接入优先级控制
 测试过程|3个物联网终端开机附着，使用APN1建立3个承载。另外1个物联网终端用APN1发起附着流程，Attach Request消息携带Device Property字段为低优先级。
 通过准则|附着流程失败，MME下发AttachReject消息，cause值为insufficient resources，并且携带backofftime字段，取值是50秒到60秒之间的随机值。
 测试结果|
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-006 节电智能 
-特性描述 特性描述 术语 无。 
-描述 定义 NB-IoT节电是为了应对LPWAN下终端超低功耗需求而引入的新功能，包括PSM和eDRX两种节电技术，同时衍生出节电时HLCom功能。
+特性描述 :特性描述 :术语 :无。 
+描述 :定义 :NB-IoT节电是为了应对LPWAN下终端超低功耗需求而引入的新功能，包括PSM和eDRX两种节电技术，同时衍生出节电时HLCom功能。
 PSM：该模式通过类似关机（关闭无线接收单元）机制来达到节电目的，只是UE仍注册在网络中，恢复业务时不需要重新附着并重建PDN连接。 
 eDRX：在现有DRX技术上进行扩展，通过大幅扩展休眠周期（从秒级到分钟、数十分钟甚至小时）达到节电目的。 
 HLCom：节电时EPC缓存下行数据延时下发，保证数据可靠传输。 
 DRX：无线接口包的数据流通常是突发性的，在没有数据传输时，可以通过DRX关闭UE的接收电路来降低功耗，从而提升电池使用时间。 
 MME负责为不同用户，不同的物联网应用场景制定不同的节电策略；与UE协商节电参数；管理UE节电状态；通知SGW缓存下行数据，保证节电状态下的可靠数据传输等功能。
-背景知识 物联网终端面临节电的挑战
-NB-IoT主要服务于移动物联网终端，参见[表1](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E6%8F%8F%E8%BF%B0-BD6C24E7__b637592e-f001-4287-93d4-134cbbbbcc8d)。节电（低功耗）在环境监测、动物追踪等行业应用中属于关键需求，待机时间要求以年为单位甚至更高。
+背景知识 :物联网终端面临节电的挑战
+NB-IoT主要服务于移动物联网终端，参见[表1]。节电（低功耗）在环境监测、动物追踪等行业应用中属于关键需求，待机时间要求以年为单位甚至更高。
 场景|应用举例|节电需求|目标
 ---|---|---|---
 电池更换困难或无法更换|野生动物追踪恶劣环境下的环境监测|电池的使用寿命即传感器的生命周期。|超低功耗，待机时间超一般超过5年。
@@ -897,18 +897,18 @@ NB-IoT主要服务于移动物联网终端，参见[表1](1591692178133.html#ZUF
 周期性深度睡眠：终端处于待机状态（ECM-IDLE态）时截取部分时间段进入节电状态，此时段内UE关闭无线接收单元，进入深度睡眠，从而达到省电目的。 
 减少信令消耗：终端处于待机状态时需要通过周期性更新消息保持终端的在线状态，针对活跃度很低的物联网终端，可延长周期性时间，减少信令开销，达到省电目的。 
 PSM节电技术
-PSM节电技术的流程图如[图1](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E6%8F%8F%E8%BF%B0-BD6C24E7__2a4ab158-db91-4b7d-89d6-c3e6648d45f9)所示。
+PSM节电技术的流程图如[图1]所示。
 图1  PSM节电技术
-[]images/1591692178483.png)
+
 在附着或TAU流程中UE和MME协商活跃定时器及周期性更新定时器时长，将UE进入IDLE态后时间分为两段：第一段为寻呼可达的活跃时间，第二段为剩余时间终端处于寻呼临时不可达的节电状态。
 PSM节电技术具有如下特征： 
 节电周期一般是以小时或天为单位。 
 周期性更新时长越长，触发周期性TAU的频率越低，功耗越低。 
 处于节电状态的时间越长，功耗越低，此时网络侧业务响应时间越长。 
 eDRX节电技术
-eDRX节电技术的流程图如[图2](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E6%8F%8F%E8%BF%B0-BD6C24E7__bbd3df95-ab0a-4693-b8fe-d5b6510638ce)所示。
+eDRX节电技术的流程图如[图2]所示。
 图2  eDRX节电技术
-[]images/1591692179043.png)
+
 在现有DRX技术上进行扩展，通过大幅扩展休眠周期（从秒级到分钟、数十分钟甚至小时）达到节电目的。
 和PSM类似，在Attach/TAU流程中UE和MME协商eDRX Cycle和PTW时，UE进入IDLE态后的时间以eDRX Cycle为周期分割为若干时间段，在每一个eDRX Cycle周期内又分为两段：第一段为寻呼可达的PTW时长，第二段为剩余时间终端处于寻呼临时不可达的节电状态。
 eDRX节电技术具有如下特征： 
@@ -917,9 +917,9 @@ eDRX周期时长越长，处于节电状态的时间越长，功耗越低，此�
 HLCom传输技术
 通过PSM及eDRX两种节电技术可极大的延长终端待机时间，但也是有代价的：为保证节电，终端需要进入深度睡眠状态，此时终端会关闭无线收发单元，如果此时网络侧有下行数据投递给终端，会因为寻呼临时不可达而被丢弃。 
 为避免下行数据因为寻呼临时不可达而被丢弃，需要通过额外的流程保证数据的可靠传输，为此，3GPP规范引入了HLCom功能。 
-HLCom传输流程图如[图3](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E6%8F%8F%E8%BF%B0-BD6C24E7__42da217b-1bb1-4144-9362-e0b22b7801a3)所示。
+HLCom传输流程图如[图3]所示。
 图3  HLCom传输技术
-[]images/1591692179163.png)待机状态下，应用数据（网络命令）到达。 
+待机状态下，应用数据（网络命令）到达。 
 MME监控终端状态，节电状态下通知SGW缓存。 
 终端通过业务请求/TAU流程退出节电状态，并恢复用户面。 
 承载恢复后，SGW向终端投递缓存报文，双向通信恢复。 
@@ -927,7 +927,7 @@ MME监控终端状态，节电状态下通知SGW缓存。
 WUS节电技术
 WUS技术是为能够防止接收器在持续检查信号过程中耗尽了电池，而采用了低功耗的过程，仅在检测到 WUS 时才唤醒设备，降低终端设备能耗。
 图4  WUS节电技术
-[]images/1613641266840.png)
+
 MME存储和向eNodeB传递WUS信息，具体如下： 
 MME接收UE CAPABILITY INFO indication中UE无线寻呼信息中的WUS-Support指示，然后在寻呼消息中携带WUS-Support指示。 
 MME在用户空闲态下寻呼时，将WUS-Support带给eNodeB，eNodeB通过WUS来指示寻呼，降低了盲检寻呼的复杂度，降低终端功耗。 
@@ -937,13 +937,13 @@ NB-IoT终端、基站支持NB-IoT UE Specific DRX参数，通过设置NB-IoT DRX
 无线基站可以降低寻呼时延，从而降低终端功耗。 
 NB DRX的时长在原来DRX基础上扩充了 512和1024， 分别对应5.12 S和10.24 S，可以更大程度的降低功耗。 
 图5  NB-IoT DRX节电技术
-[]images/1621233661217.png)
+
 NB-IoT DRX的基本机制是为处于RRC_CONNECTED态的UE配置一个DRX cycle。DRX cycle由以下两个组成： 
 On Duration：在此时间内，UE侦听并接收PDCCH（激活期）。 
 Opportunity for DRX：在此时间内，UE不接收下行信道的数据以节省功耗（休眠期）。 
-应用场景 ##### 节电技术影响因素 
+应用场景 :##### 节电技术影响因素 
 通信模式影响分析
-NB-IoT物联网终端四大应用场景参见[表2](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-BD6C530E__6d1d7f3e-85d2-43e8-9fbe-87b515e4915d)，通信模式比较规律，适用节电技术。其中，PSM适用节电周期较长（比如，应用通信频度按天、按小时）的应用，eDRX适用节电周期较短（比如，应用通信频度按半小时）的应用。
+NB-IoT物联网终端四大应用场景参见[表2]，通信模式比较规律，适用节电技术。其中，PSM适用节电周期较长（比如，应用通信频度按天、按小时）的应用，eDRX适用节电周期较短（比如，应用通信频度按半小时）的应用。
 场景|应用举例|频度|对节电的要求
 ---|---|---|---
 终端自动触发的异常报告|烟感告警、电量不足告警等|每几个月、每年等|无（无论是否节电状态，终端均可立即触发）
@@ -953,9 +953,9 @@ NB-IoT物联网终端四大应用场景参见[表2](1591692178133.html#ZUF-78-17
 响应时延影响分析
 在节电状态下网络侧主动发起的业务存在响应时延，该响应时延受网络侧协商的节电参数相关，该时长从数秒到数月不等。因此，节电状态下网络侧应用可容忍的响应时延也会影响节电技术的选择及参数设置。 
 PSM一般节电周期较长，适用网络侧可容忍的响应时间较长的场景；eDRX节电周期较短，适用网络侧可容忍的响应时间较短的场景。 
-响应时延流程如[图6](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-BD6C530E__ab2fd975-3ea5-48f3-a301-452dd73ac475)所示。
+响应时延流程如[图6]所示。
 图6  响应时延流程
-[]images/1591692179433.png)
+
 终端能力影响分析
 终端选择节电技术有以下三种方式。 
 只请求PSM、 
@@ -965,7 +965,7 @@ PSM一般节电周期较长，适用网络侧可容忍的响应时间较长的�
 网络应用感知影响分析
 运营商可能无法感知所有物联网应用的通信模式，对于此类物联网应用，网络侧无法根据应用设置最合适的节电参数，但UE在请求使用节电功能时也会提供其建议的节电参数，此时网络侧可授权UE请求的节电参数。
 ##### NB-IoT节电特性应用场景 
-基于节电技术影响因素分析，运营商可根据自身网络状况及业务发展需要，为不同用户，针对不同的物联网业务场景，提供灵活的节电策略。常见节电应用场景参见[表3](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-BD6C530E__NB-IoT%E8%8A%82%E7%94%B5%E7%89%B9%E6%80%A7%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF-8F0B135D)。
+基于节电技术影响因素分析，运营商可根据自身网络状况及业务发展需要，为不同用户，针对不同的物联网业务场景，提供灵活的节电策略。常见节电应用场景参见[表3]。
 节电策略|应用场景
 ---|---
 运营商感知应用|通信间隔|应用容忍的响应时延
@@ -1049,18 +1049,18 @@ R16支持了NB-IoT终端使用UE Specific DRX。适用于UE、无线基站、MME
 当Rel-16MME收到Pre-Rel-16UE发送的包含DRX参数IE的ATTACH REQUEST消息或TAU REQUEST消息时，MME不进行协商，MME寻呼不携带UE specific DRX for NB-IoT参数。 
 节电策略
 根据场景分析，使用UE Specific DRX for NB-IoT参数，终端可以在休眠期关闭接收电路降低功耗， 同时无线基站使用UE Specific DRX for NB-IoT参数进行寻呼，可以降低寻呼时延，从而降低终端功耗。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|通过选择合理的寻呼策略，运营商能获得如下收益：节约投资成本：可在保证业务体验基础上降低负荷、节省网络资源。提升客户满意度：保障电池使用寿命，为客户节省投资并提升效率。
 物联网终端客户|通过选择合理的寻呼策略，客户能获得如下收益：降低成本：降低设备采购成本及运维成本。享受定制的网络服务。
-实现原理 系统架构 NB-IoT节电特性利用现有网元消息接口，新增节电参数字段达到终端节电目的，对系统架构无改变。
-涉及的网元 NB-IoT节电特性涉及PSM、eDRXHLCom、WUS、UE Specific DRX for NB-IoT子功能。
+实现原理 :系统架构 :NB-IoT节电特性利用现有网元消息接口，新增节电参数字段达到终端节电目的，对系统架构无改变。
+涉及的网元 :NB-IoT节电特性涉及PSM、eDRXHLCom、WUS、UE Specific DRX for NB-IoT子功能。
 PSM节电功能需要MME、UE及HSS（可选）共同完成，各网元作用参见下表。表4  PSM节电功能的各网元作用网元名称网元作用MME在UE请求使用PSM时，为UE授权协商PSM节电参数，并监控UE节电状态。UE接受并使用MME下发的PSM节电参数。HSS签约周期性TAU更新时长，用于PSM周期性TAU更新参数协商时参考。 
 eDRX节电功能需要MME、eNB和UE共同完成，各网元作用参见下表。表5  eDRX节电功能的各网元作用网元名称网元作用MME在UE请求使用eDRX时，为UE授权协商eDRX节电参数，并监控UE节电状态。在寻呼消息中将eDRX参数带给eNB，用于eNB计算寻呼时机。eNB寻呼时根据寻呼消息中的eDRX参数计算寻呼时机。UE接受并使用MME下发的eDRX节电参数。 
 HLCom高时延功能需要SGW、MME和HSS（可选）共同完成，各网元作用参见下表。表6  HLCom高时延功能的各网元作用网元名称网元作用MME监控终端的节电状态，如果在节电状态下收到SGW的DDN请求通知SGW终端处于节电状态，需要缓存下行报文、缓存的最大时间及推荐缓存报文数。终端主动或寻呼触发退出节电状态并建立连接时，触发建立S1-U/S11-U用户面承载，用于SGW下发缓存下行报文。SGWSGW收到MME的DDN ACK消息中有缓存下行报文参数，触发下行报文缓存。SGW感知到用户面承载恢复后，将缓存的下行报文发送给终端。HSS签约建议缓存报文数，用于MME向SGW推荐最大缓存报文数协商时参考。 
 WUS功能需要eNodeB、MME共同完成，各网元作用参见下表。表7  WUS功能的各网元作用网元名称网元作用MMEMME接收UE capability info indication中UE无线寻呼信息中的WUS-Support指示，然后在寻呼消息中携带WUS-Support指示。eNBeNodeB支持WUS信号的发送，通过WUS信号唤醒终端设备。 
 UE Specific DRX for NB-IoT功能需要UE、NodeB、MME共同完成，各网元作用参见下表。表8  UE Specific DRX for NB-IoT功能的各网元作用网元名称网元作用UE附着以及发起TAU请求时，携带UE支持的UE Specific DRX for NB-IoT参数，同时接受并使用MME下发的UE Specific DRX for NB-IoT节电参数。终端使用此参数策略计算接收寻呼的时机。MME在UE发起请求使用UE Specific DRX for NB-IoT时，为UE授权协商UE Specific DRX for NB-IoT节电参数，并监控UE节电状态。eNBMME发起寻呼时，携带UE Specific DRX for NB-IoT，eNodeB支持使用UE Specific DRX和小区的DRX参数比较取最小值，用于实际寻呼资源分配。 
-本网元实现 MME提供了灵活的节电策略，支持从多维度区分不同应用场景配置节电策略，并提供丰富的操作维护工具进行节电状态观察。 
+本网元实现 :MME提供了灵活的节电策略，支持从多维度区分不同应用场景配置节电策略，并提供丰富的操作维护工具进行节电状态观察。 
 节电策略模板
 节电特性涉及PSM、eDRX及HLCom，这三个功能互相存在关联，在使用时需要同时考虑，因此，在节电模板设置时进行了统一规划，包含四部分内容： 
 公共部分：例如策略名称、PSM&eDRX互操作策略等。 
@@ -1084,22 +1084,22 @@ SGW扩展缓存报文数推荐方式|HLCom|建议缓存报文数推荐策略，�
 包括： 
 节电相关用户数统计。 
 指定用户的节电相关签约参数、运行参数查看。 
-业务流程 PSM节电原理
+业务流程 :PSM节电原理
 PSM节电技术的流程如下图所示。 
 图7  PSM节电技术
-[]images/1591692180473.png)
+
 在附着或TAU流程中UE和MME协商活跃定时器及周期性更新定时器时长，将UE进入IDLE态后时间分为两段：第一段为寻呼可达的活跃时间，第二段为剩余时间终端处于寻呼临时不可达的节电状态。
 eDRX节电原理
 eDRX节电技术的流程图如下图所示。 
 图8  eDRX节电技术
-[]images/1591692180593.png)
+
 在现有DRX技术上进行扩展，通过大幅扩展休眠周期（从秒级到分钟、数十分钟甚至小时）达到节电目的。
 和PSM类似，在Attach/TAU流程中UE和MME协商eDRX
 Cycle和PTW时，UE进入IDLE态后的时间以eDRX Cycle为周期分割为若干时间段，在每一个eDRX Cycle周期内又分为两段：第一段为寻呼可达的PTW时长，第二段为剩余时间终端处于寻呼临时不可达的节电状态。
 附着或TAU过程中的节电参数协商
 节电参数协商流程如下图所示。 
 图9  节电参数协商流程
-[]images/1591692181374.png)
+
 流程说明： 
 UE在Attach Request或者TAU Request消息中携带PSM及（或）eDRX参数，请求使用节电功能。 
 如果签约了周期性TAU时长，在MME与HSS间位置更新或插入签约数据时，则会下发给MME。 
@@ -1109,7 +1109,7 @@ UE激活MME下发的节电参数。
 节电状态下的高时延通信
 高时延通信处理流程如下图所示。 
 图10  节电状态下的高时延通信流程
-[]images/1591692181884.png)
+
 流程说明： 
 MME收到SGW的DDN消息，该UE处于节电状态。
 MME为该UE启用高时延通信：MME获取高时延通信策略，结合MME本地配置参数及HSS签约参数，协商出高时延通信参数（最大缓存时间及可选的最大缓存报文数），并通过DDN
@@ -1122,7 +1122,7 @@ SGW检测到用户面承载恢复后立即下发缓存的下行数据包（一�
 WUS节电原理
 WUS处理流程如下图所示。 
 图11  WUS处理流程
-[]images/1613641401675.png)
+
 流程说明： 
 如果UE由于“跨RAT TAU”或“UE无线能力更新”执行Attach过程或Tracking Area Update过程，MME向eNodeB发送Initial
 Context Setup Request或UE Radio Capability Match Request消息时，则MME不携带任何UE无线能力信息。 
@@ -1135,18 +1135,18 @@ eNB在步骤2和步骤3中获取到UE请求无线能力后，则eNB通过UE Capa
 当UE释放S1连接进入空闲态， 后续MME触发寻呼时，寻呼消息中携带UE寻呼无线能力信息，信息中包含WUS-Support指示。 
 eNB收到寻呼消息后，触发WUS信号发送。UE检测到WUS信号后，启动在MPDCCH或NPDCCH上侦听寻呼消息。 
 UE Specific DRX for NB-IoT节电处理流程
-[]images/1621236516145.png)流程说明： 
+流程说明： 
 UE发起附着/TAU请求，请求消息中携带DRX parameter in NB-S1 mode参数。 
 MME在发送附着接受响应前进行NB DRX协商，根据UE携带的DRX parameter in NB-S1 mode参数和本地策略进行协商。 
 MME在附着接受响应中将Negotiated DRX parameter in NB-S1 mode参数携带给UE，UE使用此参数控制设置DRX Cycle周期，进行节电控制。 
 当UE释放S1连接进入空闲态， 后续MME触发寻呼时，寻呼消息中携带NB-IoT Paging DRX参数信息。 
 MME向eNodeB下发寻呼消息。 
 eNB收到寻呼消息后，使用NB-IoT Paging DRX和小区的DRX参数比较取最小值用于实际寻呼资源分配，终端采用同样的策略计算接收寻呼的时机。缩短寻呼时延，降低终端功耗。 
-系统影响 启用节电功能，对系统性能无影响。 
-应用限制 节电策略必须由UE触发PSM或eDRX由UE请求，MME授权协商；如果UE未请求，则MME不能为该UE授权节电功能。 
+系统影响 :启用节电功能，对系统性能无影响。 
+应用限制 :节电策略必须由UE触发PSM或eDRX由UE请求，MME授权协商；如果UE未请求，则MME不能为该UE授权节电功能。 
 存在时延敏感应用的终端不能主动请求节电功能节电状态下终端寻呼临时不可达，需要在终端退出节电状态才能寻呼，导致MT业务高时延。对于存在时延敏感类应用（比如，语音）的终端不能主动请求使用节电功能，否则会导致应用延时严重，甚至失败，将严重影响业务体验。 
-特性交互 无。 
-遵循标准 协议|章节
+特性交互 :无。 
+遵循标准 :协议|章节
 ---|---
 3GPP TS23.682: " Architecture enhancements to facilitate communications withpacket data networks and applications "|4.5.4 UE Power Saving Mode4.5.7 High latency communication4.5.13 Extended idle mode DRX
 3GPP TS23.401: "General Packet Radio Service (GPRS) enhancements for EvolvedUniversal Terrestrial Radio Access Network (E-UTRAN) access"|4.3.17.7 High latency communication4.3.22 UE Power Saving Mode5.3.2.1 E-UTRAN Initial Attach5.3.3.1 Tracking Area Update procedure with Serving GW change5.3.3.2 E-UTRAN Tracking Area Update without S GW Change5.3.4.1 UE triggered Service Request5.3.4.3 Network Triggered Service Request5.3.4B.3 Mobile Terminated Data Transport in Control PlaneCIoT EPS optimisation with P-GW connectivity5.3.5A Connection Resume procedure5.3.9.2 Insert Subscriber Data procedure5.4.1 Dedicated bearer activation5.4.2.1 PDN GW initiated bearer modification with bearer QoSupdate5.4.3 PDN GW initiated bearer modification without bearer QoSupdate5.7.2 MME5.10.2 UE requested PDN connectivity5.13a Extended Idle mode Discontinuous Reception (DRX)D.3.5 Routing Area UpdateD.3.6 Gn/Gp SGSN to MME Tracking Area Update
@@ -1155,20 +1155,20 @@ eNB收到寻呼消息后，使用NB-IoT Paging DRX和小区的DRX参数比较取
 3GPP TS29.272: “Mobility Management Entity (MME) and Serving GPRS SupportNode (SGSN) related interfaces based on Diameter protocol”|5.2.1 Location Management Procedures5.2.2.1 Insert Subscriber Data5.2.2.2 Delete Subscriber Data
 3GPP TS36.304:|7.3 Pagingin extended DRX
 3GPP TS36.413: "Evolved Universal Terrestrial Access Network (E-UTRAN); S1Application Protocol (S1AP)"|8.5 Paging8.7.3 S1 Setup8.7.4 eNB Configuration Update
-特性能力 规格名称|规格指标
+特性能力 :规格名称|规格指标
 ---|---
 MME支持节电策略条目数（条）|4096
-可获得性 License要求 该特性对应License文件中的包括： 
+可获得性 :License要求 :该特性对应License文件中的包括： 
 MME支持PSM节电功能 
 MME支持eDRX节电功能 
 MME支持物联网寻呼增强功能 
 MME支持策略寻呼功能 
 需要申请了License许可后，运营商才能获得该特性的服务。 
-对其他网元的要求 PSM由MME、UE、HSS配合完成。 
+对其他网元的要求 :PSM由MME、UE、HSS配合完成。 
 eDRX由MME、eNB、UE配合完成。 
 HLCom由SGW、MME、HSS配合完成。 
-工程规划要求 节电策略可根据应用类型灵活设置，对工程规划无特殊要求。 
-O&M相关 命令 新增命令配置项参见[表10](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_OM%E7%9B%B8%E5%85%B3-BD6D6545__%E6%96%B0%E5%A2%9E%E9%85%8D%E7%BD%AE%E9%A1%B9-24E0BB59)。
+工程规划要求 :节电策略可根据应用类型灵活设置，对工程规划无特殊要求。 
+O&M相关 :命令 :新增命令配置项参见[表10]。
 配置项|命令
 ---|---
 物联网业务配置|SET MME IOT CFG
@@ -1194,7 +1194,7 @@ ADD NBDRX IMSISEG POLICY|NB DRX策略配置
 SET NBDRX IMSISEG POLICY|NB DRX策略配置
 DEL NBDRX IMSISEG POLICY|NB DRX策略配置
 SHOW NBDRX IMSISEG POLICY|NB DRX策略配置
-性能统计 新增性能计数器参见[表11](1591692178133.html#ZUF-78-17-004%E6%94%AF%E6%8C%81%E8%8A%82%E7%94%B5_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_OM%E7%9B%B8%E5%85%B3-BD6D6545__%E6%96%B0%E5%A2%9E%E6%80%A7%E8%83%BD%E8%AE%A1%E6%95%B0%E5%99%A8-CB505190)。
+性能统计 :新增性能计数器参见[表11]。
 性能计数器名称
 ---
 C431000022 已激活PSM平均用户数
@@ -1207,26 +1207,26 @@ C431000028 eDRX节电状态平均用户数
 C431000029 eDRX节电状态最大用户数
 C431000030 在SGW存有下行缓存的平均用户数
 C431000031 在SGW存有下行缓存的最大用户数
-特性配置 特性配置 配置说明 MME提供了灵活的节电策略配置，运营商可以根据自身物联网业务状况，支持从多维度区分不同应用场景，根据APN及IMSI号段等策略因子自定义特定的节电策略。
-配置前提 MME license需要支持“MME支持PSM节电功能”、“MME支持eDRX节电功能”、“MME支持物联网寻呼增强功能”和“MME支持策略寻呼功能”。
-配置过程 MME仅使用默认节电策略时，配置过程如下：
-通过[SET MME IOT CFG](../../MMESGSN\zh-CN\mml\1260333.html)命令，配置支持PSM、eDRX和HLCom功能。
-通过[SET DEFAULT POWERSAVE POLICY](../../MMESGSN\zh-CN\mml\1260380.html)命令，配置缺省节电策略。
+特性配置 :特性配置 :配置说明 :MME提供了灵活的节电策略配置，运营商可以根据自身物联网业务状况，支持从多维度区分不同应用场景，根据APN及IMSI号段等策略因子自定义特定的节电策略。
+配置前提 :MME license需要支持“MME支持PSM节电功能”、“MME支持eDRX节电功能”、“MME支持物联网寻呼增强功能”和“MME支持策略寻呼功能”。
+配置过程 :MME仅使用默认节电策略时，配置过程如下：
+通过[SET MME IOT CFG]命令，配置支持PSM、eDRX和HLCom功能。
+通过[SET DEFAULT POWERSAVE POLICY]命令，配置缺省节电策略。
 MME基于APN使用节电策略时，配置过程如下：
-通过[SET MME IOT CFG](../../MMESGSN\zh-CN\mml\1260333.html)命令，配置支持PSM、eDRX和HLCom功能。
-通过[ADD POWERSAVE POLICY](../../MMESGSN\zh-CN\mml\1260383.html)命令，配置节电策略模板。
-通过[ADD POWERSAVE POLICY FACTOR](../../MMESGSN\zh-CN\mml\1260388.html)命令，配置节电策略因子。
+通过[SET MME IOT CFG]命令，配置支持PSM、eDRX和HLCom功能。
+通过[ADD POWERSAVE POLICY]命令，配置节电策略模板。
+通过[ADD POWERSAVE POLICY FACTOR]命令，配置节电策略因子。
 MME基于IMSI使用节电策略时，配置过程如下：
-通过[SET MME IOT CFG](../../MMESGSN\zh-CN\mml\1260333.html)命令，配置支持PSM、eDRX和HLCom功能。
-通过[ADD POWERSAVE POLICY](../../MMESGSN\zh-CN\mml\1260383.html)命令，配置节电策略模板。
-通过[ADD POWERSAVE POLICY FACTOR](../../MMESGSN\zh-CN\mml\1260388.html)命令，配置节电策略因子。
-通过[ADD MDNAL](../../MMESGSN\zh-CN\mml\1261015.html)命令，配置IMSI号码分析。
+通过[SET MME IOT CFG]命令，配置支持PSM、eDRX和HLCom功能。
+通过[ADD POWERSAVE POLICY]命令，配置节电策略模板。
+通过[ADD POWERSAVE POLICY FACTOR]命令，配置节电策略因子。
+通过[ADD MDNAL]命令，配置IMSI号码分析。
 MME仅使用默认NB DRX策略时，配置过程如下： 
-通过[SET DEFAULT NBDRX POLICY](../../MMESGSN\zh-CN\mml\1269726.html)命令，配置支持NB DRX功能、缺省NB specific DRX策略配置。
+通过[SET DEFAULT NBDRX POLICY]命令，配置支持NB DRX功能、缺省NB specific DRX策略配置。
 MME基于号段的NB DRX策略时，配置过程如下： 
-通过[SET DEFAULT NBDRX POLICY](../../MMESGSN\zh-CN\mml\1269726.html)命令，配置支持NB DRX功能、缺省NB specific DRX策略配置。
-通过[ADD NBDRX IMSISEG POLICY](../../MMESGSN\zh-CN\mml\1269729.html)命令，配置基于号段的NB specific DRX策略配置。
-配置实例 ##### 配置使用PSM节电策略 
+通过[SET DEFAULT NBDRX POLICY]命令，配置支持NB DRX功能、缺省NB specific DRX策略配置。
+通过[ADD NBDRX IMSISEG POLICY]命令，配置基于号段的NB specific DRX策略配置。
+配置实例 :##### 配置使用PSM节电策略 
 运营商对于使用长通信间隔周期的物联网应用的终端，基于APN策略因子，配置使用PSM节电策略，活跃定时器时长和周期性TAU时长以本地配置的优先。如果终端同时请求了PSM和eDRX，则仅使用PSM策略。在UE非活跃时间，使用高时延通信功能，保证数据的可靠传输。
 配置过程如下： 
 步骤|命令|说明
@@ -1250,7 +1250,7 @@ Cycle以本地配置的优先。如果终端同时请求了PSM和eDRX，则仅�
 ---|---|---
 1|SET DEFAULT NBDRX POLICY:NBDRXSWITCH="YES",NBDRXPERIOD="P32",NBDRXPOLICY="UE"|打开NB DRX功能，配置缺省NB-IoT UE Specific DRX周期值、缺省NB UE Specific DRX的协商策略。
 2|ADD NBDRX IMSISEG POLICY:IMSI="46011",NBDRXPERIOD="P32",NBDRXPOLICY="UE"|配置基于号段的NB-IoT UE Specific DRX周期值、基于号段的NB UE Specific DRX的协商策略。
-测试用例 ##### MME支持附着过程PSM参数协商 
+测试用例 :##### MME支持附着过程PSM参数协商 
 测试项目|MME支持附着过程PSM参数协商
 ---|---
 测试目的|测试MME支持附着过程PSM参数协商
@@ -1289,27 +1289,27 @@ Cycle以本地配置的优先。如果终端同时请求了PSM和eDRX，则仅�
 测试过程|UE发起附着，携带PTW参数，HSS签约PTW。
 通过准则|Attach Accept消息中下发PTW参数，值为签约PTW。
 测试结果|–
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-007 低移动性 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 低移动性|移动性是指设备的物理位置发生改变的频度。物联网设备种类繁多，从设备的移动性角度进行分类，可以分为三类：低移动性的设备、一般移动性的设备和高移动性设备。比如各种定点探测设备、家庭电器设备等可归为低移动性设备。
-描述 定义 MME支持对低移动性的物联网设备进行接入优化的功能。 
+描述 :定义 :MME支持对低移动性的物联网设备进行接入优化的功能。 
 低移动性接入优化是指为了减少海量接入的物联网设备对网络的信令负荷能力造成冲击，通过采用缩小设备的寻呼范围、减少对设备移动性管理操作等措施，提高移动网络的接入能力。 
 MME可以为低移动性的物联网设备制定不同TA List分配策略、寻呼策略、周期性TAU时长以及移动性限制策略，为网络资源的合理利用、终端节电和海量接入提供支撑。
-背景知识 NB-IoT设备的类型
-NB-IoT设备的类型参见[表1](1591692185795.html#T_2017510842494__NB-IoT%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B%E6%95%B0%E6%8D%AE%E4%B8%8A%E6%8A%A5%E5%91%A8%E6%9C%9F%E8%87%AA%E4%B8%BB%E5%BC%82%E5%B8%B8%E6%8A%A5%E5%91%8A%E4%B8%9A%E5%8A%A1%E7%B1%BB%E5%9E%8B%E5%A6%82%E7%83%9F-77CC9C03)。
+背景知识 :NB-IoT设备的类型
+NB-IoT设备的类型参见[表1]。
 类型|应用举例|数据量|数据上报周期
 ---|---|---|---
 自主异常报告业务类型|烟雾报警探测器、智能电表停电的通知等。|上行数据数据量极小（数十字节量级）|多以年、月为单位
 自主周期报告业务类型|智能公用事业（煤气/水/电）测量报告、智能农业、智能环境等。|上行数据量较小（数百字节量级）|多以天、小时为单位
 网络指令业务类型|设备（开启/关闭）时发送上行报告、请求抄表等。|下行数据量极小（数十字节量级）|多以天、小时为单位
 软件更新业务类型|软件补丁/更新等。|上行/下行数据量较大（数千字节量级）|多以半年为单位
-从[表1](1591692185795.html#T_2017510842494__NB-IoT%E8%AE%BE%E5%A4%87%E7%9A%84%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B%E5%BA%94%E7%94%A8%E4%B8%BE%E4%BE%8B%E6%95%B0%E6%8D%AE%E4%B8%8A%E6%8A%A5%E5%91%A8%E6%9C%9F%E8%87%AA%E4%B8%BB%E5%BC%82%E5%B8%B8%E6%8A%A5%E5%91%8A%E4%B8%9A%E5%8A%A1%E7%B1%BB%E5%9E%8B%E5%A6%82%E7%83%9F-77CC9C03)中可以看出NB-IoT设备基本上是低移动性的设备。
+从[表1]中可以看出NB-IoT设备基本上是低移动性的设备。
 NB-IoT的移动性管理
 NB-IoT的终端个数是海量接入，在使用同一基站接入的情况下，NB-IoT可以比现有的无线接入技术提供更多的接入个数，接入个数可以达到现有接入个数的50~100倍，一个扇区能够支持5万个连接。 
 在海量接入的情况下，如果MME使用和人网一样的移动性管理功能，系统会频繁地进行周期性握手，大范围寻呼等操作，对网络资源消耗很大，需要大量的网络设备，导致运营成本升高。同时NB-IoT终端也会因为移动性管理功能的复杂而增加成本。 
-应用场景 ##### 通讯间隔长 
+应用场景 :##### 通讯间隔长 
 场景描述
 自主异常报告业务类型的NB-IoT设备，如烟雾报警探测器、智能电表停电的通知等，对于上行数据数据量的需求极小（一般为数十字节量级），数据上报周期多以年、月为单位。 
 场景分析
@@ -1325,33 +1325,33 @@ MME也可以通过在本地根据终端设备的号码段配置不同的周期�
 此类终端物理位置通常不会移动，且基本处于通讯休眠状态，网络侧下发指令时需要寻呼终端，通常情况下的寻呼范围一般是TA或TA
 List，寻呼范围比较大，如果使用普通的寻呼策略对这类终端进行寻呼，则对无线网络资源浪费较大，且实际情况中通常会同时对同一类设备触发操作，瞬时寻呼量会非常大，所以需要考虑寻呼范围的合理性，以提升网络的接入能力。 
 解决方法
-缩小寻呼范围，缩小寻呼范围的策略如[图1](1591692185795.html#T_2017510842495__%E7%B2%BE%E5%87%86%E5%AF%BB%E5%91%BC-77EFA2CF)所示。
+缩小寻呼范围，缩小寻呼范围的策略如[图1]所示。
 图1  精准寻呼
-[]images/1591692186295.png)
+
 优化NB-IoT用户的TA List分配策略。TA List中只分配当前的TA，这样即使是按照TA Lsit寻呼，寻呼范围也比较小。 
 单独配置NB-IoT用户的寻呼策略。设置一个比较小的寻呼范围。 
 对NB-IoT用户只寻呼终端在最后信令中携带的eNodeB和CELL范围。MME发送给eNodeB的寻呼消息中携带小区信息。 
-客户收益 收益者|收益描述
+客户收益 :收益者|收益描述
 ---|---
 运营商|节约成本：相同的投入成本下，系统可以容纳更多的终端接入。
 终端用户|入网门槛低：简化移动性处理可以降低NB-IoT芯片复杂度，从而降低芯片成本。减少电量消耗，使终端电池使用时间更长。
-实现原理 系统架构 3GPP定义的NB-IoT网络架构如下图所示。 
+实现原理 :系统架构 :3GPP定义的NB-IoT网络架构如下图所示。 
 图2  NB-IoT网络架构
-[]images/1591692186716.png)
+
 该架构是对EPS网络架构的优化，其特点是：简单、轻量化，去除了不必要的网络功能（例如：不支持动态PCC等），虽然从架构上C-SGN将原有的MME、SGW、PGW的功能进行了简化和整合，但实际上除了SGi口外，其他主要接口都是MME的接口，所以C-SGN的主要优化也是在MME实现，其优化主要体现在数据传输方面。
-涉及的网元 低移动性设备接入优化功能需要NB-IoT终端、MME、eNodeB和HSS共同完成，各网元作用参见下表。 
+涉及的网元 :低移动性设备接入优化功能需要NB-IoT终端、MME、eNodeB和HSS共同完成，各网元作用参见下表。 
 网元名称|网元作用
 ---|---
 MME|支持接受HSS下发的周期性TAU时长，并下发给UE。支持根据IMSI本地控制周期性TAU时长。支持NB-IoT设备的TA List分配功能。支持NB-IoT设备的寻呼优化，包括接受UE的历史eNodeB和小区信息，并在寻呼消息中带给eNodeB。支持小区等位置信息上报
 eNodeB|支持小区寻呼和小区位置上报。
 NB-IoT终端|支持扩展周期性TAU时长，支持记录历史小区和eNodeB信息并在信令中带给MME。
 HSS|支持周期性TAU时长的签约。
-本网元实现 MME保存并下发UE签约的周期性TAU时长，并可以根据本地策略进行控制；MME对NB-IoT终端采用不同的TAList分配策略，对NB-IoT终端采用不同的寻呼策略控制。 
-业务流程 Attach/TAU过程中的周期性TAU时长控制和TA
+本网元实现 :MME保存并下发UE签约的周期性TAU时长，并可以根据本地策略进行控制；MME对NB-IoT终端采用不同的TAList分配策略，对NB-IoT终端采用不同的寻呼策略控制。 
+业务流程 :Attach/TAU过程中的周期性TAU时长控制和TA
 List分配流程
 周期性TAU时长控制和TAList分配流程如下图所示。 
 图3  业务流程
-[]images/1591692186836.png)
+
 UE在发送给MME的Attach Request或者TAU Request消息中携带支持扩展TAU时长。 
 （可选）如果NB-IoT终端在HSS上签约了周期性TAU时长，在位置更新或插入签约数据时，则HSS会将周期性TAU时长在Update
 Location Answer消息中下发给MME。 
@@ -1360,58 +1360,58 @@ List分配策略进行TA List分配，并通过Attach Accept或者TAU Accept消�
 寻呼策略选择流程
 寻呼策略选择流程如下图所示。 
 图4  寻呼策略选择流程
-[]images/1591692186956.png)
+
 UE在RRC（Radio Resource Control）释放消息中将记录的历史eNodeB和CELL信息发送给eNodeB。 
 eNodeB在UE CONTEXT RELEASE COMPLETE消息中将这些数据发送给MME，MME保存以供后续寻呼NB-IoT设备时使用。 
 MME收到下行数据通知，发现UE处于IDLE状态，需要寻呼UE，MME判断UE为NB-IoT设备，则根据IMSI号码获得NB-IoT设备的寻呼策略，在之前记录的历史eNodeB和CELL范围时进行寻呼。 
 eNodeB收到MME下发的寻呼请求消息，在推荐的小区范围内进行寻呼。 
-系统影响 启用低移动性设备接入优化功能可以提高系统的性能。 
-应用限制 该特性不涉及应用限制。 
-特性交互 本功能的周期性TAU时长控制部分与节电功能有交互，当终端指定启用节电功能时，则按照节电特性的原则来分配周期性TAU时长。 
-遵循标准 标准类别|标准名称|章节
+系统影响 :启用低移动性设备接入优化功能可以提高系统的性能。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :本功能的周期性TAU时长控制部分与节电功能有交互，当终端指定启用节电功能时，则按照节电特性的原则来分配周期性TAU时长。 
+遵循标准 :标准类别|标准名称|章节
 ---|---|---
 3GPP|3GPP TS 22.368 Service requirements for Machine-Type Communications(MTC)|7.2.1 Low Mobility
 3GPP TS 22.891 Feasibility Study on New Services and MarketsTechnology Enablers|3GPP|5.4.2 Low mobility devices
 3GPP TS 23.401|3GPP|4.3.17 Support for Machine Type Communications (MTC)
 3GPP TS 23.720|3GPP|5.4 Key Issue 4 - Support of efficient Paging area managementfor Cellular IoT
 3GPP TS 23.888|3GPP|5.6 Key Issue - Low Mobility
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 需要申请以下License许可后，运营商才能获得该特性的服务。 
+License要求 :需要申请以下License许可后，运营商才能获得该特性的服务。 
 7102 MME支持低移动性功能 
 7094 MME支持物联网寻呼增强功能 
-对其他网元的要求 UE|MME|eNodeB|SGW|HSS|SCEF
+对其他网元的要求 :UE|MME|eNodeB|SGW|HSS|SCEF
 ---|---|---|---|---|---
 -|√|√|√|√|-
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-O&M相关 命令 配置项表3  新增配置项配置项命令低移动性识别及控制策略SET LOWMOBILITY POLICY周期性TAU优化策略SET IMSI PERIODICTAU POLICYMME全局寻呼策略配置SET MME GLOBAL NBIOT PAGING POLICYMME寻呼策略配置SET MME NBIOT PAGING POLICYMME寻呼策略因子配置SET MME PAGING POLICY FACTOR物联网业务配置SET MME IOT CFG 
+O&M相关 :命令 :配置项表3  新增配置项配置项命令低移动性识别及控制策略SET LOWMOBILITY POLICY周期性TAU优化策略SET IMSI PERIODICTAU POLICYMME全局寻呼策略配置SET MME GLOBAL NBIOT PAGING POLICYMME寻呼策略配置SET MME NBIOT PAGING POLICYMME寻呼策略因子配置SET MME PAGING POLICY FACTOR物联网业务配置SET MME IOT CFG 
 安全变量该特性不涉及安全变量的变化。 
 定时器该特性不涉及定时器的变化。 
 软参该特性不涉及软参的变化。 
 动态管理该特性不涉及动态管理的变化。 
-性能统计 该特性不涉及计数器的变化。 
-告警和通知 该特性不涉及告警和通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 根据NB-IoT终端低移动性的特点，配置更长的周期性TAU时长，可以节省无线网络和核心网络资源，节省终端寿命。 
+性能统计 :该特性不涉及计数器的变化。 
+告警和通知 :该特性不涉及告警和通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :根据NB-IoT终端低移动性的特点，配置更长的周期性TAU时长，可以节省无线网络和核心网络资源，节省终端寿命。 
 终端通讯休眠态时网络侧下发寻呼消息，通过配置缩小寻呼范围，减小寻呼量，可以节省无线网络资源，减小对网络的冲击，提升网络的接入能力。 
-配置前提 确认相关的license已经开启。 
+配置前提 :确认相关的license已经开启。 
 7102 MME支持低移动性功能 
 7094 MME支持物联网寻呼增强功能 
-配置过程 ##### 使用终端签约的TAU时长的配置过程 
+配置过程 :##### 使用终端签约的TAU时长的配置过程 
 通过[SET LOWMOBILITY
-POLICY](../../MMESGSN\zh-CN\mml\1260872.html)命令，将参数默认周期性TAU时长控制策略设置为HSS签约（HSS）。
+POLICY]命令，将参数默认周期性TAU时长控制策略设置为HSS签约（HSS）。
 终端的签约周期性TAU时长要大于2秒。 
 ##### 根据号段配置不同的周期性TAU时长的配置过程 
-通过[SET MME IOT CFG](../../MMESGSN\zh-CN\mml\1260333.html)命令，将参数低移动性识别开关设置为识别（YES）。
-通过[ADD IMSI PERIODICTAU POLICY](../../MMESGSN\zh-CN\mml\1260875.html)命令中，配置IMSI号段的周期性TAU时长策略优先级和本地周期性TAU时长。
+通过[SET MME IOT CFG]命令，将参数低移动性识别开关设置为识别（YES）。
+通过[ADD IMSI PERIODICTAU POLICY]命令中，配置IMSI号段的周期性TAU时长策略优先级和本地周期性TAU时长。
 ##### 缩小寻呼范围的配置过程 
 通过[SET MME GLOBAL NBIOT
-PAGING POLICY](../../MMESGSN\zh-CN\mml\1260325.html)命令，配置NB-IoT寻呼策略。
-配置实例 ##### 实例1 
+PAGING POLICY]命令，配置NB-IoT寻呼策略。
+配置实例 :##### 实例1 
 场景说明
 通讯间隔长：根据HSS签约配置周期性TAU时长。 
 配置步骤
@@ -1437,7 +1437,7 @@ PAGING POLICY](../../MMESGSN\zh-CN\mml\1260325.html)命令，配置NB-IoT寻呼�
 通过SET MME GLOBAL NBIOT PAGING POLICY命令，将参数携带寻呼推荐小区信息设置为携带。|SET MME GLOBAL NBIOT PAGING POLICY:PAGECELL="YES";
 
 
-测试用例 
+测试用例 :
 
 
 
@@ -1452,10 +1452,10 @@ PAGING POLICY](../../MMESGSN\zh-CN\mml\1260325.html)命令，配置NB-IoT寻呼�
 
 
 # ZUF-78-17-008 深度覆盖 
-特性描述 特性描述 术语 无 
-描述 定义 ZXUN uMAC-MME支持深度覆盖特性，通过对深度覆盖场景下的NB-IoT终端进行寻呼优化，保证系统使用尽可能少的资源尽快寻呼到NB-IoT终端，从而提升无线资源利用效率。
+特性描述 :特性描述 :术语 :无 
+描述 :定义 :ZXUN uMAC-MME支持深度覆盖特性，通过对深度覆盖场景下的NB-IoT终端进行寻呼优化，保证系统使用尽可能少的资源尽快寻呼到NB-IoT终端，从而提升无线资源利用效率。
 NB-IoT终端由于自身特点需面对复杂环境下信号覆盖差异的问题，ZXUN uMAC-MME结合NB-IoT无线系统通过深度覆盖功能，可以保证地下车库、地下室、地下管道等信号难以到达的地方能够被信号覆盖。
-背景知识 现有寻呼技术在NB-IoT中面临的挑战
+背景知识 :现有寻呼技术在NB-IoT中面临的挑战
 不同于人类聚居于城市、乡镇等相似的环境下，物联网应用形式多种多样，并且其终端所处环境的信号覆盖强弱也千差万别。典型的信号覆盖弱的物联网应用场景如下： 
 寻呼是移动网络中网络侧触发联系终端的主要手段，对于人网（2/3/4G网络）而言，由于人类所处位置的相似性，可根据地理位置（比如与基站的远近）采用相似的信号强度进行寻呼。但对于物联网，相同区域不同位置下信号覆盖是千变万化的，如果仍采用人网类似的寻呼策略，对于深度覆盖下的物联网终端，极容易寻呼失败，影响业务开展。 
 因此，NB-IoT无线系统在设计时提升了功率频谱密度，NB-IoT比LTE提升20dB增益，即覆盖能力提升100倍，很好实现广域覆盖，就算在地下车库、地下室、地下管道等信号难以到达的地方也能覆盖到。 
@@ -1464,18 +1464,18 @@ Expenditure，资本性支出）投入。因此，需要找到一种方法，既
 深度覆盖场景下的寻呼优化技术
 考虑到深度覆盖场景下NB-IoT终端具备低移动或静止不动的特征，寻呼时可精准控制寻呼范围到小区级别，这样可在整个系统范围内节约无线资源。 
 考虑到深度覆盖场景下NB-IoT终端位置的不同，其覆盖增强级别有差异，可针对不同终端采用不同的覆盖增强策略，这样可以保证每个终端都是采用最优的方式使用无线资源，从而降低整体的无线资源消耗。 
-应用场景 深覆盖特性主要适用于对地下车库、地下室、地下管道等信号难以到达之处的NB-IoT终端进行无线信号覆盖增强。典型应用场景有： 
+应用场景 :深覆盖特性主要适用于对地下车库、地下室、地下管道等信号难以到达之处的NB-IoT终端进行无线信号覆盖增强。典型应用场景有： 
 智能停车中的地磁感应  
 部署在地下管道内的水/电/气表  
 分布在人烟稀少地带的环境监测设备  
 分布在城市道路/小区中智能井盖  
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|通过深度覆盖增强，运营商能获得如下收益：节约投资成本：扩大基站覆盖范围，减少投资及运维成本。提升客户满意度：通过覆盖增强实现广域覆盖，就算在地下车库、地下室、地下管道等信号难以到达的地方也能覆盖到。
 物联网终端用户|降低成本：客户只需要部署支持覆盖增强的物联网终端就可接入网络，避免在高投资区域（比如，地下室、隧道灯）额外部署网络。享受定制的网络服务。
-实现原理 ##### 系统构架 
+实现原理 :##### 系统构架 
 深度覆盖特性利用现有网元消息接口，通过新增覆盖增强级别参数来完成深度覆盖下的寻呼优化，对系统架构无改变。
-涉及的网元 深度覆盖特性需要MME、eNB和UE共同完成。 
+涉及的网元 :深度覆盖特性需要MME、eNB和UE共同完成。 
 网元名称|网元作用
 ---|---
 CIoT UE|物联网终端，用NAS PDU发送和接收小包数据IP Data、Non-IP Data或短消息，并携带S1释放辅助信息。
@@ -1483,8 +1483,8 @@ E-UTRAN|支持NB-IoT终端接入，传递NAS PDU。通过S1-U面传输小包数�
 MME|存储NB-IoT终端最近使用的覆盖增强级别。寻呼时携带覆盖增强。
 eNodeB|基于覆盖增强级别实施寻呼。
 UE|向网络侧提供当前使用的覆盖增强级别。
-协议栈 无 
-本网元实现 描述
+协议栈 :无 
+本网元实现 :描述
 MME负责保存eNodeB在S1释放消息中携带的覆盖增强级别CE
 Level及历史位置信息，寻呼时基于这些信息进行寻呼优化。 
 根据深度覆盖场景下NB-IoT终端的普遍特征（低移动性）及特定NB-IoT终端的特定位置特征（信号强弱），可从这两个维度进行寻呼优化。 
@@ -1497,7 +1497,7 @@ Level及历史位置信息，寻呼时基于这些信息进行寻呼优化。
 该场景下，由于NB-IoT终端基本不移动，如果仍沿用基于TA列表、TA、甚至eNB范围内的寻呼，存在寻呼资源的极大浪费。可以在现有的基于eNodeB精准寻呼基础上进一步缩小寻呼范围，实施基于小区的优化寻呼，从而降低无线的寻呼资源消耗。 
 组网示意图如下图所示。 
 图1  基于小区的寻呼优化
-[]images/1591692190286.png)
+
 根据eNodeB上报信息，MME负责保存NB-IoT终端历史小区信息，并在寻呼过程中通过寻呼消息携带给eNodeB，以保证系统使用尽可能少的资源尽快寻呼到终端。 
 基于覆盖增强级别的寻呼优化
 深度覆盖场景下NB-IoT终端可能部署在楼宇、地下车库、地下室内或地下管道，其所处环境复杂，需要信号覆盖增强，但不同终端的覆盖增强级别要求不同。 
@@ -1507,13 +1507,13 @@ CE Level（Coverage Enhancement Level，覆盖增强级别），从0到2，CE Le
 Level来选择相对应的信息重发次数。 
 组网示意图如下图所示。 
 图2  基于覆盖增强的寻呼优化
-[]images/1591692190406.png)
+
 MME负责保存UE最近一次接入时使用的覆盖增强级别CE Level，并应用在寻呼过程中，尽快寻呼到终端。虽然UE在IDLE态有可能改变其覆盖增强级别，但是上一次使用的覆盖增强级别有助于尽快找到当前的级别。 
 同时，在寻呼无响应时，MME会尝试重发同时尝试调整寻呼范围，无线侧可据此调整覆盖增强级别CE Level，尽快寻呼到终端。 
-业务流程 基于小区的寻呼优化
+业务流程 :基于小区的寻呼优化
 基于小区的寻呼优化流程如下图所示。 
 图3  基于小区的寻呼优化的流程
-[]images/1591692190526.png)
+
 流程描述如下： 
 UE在RRC释放消息中将记录的历史eNodeB信息和小区信息带给给eNodeB，eNodeB在UE CONTEXT RELEASE
 COMPLETE中带给MME，MME将信息保存下来，以供后续寻呼使用。 
@@ -1523,29 +1523,29 @@ eNodeB收到寻呼请求，在推荐的小区范围内进行寻呼。
 基于覆盖增强的寻呼优化
 基于覆盖增强的寻呼优化的流程图如下图所示。 
 图4  基于覆盖增强的寻呼优化流程
-[]images/1591692190656.png)
+
 流程描述如下： 
 MME发送UE Context Release Command消息给eNodeB。 
 eNodeB发送UE Context Release Complete或者UE Context Suspend Request消息（消息中携带小区列表和对应的覆盖增强级别CE
 Level）给MME。MME保存覆盖增强级别信息。 
 MME发起寻呼。MME在寻呼消息中携带覆盖增强级别信息CE Level和寻呼尝试信息给eNodeB。 
 eNodeB以寻呼消息中的覆盖增强级别CE Level为基准，结合寻呼尝试信息微调（比如，根据当前寻呼尝试次数，按5dB->10dB->15db增大覆盖增强级别），以尽快寻呼到终端。 
-系统影响 启用深度覆盖功能，对系统性能无影响。 
-应用限制 无 
-特性交互 无 
-遵循标准 协议|章节
+系统影响 :启用深度覆盖功能，对系统性能无影响。 
+应用限制 :无 
+特性交互 :无 
+遵循标准 :协议|章节
 ---|---
 3GPP TS 23.401: "General Packet Radio Service (GPRS) enhancementsfor Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access"|4.3.27.1 Paging for Enhanced Coverage5.3.4.3 NetworkTriggered Service Request5.3.4A Connection Suspend procedure5.3.4B.3 Mobile Terminated Data Transport in Control Plane CIoTEPS optimisation with P-GW connectivity5.3.5 S1 release procedure
 3GPP TS 36.300: "Evolved Universal Terrestrial Radio Access(E-UTRA) and Evolved Universal Terrestrial Radio Access Network (E-UTRAN);Overall description; Stage 2"|23.7b Support of UEs in Enhanced Coverage23.13.2Paging optimisation for UEs in enhanced coverage
 3GPP TS 36.413: " Evolved Universal Terrestrial Radio AccessNetwork(E-UTRAN); S1 Application Protocol (S1AP)"|8.5 Paging9.2.1.103 Assistance Data for Paging9.2.1.108 Assistance Data for CE capable Ues9.2.1.109 CellIdentifier and Coverage Enhancement Level9.2.1.110 Paging AttemptInformation
-特性能力 无 
-可获得性 版本要求及变更记录 无 
+特性能力 :无 
+可获得性 :版本要求及变更记录 :无 
 ##### LICENSE要求 
 需要申请了“MME支持物联网寻呼增强功能”和“MME支持策略寻呼功能”的License许可后，运营商才能获得该特性的服务。
-对其他网元的要求 无 
-工程规划要求 无 
-O&M相关 命令 配置项
-新增配置项参见[表1](1591692189486.html#ZUF-78-17-006%E6%94%AF%E6%8C%81%E6%B7%B1%E5%BA%A6%E8%A6%86%E7%9B%96_%E7%89%B9%E6%80%A7%E6%8F%8F%E8%BF%B0_OM%E7%9B%B8%E5%85%B3-BD54DF73__%E6%96%B0%E5%A2%9E%E9%85%8D%E7%BD%AE%E9%A1%B9-9A4B5325)。
+对其他网元的要求 :无 
+工程规划要求 :无 
+O&M相关 :命令 :配置项
+新增配置项参见[表1]。
 配置项|命令
 ---|---
 MME全局寻呼策略配置|SET MME GLOBAL NBIOT PAGING POLICY
@@ -1559,21 +1559,21 @@ MME寻呼策略因子配置|ADD MME PAGING POLICY FACTOR
 无 
 动态管理
 无 
-性能统计 该特性暂不涉及性能统计。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过配置深度覆盖功能（包括基于小区的寻呼优化和基于覆盖增强的寻呼优化），能够对深度覆盖场景下的NB-IoT终端进行寻呼优化，保证系统使用尽可能少的资源尽快寻呼到NB-IoT终端。 
-配置前提 已打开“MME支持物联网寻呼增强”功能License。
-配置过程 ##### 使用基于小区的寻呼优化功能的配置过程 
-使用命令[ADD MME NBIOT PAGING POLICY](../../MMESGSN\zh-CN\mml\1260328.html)，增加NB-IoT业务寻呼策略，携带寻呼推荐小区信息设置为携带。
-使用命令[ADD MME PAGING POLICY FACTOR](../../MMESGSN\zh-CN\mml\1260704.html)，配置MME寻呼策略因子，寻呼策略类型设置为NB-IoT类型，策略编号为步骤1中设置的寻呼策略编号。
-使用命令[ADD MDNAL](../../MMESGSN\zh-CN\mml\1261015.html)，配置IMSI号码分析，分析器入口设置为IMSI寻呼策略分析，号码分析结果索引为步骤2中设置的IMSI/MSISDN号段索引。
+性能统计 :该特性暂不涉及性能统计。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过配置深度覆盖功能（包括基于小区的寻呼优化和基于覆盖增强的寻呼优化），能够对深度覆盖场景下的NB-IoT终端进行寻呼优化，保证系统使用尽可能少的资源尽快寻呼到NB-IoT终端。 
+配置前提 :已打开“MME支持物联网寻呼增强”功能License。
+配置过程 :##### 使用基于小区的寻呼优化功能的配置过程 
+使用命令[ADD MME NBIOT PAGING POLICY]，增加NB-IoT业务寻呼策略，携带寻呼推荐小区信息设置为携带。
+使用命令[ADD MME PAGING POLICY FACTOR]，配置MME寻呼策略因子，寻呼策略类型设置为NB-IoT类型，策略编号为步骤1中设置的寻呼策略编号。
+使用命令[ADD MDNAL]，配置IMSI号码分析，分析器入口设置为IMSI寻呼策略分析，号码分析结果索引为步骤2中设置的IMSI/MSISDN号段索引。
 ##### 使用覆盖增强的寻呼优化功能的配置过程 
-使用命令[ADD MME NBIOT PAGING POLICY](../../MMESGSN\zh-CN\mml\1260328.html)，增加NB-IoT业务寻呼策略，其中：携带寻呼推荐小区信息设置为携带，携带寻呼覆盖增强级别设置为携带。
-使用命令[ADD MME PAGING POLICY FACTOR](../../MMESGSN\zh-CN\mml\1260704.html)，配置MME寻呼策略因子，寻呼策略类型设置为NB-IoT，策略编号为步骤1中设置的寻呼策略编号。
-使用命令[ADD MDNAL](../../MMESGSN\zh-CN\mml\1261015.html)，配置IMSI号码分析，分析器入口设置为IMSI寻呼策略分析，号码分析结果索引为步骤2中设置的IMSI/MSISDN号段索引。
-配置实例 ##### 实例场景1–配置MME支持基于小区的寻呼优化 
+使用命令[ADD MME NBIOT PAGING POLICY]，增加NB-IoT业务寻呼策略，其中：携带寻呼推荐小区信息设置为携带，携带寻呼覆盖增强级别设置为携带。
+使用命令[ADD MME PAGING POLICY FACTOR]，配置MME寻呼策略因子，寻呼策略类型设置为NB-IoT，策略编号为步骤1中设置的寻呼策略编号。
+使用命令[ADD MDNAL]，配置IMSI号码分析，分析器入口设置为IMSI寻呼策略分析，号码分析结果索引为步骤2中设置的IMSI/MSISDN号段索引。
+配置实例 :##### 实例场景1–配置MME支持基于小区的寻呼优化 
 涉及的配置信息参见下表。 
 参数|取值|备注
 ---|---|---
@@ -1582,9 +1582,9 @@ MME寻呼策略因子配置|ADD MME PAGING POLICY FACTOR
 IMSI/MSISDN号段索引|1|即号码分析结果索引
 被分析号码|4600201|-
 配置命令如下： 
-[ADD MME NBIOT PAGING POLICY](../../MMESGSN\zh-CN\mml\1260328.html):ID=51,HISTORYENB=3,PAGECELL="YES";
-[ADD MME PAGING POLICY FACTOR](../../MMESGSN\zh-CN\mml\1260704.html):USERNUMIDX=1,PGPOLICY="NBIOT"-51;
-[ADD MDNAL](../../MMESGSN\zh-CN\mml\1261015.html):DGT="4600201",ENTR="DAS_IMSI_PGPOLICY",RST=1;
+[ADD MME NBIOT PAGING POLICY]:ID=51,HISTORYENB=3,PAGECELL="YES";
+[ADD MME PAGING POLICY FACTOR]:USERNUMIDX=1,PGPOLICY="NBIOT"-51;
+[ADD MDNAL]:DGT="4600201",ENTR="DAS_IMSI_PGPOLICY",RST=1;
 ##### 实例场景2–配置MME支持基于覆盖增强的寻呼优化 
 涉及的配置信息参见下表。 
 参数|取值|备注
@@ -1593,10 +1593,10 @@ IMSI/MSISDN号段索引|1|即号码分析结果索引
 最近一次活动eNB寻呼次数|3|-
 IMSI/MSISDN号段索引|2|即号码分析结果索引
 被分析号码|4600202|-
-[ADD MME NBIOT PAGING POLICY](../../MMESGSN\zh-CN\mml\1260328.html):ID=52,HISTORYENB=3,PAGECELL="YES",PAGECELEVEL="YES";
-[ADD MME PAGING POLICY FACTOR](../../MMESGSN\zh-CN\mml\1260704.html):USERNUMIDX=2,PGPOLICY="NBIOT"-52;
-[ADD MDNAL](../../MMESGSN\zh-CN\mml\1261015.html):DGT="4600202",ENTR="DAS_IMSI_PGPOLICY",RST=2;
-测试用例 测试项目|基于小区的寻呼优化
+[ADD MME NBIOT PAGING POLICY]:ID=52,HISTORYENB=3,PAGECELL="YES",PAGECELEVEL="YES";
+[ADD MME PAGING POLICY FACTOR]:USERNUMIDX=2,PGPOLICY="NBIOT"-52;
+[ADD MDNAL]:DGT="4600202",ENTR="DAS_IMSI_PGPOLICY",RST=2;
+测试用例 :测试项目|基于小区的寻呼优化
 ---|---
 测试功能|测试MME支持基于小区的寻呼优化
 预备条件|MME支持物联网寻呼增强功能License打开。MME配置NB-IoT业务寻呼策略，寻呼策略为eNodeB列表寻呼次数设置为2，打开“携带寻呼推荐小区信息”功能开关。MME配置寻呼策略因子，寻呼策略设置为NBIoT类型，并与上述寻呼策略相关联。MME配置IMSI号码分析，分析器入口为IMSI寻呼策略，与上面配置的寻呼策略因子相关联。
@@ -1608,50 +1608,50 @@ IMSI/MSISDN号段索引|2|即号码分析结果索引
 预备条件|MME支持物联网寻呼增强功能License打开。MME配置NB-IoT业务寻呼策略，寻呼策略为eNB列表寻呼和TA列表寻呼，寻呼次数分别为2次和3次，打开“携带寻呼推荐小区信息”和“携带寻呼覆盖增强级别”功能开关。MME配置寻呼策略因子，寻呼策略设置为NBIoT类型，并与上述寻呼策略相关联。MME配置IMSI号码分析，分析器入口为IMSI寻呼策略，与上面配置的寻呼策略因子相关联。
 测试步骤|NB-IoT用户CP模式附着。基站释放S1链接。UE context release complete中携带eNB列表、TA列表和小区列表，并含有寻呼cellid1的增强等级20dB。SGW发起DDN流程，触发MME发送寻呼消息。
 预期结果|第1次寻呼带上cellid1和寻呼等级20dB，Paging Attempt Count为1，Intended Numberof Paging Attempts为5，Next Paging Area Scope字段为same。第2次寻呼带上cellid1和寻呼等级20dB，Paging Attempt Count为2，Intended Numberof Paging Attempts为5，Next Paging Area Scope字段为change。第3次寻呼带上cellid1和寻呼等级20dB，Paging Attempt Count为3，Intended Numberof Paging Attempts为5，Next Paging Area Scope字段为same。第4次寻呼带上cellid1和寻呼等级20dB，Paging Attempt Count为4，Intended Numberof Paging Attempts为5，Next Paging Area Scope字段为same。第5次寻呼带上cellid1和寻呼等级20dB，Paging Attempt Count为5，Intended Numberof Paging Attempts为5，且无Next Paging Area Scope字段。
-常见问题处理 无 
+常见问题处理 :无 
 # ZUF-78-17-009 Non-IP EPS连接 
-特性描述 特性描述 描述 定义 Non-IP数据是物联网特有的，特定的终端和应用可能采用例如6LowPAN、MQTT-SN等非IP的协议栈。对于Non-IP数据，MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据；也可以采用轻量化的架构，使得数据传输路径更短，MME可以和SCEF、GW之间建立控制面通道传输Non-IP小包数据。
-背景知识 对于大多数NB-IoT应用，发送的数据报告频率低、字节小，一般报告在20-200个字节之间，这样UDP/IP传输层协议栈的占用字节（IPv4：28字节；IPv6：48字节）占的数据报文比例很高，尤其是在有效负荷小于20字节的情况下，报文头甚至超过了数据，所以在这种情况下UE传输Non-IP数据可以大幅提升无线网络数据传输效率。
+特性描述 :特性描述 :描述 :定义 :Non-IP数据是物联网特有的，特定的终端和应用可能采用例如6LowPAN、MQTT-SN等非IP的协议栈。对于Non-IP数据，MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据；也可以采用轻量化的架构，使得数据传输路径更短，MME可以和SCEF、GW之间建立控制面通道传输Non-IP小包数据。
+背景知识 :对于大多数NB-IoT应用，发送的数据报告频率低、字节小，一般报告在20-200个字节之间，这样UDP/IP传输层协议栈的占用字节（IPv4：28字节；IPv6：48字节）占的数据报文比例很高，尤其是在有效负荷小于20字节的情况下，报文头甚至超过了数据，所以在这种情况下UE传输Non-IP数据可以大幅提升无线网络数据传输效率。
 Non-IP数据传输有两种实现方式： 
 通过SCEF传递Non-IP数据，无需建立用户面承载，属于Non-IP专属解决方案。需新建SCEF网元节点，并且MME需要开通并支持T6a接口。 
 通过SGi进行UDP/IP封装，以隧道方式支持Non-IP小数据包传递。使用PGW功能传输IP及Non-IP数据，适用于IoT
 UE与某个单独的AS之间协商并进行隧道加密的通信场景。网络侧需要给每个IoT UE都分配1个IP地址，MME/eNB需要支持提示UE禁用IP头压缩功能。当UE想要采用Non-IP的PDN连接来发送小数据包时，发送"Non-IP"标识给网络侧。 
  说明： 
 本特导描述的是通过SGi隧道进行NON-IP的数据传输，不包括基于SCEF的Non-IP的数据传输。 
-应用场景 结合上文提到的non-IP的优势，non-IP可以实现以下内容： 
+应用场景 :结合上文提到的non-IP的优势，non-IP可以实现以下内容： 
 适用于低速率/低复杂度终端进行低复杂度、非频发的小包数据的传输场景。 
 non-IP类数据传输到PGW后，PGW通过专用隧道发往物联网平台。 
 通过SGi口接口传输non-IP数据可以使C-SGN统一数据出口， 便于未来面向NB-IoT类业务进行计费点选择和计费模式设计使用。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|使用控制面传输小包数据，MME不新增用户面进程，架构简单，部署方便。通过SGi口接口传输non-IP数据可以使C-SGN统一数据出口，便于未来面向NB-IoT类业务进行计费点选择和计费模式设计使用。
 物联网终端用户|不建立数据的无线承载，降低消耗。
-实现原理 系统架构 支持NB-IoT的优化后的EPS网络架构如下图所示。 
+实现原理 :系统架构 :支持NB-IoT的优化后的EPS网络架构如下图所示。 
 图1  支持NB-IoT的优化后的EPS网络架构图
-[]images/ZUF-78-17-009-0301.PNG)
+
 在SGi口进行Non-IP数据传输时，C-SGN和AS之间通过直传隧道进行数据传输，网络示意图如下图所示。 
 图2  C-SGN和AS之间通过直传隧道进行数据传输
-[]images/ZUF-78-17-009-0302.PNG)
-涉及的网元 网元名称|网元作用
+
+涉及的网元 :网元名称|网元作用
 ---|---
 NB-IoT UE|物联网终端，用NAS PDU发送和接收小包数据（IP Data或Non-IP Data），并携 带S1释放辅助信息。
 E-UTRAN|支持NB-IoT终端接入，传递NAS PDU。通过S1-MME接口传输小包数据。
 MME|传输上行和下行小包数据。完成S1-MME到S11-U面小包数据的转换传输。
 SAE-GW|通过S11-U面传输小包数据。
-协议栈 采用控制面优化方案时各网元的协议栈，其中Non-IP采用的是经由SGi隧道传输，如下图所示。 
+协议栈 :采用控制面优化方案时各网元的协议栈，其中Non-IP采用的是经由SGi隧道传输，如下图所示。 
 图3  协议栈
-[]images/ZUF-78-17-009-0303.PNG)
+
 该协议栈的特点： 
 S1口进行简化，不支持承载和上下文相关流程，主要支持NAS传递即可。 
 IP和非IP数据在UE和MME间，采用NAS传递。 
 与PGW的接口不变，MME和SGW之间采用GTP-U传递用户面包文。 
-本网元实现 MME主要实现： 
+本网元实现 :MME主要实现： 
 附着过程中建立PDN类型为Non-IP的SGi传输。 
 UE发起Non-IP小包数据传输。 
 MME收到下行的小包数据，将小包数据投递给UE。  
-业务流程 附着流程
+业务流程 :附着流程
 图4  附着流程
-[]images/ZUF-78-17-009-0304.PNG)
+
 UE执行附着时，就指示当前是NB-IoT接入，同时指明当前是使用的CP（控制面优化）模式。 
 MME执行鉴权和安全流程；随后用户数据的安全保障，就利用现有的安全保障机制。 
 MME执行位置更新，获取签约数据。 
@@ -1671,7 +1671,7 @@ Rejected”。
 如果老局有多个承载，则根据新局的NB-IoT支持情况，返回新局支持的EPS承载上下文；如果新局不支持Non-IP，则老局不发送Non-IP相关的承载上下文。  
 MO流程
 图5  MO流程
-[]images/ZUF-78-17-009-0305.PNG)
+
 UE发起的RRC连接建立消息中，携带有NAS PDU；NAS PDU中携带有EBI，用来标识同时携带的加密的上行数据。 
 UE携带的释放辅助信息，可以帮助MME及时完成S1释放： 
 如果携带释放信息，同时指示无需后继数据，则MME可以在上行数据传输后立即释放S1连接。 
@@ -1684,7 +1684,7 @@ S11-U建立完成，MME控制面进程在支持GTP-C协议栈的基础上，也�
 PGW通过SGi口采用隧道方式将Non-IP小数据包传递AS服务器。 
 MT流程
 图6  MT流程
-[]images/ZUF-78-17-009-0306.PNG)
+
 SGW收到下行数据报文，但发现没有S11-U承载，则缓存报文。 
 SGW发送DDN消息给MME，消息中携带有EBI和ARP。 
 当UE已注册且可达，MME发送寻呼消息给eNB。 
@@ -1697,54 +1697,54 @@ MME通过ESM Data Transport消息将数据包投递给UE。
 UE的上行数据报文通过ESM Data Transport消息发给MME。 
 MME进行完整性检查和消息解密，并MME将上行数据报文通过S11-U发送给SGW；并根据消息中的释放辅助信息决策是否需要立即释放S1连接。 
 如果MME根据释放指示的决策没有释放S1连接，且一定时间内没有NAS消息投递，则eNB发起S1释放。 
-系统影响 该特性不涉及对系统的影响。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+系统影响 :该特性不涉及对系统的影响。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.720（Study on architecture enhancements for CellularInternet of Things）|6 Solutions
 3GPP TS 23.401 （General Packet Radio Service (GPRS) enhancementsfor Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access）|4.10 Introduction of CIoT EPS Optimisations
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 需要申请了“NB-IoT注册用户数”和“NB-IoT在线用户数”的License许可后，运营商才能获得NB-IoT用户接入核心网的服务。 
+License要求 :需要申请了“NB-IoT注册用户数”和“NB-IoT在线用户数”的License许可后，运营商才能获得NB-IoT用户接入核心网的服务。 
 需要申请了“MME支持物联网小包数据控制面传输优化”的License许可后，运营商才能获得物联网小包数据控制面传输优化特性的服务。 
-对其他网元的要求 UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB（E-UTRAN）|SGW|PGW|HSS
 ---|---|---|---|---
 -|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-工程规划要求 无。 
-O&M相关 命令 命令|新增参数
+工程规划要求 :无。 
+O&M相关 :命令 :命令|新增参数
 ---|---
 SET MME IOT CFG|新增参数：支持Non-IP数据SGi口传输
 ADD SUPFEATURE|新增参数：Non-IP PDN Type APNs
 SET COMBOCFG|新增参数：MME缺省Non-IP APN
-性能统计 测量类型|计数器
+性能统计 :测量类型|计数器
 ---|---
 基于APN的承载激活流程测量|C463000098 Non-IP PDN连接请求次数
 C463000099 Non-IP PDN连接成功次数|基于APN的承载激活流程测量
-特性配置 特性配置 配置说明 MME支持Non-IP功能，UE可以建立到PGW的Non-IP类型的PDN连接，通过SGi口传输Non-IP的小包数据。 
-配置前提 对于Non-IP功能，需要： 
+特性配置 :特性配置 :配置说明 :MME支持Non-IP功能，UE可以建立到PGW的Non-IP类型的PDN连接，通过SGi口传输Non-IP的小包数据。 
+配置前提 :对于Non-IP功能，需要： 
 MME支持用户CP 模式接入 
 MME支持Non-IP功能 
 HSS支持Non-IP功能 
 License支持Non-IP 
-配置过程 MME支持用户CP 模式接入。 
+配置过程 :MME支持用户CP 模式接入。 
 Non-IP功能开关打开。 
 Support Feature支持Non-IP。 
-配置实例 ##### 实例场景 
+配置实例 :##### 实例场景 
 用户CP模式接入，MME支持Non-IP，终端请求建立Non-IP类型的PDN连接成功。 
 MME和HSS对接时候的规划如下： 
 Feature ID|Diameter局向|Diameter局向路由
 ---|---|---
 1|1|1
-配置步骤 步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|MME配置支持用户CP模式接入，Non-IP功能开关打开。|SET MME IOT CFG:CPSW="YES",SGNIPDNSW="YES";
 2|SupportFeature支持Non-IP。|ADD SUPFEATURE:FEATUREID=1,SUPFEATURE2="NIPAPN";ADD DIAMADJ:ADJID=1,ADJROUTEID=1,SUPFEATUREID=1;ADD DIAMADJROUTE:ADJROUTEID=1,ROUTEGROUP=201-1-100,REALM="zte.com.cn",SUPFEATUREID=1;
-测试用例 测试项目|附着时请求APN类型为Non-IP
+测试用例 :测试项目|附着时请求APN类型为Non-IP
 ---|---
 测试目的|附着时请求APN类型为Non-IP
 预置条件|UE NB CP模式接入。license“MME支持Non-IP数据SGi口传输”设置为支持。MME物联网功能配置中“支持Non-IP数据SGi口传输”设置为支持。HSS局向关联的support feature支持NON-IP。签约默认NON-IP APN。签约Context ID的PDN类型为Non-IP签约addi Context ID的PDN类型为Non-IP。
@@ -1752,11 +1752,11 @@ Feature ID|Diameter局向|Diameter局向路由
 通过准则|使用MME默认APN解析PGW。发送Create Session Request消息中携带PDN类型为Non-IP。MME发送激活默认承载请求给UE，携带PDN类型为Non-IP。附着成功。
 测试结果|–
 # ZUF-78-17-010 头压缩 
-特性描述 特性描述 描述 定义 头压缩（Header Compression）是为了减少无线与核心网之间的流量的一种技术。经过头压缩后传输的报头字节数远远小于完整的报头，当要频繁地传输比较小的数据包，开启头压缩功能可以提高数据的传输效率。 
+特性描述 :特性描述 :描述 :定义 :头压缩（Header Compression）是为了减少无线与核心网之间的流量的一种技术。经过头压缩后传输的报头字节数远远小于完整的报头，当要频繁地传输比较小的数据包，开启头压缩功能可以提高数据的传输效率。 
 报文头压缩技术可以将报文头进行压缩，使得所需要传输的报文头字节数远远小于完整的报文头。在同一个报文中，相邻两个包之间有很多相同的域，这些相同的域可以不必每次都传输，不同域的变化也是有一定的规律，根据这些规律可以将其编码后进行发送，这样可以对报文头进行压缩，减少报文头的开销，从而减少无线与核心网之间的流量。 
-背景知识 在移动网络中的无线接入侧，最宝贵的是资源是无线资源，希望在有限的无线资源上，承载的业务越多越好。比如一个数据包的格式为：IP+UDP+RTP+Payload。如下图所示： 
+背景知识 :在移动网络中的无线接入侧，最宝贵的是资源是无线资源，希望在有限的无线资源上，承载的业务越多越好。比如一个数据包的格式为：IP+UDP+RTP+Payload。如下图所示： 
 图1  IP+UDP+RTP+Payload报文格式
-[]images/1591692193987.png)
+
 如果采用的是IPv4，则报文头包括20个字节IPv4,8个字节UDP，12字节的RTP，共40个字节；如果采用IPv6，则40个字节的IPv6，12字节的RTP，共60个字节。通常情况下，Payload的有效长度为15~20个字节，因此采用IPv4，有66.7%~72.7%的无线资源浪费在报文头上；采用IPv6，有75%~80%的无线资源浪费在报文头上。 
 IETF的规范中，主要的报文头压缩主要有四种：VJHC、IPHC、CRTP和ROHC。其中VJHC、IPHC以及CRTP在差错率高、延迟大的无线中均不能很好地工作，而ROHC可以解决这些问题，同时ROHC可以用于压缩RTP/UDP/IP、UDP/IP、ESP/IP报文，能够在无线中很好地工作，具有很强的健壮行和较高的压缩效率。
 ROHC报文头域分类 
@@ -1773,7 +1773,7 @@ ROHC报文头压缩的压缩端和解压端在初始化时各自生成一个上�
 压缩端工作状态 
 ROHC压缩端有三种状态：IR（Initialization and Refresh）、FO（First Order）和SO（Second Order）。三种状态的转换关系如下图所示。 
 图2  ROHC压缩端有三种状态
-[]images/1591692194108.png)
+
 影响状态之间转换的因素主要有以下几点：
 原始报文头域的改变。在一个报文中，原始报文头中有些域突然出现了较大的变化，这会引起压缩段状态的下降，以同步压缩端和解压端的上下文。 
 从解压端传送过来的正反馈信息（ACK），会引起压缩端状态的上升； 
@@ -1782,14 +1782,14 @@ ROHC压缩端有三种状态：IR（Initialization and Refresh）、FO（First O
 解压端工作状态 
 ROHC解压端有三种状态：NC（No Context）、SC（Static Context）和FC（Full Context）。三种状态的转换关系如下图所示。 
 图3  ROHC解压端有三种状态
-[]images/1591692194238.png)
+
 解压端开始，工作在NC状态，只要一旦进入到FC状态就很少回退到低状态。在NC状态下，只要成功解压一个包后，解压端就直接进入FC状态。在FC状态下，只有连续多次无法正确解压压缩包时，才会回退到SC状态，并且在SC状态下，一旦正确解压一个压缩包，就立即回到FC状态。在SC状态下，只有多次无法解压压缩端通过FC状态下发送过来的报文，才回退到NC状态。 
 ROHC工作模式 
 ROHC报文头压缩有三种工作模式：U模式（unidirectional，单向）、O模式（Bidirectional Optimistic，双向优化）和R模式（Bidirectional Reliable，双向可靠）。 
 U模式 
 U模式下，压缩端向解压端发送压缩包，而解压端不能向压缩端传输任何信息。当周期性的超时发生或者压缩报文的头域出现不规律变化时，压缩端的状态之间会进行转换。 
 图4  U模式
-[]images/1591692194358.png)
+
 U模式下解压端工作在NC状态，如果成功解压一个IR包，便会从NC状态转移到FC状态。 
 在FC状态，如果发生多次解压失败，解压端会从FC状态转移到低级的状态，并且只能转移到SC状态。 
 在SC状态，解压端成功解压更新包后，会再次回到FC状态，但是，如果解压端对多个更新包解压失败，便会转向NC状态。 
@@ -1797,45 +1797,45 @@ U模式下解压端工作在NC状态，如果成功解压一个IR包，便会从
 O模式 
 O模式下存在反馈信道，解压端可以向压缩端发送错误请求（NACK和STATIC-NACK）、ACK（可以不发送），同时O模式下压缩端不使用定时器的机制。压缩端的状态转换如下图所示。 
 图5  O模式
-[]images/1591692194478.png)
+
 O模式下状态转换的解压端和U模式的解压端机制一致。但O模式下存在三种类型的反馈：ACK、NACK、STATIC-NACK，解压端在不同的状态下产生不同的反馈。ACK作为可选的反馈，如果解压端发送过一次ACK，后继都必须发送ACK。 
 R模式 
 R模式中反馈信道使用的次数更多，压缩端上下文和解压端上下文失步的概率远远小于U模式和O模式，其健壮性更强。压缩端由低级向高级状态的转换只有在接收到解压端发送的ACK后才转换，当需要进行更新或者收到NACK、STATIC-NACK反馈时，高级状态向低级状态转移。状态的转换见下图所示。 
 图6  R模式
-[]images/1591692194598.png)
+
 R模式的解压端只有携带7BIT或者8BIT的CRC报文（更新报文）时才能对上下文进行更新，而且只有在这种报文解压成功才会发ACK。 
 在NC状态，若收到非IR报文时，发送STATIC-NACK反馈，如果IR报文CRC检验失败，则不发送反馈，等待新的IR报文；在SC状态，当CRC检验失败时，发送STATIC-NACK反馈；在FC状态，在CRC检验失败时，发送NACK反馈。 
-应用场景 物联网终端通过CP模式接入MME网络后，通过MME传输数据。MME和无线之间通过头压缩的方式，以节约无线的带宽。 
-客户收益 受益方|受益描述
+应用场景 :物联网终端通过CP模式接入MME网络后，通过MME传输数据。MME和无线之间通过头压缩的方式，以节约无线的带宽。 
+客户收益 :受益方|受益描述
 ---|---
 运营商|增加无线的传输能力，在有限的带宽上传递更多的数据。提高用户的满意度。
 终端|提高传输能力。
-实现原理 系统架构 在ROHC中，压缩端和解压端之间会建立参考信息，存储中上下文中，双方各自维护一个上下文。两者的上下文在整个压缩过程中保持同步，压缩端定时向解压端发送更新包或者由解压端通知压缩端向解压端发送更新信息。 
+实现原理 :系统架构 :在ROHC中，压缩端和解压端之间会建立参考信息，存储中上下文中，双方各自维护一个上下文。两者的上下文在整个压缩过程中保持同步，压缩端定时向解压端发送更新包或者由解压端通知压缩端向解压端发送更新信息。 
 压缩端和解压端通过CID（context identifier，上下文标识）来标识不同的上下文，而且压缩端和解压端的CID必须保持一致，当有多个上下文的时候，则需要多个CID。压缩端和解压端实现原理如下图所示。 
 图7  压缩端和解压端实现原理图
-[]images/1591692195148.png)
+
 当一个报文到来时，压缩端首先进入压缩初始化状态，将报文的分组报文头信息保存在压缩端相应的上下文中，同时将完整的报文头信息发给解压端。解压端在收到此报文头后，解压出原始报文头，并将报文头信息保存到解压端相应的上下文中。当压缩端确信解压端收到了所有的上下文信息后，便进入压缩状态，开始发送压缩报文。 
-涉及的网元 网元名称|网元作用
+涉及的网元 :网元名称|网元作用
 ---|---
 MME|MME的头压缩主要包括两个方面：压缩算法的协商。在附着、TAU、业务请求、PDN连接、激活承载、修改承载等业务流程中完成无线与MME之间的压缩算法的协商。数据压缩和解压缩。MME在DOWNLINK中完成数据的压缩，在UPLINK中完成数据的解压缩。
 UE|协商头压缩的算法，根据算法对数据进行压缩和解压缩。
-协议栈 由于在报文传送过程中，仅需要链路层报文头就可以正确传送，像IP、UDP和RTP等在链路中不起作用。因此ROHC在TCP/IP协议栈中应该位于链路层和网络层之间。以RTP/UDP/IP报文为例，如下图所示： 
+协议栈 :由于在报文传送过程中，仅需要链路层报文头就可以正确传送，像IP、UDP和RTP等在链路中不起作用。因此ROHC在TCP/IP协议栈中应该位于链路层和网络层之间。以RTP/UDP/IP报文为例，如下图所示： 
 图8  协议栈
-[]images/1591692195268.png)
+
 同时ROHC的框架是可以扩展的，不但可以压缩RTP/UDP/IP报文头，而且可以压缩UDP/IP，IP报文头。ROHC用一个域来标示该压缩包对应的原始包的类型，并称该域为profile。如果原始报文头的类型是RTP/UDP/IP，则对应的ROHC压缩称之为RTP profile；如果是UDP/IP，则为UDP profile；如果是IP，则为IP profile。 
-业务流程  说明： 
+业务流程 : 说明： 
 本节只介绍头压缩相关的协商流程部分，所有流程均为EPC的标准流程，此处不对每条流程进行详细介绍。 
 附着
 附着流程如下图所示。 
 图9  附着流程图
-[]images/1591692195398.png)
+
 头压缩流程相关说明： 
 在第1和第2步中，UE/eNB在附着请求中携带头压缩的相关信息给MME，信息为Header Compression Configuration。头压缩的信息包含在PDN连接的信息中，MME保留Header Compression Configuration。 
 在第16步，MME根据自身支持的头压缩信息和UE/eNB带来的头压缩信息进行比较，协商出是否支持以及支持哪些Profile，在附着接受中把协商的结果带给UE/eNB。 
 TAU流程
 TAU流程如下图所示。 
 图10  TAU流程
-[]images/1591692195518.png)
+
 头压缩流程相关说明： 
 第4步，如果新MME支持头压缩，在向老MME发送Context Request的时候带上支持头压缩的标识。 
 第5步，老MME判断新MME支持头压缩，则把和UE协商的头压缩信息通过Context Response带给新的MME。 
@@ -1843,27 +1843,27 @@ TAU流程如下图所示。
 业务请求
 业务请求流程如下图所示。 
 图11  业务请求流程
-[]images/1591692195638.png)
+
 头压缩流程相关说明： 
 MME在第4步的时候，需要删除S11-U的相关信息，包括ROHC的上下文，但不包括Header Compression Configuration。 
 PDN连接
 UE请求PDN连接的流程如下图所示。 
 图12  UE请求PDN连接
-[]images/1591692195758.png)
+
 头压缩流程相关说明： 
 第1步，UE/eNB在PDN请求中携带头压缩的相关信息给MME，信息为Header Compression Configuration。MME保留Header Compression Configuration。 
 第7步，MME根据自身支持的头压缩信息和UE/eNB带来的头压缩信息进行比较，协商出是否支持，以及支持哪些Profile，在PDN接受中把协商的结果带给UE/eNB。 
 切换过程
 切换过程如下图所示。 
 图13  切换流程
-[]images/1591692195898.png)
+
 头压缩流程相关说明： 
 第3步，源MME在向目标MME发送Forward Relocation Request的时候带上协商好的头压缩的信息。 
 第25步，目标MME判断源MME带了头压缩信息，则保存下来，在TAU Accept消息中带上头压缩的信息。 
-系统影响 开通该特性需要占用一定的内存，占用的内存和支持的用户数相关。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+系统影响 :开通该特性需要占用一定的内存，占用的内存和支持的用户数相关。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401|General Packet Radio Service (GPRS) enhancements for Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access
 3GPP TS 24.301|Non-Access-Stratum (NAS) protocol for Evolved Packet System (EPS)
@@ -1874,56 +1874,56 @@ IETF RFC 3095|RObust Header Compression (RoHC): Framework and four profiles: RTP
 IETF RFC 3843|RObust Header Compression (RoHC): A Compression Profile for IP
 IETF RFC 4815:|RObust Header Compression (ROHC): Corrections and Clarifications to RFC 3095
 IETF RFC 5225|RObust Header Compression (ROHC) Version 2: Profiles for RTP, UDP, IP, ESP and UDP Lite
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 该特性需要申请了License许可后，运营商才能获得该特性的服务。 
+License要求 :该特性需要申请了License许可后，运营商才能获得该特性的服务。 
 该特性需要开启License，对应的License项目为“MME支持物联网小包数据控制面传输优化”（license ID：7089），此项目显示为“支持”，表示ZXUN uMAC支持物联网小包数据控制面传输优化。
-对其他网元的要求 UE|eNodeB|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB|SGW|PGW|HSS
 ---|---|---|---|---
 有关|有关|无关|无关|无关
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-工程规划要求 首先要了解到使用头压缩的用户数，用于配置头压缩的容量数据。 
-O&M相关 命令 配置项表1  新增配置项配置项命令MME头压缩配置SET MME HC FUNCIONSHOW MME HC FUNCIONSET MME HC ATTRIBUTESHOW MME HC ATTRIBUTE表2  修改配置项配置项命令新增参数容量配置SET CAPACITY新增配置参数RoHC上下文比例(%)，用于配置RoHC协商的上下文与承载上下文的比例。 
+工程规划要求 :首先要了解到使用头压缩的用户数，用于配置头压缩的容量数据。 
+O&M相关 :命令 :配置项表1  新增配置项配置项命令MME头压缩配置SET MME HC FUNCIONSHOW MME HC FUNCIONSET MME HC ATTRIBUTESHOW MME HC ATTRIBUTE表2  修改配置项配置项命令新增参数容量配置SET CAPACITY新增配置参数RoHC上下文比例(%)，用于配置RoHC协商的上下文与承载上下文的比例。 
 安全变量该特性不涉及安全变量的变化。 
 软件参数表3  新增软件参数软件参数ID软件参数名称262574是否支持ROHC反馈机制 
 动态管理该特性不涉及动态管理的变化。 
-性能统计 该特性不涉及计数器的变化。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过对头压缩的配置，实现头压缩的功能。 
-配置前提 已开启MME支持MME支持物联网小包数据控制面传输优化的license功能。 
+性能统计 :该特性不涉及计数器的变化。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过对头压缩的配置，实现头压缩的功能。 
+配置前提 :已开启MME支持MME支持物联网小包数据控制面传输优化的license功能。 
 MME配置已支持CP模式，开启CP模式命令为SET MME IOT CFG:CPSW="YES" 
-配置过程 头压缩功能配置过程如下： 
-通过[SET MME HC FUNCION](../../MMESGSN\zh-CN\mml\1261065.html)命令，设置是否开启头压缩功能。
-通过[SET MME HC ATTRIBUTE](../../MMESGSN\zh-CN\mml\1261068.html)命令，配置头压缩属性。
-通过[SET CAPACITY](../../MMESGSN\zh-CN\mml\1260065.html)命令，支持头压缩的容量配置，配置的是RoHC协商的上下文与承载上下文的比例。
-配置实例 场景说明 开启头压缩功能，配置maxid为100，支持的profile（UDP/IP、ESP/IP、IP、TCP/IP），配置容量比例为50%。 
-配置步骤 说明|操作
+配置过程 :头压缩功能配置过程如下： 
+通过[SET MME HC FUNCION]命令，设置是否开启头压缩功能。
+通过[SET MME HC ATTRIBUTE]命令，配置头压缩属性。
+通过[SET CAPACITY]命令，支持头压缩的容量配置，配置的是RoHC协商的上下文与承载上下文的比例。
+配置实例 :场景说明 :开启头压缩功能，配置maxid为100，支持的profile（UDP/IP、ESP/IP、IP、TCP/IP），配置容量比例为50%。 
+配置步骤 :说明|操作
 ---|---
 打开MME支持头压缩功能|SET MME HC FUNCION:HCFUNCTION="YES"
 配置头压缩属性|SET MME HC ATTRIBUTE:HCMAXCID=100,HCPROFILE="UDP/IP"&"ESP/IP"&"IP"&"TCP/IP";
 配置头压缩用户容量|SET CAPACITY:ROHCCAPIRATE=50;
-调整特性 无 
-测试用例 测试项目|MME支持IP头压缩功能
+调整特性 :无 
+测试用例 :测试项目|MME支持IP头压缩功能
 ---|---
 测试目的|MME能够对CP模式下的数据包中IP协议头部进行压缩与解压缩。
 预置条件|终端支持头压缩功能，其中profile支持IP协议。MME配置支持CP模式。MME配置支持头压缩功能，其中支持的profile包括IP协议。
 测试过程|终端发起CP附着，成功附着在网络上。上行ping 20个数据包。下行ping 20个数据包。
 通过准则|经过终端压缩的20个数据包，MME能够正常解压缩，经过解压缩的数据包应该跟终端发的原始包码流一样，并把解压缩后的数据包发给SGW。对于下行的20个数据包，MME能够正确压缩，并发给终端。经过压缩数据IP头比正常的头要短。
 测试结果|–
-常见问题处理 故障现象 头压缩解压缩失败。 
+常见问题处理 :故障现象 :头压缩解压缩失败。 
 ##### 处理方法 
 检查终端是否打开了头压缩功能。 
-使用[SHOW MME HC FUNCION](../../MMESGSN\zh-CN\mml\1261066.html)命令，查看MME是否都打开了头压缩功能。如果不正确，使用[SET MME HC FUNCION](../../MMESGSN\zh-CN\mml\1261065.html)命令进行修改。
-使用[SHOW MME HC ATTRIBUTE](../../MMESGSN\zh-CN\mml\1261069.html)命令，检查profile配置是否正确。如果不正确，使用[SET MME HC ATTRIBUTE](../../MMESGSN\zh-CN\mml\1261068.html)命令进行修改。
+使用[SHOW MME HC FUNCION]命令，查看MME是否都打开了头压缩功能。如果不正确，使用[SET MME HC FUNCION]命令进行修改。
+使用[SHOW MME HC ATTRIBUTE]命令，检查profile配置是否正确。如果不正确，使用[SET MME HC ATTRIBUTE]命令进行修改。
 # ZUF-78-17-011 速率控制 
-特性描述 特性描述 描述 定义 服务的PLMN的速率控制用于控制UE所有承载的上行报文速率及PGW/SCEF对UE的下行报文速率。
+特性描述 :特性描述 :描述 :定义 :服务的PLMN的速率控制用于控制UE所有承载的上行报文速率及PGW/SCEF对UE的下行报文速率。
 APN的速率控制用于控制UE的某APN下承载的上行报文速率及PGW/SCEF对UE的下行报文速率。
-背景知识 服务的PLMN的速率控制
+背景知识 :服务的PLMN的速率控制
 MME对服务的PLMN的速率控制处理如下： 
 MME为某用户分配报文上行与下行速率上限（所有承载），在业务流程中将报文速率值传递给UE与PGW或SCEF。 
 UE在发送上行报文时，需控制不超过上行速率门限。 
@@ -1939,24 +1939,24 @@ UE在APN的承载中发送上行报文时，需控制报文数不超过APN的上
 MME处理的内容是透传APN
 Rate Control字段。APN的速率控制信息包含在现有的PCO参数，MME将PCO字段透传给UE。 
 APN的速率控制作用于CP模式和UP模式。 
-应用场景 NB-IoT物联网实现了控制面EPS优化功能，MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据。这样就极易造成网络拥塞，为避免由于UE和AS服务器频繁发送报文对网络的冲击，终端和网络侧实现基于服务的PLMN的速率控制和APN的速率控制。
-客户收益 受益方|受益描述
+应用场景 :NB-IoT物联网实现了控制面EPS优化功能，MME和UE间通过控制面通道使用NAS消息传输小包数据，MME和SAE-GW间通过S11-U用户面通道传输小包数据。这样就极易造成网络拥塞，为避免由于UE和AS服务器频繁发送报文对网络的冲击，终端和网络侧实现基于服务的PLMN的速率控制和APN的速率控制。
+客户收益 :受益方|受益描述
 ---|---
 运营商|实现控制面EPS优化功能后，MME和SAE-GW间通过S11-U用户面通道传输小包数据，支持速率控制，可以避免网络侧的拥塞。
 物联网终端用户|有效的控制报文的发送，避免由于报文频繁对网络的冲击，从而降低消耗。
-实现原理 系统架构 支持NB-IoT的优化后的EPS网络架构如下图所示。 
+实现原理 :系统架构 :支持NB-IoT的优化后的EPS网络架构如下图所示。 
 图1  系统架构图
-[]images/ZUF-78-17-011-0308.png)
-涉及的网元 网元名称|网元作用
+
+涉及的网元 :网元名称|网元作用
 ---|---
 NB-IoT UE|物联网终端，用NAS PDU发送和接收小包数据（IP Data或Non-IP Data），并携 带S1释放辅助信息。
 E-UTRAN|支持NB-IoT终端接入，传递NAS PDU。通过S1-MME接口传输小包数据。
 MME|传输上行和下行小包数据。完成S1-MME到S11-U面小包数据的转换传输。
 SAE-GW|通过S11-U面传输小包数据。
-协议栈 采用控制面优化方案时各网元的协议栈如下图所示，其中Non-IP采用的是经由SGi隧道传输： 
+协议栈 :采用控制面优化方案时各网元的协议栈如下图所示，其中Non-IP采用的是经由SGi隧道传输： 
 图2  协议栈
-[]images/ZUF-78-17-011-0309.png)
-本网元实现 协议中定义每NB-IOT在6分钟时间内，上行与下行报文数量最少支持10个，最大上限为不限制。 
+
+本网元实现 :协议中定义每NB-IOT在6分钟时间内，上行与下行报文数量最少支持10个，最大上限为不限制。 
 速率配置为0为不控制，该功能只有License，没有对应的软参，外场配置为0相当于关闭该功能。 
 MME对服务的PLMN的速率控制实现内容如下： 
 MME配置“全局用户报文速率”和“用户报文速率配置”，配置全局速率控制策略和具体用户速率控制策略。 
@@ -1967,10 +1967,10 @@ MME对APN的速率控制实现内容如下：
 APN Rate Control相关信息都包含在PCO里，MME只是透传。 
 在PDN连接时，UE会在PCO里携带标志，指示UE支持APN Rate Control。 
 PGW会下发APN Rate Control值，包含在PCO里，由MME透传给UE。实现UE的APN Rate Control。  
-业务流程 附着流程
+业务流程 :附着流程
 附着流程如下图所示。 
 图3  附着流程
-[]images/ZUF-78-17-011-%E9%99%84%E7%9D%80%E6%B5%81%E7%A8%8B.png)
+
 UE发起附着业务，就指示当前是NB-IoT接入，同时指明当前是使用的CP（控制面优化）模式。 
 MME判断数据传输方式为CP，根据用户IMSI查表获得对应的Serving PLMN Rate配置，如查找不到记录或配置为不限制，则读取全局的Serving
 PLMN Rate，获取配置完成后，MME在向SGW/PGW发送的Create Session Request消息中携带下行Serving
@@ -1980,32 +1980,32 @@ MME向UE发起激活默认承载请求，其中携带上行Serving PLMN Rate控�
 局间TAU业务
 局间TAU业务流程如下图所示。 
 图4  局间TAU业务流程
-[]images/ZUF-78-17-011-%E5%B1%80%E9%97%B4TAU%E4%B8%9A%E5%8A%A1.png)
+
 UE发起局间TAU业务请求。 
 新局MME向老局MME要用户上下文信息，发送Context Request消息。 
 老局MME返回Context Respond消息，其中携带Serving PLMN Rate。 
 新局 MME以基于老局MME的Serving PLMN Rate来控制上行报文速率，如老局响应消息中未携带，则不限制。（由于UE侧的速率控制参数无法修改，没有采用新局本地配置） 
-系统影响 该特性不涉及对系统的影响。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 协议名|章节
+系统影响 :该特性不涉及对系统的影响。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :协议名|章节
 ---|---
 23.401.e00|4.7.7 Support of rate control of user data using CIoT EPS optimisation
 24.301.e01|ESM NAS消息中支持携带Extended protocol configuration options与 ServingPLMN rate control字段
 29.128.d10|MME与SCEF间消息支持携带Extended protocol configuration options与 ServingPLMN rate control字段
 29.274.e00|MME与SGW间GTP消息支持携带Extended protocol configuration options与 ServingPLMN rate control字段
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 该特性需要开启License，对应的License项目为“MME支持包速率控制功能”（license ID：7111），此项目显示为“支持”，表示支持该功能。
-对其他网元的要求 UE|eNodeB (E-UTRAN)|SGW|PGW|HSS
+License要求 :该特性需要开启License，对应的License项目为“MME支持包速率控制功能”（license ID：7111），此项目显示为“支持”，表示支持该功能。
+对其他网元的要求 :UE|eNodeB (E-UTRAN)|SGW|PGW|HSS
 ---|---|---|---|---
 -|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-工程规划要求 无 
-O&M相关 命令 配置项|命令
+工程规划要求 :无 
+O&M相关 :命令 :配置项|命令
 ---|---
 全局用户报文速率配置|SET NBIOT DATARATE
 SHOW NBIOT DATARATE|全局用户报文速率配置
@@ -2013,31 +2013,31 @@ SHOW NBIOT DATARATE|全局用户报文速率配置
 SET IMSI NBIOT DATARATE|基于IMSI号段用户报文速率配置
 DEL IMSI NBIOT DATARATE|基于IMSI号段用户报文速率配置
 SHOW IMSI NBIOT DATARATE|基于IMSI号段用户报文速率配置
-性能统计 性能计数器名称
+性能统计 :性能计数器名称
 ---
 C432080008 拥塞控制丢弃ESM DATA Transport消息次数
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 虽然窄带物联网终端的数据传输速率极低，但物联网终端的量特别巨大，为避免网络拥塞，需要对物联网终端进行速率控制。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :虽然窄带物联网终端的数据传输速率极低，但物联网终端的量特别巨大，为避免网络拥塞，需要对物联网终端进行速率控制。 
 速率控制包括针对拜访网络的“Serving PLMN Rate Control”及针对归属网络的“APN Rate Control”这两种控制方式，其中“APN
 Rate Control”对MME不可见，“Serving PLMN Rate Control”由MME控制。 
 服务PLMN速率控制参数由MME设置，包括上行控制速率及下行控制速率，并通过NAS接口及S11接口消息分别通知到UE及PGW，UE执行上行速率控制，PGW执行下行速率控制。 
-配置前提 对于速率控制功能，需要： 
+配置前提 :对于速率控制功能，需要： 
 MME支持用户CP 模式接入。 
 MME支持速率控制。 
-配置过程 设置License：MME支持包速率控制功能设置为支持。 
-支持用户CP模式接入：MME物联网相关业务功能开关（[SET MME IOT CFG](../../MMESGSN\zh-CN\mml\1260333.html)）中设置为支持。
-基于IMSI的速率控制：新增基于IMSI号段用户报文速率（[ADD IMSI NBIOT DATARATE](../../MMESGSN\zh-CN\mml\1260855.html)）。
-配置实例 ##### 实例场景 
+配置过程 :设置License：MME支持包速率控制功能设置为支持。 
+支持用户CP模式接入：MME物联网相关业务功能开关（[SET MME IOT CFG]）中设置为支持。
+基于IMSI的速率控制：新增基于IMSI号段用户报文速率（[ADD IMSI NBIOT DATARATE]）。
+配置实例 :##### 实例场景 
 配置对460119990023XXX号段进行速率控制，6分钟内只能发10个CP
 SR（携带ESM Data Transport）。 
-配置步骤 步骤|说明|操作
+配置步骤 :步骤|说明|操作
 ---|---|---
 1|license设置为支持。|该功能license设置为支持。
 2|支持用户CP模式接入。|SET MME IOT CFG:CPSW="YES";
 3|配置速率控制。|ADD IMSI NBIOT DATARATE:IMSI="460119990023",UPNASDATARATE=10,DOWNNASDATARATE=10;
-测试用例 测试项目|MME速率控制
+测试用例 :测试项目|MME速率控制
 测试目的|MME速率控制
 预置条件|License支持速率控制。MME支持用户CP模式接入。
 测试过程|MME配置Serving PLMN Rate Control，配置上下行限制速率。用户在6分钟内发送的报文已达到限制门限。用户发起CP SR携带ESM Data Transport。用户持续以CP SR发送报文，直到超过6分钟周期。
@@ -2050,36 +2050,36 @@ SR（携带ESM Data Transport）。
 通过准则|MME发送Activate Default EPS Bearer Context Request消息中携带PCO，APN速率值和Create Session Response消息中一致。
 测试结果|–
 # ZUF-78-17-012 DECOR 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 DCN|Dedicated Core Network，专用核心网
 DECOR|即DCN，Dedicated Core Network，专用核心网
-描述 定义 DECOR/eDECOR即专用核心网（以下简称专网），专网用于为特定的用户提供特定的业务和功能，这类用户包括物联网用户、特定的企业用户或者独立行政区域用户等。 
+描述 :定义 :DECOR/eDECOR即专用核心网（以下简称专网），专网用于为特定的用户提供特定的业务和功能，这类用户包括物联网用户、特定的企业用户或者独立行政区域用户等。 
 ZXUN uMAC支持DCN（Dedicated Core Network）功能，对于传统的物联网业务，可以通过DECOR/eDECOR技术把传统物联网终端迁移到专用核心网，构建专用的物联网核心网。
 现网部署时，核心网可能会存在多个NB-IoT的DCN（Dedicated Core Network）。根据TSG RAN侧TS23.236的协议规范，NB-IoT
 DCN可能会同时连接到E-UTRAN和NB-IoT的RAN节点，可以根据用户类型采取两种不同方案为其选择合适的DCN。 
 第一种是重定向方案，参考TR23.707协议中的DECOR功能。 
 第二种是UE辅助方案，参考TR23.711协议中的eDECOR功能。 
 本特性用于介绍DECOR功能。 
-背景知识 物联网终端区别于人网终端，具有海量接入、低功耗等特性，具有专网服务的需求，在物联网应用快速发展的背景下，为物联网用户提供专网服务的需求越来越迫切。 
-应用场景 特定用户（物联网用户、特定的企业用户或者独立行政区域用户等）接入网络进行业务（附着、TAU、切换等）时，如果运营商部署了DCN专网，MME通过DECOR技术支持将用户重定向到其所属的DCN网络下的MME下，完成附着、TAU、切换等。
-客户收益 受益方|受益描述
+背景知识 :物联网终端区别于人网终端，具有海量接入、低功耗等特性，具有专网服务的需求，在物联网应用快速发展的背景下，为物联网用户提供专网服务的需求越来越迫切。 
+应用场景 :特定用户（物联网用户、特定的企业用户或者独立行政区域用户等）接入网络进行业务（附着、TAU、切换等）时，如果运营商部署了DCN专网，MME通过DECOR技术支持将用户重定向到其所属的DCN网络下的MME下，完成附着、TAU、切换等。
+客户收益 :受益方|受益描述
 ---|---
 运营商|运营商可以根据接入网络的用户特性，将用户重定向到所属的DCN网络下的MME接入，灵活地为用户提供特定的特性和功能。
 终端用户|该特性对终端用户不可见。
-实现原理 系统架构 DCN组网架构如[图1](1591692198409.html#T_2017510842497__DCN%E7%BB%84%E7%BD%91%E6%9E%B6%E6%9E%84-0798491C)所示。
+实现原理 :系统架构 :DCN组网架构如[图1]所示。
 图1  DCN组网架构
-[]images/1591692199189.png)
-涉及的网元 网元名称|网元作用
+
+涉及的网元 :网元名称|网元作用
 ---|---
 UE|触发附着流程、跟踪区更新流程，完成安全功能，完成承载管理功能。
 eNodeB|对用户进行接入层安全功能，完成MME的选择以及REROUTE功能，完成对用户无线资源管理功能。
 MME|对用户进行接入控制和安全功能，完成MME的选择及是否REROUTE的判断，完成SGW和PGW的选择，完成用户临时标识的分配，完成TA List的分配，完成MME或SGSN的选择，完成HSS的选择，完成承载管理功能。
 HSS|把用户签约数据提供给MME，存储用户目前所接入的MME信息。
-本网元实现 MME判断用户接入流程是否为专网用户接入流程，是否需要获取UE Usage
-Type和MMEGI，判断流程参见[图2](1591692198409.html#T_2017510842497__%E4%B8%93%E7%BD%91%E7%94%A8%E6%88%B7%E6%B5%81%E7%A8%8B-0798C67D)。
+本网元实现 :MME判断用户接入流程是否为专网用户接入流程，是否需要获取UE Usage
+Type和MMEGI，判断流程参见[图2]。
 图2  MME支持DECOR
-[]images/1591692199319.png)
+
 MME获取UE Usage Type的方式有如下两种。 
 向老局获取在局间Attach/TAU流程中，如果“UE Usage Type”参数可用，则老局MME/SGSN在Identification
 Response message/Context Response message消息中携带“UE Usage Type”参数。 
@@ -2089,9 +2089,9 @@ UE Usage Type”标识位为有效。如果需要获取鉴权向量集，则同�
 UE Usage Type”标识位为有效。HSS在Authentication Information Answer message消息中返回“UE
 Usage Type”参数，同时可能携带请求的鉴权向量集，MME保存“UE Usage Type”参数。如果“UE Usage
 Type”获取失败，则认为不是专用用户，按普通用户流程处理。 
-MME获取到“UE Usage Type”后，基于本地的配置数据或者通过向DNS查询来获取MMEGI，再判断是否需要进行重定向，业务流程参见[图3](1591692198409.html#T_2017510842497__%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81%E6%89%A7%E8%A1%8C%E9%87%8D%E5%AE%9A%E5%90%91%E6%B5%81%E7%A8%8B-079C492C)。
+MME获取到“UE Usage Type”后，基于本地的配置数据或者通过向DNS查询来获取MMEGI，再判断是否需要进行重定向，业务流程参见[图3]。
 图3  是否执行重定向流程
-[]images/1591692199439.png)
+
 如果第一个新局MME决策不需要发送重定向NAS消息（本局就是为UE服务的专网MME），则正常处理Attach/TAU流程。 
 如果第一个新局MME决策需要发送重定向NAS消息到专网MME，第一个新局MME将执行“NAS Message Redirection
 Procedure（NAS消息的重定向流程）”。在TAU流程中，如果存在老局MME/SGSN，则第一个新局MME发送Context
@@ -2100,9 +2100,9 @@ Request消息的情况，后续正常处理第二个新局的“NAS Message Redi
 如果第一个新局MME决策需要拒绝NAS消息，则MME根据SET DECOR CONTROL POLICY命令中配置的参数“MME是否拒绝专网用户接入”，正常处理Attach/TAU流程或发送Attach/TAU拒绝消息，携带合适的Cause和backoff timer，避免UE立即重新触发Attach/TAU。 
  说明： 
 连接态下（如切换）的TAU不应该执行NAS message重定向。 
-业务流程 NAS消息的重定向流程
+业务流程 :NAS消息的重定向流程
 图4  NAS Message Redirection Procedure：
-[]images/1591692199559.png)
+
 第一个新局MME发送Reroute NAS Message Request消息（其中携带的参数包括original RAN
 message、reroute parameters、Additional GUTI/P-TMSI、UE Usage Type和optionally
 the IMSI)给eNodeB。其中Reroute parameter是DCN对应于UE Usage Type中的MMEGI，MME使用DNS查询确定DCN对应的MMEGI。如果UE提供了可用的Additional
@@ -2116,7 +2116,7 @@ Request message和来自第一个新局MME的MMEGI、UE Usage Type和IMSI。MMEG
 the NAS message。第二个新局MME使用UE Usage Type选择SGW和PGW。 
 Attach/TAU流程
 图5  Attach/TAU流程
-[]images/1591692199679.png)
+
 用户发起Attach/TAU流程。如果DCN-ID可用，则UE会在请求消息中提供DCN-ID，此DCN-ID是PLMN确定的DCN-ID或默认标准的DCN-ID。eNodeB根据DCN-ID选择一个DCN和该DCN内的一个服务的MME。
 eNodeB将DCN-ID在初始请求消息中带给MME。如果UE提供GUTI等信息指示了一个节点MME，eNodeB根据UE
 GUTI等信息选择服务节点MME优先于根据DCN-ID选择服务节点MME。
@@ -2169,12 +2169,12 @@ Message redirection procedure。后续执行TAU处理。
 HSS删除用户的UE Usage Type签约数据
 HSS删除用户的UE Usage Type签约数据如下图所示。 
 图7  HSS删除用户的UE Usage Type签约数据流程图
-[]images/1592793956366.png)
+
 用户修改了签约数据，HSS向MME发送了Delete Subscriber Data Request消息，通知MME删除掉用户UE Usage Type签约数据。MME收到的Delete Subscriber Data Request消息，消息中DSR Flags AVP中包含指示用户删除的UE Usage Type Withdrawal AVP，MME删除用户的UE Usage Type。 
-系统影响 该特性不涉及对系统的影响。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+系统影响 :该特性不涉及对系统的影响。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401: General Packet Radio Service (GPRS) enhancementsforEvolved Universal Terrestrial Radio Access Network (E-UTRAN) access|4.3.25
 3GPP TS 36.413: Evolved Universal Terrestrial Radio AccessNetwork(E-UTRAN);S1 Application Protocol (S1AP)|8.6.2.18.6.2.59.2.3.45
@@ -2184,18 +2184,18 @@ HSS删除用户的UE Usage Type签约数据如下图所示。
 3GPP TS 23.885: Technical Specification Group Services andSystem Aspects;Feasibility Study of Single Radio Voice Call Continuity(SRVCC) from UTRAN/GERAN to E-UTRAN/HSPA|-
 3GPP TS 29.280: Technical Specification Group Core Networkand Terminals;Evolved Packet System (EPS);3GPP Sv interface (MME toMSC, and SGSN to MSC) for SRVCC|-
 3GPP TS 29.303: Technical Specification Group Core Networkand Terminals Domain Name System Procedures|-
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 该特性需要申请了License许可后，运营商才能获得该特性的服务。 
+License要求 :该特性需要申请了License许可后，运营商才能获得该特性的服务。 
 该特性需要开启License，对应的License为7106 MME支持DECOR，此项目显示为“支持”，表示ZXUN uMAC支持DECOR功能。
-对其他网元的要求 UE|eNodeB|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB|SGW|PGW|HSS
 ---|---|---|---|---
 √|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-O&M相关 命令 配置项 
+O&M相关 :命令 :配置项 
 配置项|命令
 ---|---
 DECOR控制策略配置|SET DECOR CONTROL POLICY
@@ -2225,23 +2225,23 @@ PGW解析配置|ADD EPC PGW|“用户使用类型”参数中增加专网用户�
 SET EPC PGW|PGW解析配置|“用户使用类型”参数中增加专网用户使用类型，可多选。
 EPC地址解析配置|ADD EPCHOST|“用户使用类型”参数中增加专网用户使用类型，可多选。
 SET EPCHOST|EPC地址解析配置|“用户使用类型”参数中增加专网用户使用类型，可多选。
-性能统计 性能计数器名称
+性能统计 :性能计数器名称
 ---
 C432000083 Reroute NAS Request消息发送次数
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过DECOR的相关配置，实现MME的DECOR REROUTE接入控制。 
-配置前提 MME网元与其他网元的对接和业务配置已完成。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过DECOR的相关配置，实现MME的DECOR REROUTE接入控制。 
+配置前提 :MME网元与其他网元的对接和业务配置已完成。 
 确认License 7106 MME支持DECOR为支持。 
-配置过程 通过[SET DECOR CONTROL POLICY](../../MMESGSN\zh-CN\mml\1261380.html)命令，设置DECOR控制策略。
-通过[SET DECOR EDECOR CTRL POLICY](../../MMESGSN\zh-CN\mml\1261391.html)命令，设置DECOR/eDECOR公共控制策略。
-通过[ADD DNS SERVER](../../MMESGSN\zh-CN\mml\1260655.html)命令，新增DNS服务器配置。
-通过[ADD DNS SRVGRP](../../MMESGSN\zh-CN\mml\1260660.html)命令，新增DNS服务器组配置。
-通过[ADD DNS PROFILE](../../MMESGSN\zh-CN\mml\1260665.html)命令，新增DNS Profile配置。
-通过[SET SOFTWARE PARAMETER](../../MMESGSN\zh-CN\mml\1268001.html)命令，设置软参“MME地址解析优先级控制”为1。
-通过[ADD MMEGI RESOLVE](../../MMESGSN\zh-CN\mml\1261585.html)命令，新增MMEGI解析配置。
-配置实例 在GUTI不属于本地MME的情况下，完成GUTI附着及局间TAU流程，详细配置过程参见下表。 
+配置过程 :通过[SET DECOR CONTROL POLICY]命令，设置DECOR控制策略。
+通过[SET DECOR EDECOR CTRL POLICY]命令，设置DECOR/eDECOR公共控制策略。
+通过[ADD DNS SERVER]命令，新增DNS服务器配置。
+通过[ADD DNS SRVGRP]命令，新增DNS服务器组配置。
+通过[ADD DNS PROFILE]命令，新增DNS Profile配置。
+通过[SET SOFTWARE PARAMETER]命令，设置软参“MME地址解析优先级控制”为1。
+通过[ADD MMEGI RESOLVE]命令，新增MMEGI解析配置。
+配置实例 :在GUTI不属于本地MME的情况下，完成GUTI附着及局间TAU流程，详细配置过程参见下表。 
 配置步骤|配置说明
 ---|---
 SET DECOR CONTROL POLICY:MMESUPDECOR="YES",MINDELAY=10,MAXDELAY=20;|设置DECOR控制策略：MME支持DECOR功能，设置Back-off Timer的最小值为10s，最大值为20s。
@@ -2251,7 +2251,7 @@ ADD DNS SRVGRP:ID=1,SVRLST=1-0;|新增DNS服务器组配置：设置DNS服务器
 ADD DNS PROFILE:TYPE="LTE",SVRGRPLST=1-0;|新增DNS Profile配置：设置DNS Profile类型为LTE，DNS服务器列表为1-0。
 SET SOFTWARE PARAMETER:PARAID=65593,PARAVALUE=1;|设置软参“MME地址解析优先级控制”为1。
 ADD MMEGI RESOLVE:LGCNAME="tac-lb01.tac-hb61.tac.epc.mnc011.mcc460.3gppnetwork.org",UEUSAGETYPE=130,MMEGI=32840;|新增MMEGI解析配置：设置逻辑名称tac-lb01.tac-hb61.tac.epc.mnc011.mcc460.3gppnetwork.org，用户使用类型130，MMEGroup ID=32840;
-测试用例 测试项目|专网用户GUTI附着，GUTI不属于本地
+测试用例 :测试项目|专网用户GUTI附着，GUTI不属于本地
 ---|---
 测试目的|验证MME能实现DECOR REROUTE接入功能
 预置条件|LTE网络内的所有网元运行正常用户在HSS开户，并签约LTE业务，且支持专网接入新局MME支持DECOR的license打开新局MME支持DECOR的开关打开新局配置用户默认支持DECOR
@@ -2266,38 +2266,38 @@ ADD MMEGI RESOLVE:LGCNAME="tac-lb01.tac-hb61.tac.epc.mnc011.mcc460.3gppnetwork.o
 通过准则|新局局间TAU过程中，根据老局返回的IMSI判断用户是专网用户因老局未返回UE Usage Type，MME向HSS发起AIR获取鉴权向量集的同时携带AIR-Flags，其中“Send UE Usage Type“的标识为1根据获取到的“UE Usage Type”和TA-FQDN解析到MMEGI用户局间TAU成功
 测试结果|-
 # ZUF-78-17-013 eDECOR 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 DCN|Dedicated Core Network，专用核心网
 eDECOR|Enhancements of Dedicated Core Network，增强的专用核心网。eDECOR是Decor的演进，由UE协助进行专网选择，eDECOR使用UE携带的DCN-ID，通过RAN选择专网，从而减少了DECOR的重新定向路由的过程。
-描述 定义 DECOR/eDECOR即专用核心网（以下简称专网），专网用于为特定的用户提供特定的业务和功能，这类用户包括物联网用户、特定的企业用户或者独立行政区域用户等。 
+描述 :定义 :DECOR/eDECOR即专用核心网（以下简称专网），专网用于为特定的用户提供特定的业务和功能，这类用户包括物联网用户、特定的企业用户或者独立行政区域用户等。 
 ZXUN uMAC支持DCN（Dedicated Core Network）功能，对于传统的物联网业务，可以通过DECOR/eDECOR技术把传统物联网终端迁移到专用核心网，构建专用的物联网核心网。
 现网部署时，核心网可能会存在多个NB-IoT的DCN（Dedicated Core Network）。根据TSG RAN侧TS23.236的协议规范，NB-IoT
 DCN可能会同时连接到E-UTRAN和NB-IoT的RAN节点，可以根据用户类型采取两种不同方案为其选择合适的DCN。 
 第一种是重定向方案，参考TR23.707协议中的DECOR功能。 
 第二种是UE辅助方案，参考TR23.711协议中的eDECOR功能。 
 本特性用于介绍eDECOR功能。 
-背景知识 物联网终端区别于人网终端，具有海量接入、低功耗等特性，具有专网服务的需求，在物联网应用快速发展的背景下，为物联网用户提供专网服务的需求越来越迫切。 
-应用场景 特定用户（物联网用户、特定的企业用户或者独立行政区域用户等）接入网络进行业务（附着、TAU、切换等）时，如果运营商部署了DCN专网且UE存储了默认DCN标识、按PLMN存储了DCN标识，UE提供DCN标识给eNodeB，eNodeB根据DCN标识为用户选择专网MME，减少信令改向，MME及时识别DCN标识改变并通知UE更新。
-客户收益 受益方|受益描述
+背景知识 :物联网终端区别于人网终端，具有海量接入、低功耗等特性，具有专网服务的需求，在物联网应用快速发展的背景下，为物联网用户提供专网服务的需求越来越迫切。 
+应用场景 :特定用户（物联网用户、特定的企业用户或者独立行政区域用户等）接入网络进行业务（附着、TAU、切换等）时，如果运营商部署了DCN专网且UE存储了默认DCN标识、按PLMN存储了DCN标识，UE提供DCN标识给eNodeB，eNodeB根据DCN标识为用户选择专网MME，减少信令改向，MME及时识别DCN标识改变并通知UE更新。
+客户收益 :受益方|受益描述
 ---|---
 运营商|运营商可以根据接入网络的用户特性，将用户重定向到所属的DCN网络下的MME接入，灵活地为用户提供特定的特性和功能。
 终端用户|该特性对终端用户不可见。
-实现原理 系统架构 多个DCN可以共享同一个RAN，不同用户可通过RAN路由至对应的DCN。多个DCN可以组成DCN
+实现原理 :系统架构 :多个DCN可以共享同一个RAN，不同用户可通过RAN路由至对应的DCN。多个DCN可以组成DCN
 POOL，如物联网DCN，因为一个MME容纳不了海量终端，需要多个MME。 
-DCN组网架构如[图1](1591692201980.html#T_2017510842497__DCN%E7%BB%84%E7%BD%91%E6%9E%B6%E6%9E%84-081F9E61)所示。
+DCN组网架构如[图1]所示。
 图1  DCN组网架构
-[]images/1591692202780.png)
-涉及的网元 网元名称|网元作用
+
+涉及的网元 :网元名称|网元作用
 ---|---
 UE|触发附着流程、跟踪区更新流程，完成安全功能，完成承载管理功能
 eNodeB|对用户进行接入层安全功能，完成MME的选择以及REROUTE功能，完成对用户无线资源管理功能。
 MME|对用户进行接入控制和安全功能，完成MME的选择及是否REROUTE的判断，完成SGW和PGW的选择，完成用户临时标识的分配，完成TAList的分配，完成MME或SGSN的选择，完成HSS的选择，完成承载管理功能
 HSS|把用户签约数据提供给MME，存储用户目前所接入的MME信息
-本网元实现 MME判断用户接入流程是否为专网用户接入流程，是否需要获取UE Usage
-Type和MMEGI，判断流程参见[图2](1591692201980.html#T_2017510842497__EDecor%E6%B5%81%E7%A8%8B-08243588)。
+本网元实现 :MME判断用户接入流程是否为专网用户接入流程，是否需要获取UE Usage
+Type和MMEGI，判断流程参见[图2]。
 图2  eDecor流程
-[]images/1591692202900.png)
+
 MME获取UE Usage Type的方式有如下两种。 
 向老局获取在局间Attach/TAU流程中，如果“UE Usage Type”参数可用，则老局MME/SGSN在Identification
 Response message/Context Response message消息中携带“UE Usage Type”参数。 
@@ -2318,9 +2318,9 @@ Message中携带“UE Usage Type”参数。
 NAS Message消息到另一个MME，可直接拒绝。 
  说明： 
 连接态下（如切换）的TAU不应该执行NAS message重定向。 
-业务流程 Attach/TAU流程
+业务流程 :Attach/TAU流程
 图3  Attach/TAU流程
-[]images/1591692203020.png)
+
 用户发起Attach/TAU流程。如果DCN-ID可用，则UE会在请求消息中提供DCN-ID，此DCN-ID是PLMN确定的DCN-ID或默认标准的DCN-ID。eNodeB根据DCN-ID选择一个DCN和该DCN内的一个服务的MME。
 eNodeB将DCN-ID在初始请求消息中带给MME。如果UE提供GUTI等信息指示了一个节点MME，eNodeB根据UE
 GUTI等信息选择服务节点MME优先于根据DCN-ID选择服务节点MME。
@@ -2373,12 +2373,12 @@ Message redirection procedure。后续执行TAU处理。
 HSS删除用户的UE Usage Type签约数据
 HSS删除用户的UE Usage Type签约数据如下图所示。 
 图5  HSS删除用户的UE Usage Type签约数据流程图
-[]images/1592794075382.png)
+
 用户修改了签约数据，HSS向MME发送了Delete Subscriber Data Request消息，通知MME删除掉用户UE Usage Type签约数据。MME收到的Delete Subscriber Data Request消息，消息中DSR Flags AVP中包含指示用户删除的UE Usage Type Withdrawal AVP，MME删除用户的UE Usage Type。 
-系统影响 该特性不涉及对系统的影响。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+系统影响 :该特性不涉及对系统的影响。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401: General Packet Radio Service (GPRS) enhancementsforEvolved Universal Terrestrial Radio Access Network (E-UTRAN) access|4.3.25
 3GPP TS 36.413: Evolved Universal Terrestrial Radio AccessNetwork(E-UTRAN);S1 Application Protocol (S1AP)|8.6.2.18.6.2.59.2.3.45
@@ -2388,18 +2388,18 @@ HSS删除用户的UE Usage Type签约数据如下图所示。
 3GPP TS 23.885: Technical Specification Group Services andSystem Aspects;Feasibility Study of Single Radio Voice Call Continuity(SRVCC) from UTRAN/GERAN to E-UTRAN/HSPA|-
 3GPP TS 29.280: Technical Specification Group Core Networkand Terminals;Evolved Packet System (EPS);3GPP Sv interface (MME toMSC, and SGSN to MSC) for SRVCC|-
 3GPP TS 29.303: Technical Specification Group Core Networkand Terminals Domain Name System Procedures|-
-特性能力 该特性不涉及规格指标。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 该特性需要申请了License许可后，运营商才能获得该特性的服务。 
+License要求 :该特性需要申请了License许可后，运营商才能获得该特性的服务。 
 该特性需要开启License，对应的License为7107 MME支持eDECOR，项目显示为“支持”，表示支持eDECOR功能。
-对其他网元的要求 UE|eNodeB|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB|SGW|PGW|HSS
 ---|---|---|---|---
 √|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-O&M相关 命令 配置项 
+O&M相关 :命令 :配置项 
 配置项|命令
 ---|---
 eDECOR控制策略配置|SET EDECOR CONTROL POLICY
@@ -2429,23 +2429,23 @@ PGW解析配置|ADD EPC PGW|“用户使用类型”参数中增加专网用户�
 SET EPC PGW|PGW解析配置|“用户使用类型”参数中增加专网用户使用类型，可多选。
 EPC地址解析配置|ADD EPCHOST|“用户使用类型”参数中增加专网用户使用类型，可多选。
 SET EPCHOST|EPC地址解析配置|“用户使用类型”参数中增加专网用户使用类型，可多选。
-性能统计 该特性不涉及计数器的变化。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过eDECOR的相关配置，实现MME的eDECOR专网用户接入控制。 
-配置前提 MME网元与其他网元的对接和业务配置已完成。 
+性能统计 :该特性不涉及计数器的变化。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过eDECOR的相关配置，实现MME的eDECOR专网用户接入控制。 
+配置前提 :MME网元与其他网元的对接和业务配置已完成。 
 确认License 7107 MME支持eDECOR为支持。 
-配置过程 通过[SET EDECOR CONTROL POLICY](../../MMESGSN\zh-CN\mml\1261383.html)命令，设置eDECOR控制策略。
-通过[SET DECOR EDECOR CTRL POLICY](../../MMESGSN\zh-CN\mml\1261391.html)命令，设置DECOR/eDECOR公共控制策略。
-通过[ADD DCN IDENTITY](../../MMESGSN\zh-CN\mml\1261386.html)命令，新增DCN-ID配置。配置PLMN+UE
+配置过程 :通过[SET EDECOR CONTROL POLICY]命令，设置eDECOR控制策略。
+通过[SET DECOR EDECOR CTRL POLICY]命令，设置DECOR/eDECOR公共控制策略。
+通过[ADD DCN IDENTITY]命令，新增DCN-ID配置。配置PLMN+UE
 Usage Type关联DCN-ID
-配置实例 配置步骤|配置说明
+配置实例 :配置步骤|配置说明
 ---|---
 SET EDECOR CONTROL POLICY:MMESUPEDECOR="YES";|设置eDECOR控制策略：MME支持eDECOR；
 SET DECOR EDECOR CTRL POLICY:USERDEFDCNSUP="SUPEDECOR";|设置DECOR/eDECOR公共控制策略：用户默认专网支持设置为SUPEDECOR；
 ADD DCN IDENTITY:PLMN="460"-"11",UEUSAGETYPE=129,DCNID=291;|新增DCN-ID配置：PLMN="460"-"11"；用户使用类型为129；DCN标识为291；
-测试用例 测试项目|专网用户eDECOR附着，不用获取鉴权向量，向HSS获取UE Usage Type成功
+测试用例 :测试项目|专网用户eDECOR附着，不用获取鉴权向量，向HSS获取UE Usage Type成功
 ---|---
 测试目的|验证MME能实现eDECOR接入功能
 预置条件|LTE网络内的所有网元运行正常用户在HSS开户，并签约LTE业务，且支持专网接入新局MME支持eDECOR的License打开新局MME支持eDECOR的开关打开新局配置用户默认支持eDECOR
@@ -2460,44 +2460,44 @@ ADD DCN IDENTITY:PLMN="460"-"11",UEUSAGETYPE=129,DCNID=291;|新增DCN-ID配置�
 通过准则|新局局间TAU过程中，根据老局返回的IMSI判断用户支持eDECOR因老局未返回UE Usage Type，MME向HSS发起AIR获取鉴权向量的同时携带AIR-Flags，其中“Send UE Usage Type“标识位为1并根据获取到的“UE Usage Type”本地解析到DCN-IDTAU Accept消息中中携带DCN-ID
 测试结果|-
 # ZUF-78-17-014 CN辅助eNodeB参数 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 CN|核心网，为用户提供连接、对用户进行管理、完成业务承载，提供到外部网络的接口。
 MTC|机器类通信，通过蜂窝网络进行数据传输的机器与机器（Machine to Machine，M2M）通信。
 RRC|无线资源控制，实现终端和RNC之间的无线连接。
-描述 定义 核心网辅助无线参数优化机制，可以减少MTC终端可能出现的频繁Connected/Idle之间状态转换所带来的信令开销，同时可以根据不同的MTC终端业务应用，提供差异化的状态转换策略，实现最优网络性能。
-背景知识 NB-IoT物联网具有海量接入的特性，基于NB-IoT物联网技术接入EPC网络的MTC终端，其数量为亿级单位，是智能手机终端的数十甚至上百倍。如此海量的终端，在与无线建立RRC连接时，会占用大量的无线空口资源，导致无线资源紧张。海量接入的MTC终端同时会对网络信令负荷造成冲击，需要在无线侧减少终端的状态切换，从而减少网络对MTC终端的寻呼开销以及移动性管理过程，降低信令负荷。 
+描述 :定义 :核心网辅助无线参数优化机制，可以减少MTC终端可能出现的频繁Connected/Idle之间状态转换所带来的信令开销，同时可以根据不同的MTC终端业务应用，提供差异化的状态转换策略，实现最优网络性能。
+背景知识 :NB-IoT物联网具有海量接入的特性，基于NB-IoT物联网技术接入EPC网络的MTC终端，其数量为亿级单位，是智能手机终端的数十甚至上百倍。如此海量的终端，在与无线建立RRC连接时，会占用大量的无线空口资源，导致无线资源紧张。海量接入的MTC终端同时会对网络信令负荷造成冲击，需要在无线侧减少终端的状态切换，从而减少网络对MTC终端的寻呼开销以及移动性管理过程，降低信令负荷。 
 引入的核心网辅助无线参数优化机制，可以减少MTC终端可能出现频繁Connected/Idle之间状态转换所带来的信令开销。 
-应用场景 核心网辅助无线参数优化机制：MME根据运营商策略，提供终端签约信息或统计信息给eNodeB，eNodeB根据该信息来优化设置MTC终端Inactive
+应用场景 :核心网辅助无线参数优化机制：MME根据运营商策略，提供终端签约信息或统计信息给eNodeB，eNodeB根据该信息来优化设置MTC终端Inactive
 Timer定时器时长，减少无线侧终端的状态转换，降低信令负荷。 
 可为运营商提供差异化的状态转换策略，包括： 
 基于IMSI和APN的优先策略。 
 基于IMSI的优先策略。 
 基于APN的优先策略。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|降低信令开销，实现最优网络性能。
 终端用户|对终端用户不可见。
-实现原理 系统架构 图1  系统架构图
-[]images/1591692207100.png)
-涉及的网元 本功能由MME、HSS、eNodeB配合完成，不涉及其它网元。 
+实现原理 :系统架构 :图1  系统架构图
+
+涉及的网元 :本功能由MME、HSS、eNodeB配合完成，不涉及其它网元。 
 网元名称|网元作用
 ---|---
 MME|根据运营商策略计算出用户的行为信息，并下发给eNodeB。
 eNodeB|根据MME下发的用户行为，设置MTC终端Inactive Timer定时器时长，来决定MTC终端在没有数据传输时，何时释放该MTC终端的RRC连接。
 HSS|向MME下发用户的Communication Pattern（CP）参数。
-协议栈 图2  Diameter消息
-[]images/1591692207220.png)
+协议栈 :图2  Diameter消息
+
 图3  S1AP消息
-[]images/1591692207350.png)
-本网元实现 当终端注册到PS域后，MME根据运营商策略向eNodeB下发用户行为信息，具体参见[业务流程](1591692205790.html#T_2017510842497__1)。
+
+本网元实现 :当终端注册到PS域后，MME根据运营商策略向eNodeB下发用户行为信息，具体参见[业务流程]。
 该机制实现的功能是：由核心网MME根据MTC终端的签约或统计信息，将MTC终端的Expected
 UE Behaviour相关信息告知eNodeB，eNodeB根据该信息来优化、设置MTC终端RRC连接释放定时器时长，从而决定MTC终端在没有数据传输时，何时释放该MTC终端的RRC连接。 
 图4  核心网辅助无线参数优化机制
-[]images/1591692207470.png)
-业务流程 Attach流程
+
+业务流程 :Attach流程
 图5  Attach流程
-[]images/1591692207650.png)
+
 UE向MME发起Attach请求。 
 MME根据运营商策略，通过Initial Context Setup Request消息给eNodeB下发Expected
 UE Behaviour，包含用户Expected Activity Period、Expected Idle Period、Expected
@@ -2506,7 +2506,7 @@ Source
 of UE Activity Behaviour Information：来源于HSS下发的签约信息或MME内部统计的信息。 
 TAU流程
 图6  TAU流程
-[]images/1591692207780.png)
+
 UE向MME发起TAU请求。 
 MME根据运营商策略，通过Initial Context Setup Request消息给eNodeB下发Expected
 UE Behaviour，包含用户Expected Activity Period、Expected Idle Period、Expected
@@ -2515,7 +2515,7 @@ Source
 of UE Activity Behaviour Information：来源于HSS下发的签约信息或MME内部统计的信息。 
 Service Request流程
 图7  Service Request流程
-[]images/1591692207900.png)
+
 UE向MME发起Service Request请求。 
 MME根据运营商策略，通过Initial Context Setup Request消息给eNodeB下发Expected
 UE Behaviour，包含用户Expected Activity Period、Expected Idle Period、Expected
@@ -2524,81 +2524,81 @@ Source
 of UE Activity Behaviour Information：来源于HSS下发的签约信息或MME内部统计的信息。 
 HO流程
 图8  HO流程
-[]images/1591692208020.png)
+
 UE向MME发起切换流程。 
 MME根据运营商策略，通过Handover Request消息给eNodeB下发Expected UE Behaviour，包含用户Expected
 Activity Period、Expected Idle Period、Expected HO Interval以及Source
 of UE Activity Behaviour Information。 
 Source of UE Activity
 Behaviour Information：来源于HSS下发的签约信息或MME内部统计的信息。 
-系统影响 该特性不涉及系统影响。 
-应用限制 该特性不涉及应用限制。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+系统影响 :该特性不涉及系统影响。 
+应用限制 :该特性不涉及应用限制。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401（General Packet Radio Service (GPRS) enhancementsfor Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access）|4.3.21
 3GPP TS 29.272（Mobility Management Entity (MME)and ServingGPRS Support Node (SGSN) related interfaces based on Diameter protocol）|7.3.193
 3GPP TS 36.413（S1 Application Protocol (S1AP)）|8.3.1、8.4.2
-特性能力 名称|指标
+特性能力 :名称|指标
 ---|---
 基于IMSI和APN的策略|8192（个）
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布
-License要求 该特性需要申请了License许可后，运营商才能获得该特性的服务。 
+License要求 :该特性需要申请了License许可后，运营商才能获得该特性的服务。 
 该特性需要开启License，对应的License项目为“MME支持CN辅助无线参数优化功能”（license ID：7105），此项目显示为“支持”，表示MME支持CN辅助无线参数优化功能。
-对其他网元的要求 UE|eNodeB|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB|SGW|PGW|HSS
 ---|---|---|---|---
 -|√|-|-|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-O&M相关 命令 配置项表1  新增配置项配置项命令基于IMSI号段的CN辅助无线参数统计配置ADD CN ASS RAN PARA STATSSHOW CN ASS RAN PARA STATS表2  修改配置项配置项命令新增参数物联网业务配置SET MME IOT CFGMME是否支持CN辅助无线参数优化功能 
+O&M相关 :命令 :配置项表1  新增配置项配置项命令基于IMSI号段的CN辅助无线参数统计配置ADD CN ASS RAN PARA STATSSHOW CN ASS RAN PARA STATS表2  修改配置项配置项命令新增参数物联网业务配置SET MME IOT CFGMME是否支持CN辅助无线参数优化功能 
 动态管理表3  新增动态管理动态管理项命令查询MTC用户动态信息SHOW MTC USER DYNAMIC INFO表4  修改动态管理动态管理项命令新增参数查询MME用户签约信息SHOW MMEUSERSUBAESE-Communication-Pattern 
-性能统计 该特性不涉及计数器的变化。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过配置基于IMSI和APN的策略，可以为不同用户提供差异化的配置策略。 
-配置前提 MME支持CN辅助无线参数优化功能对应的License项为“支持”。 
+性能统计 :该特性不涉及计数器的变化。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过配置基于IMSI和APN的策略，可以为不同用户提供差异化的配置策略。 
+配置前提 :MME支持CN辅助无线参数优化功能对应的License项为“支持”。 
 SET MME IOT CFG命令中的“MME是否支持CN辅助无线参数优化功能”参数设置为“支持”。 
-配置过程 执行命令[ADD CN ASS RAN PARA STATS](../../MMESGSN\zh-CN\mml\1260364.html)，配置基于IMSI和APN、APN、IMSI的策略。
-配置实例 实例场景1：针对IMSI号段为46001以及APN为zte的终端，运营商希望eNodeB能够根据核心网通知的MTC终端的Expected
+配置过程 :执行命令[ADD CN ASS RAN PARA STATS]，配置基于IMSI和APN、APN、IMSI的策略。
+配置实例 :实例场景1：针对IMSI号段为46001以及APN为zte的终端，运营商希望eNodeB能够根据核心网通知的MTC终端的Expected
 UE Behaviour相关信息，设置MTC终端RRC连接释放定时器时长，来实现最优网络性能，MTC终端的Expected UE Behaviour信息来源于HSS下发的签约信息。 
 命令脚本|解释说明
 ---|---
 ADD CN ASS RAN PARA STATS:IMSI="46001",APN="zte",MMEASSRANPARAPLCY="SUBFIRST";|对于IMSI号段为46001以及APN为zte的终端，设置核心网下发的Expected UE Behaviour信息为签约优先。
-调整特性 本特性暂不涉及调整参数。 
-测试用例 测试项目|Attach流程中给eNodeB下发Expected UE Behaviour信息
+调整特性 :本特性暂不涉及调整参数。 
+测试用例 :测试项目|Attach流程中给eNodeB下发Expected UE Behaviour信息
 ---|---
 测试目的|验证基于IMSI和APN给eNodeB下发Expected UE Behaviour信息
 预置条件|MME支持CN辅助无线参数优化功能对应的License项为“支持”。SET MME IOT CFG命令中的“MME是否支持CN辅助无线参数优化功能”参数设置为“支持”。
 测试过程|配置基于IMSI和APN的下发策略为签约优先/统计优先。用户发起IMSI Attach流程。
 通过准则|用户Attach成功。MME给eNodeB下发Expected UE Behaviour信息，信息来源于HSS签约信息/MME内部用户统计行为。
 测试结果|–
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-015 NB跨RAT移动 
-特性描述 特性描述 描述 定义 跨RAT移动是指UE在空闲态跨RAT移动到NB-IoT或移动出NB-IoT时，MME不分离UE，支持UE移动。
-背景知识 由于网络覆盖的问题，物联网NB-IoT终端可能会移动出NB-IoT RAT覆盖区域，进入WB RAT覆盖区域；或者NB-IoT终端从WB RAT覆盖区域移动进入NB-IoT RAT覆盖区域。MME需要支持UE在空闲态下的跨RAT跨局移动，网络需要支持终端在空闲态下的跨RAT移动。 
-应用场景 UE在空闲态跨RAT移动到NB-IoT覆盖区域NB-IoT终端在空闲态下，从WB RAT覆盖区域移动进入NB-IoT RAT覆盖区域，MME提供NB-IoT RAT的TAI list（包括小区），根据UE的签约对每PDN连接进行处理：保持PDN连接。发起PDN去连接，携带重激活请求。发起PDN去连接，不携带重激活请求。 
+特性描述 :特性描述 :描述 :定义 :跨RAT移动是指UE在空闲态跨RAT移动到NB-IoT或移动出NB-IoT时，MME不分离UE，支持UE移动。
+背景知识 :由于网络覆盖的问题，物联网NB-IoT终端可能会移动出NB-IoT RAT覆盖区域，进入WB RAT覆盖区域；或者NB-IoT终端从WB RAT覆盖区域移动进入NB-IoT RAT覆盖区域。MME需要支持UE在空闲态下的跨RAT跨局移动，网络需要支持终端在空闲态下的跨RAT移动。 
+应用场景 :UE在空闲态跨RAT移动到NB-IoT覆盖区域NB-IoT终端在空闲态下，从WB RAT覆盖区域移动进入NB-IoT RAT覆盖区域，MME提供NB-IoT RAT的TAI list（包括小区），根据UE的签约对每PDN连接进行处理：保持PDN连接。发起PDN去连接，携带重激活请求。发起PDN去连接，不携带重激活请求。 
 UE在空闲态跨RAT移动出NB-IoT覆盖区域NB-IoT终端在空闲态下，移动出NB-IoT RAT覆盖区域，进入WB RAT覆盖区域，MME提供WB RAT的TAI list（包括小区），根据UE的签约对每PDN连接进行处理，处理同UE在空闲态跨RAT移动到NB-IoT覆盖区域。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|提升用户满意度，满足物联网NB-IoT终端的移动性需求。
 物联网终端用户|享受更加优质的网络服务。
-实现原理 系统架构 物联网NB-IoT终端，在NB-IoT RAT覆盖区域接入NB-IoT RAT，NB-IoT接入网络架构如下图所示。
+实现原理 :系统架构 :物联网NB-IoT终端，在NB-IoT RAT覆盖区域接入NB-IoT RAT，NB-IoT接入网络架构如下图所示。
 图1  NB-IoT接入网络架构
-[]images/1591692211551.png)
+
 NB-IoT终端移动出NB-IoT RAT覆盖区域，接入WB RAT，WB接入网络架构如下图所示。
 图2  WB接入网络架构
-[]images/1591692211671.png)
-涉及的网元 网元名称|网元作用
+
+涉及的网元 :网元名称|网元作用
 ---|---
 UE|物联网终端，在NB-IoT RAT覆盖区域接入NB RAT；移动出NB-IoT RAT覆盖区域，接入WB RAT。
 eNodeB|支持NB-IoT终端接入，NB-IoT RAT提供NB-IoT接入方式；WB RAT提供WB接入方式。
 MME|NB-IoT终端空闲态下从NB-IoT移入或移出时，MME提供UE所驻留的RAT-type（WB-E-UTRAN or NB-IoT）的TAI list（包括小区），并根据UE的签约对每PDN连接进行处理。
 HSS|为NB-IoT终端提供每APN签约的PDN-Connection-Continuity AVP。
-本网元实现 NB-IoT终端空闲态下从NB-IoT移入或移出时，MME提供UE所驻留的RAT-type（WB-E-UTRAN or NB-IoT）的TAI list（包括小区），并根据UE的签约对每PDN连接进行处理。 
-业务流程 UE跨RAT移动，MME处理流程
+本网元实现 :NB-IoT终端空闲态下从NB-IoT移入或移出时，MME提供UE所驻留的RAT-type（WB-E-UTRAN or NB-IoT）的TAI list（包括小区），并根据UE的签约对每PDN连接进行处理。 
+业务流程 :UE跨RAT移动，MME处理流程
 UE跨RAT移动，MME处理流程包括： 
 UE在空闲态跨RAT移动到NB-IoT覆盖区域。 
 UE在空闲态跨RAT移出NB-IoT覆盖区域。 
@@ -2615,42 +2615,42 @@ DISCONNECT-PDN-CONNECTION-WITHOUT-REACTIVATION-REQUEST (2)：发起PDN去连接�
 如果UE所有的PDN都去连接了，且UE不支持"attach without PDN connectivity"，则MME应该detach UE，并指示reattach。 
 UE在空闲态跨RAT移动出NB-IoT覆盖区域 
 NB-IoT终端在空闲态下，移动出NB-IoT RAT覆盖区域，进入WB RAT覆盖区域，MME提供WB RAT的TAI list（包括小区），根据UE的签约对每PDN连接进行处理，处理同UE在空闲态跨RAT移动到NB-IoT覆盖区域描述。 
-系统影响 本特性仅涉及业务流程的正常处理，对系统几乎无影响。 
-应用限制 该特性基于3GPP R15 2018年9月份版本实现，与MME对接的周边网元支持NB跨RAT移动时需要对齐到该协议版本。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+系统影响 :本特性仅涉及业务流程的正常处理，对系统几乎无影响。 
+应用限制 :该特性基于3GPP R15 2018年9月份版本实现，与MME对接的周边网元支持NB跨RAT移动时需要对齐到该协议版本。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401: " General Packet Radio Service (GPRS) enhancements for Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access"|4.3.5.1 General4.3.5.3 Tracking Area list management5.3.3.1 Tracking Area Update procedure with Serving GW change5.3.3.2 E-UTRAN Tracking Area Update without SGW Change5.7.1 HSS5.7.2 MMED.3.6 Gn/Gp SGSN to MME Tracking Area Update
 3GPP TS 29.272: “Mobility Management Entity (MME) and Serving GPRS Support Node (SGSN) related interfaces based on Diameter protocol”|7.3.214 PDN-Connection-Continuity
-特性能力 支持本地配置2048条IMSI+APN获取“PDN连接连续性”的数据。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :支持本地配置2048条IMSI+APN获取“PDN连接连续性”的数据。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|7.19.13|首次发布。
-License要求 该特性需要申请了“MME支持NB跨RAT空闲态移动”的License许可后，运营商才能获得NB跨RAT移动特性的服务。 
-对其他网元的要求 UE|eNodeB|SGW|PGW|HSS
+License要求 :该特性需要申请了“MME支持NB跨RAT空闲态移动”的License许可后，运营商才能获得NB跨RAT移动特性的服务。 
+对其他网元的要求 :UE|eNodeB|SGW|PGW|HSS
 ---|---|---|---|---
 -|√|-|-|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-工程规划要求 HSS为NB-IoT终端提供每APN签约的PDN-Connection-Continuity AVP。 
+工程规划要求 :HSS为NB-IoT终端提供每APN签约的PDN-Connection-Continuity AVP。 
 一般要求NB-IoT的拥塞门限低于WB的拥塞门限设置。 
-O&M相关 命令 配置项配置项命令NB跨RAT移动策略SET NB RAT POLICYSHOW NB RAT POLICYNB跨RAT移动配置ADD NB RATSET NB RATDEL NB RATSHOW NB RAT 
+O&M相关 :命令 :配置项配置项命令NB跨RAT移动策略SET NB RAT POLICYSHOW NB RAT POLICYNB跨RAT移动配置ADD NB RATSET NB RATDEL NB RATSHOW NB RAT 
 安全变量该特性不涉及安全变量的变化。 
 软件参数该特性不涉及软参的变化。 
 动态管理该特性不涉及动态管理的变化。 
-性能统计 该特性不涉及计数器的变化。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 MME根据UE的号段策略、APN策略、默认策略和HSS签约信息来决策NB跨RAT后的PDN连续性策略，PDN连续性策略共有三种：保留PDN连接、PDN去连接携带Reactive指示、PDN去连接未携带Reactive指示。 
+性能统计 :该特性不涉及计数器的变化。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :MME根据UE的号段策略、APN策略、默认策略和HSS签约信息来决策NB跨RAT后的PDN连续性策略，PDN连续性策略共有三种：保留PDN连接、PDN去连接携带Reactive指示、PDN去连接未携带Reactive指示。 
 策略配置中，有本功能的开关、优先级配置和全局默认策略。其中，优先级配置的规则如下： 
 本地配置优先原则: 获得本地配置（号段/APN）中的PDN连续性策略，取不到则从HSS 签约获取，如果再取不到则会取全局默认策略。 
 HSS签约优先原则: 先从HSS获取签约中的PDN连续性策略, 取不到则从本地配置（号段/APN）获取，如果再取不到则会取全局默认策略。 
 本地配置中，优先级： 同时配置IMSI+APN > 仅配置APN > 仅配置IMSI。 
-配置前提 MME已开启支持NB跨RAT空闲态移动的License功能。 
-配置过程 使用[SET NB RAT POLICY](../../MMESGSN\zh-CN\mml\1261039.html)命令，打开支持NB跨RAT空闲态移动开关，设置签约和本地配置的优先级，以及全局默认PDN连续性策略。
-使用[ADD NB RAT](../../MMESGSN\zh-CN\mml\1261370.html)命令，新增基于号段和APN本地配置的PDN连续性策略。
-配置实例 ##### HSS签约优先，有本地配置和全局默认策略 
+配置前提 :MME已开启支持NB跨RAT空闲态移动的License功能。 
+配置过程 :使用[SET NB RAT POLICY]命令，打开支持NB跨RAT空闲态移动开关，设置签约和本地配置的优先级，以及全局默认PDN连续性策略。
+使用[ADD NB RAT]命令，新增基于号段和APN本地配置的PDN连续性策略。
+配置实例 :##### HSS签约优先，有本地配置和全局默认策略 
 场景说明
 设置HSS签约优先，HSS签约优先原则: 先从HSS获取签约中的PDN连续性策略, 取不到则从本地配置（号段/APN）获取，如果再取不到则会取全局默认策略。 
 数据规划
@@ -2676,41 +2676,41 @@ HSS签约优先原则: 先从HSS获取签约中的PDN连续性策略, 取不到�
 1|打开NB跨RAT空闲态移动开关，设置为本地配置优先，全局默认策略为保留PDN连接策略。|SET NB RAT POLICY:SUPNBRATIDLEMV="YES",PDNPRIORITY="LOCAL",DEFPDNCONTINUNITY="PDNCONN";
 2|本地配置部分号段和APN为“PDN去连接携带Reactive指示”策略。|ADD NB RAT:IMSI="460119",APN="pc3.auto.local",PDNCONTINUNITY="PDNDISCONNWITHREA";
 3|传送配置。|SYNA;
-调整特性 该特性不涉及调整特性。 
-测试用例 测试项目|MME支持NB-IoT跨RAT空闲态移动性
+调整特性 :该特性不涉及调整特性。 
+测试用例 :测试项目|MME支持NB-IoT跨RAT空闲态移动性
 ---|---
 测试目的|验证本地优先。
 预置条件|1.发生跨RAT TAU流程 （UE在空闲态跨RAT移动到NB-IoT或移动出NB-IoT）。2.MME支持NB跨RAT空闲态移动功能。
 测试过程|1.使用SET NB RAT POLICY命令，打开NB-IoT跨RAT空闲态移动开关，配置优先级及默认PDN连续性策略。2.使用ADD NB RAT命令，新增基于号段和APN配置的PDN连续性策略。3.使用SYNA命令，同步数据。
 通过准则|终端在空闲态能正常跨RAT移动到NB-IoT或移出NB-IoT网络。
 测试结果|–
-常见问题处理 无 
+常见问题处理 :无 
 # ZUF-78-17-016 覆盖增强限制 
-特性描述 特性描述 描述 定义 覆盖增强限制功能是指运营商不允许特定终端和无线使用深度覆盖，以达到减少终端的能量损耗。 
+特性描述 :特性描述 :描述 :定义 :覆盖增强限制功能是指运营商不允许特定终端和无线使用深度覆盖，以达到减少终端的能量损耗。 
 通过以下两种方式对终端进行限制： 
 终端支持覆盖增强限制功能。MME根据终端的签约信息，可以对终端和eNodeB进行覆盖增强限制。 
 CE Mode B的终端，根据UE's usage（终端的指示参数）、在HSS中的签约信息，以及在MME上的配置，来通知eNodeB限制使用CE ModeB的模式。 
-背景知识 物联网终端面对复杂环境下信号覆盖差异问题时，系统通过深度覆盖功能，以便保证地下车库、地下室、地下管道等信号难以到达的地方的信号覆盖，但对于某些终端不需要使用深度覆盖，网络可以关闭使用覆盖增强以减少能量的损耗。比如：某些终端只有上行数据要求时，则可以使用覆盖增强限制功能。 
-应用场景 当某些终端不需要使用深度覆盖，网络可以关闭使用覆盖增强以减少能量的损耗。 
-客户收益 受益方|受益描述
+背景知识 :物联网终端面对复杂环境下信号覆盖差异问题时，系统通过深度覆盖功能，以便保证地下车库、地下室、地下管道等信号难以到达的地方的信号覆盖，但对于某些终端不需要使用深度覆盖，网络可以关闭使用覆盖增强以减少能量的损耗。比如：某些终端只有上行数据要求时，则可以使用覆盖增强限制功能。 
+应用场景 :当某些终端不需要使用深度覆盖，网络可以关闭使用覆盖增强以减少能量的损耗。 
+客户收益 :受益方|受益描述
 ---|---
 运营商|通过覆盖增强限制功能，运营商能获得如下收益：节约投资成本 提高用户满意度提高运营成本效益获得新的收入增长点提升无线频谱利用率
 移动用户|提升终端用户体验用户享受更稳定和更可靠的网络服务
-实现原理 系统架构 本特性利用现有网元消息接口，在现有的接口消息中新增参数字段达到目的，对系统架构无改变。 
-涉及的网元 网元名称|网元作用
+实现原理 :系统架构 :本特性利用现有网元消息接口，在现有的接口消息中新增参数字段达到目的，对系统架构无改变。 
+涉及的网元 :网元名称|网元作用
 ---|---
 MME|接受并保存UE带上的参数并保存。接受HSS的签约信息。通知UE和eNodeB。
 eNodeB|接受并使用MME下发的限制参数。
 HSS|把用户的限制增强的签约带给MME。
 UE|把终端的能力带给MME。
-本网元实现 以下为覆盖增强限制特性涉及的功能点： 
+本网元实现 :以下为覆盖增强限制特性涉及的功能点： 
 终端能够正常接入系统，在附着和TAU时，把支持覆盖限制的情况以及CE ModeB的模式带给MME。 
 MME从HSS得到用户的覆盖增强限制签约信息。 
 决策出限制覆盖增强，通知给UE和eNodeB。 
-业务流程 附着过程
+业务流程 :附着过程
 附着过程如下图所示。 
 图1  附着过程
-[]images/1591692215532.png)
+
 流程说明： 
 UE发起附着，通过eNodeB发附着请求给MME，消息中带上支持覆盖增强限制指示。 
 MME发Update Location Request消息给HSS，以期获得UE的签约信息。 
@@ -2719,47 +2719,47 @@ MME在附着接受消息指示UE和eNodeB启动覆盖增强限制功能。
 TAU过程
 TAU过程如下图所示。 
 图2  TAU过程
-[]images/1591692215652.png)
+
 流程说明 
 UE发起TAU，通过eNodeB发附着请求给MME，消息中带上支持覆盖增强限制指示。 
 MME发Update Location Request消息给HSS，以期获得UE的签约信息。 
 HSS返回用户的签约信息，指示UE签约了覆盖增强限制功能。 
 MME在TAU接受消息指示UE和eNodeB启动覆盖增强限制功能。 
-系统影响 该特性不涉及对系统的影响 
-应用限制 该特性不涉及应用限制 
-特性交互 该特性不涉及与其他特性的交互 
-遵循标准 标准名称|章节
+系统影响 :该特性不涉及对系统的影响 
+应用限制 :该特性不涉及应用限制 
+特性交互 :该特性不涉及与其他特性的交互 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401: "GPRS enhancements for E-UTRAN access "|5.3.2节: Attach procedure5.3.3节: Tracking Area Update procedures
 3GPP TS 36.413: "Evolved Universal Terrestrial Access Network (E-UTRAN); S1 Application Protocol (S1AP)".|全部
-特性能力 该特性不涉及规格指标 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :该特性不涉及规格指标 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 该特性需要申请了License许可后，运营商才能获得该特性的服务。 
+License要求 :该特性需要申请了License许可后，运营商才能获得该特性的服务。 
 该特性需要申请了“MME支持覆盖增强限制功能”的License许可后，运营商才能获得向MME支持覆盖增强限制功能。 
-对其他网元的要求 UE|eNodeB|SGW|PGW|HSS
+对其他网元的要求 :UE|eNodeB|SGW|PGW|HSS
 ---|---|---|---|---
 |√|-|-|√
 覆盖增强限制特性需要HSS、UE和eNodeB配合完成。 
 其中，HSS需要具备把用户签约的覆盖增强限制带给MME；UE把支持覆盖增强限制的指示带给MME，并根据MME的指示限制覆盖增强；eNodeB根据MME的指示限制覆盖增强和CE Mode B。 
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-工程规划要求 无 
-O&M相关 命令 配置项表1  新增配置项配置项命令无线覆盖增强与CE mode B控制开关SET ECOVRESTRIC CTRLSHOW ECOVRESTRIC CTRL无线覆盖增强与CE mode B控制策略配置SET DEFAULT ECOVRESTRICSHOW DEFAULT ECOVRESTRICADD PLMN ECOVRESTRICSET PLMN ECOVRESTRICDEL PLMN ECOVRESTRICSHOW PLMN ECOVRESTRIC 
+工程规划要求 :无 
+O&M相关 :命令 :配置项表1  新增配置项配置项命令无线覆盖增强与CE mode B控制开关SET ECOVRESTRIC CTRLSHOW ECOVRESTRIC CTRL无线覆盖增强与CE mode B控制策略配置SET DEFAULT ECOVRESTRICSHOW DEFAULT ECOVRESTRICADD PLMN ECOVRESTRICSET PLMN ECOVRESTRICDEL PLMN ECOVRESTRICSHOW PLMN ECOVRESTRIC 
 安全变量该特性不涉及安全变量的变化。 
 软件参数该特性不涉及软参的变化。 
 动态管理查询用户签约数据命令SHOW MMEUSERSUB，能够查到签约的扩展ARD（Enhanced Coverage Not Allowed）。查询用户动态信息命令SHOW MMEUSERDYN，能够查到UE是否支持CE Mode B（UE network capability中的RestrictEC）。 
-性能统计 该特性不涉及性能统计的变化。 
-告警和通知 该特性不涉及告警/通知消息的变化。
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 覆盖增强特性主要包括了覆盖增强限制控制、Voice centric方式的CE mode B控制、Data centric的方式CE mode B控制。 
+性能统计 :该特性不涉及性能统计的变化。 
+告警和通知 :该特性不涉及告警/通知消息的变化。
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :覆盖增强特性主要包括了覆盖增强限制控制、Voice centric方式的CE mode B控制、Data centric的方式CE mode B控制。 
 覆盖增强限制控制UE在附着和TAU时，在消息中指示支持覆盖增强限制功能，MME根据HSS的签约和本地策略（根据PLMN配置），指示UE和eNB是否需要限制覆盖增强。 
 Voice centric方式的CE mode B控制在附着请求和TAU请求中，如果eNB通知MME  UE支持CE mode B，并且UE's usage 设置为"voice centric"，MME需要通知eNB 的CE mode B需要限制。 
 Data centric方式的CE mode B控制在附着请求和TAU请求中，如果UE支持CE mode B，并且UE's usage 设置为"data centric"，对于本地用户，MME需要根据用户的签约信息来通知eNB是否需要限制UE的CE mode B；对于漫游用户，MME需要结合HSS的签约和本地策略来通知eNB是否需要限制UE的CE mode B。 
-配置前提 MME支持覆盖增强限制功能的License项已支持。 
-配置过程 ##### 覆盖增强限制配置过程 
+配置前提 :MME支持覆盖增强限制功能的License项已支持。 
+配置过程 :##### 覆盖增强限制配置过程 
 打开覆盖增强限制功能开关。 
 配置覆盖增强限制默认本地策略与优先级。 
 配置基于PLMN覆盖增强限制本地策略与优先级。 
@@ -2767,7 +2767,7 @@ Data centric方式的CE mode B控制在附着请求和TAU请求中，如果UE支
 打开CE mode B控制功能开关。 
 配置CE mode B限制默认本地策略与优先级。 
 配置基于PLMN的CE mode B限制本地策略与优先级。 
-配置实例 ##### 实例 1 
+配置实例 :##### 实例 1 
 场景说明
 MME配置支持覆盖增强限制功能，默认策略优先级为本地优先，本地控制策略为不限制。增加46011 PLMN控制策略，优先级为HSS签约优先，本地控制策略为限制。 
 配置步骤
@@ -2787,8 +2787,8 @@ MME配置支持CE Mode B限制功能，CE Mode B限制默认策略优先级为�
 配置MME支持CE Mode B限制。|SET ECOVRESTRIC CTRL:CEMODEBCTRL="YES";
 配置MME支持CE Mode B限制默认策略，优先级为本地优先，本地限制策略为不限制。|SET DEFAULT ECOVRESTRIC:CEMODEBPRIORITY="LOCAL",CEMODEBLOCALPOLICY="NO";
 配置基于PLMN的CE Mode B限制策略，优先级为HSS签约优先，本地限制策略为限制。|ADD PLMN ECOVRESTRIC:PLMN="460"-"11",CEMODEBPRIORITY="HSSSUBSCRIPT",CEMODEBLOCALPOLICY="YES";
-调整特性 无。 
-测试用例 测试项目|MME支持覆盖增强限制
+调整特性 :无。 
+测试用例 :测试项目|MME支持覆盖增强限制
 ---|---
 测试目的|MME能够根据本地配置、签约来决策是否增强覆盖限制。
 预置条件|MME支持覆盖增强限制功能开关打开。配置默认覆盖增强限制策略优先级为本地优先，默认本地限制策略为限制。配置基于PLMN（46011）的覆盖增强限制策略，优先级为HSS签约优先，本地限制策略为不限制。46011XXXXXXXXXX的用户签约的覆盖增强限制为“不限制”。
@@ -2809,14 +2809,14 @@ MME配置支持CE Mode B限制功能，CE Mode B限制默认策略优先级为�
 测试过程|46011用户UE发起附着，请求中带CE mode B，并且UE's usage 设置为"data centric"，签约覆盖增强的ARD，签约不限制。非46011用户UE发起附着，请求中带CE mode B，并且UE's usage 设置为"data centric"，签约覆盖增强的ARD，签约不限制。
 通过准则|46011的用户在消息INITIAL CONTEXT SETUP REQUEST中不携带CE mode B限制的参数。非46011的用户在消息INITIAL CONTEXT SETUP REQUEST中携带CE mode B限制的参数。
 测试结果|–
-常见问题处理 无。 
+常见问题处理 :无。 
 # ZUF-78-17-017 SCEF连接 
-特性描述 特性描述 术语 术语|含义
+特性描述 :特性描述 :术语 :术语|含义
 ---|---
 能力开放|传统的移动运营商和第三方业务提供商合作，双方可以签订能力开放业务合作协议，由运营商提供网络能力开放功能，第三方借助开放的网络能力接入网络，便捷地使用移动网络的某些基础业务和能力，运营商基于业务合作协议，对第三方执行能力开放接入鉴权及能力使用授权，并提供网络能力开放业务。
-描述 定义 SCEF连接是指MME启动用户状态检测，检测到用户相应的订阅事件，直接与SCEF网元建立连接，发送对应的用户移动状态事件上报给SCEF网元。
-背景知识 为满足网络能力开放应用场景需求，尤其是物联网应用需求，在移动网络中引入网络能力开放平台和业务能力开放功能（SCEF），实现第三方应用的认证授权、计费和与网络侧网元的信息交互、信息隐藏以及封装调用。通过SCEF，能够安全地向第三方开放服务与网络能力。即SCEF是基于电信网络，面向合作方业务平台开放移动网络能力的设备。 
-应用场景 物联网终端往往有事件监控的需求，例如： 
+描述 :定义 :SCEF连接是指MME启动用户状态检测，检测到用户相应的订阅事件，直接与SCEF网元建立连接，发送对应的用户移动状态事件上报给SCEF网元。
+背景知识 :为满足网络能力开放应用场景需求，尤其是物联网应用需求，在移动网络中引入网络能力开放平台和业务能力开放功能（SCEF），实现第三方应用的认证授权、计费和与网络侧网元的信息交互、信息隐藏以及封装调用。通过SCEF，能够安全地向第三方开放服务与网络能力。即SCEF是基于电信网络，面向合作方业务平台开放移动网络能力的设备。 
+应用场景 :物联网终端往往有事件监控的需求，例如： 
 对处于节电状态的物联网终端下发数据，需要监控其移动连接状态。 
 跟踪终端位置，做业务应用的场景（如摩拜单车），需要监控其位置信息。 
 第三方应用需要进行终端状态维护，如无线传感器维护（故障事件上报），需要监控其通信状态。 
@@ -2830,24 +2830,24 @@ SCEF通过HSS向MME下发终端可及订阅请求，MME检测到终端DDN失败�
 物网和人网的终端都要位置跟踪的需求，如移动单车，学生携带的终端等。当第三方应用需要获得终端的位置信息时，需要通过能力开放平台和SCEF订阅终端UE的位置。SCEF通过HSS向MME下发终端可及订阅请求，MME检测到UE位置改变时，向SCEF发送位置上报。SCEF通过能力开放平台通知第三方应用用户位置。 
 通信状态：通信失败订阅/上报 
 第三方应用需要进行终端状态维护，如无线传感器维护（故障事件上报）等，通过能力开放平台和SCEF先订阅终端UE通信失败。SCEF通过HSS向MME下发终端可及订阅请求，MME检测到和无线及终端通信失败时，向SCEF发送位置上报。SCEF通过能力开放平台通知第三方应用用户通信失败。 
-客户收益 受益方|受益描述
+客户收益 :受益方|受益描述
 ---|---
 运营商|与第三方业务提供商进行能力开放业务合作，增加营收，打造共赢的局面。提升用户满意度，满足物联网终端的多样需求。
 移动用户|享受更加优质的网络服务。
-实现原理 系统架构 SCEF通过向3GPP网元订阅能力开放事件，获得相应的能力开放信息。3GPP网络架构如下图所示。 
+实现原理 :系统架构 :SCEF通过向3GPP网元订阅能力开放事件，获得相应的能力开放信息。3GPP网络架构如下图所示。 
 图1  能力开放3GPP网络架构
-[]images/1561450706788.png)
-涉及的网元 网元名称|网元作用
+
+涉及的网元 :网元名称|网元作用
 ---|---
 UE|物联网终端或人网终端，通过eNodeB接入网络。
 eNodeB|支持NB-IoT终端接入，NB-IoT RAT提供NB-IoT接入方式；WB RAT提供WB接入方式。
 MME|SCEF通过HSS向MME订阅如下用户状态信息，MME检测到上面相应的订阅事件，发送对应的事件报告给SCEF。MME和SCEF间建立Diameter链路连接和会话。
 HSS|HSS接收SCEF的用户状态事件订阅，根据订阅的事件类型，或者本地启动事件监测，检测到相应的订阅事件，发送对应的事件报告给SCEF。或者通知MME用户状态事件订阅。HSS和SCEF间建立Diameter链路连接和会话。
 SCEF|第三方应用通过能力开放平台和SCEF订阅终端UE移动状态信息。SCEF网元通过HSS向MME订阅用户移动状态信息，MME启动用户状态检测，检测到用户相应的订阅事件，就发送对应的用户移动状态事件上报给SCEF。SCEF通过能力开放平台上报第三方应用。
-协议栈 其中MME和SCEF之间是T6a接口，Diameter协议栈。 
+协议栈 :其中MME和SCEF之间是T6a接口，Diameter协议栈。 
 图2  T6a接口协议栈
-[]images/1561450706913.png)
-本网元实现 SCEF通过HSS向MME订阅如下用户状态信息，MME检测到上面相应的订阅事件，发送对应的事件报告给SCEF。MME和SCEF间建立Diameter链路连接和会话。 
+
+本网元实现 :SCEF通过HSS向MME订阅如下用户状态信息，MME检测到上面相应的订阅事件，发送对应的事件报告给SCEF。MME和SCEF间建立Diameter链路连接和会话。 
 MME支持如下SCEF用户移动状态订阅和上报： 
 失去连接订阅/上报 
 终端可及订阅/上报 
@@ -2857,7 +2857,7 @@ DDN失败后可达订阅/上报
 ##### 公共订阅/上报流程 
 订阅流程
 订阅业务流程如下图所示。 
-[]images/1561450707100.png)SCS/AS发送Monitoring Request给SCEF，消息中包含：External Identifier(s)或MSISDN(s)或External Group ID、SCS/AS Identifier、SCS/AS Reference ID、Monitoring Type、Maximum Number of Reports、Monitoring Duration、Monitoring Destination Address、SCS/AS Reference ID for Deletion、Group Reporting Guard Time。 
+SCS/AS发送Monitoring Request给SCEF，消息中包含：External Identifier(s)或MSISDN(s)或External Group ID、SCS/AS Identifier、SCS/AS Reference ID、Monitoring Type、Maximum Number of Reports、Monitoring Duration、Monitoring Destination Address、SCS/AS Reference ID for Deletion、Group Reporting Guard Time。 
 如果SCS/AS想订阅一组用户的事件监控，则Monitoring Request消息中携带External Group Identifier and Group Reporting Guard Time。如果External Group Identifier有效，则SCEF应忽略参数External Identifier(s)和MSISDN(s)。 
 SCEF同时收到SCS/AS的多个Monitoring Requests，SCEF根据本地优先级策略进行处理，包括过负荷情况下的处理优先级。 
 SCS/AS和SCEF间采用API接口。 
@@ -2893,7 +2893,7 @@ UE移动到新局，HSS要判断是否新局MME支持请求的事件监控。
 如果HSS检测serving MME不支持请求的监控事件，如UE移动引发，则通知SCEF挂起UE事件监控订阅。SCEF认为网络暂时不能订阅UE事件监控，如下情况导致：由于UE移动UE的MME发生改变，并且新局MME支持挂起的监控事件，HSS应该在订阅新局MME订阅事件监控，并通知SCEF恢复挂起的监控事件。当监控事件被挂起后，Monitoring Duration截止到期，HSS和SCEF应各自删除挂起的监控事件。 
 上报流程
 上报流程如下图所示。 
-[]images/1561450707241.png)MME (1a)或HSS (1b)检测到一个订阅的监控事件。 
+MME (1a)或HSS (1b)检测到一个订阅的监控事件。 
 MME与SCEF交互。 
 
 MME发送Monitoring Indication给SCEF，消息携带参数SCEF Reference ID、Monitoring Event Report、User Identity。如果是一次性事件监控请求，则MME发送Monitoring Indication的同时删除此监控事件订阅；如果该监控事件Maximum Number of Reports有效，则MME对Maximum Number of Reports-1；如果监控事件订阅包括用户标识User Identity，则MME发送Monitoring Indication包括User Identity。 
@@ -2982,64 +2982,66 @@ MME处理同公共订阅流程步骤6并且开始检测通信失败事件。
 处理同公共上报流程步骤1a，MME检测到DDN失败后UE可达。 
 处理同公共上报流程步骤2a。 
 处理同公共上报流程步骤3。 
-系统影响 能力开放存在集中订阅的场景，如某区域的所有终端位置订阅，对MME网元系统性能影响较大。为了避免对现网网元的冲击： 
+系统影响 :能力开放存在集中订阅的场景，如某区域的所有终端位置订阅，对MME网元系统性能影响较大。为了避免对现网网元的冲击： 
 对批量集中订阅，需要各网元逐级进行限速，如：SCEF限速发送订阅事件到HSS，HSS限速发送订阅事件到MME。 
 多个应用平台同时或先后对同一个UE进行同一事件订阅，SCEF具备整合能力，如果订阅内容一致，避免多次在南向给3GPP网元下发订阅，不增加3GPP网元信令负荷；如果订阅内容有不同，才更新南向网元订阅。 
 MME网元启动CPU过负荷控制。 
-应用限制 该特性基于3GPP R15 2018年9月份版本实现，与MME对接的周边网元支持能力开放时需要对齐到该协议版本。 
-特性交互 该特性不涉及与其他特性的交互。 
-遵循标准 标准名称|章节
+应用限制 :该特性基于3GPP R15 2018年9月份版本实现，与MME对接的周边网元支持能力开放时需要对齐到该协议版本。 
+特性交互 :该特性不涉及与其他特性的交互。 
+遵循标准 :标准名称|章节
 ---|---
 3GPP TS 23.401: " General Packet Radio Service (GPRS) enhancements for Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access"|4.3.26 Support for Monitoring Events5.3.2.1 E-UTRAN Initial Attach5.3.3 Tracking Area Update procedures5.3.4 Service Request procedures5.3.4B Data Transport in Control Plane CIoT EPS Optimisation5.7.1 HSS5.7.2 MME
 3GPP TS 23.682: Architecture enhancements to facilitate communications with packet data networks and applications|4.2 Architectural Reference Model4.3.3.6 T6a/T6b Reference Point Requirements4.3.3.7 S6t Reference Point Requirements5.6 Monitoring Procedures
 3GPP TS 29274: Evolved General Packet Radio Service (GPRS) Tunnelling Protocol for Control plane (GTPv2-C)|8.120 Monitoring Event Information
-特性能力 MME最大支持1024个SCEF邻接局。 
-可获得性 版本要求及变更记录 特性版本|发布版本|发布说明
+特性能力 :MME最大支持1024个SCEF邻接局。 
+可获得性 :版本要求及变更记录 :特性版本|发布版本|发布说明
 ---|---|---
 01|V7.19.13|首次发布。
-License要求 该特性需要申请了License许可后，运营商才能获得该特性的服务。 
+License要求 :该特性需要申请了License许可后，运营商才能获得该特性的服务。 
 该特性需要申请了“MME支持事件监控”的License许可后，运营商才能获得向MME订阅用户状态的服务。 
-对其他网元的要求 UE|eNodeB|MME|HSS|SCEF
+对其他网元的要求 :UE|eNodeB|MME|HSS|SCEF
 ---|---|---|---|---
 √|√|√|√|√
  说明： 
 表中“√”表示本功能对网元有要求，“-”表示本功能对网元无要求。 
-工程规划要求 现网部署SCEF网元，和能力开放平台API接口连接，和HSS/MME网元建立Diameter链路。 
-O&M相关 命令 配置项表1  新增配置项配置项命令MME事件监控策略配置SET MMEEVMONIPOLYSHOW MMEEVMONIPOLYDiameter SCEF配置ADD DIASCEFSET DIASCEFDEL DIASCEFSHOW DIASCEF 
+工程规划要求 :现网部署SCEF网元，和能力开放平台API接口连接，和HSS/MME网元建立Diameter链路。 
+O&M相关 :命令 :配置项表1  新增配置项配置项命令MME事件监控策略配置SET MMEEVMONIPOLYSHOW MMEEVMONIPOLYDiameter SCEF配置ADD DIASCEFSET DIASCEFDEL DIASCEFSHOW DIASCEF 
 安全变量该特性不涉及安全变量的变化。 
 软件参数·该特性不涉及软件参数的变化。 
-性能统计 该特性不涉及计数器的变化。 
-告警和通知 该特性不涉及告警/通知消息的变化。 
-业务观察/失败观察 该特性不涉及业务观察/失败观察的变化。 
-话单与计费 该特性不涉及话单与计费的变化。 
-特性配置 特性配置 配置说明 通过SCEF连接特性相关配置，实现MME与SCEF网元的对接，支持对SCEF网元订阅的事件进行监控上报。 
-配置前提 MME已和HSS等网元对接，HSS能够将SCEF订阅的事件下发给MME。 
-配置过程 MME支持事件监控及解除事件监控。 
-配置实例 场景说明 MME支持和SCEF对接。 
-数据规划 网元|地址|端口|主机名|域名
+性能统计 :该特性不涉及计数器的变化。 
+告警和通知 :该特性不涉及告警/通知消息的变化。 
+业务观察/失败观察 :该特性不涉及业务观察/失败观察的变化。 
+话单与计费 :该特性不涉及话单与计费的变化。 
+特性配置 :特性配置 :配置说明 :通过SCEF连接特性相关配置，实现MME与SCEF网元的对接，支持对SCEF网元订阅的事件进行监控上报。 
+配置前提 :MME已和HSS等网元对接，HSS能够将SCEF订阅的事件下发给MME。 
+配置过程 :MME支持事件监控及解除事件监控。 
+配置实例 :场景说明 :MME支持和SCEF对接。 
+数据规划 :网元|地址|端口|主机名|域名
 ---|---|---|---|---
 MME|192.10.100.75|48901|MME主机名|MME域名
 SCEF|192.10.61.1|48901|SCEF-3601.ZTE.COM.CN|ZTE.COM.CN
-配置步骤 步骤|操作|说明
+配置步骤 :步骤|操作|说明
 ---|---|---
 1|SET MMEEVMONIPOLY:MMESUPMONIEV="YES",MMESUPDELMONIEV="YES";|功能开关设置为支持。
 2|配置与SCEF网元对接的Diameter偶联ADD SCTP:ID=3801,NAME="OFC2_SCEF_1",LOCPORT=48901,REMPORT=48901,LOCADDR1="192.10.100.75",REMADDR1="192.10.61.1",PROTOCALTYPE=DIAMETER配置与SCEF网元对接的Diameter连接ADD DIAMCONN:ADJNAME="SCEF-3601.ZTE.COM.CN",ADJDOMAIN="ZTE.COM.CN",SCTPID=3801配置与SCEF网元对接的Diameter链路组ADD DIAMLINKGROUP:LINKGRPID=801,SCTPLINKID=3801,PARTAKEMODE="PARTAKE"配置与SCEF网元对接的Diameter路由ADD DIAMROUTE:ROUTEID=801,LINKGRPID=801,ABILITY="T6a"配置与SCEF网元对接的Diameter路由组ADD DIAMROUTEGROUP:ROUTEGRPID=801,ROUTEID=801配置与SCEF网元对接的Diameter局向路由ADD DIAMADJROUTE:ADJROUTEID=801,ROUTEGROUP=801-1-100,REALM="ZTE.COM.CN",HOSTNAME="SCEF-3601.ZTE.COM.CN"配置与SCEF网元对接的Diameter局向ADD DIAMADJ:ADJID=801,ADJROUTEID=801配置与SCEF网元对接的SCEF配置ADD DIASCEF:SCEFNAME="SCEF-3601.ZTE.COM.CN",ADJOFFICEID=801|MME与SCEF对接。
 3|SYNA|传表，将配置数据传送到前台。
-调整特性 本特性不涉及调整特性。 
-测试用例 测试项目|UE可达事件上报
+调整特性 :本特性不涉及调整特性。 
+测试用例 :测试项目|UE可达事件上报
 ---|---
 测试目的|UE可达事件上报。
 预置条件|MME设置支持事件监控。MME与SCEF对接成功，局向正常。
 测试过程|用户附着成功。eNB释放S1连接。SCEF通过HSS订阅UE可达事件。UE发起业务请求流程。
 通过准则|业务请求过程中MME发送UE可达事件给SCEF。
 测试结果|–
-常见问题处理 SCEF通过HSS订阅监控事件，MME收到对应事件后没有触发，原因可能是监控周期已经过期。 
-缩略语 缩略语 3GPP 3rd Generation Partnership Project第三代合作伙伴计划
+常见问题处理 :SCEF通过HSS订阅监控事件，MME收到对应事件后没有触发，原因可能是监控周期已经过期。 
+ 缩略语 
+ 缩略语 
+3GPP :3rd Generation Partnership Project第三代合作伙伴计划
 # AIA 
 Authentication-Information-Answer鉴权信息检索响应
 # AIR 
 Authentication-Information-Request鉴权信息检索请求
-APN Access Point Network接入点网络
+APN :Access Point Network接入点网络
 # ARD 
 Access Restriction Data	接入限制数据
 # ARP 
@@ -3060,10 +3062,10 @@ Communication Pattern通信模式
 Compressing IP/UDP/RTP Headers头部压缩技术
 # DDN 
 Downlink Data Notification下行数据通知
-DNS Domain Name Server域名服务器
+DNS :Domain Name Server域名服务器
 # DRX 
 Discontinuous Reception 不连续接收
-E-UTRAN Evolved Universal Terrestrial Radio Access Network演进的通用陆地无线接入网络
+E-UTRAN :Evolved Universal Terrestrial Radio Access Network演进的通用陆地无线接入网络
 # EBI 
 EPS Bearer IDEPS承载标识
 # eDRX 
@@ -3072,31 +3074,31 @@ extended Idle Mode DRX演进的DRX
 Enhanced Machine Type Communication增强机器类通信
 # eNB 
 Evolved Node B演进型基站
-eNodeB Evolved NodeB演进的NodeB
-EPC Evolved Packet Core演进的分组核心网
-EPS Evolved Packet System演进的分组系统
+eNodeB :Evolved NodeB演进的NodeB
+EPC :Evolved Packet Core演进的分组核心网
+EPS :Evolved Packet System演进的分组系统
 # ESM 
 EPS Session ManagementEPS会话管理
-FQDN Fully Qualified Domain Name全称域名
+FQDN :Fully Qualified Domain Name全称域名
 # GSM 
 Global System for Mobile Communications全球移动通信系统
-GUTI Globally Unique Temporary Identity全球唯一临时标识
+GUTI :Globally Unique Temporary Identity全球唯一临时标识
 # GW 
 GateWay网关
 # HLCom 
 High Latency Communication高时延通讯
-HSS Home Subscriber Server归属用户服务器
-IMSI International Mobile Subscriber Identity国际移动用户标识
+HSS :Home Subscriber Server归属用户服务器
+IMSI :International Mobile Subscriber Identity国际移动用户标识
 # IPHC 
 Internet Protocol Header CompressionIP头压缩
 # IWMSC 
 Interworking Mobile Switching Center网间移动交换中心
 # LPWAN 
 Low-Power Wide-Area Network低功耗广域网
-LTE Long Term Evolution长期演进
+LTE :Long Term Evolution长期演进
 # MM 
 Mobility Management移动性管理
-MME Mobility Management Entity移动管理实体
+MME :Mobility Management Entity移动管理实体
 # MO 
 Mobile Originated移动台发起
 # MPDCCH 
@@ -3107,20 +3109,20 @@ Multimedia Priority Service多媒体优先业务
 Mobile Terminated移动台终止
 # MTC 
 Machine Type Communication机器类型通信
-NAS Non-Access Stratum非接入层
+NAS :Non-Access Stratum非接入层
 # NB-IoT 
 Narrow Band Internet of Things窄带物联网
 # NPDCCH 
 Narrowband Physical Downlink Control Channel窄带物理下行控制信道
-PDN Packet Data Network分组数据网
-PDU Packet Data Unit分组数据单元
-PGW PDN Gateway分组数据网网关
-PLMN Public Land Mobile Network公共陆地移动网
+PDN :Packet Data Network分组数据网
+PDU :Packet Data Unit分组数据单元
+PGW :PDN Gateway分组数据网网关
+PLMN :Public Land Mobile Network公共陆地移动网
 # PSM 
 Power Saving Mode节电模式
 # PTW 
 Paging Time Window寻呼时间窗
-RAT Radio Access Technology无线接入技术
+RAT :Radio Access Technology无线接入技术
 # ROHC 
 Robust Header Compression健壮性头压缩
 # RRC 
@@ -3131,15 +3133,15 @@ S1 Application ProtocolS1应用协议
 System Architecture Evolution系统架构演进
 # SCEF 
 Service Capability Exposure Function服务能力开放功能（平台）
-SGSN Serving GPRS Support Node服务GPRS支持节点
-SGW Serving Gateway服务网关
+SGSN :Serving GPRS Support Node服务GPRS支持节点
+SGW :Serving Gateway服务网关
 # SMSC 
 Short Message Service Center短消息中心
-TA Tracking Area跟踪区域
-TAU Tracking Area Update跟踪区域更新
+TA :Tracking Area跟踪区域
+TAU :Tracking Area Update跟踪区域更新
 # TEID 
 Tunnel Endpoint Identifier隧道端点标识
-UE User Equipment用户设备
+UE :User Equipment用户设备
 # UMTS 
 Universal Mobile Telecommunication System通用移动通讯系统
 # VJHC 

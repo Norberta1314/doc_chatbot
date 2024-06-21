@@ -10,10 +10,10 @@ import chardet
 
 from parse.html2md import html_to_markdown, parse_title
 
-doc_name = "director"
+# doc_name = "director"
 # doc_name = "rcp"
 # doc_name = "emsplus"
-# doc_name = "umac"
+doc_name = "umac"
 
 title_times_map = {}
 current_set = ['命令功能', '相关命令', '命令模式', '命令默认权限级别', '命令格式', '命令参数解释', '缺省', '使用说明', '范例', '计数器描述', '测量触发点', '采集方式',
