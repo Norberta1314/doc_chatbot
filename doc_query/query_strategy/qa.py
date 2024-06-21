@@ -35,7 +35,7 @@ class Qa:
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
                                                         base_retriever=self.vector.as_retriever(
                                                             search_type="similarity",
-                                                            search_kwargs={"k": 20, "score_threshold": 0.7}))
+                                                            search_kwargs={"k": 20, "score_threshold": 0.8}))
 
     @staticmethod
     def check_no_answer(answer):
@@ -133,7 +133,7 @@ class Qa:
         # context, search_results = self.obtain_contexts_from_vectordb(new_query)
         search_results = self.retriever.get_relevant_documents(new_query)
         if not search_results:
-            return "没有找到相关的背景材料", search_results
+            return "没有找到相关的背景材料", result_by_llm, search_results
         context = ""
         for result in search_results:
             file_name = self.get_source(result.metadata)
