@@ -104,7 +104,7 @@ class Qa:
         context = ""
         for result in search_results:
             file_name = self.get_source(result.metadata)
-            context = f"{context}背景材料《{file_name}》：{result.page_content}。\n"
+            context = f"{context}{result.page_content}。\n"
         context = context.strip("\n ")
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
@@ -137,7 +137,7 @@ class Qa:
         context = ""
         for result in search_results:
             file_name = self.get_source(result.metadata)
-            context = f"{context}背景材料《{file_name}》：{result.page_content}。\n"
+            context = f"{context}{result.page_content}。\n"
         context = context.strip("\n ")
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
