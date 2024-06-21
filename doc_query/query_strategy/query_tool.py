@@ -1,4 +1,4 @@
-from doc_query.common.utils import get_source_name
+from doc_query.common.utils import get_source_name_from_metadata
 from doc_query.query_strategy.qa import init_qa_map, qa_map
 
 
@@ -22,7 +22,7 @@ def get_query(query):
     result = vector.query(query)
     documents = []
     for item in result.get("source_documents", []):
-        name = get_source_name(item[0].metadata)
+        name = get_source_name_from_metadata(item[0].metadata)
         text = item[0].page_content
         documents.append({"text": text, "name": name, "page": item[0].metadata.get("page")})
     result["result"] = result['result'].replace("<unused1>", "")

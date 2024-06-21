@@ -11,7 +11,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_text_splitters import MarkdownHeaderTextSplitter, SpacyTextSplitter
 
 from doc_query.common.utils import read_json, get_file_list, obtain_db_path, get_faiss_name, get_vector_index_name, \
-    get_logger
+    get_logger, get_file_name_from_path
 
 headers_to_split_on = []
 for i in range(1, 9):
@@ -67,14 +67,14 @@ class VersionBase:
             title_mark = ""
             for key, value in md_content.metadata.items():
                 if key.startswith("Header"):
-                    title_mark += value
+                    title_mark += f"{value}-"
 
             self.process_page_content(md_content)
             split_list = common_text_splitter.split_documents([md_content])
             for split in split_list:
                 split.metadata['source'] = file_path
                 if title_mark:
-                    split.page_content = f"《{file_name}》标题:{title_mark.strip(':')}。内容:{split.page_content}"
+                    split.page_content = f"《{get_file_name_from_path(file_name)}》标题:{title_mark.strip(':')}。内容:{split.page_content}"
             doc_list.extend(split_list)
         return doc_list
 

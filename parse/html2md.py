@@ -167,7 +167,7 @@ def digui_parse(element, level, content: Content):
         elif child_ele.name == "br":
             content.add_content(os.linesep)
         elif child_ele.name == "a":
-            content.add_content(f"[{child_ele.text}]({child_ele.get('href')})")
+            content.add_content(f"[{child_ele.text}]")
             if child_ele == element.contents[-1]:
                 content.add_content(os.linesep)
         else:

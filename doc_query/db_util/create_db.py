@@ -10,7 +10,7 @@ from flask import Flask
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
-from doc_query.common.utils import get_file_list, get_source_name
+from doc_query.common.utils import get_file_list, get_source_name_from_metadata
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://vectordb.sqlite'
@@ -51,7 +51,7 @@ def init_data():
         for doc_id, vec_index in faiss_db.index_to_docstore_id.items():
             print(doc_id, vec_index)
             content = faiss_db.docstore.search(vec_index)
-            source = get_source_name(content.metadata)
+            source = get_source_name_from_metadata(content.metadata)
             title_mark = ""
             for key, value in content.metadata.items():
                 if key.startswith("Header"):

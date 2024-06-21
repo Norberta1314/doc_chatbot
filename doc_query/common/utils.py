@@ -100,9 +100,14 @@ def get_vector_index_name():
     return "large.index"
 
 
-def get_source_name(metadata):
+def get_source_name_from_metadata(metadata):
     source = metadata.get("source")
     source_file = source[:-3]
     source_file_list = source_file.split(os.sep)
 
     return source_file_list[-1]
+
+
+def get_file_name_from_path(source):
+    file_name = os.path.basename(source)
+    return file_name[:-3]
