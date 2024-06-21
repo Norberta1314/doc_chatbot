@@ -110,4 +110,4 @@ def get_source_name_from_metadata(metadata):
 
 def get_file_name_from_path(source):
     file_name = os.path.basename(source)
-    return source.split("/")[-1] + "-" + file_name
+    return source.split("/")[-2] + "-" + file_name

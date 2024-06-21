@@ -81,7 +81,7 @@ class VersionBase:
     def process_page_content(self, doc):
         doc.page_content = doc.page_content.replace('<br/>', '')
         doc.page_content = re.sub(r"\n\s*\n", "", doc.page_content)
-        doc.page_content = re.sub(r"\n{2,}", "", doc.page_content)
+        doc.page_content = re.sub(r'\n+', '\n', doc.page_content)
         doc.page_content = re.sub(r" {2,}", "", doc.page_content)
 
     def set_info(self, product, file_name):
