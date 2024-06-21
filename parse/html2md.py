@@ -4,6 +4,7 @@
 # @Time    : 2024/6/12
 # @Author  : lyytaw
 import os.path
+import re
 
 from bs4 import BeautifulSoup, Tag, NavigableString
 
@@ -48,7 +49,7 @@ class ParseTable:
                     cell_value = cell.text.replace(os.linesep, '').strip()
                     row_text.append(cell_value)
                 output += '|'.join(row_text) + os.linesep
-        return output
+        return os.linesep + output
 
     def _fill_merged_cells(self, cell_value, rowspan, colspan, rows, r_index, c_index):
         if rowspan > 1:
@@ -108,7 +109,7 @@ def parse_title(title, level):
                  '功能特性简介', '常见问题处理', '适用网元', 'GPRS', 'DNS', 'HLR', '收益', 'EPC', '场景三', 'PLMN', '调整特性', 'AMF实现', 'NF实现',
                  'HSS', 'eNodeB', '说明', '序号', '动态管理', 'UTRAN', 'SMS', 'TCP', 'GUTI', '场景二', 'MME', 'E-UTRAN', '调测信息采集',
                  '工程规划要求', '本NF/网元实现', '场景一', 'PDN', 'AUSF', 'SGW']:
-        return f"{title} :"
+        return f"{title} : {os.linesep}"
     if level > 8:
         return f"{title} {os.linesep}"
     return f"{(level + 1) * '#'} {title.strip()} {os.linesep}"
@@ -171,7 +172,7 @@ def digui_parse(element, level, content: Content):
             content.add_content(os.linesep)
         elif child_ele.name == "a":
             if child_ele.text.strip() != "":
-                content.add_content(f"[{child_ele.text}]")
+                content.add_content(f"[{child_ele.text.strip()}]")
             if child_ele == element.contents[-1]:
                 content.add_content(os.linesep)
         else:
@@ -240,4 +241,4 @@ def html_to_markdown(html, level, path, title_times_map):
             digui_parse(element, level, content)
             body += content.content
     title_times_map.update(tt_map)
-    return body
+    return re.sub(r'\n+', '\n', body)

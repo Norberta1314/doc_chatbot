@@ -1,5 +1,6 @@
 # 5GC信令流程 
-信令流程 :### 注册及移动性管理 
+信令流程 : 
+### 注册及移动性管理 
 UE要使用网络服务，首先需要向网络进行注册。注册流程分为如下几种场景： 
 初次注册到5G网络。 
 当UE移动出了原来注册的区域时，进行移动性注册更新。 
@@ -13,7 +14,6 @@ UE要使用网络服务，首先需要向网络进行注册。注册流程分为
 AMF重分配流程 
 ##### 注册流程业务场景 
 UE要使用网络服务，首先需要向网络进行注册。注册流程分为如下几种场景： 
-
 初次注册到5G网络。 
 当UE移动出了原来注册的区域时，进行移动性注册更新。 
 周期性注册更新。 
@@ -30,7 +30,6 @@ UE进行SMS over NAS初始注册时。
 ##### 普通注册流程 
 普通注册流程如[图1]所示。
 图1  普通注册
-
 流程说明如下： 
 UE发送Registration Request
 到(R)AN，消息中包含注册类型、用户标识（SUCI或5G-GUTI或PEI）、UE的5GC能力及可选的Requested NSSAI等参数。Registration Request消息中的关键信元参见[表1]。
@@ -121,7 +120,6 @@ T3512 value|周期性注册定时器T3512。当T3512超时时，根据UE是否�
 ##### AMF重分配流程 
 AMF重分配流程如[图2]所示。
 图2  AMF重分配
-
 流程说明如下： 
 对应[普通注册流程]的步骤1~3，Initial AMF已经收到Registration Request
 消息。Registration Request消息中的关键信元参见[表8]。
@@ -173,13 +171,13 @@ AMF发送给(R)AN的第一条消息中更新N2端点信息。
 本节包括以下流程： 
 UE发起的去注册流程 
 网络侧发起的去注册流程 
-业务场景 :UE发起的去注册流程和网络侧发起的去注册流程一般应用于以下场景： 
+业务场景 : 
+UE发起的去注册流程和网络侧发起的去注册流程一般应用于以下场景： 
 当UE不需要继续访问网络接受服务、或者UE无权限继续访问网络时，会发生去注册流程。如果是UE主动退出网络，UE会主动发起去注册流程通知网络，不再接入5GS。网络通知UE，它不再具有5GS的访问权限。 
 当UE无权限继续访问网络时，或者因为操作维护原因网络侧需要UE去注册、或者去注册定时器超时，会发生网络侧发起的去注册流程。 
 ##### UE发起的去注册流程 
 UE发起的去注册流程如[图1]所示。
 图1  UE发起的去注册
-
 流程说明如下： 
 UE发送Deregistration Request (UE Originating Deregistration)
 消息给AMF，消息中携带5G-GUTI、Deregistration type、Access Type等信息。Deregistration
@@ -218,7 +216,6 @@ AMF通知(R)AN释放N2 UE上下文。
 ##### 网络侧发起的去注册流程 
 网络侧发起的去注册流程如[图2]所示。
 图2  网络侧发起的去注册
-
 流程说明如下： 
 UDM请求删除用户注册管理上下文和PDU会话，则UDM将发送Nudm_UEContextManagement_DeregistrationNotification
 消息给AMF，消息中携带SUPI，Access Type，Removal Reason等信息。
@@ -252,7 +249,8 @@ AMF通知(R)AN释放N2 UE上下文。
 业务请求流程 
 基于N2的局内切换流程 
 基于N2的局间或跨RAT切换流程 
-业务场景 :网络的移动性管理既要保证UE可达和数据传输连续，又要防止UE接入某些受限区域或者请求不该使用的服务。移动性限制就是指UE的接入访问受限、移动受限等，只有3GPP接入才有移动性移动性限制。 
+业务场景 : 
+网络的移动性管理既要保证UE可达和数据传输连续，又要防止UE接入某些受限区域或者请求不该使用的服务。移动性限制就是指UE的接入访问受限、移动受限等，只有3GPP接入才有移动性移动性限制。 
 4G中移动性限制通过一些可选特性实现，5G协议中则明确定义了移动性限制有RAT Restriction、Forbidden Area、Service Area Restriction、核心网类型限制四种： 
 RAT Restriction：定义UE不能接入的RAT类型。 
 Forbidden Area：在该区域禁止UE的接入，UE不能发任何消息给网络。 
@@ -261,7 +259,6 @@ Service Area Restriction：分为Allowed Area和Non Allowed Area。UE在Allowed 
 ##### 注册拒绝流程 
 注册拒绝流程如[图1]所示。
 图1  注册拒绝
-
 流程说明如下： 
 UE判断需要发起注册流程时，发送Registration Request
 消息。
@@ -286,7 +283,6 @@ Cause值设置为“N1 mode not allowed”。
 ##### 注册流程 
 注册流程如[图2]所示。
 图2  注册
-
 流程说明如下： 
 UE判断需要发起注册流程时，发送Registration Request
 消息给NG-RAN。
@@ -328,7 +324,6 @@ Mobility Restriction List|定义了后续移动动作的接入限制。其中，
 ##### 配置更新流程 
 配置更新流程如[图3]所示。
 图3  配置更新
-
 流程说明如下： 
 由于用户签约数据改变、PCF提供的UE业务接入限制数据改变、本地策略改变，导致用户移动性限制策略改变，需要把新的用户移动性限制策略通知UE。 
 AMF向UE发送Configuration Update Command
@@ -341,7 +336,6 @@ UE更新Service Area List信息后，向AMF返回Configuration Update Complete
 ##### 业务请求流程 
 业务请求流程如[图4]所示。
 图4  业务请求
-
 流程说明如下： 
 UE判断需要发起业务请求流程，向NG-RAN发送Service Request
 消息。
@@ -357,7 +351,6 @@ AMF继续处理业务请求，直到流程结束。
 ##### 基于N2的局内切换流程 
 基于N2的局内切换流程如[图5]所示。
 图5  基于N2的局内切换
-
 流程说明如下： 
 Source NG-RAN判断需要发起基于N2的切换时，发送Handover Required
 消息。
@@ -371,7 +364,6 @@ AMF继续处理切换，直到流程结束。
 ##### 基于N2的局间或跨RAT切换流程 
 基于N2的局间或跨RAT切换流程如[图6]所示。
 图6  基于N2的局间或跨RAT切换
-
 流程说明如下： 
 基于N2的跨AMF的切换处理完成或垮RAT切换处理完成，且切换过程中Target AMF在Handover Request消息中不携带Mobility
 Restriction List信息。 
@@ -394,14 +386,14 @@ NG-RAN向UE发送Registration Accept
 本节包括以下流程： 
 AMF触发的UE配置更新业务流程 
 PCF触发的UE配置更新业务流程 
-业务场景 :UE的配置可以由网络侧随时发起UE配置更新流程而进行更新。UE配置包括： 
+业务场景 : 
+UE的配置可以由网络侧随时发起UE配置更新流程而进行更新。UE配置包括： 
 AMF决定和提供的接入和移动性管理相关参数，包括配置的NSSAI及其与签约S-NSSAI的映射，允许的NSSAI及其与签约S-NSSAI的映射。 
 当AMF想改变UE的接入和移动性管理相关参数配置时，AMF会发起UE配置更新流程。 
 如果UE配置更新流程要求UE发起注册流程，AMF会显式地向UE做指示。 
 ##### AMF触发的UE配置更新业务流程 
 AMF触发的UE配置更新业务流程如[图1]所示。
 图1  AMF触发的UE配置更新
-
 由于各种原因（例如：UE移动性改变，来自UDM的用户数据更新通知的接收，网络切片配置的改变）或UE需要执行注册过程，AMF确定UE配置更新的必要性。如果UE处于CM-IDLE，则AMF将触发网络触发的业务请求。 
 AMF发送Configuration Update Command
 消息给UE。消息中携带相应的参数，主要包括：5G-GUTI
@@ -432,7 +424,6 @@ NSSAI，而是指示UE在执行注册过程时不提供Access Stratum信令中�
 ##### PCF触发的UE配置更新业务流程 
 PCF触发的UE配置更新业务流程如[图2]所示。
 图2  PCF触发的UE配置更新
-
 PCF触发UE配置更新： 
 AMF从PCF接收到Npcf_AMPolicyControl_Create
 响应消息（接入和移动性相关信息或UE策略容器（UE接入和PDU会话选择相关信息）或两者皆有）。
@@ -450,7 +441,8 @@ UE执行PSI操作并将结果发送到AMF。AMF将结果透明地传输给PCF。
 本节包括以下流程： 
 UE触发业务请求流程 
 网络触发业务请求流程 
-业务场景 :服务请求流程用于空闲状态UE与AMF之间建立信令连接，也可以用于空闲态或连接态UE激活已建立的PDU会话的用户面连接。 
+业务场景 : 
+服务请求流程用于空闲状态UE与AMF之间建立信令连接，也可以用于空闲态或连接态UE激活已建立的PDU会话的用户面连接。 
 UE发起服务请求的主要目的有： 
 将空闲态UE转换成连接态，以发送上行数据/信令。 
 作为对Paging消息的响应。 
@@ -459,7 +451,6 @@ UE发起服务请求的主要目的有：
 ##### UE触发业务请求流程 
 UE触发业务请求流程如[图1]所示。
 图1  UE触发业务请求
-
 流程说明如下： 
 UE发送Service Request
 消息给RAN。如果仅用于建立信令连接，则不携带"Uplink data status"字段。如果用于数据连接恢复，则通过"Uplink
@@ -538,7 +529,6 @@ SMF向AMF发送Nsmf_PDUSession_UpdateSMContext
 ##### 网络触发业务请求流程 
 网络触发业务请求流程如[图2]所示。
 图2  网络触发业务请求
-
 流程说明如下： 
 UPF收到下行数据报文但没有建立N3隧道，UPF本地缓存下行数据报文。 
 UPF向SMF发送N4 Data Notification消息，携带下行数据报文对应的QoS Flow信息。SMF向UPF发送N4
@@ -565,11 +555,11 @@ Service type|Service type信元用于明确业务请求流程的目的。0x00：
 5GS mobile identity|5GS移动身份信元，用于提供5G-S-TMSI。|
 UPF向RAN侧传送下行报文。 
 #### AN释放UE上下文 
-业务场景 :当UE长时间不活动时，(R)AN上UE不活动定时器超时后，(R)AN会发起AN Rlease流程节省网络资源，AN Rlease流程可以释放UE逻辑上的NG-AP（NG Application Protocol）信令连接和关联的N3用户面连接，以及(R) AN的RRC信令和资源。但是当NG-AP信令连接因(R)AN或AMF故障而断开时，则AN Release由AMF或(R)AN在本地进行，不使用(R)AN和AMF之间的任何信令。AN Release会导致UE的所有UP连接都被去激活。 
+业务场景 : 
+当UE长时间不活动时，(R)AN上UE不活动定时器超时后，(R)AN会发起AN Rlease流程节省网络资源，AN Rlease流程可以释放UE逻辑上的NG-AP（NG Application Protocol）信令连接和关联的N3用户面连接，以及(R) AN的RRC信令和资源。但是当NG-AP信令连接因(R)AN或AMF故障而断开时，则AN Release由AMF或(R)AN在本地进行，不使用(R)AN和AMF之间的任何信令。AN Release会导致UE的所有UP连接都被去激活。 
 ##### AN释放UE上下文 
 AN释放UE上下文流程如[图1]所示。
 图1  AN释放UE上下文
-
 流程说明如下。 
 （可选）(R)AN检测到需要释放UE上下文，则发送UE Context Release Request
 消息给AMF，携带释放原因值。UE Context Release Request消息中关键信元参见[表1]。
@@ -610,7 +600,8 @@ RRC Inactive Assistance Information的下发
 UE可达性通知请求 
 UE活动通知 
 RRC连接恢复 
-概述 :连接态下的UE可达性，涉及核心网的流程包括RRC Inactive Assistance
+概述 : 
+连接态下的UE可达性，涉及核心网的流程包括RRC Inactive Assistance
 Information消息的下发、UE可达性通知请求、UE活动通知、RRC连接恢复。 
 ##### RRC Inactive Assistance Information的下发 
 RRC
@@ -620,7 +611,6 @@ Inactive Assistance Information由AMF下发给(R)AN，涉及流程如下：
 基于N2接口的切换 
 RRC Inactive Assistance Information下发给(R)AN的流程如[图1]所示。
 图1  RRC Inactive Assistance Information下发给(R)AN
-
 流程说明如下： 
 业务请求流程中，AMF通过Initial Context Setup Request
 ，将RRC Inactive Assistance
@@ -637,7 +627,6 @@ Information带给(R)AN。Handover Request消息中的关键信元为Core Network
 ##### UE可达性通知请求 
 UE可达性通知请求流程如[图2]所示。
 图2  UE可达性通知请求
-
 流程说明如下： 
 在注册或者签约更新流程中，通过Nudm_UEContextManagement_Registration
 或者Nudm_UEContextManagement_Update
@@ -655,7 +644,6 @@ AMF收到UE可达性请求后，先校验请求UE可达性的网络功能实体�
 ##### UE活动通知 
 UE活动通知流程如[图3]所示。
 图3  UE活动通知
-
 流程说明如下： 
 若AMF发起N2 Notification流程，则(R)AN回复UE Notification。或者UE移动到其他(R)AN，触发其他(R)AN发送Path
 Switch Request
@@ -673,7 +661,6 @@ Reachability|UE可达性标识。REACHABLE：表示UE可达。UNREACHABLE：表�
 ##### RRC连接恢复 
 RRC连接恢复流程如[图4]所示。
 图4  RRC连接恢复
-
 流程说明如下： 
 处于RRC Inactive状态的UE，检测到存在上行数据或者信令需要发送，则发送RRC连接建立请求给(R)AN。 
 若当前接入的(R)AN与源(R)AN之间存在Xn接口，则当前接入的(R)AN通过Xn接口，向源(R)AN请求UE上下文。 
@@ -681,7 +668,8 @@ RRC连接恢复流程如[图4]所示。
 当前接入的(R)AN下发RRC建立成功响应给UE，此时UE进入RRC连接状态。 
 ### 会话管理 
 #### PDU会话建立 
-业务场景 :以移动终端上网为例，最终到达Internet来访问相关的网页、视频，畅游互联网世界，这个过程中就必须建立移动终端与Internet之间相应的数据通道，传递数据包，保证业务端到端的传输质量。这些都需要通过会话管理流程实现。 
+业务场景 : 
+以移动终端上网为例，最终到达Internet来访问相关的网页、视频，畅游互联网世界，这个过程中就必须建立移动终端与Internet之间相应的数据通道，传递数据包，保证业务端到端的传输质量。这些都需要通过会话管理流程实现。 
 PDU会话建立业务场景主要包括： 
 UE需要与外部网络进行业务交互。 
 UE在3GPP与非3GPP接入方式中切换。 
@@ -689,7 +677,6 @@ UE从4G PDN连接切换到5G PDU会话。
 ##### PDU会话建立 
 非漫游PDU会话建立流程如[图1]所示。
 图1  非漫游PDU会话建立
-
 UE向AMF发送NAS消息，该消息中包括：S-NSSAI、DNN、PDU Session ID、Request type、N1 SMF container（PDU Session Establishment Request
 ）等信息。
 关键信元|信元解释|示例
@@ -855,11 +842,11 @@ SMF会话建立完成，向AMF发起Nsmf_PDUSession_SMContextStatusNotify（Nsmf
 如果UE申请的是IPv6类型的PDU会话，SMF还需要通过UPF向UE发布IPv6路由公告。 
 如果会话建立在第4步之后失败了，SMF需要向UDM发起去注册和去订阅的流程。 
 #### PDU会话修改 
-业务场景 :在UE能力变更、QoS参数有修改等场景下，UE和网络侧都可以发起PDU会话修改流程。 
+业务场景 : 
+在UE能力变更、QoS参数有修改等场景下，UE和网络侧都可以发起PDU会话修改流程。 
 ##### PDU会话修改 
 非漫游PDU会话修改流程如[图1]所示。
 图1  非漫游PDU会话修改
-
 PDU会话修改流程可能有多种方式触发，包括以下几种。 
 UE发送NAS message消息发起PDU Session Modification Request
 ，用以对UE使用的QoS策略请求更新。
@@ -931,11 +918,13 @@ Update FAR|如果需要修改先前为PFCP会话创建的FAR，则该信元应�
 SMF将会话更新的结果通知PCF，执行Session Management Policy Modification（Npcf_SMPolicyControl_Update
 ）流程更新PCF的相关策略信息。
 #### PDU会话释放 
-摘要 :本节包括以下流程： 
+摘要 : 
+本节包括以下流程： 
 UE发起的释放流程 
 AMF发起的会话释放流程 
 网络侧发起的会话释放流程 
-业务场景 :PDU会话释放的业务场景主要包括： 
+业务场景 : 
+PDU会话释放的业务场景主要包括： 
 当UE不再需要相关业务时。 
 PCF、SMF本地配置释放策略。 
 UDM订阅数据发生变化。 
@@ -946,7 +935,6 @@ UE不在LADN服务区。
 ##### UE发起的释放流程 
 UE发起的释放流程示意图如[图1]所示。
 图1  非漫游UE发起的PDU会话释放流程图
-
 流程说明如下： 
 当UE不再需要相关业务时，UE发送PDU Session Release Request
 消息请求释放PDU会话。AMF调用SMF的Nsmf_PDUSession_UpdateSMContext
@@ -997,11 +985,9 @@ SMF向UDM发起Deregistration/Unsubscription流程，通知UDM释放与UE会话�
 ##### AMF发起的会话释放流程 
 AMF发起的会话释放流程示意图如[图2]所示。
 图2  非漫游AMF发起的PDU会话释放流程图
-
 流程说明如下： 
 AMF调用SMF的Nsmf_PDUSession_ReleaseSMContext
  Request服务发起会话释放请求。
-
 Nsmf_PDUSession_ReleaseSMContext Request关键信元参见[表3]。
 关键信元|信元解释|示例
 ---|---|---
@@ -1019,7 +1005,6 @@ SMF向UDM发起Deregistration/Unsubscription流程，通知UDM释放与UE会话�
 ##### 网络侧发起的会话释放流程 
 网络侧发起的会话释放流程示意图如[图3]所示。
 图3  非漫游网络侧发起的PDU会话释放流程图
-
 由PCF、UDM或SMF本地策略触发SMF决策发起会话释放流程。 
 SMF释放在会话创建时给UE分配的IP地址，并向UPF发送N4 Session Release Request（PFCP Session Deletion Request
 ）消息，通知用户面释放会话用户面相关的资源。
@@ -1070,7 +1055,8 @@ SMF发起Session Management Policy Termination（Npcf_SMPolicyControl_Delete
 ）流程，通知PCF释放与UE会话相关的所有资源。
 SMF向UDM发起Deregistration/Unsubscription流程，通知UDM释放与UE会话相关的所有资源。 
 #### QoS Flow操作 
-摘要 :QoS Flow操作包括对QoS Flow的建立、修改、删除操作，对QoS Flow的三种操作是在PDU Session建立与修改流程中实现。 
+摘要 : 
+QoS Flow操作包括对QoS Flow的建立、修改、删除操作，对QoS Flow的三种操作是在PDU Session建立与修改流程中实现。 
 对于QoS Flow操作的业务流程描述借用PDU Session操作流程来描述。 
 QoS Flow建立 
 QoS Flow修改 
@@ -1110,7 +1096,6 @@ session establishment accept消息中的Selected SSC mode =1，把选择的sscmo
 ##### SSC Mode2 
 SSC Mode2情况下，锚点变化流程示意图如[图1]所示。
 图1  SSC Mode2会话的锚点变化
-
 当UE位置变化/AF/PCF触发锚点变化时，SMF决策服务的UPF是否发生变化。 
 如果可以应用UL分类器或者Multi-homing，则使用相应的特性功能执行。 
 如果不可以应用UL分类器或者Multi-homing，则执行后续流程。 
@@ -1128,7 +1113,6 @@ UE从第2步接收到指示需要重建PDU会话到相同DN，UE发起新的PDU�
 ##### SSC Mode3 
 SSC Mode3情况下，锚点变化流程示意图如[图2]所示。
 图2  SSC Mode3会话的锚点变化
-
 当UE位置变化/AF/PCF触发锚点变化时，SMF决策服务的UPF是否发生变化。 
 如果可以应用UL分类器或者Multi-homing，则使用相应的特性功能执行。 
 如果不可以应用UL分类器或者Multi-homing，则执行后续流程。 
@@ -1156,7 +1140,6 @@ Session ID。SMF保存新的PDU Session ID，为新的PDU会话选择新的会�
 #### PDU会话支持Uplink Classifier 
 PDU会话支持Uplink Classifier的建立流程如[图1]所示。
 图1  PDU会话支持Uplink Classifier的建立
-
 UE注册到网络中，建立PDU会话，会话锚点是UPF1。 
 AF向PCF请求影响业务路由。
 PCF向SMF发送Npcf_SMPolicyControl_UpdateNotify
@@ -1212,7 +1195,6 @@ Downlink data（App2）：DN->UPF2（PSA2）->UPF3（Uplink Classifier）->RAN->
 #### PDU会话支持Multi-homing 
 PDU会话支持Multi-homing的建立流程如[图1]所示。
 图1  PDU会话支持Multi-homing的建立
-
 UE注册到网络中，建立PDU会话，会话锚点是UPF1。 
 AF向PCF请求影响业务路由。
 PCF向SMF发送Npcf_SMPolicyControl_UpdateNotify
@@ -1249,7 +1231,6 @@ Downlink data（App2）：DN->UPF2（PSA2）->UPF3（Branching Point）->RAN->UE
 #### 支持Local Area Data Network 
 支持LADN业务流程如[图1]所示。
 图1  支持LADN业务
-
 UE检测需要发起注册流程，发送Registration Request
 消息，经过(R)AN给AMF。
 执行注册接受前的鉴权、PEI检查、向UDM请求签约数据等过程。 
@@ -1282,11 +1263,11 @@ location|location信元用于指示UE位置信息。|
 基于Xn口的切换，无UPF变化 
 基于Xn口的切换，重选I-UPF 
 基于Xn口的切换，移除I-UPF 
-业务场景 :切换流程用于将UE从一个源NG-RAN节点切换到一个目标NG-RAN节点，切换过程中使用Xn接口。新的无线条件、负载均衡或特定的服务都可能触发切换流程。 
+业务场景 : 
+切换流程用于将UE从一个源NG-RAN节点切换到一个目标NG-RAN节点，切换过程中使用Xn接口。新的无线条件、负载均衡或特定的服务都可能触发切换流程。 
 ##### 基于Xn口的切换，无UPF变化 
 基于Xn口的切换，无I-UPF变化的流程如[图1]所示。
 图1  基于Xn口的切换，无I-UPF变化
-
 Target NR发送Path Switch Request
 消息给AMF，携带Source AMF UE NGAP ID、UE Location
 Information、UE Security Capabilities、PDU Session To Be Switched in
@@ -1316,7 +1297,6 @@ Session To Be Switched in Uplink List等信息。
 ##### 基于Xn口的切换，重选I-UPF 
 基于Xn口的切换，重选I-UPF的流程如[图2]所示。当切换前PDU会话的用户面路径中有I-UPF，此I-UPF就是Source I-UPF。
 图2  基于Xn口的切换，重选I-UPF
-
 Target NR发送Path Switch Request
 消息给AMF，携带Source
 AMF UE NGAP ID、UE Location Information、UE Security Capabilities、PDU
@@ -1364,7 +1344,6 @@ Response给SMF。
 ##### 基于Xn口的切换，移除I-UPF 
 基于Xn口的切换，移除I-UPF的流程如[图3]所示。
 图3  基于Xn口的切换，移除I-UPF
-
 Target NR发送Path Switch Request
 消息给AMF，携带Source
 AMF UE NGAP ID、UE Location Information、UE Security Capabilities、PDU
@@ -1402,7 +1381,8 @@ I-UPF，通知Source I-UPF释放用户上下文。
 基于N2接口的切换，无I-UPF变化 
 基于N2接口的切换，重选I-UPF 
 基于N2接口的切换，移除I-UPF 
-业务场景 :切换流程用于将UE从一个源NG-RAN节点切换到一个目标NG-RAN节点，切换过程中使用N2接口。新携带SM N2 Information的无线条件、负载均衡或特定的服务都可能触发切换流程。 
+业务场景 : 
+切换流程用于将UE从一个源NG-RAN节点切换到一个目标NG-RAN节点，切换过程中使用N2接口。新携带SM N2 Information的无线条件、负载均衡或特定的服务都可能触发切换流程。 
 当NG-RAN之间不存在Xn接口时或者基于Xn接口的切换流程失败（比如，目标NG-RAN与源UPF之间无IP连接）时，需要通过N2接口进行切换，基于N2接口的切换流程分为准备阶段和执行阶段。 
 准备阶段：源NG-RAN节点发起切换流程后，准备阶段主要完成的工作是目标侧核心网和无线网的资源分配，包括SMF选择新的目标UPF作为中间UPF、目标UPF和UPF（PSA）之间建立N9接口隧道、目标NG-RAN分配无线资源、目标NG-RAN和目标UPF之间建立N3接口隧道、目标AMF上建立UE上下文。 
 执行阶段：源NG-RAN节点通知UE切换，UE切换后，目标NG-RAN通知目标AMF， 目标AMF通知源AMF，源AMF释放被拒绝切换的会话。目标SMF将目标UPF的信息通知UPF（PSA
@@ -1410,7 +1390,6 @@ I-UPF，通知Source I-UPF释放用户上下文。
 ##### 基于N2接口的切换，无I-UPF变化 
 基于N2接口的切换，无I-UPF变化的流程如[图1]所示。
 图1  基于N2接口的切换，无I-UPF变化
-
  说明： 
 若用户面路径中不存在I-UPF，则UPF指UPF（PSA）。 
 若用户面路径中存在I-UPF，则UPF指I-UPF。 
@@ -1550,7 +1529,6 @@ Complete
 ##### 基于N2接口的切换，重选I-UPF 
 基于N2接口的切换，重选I-UPF的流程如[图2]所示。
 图2  基于N2接口的切换，重选I-UPF
-
  说明： 
 若切换前，用户面路径中不存在I-UPF，则Source I-UPF就是UPF（PSA）。 
 若Source NR与Target NR归属同一个AMF管理，则Target AMF和Source AMF指同一个AMF。 
@@ -1636,7 +1614,6 @@ I-UPF，通知Source I-UPF释放PDU会话。
 ##### 基于N2接口的切换，移除I-UPF 
 基于N2接口的切换，移除I-UPF的流程如[图3]所示。
 图3  基于N2接口的切换，移除I-UPF
-
  说明： 
 若Source NR与Target NR归属同一个AMF管理，则Target
 AMF和Source AMF指同一个AMF。 
@@ -1778,7 +1755,6 @@ I-UPF，通知Source I-UPF释放PDU会话。
 #### 基于N2接口的切换取消 
 基于N2接口的切换取消流程如[图1]所示。
 图1  基于N2接口的切换取消
-
  说明： 
 若Source NR与Target NR归属同一个AMF管理，则Target
 AMF和Source AMF指同一个AMF。 
@@ -1824,9 +1800,9 @@ Source AMF回复Handover Cancel Acknowledge
 NSA组网：利用4G现网，成本低、周期短，但是4/5G互操作主要发生在4/5G基站之间，操作复杂。 
 SA组网：需要新建5G核心网，成本高、周期长，但是支持eMBB（增强型移动宽带）、uRLLC（超可靠低时延通信）和mMTC（大规模机器通信）等网络切片以及MEC（移动边缘计算），这是5G网络的核心价值。在该组网架构下，4/5G互操作主要发生在4/5G核心网之间。 
 用户在5G SA和4G EPS系统之间移动，相关的流程统称为4/5G互操作。包括4/5G用户接入EPC、4/5G用户接入5GC、基于N26接口的跨系统移动和无N26接口的跨系统移动。其中基于N26接口的跨系统移动包括了空闲态和连接态下，4/5G跨系统的注册更新、切换、TAU、切换取消等流程。 
-系统架构 :3GPP定义的4/5G互操作的系统架构如[图1]所示。
+系统架构 : 
+3GPP定义的4/5G互操作的系统架构如[图1]所示。
 图1  4/5G互操作系统架构
-
 4/5G互操作涉及4G和5G网络中的多个网元或NF。为了支持4/5G互操作，保证用户的业务连续性，3GPP定义了4个融合网元，包括：HSS+UDM、PCF+PCRF、SMF+PGW-C和UPF+PGW-U，网元功能参见[表1]。
 网元/NF名称|功能
 ---|---
@@ -1839,7 +1815,6 @@ PCF+PCRF|通过N7接口为4/5G用户下发4G和5G控制策略。
 #### 4/5G用户接入EPC 
 4/5G用户接入EPC的流程如[图1]所示。
 图1  4/5G用户接入EPC
-
  说明： 
 此处仅描述4/5G互操作引入的变化部分，对于EPC通用业务交互，不再赘述。 
 流程说明如下： 
@@ -1859,7 +1834,6 @@ MME接收到Create Session Response消息，构造NAS信令响应UE的会话建�
 #### 4/5G用户接入5GC 
 4/5G用户接入5GC的流程如[图1]所示。
 图1  4/5G用户接入5GC
-
  说明： 
 此处仅描述4/5G互操作引入的变化部分，对于5GC通用业务交互，不再赘述。 
 流程说明如下： 
@@ -1900,7 +1874,6 @@ RAN向AMF返回N2 Session Response响应消息。
 ##### 空闲态下基于N26接口，4G跨系统移动到5G进行注册更新 
 空闲态下基于N26接口4G到5G注册更新流程如[图1]所示。
 图1  空闲态下基于N26接口4G到5G注册更新
-
 流程说明如下： 
 UE检测需要发起注册流程（比如从4G覆盖区域进入5G覆盖区域），则发起Registration Request
 给AMF，携带由4G的GUTI映射为5G的GUTI、UE从EPC移入指示（UE Status）、请求的NSSAI（包含全部PDN连接的S-NSSAI）、PDU会话ID列表（包含全部PDN连接的PDU会话ID）、TAU请求（经过4G安全上下文校验处理）、注册类型（Mobility Registration
@@ -1931,7 +1904,6 @@ PDN连接信息、AMF ID、pduSessionsActivateList等信息。
  Request，保存接入信息。若PCF订阅的信息发生变化，则向PCF发送Npcf_SMPolicyControl_Update
 Request消息。
 （可选）PCF根据当前的用户接入参数，授权策略控制参数，向SMF+PGW-C响应Npcf_SMPolicyControl_Update
-
 Response消息。SMF+PGW-C更新会话/QoS Flow控制参数。
 SMF+PGW-C向AMF响应Nsmf_PDUSession_CreateSMContext
  Response消息。
@@ -1945,7 +1917,6 @@ Indication）标记，通知SGW释放用户信息，本地删除承载信息。
 ##### 连接态下基于N26接口，4G跨系统移动到5G进行切换 
 连接态下基于N26接口4G跨系统移动到5G流程如[图2]所示。
 图2  连接态下基于N26接口4G跨系统移动到5G
-
 流程说明如下： 
 Source eNodeB检测到UE需要切换到目标NR，则发送Handover Required给Source MME，携带Handover
 Type、Target ID、Source to Target Container。 
@@ -2009,7 +1980,6 @@ eNodeB以及SGW，删除用户信息，本地删除承载信息。
 ##### 连接态下基于N26接口，4G跨系统移动到5G，切换取消 
 连接态下基于N26接口4G到5G切换取消流程如[图3]所示。
 图3  连接态下基于N26接口4G到5G切换取消
-
 流程说明如下： 
 切换准备阶段，源eNodeB由于某些原因，比如UE重新选择源eNodeB下的小区，发送Handover Cancel给MME，取消切换。 
 MME发送Relocation Cancel Request
@@ -2034,7 +2004,6 @@ MME回复Handover Cancel Acknowledge。
 ##### 空闲态下基于N26接口，5G跨系统移动到4G进行TAU切换 
 空闲态下基于N26接口5G跨系统移动到4G进行TAU切换的流程如[图4]所示。
 图4  空闲态下基于N26接口5G跨系统移动到4G进行TAU切换
-
 流程说明如下： 
 UE检测到需要切换到4G，比如进入4G网络覆盖的小区，则Source eNodeB发送TAU Request消息给Target
 MME，携带5G-GUTI映射的GUTI以及UE从5GC移入指示。 
@@ -2043,7 +2012,6 @@ Target MME发送Context Request
 给Source AMF，携带映射的GUTI、Complete TAU
 Request。
 Source AMF使用当前5G安全上下文校验TAU Request，校验成功后，针对每个已经分配了EBI的PDU会话，发送Nsmf_PDUSession_RetrieveSMContext
-
 Request（携带PDU会话ID、MME Capacity）给SMF+PGW-C，获取PDU会话上下文映射的EPS承载上下文。
 （可选）如果UPF+PGW-U分配了CN隧道信息，则SMF+PGW-C向UPF+PGW-U发送PFCP Session
 Modification Request
@@ -2063,10 +2031,8 @@ MME根据TAI以及UE Usage Type（若UE为4G专网用户）选择SGW。
 SGW分配U面的S1-U和S5/S8-U隧道资源，并向SMF+PGW-C发送Modify Bearer Request消息。 
 （可选）若SGW采用CUPS架构，则Create Session Request消息由SGW-C处理，SGW-C向SGW-U发送Sxa会话建立消息，进行UP资源分配。
 （可选）SMF+PGW-C保存接入信息。若PCF订阅的信息发生变化，则向PCF发送Npcf_SMPolicyControl_Update
-
 Request消息。
 （可选）PCF根据当前的用户接入参数，授权策略控制参数，向SMF+PGW-C响应Npcf_SMPolicyControl_Update
-
 Response消息。
 SMF+PGW-C更新会话/承载参数，通知UPF+PGW-U更新PFCP会话，消息PFCP Session Modification Request
 中包括被更新的策略控制参数及S5/S8-U隧道信息。
@@ -2085,7 +2051,6 @@ UE回复TAU Complete。
 ##### 连接态下基于N26接口，5G跨系统移动到4G进行切换 
 连接态下基于N26接口5G跨系统移动到4G进行切换的流程如[图5]所示。
 图5  连接态下基于N26接口5G跨系统移动到4G进行切换
-
 流程说明如下： 
 Source NR检测到需要切换UE到目标小区，则发送Handover Required
 给Source AMF，携带Handover
@@ -2126,10 +2091,8 @@ MME发送Modify Bearer Request给SGW，携带目标eNodeB的用户面地址和�
 SGW发送Modify Bearer Request给SMF+PGW-C，携带SGW控制面地址和TEIDC，以及用户面地址和TEIDU。 
 （可选）若SGW是CUPS的，则Modify Bearer Request消息由SGW-C处理，SGW-C向SGW-U发送Sxa会话修改消息。 
 （可选）SMF+PGW-C保存接入信息。若PCF订阅的信息发生变化，则SMF+PGW-C向PCF发送Npcf_SMPolicyControl_Update
-
 Request消息。
 （可选）PCF根据当前的用户接入参数，授权策略控制参数，向SMF+PGW-C响应Npcf_SMPolicyControl_Update
-
 Response消息。
 SMF+PGW-C更新会话/承载参数，通过PFCP Session Modification Request
 通知UPF+PGW-U更新PFCF会话，携带被更新的策略控制参数及S5/S8-U隧道信息。
@@ -2146,7 +2109,6 @@ UE检测到需要接入方式发生变化，则发起TAU流程，EPC核心网（
 ##### 连接态下基于N26接口，5G跨系统移动到4G，切换取消 
 连接态下基于N26接口5G到4G切换取消流程如[图6]所示。
 图6  连接态下基于N26接口5G到4G切换取消
-
 流程说明如下： 
 由于某些原因，比如UE重新选择到源NR的小区，源NR发送Handover Cancel
 给AMF，通知AMF取消切换。
@@ -2161,7 +2123,6 @@ Request给SGW。
 MME回复Relocation Cancel Response
 给AMF。
 （可选）若已通知SMF+PGW-C创建非直传隧道，则AMF发送Nsmf_PDUSession_UpdateSMContext
-
 Request，携带切换取消指示。
 （可选）SMF+PGW-C通过N4接口消息通知UPF+PGW-U释放非直传数据。 
 （可选）UPF+PGW-U释放资源后，响应SMF+PGW-C。 
@@ -2176,7 +2137,6 @@ AMF回复Handover Cancel Acknowledge
 ##### 无N26接口的4G跨系统移动到5G 
 无N26接口的4G跨系统移动到5G流程如[图1]所示。
 图1  无N26接口的4G跨系统移动到5G
-
 流程说明如下： 
 UE已经注册到EPS系统，并激活了PDN连接。 
 UE检测到需要切换到5G网络，比如进入5G覆盖区域，则发起Registration Request
@@ -2200,7 +2160,6 @@ UE回复Registration Complete
 ##### 无N26接口的5G跨系统移动到4G 
 无N26接口的5G跨系统移动到4G流程如[图2]所示。
 图2  无N26接口的5G跨系统移动到4G
-
 流程说明如下： 
 UE注册到5GC并激活了PDU会话。 
 UE检测到需要切换到4GS，比如进入4G网络覆盖区域，则根据网络指示“支持无N26互操作”，UE发送Attach Request给MME，携带4G GUTI（native GUTI或者mapped GUTI）和UE从5GC移入指示。若存在5G激活的PDU会话，则附着请求中包含PDN连接激活请求，请求类型为“Handover”，并携带包含该PDU会话ID的PCO。
@@ -2213,7 +2172,8 @@ HSS+UDM返回Update Location Acknowledge给MME，携带SMF+PGW-C地址、APN等�
 若还存在未切换的PDU会话，则UE继续发起Handover类型的PDN连接建立流程，将5G PDU会话转化为4G PDN连接。 
 针对已经切换完成的PDU会话，SMF+PGW-C触发5GC侧PDU会话释放，不通知UE。 
 ### VoNR/EPS Fallback 
-VoNR :##### VoNR注册 
+VoNR : 
+##### VoNR注册 
 VoNR注册可分为以下3个流程，3个流程必须按顺序进行。 
 [5G注册及数据DNN的PDU会话建立流程]
 [IMS DNN的PDU会话建立与P-CSCF发现流程]
@@ -2221,7 +2181,6 @@ VoNR注册可分为以下3个流程，3个流程必须按顺序进行。
 ###### 5G注册及数据DNN的PDU会话建立流程 
 5G注册及数据DNN的PDU会话建立流程如[图1]所示。
 图1  5G注册及数据DNN的PDU会话建立流程
-
 流程说明： 
 UE发送Registration Request
 到(R)AN，消息中包含注册类型、用户标识、UE的5GC能力及可选的Requested NSSAI等参数。另外还包括VoNR关键信元： UE's usage setting。UE's usage setting包括以下两种取值：
@@ -2269,7 +2228,6 @@ New AMF向UE发送Registration Accept
 ###### IMS DNN的PDU会话建立与P-CSCF发现流程 
 IMS DNN的PDU会话建立与P-CSCF发现流程如[图2]所示。
 图2  IMS DNN的PDU会话建立与P-CSCF发现流程
-
 流程说明： 
 UE向AMF发送PDU Session Establishment Request
 消息。消息中包括：S-NSSAI(s)、DNN、PDU Session ID、Request type、N1 SMF container（PDU Session Establishment Request
@@ -2309,7 +2267,6 @@ SMF向AMF回复Nsmf_PDUSession_UpdateSMContext
 ###### IMS注册流程 
 IMS注册流程如[图3]所示。
 图3  IMS注册流程
-
 流程说明： 
 UE向IMS拜访网络入口P-CSCF发送REGISTER消息请求注册。 
 P-CSCF收到REGISTER消息后，解析出用户的PANI（P-Access-Network-Info），识别出5G信息，确认VoNR用户的PANI头域增加了NR相关接入信息如“3GPP-NR”、“3GPP-NR-FDD”或“3GPP-NR-TDD”， 即可使用VoLTE的所有功能。 
@@ -2347,7 +2304,6 @@ VoNR语音呼叫被叫流程
 ###### VoNR语音呼叫主叫流程 
 VoNR语音呼叫主叫流程如[图1]所示。
 图1  VoNR语音呼叫主叫流程
-
 流程说明如下： 
 5G和IMS注册过程。 
 5G注册过程。 
@@ -2391,7 +2347,6 @@ AS收到BYE消息后，根据消息中的PANI头域将用户位置信息填写�
 ###### VoNR语音呼叫被叫流程 
 VoNR语音呼叫被叫流程如[图2]所示。
 图2  VoNR语音呼叫被叫流程
-
 流程说明如下： 
 5G注册和IMS注册过程。 
 5G注册过程。 
@@ -2537,7 +2492,6 @@ I-SMF不变的注册更新
 ###### I-SMF更换的注册更新 
 I-SMF更换的注册更新流程如[图1]所示。
 图1  I-SMF更换的注册更新
-
 流程说明： 
 UE发起移动性注册更新流程，向(R)AN发送AN消息，包括AN parameters和Registration Request
 消息。(R)AN将Registration Request
@@ -2559,7 +2513,6 @@ Target I-SMF向A-SMF发送Nsmf_PDUSession_Update
 A-SMF向A-UPF发起N4会话更新流程。 
 A-SMF向Target I-SMF返回Nsmf_PDUSession_Update
  Response消息。
-
 Target I-SMF向AMF发送Nsmf_PDUSession_CreateSMContext
  Response消息，同时Target I-SMF启动一个定时器用于释放转发隧道。
 AMF向UE发送Registration Accept
@@ -2584,7 +2537,6 @@ AMF向Target I-SMF发送Nsmf_PDUSession_UpdateSMContext
 ###### I-SMF插入的注册更新 
 I-SMF插入的注册更新流程如[图2]所示。
 图2  I-SMF插入的注册更新
-
 流程说明： 
 UE发起移动性注册更新流程，向(R)AN发送AN消息包括AN parameters和Registration Request
 消息。(R)AN将Registration Request
@@ -2627,7 +2579,6 @@ AMF向Target I-SMF发送Nsmf_PDUSession_UpdateSMContext
 ###### I-SMF删除的注册更新 
 I-SMF删除的注册更新如[图3]所示。
 图3  I-SMF删除的注册更新
-
 流程说明： 
 UE发起移动性注册更新流程，向(R)AN发送AN消息包括AN parameters和Registration Request
 消息。(R)AN将Registration Request
@@ -2681,24 +2632,19 @@ I-SMF侧的AN释放流程同通用的AN释放流程。流程说明参见AN释放
 ###### 终端发起的业务请求触发I-SMF更新 
 终端发起的业务请求触发I-SMF更新的业务流程如[图1]所示。
 图1  终端发起的业务请求触发I-SMF更新
-
 流程说明如下： 
 UE发起业务请求。 
-
 UE向RAN发送Service Request
 请求（ 包含Uplink data status、PDU Session status），触发业务请求。
-
 RAN向AMF转发UE的Service Request
 请求。
 AMF根据UE的位置判断其移出old I-SMF的服务区域，AMF选择new I-SMF。 
 AMF向new I-SMF发送Nsmf_PDUSession_CreateSMContext
  Request 请求(包含PDU Session ID, SM Context ID, UE location info, Access Type, RAT Type, Operation Type)。
-
 new I-SMF和old I-SMF交互。 
 new I-SMF向old I-SMF发送Nsmf_PDUSession_Context Request请求（包含SM context type）。 
 old I-SMF向new I-SMF返回Nsmf_PDUSession_Context Response响应（包含SM context）。 
 new I-SMF选择new I-UPF。 
-
 new I-UPF 向new I-UPF发起N4 Session Establishment流程。 
 new I-UPF 向new I-UPF发送N4 Session Establishment Request
 请求。
@@ -2734,7 +2680,6 @@ AMF向old I-SMF发送Nsmf_PDUSession_ReleaseSMContext
  Reques请求，同时old I-SMF启用一个定时器，用于延时释放。
 old I-SMF向AMF返回Nsmf_PDUSession_ReleaseSMContext
  Response响应。
-
 AMF 向new I-SMF发送Nsmf_PDUSession_UpdateSMContext
  Request请求 (包含N2 SM information, RAT type, Access type) 。
 new I-SMF向new I-UPF发起N4 Session Modification流程。 
@@ -2748,7 +2693,6 @@ new I-SMF向A-SMF发送Nsmf_PDUSession_Update
 A-SMF向PCF发起SMF initiated SM Policy Modification。 
 A-SMF返回Nsmf_PDUSession_Update
  Response响应。
-
 new I-SMF向AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应。
 （可选）[步骤9]定时器超时后，new I-SMF与I-UPF交互。
@@ -2766,7 +2710,6 @@ old I-UPF向old I-SMF返回N4 Session Release Response（即PFCP Session Deletio
 ###### 终端发起的业务请求触发I-SMF插入 
 终端发起的业务请求触发I-SMF插入流程如[图2]所示。
 图2  终端发起的业务请求触发I-SMF插入
-
 流程说明如下： 
 UE发起业务请求。 
 UE向RAN发送Service Request
@@ -2803,7 +2746,6 @@ PCF向UPF(PSA)返回N4 Session Modification Response
 响应。
 A-SMF向new I-SMF返回Nsmf_PDUSession_Update
  Response响应。
-
 I-SMF向AMF发送Nsmf_PDUSession_CreateSMContext
  Response 响应(包含N2 SM information (PDU Session ID, QFI(s), QoS profile(s), CN N3 Tunnel Info, S-NSSAI, User Plane Security Enforcement, UE Integrity Protection Maximum Data Rate), N1 SM Container, Cause))，同时new I-SMF启用一个定时器用于释放转发隧道。
 AMF向RAN发送PDU Session Resource Setup Request
@@ -2829,7 +2771,6 @@ I-SMF向A-SMF发送Nsmf_PDUSession_Update
 A-SMF向PCF发送SMF initiated SM Policy Modification。 
 A-SMF返回Nsmf_PDUSession_Update
  Respons响应。
-
 I-SMF向AMF发送Nsmf_PDUSession_UpdateSMContext
  Response响应。
 （可选）[步骤9]中定时器超时后，old I-SMF和old I-UPF交互。
@@ -2840,7 +2781,6 @@ old I-UPF向old I-SMF返回N4 Session Release Response（即PFCP Session Deletio
 ###### 终端发起的业务请求触发I-SMF删除 
 终端发起的业务请求触发I-SMF删除流程如[图3]所示。
 图3  终端发起的业务请求触发I-SMF删除
-
 流程说明如下： 
 UE发起业务请求。 
 UE向RAN发送Service Request
@@ -2877,7 +2817,6 @@ RAN跟UE交互，进行RRC Connection reconfiguration。
 RAN给AMF返回PDU Session Resource Setup Response
 消息。
 AMF与I-SMF交互。 
-
 AMF向I-SMF发送Nsmf_PDUSession_ReleaseSMContext
  Request 请求，同时I-SMF启用一个定时器。
 I-SMF向AMF返回Nsmf_PDUSession_ReleaseSMContext
@@ -2904,7 +2843,6 @@ old I-UPF向I-SMF返回N4 Session Release Response（即PFCP Session Deletion Re
 ###### 终端发起的业务请求触发I-SMF不变（I-UPF变化） 
 终端发起的业务请求触发I-SMF不变（I-UPF变化）的流程如[图4]所示。
 图4  终端发起的业务请求触发I-SMF不变（I-UPF变化）
-
 流程说明如下： 
 UE向RAN发送Service Request
 请求，其中携带要激活的PDU会话列表、允许的PDU会话列表、PDU会话状态等信息。
@@ -2965,7 +2903,6 @@ old I-UPF返回N4 Session Release Response（即PFCP Session Deletion Response
 ##### 网络侧触发业务请求 
 网络发起的业务请求流程如[图1]所示。
 图1  网络发起的业务请求（带I-SMF）
-
 流程说明如下： 
 UE向I-UPF发送PDU会话的下行数据。 
 I-UPF与I-SMF交互。 
@@ -3000,7 +2937,6 @@ UPF通过在业务请求流程中建立的N3隧道向UE发送缓冲的下行数�
 ##### PDU会话建立 
 UE发起的带I-SMF的会话建立流程如[图1]所示。
 图1  UE发起的带I-SMF的会话建立流程
-
 流程说明如下： 
 UE向AMF发送PDU Session Establishment Request
 （NAS）消息，消息中包含：S-NSSAI(s)、DNN、PDU Session ID、Request type、Old PDU Session ID、SM container等信息。
@@ -3049,7 +2985,6 @@ I-SMF向AMF发送Nsmf_PDUSession_UpdateSMContext
 ###### UE发起的PDU会话修改 
 UE发起的带I-SMF的会话修改流程如[图1]所示。
 图1  UE发起的带I-SMF的会话修改
-
 流程说明如下： 
 UE发起会话修改。 
 UE向AMF发送PDU会话修改请求PDU Session Modification Request
@@ -3092,12 +3027,10 @@ UDM发起的带I-SMF的会话修改
 NR发起的带I-SMF的会话修改 
 ####### PCF发起的带I-SMF的会话修改 
 图1  PCF发起的带I-SMF的会话修改
-
 流程说明如下： 
 A-SMF收到PCF的Npcf_SMPolicyControl_UpdateNotify
 消息，需要新建或更新QoS Flow。
 （可选）如果A-SMF判断需要发起EBI分配流程，则执行EBI分配流程。 
-
 A-SMF向I-SMF发送Nsmf_PDUSession_Update
  Request消息。
 I-SMF向AMF发送Namf_Communication_N1N2MessageTransfer
@@ -3107,7 +3040,6 @@ I-SMF向AMF发送Namf_Communication_N1N2MessageTransfer
 ）。
 AMF向I-SMF发送Nsmf_PDUSession_UpdateSMContext
  Request消息，携带N2 SM信息和用户位置信息，I-SMF返回响应。
-
 （可选）UE返回会话修改完成响应。 
 （可选）(R)AN将Uplink NAS Transport
 消息转发到AMF。
@@ -3116,7 +3048,6 @@ AMF向I-SMF发送Nsmf_PDUSession_UpdateSMContext
 I-SMF向I-UPF发送N4会话修改请求（Session Modification Request
 /Session Modification Response
 ），通知I-UPF更新New QoS Flow的上行PDR和下行PDR。
-
 I-SMF向A-SMF发送Nsmf_PDUSession_Update
  Response消息，该响应消息中携带UE向I-SMF发送的PDU会话修改命令Ack消息。
 （可选） A-SMF通知A-UPF修改N4会话流程（Session Modification Request
@@ -3126,7 +3057,6 @@ I-SMF向A-SMF发送Nsmf_PDUSession_Update
  ），通知会话修改结果。
 ####### UDM发起的带I-SMF的会话修改 
 图2  UDM发起的带I-SMF的会话修改
-
 流程说明如下： 
 UDM向A-SMF发Nudm_SubscriberDataManagement_Notification
 消息，携带SUPI和会话管理订阅数据。A-SMF更新会话管理订阅数据后向UDM返回Nudm_SubscriberDataManagement_Notification
@@ -3165,7 +3095,6 @@ I-SMF向A-SMF返回[Nsmf_PDUSession_Update] Response消息，该响应消息中�
  ），通知会话修改结果。
 ####### NR发起的带I-SMF的会话修改 
 图3  NR发起的带I-SMF的会话修改
-
 步骤说明如下： 
 (R)AN发起会话修改流程。 
 (R)AN向AMF发送会话修改请求（PDU Session Resource Modify Indication
@@ -3206,7 +3135,6 @@ I-SMF向A-SMF返回Nsmf_PDUSession_Update
 ###### UE发起的PDU会话释放 
 UE发起的PDU会话释放流程如[图1]所示。
 图1  AMF通过UpdateSMContext通知释放
-
 流程说明如下： 
 I-SMF发起请求。 
 I-SMF收到AMF发起Nsmf_PDUSession_UpdateSMContext
@@ -3270,7 +3198,6 @@ UDM发起的带I-SMF的会话释放
 RAN发起的带I-SMF的会话释放 
 ####### AMF通过ReleaseSMContext 通知释放 
 图1  AMF通过ReleaseSMContext 通知释放
-
 流程说明如下： 
 （可选）AMF在UE或网络发起的去注册过程中发起PDU会话释放。在这种情况下，UE和I-SMF之间没有NAS消息，I-SMF收到AMF发起的Nsmf_PDUSession_ReleaseSMContext
 服务操作。
@@ -3299,7 +3226,6 @@ A-SMF向I-SMF返回Nsmf_PDUSession_Release
  Response响应，并清除本地资源。
 ####### SMF发起的带I-SMF的会话释放 
 图2  SMF发起的带I-SMF的会话释放
-
 流程说明如下： 
 由于动态命令或本地策略，A-SMF决定需要释放会话。 
 N4会话释放。 
@@ -3350,7 +3276,6 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### I-SMF主动发起的会话释放 
 图3  I-SMF主动发起的会话释放
-
 流程说明如下： 
 I-UPF检测idle态的会话有效性到期或收到A-UPF的error ind指示，上报给I-SMF。 
 I-SMF向A-SMF发送Nsmf_PDUSession_Update
@@ -3405,7 +3330,6 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### PCF发起的带I-SMF的会话释放 
 图4  PCF发起的带I-SMF的会话释放
-
 流程说明如下： 
 PCF向A-SMF下发会话释放指示。 
 PCF向A-SMF发送Npcf_SMPolicyControl_UpdateNotify
@@ -3460,7 +3384,6 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### UDM发起的带I-SMF的会话释放 
 图5  UDM发起的带I-SMF的会话释放
-
 流程说明如下： 
 A-SMF收到UDM的签约数据变化通知Nudm_SubscriberDataManagement_Notification
 。
@@ -3513,7 +3436,6 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
  (Release)。
 ####### RAN发起的带I-SMF的会话释放 
 图6  RAN发起的带I-SMF的会话释放
-
 流程说明如下： 
 发起请求。 
 RAN向I-SMF发送N2 Message。 
@@ -3577,7 +3499,6 @@ I-SMF释放会话相关资源，向AMF发起Nsmf_PDUSession_NotifySMContextStatu
 I-SMF不变的Xn切换 
 ###### 插入I-SMF的Xn切换 
 图1  插入I-SMF的Xn切换
-
 流程说明如下： 
 源基站与目的基站进行切换准备以及执行过程，Target NG-RAN向AMF发起N2 Path Switch Request
 请求。
@@ -3612,7 +3533,6 @@ Target NG- RAN 向Source NG-RAN发起资源释放请求。
 后续流程同现有处理。 
 ###### 更换I-SMF的Xn切换 
 图2  更换I-SMF的Xn切换
-
 流程说明如下： 
 UE通过Source NG-RAN与Target NG-RAN间的Xn接口切换到Target NG-RAN下，TargetNG-RAN发送N2 Path Switch Request
 消息给AMF，携带需要切换的PDU会话列表、用户位置信息。
@@ -3652,7 +3572,6 @@ TARGET RAN 向Source RAN发起资源释放请求。
 后续流程同现有处理。 
 ###### 删除I-SMF的Xn切换 
 图3  删除I-SMF的Xn切换
-
 流程说明如下： 
 UE通过Source NG-RAN与Target NG-RAN间的Xn接口切换到Target NG-RAN下，Target NG-RAN发送N2 Path Switch Request
 消息给AMF，携带需要切换的PDU会话列表、用户位置信息。
@@ -3691,7 +3610,6 @@ TARGET RAN 向Source RAN发起资源释放请求。
 后续流程同现有处理。 
 ###### I-SMF不变的Xn切换 
 图4  I-SMF不变的Xn切换
-
 该流程场景不做描述，相较于无I-SMF的基于Xn接口NG-RAN间的Handover流程，主要存在如下差异点： 
 步骤1中，AMF收到Path Switch Request
 后，根据N2消息中携带的信元，分别识别需要激活和去激活的PDU。
@@ -3705,10 +3623,8 @@ I-SMF删除的N2切换
 I-SMF不变的N2切换 
 ###### I-SMF更新的N2切换 
 图1  I-SMF更新的N2切换
-
 流程说明如下： 
 准备T测业务资源
-
 Source-RAN检测到UE需要切换到目标小区，发送Handover Required
 消息给Source AMF。
 Source AMF选择Target AMF。 
@@ -3725,7 +3641,6 @@ Target I-SMF向Target I-UPF发送N4 PFCP Session Establishment Request
 请求。
 Target I-UPF向Target I-SMF返回N4 PFCP Session Establishment Response
 响应。
-
 I-SMF向Target AMF返回Nsmf_PDUSession_CreateSMContext
  Response响应（包含PDU Session ID, N2 SM Information） 。
 准备非直传隧道
@@ -3743,7 +3658,6 @@ Target AMF向I-SMF发送Nsmf_PDUSession_UpdateSMContext
 （可选）Target I-UPF向Target I-SMF返回N4 PFCP Session Modification Response
 响应（包含Target I-UPF N9 forwarding Information list）。
 （可选）Target I-SMF向Source I-SMF发送Nsmf_PDUSession_UpdateSMContext
-
 Request请求（包含Target I-UPF SM N9 forwarding Information list, Operation
 type）。
 （可选）Source I-SMF向Source I-UPF发送N4 PFCP Session Modification Request
@@ -3753,7 +3667,6 @@ DL forwarding tunnel（s） for indirect forwarding），建立间接转发隧�
 响应
 （包含UPF SM N3 forwarding Information list）。
 （可选）Source I-SMF向 Target I-SMF返回Nsmf_PDUSession_UpdateSMContext
-
 Response响应 （包含UPF SM N3 forwarding Information list）。
 Target I-SMF向Target AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应（包含N2 SM Information）。
@@ -3770,17 +3683,13 @@ Target NG-RAN发送Handover Notify
 给Target AMF。Target AMF向Source
 AMF发送Namf_Communication_N2InfoNotify
 消息，I-SMF改变或删除时携带smfChangeInfoList指示列表。
-
 Target AMF向Target I-SMF发送Nsmf_PDUSession_UpdateSMContext
  Request请求。
-
 Source AMF与Source
 I-SMF交互。 
 Source AMF向Source I-SMF发送Nsmf_PDUSession_ReleaseSMContext
-
 Request请求（包含I-SMF only indication），Source I-SMF收到消息后启动定时器。
 Source I-SMF向Source AMF返回Nsmf_PDUSession_ReleaseSMContext
-
 Response响应。
 Target I-SMF与Target I-UPF交互。 
 Target I-SMF向Target I-UPF发送N4 PFCP Session Modification Request
@@ -3793,7 +3702,6 @@ Target I-SMF向A-SMF发送Nsmf_PDUSession_Update
  Request请求（包含PDU
 Session ID、  DL CN Tunnel Info of Target I-UPF for N9、DNAI(s) supported
 by the I-SMF）。
-
 A-SMF向A-UPF发送N4 PFCP Session Modification Request
 请求，携带DL CN Tunnel
 Info of Target I-UPF。
@@ -3822,7 +3730,6 @@ Source I-UPF向Source I-SMF返回N4 PFCP Session Deletion Response
 响应。
 ###### I-SMF插入的N2切换 
 图2  I-SMF插入的N2切换
-
 流程说明如下： 
 准备T测业务资源
 Source NG-RAN检测到UE需要切换到目标小区，发送Handover Required
@@ -3841,7 +3748,6 @@ Target I-SMF向Target I-UPF发送N4 PFCP Session Establishment Request
 请求。
 Target I-UPF向Target I-SMF返回N4 PFCP Session Establishment Response
 响应。
-
 Target I-SMF向A-SMF发送Nsmf_PDUSession_Create
  Request请求。
 （可选）如果插入前SMF只连接PSA UPF，未曾分配过N9核心网隧道信息， A-SMF向PSA UPF发送N4 PFCP Session
@@ -3944,7 +3850,6 @@ PSA UPF向A-SMF返回N4 PFCP Session Modification Response
 响应。
 ###### I-SMF删除的N2切换 
 图3  I-SMF删除的N2切换
-
 流程说明如下： 
 准备T侧业务资源
 Source NG-RAN检测到UE需要切换到目标小区，发送Handover Required
@@ -4020,7 +3925,6 @@ forwarding tunnel(s) for indirect forwarding），建立间接转发隧道。
 响应（包含UPF
 SM N3 forwarding Information list）。
 （可选）Source I-SMF向A-SMF返回Nsmf_PDUSession_UpdateSMContext
-
 Response响应（包含UPF SM N3 forwarding Information list）。
 A-SMF向Target AMF返回Nsmf_PDUSession_UpdateSMContext
  Response响应（包含N2
@@ -4041,9 +3945,7 @@ Target AMF向Target I-SMF发送Nsmf_PDUSession_UpdateSMContext
 Complete indication）。
 Source I-SMF与Source
 AMF交互。 
-
 Source AMF向Souce I-SMF发送Nsmf_PDUSession_ReleaseSMContext
-
 Request请求（包含I-SMF only indication），I-SMF收到消息后启动定时器。
 Source I-SMF向Source AMF返回Nsmf_PDUSession_ReleaseSMContext
  Response响应。
@@ -4080,7 +3982,6 @@ Target I-UPF向A-SMF返回N4 PFCP Session Modification Response
 响应。
 ###### I-SMF不变的N2切换 
 图4  I-SMF不变的N2切换
-
 流程说明如下： 
 在切换准备阶段，相较于无I-SMF的基于N2接口NG-RAN间的Handover流程，主要存在如下差异： 
 目标AMF收到源侧AMF的Namf_Communication_CreateUEContext Request消息后，目标AMF会直接向I-SMF发送Nsmf_PDUSession_UpdateSMContext
@@ -4098,7 +3999,6 @@ I-SMF删除的N2切换取消
 I-SMF不变的N2切换取消 
 ###### I-SMF变化的N2切换取消 
 图1  I-SMF变化的N2切换取消
-
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给Source AMF，携带切换取消原因值。
@@ -4107,7 +4007,6 @@ Source RAN检测到需要取消切换，发送Handover Cancel
 （可选）Target AMF收到Namf_Communication_ReleaseUEContext
  Request消息后，若已经建立Target AMF与Target NR间的N2连接，则发送UE Context Release Command
 给Target RAN，通知Target NR释放N2连接。
-
 针对每一个PDU会话，Target AMF调用对应new I-SMF的Nsmf_PDUSession_UpdateSMContext
 服务，携带PDU会话ID、切换取消指示。
 N4会话释放。 
@@ -4132,7 +4031,6 @@ Source AMF向Source RAN返回Handover Cancel Acknowledge
 ###### I-SMF插入的N2切换取消 
 图2  
 I-SMF插入的N2切换取消
-
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给AMF，携带切换取消原因值。
@@ -4173,7 +4071,6 @@ Source AMF给Source RAN返回Handover Cancel Acknowledge
 。
 ###### I-SMF删除的N2切换取消 
 图3  I-SMF删除的N2切换取消
-
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给AMF，携带切换取消原因值。
@@ -4206,7 +4103,6 @@ Source AMF给Source RAN返回Handover Cancel Acknowledge
 。
 ###### I-SMF不变的N2切换取消 
 图4  I-SMF不变的N2切换取消
-
 流程说明如下： 
 Source RAN检测到需要取消切换，发送Handover Cancel
 给AMF，携带切换取消原因值。
@@ -4232,7 +4128,6 @@ Source AMF给Source RAN返回Handover Cancel Acknowledge
 ##### 连接态下基于N26接口，5G跨系统移动到4G进行切换 
 连接态下基于N26接口，5G跨系统移动到4G进行切换的流程如[图1]所示。
 图1  连接态5G到4G的切换
-
 流程说明如下： 
 NG-RAN决定将UE切换到E-UTRAN，例如IMS语音回落EPS网络场景。NG-RAN发送Handover Required
 消息到AMF，通知有用户要进行切换。
@@ -4279,7 +4174,6 @@ UE发起TAU流程。
 ##### 连接态下基于N26接口，4G跨系统移动到5G进行切换 
 连接态下基于N26接口，4G跨系统移动到5G进行切换的流程图如[图1]所示。
 图1  4G到5G的切换
-
 流程说明如下： 
 E-UTRAN决定将UE切换到NG-RAN。 
 获取EPS上下文（准备阶段）
@@ -4291,7 +4185,6 @@ MME给目标AMF发送Forward Relocation Request
 请求，消息中包含Indirect Forwarding
 Flag，通知目标AMF数据是否可以直接传输。AMF将收到的EPS MM上下文转化为5G MM上下文。
 AMF判断UE当前所在TA不在PGW-C+SMF的服务区域，决策插入I-SMF。AMF向I-SMF发送Nsmf_PDUSession_CreateSMContext
-
 Request消息，创建SM上下文。消息中携带UE EPS PDN连接信息、AMF ID、和Indirect Forwarding
 Flag。
 I-SMF向A-SMF发起Nsmf_PDUSession_Create
@@ -4362,7 +4255,6 @@ UE执行EPS到5GS的移动性注册流程。
 ##### 空闲态下基于N26接口，5G跨系统移动到4G进行TAU 
 空闲态下基于N26接口，5G跨系统移动到4G进行TAU的流程如[图1]所示。
 图1  5G到4G的TAU
-
 流程说明如下： 
 UE从5GS覆盖区移动到EPS覆盖区，触发TAU流程。 
 UE发送向E-UTRAN发送TAU Request消息，消息中EPS mobile identity IE携带5G-GUTI映射出的4G-GUTI，接入层信令中包含由5G-GUTI映射出GUMMEI。TAU Request消息使用5G的安全上下文进行完整性保护。消息中携带UE status信元，向网络提供与EPS交互的当前UE注册状态的相关信息，取值为UE is in 5GMM-REGISTERED state。 
@@ -4400,7 +4292,6 @@ MME向UE发送TAU Accept消息，如果TAU Request消息中的Active Flag置位�
 ##### 空闲态下基于N26接口，4G跨系统移动到5G进行注册更新 
 空闲态下基于N26接口，4G跨系统移动到5G进行注册更新的流程如[图1]所示。
 图1  4G到5G的注册更新
-
 流程说明如下： 
 UE触发注册流程。 
 获取EPS上下文
@@ -4464,7 +4355,6 @@ EAP-AKA'鉴权
 ##### 5G AKA鉴权 
 5G AKA为4G鉴权EPS AKA的演进，增加了归属网络对于服务网络的认证。完整的5G AKA鉴权流程如[图1]所示。
 图1  5G AKA鉴权
-
 流程说明如下： 
 UE触发注册、业务请求，或者去注册请求等NAS请求消息给AMF，携带5G GUTI或者SUCI。 
 （可选）若NAS请求消息中携带5G GUTI，但AMF根据5G GUTI查找用户上下文失败，则向UE发送Identity
@@ -4476,14 +4366,11 @@ AMF校验NAS请求消息失败，或者AMF开启强制鉴权，则启动鉴权�
 Request给AUSF，携带SUCI或者SUPI，以及服务网络名称。 
 AUSF发送Nudm_UEAuthentication_Get
  Request给UDM，携带SUCI或者SUPI，以及服务网络名称。
-
 若请求消息携带SUCI，UDM解密SUCI得到SUPI。 
 UDM根据用户签约或者本地配置，确定鉴权方式为5G AKA。 
-
 UDM生成5G HE AV，其中包含RAND、AUTN、XRES*以及Kausf，回复Nudm_UEAuthentication_Get
  Response给AUSF，携带生成的5G HE AV，并在响应中指示选择的鉴权方式为5G AKA。同时若AUSF在步骤4中携带了SUCI，则响应消息中还携带SUPI给AUSF。
 AUSF保存XRES*，并根据XRES*计算HXRES*，根据Kausf计算并保存Kseaf。 
-
 AUSF回复Nausf_UEAuthentication_Authenticate Response给AMF，携带5G
 SE AV，其中包括RAND、AUTN以及HXRES*。 
 AMF发送Authentication Request
@@ -4494,12 +4381,10 @@ UE回复Authentication Response
 AMF根据RES*计算HRES*，并和从AUSF获取的HXRES*进行比较，一致则认为UE合法，完成对于网络侧对终端的校验。 
 AMF校验UE合法后，发送Nausf_UEAuthentication_Authenticate Request给AUSF，携带UE返回的RES*。 
 AUSF执行RES*的校验，比如比较RES*与本地保存的XRES*是否一致。 
-
 AUSF回复Nausf_UEAuthentication_Authenticate Response给AMF，携带最终的鉴权结果。若鉴权结果为成功，响应消息中携带Kseaf。若步骤4中携带SUCI，则响应消息中携带SUPI。 
 ##### EAP-AKA'鉴权 
 EAP-AKA'鉴权方式中，网络侧鉴权功能由AUSF负责，AMF只参与AUSF和UE之间鉴权信息的传递，以及最终KAMF密钥的推演。完整的EAP-AKA‘认证流程如[图2]所示。
 图2  EAP-AKA'鉴权
-
 流程说明如下： 
 UE触发注册、业务请求，或者去注册请求等NAS请求消息给AMF，携带5G GUTI或者SUCI。 
 若NAS请求消息中携带5G GUTI，但AMF根据5G GUTI查找用户上下文失败，则向UE发送Identity Request
@@ -4513,7 +4398,6 @@ AUSF发送Nudm_UEAuthentication_Get
 若请求消息携带SUCI，UDM解密SUCI得到SUPI。 
 UDM根据用户签约或者本地配置，确定鉴权方式为EAP-AKA’。 
 UDM生成EAP-AKA'  AV，包含RAND、AUTN、XRES、CK'以及IK'，并在Nudm_UEAuthentication_Get
-
 Response中携带给AUSF，同时响应中指示选择的鉴权方式为EAP-AKA'。另外，若AUSF在步骤4中携带了SUCI，则响应消息中还携带SUPI给AUSF。
 AUSF回复Nausf_UEAuthentication_Authenticate Response，携带EAP Request/AKA'-Challenge。 
 AMF通过Authentication Request
@@ -4527,14 +4411,14 @@ AUSF校验鉴权响应，完成网络侧对于UE的鉴权。校验通过后，AU
 AUSF回复Nausf_UEAuthentication_Authenticate Response，携带EAP Success，Kseaf。若步骤4中携带SUCI，则响应消息中携带SUPI。 
 AMF通过N1消息将EAP Success透传给UE，EAP-AKA'鉴权完成。 
 #### NAS安全算法协商 
-概述 :NAS安全算法协商，在UE和AMF之间协商用于NAS消息加密的算法，以及用于NAS消息完整性保护的算法，适用如下场景： 
+概述 : 
+NAS安全算法协商，在UE和AMF之间协商用于NAS消息加密的算法，以及用于NAS消息完整性保护的算法，适用如下场景： 
 用户生成新的安全密钥，比如执行了鉴权过程，导致原有协商的安全算法已不支持。 
 用户支持的安全算法发生变化，导致原有协商的安全算法已不支持。 
 AMF支持的安全算法发生变化，导致原有协商的安全算法已不支持。 
 ##### 流程描述 
 当原有协商的安全算法已不适用，则触发算法协商流程。算法协商流程如[图1]所示。
 图1  NAS安全算法协商流程
-
 流程说明如下： 
 AMF根据UE安全能力中指示UE所支持的安全算法，AMF本地配置所支持的安全算法，以及本地配置的各个安全算法的优先级，分别为加密和完整性保护，协商一个安全算法，并发送Security Mode Command
 消息到UE，消息中携带协商的安全算法，UE安全能力等，用于UE与本地的UE安全能力进行校验，防止被降维攻击。AMF在发送消息之前，采用新协商的完整性保护算法，对该NAS消息进行完整性保护。
@@ -4544,17 +4428,16 @@ UE执行Security Mode Command
  说明： 
 安全算法协商完成后 ，后续无论上行NAS消息，还是下行NAS消息，都可以启用加密和完整性保护。 
 #### 5G用户临时标识分配 
-概述 :同4G一样，5G也支持为用户分配临时标识5G GUTI，用于后续终端与核心网交互时标识用户。5G
+概述 : 
+同4G一样，5G也支持为用户分配临时标识5G GUTI，用于后续终端与核心网交互时标识用户。5G
 GUTI包含GUAMI和5G-TMSI两部分，GUAMI用于标识5G GUTI归属哪个AMF，5G-TMSI用于AMF标识用户。为了支持用户在4G/5G之间移动，4G
 GUTI与5G GUTI之间需要相互转化，转化规则如[图1]所示。
 图1  转化规则
-
 ##### 流程描述 
 当用户注册时，AMF根据本地策略，为用户分配5G GUTI，Registration
 Accept
 消息携带5G GUTI并通知到UE。具体流程如[图2]所示。
 图2  5G用户临时标识分配流程
-
 流程说明如下： 
 UE发送Registration Request
 消息触发注册请求，携带注册类型、SUCI或5G GUTI。
@@ -4577,7 +4460,6 @@ UPF选择
 ##### 节点关联建立 
 UPF发起的节点关联建立流程如[图1]所示。
 图1  UPF发起节点关联建立流程示意图
-
 流程说明如下： 
 UPF向SMF发送PFCP Association Setup Request
 消息请求关联建立，消息中携带UPF的Node ID、UPF能力、UPF N3/N9口的GTPU地址与UPF可支持的TEID范围。
@@ -4586,7 +4468,6 @@ SMF向UPF发送PFCP Association Setup Response
 ##### 节点关联更新 
 UPF发起的节点关联更新流程如[图2]所示。
 图2  UPF发起节点关联更新流程示意图
-
 流程说明如下： 
 UPF向SMF发送PFCP Association Update Request
 消息请求关联更新，消息中携带UPF的Node ID、UPF能力，可能携带UPF N3/N9口的GTPU地址与UPF可支持的TEID范围。
@@ -4595,7 +4476,6 @@ SMF向UPF发送PFCP Association Update Response
 ##### 节点关联关系删除 
 节点关联关系删除流程如[图3]所示。
 图3  节点关联关系删除流程示意图
-
 流程说明如下： 
 UPF收到OAM发来的释放消息，给SMF发送PFCP Association Update Request
 消息，通知SMF需要进行关联关系的删除操作，同时携带优雅退出时长T。
@@ -4609,7 +4489,6 @@ SMF收到响应消息后，会释放相关会话、删除关联关系。
 ##### 节点检测 
 UPF发起的节点检测流程如[图4]所示。
 图4  节点检测
-
 流程说明如下： 
 UPF向SMF发送PFCP Heartbeat Request
 心跳检测消息。
@@ -4620,7 +4499,6 @@ SMF向UPF返回PFCP Heartbeat Response
 ##### UPF选择 
 UPF选择的业务流程如[图5]所示。
 图5  根据DNN或负荷选择UPF
-
 流程说明如下： 
 UPF上电成功后向SMF发起PFCP Association Setup Request
 消息请求关联注册，在请求消息中携带支持的DNN。
@@ -4640,7 +4518,6 @@ UPF发起的N4连接释放流程
 ###### SMF发起N4连接建立流程 
 SMF发起N4连接建立流程如[图1]所示。
 图1  SMF发起N4连接建立流程
-
 流程说明如下： 
 SMF向UPF发起N4连接建立请求消息（N4 Association Setup Request
 ），携带自己支持的特性和可用资源。
@@ -4649,7 +4526,6 @@ UPF向SMF回复N4连接建立应答消息（N4 Association Setup Response
 ###### UPF发起N4连接建立流程 
 UPF发起N4连接建立流程如[图2]所示。
 图2  UPF发起N4连接建立流程
-
 流程说明如下： 
 UPF向SMF发起N4连接建立请求消息（N4 Association Setup Request
 ），携带自己支持的特性和可用资源。
@@ -4658,7 +4534,6 @@ SMF向UPF回复N4连接建立应答消息（N4 Association Setup Response
 ###### SMF发起N4连接更新流程 
 SMF发起N4连接更新流程如[图3]所示。
 图3  SMF发起N4连接更新流程
-
 流程说明如下： 
 当SMF需要更新自己支持的特性时，SMF向UPF发起N4连接更新请求消息（N4 Association Update Request
 ），携带自己支持的特性和可用资源。
@@ -4667,7 +4542,6 @@ UPF向SMF回复N4连接更新应答消息（N4 Association Update Response
 ###### UPF发起N4连接更新流程 
 UPF发起N4连接更新流程如[图4]所示。
 图4  UPF发起的连接更新流程
-
 流程说明如下： 
 当UPF需要更新自己支持的特性或用户面IP资源时，UPF向SMF发起N4连接更新请求消息（N4 Association Update Request
 ），携带自己支持的特性和可用资源。
@@ -4676,7 +4550,6 @@ SMF向UPF回复N4连接更新应答消息（N4 Association Update Response
 ###### SMF发起的N4连接释放流程 
 SMF发起的N4连接释放流程如[图5]所示。
 图5  SMF发起的N4连接释放流程
-
 流程说明如下： 
 当SMF需要终结N4连接时（比如OAM，异常等），SMF向UPF发起N4连接释放请求消息（N4 Association Release Request
 ）。
@@ -4685,7 +4558,6 @@ UPF释放相关资源，并向SMF回复N4连接释放应答消息（N4 Associati
 ###### UPF发起的N4连接释放流程 
 UPF发起的N4连接释放流程如[图6]所示。
 图6  UPF发起的N4连接释放流程
-
 流程说明如下： 
 当需要终结N4连接时（比如OAM，异常等），UPF发起释放流程，UPF发起N4连接更新请求消息（N4 Association Update Request
 ），携带优雅退出时长。
@@ -4703,7 +4575,6 @@ N4会话删除流程
 ###### N4会话建立流程 
 N4会话建立流程如[图1]所示。
 图1  N4会话建立流程
-
 流程说明如下： 
 触发请求方（比如AMF或PCF）触发SMF建立一个新的PDU会话或对后续的PDU会话重分配PDU会话。
 SMF向UPF下发N4会话建立请求消息（N4 Session Establishment Request
@@ -4714,7 +4585,6 @@ SMF与触发请求方交互（比如AMF或PCF）。
 ###### N4会话修改流程 
 N4会话修改流程如[图2]所示。
 图2  N4会话修改流程
-
 流程说明如下： 
 触发请求方（比如AMF或PCF）触发SMF修改一个PDU会话。 
 SMF向UPF下发N4会话修改请求消息（N4 Session Modification Request
@@ -4725,7 +4595,6 @@ SMF与触发请求方交互（比如AMF或PCF）。
 ###### N4会话删除流程 
 N4会话删除流程如[图3]所示。
 图3  N4会话删除流程
-
 流程说明如下： 
 触发请求方（比如AMF或PCF）触发SMF释放一个PDU会话。
 SMF向UPF下发N4会话释放请求消息（N4 Session Release Request）。 
@@ -4734,7 +4603,6 @@ SMF与触发请求方交互（比如AMF或PCF）。
 ##### 报文转发 
 报文转发的业务流程图如[图1]所示。
 图1  报文转发
-
 流程说明如下： 
 UPF收到报文后，根据隧道信息或UE IP查找PFCP会话上下文。
 UPF找到上下文后，根据L3/4或L7信息，按优先级依次匹配PDR。
@@ -4746,7 +4614,6 @@ UPF发送报文。
 ##### 用量上报 
 用量上报流程图如[图1]所示。
 图1  用量上报流程图
-
 流程说明如下： 
 UPF探测到事件门限、用量门限或某个事件，触发用量上报。 
 UPF向SMF发送N4会话用量上报消息，携带触发条件和具体的用量。 
@@ -4760,7 +4627,6 @@ GW-U缓存流程
 ###### SMF缓存流程 
 配置下行报文缓存在SMF时，流程如[图1]所示。
 图1  SMF缓存流程
-
 流程说明如下： 
 UE进入IDLE态，去活PDU会话。 
 SMF发送N4会话修改请求（N4 Session Modification Request
@@ -4781,7 +4647,6 @@ UPF回复N4会话修改应答（N4 Session Modification Response
 ###### UPF缓存流程 
 配置下行报文缓存在UPF时，流程如[图2]所示。
 图2  UPF缓存流程
-
 流程说明如下： 
 UE进入IDLE态，去活PDU会话。 
 SMF发送N4会话修改请求（N4 Session Modification Request
@@ -4800,7 +4665,6 @@ UPF将下行报文发送给UE。
 ###### GW-C缓存流程 
 配置下行报文缓存在GW-C时，流程如[图3]所示。
 图3  GW-C缓存流程
-
 流程说明如下： 
 UE进入IDLE态，去活PDN连接。 
 GW-C发送Sx会话修改请求（Sx Session Modification Request）消息给GW-U，修改FAR，建立CP-UP通道。
@@ -4817,7 +4681,6 @@ GW-U回复Sx会话修改应答（Sx Session Modification Response）消息。
 ###### GW-U缓存流程 
 配置下行报文缓存在GW-U时，流程如[图4]所示。
 图4  GW-U缓存流程
-
 流程说明如下： 
 UE进入IDLE态，去活PDN连接。 
 GW-C发送Sx会话修改请求（Sx Session Modification Request）消息给GW-U，修改FAR，通知GW-U缓存报文以及相应的缓存周期。
@@ -4840,7 +4703,6 @@ GW-C和GW-U之间的QoS执行流程
 SMF和UPF之间的QoS执行流程
 SMF和UPF之间的QoS执行流程如[图1]所示。
 图1  QoS执行流程
-
 流程说明如下： 
 AMF或PCF触发SMF发起PDU会话建立/修改流程。
 SMF向UPF发送N4会话建立/修改请求（N4 Session Establishment Request
@@ -4853,7 +4715,6 @@ UPF收到报文，匹配PDR，选择相应级别的QoS策略，执行QoS策略�
 GW-C和GW-U之间的QoS执行流程
 GW-C和GW-U之间的QoS执行流程如[图2]所示。
 图2  QoS执行流程
-
 流程说明如下： 
 MME或PCRF触发GW-C发起PDN连接建立/修改流程。 
 GW-C向GW-U发送Sx会话建立/修改请求（Sx Session Establishment/Modification Request）消息，下发QoS策略，通过PDR区分策略是会话级、承载级还是业务/应用级QoS。
@@ -4866,7 +4727,6 @@ GW-C和GW-U之间的门控流程
 SMF和UPF之间的门控流程
 SMF和UPF之间的门控流程如[图3]所示。
 图3  门控流程
-
 流程说明如下： 
 AMF或PCF触发SMF发起PDU会话建立/修改流程。 
 SMF向UPF发送N4会话建立/修改请求（N4 Session Establishment Request
@@ -4879,7 +4739,6 @@ UPF收到报文，匹配PDR，执行相应级别的门控策略。
 GW-C和GW-U之间的门控流程
 GW-C和GW-U之间的门控流程如[图4]所示。
 图4  门控流程
-
 流程说明如下： 
 MME或PCRF触发GW-C发起PDN连接建立/修改流程。 
 GW-C向GW-U发送Sx会话建立/修改请求（Sx Session Establishment/Modification Request）消息，下发门控策略，通过PDR区分策略是会话级、承载级还是业务/应用级门控。 
@@ -4896,7 +4755,6 @@ GW-C和GW-U之间的策略下发
 SMF和UPF之间的策略下发
 SMF和UPF之间的策略下发流程如[图1]所示。
 图1  SMF和UPF之间的策略下发流程
-
 流程说明如下： 
 会话建立时，触发请求方（比如AMF或PCF）触发SMF建立或重定位一个PDU会话，消息中携带业务策略信息，包括业务匹配规则和策略执行规则。
 SMF向UPF下发N4会话建立请求（N4 Session Establishment Request
@@ -4907,7 +4765,6 @@ SMF与触发请求方交互（比如AMF或PCF），触发下一步流程。
 GW-C和GW-U之间的策略下发
 GW-C和GW-U之间的策略下发流程如[图2]所示。
 图2  GW-C和GW-U之间的策略下发流程
-
 流程说明如下： 
 会话建立时，触发请求方（比如MME或PCRF）触发GW-C建立或重定位一个PDN连接，消息中携带业务策略信息，包括业务匹配规则和策略执行规则。 
 GW-C向GW-U下发Sx会话建立请求（Sx Session Establishment Request）消息，携带业务策略信息。 
@@ -4920,7 +4777,6 @@ GW-C和GW-U之间的策略更新
 SMF和UPF之间的策略更新
 SMF和UPF之间的策略更新流程如[图3]所示。
 图3  SMF和UPF之间的策略更新流程
-
 流程说明如下： 
 业务策略有变更，或有新的业务策略需要下发时，触发请求方（比如AMF或PCF）触发SMF下发PDU会话修改消息。
 SMF向UPF下发N4会话修改请求（N4 Session Modification Request
@@ -4931,7 +4787,6 @@ SMF与触发请求方交互（比如AMF或PCF），触发下一步流程。
 GW-C和GW-U之间的策略更新
 GW-C和GW-U之间的策略更新流程如[图4]所示。
 图4  GW-C和GW-U之间的策略更新流程
-
 流程说明如下： 
 业务策略有变更，或有新的业务策略需要下发时，触发请求方（比如MME或PCRF）触发GW-C下发PDN连接修改消息。 
 GW-C向GW-U下发Sx会话修改请求（Sx Session Modification Request）消息，携带业务策略信息。 
@@ -4948,7 +4803,6 @@ PCF发起的SM策略关联终止流程
 ##### SM策略关联建立流程 
 SM策略关联建立流程如[图1]所示。
 图1  SM策略关联建立流程
-
 流程说明如下： 
 在PDU会话建立流程中，如果SMF确定需要向PCF请求PDU会话策略控制，SMF需要先为该PDU会话向PCF请求建立SM策略关联。为此SMF向PCF发送Npcf_SMPolicyControl_Create
  Request请求，请求中包含SUPI、PDU会话标识、DNN、S-NSSAI、订阅通知指示（即SMF后续接收PCF为该SM策略关联下发的策略更新通知的URI地址），可选包含UE的IPv4地址和（或）IPv6地址前缀、GPSI、PEI、签约的会话聚合带宽（Subscribed Session AMBR）和签约的缺省QoS（Subscribed Default QoS）等信息。
@@ -4960,7 +4814,6 @@ PCF向SMF发送Npcf_SMPolicyControl_Create
 ##### SMF发起的SM策略关联修改流程 
 SMF发起的SM策略关联修改流程如[图2]所示。
 图2  SM策略关联修改流程(SMF发起)
-
 流程说明如下： 
 当PCF订阅的事件发生时（例如PCF向SMF订阅了PLMN change事件后，UE移动导致用户接入的PLMN发生了变化），SMF向PCF发送Npcf_SMPolicyControl_Update
  Request消息，携带SM策略关联ID、事件号及事件相关信息。
@@ -4971,7 +4824,6 @@ PCF向SMF发送Npcf_SMPolicyControl_Update
 ##### PCF发起的SM策略关联修改流程 
 PCF发起的SM策略关联修改流程如[图3]所示。
 图3  SM策略关联修改流程(PCF发起)
-
 流程说明如下： 
 PCF收到内部事件触发（如时段切换）或外部事件触发（如UDR通知PCF某用户的策略签约信息发生了变更）。 
 PCF重新进行策略决策。 
@@ -4982,7 +4834,6 @@ SMF执行最新的SM策略，向PCF发送Npcf_SMPolicyControl_UpdateNotify
 ##### SMF发起的SM策略关联终止流程 
 SMF发起的SM策略关联终止流程如[图4]所示。
 图4  SM策略关联终止流程(SMF发起)
-
 流程说明如下： 
 在UE或SMF发起的PDU会话释放流程中，SMF查找到某PDU会话有相关的SM策略关联，向PCF发送Npcf_SMPolicyControl_Delete
  Request消息，请求PCF删除SM策略关联。请求中携带SM策略关联ID，可能还包含最后用量上报（即SM策略关联删除前SMF统计到用户已使用但SMF但还未上报的用量）。
@@ -4994,7 +4845,6 @@ PCF向SMF发送Npcf_SMPolicyControl_Delete
 ##### PCF发起的SM策略关联终止流程 
 PCF发起的SM策略关联终止流程如[图5]所示。
 图5  SM策略关联终止流程(PCF发起)
-
 流程说明如下： 
 PCF收到内部事件（如套餐过期）或外部事件（如UDR注销用户通知）。 
 PCF进行策略决策，确定需要删除某个PDU会话的SM策略。 
@@ -5013,7 +4863,6 @@ PCF发起的AM策略关联终止流程
 ##### AM策略关联建立流程 
 AM策略关联建立流程如[图1]所示。
 图1  AM策略关联建立流程
-
 流程说明如下： 
 在UE注册或切换到某个AMF的过程中，如果该AMF确定需要为该UE向PCF请求接入和移动性策略控制，该AMF需要向PCF请求建立AM策略关联。为此该AMF向PCF发送Npcf_AMPolicyControl_Create
  Request消息，请求中包含用户永久标识（SUPI）、订阅通知指示（NotificationURI，即AMF后续接收PCF为该AM策略关联下发的策略更新通知的URI地址）。
@@ -5031,7 +4880,6 @@ PCF向AMF发送Npcf_AMPolicyControl_Create
 ##### AMF发起的AM策略关联修改流程 
 AMF发起的AM策略关联修改流程如[图2]所示。
 图2  AM策略关联修改流程（AMF发起）
-
 流程说明如下： 
 当PCF订阅的事件发生时（如UDM通知AMF某用户签约的业务区域限制或RFSP
 Index发生了改变），AMF向PCF发送Npcf_AMPolicyControl_Update
@@ -5042,7 +4890,6 @@ PCF向AMF发送Npcf_AMPolicyControl_Update
 ##### PCF发起的AM策略关联修改流程 
 PCF发起的AM策略关联修改流程如[图3]所示。
 图3  AM策略关联修改流程（PCF发起）
-
 流程说明如下： 
 PCF收到内外部事件触发（内部事件例如时段变更通知，外部事件例如UDR策略签约信息变更通知）。 
 PCF重新进行策略决策，确定需要调整某UE的AM策略。 
@@ -5053,7 +4900,6 @@ AMF回复Npcf_AMPolicyControl_UpdateNotify
 ##### AMF发起的AM策略关联终止流程 
 AMF发起的AM策略关联终止流程如[图4]所示。
 图4  AM策略关联终止流程(AMF发起)
-
 流程说明如下： 
 在UE去注册流程中，或AMF重选伴随PCF重选流程中，源AMF需要向PCF终止AM策略关联。AMF向PCF发送Npcf_AMPolicyControl_Delete
  Request消息，携带AM策略关联ID。
@@ -5064,7 +4910,6 @@ PCF删除本地保存的该AM策略关联的相关信息，向AMF发送Npcf_AMPo
 ##### PCF发起的AM策略关联终止流程 
 PCF发起的AM策略关联终止流程如[图5]所示。
 图5  AM策略关联终止流程（PCF发起）
-
 流程说明如下： 
 PCF收到内外部事件触发（内部事件例如时段变更通知，外部事件例如UDR通知PCF已删除了某用户的策略签约）。 
 PCF重新进行策略决策，确定需要删除相关的AM策略关联。 
@@ -5074,12 +4919,12 @@ AMF回复Npcf_AMPolicyControl_UpdateNotify
  Ack消息。
 后续流程同[AMF发起的AM策略关联终止流程]。
 ### NG-RAN位置上报 
-概述 :位置上报流程是指其它NF（例如：SMF、PCF等）向AMF订阅位置上报服务时，AMF向NG-RAN发送位置上报请求，要求NG-RAN上报CM-CONNECTED状态UE的当前位置，或者UE处于AOI（Area Of Interest，兴趣区域）的IN/OUT/UNKNOW等状态。
+概述 : 
+位置上报流程是指其它NF（例如：SMF、PCF等）向AMF订阅位置上报服务时，AMF向NG-RAN发送位置上报请求，要求NG-RAN上报CM-CONNECTED状态UE的当前位置，或者UE处于AOI（Area Of Interest，兴趣区域）的IN/OUT/UNKNOW等状态。
 当UE迁移到CM-IDLE状态或者AMF发送取消指示时NG-RAN停止上报。当UE发生基于Xn的切换时，NG-RAN节点的位置上报相关信息会传递给目的NG-RAN节点。 
 #### NG-RAN位置上报流程 
 NG-RAN位置上报流程如[图1]所示。
 图1  NG-RAN位置上报流程
-
 流程说明如下： 
 AMF发送Location Reporting Control
 消息给NG-RAN。Location Reporting Control
@@ -5106,7 +4951,6 @@ SBI计费会话终止流程
 #### CHF服务发现流程 
 SMF支持通过NRF查询CHF的服务，获取CHF的计费服务IP地址和端口。如[图1]所示。
 图1  CHF服务的NRF发现流程
-
 流程说明如下： 
 SMF作为服务消费者，发起NF Discovery Request（Nnrf_NFDiscovery
  Request）到NRF，请求CHF融合计费功能服务。NRF决定是否允许SMF发现所请求的服务，并授权服务发现请求，根据请求中的信息发现对应的融合计费功能实例。
@@ -5118,7 +4962,6 @@ NRF返回NF Discovery Response（Nnrf_NFDiscovery
 业务触发时，创建SBI计费会话，不申请配额，而是在用户使用业务时申请配额，可避免用户长期占用配额不使用的情况。 
 用户激活时创建SBI计费会话流程如[图2]所示。
 图2  PDU会话触发计费开始流程
-
 流程说明如下： 
 UE发起PDU Session Establishment Request
 ，SMF收到PDU Session Establishment Request
@@ -5139,7 +4982,6 @@ SMF响应PDU Session Establishment Accept
 用户正常使用业务。 
 业务触发创建SBI计费会话流程如[图3]所示。
 图3  业务触发SBI计费开始流程
-
 流程说明如下： 
 UE发起PDU Session Establishment Request
 ，SMF收到PDU Session Establishment Request
@@ -5175,7 +5017,8 @@ CHF发起的会话通知流程如果CHF主动向SMF发送ChargingNotifyRequest�
 SBI计费会话的终止可以由SMF发起，或者由CHF发起。 
 SMF发起的SBI计费会话终止流程PDU会话去激活时，SMF会发起PDU会话对应的SBI计费会话终止请求。CHF回复ChargingDataResponse（terminate）消息，终结SBI计费会话。如图7所示。图7  SMF发起的SBI计费会话终止流程流程说明如下：SMF收到PDU会话删除请求，SMF需要释放SBI计费会话。SMF通过N4 Session Deletion Request（PFCP Session Deletion Request）消息通知UPF，查询该用户的流量等计费信息。UPF查询到计费信息后，通过N4 Session Deletion Response（PFCP Session Deletion Response）消息通知SMF，携带流量等计费信息。SMF通过发送ChargingDataRequest（terminate）消息，发起SBI计费会话释放请求。CHF返回ChargingDataResponse（terminate）消息。SMF回复PDU Session Release Command消息。 
 CHF发起的SBI计费会话终止流程CHF发起的SBI计费会话终止，分为异步和同步两种方式。异步终止：CHF主动向SMF发起ChargingDataRequest（terminate）消息，请求终止SBI计费会话。SMF先回复响应消息，同时去激活SBI计费会话对应的PDU会话，向CHF发送ChargingDataRequest（terminate）消息终止SBI计费会话。同步终止：CHF收到SMF发来的ChargingDataRequest（terminate）消息后，在ChargingDataResponse（terminate）消息中携带异常结果码，通知SMF会话出现异常，需要终止。SMF根据本地配置的异常结果码处理动作，终止SBI计费会话，并去活对应的PDU会话。异步终止的流程如图8所示。图8  CHF发起的SBI计费会话终止流程流程说明如下：SMF收到CHF的ChargingNotifyRequest消息，其中携带的通知类型为释放会话请求。SMF发送成功的HTTP响应消息。SMF通过N4 Session Deletion Request（PFCP Session Deletion Request）消息通知UPF，查询该用户的流量等计费信息。UPF查询到计费信息后，通过N4 Session Deletion Response（PFCP Session Deletion Response）消息通知SMF，携带流量等计费信息。SMF通过发送ChargingDataRequest（terminate）请求消息，发起SBI计费会话终止请求。CHF返回ChargingDataResponse（terminate）消息。SMF释放会话。 
-NRF :本节包含如下流程： 
+NRF : 
+本节包含如下流程： 
 NF服务注册流程 
 NF服务更新流程 
 NF服务去注册流程 
@@ -5184,7 +5027,6 @@ NF或NF服务的状态订阅通知流程
 #### NF服务注册流程 
 NF服务注册流程如[图1]所示。
 图1  NF服务注册流程
-
 流程说明如下： 
 NF向NRF发送Nnrf_NFManagement_NFRegister
  Request消息，请求注册本NF实例信息及支持的NF服务实例。
@@ -5194,7 +5036,6 @@ NRF向NF发送Nnrf_NFManagement_NFRegister
 #### NF服务更新流程 
 NF服务更新流程如[图2]所示。
 图2  NF服务更新流程
-
 流程说明如下： 
 NF向NRF发送Nnrf_NFManagement_NFUpdate
  Request消息，请求服务信息更新。
@@ -5204,7 +5045,6 @@ NRF向NF发送Nnrf_NFManagement_NFUpdate
 #### NF服务去注册流程 
 NF服务去注册流程如[图3]所示。
 图3  NF服务去注册流程
-
 流程说明如下： 
 NF实例准备退出服务，向NRF发送Nnrf_NFManagement_NFDeregister
  Request消息，请求去注册。
@@ -5214,7 +5054,6 @@ NRF向NF发送Nnrf_NFManagement_NFDeregister
 #### NF或NF服务的发现流程 
 NF或NF服务的发现流程如[图4]所示。
 图4  NF或NF服务发现流程
-
 流程说明如下： 
 NF服务消费者需要发现目标NF服务，向NRF发送Nnrf_NFDiscovery
  Request消息，请求发现目标NF服务。
@@ -5229,7 +5068,6 @@ NF或NF服务的状态订阅通知流程包括如下业务流程：
 当NRF的服务PLMN即为归属PLMN时
 当NRF的服务PLMN即为归属PLMN时的状态订阅通知流程如[图5]所示。
 图5  服务PLMN即为归属PLMN时的状态订阅通知流程
-
 流程说明如下： 
 NF服务消费者向NRF发送Nnrf_NFManagement_NFStatusSubscribe
  Request消息，请求订阅NF实例及包含服务的注册/更新/去注册。
@@ -5241,7 +5079,6 @@ NRF向NF服务消费者发送Nnrf_NFManagement_NFStatusSubscribe
 当NRF的服务PLMN与归属PLMN不一致时
 当NRF的服务PLMN与归属PLMN不一致时的状态订阅通知流程如[图6]所示。
 图6  服务PLMN与归属PLMN不一致时的状态订阅通知流程
-
 流程说明如下： 
 服务PLMN中的NF服务消费者向NRF发送Nnrf_NFManagement_NFStatusSubscribe
  Reques消息，请求订阅NF实例及包含服务的注册/更新/去注册。
@@ -5255,7 +5092,6 @@ NRF向NF服务消费者发送Nnrf_NFManagement_NFStatusSubscribe
 #### 支持用户接入网络切片 
 注册流程中切片信息处理如[图1]所示。
 图1  注册过程中切片信息处理
-
 流程说明如下： 
 UE判断需要发起注册流程时，发送注册请求消息（Registration Request
 ），消息中携带Requested NSSAI。
@@ -5289,7 +5125,6 @@ AMF向UE发送注册接受消息Registration Accept
 #### 网络切片的PDU连接创建 
 PDU会话建立过程中的切片信息处理流程如[图1]所示。
 图1  PDU会话建立过程中的切片信息处理
-
 UE判断需要发起PDU会话建立流程时，发送PDU Session Establishment Request
 消息，消息中携带请求的S-NSSAI、DNN、PDU会话ID等信息。
 AMF向NSSF发送Nnssf_NSSelection_Get
@@ -5307,47 +5142,64 @@ AMF根据SMF Candidate列表等信息，选择一个SMF。
 ## 缩略语 
 ### 5G-GUTI 
 5G Globally Unique Temporary Identity5G全球唯一临时标识
-5GC :5G Core Network5G核心网
+5GC : 
+5G Core Network5G核心网
 ### 5GS 
 5G System5G系统
-AAA :Answer-Auth-Answer应答鉴权响应
+AAA : 
+Answer-Auth-Answer应答鉴权响应
 ### AAR 
 Answer-Auth-Request应答鉴权请求
-AF :Application Function应用功能
-AMF :Access and Mobility Management Function接入和移动管理功能
-AUSF :Authentication Server Function鉴权服务器功能
+AF : 
+Application Function应用功能
+AMF : 
+Access and Mobility Management Function接入和移动管理功能
+AUSF : 
+Authentication Server Function鉴权服务器功能
 ### BAR 
 Buffer Action Rule报文缓存规则
 ### CDR 
 Charging Data Record计费数据记录
-CHF :Charging Function计费功能
+CHF : 
+Charging Function计费功能
 ### CSCF 
 Call Session Control Function呼叫对话控制功能
 ### CUPS 
 Control and User Plane Separation控制面与用户面分离
 ### DNAI 
 DN Access Identifier数据网络接入标识符
-DNN :Data Network Name数据网名称
-EIR :Equipment Identity Register设备标识寄存器
+DNN : 
+Data Network Name数据网名称
+EIR : 
+Equipment Identity Register设备标识寄存器
 ### FAR 
 Forwarding Action Rule报文转发规则
 ### FDD 
 Frequency Division Duplex频分双工
-FQDN :Fully Qualified Domain Name完全限定域名
-GPSI :Generic Public Subscription Identifier一般公共用户标识
+FQDN : 
+Fully Qualified Domain Name完全限定域名
+GPSI : 
+Generic Public Subscription Identifier一般公共用户标识
 ### GUMMEI 
 Globally Unique MME Identifier全球唯一移动性管理实体标识
-GUTI :Globally Unique Temporary Identity全球唯一临时标识
+GUTI : 
+Globally Unique Temporary Identity全球唯一临时标识
 ### iFC 
 initial Filter Criteria初始过滤规则
-IMEI :International Mobile Equipment Identity国际移动设备标识
-IMS :IP Multimedia SubsystemIP多媒体子系统
-IMSI :International Mobile Subscriber Identity国际移动用户标识
-IPv4 :Internet Protocol Version 4互联网通信协议第四版
-IPv6 :Internet Protocol Version 6互联网通信协议第六版
+IMEI : 
+International Mobile Equipment Identity国际移动设备标识
+IMS : 
+IP Multimedia SubsystemIP多媒体子系统
+IMSI : 
+International Mobile Subscriber Identity国际移动用户标识
+IPv4 : 
+Internet Protocol Version 4互联网通信协议第四版
+IPv6 : 
+Internet Protocol Version 6互联网通信协议第六版
 ### LADN 
 Local Area Data Network局域数据网
-LTE :Long Term Evolution长期演进
+LTE : 
+Long Term Evolution长期演进
 ### MAA 
 Multimedia-Authorization-Answer多媒体鉴权响应
 ### MAR 
@@ -5358,36 +5210,46 @@ Mobile Country Code移动国家码
 Mobile Initiated Connection Only仅限移动发起连接
 ### MM 
 Mobility Management移动性管理
-MME :Mobility Management Entity移动管理实体
+MME : 
+Mobility Management Entity移动管理实体
 ### MNC 
 Mobile Network Code移动网络号
-NAS :Non-Access Stratum非接入层
-NF :Network Function网络功能
+NAS : 
+Non-Access Stratum非接入层
+NF : 
+Network Function网络功能
 ### NG-RAN 
 Next Generation Radio Access Network下一代无线接入网
 ### NITZ 
 Network Identity and Time Zone网络标志和时区
 ### NR 
 New Radio新无线
-NRF :NF Repository Function网络仓储功能
+NRF : 
+NF Repository Function网络仓储功能
 ### NSSAI 
 Network Slice Selection Assistance Information网络切片选择辅助信息
-NSSF :Network Slice Selection Function网络切片选择功能
-P-CSCF :Proxy-Call Session Control Function代理呼叫会话控制功能
+NSSF : 
+Network Slice Selection Function网络切片选择功能
+P-CSCF : 
+Proxy-Call Session Control Function代理呼叫会话控制功能
 ### PANI 
 P-Access-Network-Info接入网信息（SIP私有扩展之一）
-PCC :Policy and Charging Control计费和策略控制
-PCF :Policy Control Function策略控制功能
+PCC : 
+Policy and Charging Control计费和策略控制
+PCF : 
+Policy Control Function策略控制功能
 ### PCO 
 Protocol Configuration Option协议配置选项
 ### PDR 
 Packet Detection Rule报文检测规则
-PDU :Packet Data Unit分组数据单元
+PDU : 
+Packet Data Unit分组数据单元
 ### PEI 
 Permanent Equipment Identifier永久设备标识
 ### PFCP 
 Packet Forwarding Control Protocol报文转发控制协议
-PLMN :Public Land Mobile Network公共陆地移动网
+PLMN : 
+Public Land Mobile Network公共陆地移动网
 ### PSI 
 PCF Session IdentityPCF会话标识
 ### QCI 
@@ -5400,14 +5262,18 @@ QoS Flow IdentityQoS流标识
 Re-Auth-Answer重新鉴权响应
 ### RAR 
 Re-Auth-Request重新鉴权请求
-RAT :Radio Access Technology无线接入技术
+RAT : 
+Radio Access Technology无线接入技术
 ### RFSP 
 RAT/Frequency Selection Priority无线/频率选择优先级
 ### RRC 
 Radio Resource Control无线资源控制
-S-NSSAI :Single Network Slice Selection Assistance Information单个网络切片选择辅助信息
-SM :Session Management会话管理
-SMF :Session Management Function会话管理功能
+S-NSSAI : 
+Single Network Slice Selection Assistance Information单个网络切片选择辅助信息
+SM : 
+Session Management会话管理
+SMF : 
+Session Management Function会话管理功能
 ### SNA 
 Subscription-Notification-Answer订阅通知响应
 ### SNR 
@@ -5420,12 +5286,14 @@ Session-Termination-Answer会话终止响应
 Session-Termination-Request会话终止请求
 ### SUCI 
 Subscription Concealed Identifier签约的隐藏标识符
-SUPI :Subscriber Permanent Identifier用户永久标识
+SUPI : 
+Subscriber Permanent Identifier用户永久标识
 ### T-ADS 
 Terminating Access Domain Selection终结接入域选择
 ### TAI 
 Tracking Area Identity跟踪区标识
-TAU :Tracking Area Update跟踪区域更新
+TAU : 
+Tracking Area Update跟踪区域更新
 ### TDD 
 Time Division Duplex时分双工
 ### TEID 
@@ -5436,13 +5304,18 @@ User-Authorization- Answer用户授权响应
 User-Authorization-Request用户授权请求
 ### UDA 
 User-Data-Answer用户数据响应
-UDM :Unified Data Management统一数据管理
-UDR :User Data Request用户数据（读取）请求
-UE :User Equipment用户设备
+UDM : 
+Unified Data Management统一数据管理
+UDR : 
+User Data Request用户数据（读取）请求
+UE : 
+User Equipment用户设备
 ### ULI 
 User Location Information用户位置信息
-UPF :User Plane Function用户平面功能
-URI :Uniform Resource Identifier统一资源标识符
+UPF : 
+User Plane Function用户平面功能
+URI : 
+Uniform Resource Identifier统一资源标识符
 ### URR 
 Usage Reporting Rule用量上报规则
 ### URSP 
@@ -5452,13 +5325,13 @@ Expected User Response预期的用户响应
 ## 接口协议 
 ### Namf 
 #### Namf接口协议简介 
-场景描述 :Namf是AMF为其他NF提供服务的接口。 
+场景描述 : 
+Namf是AMF为其他NF提供服务的接口。 
 图1  Namf接口示意图
-
  说明： 
 目前，AMF还不支持向LMF、GMLC、CBCF、PWS、NEF提供服务。 
-协议栈 :图2  服务化接口协议栈
-
+协议栈 : 
+图2  服务化接口协议栈
 Namf和其他所有服务化接口一样，都采用如上图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 AMF通过Namf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -5493,84 +5366,104 @@ Namf_Location|ProvideLocationInfo|该服务操作允许NF服务消费者（例�
 Namf_MT|EnableUEReachability|当SMSF需要下发MT SMS时，调用AMF的Namf_MT_EnableUEReachability API，通知AMF使能用户可达。
 ProvideDomainSelectionInfo|Namf_MT|当NF服务消费者，比如UDM，需要获取用于IMS语音落地域选择的用户信息时，调用Namf_MT_ProvideDomainSelectionInfo API。
 ##### Namf_Communication_UEContextTransfer 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_UEContextTransfer|Request/Response|当目标AMF收到注册请求消息，消息中UE的5G-GUTI包括源AMF信息，则目标AMF调用源AMF的Namf_Communication_UEContextTransfer以获取UE上下文（如UE的SUPI和MM上下文）。NF服务消费者发送POST请求消息中包含UeContextTransferReqData数据类型的对象。如果成功，目标AMF应响应状态码“201 Created”，并且PUT响应的消息体应包含UeRegStatusUpdateRspData数据类型的对象。如果失败或重定向时，目标AMF应返回403/404的HTTP状态码，并且消息体应包含一个ProblemDetails结构。
 ##### Namf_Communication_RegistrationStatusUpdate 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_RegistrationStatusUpdate|Request/Response|用于通用注册流程和AMF重分配流程注册流程中，目标AMF调用源AMF的Namf_Communication_RegistrationStatusUpdate用来向源AMF更新目标AMF上的UE注册状态，从而指示针对指定UE的先前的UEContextTransfer的结果。NF服务消费者发送POST请求消息中包含UeRegStatusUpdateReqData数据类型的对象。如果成功，目标AMF应响应状态码“201 Created”，并且PUT响应的消息体应包含N1N2MessageTransferRspData数据类型的对象。如果失败或重定向时，目标AMF应返回403/404的HTTP状态码，并且消息体应包含一个ProblemDetails结构。
 ##### Namf_Communication_CreateUEContext 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_CreateUEContext|Request/Response|NF服务消费者（例如，源AMF）使用带有“Individual UeContext”资源的URI的HTTP PUT方法创建UE上下文，其中ueContextId唯一标识一个UeContext资源，由UE的SUPI或PEI组成。NF服务消费者发送PUT请求消息中包含UeContextCreateData结构，包括N2信息通知回调URI。如果成功，目标AMF应响应状态码“201 Created”，并且PUT响应的消息体应包含UeContextCreatedData结构。如果失败或重定向时，目标AMF应返回403的HTTP状态码，并且消息体应包含一个UeContextCreateError结构。
 ##### Namf_Communication_ReleaseUEContext 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_ReleaseUEContext|Request/Response|用于基于N2的Inter NG-RAN切换取消流程中。NF服务消费者发送POST请求消息中包含需要传递到目标AMF的任何数据。如果成功，目标AMF将在后续响应中返回“204 No Content”，其中包含一个空净荷体。如果失败或重定向时，目标AMF应返回403/404的HTTP状态码，并且消息体应包含一个ProblemDetails结构。
 ##### Namf_Communication_N1N2MessageSubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_N1N2MessageSubscribe|Subscribe/Notify|用于UE配置更新等流程中。NF服务消费者（例如LMF或PCF）通过调用AMF的Namf_Communication_N1N2MessageSubscribe可以订阅特定N1消息类型（例如LPP或UPDP）或N2信息类型（例如，NRPPa）的通知。NF服务消费者应发送POST请求，在AMF中创建订阅资源，用于UE特定的N1/N2消息通知，该POST请求的净荷体包括UeN1N2InfoSubscriptionCreateData数据结构。如果请求被接受，AMF应包含一个HTTP位置头，以提供新创建的资源（订阅）的位置，以及指示请求的资源在响应消息中创建的状态码201。该响应消息的净荷体包括UeN1N2InfoSubscriptionCreatedData数据结构。
 ##### Namf_Communication_N1N2MessageUnSubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_N1N2MessageUnSubscribe|Subscribe/Notify|用于AMF重分配的注册、UE配置更新等流程。NF服务消费者（例如LMF或PCF）调用AMF的该服务操作用来通知AMF停止通知特定类型（例如LPP或UPDP）的N1消息或N2信息。NF服务使用者应发送删除请求以删除AMF中已有的订阅资源。如果请求被接受，AMF应在响应消息中回复204指示删除订阅ID成功。
 ##### Namf_Communication_N1MessageNotify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_N1MessageNotify|Subscribe/Notify|用于AMF重分配的注册、UE配置更新等流程。该服务操作用于AMF将从UE接收到的N1消息通知到目的NF。AMF应向N1通知URI发送HTTP POST请求，POST请求的净荷体应包含带有订阅N1消息的N1MessageNotification数据结构。成功时，应返回204No Content。失败时， 返回403响应，响应消息体中应包含一个ProblemDetails对象。
 ##### Namf_Communication_N2InfoNotify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_N2InfoNotify|Subscribe/Notify|用于NGRAN节点N2切换流程和网络辅助定位流程。该服务操作被AMF调用，通知NF服务消费者从接入网接收到订阅的N2信息。AMF应向n2InfoNotifyUrl发送HTTP POST请求，POST请求的净荷体应包含N2InformationNotification数据结构，包含NF服务消费者订阅的N2信息。成功时，应返回204No Content，响应的净荷体为空。失败时， 消息体中应包含一个ProblemDetails对象。
 ##### Namf_Communication_N1N2MessageTransfer 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_N1N2MessageTransfer|Request/Response|用于PDU会话建立/修改/释放、网络侧发起的服务请求、Inter NG-RAN node N2 based handover、UE配置更新等流程中。NF服务消费者应发送POST请求，传递N1和N2信息，NF服务消费者可以在请求消息的AMF中包含N1N2MessageTransfer通知URI。POST请求消息体中包括N1N2MessageTransferReqData数据结构。在成功的情况下，即如果请求被接受，并且AMF能够将N1/N2消息传递给UE和/或者，则AMF应响应一个200 OK的状态码，AMF将N1N2MessageTransferRspData中的原因IE设置为“N1_N2_TRANSFER_INITIATED”。在失败或重定向时，返回3XX/4xx/5xx响应，消息体应包含N1N2MessageTransferErrorr结构。
 ##### Namf_Communication_N1N2TransferFailureNotification 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_N1N2TransferFailureNotification|Subscribe/Notify|用于PDU会话建立/修改/释放、网络侧发起的服务请求、Inter NG-RAN node N2 based handover、UE配置更新等流程中。当AMF确定寻呼或NAS通知失败时，如果NF服务消费者提供了通知URI，AMF应在通知URI上向NF服务消费者发送一个POST请求。在POST请求体中，包含N1/N2消息传递原因信息。NF服务消费者应发送“204 No Content”状态码的响应。
 ##### Namf_Communication_AMFStatusChangeSubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_AMFStatusChangeSubscribe|Subscribe/Notify|用于AMF规划的删除流程中。用于NF服务消费者订阅AMF的状态变化。NF服务使用者应发送POST请求，请求消息体中包括SubscriptionData数据结构。成功时，AMF应包含一个HTTP位置头，以提供新创建的资源（订阅）的位置，以及状态码201。失败或重定向时，返回4xx/5xx响应，消息体包含一个ProblemDetails结构。
 该服务操作通过向AMF提供更新的签约数据，更新AMF中以前签约的NF业务消费者的签约数据，对整个签约数据（通过新的签约数据完全替换现有的签约数据）进行更新操作。NF服务使用者应向代表个人订阅的资源URI发送PUT请求，请求体应包含订阅数据的表示，以替换AMF中先前的订阅数据。PUT请求的净荷体应包含SubscriptionData数据结构。在成功的情况下，应返回“200 OK”，PUT响应的净荷体应包含被替换资源的表示，SubscriptionData的数据结构。失败或重定向时，返回403响应，消息体包含一个ProblemDetails数据结构。|Namf_Communication_AMFStatusChangeSubscribe|Subscribe/Notify
 ##### Namf_Communication_AMFStatusChangeUnSubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_AMFStatusChangeUnSubscribe|Subscribe/Notify|用于AMF规划的删除流程中。此服务操作将删除已有的订阅通知。NF服务使用者应向代表个人订阅的资源URI发送删除请求，请求体应为空。成功时，返回204 No Content，响应正文为空。失败或重定向时，返回404响应，消息体包含一个ProblemDetails结构。
 ##### Namf_Communication_AMFStatusChangeNotify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_AMFStatusChangeNotify|Subscribe/Notify|用于AMF规划的删除流程中。该服务操作通知每一个以前订阅了AMF的状态变化通知的NF服务消费者AMF的状态发生了变化，例如AMF不可用了。AMF向回调URI发送POST请求，请求体中包含GUAMI和相关状态变化，GUAMI由NF服务消费者在订阅操作时指示。成功时，由NF服务消费者返回“204 No content”。失败或重定向时，返回404响应，消息体包含一个ProblemDetails结构。
 ##### Namf_Communication_EBIAssignment 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Communication_EBIAssignment|Request/Response|用于UE请求PDU会话建立、UE或网络请求PDU会话修改流程中。NF服务消费者（例如，SMF）应调用个人ue context资源上的“assign-ebi”自定义方法，NF服务消费者应提供PDU会话标识、ARP列表和S-NSSAI作为服务操作的输入。NF服务消费者发送的POST请求的净荷主体包括一个AssignEbiData数据结构。在成功的情况下，则AMF应响应一个200 OK的状态码。响应消息的净荷主体包括一个AssignedEbiData数据结构。失败或重定向时，返回403响应，消息体应包含AssignEbiError结构。
 ##### Namf_EventExposure_Subscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_EventExposure_Subscribe|Subscribe/Notify|该服务操作用于NF业务消费者（如，NEF）为UE订阅事件。NF服务消费者应发送POST请求在AMF中创建订阅资源，POST请求的净荷主体应包含要创建的个人订阅资源的表示。请求中可以包含失效时间，由NF服务消费者建议为提示。表示需要保持订阅的时间，以及订阅事件应停止生成报告的时间。POST请求的净荷主体包括一个AmfCreateEventSubscription数据结构。成功时，AMF响应消息中包含一个HTTP位置头，以提供新创建的资源（订阅）的位置，以及状态码201。响应消息的净荷主体包括一个AmfCreatedEventSubscription数据结构。失败或重定向时，返回403响应，消息体包含一个ProblemDetails数据结构。
 NF服务消费者应发送PATCH请求修改AMF中的订阅资源，修改可能是订阅的事件或更新事件选项。PATCH请求净荷主体包括一个AmfUpdateEventSubscriptionItem数据结构。成功时，AMF应该将修改后的订阅资源或其子资源的表示形式连同状态码200 OK一起返回。响应消息的净荷主体包括一个AmfUpdatedEventSubscription数据结构。失败或重定向时，返回403/404响应，消息体包含一个ProblemDetails数据结构。|Namf_EventExposure_Subscribe|Subscribe/Notify
 ##### Namf_EventExposure_Unsubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_EventExposure_Unsubscribe|Subscribe/Notify|取消订阅服务操作由NF服务使用者（例如NEF）向AMF调用，以删除先前在AMF上创建的现有订阅。NF服务消费者应发送删除请求以删除AMF中已有的订阅资源。成功后，AMF应回复204状态码，指示在响应消息中删除订阅ID标识的资源成功。失败或重定向时，返回404响应，消息体包含一个ProblemDetails数据结构。
 ##### Namf_EventExposure_Notify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_EventExposure_Notify|Subscribe/Notify|通知服务操作由AMF调用，用于当订阅中包含的某些事件发生时，向通知URI发送通知。AMF发送POST请求，发送通知。POST请求的净荷主体包括一个AmfEventNotification数据结构。如果接收到通知，NF服务消费者应在响应消息中回复指示收到通知的状态码204。
 ##### Namf_Location_ProvideLocationInfo 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_Location_ProvideLocationInfo|Request/Response|该服务操作允许NF服务消费者（如，UDM）请求目标UE的网络提供的位置信息 。NF服务消费者应向AMF发送一个POST请求，POST请求的净荷主体应包含指示所需位置信息类型的“RequestLocInfo”数据结构。成功时，AMF返回200 OK响应，响应的净荷体包含一个包含网络提供目标UE位置信息的“ProvideLocInfo”数据结构。失败或重定向时，返回403/404响应，消息体包含一个ProblemDetails数据结构。
 ##### Namf_MT_EnableUEReachability 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_MT_EnableUEReachability|Request/Response|当SMSF需要下发MT SMS时，调用AMF的Namf_MT_EnableUEReachability API，通知AMF使能用户可达。NF服务消费者发送PUT请求消息中包含EnableUEReachabilityReqData数据类型的对象。如果成功，AMF应响应状态码为"200 OK"，并且PUT响应的消息体中包含EnableUEReachabilityRspData数据类型的对象。如果失败或者重定向，AMF返回403/503/504等HTTP状态码，并且消息中应包含ProblemDetails或ProblemDetailsEnableUeReachability数据类型的对象。
 ##### Namf_MT_ProvideDomainSelectionInfo 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Namf_MT_ProvideDomainSelectionInfo|Request/Response|当NF服务消费者，比如UDM，需要获取用于IMS语音落地域选择的用户信息时，调用Namf_MT_ProvideDomainSelectionInfo API。NF服务消费者发送GET请求消息，URI中包含info-class=TADS的请求参数。如果成功，则AMF应相应状态码为"200 OK"，并且GET响应的消息体中包含UeContextInfo数据类型的对象。如果失败或者重定向，AMF返回403/404HTTP状态码，并且消息中应包含ProblemDetails数据类型的对象。
@@ -5901,14 +5794,14 @@ EnableUEReachabilityRspData的数据结构参见下表：
 reachability|Mandatory|指示用户当前的可达性状态。
 ### Nsmf 
 #### Nsmf接口协议简介 
-场景描述 :Nsmf是SMF为其他NF提供服务的接口。 
+场景描述 : 
+Nsmf是SMF为其他NF提供服务的接口。 
 图1  Nsmf接口示意图
-
 N16a是SMF与I-SMF之间的参考点，N38是I-SMF与I-SMF之间的参考点。 
  说明： 
 目前，SMF还不支持向NEF提供服务。 
-协议栈 :图2  服务化接口协议栈
-
+协议栈 : 
+图2  服务化接口协议栈
 Nsmf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 SMF通过Nsmf接口向其他NF提供多种服务（NFS，Network Function Service），具体服务参见下表。 
@@ -5939,38 +5832,47 @@ Nsmf_PDUSession|Notify Status|通知SM上下文状态服务操作用于I-SMF通�
 [Nsmf_PDUSession_Release]
 [Nsmf_PDUSession_NotifyStatus]
 ##### Nsmf_PDUSession_CreateSMContext 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_CreateSMContext|Request/Response|每个PDU会话只能有一个单独的SM上下文。NF服务消费者（如，AMF）使用HTTP POST方法创建SM上下文，该POST请求的净荷主体应包括：SmContextCreateData结构，包括N2信息通知回调URI。如果成功，SMF应响应状态码“201 Created”，并且PUT响应的消息体应包含SMContextCreatedData结构。如果失败或重定向时，目标SMF应返回3XX/4xx/5xx的HTTP状态码，并且消息体应包含一个SmContextCreateError结构。
 ##### Nsmf_PDUSession_UpdateSMContext 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_UpdateSMContext|Request/Response|该服务操作用于更新单个SM上下文或提供从UE/RAN接收到的指定PDU会话的N1或N2 SM信息到SMF。NF服务消费者应向SMF中发送POST请求，POST请求的净荷包含SMContextUpdateData。成功时，返回204 No Content或200 OK，在后一种情况下，响应的净荷体应包含SMContextUpdatedData。如果失败或重定向时，目标SMF应返回3XX/4xx/5xx的HTTP状态码，对于4xx/5xx的HTTP状态码场景，消息体应包含一个SMContextUpdateError结构。
 ##### Nsmf_PDUSession_ReleaseSMContext 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_ReleaseSMContext|Request/Response|该服务操作用于释放指定PDU会话的SM上下文。NF服务消费者应向SMF发送一个POST请求，POST请求的净荷体包含SMContextReleaseData。在成功的情况下，SMF将返回一个204 No Content响应或者200 OK，在后一种情况下，PUT响应的消息体应包含SMContextReleasedData结构。在失败或重定向中，SMF返回失败的HTTP状态代码，对于4xx/5xx响应，消息体应包含一个ProblemDetails结构。
 ##### Nsmf_PDUSession_NotifySMContextStatus 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_NotifySMContextStatus|Subscribe/Notify|该服务操作用于SMF通知NF服务消费者在SMF中与PDU会话相关的SM上下文状态（如，当SM上下文释放时）。主要用于如下两个流程：UE请求的PDU会话建立过程，创建SM上下文响应后PDU会话建立失败。UE或网络请求的PDU会话释放，例如SMF发起的释放。SMF应向NF服务消费者发送POST请求，请求的净荷体应包含SMContextStatusNotification。成功时，应返回204 No Content，响应的净荷体为空。如果请求中SMF指示释放了消息上下文资源，则NF服务消费者应释放与SMF的关联，释放PDU会话，并释放分配给PDU会话的EBI。在失败或重定向中，NF服务消费者（如：AMF）应返回失败的HTTP状态代码，对于4xx/5xx响应，消息体应包含一个ProblemDetails结构。
 ##### Nsmf_PDUSession_RetrieveSMContext 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_RetrieveSMContext|Request/Response|该服务操作应用于从SMF获取给定PDU会话的单个SM上下文。主要用于基于N26接口的5GS到EPS的切换流程和基于N26接口的5GS到EPS空闲模式的移动性注册流程。NF服务消费者向SMF发送一个POST请求，该POST请求包含SMContextRetrieveData。成功时，SMF应返回200 OK，响应的净荷体应包含SmContextRetrievedData。失败时，返回403响应，消息体应包含一个ProblemDetails结构。
 ##### Nsmf_PDUSession_Create 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_Create|Request/Response|在涉及I-SMF的场景或跨PLMN漫游场景中创建一个单独的PDU会话。NF服务消费者（I-SMF）使用HTTP POST方法创建SM上下文，该POST请求的净荷主体应包括：PduSessionCreateData结构，包括代表PDU会话的回调URI，供SMF可能用于随后修改或释放PDU会话。如果成功，SMF应响应状态码“201 Created”，并且PUT响应的消息体应包含PduSessionCreatedData结构。如果失败或重定向时，目标AMF应返回4xx/5xx的HTTP状态码，并且消息体应包含一个PduSessionCreateError结构。
 ##### Nsmf_PDUSession_Update 
+
 服务操作|操作语义|业务操作的解释
 ---|---|---
 Nsmf_PDUSession_Update|Request/Response|更新I-SMF中的单个PDU会话和/或提供所述I-SMF向所述UE发送N1 SM信令所需的信息。用于HR（home-routed roaming）会话场景，包括I-SMF/V-SMF向A-SMF/H-SMF发起的正向更新以及A-SMF/H-SMF向I-SMF/V-SMF发起的反向更新操作。NF服务消费者（I-SMF）使用HTTP POST方法更新SMF中的PDU会话，或者为SMF提供从UE接收的N1SM信令消息，该POST请求的净荷主体应包括：HsmfUpdateData结构，包括PDU会话请求类型、从UE获取的N1信令消息。如果成功，SMF应响应状态码204 No Content或者200 OK，在后一种情况下，PUT响应的消息体应包含HsmfUpdatedData结构。如果失败，目标AMF应返回4xx/5xx的HTTP状态码，并且消息体应包含一个HsmfUpdateError结构。NF服务消费者（SMF）使用HTTP POST方法I-SMF中的更新PDU会话，或者为I-SMF提供从UE接收的N1SM信令消息，该POST请求的净荷主体应包括：VsmfUpdateData结构，包括PDU会话请求类型、从UE获取的N1信令消息。如果成功，SMF应响应状态码204 No Content或者200 OK，在后一种情况下，PUT响应的消息体应包含VsmfUpdatedData结构。如果失败，目标AMF应返回4xx/5xx的HTTP状态码，并且消息体应包含一个VsmfUpdateError结构。
 ##### Nsmf_PDUSession_Release 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_Release|Request/Response|该服务操作用于释放指定PDU会话的SM上下文。NF服务消费者应向SMF发送一个POST请求，POST请求的净荷体包含ReleaseData。在成功的情况下，SMF应响应状态码200 OK，PUT响应的消息体应包含ReleasedData结构；或者204 No Content，响应的净荷体为空。在失败的情况下，SMF返回失败的HTTP状态代码，对于4xx/5xx响应，消息体应包含一个ProblemDetails结构。
 ##### Nsmf_PDUSession_NotifyStatus 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmf_PDUSession_NotifyStatus|Request/Response|通知SM上下文状态服务操作用于I-SMF通知NF服务消费者SMF中与PDU会话相关的SM上下文状态（如，当SM上下文释放时）。SMF应向NF服务消费者发送一个POST请求，POST请求的净荷体包含StatusNotification。在成功的情况下，NF服务消费者应响应状态码204 No Content，响应的净荷体为空。在失败的情况下，NF服务消费者（如：I-SMF）返回失败的HTTP状态代码，对于4xx/5xx响应，消息体应包含一个ProblemDetails结构。
@@ -6336,11 +6238,11 @@ StatusNotification的数据结构参见下表：
 statusInfo|Mandatory|该IE应包含PDU会话的状态信息。
 ### Nnssf 
 #### Nnssf接口协议简介 
-场景描述 :Nnssf是NSSF为其他NF提供服务的接口。 
+场景描述 : 
+Nnssf是NSSF为其他NF提供服务的接口。 
 图1  Nnssf接口示意图
-
-协议栈 :图2  服务化接口协议栈
-
+协议栈 : 
+图2  服务化接口协议栈
 Nnssf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 NSSF通过Nnssf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -6350,27 +6252,33 @@ NSSF|Nnssf_NSSelection|用于服务PLMN和HPLMN的网络切片选择。用于AMF
 Nnssf_NSSAIAvailability|NSSF|该服务用于NF服务消费者 (如， AMF) 在NSSF上更新AMF支持的S-NSSAI，订阅和取消订阅每个TA下NSSAI可用性信息的变化通知。
 #### 服务操作解释 
 ##### Nnssf_NSSelection_Get 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnssf_NSSelection_Get|Request/Response|用于AMF重分配流程注册流程、UE配置更新流程、SMF选择流程。在注册过程中，NF服务消费者（如，AMF）获取允许的NSSAI、配置的NSSAI、目标AMF集合或候选AMF列表以及其他可选信息。AMF向NSSF发送GET请求，其中包含一个或多个参数作为查询参数：请求的NSSAI，签约的S-NSSAI，默认S-NSSAI的标识，SUPI的PLMN ID，TAI，NF服务消费者的NF类型，请求者ID。在PDU会话建立过程中，NF服务消费者（如，AMF）获取NRF和网络切片实例的NSI标识。NF服务消费者（如，AMF）向NSSF发送GET请求，请求中应包含查询参数，至少包含S-NSSAI、NF业务消费者的NF类型和请求者ID，对于服务PLMN中发起的流程，查询参数中也应包含非漫游/LBO漫游/HR漫游指示、SUPI的PLMN ID和TAI。在如下成功的情况下，NSSF返回200 OK：NSSF能够为请求的网络切片选择信息找到授权的网络切片信息，响应主体包括允许的NSSAI、目标AMF集合或候选AMF列表。NSSF不能找到请求的切片选择信息的切片实例，响应体中应该包含一个空的“AuthorizedNetworkSliceInfo”JSON对象。在失败时，NSSF将返回一个403状态码和ProblemDetails的数据结构。
 ##### Nnssf_NSSAIAvailability_Update 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnssf_NSSAIAvailability_Update|Request/Response|NF服务消费者（如，AMF）使用此服务操作向NSSF更新NF服务消费者每个TA下支持的S-NSSAI，并获取每个TA下其支持的S-NSSAI的可用性。NF服务消费者（如，AMF）应向NSSF发送PUT请求，为了替换或创建NSSAI可用性信息，正文的净荷中应包含NSSAIAvailabilityInfo，该NssaiAvailabilityInfo包含要替换一个或多个的支持的S-NSSAI信息。NF服务消费者（如，AMF）应向NSSF发送PATCH请求，为了更新NSSAI可用性信息，正文的净荷中应包含PatchDocument，其中包含一个或多个PatchItem指令用于更新支持的S-NSSAI信息。成功后返回200 OK，PUT/PATCH响应的净荷体包含AuthorizedNssaiAvailabilityInfo。在失败的情况下，NSSF将返回一个403/404状态代码和包括ProblemDetails的响应体。
 ##### Nnssf_NSSAIAvailability_Subscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnssf_NSSAIAvailability_Subscribe|Subscribe/Notify|此服务操作用于NF服务消费者（如，AMF）订阅NSSAI可用性信息状态的任何变化通知（如，每TA可用的S-NSSAI，以及UE的服务PLMN中的TA的限制S-NSSAI(s)），这个NSSAI可用性信息状态变化是由另一个AMF更新的。NF服务消费者应发送POST请求在NSSF中创建订阅资源，POST请求的净荷主体包含NssfEventSubscriptionCreateData。成功时返回201Created，响应消息的净荷体应包含NssfEventSubscriptionCreatedData中。在失败的情况下，NSSF将返回一个403/404状态代码和包括ProblemDetails的响应体。
 ##### Nnssf_NSSAIAvailability_Unsubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnssf_NSSAIAvailability_Unsubscribe|Subscribe/Notify|用于NF服务消费者（如，AMF）取消任何先前订阅的NSSAI可用性信息的变更通知。NF服务使用者应发送删除请求以删除NSSF中已有的订阅资源。如果请求被接受，NSSF应响应204 NO Content，表示删除订阅ID所标识的资源成功。在失败的情况下，NSSF将返回一个404状态代码和包括ProblemDetails的响应体。
  
 ##### Nnssf_NSSAIAvailability_Notify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnssf_NSSAIAvailability_Notify|Subscribe/Notify|NSSF使用通知服务操作向NF服务消费者（如，AMF）更新状态变化，每TA下限制的S-NSSAI的可用性以及该TA下每个PLMN的限制S-NSSAI。NSSF应向NF服务消费者（如，AMF）发送POST请求，POST请求的净荷体应包含NssfEventNotification。成功时，应返回204 No Content，响应的净荷体为空。
 ##### Nnssf_NSSAIAvailability_Delete 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnssf_NSSAIAvailability_Delete|Request/Response|NF服务消费者（如，AMF）使用删除服务操作删除NSSF中存储的给NF服务消费者的NSSAI可用性信息。NF服务消费者（如，AMF）发送删除请求，以删除由{nfId}（如，AMF标识）所代表的NF服务消费者的NSSAI可用性信息。NSSF应删除个人AMF的NSSAI可用性信息，并返回204 No Content。
@@ -6482,11 +6390,11 @@ subscriptionId|Mandatory|表示订阅产生的事件通知。
 authorizedNssaiAvailabilityData|Mandatory|包含授权的NSSAI可用性信息，每一个元素应包含TA中可用S-NSSAI列表的当前状态以及该TA内每个PLMN限制的S-NSSAI列表。
 ### Nnrf 
 #### Nnrf接口协议简介 
-场景描述 :Nnrf是NRF为其他NF提供服务的接口。（下图参考协议29.510中的Figure 4-1: 5G System architecture） 
+场景描述 : 
+Nnrf是NRF为其他NF提供服务的接口。（下图参考协议29.510中的Figure 4-1: 5G System architecture） 
 图1  Nnrf接口示意图
-
-协议栈 :图2  服务化接口协议栈
-
+协议栈 : 
+图2  服务化接口协议栈
 Nnrf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 NRF通过Nnrf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -6510,42 +6418,52 @@ NFProfileRetrieval|Nnrf_NFManagement|此服务操作允许检索当前在NRF中�
 Nnrf_NFDiscovery|NFDiscover|该服务操作用于发现当前注册在NRF、并且匹配查询入参的NF实例集合（及关联的NF服务实例）。实例由NF Profile标识。在服务使用者调用此服务操作之前，应考虑是否可以重用之前搜索（服务发现）的结果。如果新服务发现请求中的输入查询参数与上一次搜索使用的查询参数相同，且结果未过期，则服务消费者应重用之前的结果。如果新查询所需的属性包含在之前查询的候选NF Profile参数中，服务消费者可以考虑重用之前的结果，在这种情况下，当重复使用上一个查询的结果时， 服务消费者需要考虑结果， 可能与执行新查询后获得的存在不同，比如发现的NFs数量不同等。
 Nnrf_AccessToken|Access Token Request|该服务操作用于NF服务消费者向授权服务器 (NRF)请求OAuth2访问令牌。
 ##### Nnrf_NFManagement_NFRegister 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFRegister|Request/Response|NF服务消费者向NF实例的资源URI发送PUT请求，每个NF实例的URI唯一。变量{nfInstanceID}表示由NF服务消费者提供的标识符，在NF注册的NRF的PLMN内全局唯一。NF实例ID的格式为通用唯一标识符(UUID)版本4。NF服务消费者发送PUT请求，消息中包含NFProfile结构。注册成功，返回“201（ Created）”消息，PUT响应包含创建资源标识，“location”头域应包含创建资源URI。另外，NRF返回心跳定时器“heart-beat timer”属性字段，含NF实例和NRF心跳消息交互间隔（单位：秒）。PUT应答消息中包含NFProfile结构。如果由于NFProfile JSON对象的编码错误导致NF实例注册失败，NRF将返回状态码400（Bad Request），携带ProblemDetails信元提供详细错误信息。如果NRF内部错误导致NF实例注册失败，NRF将返回状态码500（Internal Server Error），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_NFManagement_NFUpdate 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFUpdate|Request/Response|全量更新NF服务消费者向表示NF实例的资源URI发送PUT请求，PUT请求包含NFProfile结构。更新结果：全量更新成功，NRF返回200 （OK），PUT响应包含被替换资源标识。PUT应答消息中包含NFProfile结构。如果由于NFProfile JSON对象的编码错误导致NF实例全量更新失败，NRF将返回400（Bad Request）状态码，携带ProblemDetails信元提供详细错误信息。如果NRF内部错误导致NF实例全量更新，NRF将返回状态码500（Internal Server Error），携带ProblemDetails信元提供详细错误信息。部分更新NF服务消费者向代表NF实例的资源URI发送PATCH请求，PATCH请求体指定的所有操作都必须要按照原子粒度执行。PATCH请求消息中包含PatchDocument结构。更新结果：部分更新成功，NRF返回200（OK），PUT响应包含被替换资源标识。PATCH应答消息中包含NFProfile结构。如果在NRF数据库中已注册NF实例列表中没有找到NF实例ID标识的NF实例，返回状态码404（Not Found），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_NFManagement_NFDeregister 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFDeregister|Request/Response|该服务操作删除由NF实例ID标识的给定资源。通过向标识特定NF实例的URI发出DELETE请求来调用该服务操作。NF服务消费者向NF实例的资源URI发送DELETE请求，DELETE请求体为空。返回消息。删除成功，返回204（No content），DELETE响应体为空。如果在NRF数据库中已注册NF实例列表中没有找到NF实例ID标识的NF实例，返回状态码404（Not Found），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_NFManagement_NFStatusSubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFStatusSubscribe|Subscribe/Notify|1、NF服务消费者向代表“订阅”集合资源的资源URI发送一个POST请求。POST请求体应包括标识NF服务消费者感兴趣接收的通知类型的数据；还包含回调URI，NRF根据该回调URI向NF服务消费者发送实际通知。NF服务消费者可能携带一个有效时间字段，标识期望订阅保活时间。订阅请求还可能包括一些附加参数，包含要监控的NF Profile列表（或无需监控的属性列表），以确定当上述NF Profile发生变化时，是否发送来自NRF的通知。POST请求消息中包含SubscriptionData结构。2a、订阅成功后返回201（Created），响应中包含已创建订阅相关数据，包括订阅有效期（由NRF决定）。一旦订阅失效，如果订阅者希望继续接收状态通知。需向NRF发送订阅请求，重新创建订阅。POST应答消息中包含SubscriptionData结构。2b、如果由于NFProfile JSON对象的编码错误导致订阅创建失败，NRF将返回状态码400（Bad Request），携带ProblemDetails信元提供详细错误信息。如果NRF内部错误导致订阅创建失败，NRF将返回状态码500（Internal Server Error），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_NFManagement_NFStatusNotify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFStatusNotify|Subscribe/Notify|1、NRF发送POST请求到回调URI。POST请求消息中包含NotificationData结构。如果订阅了新注册NF实例，请求体应根据NF服务消费者在订阅操作时所指示的标准，携带与新注册NF相关的数据及其服务，这些数据应包含NF实例的NF实例ID、需要通知的事件标识（“registration”），以及新的属性数据（包括NF实例可以提供的服务列表）。如果订阅了NF实例属性变更通知，请求体应包括发生属性信息变更的NF实例ID、通知事件标识（“Profile change”）和变更后的属性信息。如果订阅了NF实例去注册变更通知，请求体应包括去注册的NF实例的NF实例ID和通知事件指示（“deregistration”）。2a、通知成功，NF服务消费者返回204（No content）。POST应答体为空。2b、如果NF服务消费者认为“nfStatusNotificationURI”无效（例如，因为该URI不属于NRF中注册的NF服务消费者创建的任何订阅），NF服务消费者返回状态码404 （Not Found），携带ProblemDetails信元，提供详细错误信息。
 ##### Nnrf_NFManagement_NFStatusUnSubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFStatusUnSubscribe|Subscribe/Notify|1、NF服务消费者向NF订阅的资源URI发送DELETE请求，DELETE请求体为空。2a、删除成功，返回204（No content），响应体为空。2b、如果在NRF数据库中已注册NF实例列表中没有找到NF实例ID标识的NF订阅，返回状态码404（Not Found），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_NFManagement_NFListRetrieval 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFListRetrieval|Request/Response|1、NF服务消费者应向资源URI“nf-instances”集合资源发送HTTP GET请求。检索请求查询参数包含输入过滤条件（可选）。HTTP GET请求体为空。GET请求消息头中携带的查询参数参考Query Parameters。2a、查询成功，返回200 （OK），响应体中应包含满足检索过滤条件（例如，同一个NF类型的所有NF实例）并且已在NRF中注册的NF URI信息。或者结果中无NF信息（例如，NRF中没有注册NF，或者当前NRF注册的NF实例中没有匹配到请求nf-type的NF）。GET应答消息中包含UriList结构。2b、如果不允许NF服务消费者检索已注册的NF实例，NRF返回状态码403（Forbidden）。如果由于NFProfile JSON对象的编码错误查询失败，NRF返回400（Bad Request）状态码，携带ProblemDetails信元提供详细错误信息。如果NRF内部错误导致查询失败，NRF返回状态码500（Internal Server Error），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_NFManagement_NFProfileRetrieval 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFManagement_NFProfileRetrieval|Request/Response|1、NF服务消费者向资源URI“nf-instances/{nfinstanceid}”发送HTTP GET请求。HTTP GET请求体为空。2a、查询成功后，返回200（OK），响应体中包含请求消息中标识的NF实例属性信息。GET应答消息中包含NFProfile结构。2b、如果不允许NF服务消费者检索已注册的NF实例，NRF返回状态码403（Forbidden）。如果NRF内部错误导致查询失败，NRF返回状态码500（Internal Server Error），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_NFDiscovery 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_NFDiscovery|Request/Response|该服务操作是通过查询“nf-instance”资源来执行的，该请求被发送到同一个PLMN的NRF。1、NF服务消费者应向资源URI“nf-instances”集合资源发送HTTP GET请求。HTTP GET请求体为空。服务发现请求查询参数包含输入过滤条件（可选）。GET请求消息头中包含的发现参数参考Query Parameters。2a、服务发现成功，返回200 （OK），响应体中包含一个有效期，（在该有效期内，搜索结果可以被NF服务消费者缓存），以及满足搜索过滤条件的NF Profile数组（例如，能提供某种NF服务的所有NF实例）。GET响应消息中包含SearchResult结构。2b、如果不允许NF服务消费者发现查询参数中提供的请求NF类型的NF服务，NRF返回403（Forbidden）状态码，携带ProblemDetails信元提供详细错误信息。如果由于NFProfile JSON对象的编码错误导致服务发现失败，NRF返回400（Bad Request）状态码，携带ProblemDetails信元提供详细错误信息。如果NRF内部错误导致查询失败，NRF返回状态码500（Internal Server Error），携带ProblemDetails信元提供详细错误信息。
 ##### Nnrf_AccessToken_Get 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nnrf_AccessToken_Get|Request/Response|1、NF服务消费者向“令牌端点（Token Endpoint）”发送一个POST请求。令牌端点为：{nrfApiRoot}/oauth2/token，其中{nrfApiRoot}表示NRF的“方案(scheme)”和“授权(authority)”组件的级联。HTTP POST请求体包含OAuth 2.0访问令牌请求（Access Token Request ）AccessTokenReq结构，包括：设置OAuth2授权类型为客户端证书授权"client_credentials"；“scope”参数，指示NF服务消费者试图访问的NF服务名称（即期望访问的NF服务名称）；如果是针对特定NF服务提供者的访问令牌请求，包含请求OAuth2.0访问令牌的NF服务消费者的NF实例ID；如果是对非特定NF服务提供者的访问令牌请求，包含NF服务消费者的NF类型；如果是对非特定NF服务提供者的访问令牌请求，提供期望的NF业务生产者的NF类型；如果是对特定NF服务提供者的访问令牌请求，提供期望的NF服务提供者的NF实例ID；如果是漫游场景下的接入令牌请求，提供归属和服务PLMN ID。如果PLMN使用传输层保护，则NF服务消费者与NRF进行相互认证使用TLS，否则NF服务消费者应使用NDS或物理安全措施。2、接入令牌成功，NRF返回200 （OK），POST响应包含获取的访问令牌和令牌类型。POST应答消息中包含AccessTokenRsp结构。除非令牌的失效时间是通过其他方式（例如部署专用文档）来提供的，否则POST响应需包含令牌的过期时间。如果访问的NF服务提供者业务超出访问令牌范围，POST响应需包含请求的NF服务提供者的NF服务名称。
@@ -7235,12 +7153,12 @@ NFType|NF类型。
 array(NfInstanceId)|NF实例ID数组。
 ### Nudm 
 #### Nudm接口协议简介 
-场景描述 :Nudm是UDM为其他NF提供服务的接口如下图所示。 
+场景描述 : 
+Nudm是UDM为其他NF提供服务的接口如下图所示。 
 图1  Nudm接口示意图
-
-协议栈 :Nudm和其他所有服务化接口一样，都采用如下图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
+协议栈 : 
+Nudm和其他所有服务化接口一样，都采用如下图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 图2  服务化接口协议栈
-
 ##### 网络功能服务列表 
 UDM通过Nudm接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括表1所定义的各种。 
 NF|NFS|NFS的解释
@@ -7276,76 +7194,94 @@ Nudm_SDM_Get
 ---|---|---
 Nudm_SubscriberDataManagement_Get|Request/Response|该服务操作应用于NF服务消费者（例如，AMF）向UDM发送GET请求获取用户个人数据，包含：Slice Selection Subscription Data RetrievalAccess and Mobility Subscription Data RetrievalSMF Selection Subscription Data RetrievalSession Management Subscription Data RetrievalSMS Subscription Data RetrievalSMS Management Subscription Data RetrievalUE Context in SMF Data RetrievalUE Context in SMSF Data RetrievalRetrieval Of Multiple Data SetsIdentifier Translation
 ##### Nudm_SubscriberDataManagement_Subscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_SubscriberDataManagement_Subscribe|Subscribe/Notify|该服务操作用于Subscription to notifications of data change流程中。NF服务消费者订阅用户数据，由UDM检查用户的数据类型。UDM应检查被请求的消费者是否有权订阅请求的更新。
 ##### Nudm_SubscriberDataManagement_Unsubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_SubscriberDataManagement_Unsubscribe|Subscribe/Notify|该服务操作用于Unsubscribe to notifications of data change流程中。
 ##### Nudm_SubscriberDataManagement_Notification 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_SubscriberDataManagement_Notification|Subscribe/Notify|该服务操作用于Data Change Notification To NF流程中。
 ##### Nudm_SubscriberDataManagement_ModifySubscription 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_SubscriberDataManagement_ModifySubscription|Subscribe/Notify|该服务操作用于Modification of a subscription to notifications of data change流程中。
 ##### Nudm_UEContextManagement_Registration 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEContextManagement_Registration|Request/Response|该服务操作用于AMF Registration for 3GPP Access、SMF Registration、SMSF Registration for 3GPP Access等流程中。
 ##### Nudm_UEContextManagement_DeregistrationNotification 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEContextManagement_DeregistrationNotification|Subscribe/Notify|该服务操作用于UDM initiated NF Deregistration流程中。
 ##### Nudm_UEContextManagement_Deregistration 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEContextManagement_Deregistration|Request/Response|该服务操作用于AMF deregistration for 3GPP access、SMF deregistration、SMSF deregistration for 3GPP access等流程中。
 ##### Nudm_UEContextManagement_Get 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEContextManagement_Get|Request/Response|该服务操作用于查询Amf3GppAccessRegistration Information Retrieval、SmsfRegistration Information Retrieval for 3GPP Access等流程中。
 ##### Nudm_UEContextManagement_Update 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEContextManagement_Update|Request/Response|该服务操作用于Update A Parameter (e.g. PEI) in the AMF Registration For 3GPP Access流程中。
 ##### Nudm_UEContextManagement_P-CSCF-RestorationNotification 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEContextManagement_P-CSCF-RestorationNotification|Subscribe/Notify|该服务操作用于UDM initiated P-CSCF-Restoration流程中。
 ##### Nudm_UEAuthentication_Get 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEAuthentication_Get|Request/Response|该服务操作用于Authentication Information Retrieval流程中。
 ##### Nudm_UEAuthentication_ResultConfirmationInform 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_UEAuthentication_ResultConfirmationInform|Request/Response|该服务操作用于Authentication Confirmation流程中。
 ##### Nudm_EventExposure_Subscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_EventExposure_Subscribe|Subscribe/Notify|该服务操作用于Subscription to Notification of event occurrence流程中。
 ##### Nudm_EventExposure_Unsubscribe 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_EventExposure_Unsubscribe|Subscribe/Notify|该服务操作用于Unsubscribe to notifications of event occurrence流程中。
 ##### Nudm_EventExposure_Notify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_EventExposure_Notify|Subscribe/Notify|该服务操作用于Event Occurrence Notification流程中。
 ##### Nudm_EventExposure_ModifySubscription 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nudm_EventExposure_Notify|Subscribe/Notify|该服务操作用于Modification of a subscription流程中。
 #### 数据类型解释 
 ##### Nssai 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 defaultSingleNssais|必选|默认S-NSSAI列表。|《3GPP TS 29.503》协议6.1.6.2.2章节
 singleNssais|可选|S-NSSAI列表。|《3GPP TS 29.503》协议6.1.6.2.2章节
 ##### SdmSubscription 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 nfInstanceId|必选|创建订阅的NF实例标识。|《3GPP TS 29.503》协议6.1.6.2.3章节
@@ -7356,6 +7292,7 @@ monitoredResourceUris|必选|一组URI，用于标识触发了变更通知的资
 singleNssai|可选|如果消费者是SMF，则可能携带此信元。|《3GPP TS 29.503》协议6.1.6.2.3章节
 dnn|可选|如果消费者是SMF，则可能携带此信元。说明：如果不包含singleNssai和dnn，则UDM会将数据变更通知所有DNN配置和网络切片。如果包含singleNssai但不包含dnn，则UDM会将数据变更通知singleNssai所标识的网络切片和singleNssai所标识的请求网络切片的所有DNN配置。如果不包含singleNssai但包含dnn，则UDM会将数据变更通知所有可用DNN的网络切片和dnn标识的所有DNN配置。如果包含singleNssai和dnn，若singleNssai所标识的网络切片中有该DNN，则UDM会将数据变更通知singleNssai所标识的网络切片和dnn标识的所有DNN配置。|《3GPP TS 29.503》协议6.1.6.2.3章节
 ##### AccessAndMobilitySubscriptionData 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 gpsis|可选|一般公共订阅标识符列表。|《3GPP TS 29.503》协议6.1.6.2.4章节
@@ -7374,23 +7311,27 @@ dlPacketCount|可选|DL Buffering Suggested Packet Count信元用于表示是否
 micoAllowed|可选|表示UE签约是否支持MICO模式。|《3GPP TS 29.503》协议6.1.6.2.4章节
 odbPacketServices|可选|运营商闭锁分组业务。|《3GPP TS 29.503》协议6.1.6.2.4章节
 ##### SmfSelectionSubscriptionData 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 supportedFeatures|可选|如果支持至少一个可选特性，则会携带该信元。|《3GPP TS 29.503》协议6.1.6.2.5章节
 subscribedSnssaiInfos|可选|S-NSSAI及相关信息（DNN信息）列表。DnnInfo数组的映射（键值对列表，其中singleNssai转换为字符串并作为键值）|《3GPP TS 29.503》协议6.1.6.2.5章节
 ##### UeContextInSmfData 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 pduSessions|可选|PduSessions的映射（键值对列表，其中singleNssai由整数转换为字符串并作为键值）。|《3GPP TS 29.503》协议6.1.6.2.16章节
 pgwInfo|可选|和EPS对接的DNN/APN和PGW-C+SMF FQDN的信息。|《3GPP TS 29.503》协议6.1.6.2.16章节
  
 ##### PduSession 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 dnn|必选|数据网络名称|《3GPP TS 29.503》协议6.1.6.2.17章节
 smfInstanceId|必选|SMF的NF实例标识|《3GPP TS 29.503》协议6.1.6.2.17章节
 plmnId|必选|SMF的PLMN标识|《3GPP TS 29.503》协议6.1.6.2.17章节
 ##### DnnInfo 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 dnn|必选|数据网络名称|《3GPP TS 29.503》协议6.1.6.2.6章节
@@ -7398,15 +7339,18 @@ defaultDnnIndicator|可选|表示该DNN是否为默认DNN。true：DNN为默认D
 lboRoamingAllowed|可选|表示漫游时是否允许DNN本地分流。true：允许false：不允许如果未携带该属性，则表示不允许。|《3GPP TS 29.503》协议6.1.6.2.6章节
 iwkEpsInd|可选|表示是否签约EPS互操作。true：签约false：未签约如果未携带该属性，则表示未签约。|《3GPP TS 29.503》协议6.1.6.2.6章节
 ##### SnssaiInfo 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 dnnInfos|必选|S-NSSAI及相关信息的数据网络名称列表。|《3GPP TS 29.503》协议6.1.6.2.7章节
 ##### SessionManagementSubscriptionData 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 singleNssai|必选|单个网络切片选择辅助信息。|《3GPP TS 29.503》协议6.1.6.2.8章节
 dnnConfigurations|可选|网络切片的附加DNN配置信息；DnnConfigurations的映射（键值对列表，其中dnn为键值）。|《3GPP TS 29.503》协议6.1.6.2.8章节
 ##### DnnConfiguration 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 pduSessionTypes|必选|默认/允许的会话类型。|《3GPP TS 29.503》协议6.1.6.2.9章节
@@ -7418,16 +7362,19 @@ sessionAmbr|可选|每个PDU会话中所有Non-GBR QoS流共享的上下行最�
 staticIpAddress|可选|签约的IPv4和/或IPv6类型的静态IP地址。|《3GPP TS 29.503》协议6.1.6.2.9章节
 upSecurity|可选|表示用户面完整性保护和加密的安全策略。|《3GPP TS 29.503》协议6.1.6.2.9章节
 ##### PduSessionTypes 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 defaultSessionType|必选|默认会话类型。|《3GPP TS 29.503》协议6.1.6.2.11章节
 allowedSessionTypes|可选|数据网络支持的附加会话类型。|《3GPP TS 29.503》协议6.1.6.2.11章节
 ##### SscModes 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 defaultSscMode|必选|默认SSC模式。|《3GPP TS 29.503》协议6.1.6.2.12章节
 allowedSscModes|可选|数据网络支持的附加SSC模式。|《3GPP TS 29.503》协议6.1.6.2.12章节
 ##### SubscriptionDataSets 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 amData|可选|接入和移动签约数据。|《3GPP TS 29.503》协议6.1.6.2.15章节
@@ -7438,12 +7385,14 @@ smsSubsData|可选|短信业务的签约数据。|《3GPP TS 29.503》协议6.1.
 smData|可选|会话管理的签约数据。|《3GPP TS 29.503》协议6.1.6.2.15章节
 smsMngData|可选|短信业务管理的签约数据。|《3GPP TS 29.503》协议6.1.6.2.15章节
 ##### IdTranslationResult 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 supportedFeatures|可选|如果支持至少一个可选特性，则会携带该信元。|《3GPP TS 29.503》协议6.1.6.2.18章节
 supi|必选|用户的SUPI。|《3GPP TS 29.503》协议6.1.6.2.18章节
 gpsi|可选|取值为MSISDN。|《3GPP TS 29.503》协议6.1.6.2.18章节
 ##### IpAddress 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 ipv4Addr|条件可选|表示IPv4地址。|《3GPP TS 29.503》协议6.1.6.2.22章节
@@ -7451,16 +7400,19 @@ ipv6Addr|条件可选|表示IPv6地址。|《3GPP TS 29.503》协议6.1.6.2.22�
 ipv6Prefix|条件可选|表示IPv6地址前缀。|《3GPP TS 29.503》协议6.1.6.2.22章节
 携带ipv4Addr， ipv6Addr，和ipv6Prefix其中一个信元。 
 ##### ModificationNotification 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 notifyItems|必选|变更通知列表。|《3GPP TS 29.503》协议6.1.6.2.21章节
 ##### PgwInfo 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 dnn|必选|DNN/APN|《3GPP TS 29.503》协议6.1.6.2.28章节
 pgwFqdn|必选|PGW-C+SMF的FQDN|《3GPP TS 29.503》协议6.1.6.2.28章节
 plmnId|可选|PGW-C+SMF所在的PLMN|《3GPP TS 29.503》协议6.1.6.2.28章节
 ##### Amf3GppAccessRegistration 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 amfInstanceId|必选|AMF在NRF中注册的身份标识。|《3GPP TS 29.503》协议6.2.6.2.2章节
@@ -7476,6 +7428,7 @@ amfServiceNamePcscfRest|可选|该信元指示向哪个AMF服务名称发送P-CS
 initialRegistrationInd|条件可选|当UE进行初始注册时，AMF会携带该信元并将该信元设置为true。如果UE不是进行初始注册，则不携带该信元或者将该信元设置为false。|《3GPP TS 29.503》协议6.2.6.2.2章节
 drFlag|可选|双注册标志。该标志取值为true时，表示如果存在已注册MME，UDM+HSS不需要向该MME发送S6a-CLR。否则，如果存在已注册MME，需要去注册该MME。|《3GPP TS 29.503》协议6.2.6.2.2章节
 ##### SmfRegistration 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 smfInstanceId|必选|SMF的NF实例标识。|《3GPP TS 29.503》协议6.2.6.2.4章节
@@ -7487,11 +7440,13 @@ pcscfRestorationCallbackUri|可选|SMF提供的URI，用于接收P-CSCF恢复的
 plmnid|必选|服务节点的PLMN标识。|《3GPP TS 29.503》协议6.2.6.2.4章节
 pgwFqdn|条件可选|PGW-C+SMF的FQDN，用于与EPS对接。|《3GPP TS 29.503》协议6.2.6.2.4章节
 ##### DeregistrationData 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 deregReason|必选|枚举DeregistrationReason表示Deregistration Notification原因，应遵循已有规定。"UE_INITIAL_REGISTRATION""UE_REGISTRATION_AREA_CHANGE""SUBSCRIPTION_WITHDRAWN""5GS_TO_EPS_MOBILITY""5GS_TO_EPS_MOBILITY_UE_INITIAL_REGISTRATION""REREGISTRATION_REQUIRED"|《3GPP TS 29.503》协议6.2.6.2.5章节
 accessType|必选|用户去注册的接入类型。|《3GPP TS 29.503》协议6.2.6.2.5章节
 ##### Amf3GppAccessRegistrationModification 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 guami|必选|发送修改请求的AMF的Guami。如果guami中的MCC、MNC、AMF区域ID和AMF集ID与存储的值不匹配，则拒绝修改请求。|《3GPP TS 29.503》协议6.2.6.2.7章节
@@ -7500,17 +7455,18 @@ pei|可选|永久设备标识。|《3GPP TS 29.503》协议6.2.6.2.7章节
 imsVoPs|可选|如果服务AMF的所有TA同时支持或者不同时支持"IMS Voice over PS Sessions"时，该信元用于表示单个用户。如果不同时支持或者支持情况未知，不携带该信元。|《3GPP TS 29.503》协议6.2.6.2.7章节
  
 ##### PcscfRestorationNotification 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 supi|必选|故障P-CSCF服务的SUPI。|《3GPP TS 29.503》协议6.2.6.2.9章节
 ### Nausf 
 #### Nausf接口协议简介 
-场景描述 :Nausf是AUSF为其他NF提供服务的接口如下图所示。 
+场景描述 : 
+Nausf是AUSF为其他NF提供服务的接口如下图所示。 
 图1  Nausf接口示意图
-
-协议栈 :Nausf和其他所有服务化接口一样，都采用如下图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
+协议栈 : 
+Nausf和其他所有服务化接口一样，都采用如下图所示的协议栈，应用层统一采用HTTP/2协议，携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 图2  服务化接口协议栈
-
 ##### 网络功能服务列表 
 AUSF通过Nausf接口向其他NF提供多种服务（NFS，Network Function Service），具体服务包括下表所定义的各种： 
 NF|NFS|NFS的解释
@@ -7522,17 +7478,20 @@ AUSF|Nausf_UEAuthentication|AUSF向请求方NF提供UE认证服务。对于AKA�
 ---|---|---
 Nausf_UEAuthentication Service|Authenticate|支持AMF对UE进行鉴权。
 ##### Nausf_UEAuthentication Service_Authenticate 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nausf_UEAuthentication Service_Authenticate|Request/Response|Authenticate服务操作允许请求者NF通过向AUSF提供如下信息发起对UE的认证：UE标识（例如，SUPI）服务网络名称AUSF从UDM检索UE的签约鉴权方法，根据UDM提供的信息，进入以下过程：5G-AKA鉴权EAP鉴权AUSF为这两种流程生成新的资源。在不同的流程中，生成资源的内容不同且会返回给AMF。
 #### 数据类型解释 
 ##### AuthenticationInfo 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 supiOrSuci|必选|携带UE的SUPI或SUCI。|《3GPP TS 29.509》协议6.1.6.2.2章节
 servingNetworkName|必选|携带服务网络名称。|《3GPP TS 29.509》协议6.1.6.2.2章节
 resynchronizationInfo|可选|携带RAND和AUTS。|《3GPP TS 29.509》协议6.1.6.2.2章节
 ##### UEAuthenticationCtx 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 authType|必选|表示该用户所使用的鉴权方式。例如，5G-AKA-Confirmation、EAP-AKA，或EAP-TLS。|《3GPP TS 29.509》协议6.1.6.2.3章节
@@ -7541,21 +7500,25 @@ _links|必选|如果选择5G-AKA鉴权方式，该信元中携带名称为“5g-
 servingNetworkName|可选|携带服务网络名称。|《3GPP TS 29.509》协议6.1.6.2.3章节
 说明：当前版本API只提供一个超媒体链接。|说明：当前版本API只提供一个超媒体链接。|说明：当前版本API只提供一个超媒体链接。|说明：当前版本API只提供一个超媒体链接。
 ##### 5gAuthData 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 Av5gAka|必选|如果选择了5G-AKA鉴权，则携带5G AV。|《3GPP TS 29.509》协议6.1.6.2.4章节
 EapPayload|必选|携带EAP报文请求。|《3GPP TS 29.509》协议6.1.6.2.4章节
 ##### AV5gAka 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 rand|必选|鉴权向量之一。|《3GPP TS 29.509》协议6.1.6.2.5章节
 autn|必选|鉴权向量之一。|《3GPP TS 29.509》协议6.1.6.2.5章节
 hxresStar|必选|鉴权向量之一。|《3GPP TS 29.509》协议6.1.6.2.5章节
 ##### ConfirmationData 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 resStar|必选|携带UE向AMF提供的RES*。|《3GPP TS 29.509》协议6.1.6.2.6章节
 ##### EapSession 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 eapPayload|必选|携带EAP报文。|《3GPP TS 29.509》协议6.1.6.2.7章节
@@ -7565,6 +7528,7 @@ authResult|条件可选|表示鉴权结果。|《3GPP TS 29.509》协议6.1.6.2.
 supi|条件可选|如果鉴权成功且AMF提供了SUCI，则该信元携带UE的SUPI。|《3GPP TS 29.509》协议6.1.6.2.7章节
 说明：当前版本API最多提供1个超媒体链接。|说明：当前版本API最多提供1个超媒体链接。|说明：当前版本API最多提供1个超媒体链接。|说明：当前版本API最多提供1个超媒体链接。
 ##### ConfirmationDataResponse 
+
 属性名称|可选必选说明|描述|参考协议
 ---|---|---|---
 authResult|必选|表示鉴权结果。|《3GPP TS 29.509》协议6.1.6.2.8章节
@@ -7573,11 +7537,11 @@ kseaf|条件可选|如果鉴权成功，则携带Kseaf。|《3GPP TS 29.509》�
  
 ### Npcf 
 #### Npcf接口协议简介 
-场景描述 :Npcf是PCF为其他NF提供服务的接口。 
+场景描述 : 
+Npcf是PCF为其他NF提供服务的接口。 
 图1   Npcf接口示意图
-
-协议栈 :图2  服务化接口协议栈
-
+协议栈 : 
+图2  服务化接口协议栈
 Npcf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 ##### 网络功能服务列表 
 PCF通过Npcf接口向其他NF提供多种服务(NFS，Network Function Service)，具体服务包括下表所定义的各种： 
@@ -7603,50 +7567,62 @@ UpdateNotify|Npcf_UEPolicyControl|用于PCF发起的UE策略关联更新流程�
 Delete|Npcf_UEPolicyControl|用于去注册流程。AMF调用Npcf_UEPolicyControl_Delete向PCF请求删除UE策略关联，释放相关资源。
 Update|Npcf_UEPolicyControl|用于AMF发起的UE策略关联更新流程。当策略控制请求触发器满足预置条件，或者AMF变更，新AMF定位到原PCF，AMF调用Npcf_UEPolicyControl_Update，向PCF上报策略执行情况，或者更新AMF信息。PCF根据AMF新上报的信息更新UE策略关联，并将其下发给AMF。
 ##### Npcf_SMPolicyControl_Create 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_SMPolicyControl_Create|Request/Response|当SMF收到AMF发送的Nsmf_PDUSession_CreateSMContext Request请求创建SM上下文时，如果SMF判断需要向PCF获取PCC规则，则SMF调用Npcf_SMPolicyControl_Create，请求创建SM策略关联。SMF发送POST请求消息中包含SmPolicyContextData数据类型的对象。如果成功，PCF应响应状态码“201 Created”，并且PUT响应的消息体应包含SmPolicyDecision数据类型的对象，其中包含PccRule和policyCtrlReqTriggers数据类型的对象。如果失败，PCF应返回400/403/404/411/413/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_SMPolicyControl_UpdateNotify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_SMPolicyControl_UpdateNotify|Subscribe/Notify|当PCF收到Rx/N5接口消息，或者PCF内部定时器/用户签约信息变更，触发策略变更时，PCF调用Npcf_SMPolicyControl_UpdateNotify，指示SMF更新或者删除SM策略关联。对于SM策略关联更新流程：PCF发送POST请求消息中包含SmPolicyNotification数据类型的对象。如果成功，SMF应响应状态码“200 OK”，或者“204 No Content”。如果失败，SMF应返回400/401/404/411/413/415/500/503的HTTP状态码，并且消息体应包含一个ErrorReport数据结构。对于SM策略关联删除流程：PCF发送POST请求消息中包含TerminationNotification数据类型的对象。SMF收到请求消息后，应响应状态码“204 No Content”。之后SMF调用Npcf_SMPolicyControl_Delete操作，删除SM策略关联。如果失败，PCF应返回400/401/404/411/413/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_SMPolicyControl_Delete 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_SMPolicyControl_Delete|Request/Response|当SMF收到AMF发送的删除PDU会话相关的SM上下文请求时，如果SMF判断需要向PCF请求删除PDU会话，则SMF调用Npcf_SMPolicyControl_Delete，请求删除SM策略关联。SMF发送POST请求消息中包含SmPolicyDeleteData数据类型的对象。PCF通过向SMF发送“204 No Content”响应状态码来确认删除请求。如果失败，PCF应返回400/401/411/413/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_SMPolicyControl_Update 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_SMPolicyControl_Update|Request/Response|当策略控制请求触发器满足预置条件时，SMF调用Npcf_SMPolicyControl_Update，向PCF上报策略执行情况，PCF根据SMF新上报的信息更新SM策略关联，并将其下发给SMF。SMF发送POST请求消息中包含SmPolicyUpdateContextData数据类型的对象，其中包含repPolicyCtrlReqTriggers数据类型的对象。如果成功，PCF应响应状态码“200 OK”，并且PUT响应消息体应包含SmPolicyDecision数据类型的对象。如果失败，PCF应返回400/401/403/411/413/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_AMPolicyControl_Create 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_AMPolicyControl_Create|Request/Response|该服务操作用于注册流程和AMF变更流程：当AMF收到UE用户发起的注册请求时，AMF调用Npcf_AMPolicyControl_Create向PCF提供UE上下文信息，请求创建AM策略关联。当AMF变更时，新AMF定位不到或者没有获取到PCF ID， 则AMF会选择一个新PCF。此时，AMF调用Npcf_AMPolicyControl_Create向PCF提供UE上下文信息，请求创建AM策略关联。AMF发送POST请求消息中包含PolicyAssociationRequest数据类型的对象。如果成功，PCF应响应状态码“201 Created”，并且PUT响应的消息体应包含PolicyAssociation数据类型的对象。如果失败，PCF应返回400/404/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_AMPolicyControl_UpdateNotify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_AMPolicyControl_UpdateNotify|Subscribe/Notify|PCF内部定时器触发策略变更时，PCF调用Npcf_AMPolicyControl_UpdateNotify，指示AMF更新或者删除AM策略关联。对于AM策略关联更新流程：PCF发送POST请求消息中包含PolicyUpdate数据类型的对象。如果成功，AMF应响应状态码“204 No Content”。如果失败，AMF应返回307/400/401/403/404/411/413/415/429/500/503的HTTP状态码。对于AM策略关联删除流程：PCF发送POST请求消息中包含TerminationNotification数据类型的对象。如果成功，AMF应响应状态码“204 No Content”。如果失败，AMF应返回307/400/401/403/404/411/413/415/429/500/503的HTTP状态码。
 ##### Npcf_AMPolicyControl_Delete 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_AMPolicyControl_Delete|Request/Response|当AMF收到UE用户发起的去注册请求，AMF调用Npcf_AMPolicyControl_Delete，请求删除AM策略控制关联。AMF发送HTTP DELETE请求消息。PCF通过向AMF发送“204 No Content”的HTTP响应状态码来确认删除请求。如果失败，PCF应返回400/404/500的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_AMPolicyControl_Update 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_AMPolicyControl_Update|Request/Response|当策略控制请求触发器满足预置条件，AMF调用Npcf_AMPolicyControl_Update，向PCF上报策略执行情况，或者更新AMF信息，PCF根据AMF新上报的信息更新AM策略关联，并将其下发给AMF。AMF发送POST请求消息中包含PolicyAssociationUpdateRequest数据类型的对象。如果成功，PCF应响应状态码“200 OK”，并且PUT响应消息体应包含PolicyUpdate数据类型的对象。如果失败，PCF应返回400/404/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_UEPolicyControl_Create 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_UEPolicyControl_Create|Request/Response|该服务操作用于注册流程和AMF变更流程：当AMF收到UE用户发起的注册请求时，AMF调用Npcf_UEPolicyControl_Create向PCF提供UE上下文信息，请求创建UE策略关联。当AMF变更时，新AMF定位不到或者没有获取到PCF ID， 则AMF会选择一个新PCF。此时，AMF调用Npcf_UEPolicyControl_Create向PCF提供UE上下文信息，请求创建UE策略关联。AMF发送POST请求消息中包含PolicyAssociationRequest数据类型的对象。如果成功，PCF应响应状态码“201 Created”，并且PUT响应的消息体应包含PolicyAssociation数据类型的对象。如果失败，PCF应返回400/404/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_UEPolicyControl_UpdateNotify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_UEPolicyControl_UpdateNotify|Subscribe/Notify|PCF内部定时器触发策略变更时，AMF调用Npcf_UEPolicyControl_UpdateNotify，指示AMF更新策略或者删除UE策略关联。对于UE策略关联更新流程：PCF发送POST请求消息中包含PolicyUpdate数据类型的对象。如果成功，AMF应响应状态码“204 No Content”。如果失败，AMF应返回307/400/404/411/413/415/429/500/503的HTTP状态码。对于UE策略关联删除流程：PCF发送POST请求消息中包含TerminationNotification数据类型的对象。如果成功，AMF应响应状态码“204 No Content”。如果失败，AMF应返回307/400/404/411/413/415/429/500/503的HTTP状态码。
 ##### Npcf_UEPolicyControl_Delete 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_UEPolicyControl_Delete|Request/Response|当AMF收到UE用户发起的去注册请求，AMF调用Npcf_UEPolicyControl_Delete，请求删除UE策略控制关联。AMF发送HTTP DELETE请求消息。PCF通过向AMF发送“204 No Content”的HTTP响应状态码来确认删除请求。如果失败，PCF应返回400/404/500的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
 ##### Npcf_UEPolicyControl_Update 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Npcf_UEPolicyControl_Update|Request/Response|当策略控制请求触发器满足预置条件，AMF调用Npcf_UEPolicyControl_Update，向PCF上报策略执行情况，或者更新AMF信息，PCF根据AMF新上报的信息更新UE策略关联，并将其下发给AMF。AMF发送POST请求消息中包含PolicyAssociationUpdateRequest数据类型的对象。如果成功，PCF应响应状态码“200 OK”，并且PUT响应消息体应包含PolicyUpdate数据类型的对象。如果失败，PCF应返回400/404/415/500/503的HTTP状态码，并且消息体应包含一个ProblemDetails数据结构。
@@ -8046,7 +8022,8 @@ anGwIpv4Addr|Optional|标识anGW的IPv4地址。
 anGwIpv6Addr|Optional|标识anGW的IPv6地址。
 ###### SmfId 
 应用场景：应用于动态策略控制业务时，在创建响应消息如Npcf_SMPolicyControl_Create响应消息中，SmfId信元由SMF带给PCF。PCF把此信元的取值作为对象属性，参与条件计算控制规则下发。 
-SmfId的数据结构参见下表：属性名称|Presence requirement|描述
+SmfId的数据结构参见下表：
+属性名称|Presence requirement|描述
 ---|---|---
 smfId|Optional|用于标识SMF网元实例。
 ##### Npcf_AMPolicyControl 
@@ -8267,59 +8244,70 @@ collectionEntityIpv6Addr|Conditional|跟踪收集实体的IPv6地址。说明：
 interfaceList|Optional|接口列表。如果此属性不存在，则应跟踪适用于“neTypeList”属性中指示的NE类型列表的所有接口。模式：'^[A-Fa-f0-9]+$'
 ### Nbsf 
 #### Nbsf接口协议简介 
-场景描述 :Nbsf业务用于BSF提供PDU会话绑定功能，保证某个PDU会话的AF请求到达保持PDU会话信息的相关PCF。 
+场景描述 : 
+Nbsf业务用于BSF提供PDU会话绑定功能，保证某个PDU会话的AF请求到达保持PDU会话信息的相关PCF。 
 图1  Nbsf接口示意图
-
-协议栈 :图2  服务化接口协议栈
-
+协议栈 : 
+图2  服务化接口协议栈
 Nbsf和其他所有服务化接口一样，都采用如上图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 #### 服务操作解释 
 ##### Nbsf_Management_Register 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nbsf_Management_Register|Request/Response|NF服务消费者应调用Nbsf_Management_Register服务操作，在BSF中为UE注册会话绑定信息，NF服务消费者应发送带有“{apiRoot}/nbsf-management/v1/pcfBindings”的HTTP POST请求，作为表示“PCF会话绑定”的资源URI。注册成功，返回“201（ Created）”消息，包含一个位置HTTP头域，位置头域应包含已创建的绑定信息的URI，即“{apiRoot}/nbsf-management/v1/pcfBindings”/ {binding id}。
 ##### Nbsf_Management_Deregister 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nbsf_Management_Deregister|Request/Response|该服务操作允许服务消费者去除BSF中UE的会话绑定信息。通过向标识特定NF实例的URI发出DELETE请求来调用该服务操作。NF服务消费者应调用Nbsf_Management_Deregister服务操作在BSF中注销UE的会话绑定信息。NF服务使用者应以“{apiRoot}/nbsf-management/v1/pcfBindingId}”作为资源URI发送HTTP删除请求，其中“{bindingId}”是要删除的“单独PCF会话绑定”资源标识符。返回消息。删除成功，返回204（No content），DELETE响应体为空。如果在BSF数据库中已注册NF实例列表中没有找到NF实例ID标识的NF实例，返回状态码404（Not Found），携带ProblemDetails信元提供详细错误信息。
 ##### Nbsf_Management_Discovery 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nbsf_Management_Discovery|Request/Response|NF服务消费者应调用Nbsf_Management_Discovery服务操作获取所选择的PCF的地址信息，用于在BSF中的PDU会话中，NF服务消费者应发送以{apiRoot}/nbsf-management/v1/pcfBindings为资源URI的HTTP GET请求。查询参数包括UE地址，可能包括SUPI或GPSI、DNN和S-NSSAI（可选）、IPv4地址域。BSF回复包含相应PcfBinding数据结构的“200OK”HTTP响应。在响应消息体中Nbsf_Management_Register业务操作时PCF提供的，如果PCF会话绑定资源不存在，BSF应响应404未找到。如果请求URI中包含了无效的查询参数组合（i.e，没有UE地址的组合），则BSF应在ProblemDetails的IE中响应一个包含“INVALID_QUERY_PARAM”的“400 Bad Request”HTTP错误码，如果发现更多的PCF会话绑定资源，BSF应在ProblemDetails信元中响应“400 Bad Request”HTTP错误码，其中包含“MULTIPLE_BINDING_INFO_FOUND”。
 ##### Nbsf_Management_Update 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nbsf_Management_Update|Request/Response|NF服务消费者应调用Nbsf_Management_Update服务操作更新BSF中UE的会话绑定信息，NF服务消费者应发送HTTP补丁请求，其中“{apiRoot}/nbsf-management/v1/pcfBindings/{bindingId}”为资源URI。
 #### 数据类型解释 
 ##### PcfBinding 
+
 属性名称|描述
 ---|---
 PcfBinding|注册一个新的PCF绑定信息。
 注：3GPPTS 29.500 (6)的table5.2.7.1-1中列出的post方法的HTTP错误状态码，必须同时适用。|注：3GPPTS 29.500 (6)的table5.2.7.1-1中列出的post方法的HTTP错误状态码，必须同时适用。
 ##### ApiRoot 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 ApiRoot|Request/Response|NF服务消费者向BSF发送的每个HTTP请求中使用的请求URI携带的信息。
 ##### Ipv4Addr 
+
 属性名称|描述
 ---|---
 Ipv4Addr|标识以“点分十进制”表示法格式化的IPv4地址的字符串。模式：'^（（[0-9] | [1-9] [0-9] | 1 [0-9] [0-9] | 2 [0-4] [0-9] | 25 [0 -5]）\）{3}（[0-9] |。[1-9] [0-9] | 1 [0-9] [0-9] | 2 [0-4] [0-9 ] | 25 [0-5]）$'
 注1：查询参数ipv4Addr，ipv6Prefix或macAddr48中必须有一个和唯一的一个。注2：5G-的RG和FN-RG替换为有线接入支持的UE，参见3GPPTS23.316【19】。|注1：查询参数ipv4Addr，ipv6Prefix或macAddr48中必须有一个和唯一的一个。注2：5G-的RG和FN-RG替换为有线接入支持的UE，参见3GPPTS23.316【19】。
 ##### Ipv6Prefix 
+
 属性名称|Presence requirement|描述
 ---|---|---
 start|Mandatory|标识起始IPv6前缀。
 end|Mandatory|标识结束IPv6。
 ##### MacAddr48 
+
 属性名称|Presence requirement|描述
 ---|---|---
 start|Mandatory|服务UE的MAC地址。
 注：查询参数ipv4Addr，ipv6Prefix或macAddr48中必须有一个和唯一的一个。|注：查询参数ipv4Addr，ipv6Prefix或macAddr48中必须有一个和唯一的一个。|注：查询参数ipv4Addr，ipv6Prefix或macAddr48中必须有一个和唯一的一个。
 ##### Dnn 
+
 属性名称|描述
 ---|---
 Dnn|表示数据网络的字符串。它应格式化为字符串，其中标签用点分隔。DNN的组成：网络ID，表示一个外部网络，为必选部分。运营商ID，表示属于哪个运营商，为可选部分。
 ##### Supi 
+
 属性名称|Presence requirement|描述
 ---|---|---
 start|Optional|标识SUPI范围开始的第一个值，当SUPI的范围可以表示为数字范围（例如，IMSI范围）时使用。该字符串只包含数字。模式： "^[0-9]+$"
@@ -8327,58 +8315,68 @@ end|Optional|标识SUPI范围结束的最后一个值，当SUPI的范围可以�
 pattern|Optional|表示SUPI集属于特定范围的表现模式 。如果SUPI字符串与正则表达式完全匹配，则SUPI值被视为范围的一部分。
 为了与EPC通用，3GPP接入时使用IMSI，在Non-3GPP接入时使用NAI。IMSI的详细定义参见3GPP TS 23.003。IMSI由三部分组成：Mobile Country Code (MCC)包含3个数字。MCC唯一标识移动用户的居住国家。Mobile Network Code (MNC)包含2个或3个数字。MNC标识移动用户的归属PLMN。MNC的长度取决于MCC的值。Mobile Subscriber Identification Number (MSIN)标识PLMN内的移动用户。|为了与EPC通用，3GPP接入时使用IMSI，在Non-3GPP接入时使用NAI。IMSI的详细定义参见3GPP TS 23.003。IMSI由三部分组成：Mobile Country Code (MCC)包含3个数字。MCC唯一标识移动用户的居住国家。Mobile Network Code (MNC)包含2个或3个数字。MNC标识移动用户的归属PLMN。MNC的长度取决于MCC的值。Mobile Subscriber Identification Number (MSIN)标识PLMN内的移动用户。|为了与EPC通用，3GPP接入时使用IMSI，在Non-3GPP接入时使用NAI。IMSI的详细定义参见3GPP TS 23.003。IMSI由三部分组成：Mobile Country Code (MCC)包含3个数字。MCC唯一标识移动用户的居住国家。Mobile Network Code (MNC)包含2个或3个数字。MNC标识移动用户的归属PLMN。MNC的长度取决于MCC的值。Mobile Subscriber Identification Number (MSIN)标识PLMN内的移动用户。
 ##### Gpsi 
+
 属性名称|描述
 ---|---
 Gpsi|通用公共订阅标识。GPSI作为SUPI的签约数据，将外部网络标识GPSI与3GPP网络的标识SUPI建立关系。|通用公共订阅标识。GPSI作为SUPI的签约数据，将外部网络标识GPSI与3GPP网络的标识SUPI建立关系。
 ##### Snssai 
+
 属性名称|Presence requirement|描述
 ---|---|---
 sst|Mandatory|标识S-NSSAI的切片/服务类型，表示期望的网络切片在特性和服务上的行为。
 sd|Optional|标识S-NSSAI的切片/服务类型的多个分片，以区分同一个切片/服务类型的多个网络切片。模式： '^[A-Fa-f0-9]{6}$'
 注：查询参数snssai和/或IPDOMAIN，如果适用（IPv4地址重叠），则需要查询参数ipv4Addr。|注：查询参数snssai和/或IPDOMAIN，如果适用（IPv4地址重叠），则需要查询参数ipv4Addr。|注：查询参数snssai和/或IPDOMAIN，如果适用（IPv4地址重叠），则需要查询参数ipv4Addr。
 ##### IpDomain 
+
 属性名称|Presence requirement|描述
 ---|---|---
 IpDomain|Mandatory|标识IPv4地址域符。
 注：查询参数snssai和/或IPDOMAIN，如果适用（IPv4地址重叠），则需要查询参数ipv4Addr。|注：查询参数snssai和/或IPDOMAIN，如果适用（IPv4地址重叠），则需要查询参数ipv4Addr。|注：查询参数snssai和/或IPDOMAIN，如果适用（IPv4地址重叠），则需要查询参数ipv4Addr。
 ##### ProblemDetails 
+
 属性名称|Presence requirement|描述
 ---|---|---
 ProblemDetails|Mandatory|存在多个绑定信息。
 ##### PcfBindingPatch 
+
 属性名称|Presence requirement|描述
 ---|---|---
 PcfBindingPatch|Mandatory|返回与查询参数(s)匹配的单个PCF会话绑定信息资源。
 ##### SupportedFeatures 
+
 属性名称|描述
 ---|---
 SupportedFeatures|用于指示API支持的功能的字符串。
 ##### IpEndPoint 
+
 属性名称|Presence requirement|描述
 ---|---|---
 Ipv4Addr|Conditional|表示IPv4地址（注1）
 port|Optional|表示端口号（注2）
 注1：数据结构最多只能包含一个ipv4Address或ipv6Address。注2：如果ipendpoint属性未携带端口号，则NF服务消费者在调用服务时，使用默认的HTTP端口号，如TCP端口80访问HTTP URI，或使用TCP端口443访问HTTPS URI。|注1：数据结构最多只能包含一个ipv4Address或ipv6Address。注2：如果ipendpoint属性未携带端口号，则NF服务消费者在调用服务时，使用默认的HTTP端口号，如TCP端口80访问HTTP URI，或使用TCP端口443访问HTTPS URI。|注1：数据结构最多只能包含一个ipv4Address或ipv6Address。注2：如果ipendpoint属性未携带端口号，则NF服务消费者在调用服务时，使用默认的HTTP端口号，如TCP端口80访问HTTP URI，或使用TCP端口443访问HTTPS URI。
 ##### NfInstanceId 
+
 属性名称|描述
 ---|---
 NfInstanceId|唯一标识NF实例的字符串。 NF实例ID的格式应为通用唯一标识符（UUID）版本4。
 ##### DateTime 
+
 属性名称|描述
 ---|---
 DateTime|具有OpenAPI规范[3]中定义的格式“日期时间”的字符串
 ##### DiameterIdentity 
+
 属性名称|描述
 ---|---
 DiameterIdentity|包含Diameter标识的字符串。模式：'^（[A-Za-z0-9] +（ - [A-Za-z0-9] +）.）+ [a-z] {2，} $'
 ### Nchf 
 #### Nchf接口协议简介 
-场景描述 :Nchf是CHF为其他NF提供服务的接口。 
+场景描述 : 
+Nchf是CHF为其他NF提供服务的接口。 
 图1  Nchf接口示意图
-
-协议栈 :Nchf和其他所有服务化接口一样，都采用如下图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
+协议栈 : 
+Nchf和其他所有服务化接口一样，都采用如下图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。因为底层的传输方式相同，所有的服务化接口就可以在同一总线上进行传输，支撑业务灵活上线。 
 图2  服务化接口协议栈
-
 ##### 网络功能服务列表 
 CHF通过Nchf接口向其他NF提供多种服务（NFS，Network Function Service），具体服务包括下表所定义的各种。 
 NF|NFS|NFS的解释
@@ -8394,18 +8392,22 @@ Update|Nchf_ConvergedCharging service|在以下事件发生时，中途请求查
 Release|Nchf_ConvergedCharging service|计费会话结束。
 Notify|Nchf_ConvergedCharging service|请求重新授权用户或终止计费会话上下文。
 ##### Nchf_ConvergedCharging_Create 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nchf_ConvergedCharging_Create|Request/Response|Nchf_ConvergedCharging_Create服务为NF（CTF）向CHF请求提供配额或首次报告业务使用量使用。此时对应会话尚无计费数据资源。CTF调用CHF的Nchf_ConvergedCharging_Create服务化接口请求创建计费资源，请求体中包含请求配额和Nchf_ConvergedCharging_Notify通知服务的URI。当操作成功时，CHF返回“201 Created”响应，包含位置头字段及分配的配额。位置头字段包含了创建的计费资源的URI，NF（CTF）在后续给CHF的同一PDU会话请求中必须带该URI信息。当操作失败或重定向时，需要返回对应状态的HTTP响应码。对于状态码为4XX或5XX的响应，消息体必须包含一个带‘clause’属性的ProblemDetails结构，‘clause’属性返回具体的应用错误代码。
 ##### Nchf_ConvergedCharging_Update 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nchf_ConvergedCharging_Update|Request/Response|Nchf_ConvergedCharging_Update服务为NF（CTF）向CHF更新计费数据时调用。更新过程可能发生在以下场景：费率组服务单元耗尽。授权服务单元到期。发生可能影响当前服务的计费事件。收到CHF的重授权通知。CTF向CHF发送Nchf_ConvergedCharging_Update消息，表示需要更新的计费数据标识的“ChargingDataRef”包含在请求消息体的URI中，同时，请求的服务单元和已经使用的服务单元也包含在请求消息体中。当操作成功时，返回“200 ok”响应消息。消息体中包含授权的业务单元。当操作失败或重定向时，需要返回对应状态的HTTP响应码。对于状态码为4XX或5XX的响应，消息体必须包含ProblemDetails结构。
 ##### Nchf_ConvergedCharging_Release 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nchf_ConvergedCharging_Release|Request/Response|Nchf_ConvergedCharging_Release服务为NF（CTF）准备终止计费会话时调用。释放过程可能发生在以下场景：业务单元不活动定时器超时。从CHF收到计费中止通知。NF（CTF）向CHF发送Nchf_ConvergedCharging_Release请求，表示需要释放的计费数据标识的“ChargingDataRef”包含在请求消息体的URI中，请求体中包含最终使用的服务单元。当操作成功时，CHF返回“204 No Content”响应。当操作失败或重定向时，需要返回对应状态的HTTP响应码。对于状态码为4XX或5XX的响应，消息体必须包含ProblemDetails结构。
 ##### Nchf_ConvergedCharging_Notify 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nchf_ConvergedCharging_Notify|Subscribe/Notify|Nchf_ConvergedCharging_Notify服务在CHF通知NF（CTF）更新或终止PDU Session计费时调用。通知流程可能发生在以下场景：CHF决定重授权。CHF决定终止计费。CHF向NF（CTF）发送Nchf_ConvergedCharging_Notify计费通知请求。{notifyUri}标识Nchf_ConvergedCharging_Create请求中的通知URI。通知类型包含在请求消息体中。当操作成功时，CHF返回“204 No Content”响应。当操作失败时，需要返回对应状态的HTTP响应码。对于状态码为4XX或5XX的响应，消息体必须包含ProblemDetails结构。
@@ -8658,36 +8660,41 @@ rANSecondaryRATType|OM|该参数表示secondary RAT上报用量关联的RAT类�
 qosFlowsUsage Reports|OM|该参数表示每个QFI的容器清单，包含上报用量。
 ### Nsmsf 
 #### Nsmsf接口协议简介 
-场景描述 :Nsmsf是SMSF为其他NF提供服务的接口。 
+场景描述 : 
+Nsmsf是SMSF为其他NF提供服务的接口。 
 图1  Nsmsf接口示意图
-
-协议栈 :Nsmsf和其他所有服务化接口一样，都采用如下图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。 
+协议栈 : 
+Nsmsf和其他所有服务化接口一样，都采用如下图所示的协议栈，传输层统一采用HTTP/2协议，应用层携带不同的服务消息。 
 图2  服务化接口协议栈
-
 ##### 网络功能服务列表/NFS List 
 NF|NFS|NFS的解释
 ---|---|---
 SMSF|Nsmsf_SMService|Nsmsf_SMService服务为NF服务消费者（例如AMF）提供授权SMS和激活SMSF上的SMS的服务能力。以下是本NFS的关键功能：为用户激活或去激活SMS服务，这会导致在SMSF中创建/更新/删除SMS的UE上下文。向SMSF发送上行方向的SMS有效载荷。
 #### 服务操作解释 
+
 NFS|服务操作|服务操作的解释
 ---|---|---
 Nsmsf_SMService|Activate|用于短消息激活流程。UE发起短消息业务激活时，在SMSF上创建或者更新SMS业务的UE上下文信息。
 Deactivate|Nsmsf_SMService|用于短消息去激活流程。UE发起短消息业务去激活时，在SMSF上删除UE的SMS上下文信息。
 UplinkSMS|Nsmsf_SMService|用于短消息MO、MT流程。短消息MO、MT流程中，NF服务消费者（如AMF）使用Nsmsf_SMService_UplinkSMS向SMSF发送上行链路方向的短消息载荷（如SMS message或Ack）。
 ##### Nsmsf_SMService Service_Active 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmsf_SMService_Activate|Request/Response|Nsmsf_SMService_Activate用于短消息激活流程。UE发送SMS注册请求，服务消费者（如AMF）向SMSF发送PUT请求消息，消息中携带SMS业务的UE上下文信息 (如 …/ue-contexts/{supi}) ，表示创建或更新UE上下文。SMSF根据SMS业务的UE上下文是否已创建，执行如下操作：如果对应的SMS的UE上下文没有创建，则SMSF向UDM请求用户签约数据，然后进行鉴权，创建SMS业务的UE上下文信息。如果创建成功，则SMSF返回"201 Created"，否则返回对应的错误码如2c。如果对应的SMS的UE上下文已经创建，则SMSF和AMF发起UE上下文更新流程。如果更新成功，则SMSF返回"204 No Content" ，否则返回对应的错误码如2c。UE上下文创建或者更新流程失败，SMSF返回错误码（如 "403 Forbidden"）。
 ##### Nsmsf_SMService Service_Deactivate 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmsf_SMService_Deactivate|Request/Response|Nsmsf_SMService_Deactivate用于短消息去激活流程。UE发起SMS业务去激活，服务消费者（如AMF）向SMSF发起删除UE上下文的请求。SMSF根据删除UE上下文的成功与否，返回不同结果。删除成功，向AMF返回"204 No Content"。删除失败，向AMF返回对应的错误码（如 "403 Forbidden"）。
 ##### Nsmsf_SMService Service_UplinkSMS 
+
 服务操作|操作语义|服务操作的解释
 ---|---|---
 Nsmsf_SMService_UplinkSMS|Request/Response|Nsmsf_SMService_UplinkSMS用于短消息MO、MT流程。在MO、MT短消息流程中，服务消费者（如AMF）发送POST请求给SMSF，消息中携带sendsms。SMSF收到短消息载荷后，转发短消息给SMS-GMSC/IWMSC/IP-SM-GW/SMS Router。如果SMSF接收成功，则向AMF返回“200 OK”，如果SMSF接收失败，则向AMF返回对应的错误码（如 "403 Forbidden"）。
 #### 数据类型解释 
 ##### UeSmsContextData 
+
 属性名称|Presence requirement|描述
 ---|---|---
 supi|Mandatory|Subscriber permanent identify，用户永久身份标识。
@@ -8700,21 +8707,24 @@ ueLocation|Optional|UE位置信息（如TAI和CGI）。
 backupAmfInfo|Conditional|AMF支持无UDSF的AMF管理时，则在向SMSF发起创建或者更新SMS的UE上下文流程中携带该数据类型。SMSF使用此属性执行NRF查询，以便调用备份AMF中的后续服务，例如Namf_MT。
 udmGroupId|Optional|为supi服务的UDM组标识。
 ##### SmsRecordData 
+
 属性名称|Presence requirement|描述
 ---|---|---
 smsRecordId|Mandatory|SMS有效载荷记录标识。
 smsPayload|Mandatory|SMS有效载荷。
 ##### SmsRecordDeliveryData 
+
 属性名称|Presence requirement|描述
 ---|---|---
 smsRecordId|Mandatory|SMS有效载荷记录标识。
 deliveryStatus|Mandatory|指示SMS在SMSF和其他服务化接口间的传输状态。
 ### N1接口 
 #### N1接口协议简介 
-场景描述 :N1接口为UE和AMF间的信令面接口。 
-协议栈 :N1接口协议栈如[图1]所示。
+场景描述 : 
+N1接口为UE和AMF间的信令面接口。 
+协议栈 : 
+N1接口协议栈如[图1]所示。
 图1  N1接口协议栈
-
 ##### 消息列表 
 N1接口上支持的消息参见下表。 
 消息|方向|作用
@@ -8763,11 +8773,10 @@ PDU session release complete|UE->SMF|UE收到PDU session release command消息�
 #### 相关消息解释 
 ##### Authentication Request 
 
-
-消息功能 :AMF给UE发送此消息以发起UE身份鉴权。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF给UE发送此消息以发起UE身份鉴权。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8778,11 +8787,11 @@ ABBA|Mandatory|ABBA信元用于实现安全特性的降级保护。
 Authentication parameter RAND|Optional|Authentication parameter RAND IE用于计算鉴权响应结果。
 Authentication parameter AUTN|Optional|Authentication parameter AUTN IE用于向移动台提供网络鉴权手段。
 EAP message|Optional|EAP message信元用于传送EAP消息。
-
-
 ##### Authentication Response 
-消息功能 :UE发送Authentication Response消息给AMF，发送计算出的认证响应给网络。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送Authentication Response消息给AMF，发送计算出的认证响应给网络。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8791,8 +8800,10 @@ Authentication response message identity|Mandatory|该IE是为message type类型
 Authentication response parameter|Optional|Authentication response parameter信元表示鉴权响应参数。
 EAP message|Optional|EAP message信元用于传送EAP消息。
 ##### Authentication Result 
-消息功能 :AMF发送Authentication Result给UE，通知UE标识的EAP认证结果。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Authentication Result给UE，通知UE标识的EAP认证结果。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8803,11 +8814,10 @@ EAP message|Mandatory|EAP message信元用于传送EAP消息。
 ABBA|Optional|ABBA信元用于实现安全特性的降级保护。
 ##### Authentication Failure 
 
-
-消息功能 :UE发送Authentication failure消息给AMF，指示网络鉴权失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送Authentication failure消息给AMF，指示网络鉴权失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8815,30 +8825,24 @@ Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM�
 Authentication failure message identity|Mandatory|该信元为message type类型，在本消息中取值是authentication failure。
 5GMM cause|Mandatory|UE指示网络失败原因。
 Authentication failure parameter|Optional|'Synch failure'原因值表明鉴权失败时，Authentication Failure parameter信元用于向网络侧提供必要信息，以便网络侧开始重鉴权流程。
-
-
 ##### Authentication Reject 
 
-
-消息功能 :AMF发送Authentication reject消息给UE，指示鉴权流程失败，UE将中止所有的活动。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Authentication reject消息给UE，指示鉴权流程失败，UE将中止所有的活动。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
 Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 Authentication reject message identity|Mandatory|该信元为message type类型，在本消息中取值是authentication reject。
 EAP message|Optional|EAP message信元用于传送EAP消息。
-
-
 ##### Registration Request 
 
-
-消息功能 :UE使用此消息向5G网络进行注册。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE使用此消息向5G网络进行注册。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8867,15 +8871,12 @@ Payload container|Optional|Payload container信元用于传送一个或多个载
 Network slicing indication|Optional|Network slicing indication信元用于指示通用UE配置更新流程和注册流程中与网络切片相关的附加信息，而非UE配置NSSAI、允许的NSSAI和拒绝的NSSAI信息。
 5GS update type|Optional|5GS update type信元表示允许UE在注册时向网络提供附加信息。
 NAS message container|Optional|NAS message container信元用于封装一个明文5GS NAS消息。
-
-
 ##### Registration Accept 
 
-
-消息功能 :AMF使用此消息响应UE的注册请求消息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF使用此消息响应UE的注册请求消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8904,30 +8905,24 @@ EAP message|Optional|EAP message信元用于传送EAP消息。
 NSSAI inclusion mode|Optional|NSSAI inclusion mode信元用于表示UE操作使用NSSAI包含模式。
 Operator-defined access category definitions|Optional|Operator-defined access category definitions信元用于向UE提供运营商定义的接入类别定义，或者删除UE已有的运营商定义的接入类别定义。
 Negotiated DRX parameters|Optional|协商后的DRX参数。
-
-
 ##### Registration Complete 
 
-
-消息功能 :注册完成消息由UE发送给AMF。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+注册完成消息由UE发送给AMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
 Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 Registration complete message identity|Mandatory|该信元为message type类型，在本消息中取值是Registration complete。
 SOR transparent container|Optional|REGISTRATION ACCEPT消息中携带该信元用于提供优选的PLMN/接入技术组合列表（HPLMN指示UE存储的“运营商控制PLMN选择器与接入技术”列表未改变时，不提供优选PLMN/接入技术组合列表）和可选的确认请求，REGISTRATIONCOMPLETE消息中携带该信元表示UE成功接收到REGISTRATION ACCEPT消息中的SOR transparent container信元。
-
-
 ##### Registration Reject 
 
-
-消息功能 :此消息由AMF发送给UE，拒绝UE的注册请求。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+此消息由AMF发送给UE，拒绝UE的注册请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8937,15 +8932,12 @@ Registration reject message identity|Mandatory|该信元为message type类型，
 T3346 value|Optional|当通用NAS层拥塞控制处于激活状态时，AMF可以在Reject消息中携带移动性管理回退定时器T3346的值，UE接收到5GMMReject消息中T3346的值时，启动定时器T3346。为避免大量UE同时发起延迟请求，AMF应为被拒绝的UE选择定时器T3346的值，保证超时不同步。
 T3502 value|Optional|T3502超时时，UE再次触发注册流程。
 EAP message|Optional|EAP message信元用于传送EAP消息。
-
-
 ##### UL NAS Transport 
 
-
-消息功能 :UL NAS transport消息将消息净荷和相关信息传送给AMF。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UL NAS transport消息将消息净荷和相关信息传送给AMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8959,15 +8951,12 @@ Request type|Optional|Request type信元用于表示PDU类型。
 S-NSSAI|Optional|S-NSSAI信元用于标识一个网络切片。
 DNN|Optional|DNN信元用于标识一个数据网络。
 Additional information|Optional|Additional information信元用于向上层提供NAS传输机制相关附加信息。
-
-
 ##### DL NAS Transport 
 
-
-消息功能 :DL NAS transport消息将消息净荷和相关信息传送给UE。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+DL NAS transport消息将消息净荷和相关信息传送给UE。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8979,11 +8968,11 @@ PDU session ID|Conditional|PDU session ID信元用于在5GMM消息中标识一�
 Additional information|Optional|Additional information信元用于向上层提供NAS传输机制相关附加信息。
 5GMM cause|Optional|5GMM cause信元表示UE发出的5GMM请求被网络拒绝的原因。
 Back-off timer value|Optional|当净荷容器表项的Payload container信元中包含上行5GSM消息时，且未发送该消息时，AMF需携带此信元。拥塞控制可能基于DNN、S-NSSAI和DNN，或只基于S-NSSAI。
-
-
 ##### Deregistration Request (UE Originating Deregistration) 
-消息功能 :UE发送Deregistration Request消息给AMF。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送Deregistration Request消息给AMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -8993,16 +8982,20 @@ De-registration type|Mandatory|De-registration type信元用于表示去注册�
 ngKSI|Mandatory|ngKSI信元表示由网络分配的NAS秘钥集标识。
 5GS mobile identity|Mandatory|5GS移动身份信元用于提供SUCI、5G-GUTI、IMEI、IMEISV或5G-S-TMSI。
 ##### Deregistration Accept(UE Originating Deregistration) 
-消息功能 :AMF发送Deregistration Accept消息给UE。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Deregistration Accept消息给UE。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
 Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 De-registration accept message identity|Mandatory|该信元为message type类型，在本消息中取值是De-registration accept。
 ##### Deregistration Request(UE Terminated Deregistration) 
-消息功能 :AMF发送Deregistration Request消息给UE。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Deregistration Request消息给UE。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9012,8 +9005,10 @@ De-registration type|Mandatory|De-registration type信元用于表示去注册�
 5GMM cause|Optional|5GMM cause信元表示网络侧主动发起去注册请求的原因。
 T3346 value|Optional|T3346超时时，网络侧发起去注册请求。
 ##### Deregistration Accept (UE Terminated Deregistration) 
-消息功能 :UE发送Deregistration Accept消息给AMF。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送Deregistration Accept消息给AMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9021,11 +9016,10 @@ Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM�
 De-registration accept message identity|Mandatory|该信元为message type类型，在本消息中取值是De-registration accept。
 ##### Service Request 
 
-
-消息功能 :UE向AMF发送Service request消息，请求建立N1 NAS信令连接，和/或请求为没有用户面资源的PDU会话建立用户面资源。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE向AMF发送Service request消息，请求建立N1 NAS信令连接，和/或请求为没有用户面资源的PDU会话建立用户面资源。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9038,15 +9032,12 @@ Uplink data status|Optional|该信元用于向网络指示有上行数据待处�
 PDU session status|Optional|PDU session status信元用于指示PDU会话标识的每个PDU会话的状态。
 Allowed PDU session status|Optional|Allowed PDU session status信元用于向网络指示UE允许通过3GPP接入重新建立用户面资源。
 NAS message container|Optional|NAS message container信元用于封装一个明文5GS NAS消息。
-
-
 ##### Service Accept 
 
-
-消息功能 :AMF发送Service accept消息给UE，接受服务请求流程。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Service accept消息给UE，接受服务请求流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9056,15 +9047,12 @@ PDU session status|Optional|PDU session status信元用于指示PDU会话标识�
 PDU session reactivation result|Optional|PDU session reactivation result信元用于表示PDU会话用户面资源建立的结果。
 PDU session reactivation result error cause|Optional|PDU session reactivation result error cause信元用于表示由PDU会话ID标识的PUD会话用户面资源建立失败时的错误原因。
 EAP message|Optional|EAP message信元用于传送EAP消息。
-
-
 ##### Service Reject 
 
-
-消息功能 :AMF发送Service reject消息给UE，拒绝服务请求流程。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Service reject消息给UE，拒绝服务请求流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9074,15 +9062,12 @@ Service reject message identity|Mandatory|该信元为message type类型，在�
 PDU session status|Optional|PDU session status信元用于指示PDU会话标识的每个PDU会话的状态。
 T3346 value|Optional|当通用NAS层拥塞控制处于激活状态时，AMF可以在Reject消息中携带移动性管理回退定时器T3346的值，UE接收到5GMMReject消息中T3346的值时，启动定时器T3346。为避免大量UE同时发起延迟请求，AMF应为被拒绝的UE选择定时器T3346的值，保证超时不同步。
 EAP message|Optional|EAP message信元用于传送EAP消息。
-
-
 ##### Configuration Update Command 
 
-
-消息功能 :AMF发送Configuration update command消息给UE。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Configuration update command消息给UE。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9105,59 +9090,47 @@ Configured NSSAI|Optional|NSSAI信元用于标识一个S-NSSAI集合。说明：
 Rejected NSSAI|Optional|Rejected NSSAI信元用于标识一个拒绝访问的S-NSSAI集合。
 Operator-defined access category definitions|Optional|Operator-defined access category definitions信元用于向UE提供运营商定义的接入类别定义，或者删除UE已有的运营商定义的接入类别定义。
 SMS indication|Optional|SMS indication信元表示UE在NAS上使用SMS的能力发生变化。
-
-
 ##### Configuration Update Complete 
 
-
-消息功能 :UE发送Configuration update complete消息给AMF。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送Configuration update complete消息给AMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
 Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 Configuration update complete message identity|Mandatory|该信元为message type类型，在本消息中取值是Configuration update complete。
-
-
 ##### Identity Request 
 
-
-消息功能 :AMF发送Identity request消息由给UE，提供请求的身份标识。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Identity request消息由给UE，提供请求的身份标识。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
 Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 Identity request message identity|Mandatory|该信元为message type类型，在本消息中取值是Identity request。
 Identity type|Mandatory|Identity type信元用于指定请求的身份。
-
-
 ##### Identity Response 
 
-
-消息功能 :Identity response消息由UE发送给AMF，以提供请求的身份标识。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+Identity response消息由UE发送给AMF，以提供请求的身份标识。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
 Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 Identity response message identity|Mandatory|该信元为message type类型，在本消息中取值是Identity response。
 Mobile identity|Mandatory|5GS移动身份信元用于提供SUCI、5G-GUTI、IMEI、IMEISV或5G-S-TMSI。
-
-
 ##### Security Mode Command 
 
-
-消息功能 :AMF发送Security mode command消息给UE，用于建立NAS信令安全。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+AMF发送Security mode command消息给UE，用于建立NAS信令安全。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9172,16 +9145,13 @@ Additional 5G security information|Optional|Additional 5G security information�
 EAP message|Optional|EAP message信元用于传送EAP消息。
 ABBA|Optional|ABBA信息元素的目的是为了实现安全特性降级保护。
 Replayed S1 UE security capabilities|Optional|Replayed S1 UE security capabilities信元用于网络指示UE在S1模式、Iu模式和Gb模式下支持的安全算法。若安全性算法支持S1模式则同样支持NAS和AS安全性。
-
-
 ##### Security Mode Complete 
 
-
-消息功能 :UE发送Security mode complete消息给AMF，响应SECURITY
+消息功能 : 
+UE发送Security mode complete消息给AMF，响应SECURITY
 MODE COMMAND消息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9189,30 +9159,24 @@ Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM�
 Security mode complete message identity|Mandatory|该信元为message type类型，在本消息中取值是Security mode complete。
 IMEISV|Optional|如果在相应的安全模式命令消息中请求IMEISV，UE应包含该信息元素。
 NAS message container|Optional|NAS消息容器的目的是封装一个纯5GS NAS消息。
-
-
 ##### Security Mode Reject 
 
-
-消息功能 :UE发送Security mode reject消息给AMF，表示拒绝相应的安全模式命令。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送Security mode reject消息给AMF，表示拒绝相应的安全模式命令。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
 Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 Security mode reject message identity|Mandatory|该信元为message type类型，在本消息中取值是Security mode reject。
 5GMM cause|Mandatory|5GMM cause信元表示UE拒绝网络的原因。
-
-
 ##### Security Protected 5GS NAS Message 
 
-
-消息功能 :该消息由UE或网络侧发送，用于传递一个完整的5GS NAS消息以及序列号和保护消息的消息认证码。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由UE或网络侧发送，用于传递一个完整的5GS NAS消息以及序列号和保护消息的消息认证码。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 Security header type|Mandatory|每个5GMM消息第二个字节的比特位1至4包含该IE。该IE包含5GMM消息安全保护相关的控制信息，占4比特位。
@@ -9220,15 +9184,12 @@ Spare half octet|Mandatory|当使用奇数个half octet type 1信元时，5GMM�
 Message authentication code|Mandatory|Message authentication code信元包含了消息的完整性保护信息，如果存在有效的5G NAS安全上下文，且安全功能启动，则SECURITYPROTECTED 5GS NAS MESSAGE包含MAC信元。
 Sequence number|Mandatory|Sequence number信元包含NAS消息序列号（SN）。该序列号由NAS COUNT for a SECURITYPROTECTED 5GS NAS MESSAGE消息的NAS COUNT的8个最低有效位组成。
 Plain 5GS NAS message|Mandatory|Plain 5GS NAS message信元包含一个明文5GS NAS消息，SECURITY PROTECTED5GS NAS MESSAGE消息不是明文5GS NAS消息，不应包含在此信元中。
-
-
 ##### PDU Session Establishment Request 
 
-
-消息功能 :UE发送PDU session establishment request消息给SMF，请求建立PDU会话。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送PDU session establishment request消息给SMF，请求建立PDU会话。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9242,12 +9203,12 @@ Maximum number of supported packet filters|Optional|Maximum number of supported 
 Always-on PDU session requested|Optional|Always-on PDU session requested信元用于指示PDU会话是否被请求建立为Always-on的PDU会话。
 SM PDU DN request container|Optional|本信元通过网络接入标识 (NAI) 格式携带UE标识，不同数据网络下，UE标识不同。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Establishment Accept 
-消息功能 :SMF收到PDU session establishment request消息后，发送PDU
+消息功能 : 
+SMF收到PDU session establishment request消息后，发送PDU
 session establishment accept响应给UE，指示PDU会话建立成功。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9268,9 +9229,11 @@ Authorized QoS flow descriptions|Optional|QoS flow descriptions信元用于表�
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
 DNN|Optional|DNN信元用于标识一个数据网络。
 ##### PDU Session Establishment Reject 
-消息功能 :SMF收到PDU session establishment request消息后，发送PDU
+消息功能 : 
+SMF收到PDU session establishment request消息后，发送PDU
 session establishment reject响应给UE，指示PDU会话建立失败。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9283,11 +9246,10 @@ EAP message|Optional|EAP message信元用于传送EAP消息。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
 ##### PDU Session Authentication Command 
 
-
-消息功能 :SMF发送PDU session authentication command给UE，用于对建立PDU会话的UE或参与PDU会话的UE进行鉴权。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF发送PDU session authentication command给UE，用于对建立PDU会话的UE或参与PDU会话的UE进行鉴权。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9295,16 +9257,13 @@ PTI|Mandatory|每个5GSM消息第三个字节（比特位1至8）和每个UE策�
 PDU session authentication complete message identity|Mandatory|该信元为message type类型，在本消息中取值是PDU session authentication command。
 EAP message|Mandatory|EAP message信元用于传送EAP消息。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Authentication Complete 
 
-
-消息功能 :UE收到PDU session authentication command消息后，发送PDU
+消息功能 : 
+UE收到PDU session authentication command消息后，发送PDU
 session authentication complete给SMF，表示接受PDU会话鉴权命令消息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9312,15 +9271,12 @@ PTI|Mandatory|每个5GSM消息第三个字节（比特位1至8）和每个UE策�
 PDU session authentication complete message identity|Mandatory|该信元为message type类型，在本消息中取值是PDU session authentication complete。
 EAP message|Mandatory|EAP message信元用于传送EAP消息。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Authentication Result 
 
-
-消息功能 :SMF发送PDU session authentication result给UE，用于指示参与PDU会话的UE鉴权成功结果。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF发送PDU session authentication result给UE，用于指示参与PDU会话的UE鉴权成功结果。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9328,15 +9284,12 @@ PTI|Mandatory|每个5GSM消息第三个字节（比特位1至8）和每个UE策�
 PDU session authentication result message identity|Mandatory|该信元为message type类型，在本消息中取值是PDU session authentication result。
 EAP message|Optional|EAP message信元用于传送EAP消息。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Modification Request 
 
-
-消息功能 :UE发送PDU session modification request消息给SMF，发起PDU会话修改流程。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送PDU session modification request消息给SMF，发起PDU会话修改流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9351,15 +9304,12 @@ Requested QoS rules|Optional|QoS规则信元用于指示UE使用的一组QoS规�
 Requested QoS flow descriptions|Optional|QoS flow descriptions信元用于表示UE使用的QoS流描述的集合，每个QoS流描述包含一组参数集合。
 Mapped EPS bearer contexts|Optional|Mapped EPS bearer contexts信元用于指示一个PDU会话对应的EPS上下文集合。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Modification Reject 
 
-
-消息功能 :SMF发送PDU session modification reject消息给UE，表示拒绝UE发起的PDU会话修改流程。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF发送PDU session modification reject消息给UE，表示拒绝UE发起的PDU会话修改流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9368,11 +9318,11 @@ PDU session modification reject message identity|Mandatory|该信元为message t
 5GSM cause|Mandatory|5GSM cause信元用于指示5GSM请求被拒绝的原因。
 Back-off timer value|Optional|当净荷容器表项的Payload container信元中包含上行5GSM消息时，且未发送该消息时，AMF需携带此信元。拥塞控制可能基于DNN、S-NSSAI和DNN，或只基于S-NSSAI。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Modification Command 
-消息功能 :SMF发送PDU session modification command消息给UE，发起PDU会话更改流程。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF发送PDU session modification command消息给UE，发起PDU会话更改流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9388,24 +9338,23 @@ Authorized QoS flow descriptions|Optional|QoS flow descriptions信元IE用于表
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
 ##### PDU Session Modification Complete 
 
-
-消息功能 :UE收到PDU session modification command消息后，发送PDU
+消息功能 : 
+UE收到PDU session modification command消息后，发送PDU
 session modification complete给SMF，表示接受PDU会话修改命令消息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
 PTI|Mandatory|每个5GSM消息第三个字节（比特位1至8）和每个UE策略下发消息的第一个字节（比特位1至8）包含流程事务标识(PTI)。
 PDU session modification complete message identity|Mandatory|该信元为message type类型，在本消息中取值是PDU session modification complete。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Modification Command Reject 
-消息功能 :UE发送PDU session modification command
+消息功能 : 
+UE发送PDU session modification command
 reject消息给SMF，表示拒绝PDU会话修改命令消息。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9415,11 +9364,10 @@ PDU session modification command reject message identity|Mandatory|该信元为m
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
 ##### PDU Session Release Request 
 
-
-消息功能 :UE发送PDU session release request消息给SMF，发起PDU会话释放流程。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UE发送PDU session release request消息给SMF，发起PDU会话释放流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9427,15 +9375,12 @@ PTI|Mandatory|每个5GSM消息第三个字节（比特位1至8）和每个UE策�
 PDU session release request message identity|Mandatory|该信元为message type类型，在本消息中取值是PDU session release request。
 5GSM cause|Optional|5GSM cause信元用于指示5GSM请求被拒绝的原因。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Release Reject 
 
-
-消息功能 :SMF发送PDU session release reject消息给UE，表示拒绝PDU会话释放。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF发送PDU session release reject消息给UE，表示拒绝PDU会话释放。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9443,15 +9388,12 @@ PTI|Mandatory|每个5GSM消息第三个字节（比特位1至8）和每个UE策�
 PDU session release reject message identity|Mandatory|该信元为message type类型，在本消息中取值是PDU session release reject。
 5GSM cause|Mandatory|5GSM cause信元用于指示5GSM请求被拒绝的原因。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Release Command 
 
-
-消息功能 :SMF发送PDU session release command消息给UE，发起PDU会话释放流程。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF发送PDU session release command消息给UE，发起PDU会话释放流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1, bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9461,16 +9403,13 @@ PDU session release command message identity|Mandatory|该信元为message type�
 Back-off timer value|Optional|当净荷容器表项的Payload container信元中包含上行5GSM消息时，且未发送该消息时，AMF需携带此信元。拥塞控制可能基于DNN、S-NSSAI和DNN，或只基于S-NSSAI。
 EAP message|Optional|EAP message信元用于传送EAP消息。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 ##### PDU Session Release Complete 
 
-
-消息功能 :UE收到PDU session release command消息后，发送PDU
+消息功能 : 
+UE收到PDU session release command消息后，发送PDU
 session release complete给SMF，表示接受PDU会话释放。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extended protocol discriminator|Mandatory|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1~ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value(octet 1，bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session managementmessages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 PDU session ID|Mandatory|PDU session ID信元用于在5GSM消息中标识一个PDU会话。
@@ -9478,593 +9417,739 @@ PTI|Mandatory|每个5GSM消息第三个字节（比特位1至8）和每个UE策�
 PDU session release complete message identity|Mandatory|该信元为message type类型，在本消息中取值是PDU session release complete。
 5GSM cause|Optional|5GSM cause信元用于指示5GSM请求被拒绝的原因。
 Extended protocol configuration options|Optional|Extended protocol configuration options信元用于传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
-
-
 #### 相关信元解释 
 ##### registration type 
+
 IE|说明
 ---|---
 registration type|该IE指示请UE请求的5GS注册类型。取值：Bits 3 2 10 0 1，初始注册。0 1 0，移动注册更新。0 1 1，周期注册更新。1 0 0，紧急注册。
 ##### 5GS registration result 
+
 IE|说明
 ---|---
 5GS registration result|5GS registration result信元用于指示注册结果。
 ##### 5GS mobile identity 
+
 IE|说明
 ---|---
 5GS mobile identity|5GS移动身份信元用于提供SUCI、5G-GUTI、IMEI、IMEISV或5G-S-TMSI。
 ##### 5GS network feature support 
+
 IE|说明
 ---|---
 5GS network feature support|5GS network feature support信元用于表示网络是否支持某些特性。
 ##### 5GS update type 
+
 IE|说明
 ---|---
 5GS update type|5GS update type信元表示允许UE在注册时向网络提供附加信息。信元内不同bit位是否置位的含义如下：NG-RAN-RCU bit为0：NG-RAN radio capability update not neededNG-RAN-RCU bit为1：NG-RAN radio capability update needed如果注册请求消息中此信元的NG-RAN-RCU为1，则AMF删除本地存储的UE能力。
 ##### 5G-S-TMSI 
+
 IE|说明
 ---|---
 5G-S-TMSI|包括AMS Set ID、AMD Pointer、5G-TMSI等信息。
 ##### 5G-GUTI 
+
 IE|说明
 ---|---
 5G-GUTI|包括MCC、MNC、AMF Region ID、AMS Set ID、AMD Pointer、5G-TMSI等信息。
 ##### 5GSM capability 
+
 IE|说明
 ---|---
 5GSM capability|5GSM capability信元IE用于指示PDU会话管理相关的UE能力。
 ##### 5GMM cause 
+
 IE|说明
 ---|---
 5GMM cause|5GMM cause信元用于指示5GMM请求被拒绝的原因。
 ##### 5GMM capability 
+
 IE|说明
 ---|---
 5GMM capability|5GMM capability信元用于向网络提供UE在5G核心网（5GCN）或与EPS交互相关网络方面的信息，这些内容可能会影响网络处理UE操作的方式。该信元为6类信元，最小长度为3字节，最大长度为15字节。
 ##### 5GMM STATUS message identity 
+
 IE|说明
 ---|---
 5GMM STATUS message identity|该信元为message type类型，取值是5GMM STATUS。
 ##### ABBA 
+
 IE|说明
 ---|---
 ABBA|ABBA信元用于实现安全特性的降级保护。
 ##### Access type 
+
 IE|说明
 ---|---
 Access type|Access type信元表示待发送给UE的下行信令或用户数据的接入类型。
 ##### Additional GUTI 
+
 IE|说明
 ---|---
 Additional GUTI|如果UE从S1模式切换到N1模式，UE执行注册流程，UE工作在单注册模式，且UE有5G-GUTI，则需要包含该IE。
 ##### Additional information 
+
 IE|说明
 ---|---
 Additional information|Additional information信元用于向上层提供NAS传输机制相关附加信息。
 ##### Additional 5G security information 
+
 IE|说明
 ---|---
 Additional 5G security information|Additional 5G security information信元用于为UE提供额外的安全参数，比如，水平推衍参数，或者请求UE在安全模式控制过程中重传初始NAS消息。UE使用这些参数完成安全模式控制流程。
 ##### Always-on PDU session requested 
+
 IE|说明
 ---|---
 Always-on PDU session requested|Always-on PDU session requested信元用于指示PDU会话是否被请求建立为Always-on的PDU会话。
 ##### Allowed PDU session status 
+
 IE|说明
 ---|---
 Allowed PDU session status|Allowed PDU session status信元用于向网络指示UE允许通过3GPP接入重新建立用户面资源。
 ##### Allowed NSSAI 
+
 IE|说明
 ---|---
 Allowed NSSAI|NSSAI信元用于标识一个S-NSSAI集合。本IE为第4类信元，最小长度为4字节，最大长度为146字节。注1：请求或允许NSSAI的S-NSSAI值不能超过8。注2：配置NSSAI中S-NSSAI值不能超过16。注3：一个NSSAI中的多个S-NSSAI可以有相同SST值或SD值（可选），与匹配到的不同HPLMN的SST值和可选匹配的HPLMN的SD值相关。
 ##### Allowed SSC mode 
+
 IE|说明
 ---|---
 Allowed SSC mode|Allowed SSC mode信元用于UE指示PDU会话允许使用的SSC模式
 ##### Authentication request message identity 
+
 IE|说明
 ---|---
 Authentication request message identity|该信元为message type类型，取值是authentication request。
 ##### Authentication response message identity 
+
 IE|说明
 ---|---
 Authentication response message identity|该IE是为message type类型，取值是authentication response。
 ##### Authentication result message identity 
+
 IE|说明
 ---|---
 Authentication result message identity|该信元为message type类型，取值是authentication result。
 ##### Authentication response parameter 
+
 IE|说明
 ---|---
 Authentication response parameter|Authentication response parameter信元表示鉴权响应参数。
 ##### Authentication reject message identity 
+
 IE|说明
 ---|---
 Authentication reject message identity|该信元为message type类型。
 ##### Authentication failure message identity 
+
 IE|说明
 ---|---
 Authentication failure message identity|该信元为message type类型。
 ##### Authentication failure parameter 
+
 IE|说明
 ---|---
 Authentication failure parameter|鉴权挑战后'Synch failure'原因值表明鉴权失败时，Authentication Failure parameter信元用于向网络侧提供必要信息，以便网络侧开始重鉴权流程。
 ##### Authentication parameter RAND 
+
 IE|说明
 ---|---
 Authentication parameter RAND|Authentication parameter RAND信元用于计算鉴权响应结果。
 ##### Authentication parameter AUTN 
+
 IE|说明
 ---|---
 Authentication parameter AUTN|Authentication parameter AUTN IE用于向移动台提供网络鉴权手段。
 ##### Authorized QoS rules 
+
 IE|说明
 ---|---
 Authorized QoS rules|QoS规则信元用于指示UE使用的一组QoS规则。
 ##### Authorized QoS flow descriptions 
+
 IE|说明
 ---|---
 Authorized QoS flow descriptions|QoS flow descriptions信元用于表示UE使用的QoS流描述的集合，每个QoS流描述包含一组参数集合。
 ##### Back-off timer value 
+
 IE|说明
 ---|---
 Back-off timer value|当净荷容器表项的Payload container信元中包含上行5GSM消息时，且未发送该消息时，AMF需携带此信元。拥塞控制可能基于DNN、S-NSSAI和DNN，或只基于S-NSSAI。
 ##### Configured NSSAI 
+
 IE|说明
 ---|---
 Configured NSSAI|NSSAI信元用于标识一个S-NSSAI集合。NSSAI为第4类IE，最小长度为4字节，最大长度为146字节注1：请求或允许NSSAI的S-NSSAI值不能超过8。注2：配置NSSAI中的S-NSSAI值不能超过16。注3：一个NSSAI中的多个S-NSSAI可以有相同SST值或SD值（可选），与匹配到的不同HPLMN的SST值和可选匹配的HPLMN的SD值相关。
 ##### Configuration update command message identity 
+
 IE|说明
 ---|---
 Configuration update command message identity|该信元为message type类型。
 ##### Configuration update complete message identity 
+
 IE|说明
 ---|---
 Configuration update complete message identity|该信元为message type类型。
 ##### Configuration update indication 
+
 IE|说明
 ---|---
 Configuration update indication|Configuration update indication信元表示与通用UE配置更新流程相关的附加信息。
-DNN :IE|说明
+DNN : 
+
+IE|说明
 ---|---
 DNN|DNN信元用于标识一个数据网络。
 ##### De-registration request message identity 
+
 IE|说明
 ---|---
 De-registration request message identity|该信元为message type类型，取值是De-registration request。
 ##### De-registration accept message identity 
+
 IE|说明
 ---|---
 De-registration accept message identity|该信元为message type类型，取值是De-registration accept。
 ##### De-registration type 
+
 IE|说明
 ---|---
 De-registration type|De-registration type信元用于表示去注册类型。
 ##### DL NAS TRANSPORT message identity 
+
 IE|说明
 ---|---
 DL NAS TRANSPORT message identity|该信元为message type类型，取值是DL NAS TRANSPORT。
 ##### EAP message 
+
 IE|说明
 ---|---
 EAP message|EAP message信元用于传送EAP消息。
 ##### Equivalent PLMNs 
+
 IE|说明
 ---|---
 Equivalent PLMNs|PLMN List信元用于向移动台提供对等PLMN编码列表。
 ##### Emergency number list 
+
 IE|说明
 ---|---
 Emergency number list|Emergency number list信元用于对紧急号码进行编码。对于紧急号码列表，不同国家可能不一样，需要网络侧下发，UE漫游时接受存储。
 ##### Extended protocol discriminator 
+
 IE|说明
 ---|---
 Extended protocol discriminator|当PD（Protocol Discriminator）被设置为“PD扩展到一个字节长度”时，5G NAS消息的第一个字节的bit1 ～ bit8包含EPD信元。EPD标识标准层三消息所属的三层协议，EPD取值及其含义如下：EPD value (octet 1，bit 1 to bit 8)Bits8	7	6	5	4	3	2	10	0	0	0	1	1	1	0	reserved0	0	0	1	1	1	1	0	reserved0	0	1	0	1	1	1	0	5GS session management messages0	0	1	1	1	1	1	0	reserved0	1	0	0	1	1	1	0	reserved0	1	0	1	1	1	1	0	reserved0	1	1	0	1	1	1	0	reserved0	1	1	1	1	1	1	0	5GS mobility management messages1	0	0	0	1	1	1	0	reserved1	0	0	1	1	1	1	0	reserved1	0	1	0	1	1	1	0	reserved1	0	1	1	1	1	1	0	reserved1	1	0	0	1	1	1	0	reserved1	1	0	1	1	1	1	0	reserved1	1	1	0	1	1	1	0	reserved1	1	1	1	1	1	1	0	reserved
 ##### Extended protocol configuration options 
+
 IE|说明
 ---|---
 Extended protocol configuration options|Extended protocol configuration options信元用于：传递与PDP上下文激活相关的外部网络协议选项。传递与外部协议或应用关联的附加（协议）数据，如配置参数，错误码或消息/事件。
 ##### EPS NAS message container 
+
 IE|说明
 ---|---
 EPS NAS message container|EPS NAS message container信元用于传输EPS NAS消息。该信元为6类信元。
 ##### Extended emergency number list 
+
 IE|说明
 ---|---
 Extended emergency number list|Extended emergency number list信元表示扩展的紧急号码列表。
 ##### Full name for network 
+
 IE|说明
 ---|---
 Full name for network|Full name for network信元表示网络全名称。
 ##### IMEISV request 
+
 IE|说明
 ---|---
 IMEISV request|IMEISV request信元用于表示MS在安全模式完成消息中应包含IMEISV。
 ##### IMEISV 
+
 IE|说明
 ---|---
 IMEISV|国际移动设备识别软件版本（International Mobile Equipment Identity Software Version），主要用于标识移动台和版本号。
 ##### Identity request message identity 
+
 IE|说明
 ---|---
 Identity request message identity|该信元为message type类型，取值是Identity request。
 ##### Identity response message identity 
+
 IE|说明
 ---|---
 Identity response message identity|该信元为message type类型。
 ##### Integrity protection maximum data rate 
+
 IE|说明
 ---|---
 Integrity protection maximum data rate|Integrity protection maximum data rate信元用于UE向网络指示UE支持的上下行用户面完整性保护的最大速率。
 ##### Identity type 
+
 IE|说明
 ---|---
 Identity type|Identity type信元用于指定请求的身份。
 ##### Last visited registered TAI 
+
 IE|说明
 ---|---
 Last visited registered TAI|Last visited registered TAI信元用于标识UE最后访问的跟踪区域。该信元为3类信元，长度为7字节。
 ##### Local time zone 
+
 IE|说明
 ---|---
 Local time zone|Local time zone信元表示对通用时间和本地时间之间的偏移量进行15分钟的编码。
 ##### LADN indication 
+
 IE|说明
 ---|---
 LADN indication|LADN indication信元用于向网络请求特定LADN DNN的LADN信息，或用于指示LADN信息请求。
 ##### LADN information 
+
 IE|说明
 ---|---
 LADN information|LADN information信元用于表示向UE提供当前注册区域中可用LADN的LADN服务区，或用于从UE上删除LADN信息。
 ##### Mapped EPS bearer contexts 
+
 IE|说明
 ---|---
 Mapped EPS bearer contexts|Mapped EPS bearer contexts信元IE用于表示一个PDU会话对应的EPS上下文集合。
 ##### Message authentication code 
+
 IE|说明
 ---|---
 Message authentication code|Message authentication code信元包含了消息的完整性保护信息，如果存在有效的5G NAS安全上下文，且安全功能启动，则SECURITY PROTECTED 5GS NAS MESSAGE包含MAC信元。
 ##### Maximum number of supported packet filters 
+
 IE|说明
 ---|---
 Maximum number of supported packet filters|Maximum number of supported packet filters信元用于UE向网络指示最大包过滤数目，与UE建立“IPv4”、“IPv6”、“IPv4v6”或“Ethernet”PDU类型会话时能够支持的QoS规则相关联。
 ##### Mobile identity 
+
 IE|说明
 ---|---
 Mobile identity|5GS移动身份信元用于提供SUCI、5G-GUTI、IMEI、IMEISV或5G-S-TMSI。
 ##### MICO indication 
+
 IE|说明
 ---|---
 MICO indication|MICO indication信元用于指示使用MICO模式或重新协商MICO模式。
 ##### NAS message container 
+
 IE|说明
 ---|---
 NAS message container|NAS message container信元用于封装一个明文5GS NAS消息。
 ##### Network slicing indication 
+
 IE|说明
 ---|---
 Network slicing indication|Network slicing indication信元用于指示通用UE配置更新流程和注册流程中与网络切片相关的附加信息，而非UE配置NSSAI、允许的NSSAI和拒绝的NSSAI信息。
 ##### Network daylight saving time 
+
 IE|说明
 ---|---
 Network daylight saving time|Network daylight saving time信元表示对夏令时进行15分钟的编码。
 ##### Negotiated DRX parameters 
+
 IE|说明
 ---|---
 Negotiated DRX parameters|Negotiated DRX parameters信元表示网络侧经过协商后，下发给UE的DRX参数。
 ##### ngKSI 
+
 IE|说明
 ---|---
 ngKSI|ngKSI信元表示由网络分配的NAS秘钥集标识。
 ##### Non-current native NAS key set identifier 
+
 IE|说明
 ---|---
 Non-current native NAS key set identifier|Non-current native NAS key set identifier信元表示由网络分配的NAS密钥集标识。该信元为1类信元。
 ##### Notification message identity 
+
 IE|说明
 ---|---
 Notification message identity|该信元为message type类型，取值是Notification。
 ##### Notification response message identity 
+
 IE|说明
 ---|---
 Notification response message identity|该信元为message type类型，取值是Notification response。
 ##### NSSAI inclusion mode 
+
 IE|说明
 ---|---
 NSSAI inclusion mode|NSSAI inclusion mode信元用于表示UE操作使用NSSAI包含模式。
 ##### Operator-defined access category definitions 
+
 IE|说明
 ---|---
 Operator-defined access category definitions|Operator-defined access category definitions信元用于向UE提供运营商定义的接入类别定义，或者删除UE已有的运营商定义的接入类别定义。
 ##### Old PDU session ID 
+
 IE|说明
 ---|---
 Old PDU session ID|Old PDU session ID信元用于在5GMM消息中标识一个PDU会话。
 ##### Payload container 
+
 IE|说明
 ---|---
 Payload container|Payload container信元用于传送一个或多个载荷。如果传输多个载荷，每个载荷的相关信息也随载荷一起传送。
 ##### Payload container type 
+
 IE|说明
 ---|---
 Payload container type|Payload container type信元用于表示Payload container信元中包含的净荷类型。
 ##### Plain 5GS NAS message 
+
 IE|说明
 ---|---
 Plain 5GS NAS message|Plain 5GS NAS message信元包含一个明文5GS NAS消息，SECURITY PROTECTED 5GS NAS MESSAGE消息不是明文5GS NAS消息，不应包含在此信元中。
 ##### PDU address 
+
 IE|说明
 ---|---
 PDU address|PDU address信元用于分配给UE以下信息：与PDU会话关联的IPv4地址；与所述PDU会话关联的IPv6本地链路地址接口标识；与所述PDU会话关联的本地IPv6链路地址接口标识和IPv4地址。
 ##### PDU session status 
+
 IE|说明
 ---|---
 PDU session status|PDU session status信元用于指示PDU会话标识的每个PDU会话的状态。该信元为4类信元，最小长度为4字节，最大长度为34字节。
 ##### PDU session type 
+
 IE|说明
 ---|---
 PDU session type|PDU session type信元用于表示PDU会话类型。
 ##### PDU session ID 
+
 IE|说明
 ---|---
 PDU session ID|PDU session ID信元主要用于在5GSM消息中标识一个PDU会话。
 ##### PDU session reactivation result 
+
 IE|说明
 ---|---
 PDU session reactivation result|PDU session reactivation result信元用于表示PDU会话用户面资源建立的结果。
 ##### PDU session reactivation result error cause 
+
 IE|说明
 ---|---
 PDU session reactivation result error cause|PDU session reactivation result error cause信元用于表示由PDU会话ID标识的PDU会话用户面资源建立失败时的错误原因。
 ##### PDU session establishment accept message identity 
+
 IE|说明
 ---|---
 PDU session establishment accept message identity|该信元为message type类型，取值是PDU session establishment accept。
 ##### PDU session establishment request message identity 
+
 IE|说明
 ---|---
 PDU session establishment request message identity|该信元为message type类型，取值是PDU session establishment request。
 ##### PDU session establishment reject message identity 
+
 IE|说明
 ---|---
 PDU session establishment reject message identity|该信元为message type类型，取值是PDU session establishment reject。
 ##### PDU session authentication command message identity 
+
 IE|说明
 ---|---
 PDU session authentication command message identity|该信元为message type类型，取值是PDU session authentication command。
 ##### PDU session authentication result message identity 
+
 IE|说明
 ---|---
 PDU session authentication result message identity|该信元为message type类型，取值是PDU session authentication result。
 ##### PDU session authentication complete message identity 
+
 IE|说明
 ---|---
 PDU session authentication complete message identity|该信元为message type类型，取值是PDU session authentication complete。
 ##### PDU session modification request message identity 
+
 IE|说明
 ---|---
 PDU session modification request message identity|该信元为message type类型，取值是PDU session modification request。
 ##### PDU session modification reject message identity 
+
 IE|说明
 ---|---
 PDU session modification reject message identity|该信元为message type类型，取值是PDU session modification reject。
 ##### PDU session modification command message identity 
+
 IE|说明
 ---|---
 PDU session modification command message identity|该信元为message type类型，取值是PDU session modification command。
 ##### PDU session modification complete message identity 
+
 IE|说明
 ---|---
 PDU session modification complete message identity|该信元为message type类型，取值是PDU session modification complete。
 ##### PDU session modification command reject message identity 
+
 IE|说明
 ---|---
 PDU session modification command reject message identity|该信元为message type类型，取值是PDU session modification command reject。
 ##### PDU session release request message identity 
+
 IE|说明
 ---|---
 PDU session release request message identity|该信元为message type类型，取值是PDU session release request。
 ##### PDU session release reject message identity 
+
 IE|说明
 ---|---
 PDU session release reject message identity|该信元为message type类型，取值是PDU session release reject。
 ##### PDU session release command message identity 
+
 IE|说明
 ---|---
 PDU session release command message identity|该信元为message type类型，取值是PDU session release command。
 ##### PDU session release complete message identity 
+
 IE|说明
 ---|---
 PDU session release complete message identity|该信元为message type类型，取值是PDU session release complete。
 ##### PTI 
+
 IE|说明
 ---|---
 PTI|每个5GSM消息第三个字节（比特位1至8）和每个UE策略下发消息的第一个字节（比特位1至8）包含流程事务标识(PTI)。
 ##### RQ timer value 
+
 IE|说明
 ---|---
 RQ timer value|Reflective QoS Timer value，反射QoS定时器的值。
 ##### Request type 
+
 IE|说明
 ---|---
 Request type|Request type信元用于表示请求的PDU会话类型。Request type取值(octet 1, bit 1 to bit 4)：Bits3	2	10	0	1	initial request0	1	0	existing PDU session0	1	1	initial emergency request1	0	0	existing emergency PDU session1	0	1	modification request1	1	1	reserved所有其他值都是未使用的，如果网络收到，应解释为“初始请求”。
 ##### Replayed UE security capabilities 
+
 IE|说明
 ---|---
 Replayed UE security capabilities|UE security capability信元用于UE和网络指示UE在N1模式下NAS安全支持的些安全算法，以及5GCN连接的NR和E-UTRA上用于AS安全所支持的安全算法。
 ##### Replayed S1 UE security capabilities 
+
 IE|说明
 ---|---
 Replayed S1 UE security capabilities|Replayed S1 UE security capabilities信元用于网络指示UE在S1模式、Iu模式和Gb模式下支持的安全算法。若安全性算法支持S1模式则同样支持NAS和AS安全性。若UE支持S101模式，则这些安全性算法也支持S101模式下的NAS安全。
 ##### Registration accept message identity 
+
 IE|说明
 ---|---
 Registration accept message identity|该信元为message type类型，取值是Registration accept。
 ##### Registration request message identity 
+
 IE|说明
 ---|---
 Registration request message identity|该信元为message type类型，取值是Registration request。
 ##### Registration complete message identity 
+
 IE|说明
 ---|---
 Registration complete message identity|该信元为message type类型，取值是Registration complete。
 ##### Registration reject message identity 
+
 IE|说明
 ---|---
 Registration reject message identity|该信元为message type类型，取值是Registration reject。
 ##### Requested QoS rules 
+
 IE|说明
 ---|---
 Requested QoS rules|QoS规则信元用于指示UE使用的一组QoS规则。
 ##### Requested QoS flow descriptions 
+
 IE|说明
 ---|---
 Requested QoS flow descriptions|QoS flow descriptions信元用于表示UE使用的QoS流描述的集合，每个QoS流描述包含一组参数集合。
 ##### Requested DRX parameters 
+
 IE|说明
 ---|---
 Requested DRX parameters|Requested DRX parameters信元用于表示UE请求的DRX参数，或网络在寻呼时使用的DRX周期值。该信元为4类信元，长度为3字节。
 ##### Requested NSSAI 
+
 IE|说明
 ---|---
 Requested NSSAI|当5GS注册类型为“初始注册”或“移动注册更新”，并且满足如下条件时，会携带此IE：UE对当前PLMN有配置的NSSAI；UE对当前PLMN具有允许的NSSAI；UE既没有当前PLMN的允许的NSSAI，也没有当前PLMN的Configured NSSAI，但是有默认配置的NSSAI。
 ##### Rejected NSSAI 
+
 IE|说明
 ---|---
 Rejected NSSAI|Rejected NSSAI信元用于标识一组被拒绝S-NSSAI的集合。
-S-NSSAI :IE|说明
+S-NSSAI : 
+
+IE|说明
 ---|---
 S-NSSAI|S-NSSAI信元用于标识一个网络切片。
 ##### Sequence number 
+
 IE|说明
 ---|---
 Sequence number|Sequence number信元包含NAS消息序列号（SN）。该序列号由NAS COUNT for a SECURITY PROTECTED 5GS NAS MESSAGE消息的NAS COUNT的8个最低有效位组成。
 ##### Service type 
+
 IE|说明
 ---|---
 Service type|Service type信元用于明确服务请求流程的目的。
 ##### Session AMBR 
+
 IE|说明
 ---|---
 Session AMBR|Session-AMBR信元用于表示UE建立PDU会话时指示初始签约的PDU会话聚合最大比特速率，或者在网络改变PDU会话聚合最大比特速率时指示新签约的PDU会话聚合最大比特速率。
 ##### Service accept message identity 
+
 IE|说明
 ---|---
 Service accept message identity|该信元为message type类型，取值是Service accept。
 ##### Service request message identity 
+
 IE|说明
 ---|---
 Service request message identity|该信元为message type类型，取值是Service request。
 ##### Security header type 
+
 IE|说明
 ---|---
 Security header type|每个5GMM消息的第二个字节的bit1 ~ bit4包含安全头类型IE，该IE包含5GMM消息的安全保护相关的控制信息，安全头类型IE的总大小为4 bit。
 ##### Selected NAS security algorithms 
+
 IE|说明
 ---|---
 Selected NAS security algorithms|Selected NAS security algorithms信元表示用于加密和完整性保护的5G算法。
 ##### Selected EPS NAS security algorithms 
+
 IE|说明
 ---|---
 Selected EPS NAS security algorithms|NAS security algorithms信元用于表示用于加密和完整性保护的4G算法。
 ##### Selected PDU session type 
+
 IE|说明
 ---|---
 Selected PDU session type|PDU session type信元IE用于表示PDU会话类型。
 ##### Selected SSC mode 
+
 IE|说明
 ---|---
 Selected SSC mode|SSC mode信元用于表示SSC模式。
 ##### Security mode command message identity 
+
 IE|说明
 ---|---
 Security mode command message identity|该信元为message type类型，取值是Security mode command。
 ##### Security mode reject message identity 
+
 IE|说明
 ---|---
 Security mode reject message identity|该信元为message type类型，取值是Security mode reject。
 ##### Security mode complete message identity 
+
 IE|说明
 ---|---
 Security mode complete message identity|该信元为message type类型，取值是Security mode complete。
 ##### SM PDU DN request container 
+
 IE|说明
 ---|---
 SM PDU DN request container|本信元通过网络接入标识 (NAI) 格式携带UE标识，不同数据网络下，UE标识不同。
 ##### S1 UE network capability 
+
 IE|说明
 ---|---
 S1 UE network capability|S1 UE network capability信元用于向网络提供UE在EPS或GPRS互操作网络方面的信息，其内容可能会影响网络处理UE操作的方式，UE网络能力信息表示UE的一般特征，因此，除了显式指示的字段外，不依赖于发送信道的频段。
 ##### SMS indication 
+
 IE|说明
 ---|---
 SMS indication|SMS indication信元表示UE在NAS上使用SMS的能力发生变化。
 ##### SSC mode 
+
 IE|说明
 ---|---
 SSC mode|SSC mode信元用于表示SSC模式。
 ##### Service area list 
+
 IE|说明
 ---|---
 Service area list|Service area list信元用于表示将允许区域的允许跟踪区域列表或不允许区域的禁止跟踪区域列表从网络传输给UE。
 ##### Spare half octet 
+
 IE|说明
 ---|---
 Spare half octet|当使用奇数个half octet type 1信元时，5GMM和5GSM消息的描述中包含该IE。除非另有说明，该IE备用位设置为0，并配置在字节的比特位5到8。
 ##### Short name for network 
+
 IE|说明
 ---|---
 Short name for network|Short name for network信元表示网络短名称。
 ##### SOR transparent container 
+
 IE|说明
 ---|---
 SOR transparent container|REGISTRATION ACCEPT消息中携带该信元用于提供优选的PLMN/接入技术组合列表（HPLMN指示UE存储的“运营商控制PLMN选择器与接入技术”列表未改变时，不提供优选PLMN/接入技术组合列表）和可选的确认请求，REGISTRATION COMPLETE消息中携带该信元表示UE成功接收到REGISTRATION ACCEPT消息中的SOR transparent container信元。
 ##### TAI list 
+
 IE|说明
 ---|---
 TAI list|TAI list信元用于将网络中的跟踪区域列表传递给UE。
 ##### T3346 value 
+
 IE|说明
 ---|---
 T3346 value|T3346超时时，网络侧主动发去注册请求。
 ##### T3502 value 
+
 IE|说明
 ---|---
 T3502 value|当T3502超时时，UE再次触发注册流程。
 ##### T3512 value 
+
 IE|说明
 ---|---
 T3512 value|当T3512超时时，如果UE未注册紧急业务，则发起周期性注册流程。如果UE已注册紧急业务，则发起本地去注册流程。
 ##### UE security capability 
+
 IE|说明
 ---|---
 UE security capability|UE security capability信元用于UE和网络指示UE在N1模式下支持的NAS安全算法，以及用于5GCN连接的NR和E-UTRA上AS安全所支持的安全算法。
 ##### UE's usage setting 
+
 IE|说明
 ---|---
 UE's usage setting|UE's usage setting信元用于向网络提供3GPP协议24.301【15】中定义的UE使用设置（UE's usage setting）。网络使用UE的使用设置选择RFSP索引。
 ##### UE status 
+
 IE|说明
 ---|---
 UE status|UE status信元用于向网络提供用于当前UE的注册状态，以便于EPS交互。
 ##### Universal time and local time zone 
+
 IE|说明
 ---|---
 Universal time and local time zone|Universal time and local time zone信元表示传递时间和时区给UE。
 ##### UL NAS TRANSPORT message identity 
+
 IE|说明
 ---|---
 UL NAS TRANSPORT message identity|该信元为message type类型，取值是UL NAS TRANSPORT。
 ##### Uplink data status 
+
 IE|说明
 ---|---
 Uplink data status|Uplink data status信元用于向网络指示有上行数据待处理的PDU会话。该信元为4类信元，最小长度为4字节，最大长度为34字节。
 ### N2接口 
 #### N2接口协议简介 
-场景描述 :N2接口为(R)AN和AMF间的信令面接口。 
-协议栈 :N2接口协议栈如[图1]所示。
+场景描述 : 
+N2接口为(R)AN和AMF间的信令面接口。 
+协议栈 : 
+N2接口协议栈如[图1]所示。
 图1  N2接口协议栈
-
 ##### 消息列表 
 N2接口上支持的消息参见下表。 
 消息|方向|作用
@@ -10148,11 +10233,10 @@ UE RADIO CAPABILITY CHECK RESPONSE|NG-RAN node -> AMF|该消息由NG-RAN节点�
 #### 相关消息解释 
 ##### PDU Session Resource Setup Request 
 
-
-消息功能 :该消息由AMF发送，用于请求NG-RAN节点为一个或多个PDU会话资源在Uu和NG-U接口上分配资源。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于请求NG-RAN节点为一个或多个PDU会话资源在Uu和NG-U接口上分配资源。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10165,15 +10249,12 @@ PDU Session Resource Setup Request List|NA|PDU会话资源建立请求列表。
 >>PDU Session NAS-PDU|Optional|该IE在中携带5GC发送给UE或者UE发送给5GC的消息，NG-RAN节点透传此消息。
 >>S-NSSAI|Mandatory|单网络切片标识。
 >>PDU Session Resource Setup Request Transfer|Mandatory|SMF通过AMF透传给NG-RAN的PDU Session Resource Setup Request TransferIE。
-
-
 ##### PDU Session Resource Setup Response 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于回复为一个或多个PDU会话分配Uu和NG-U接口资源的请求。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于回复为一个或多个PDU会话分配Uu和NG-U接口资源的请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10187,15 +10268,12 @@ PDU Session Resource Failed to Setup List|NA|PDU会话资源建立失败列表�
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>PDU Session Resource Setup Unsuccessful Transfer|Mandatory|NG-RAN通过AMF透传给SMF的PDU Session Resource Setup UnsuccessfulTransfer IE。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### PDU Session Resource Release Command 
 
-
-消息功能 :该消息由AMF发送，用于请求NG-RAN节点释放为给定UE建立的PDU会话资源。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于请求NG-RAN节点释放为给定UE建立的PDU会话资源。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10206,15 +10284,12 @@ PDU Session Resource to Release List|NA|PDU会话资源释放列表。
 >PDU Session Resource to Release Item|NA|PDU会话资源释放列表。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>PDU Session Resource Release Command Transfer|Mandatory|SMF通过AMF透传给NG-RAN的PDU Session Resource Release Command TransferIE。
-
-
 ##### PDU Session Resource Release Response 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于响应释放UE的PDU会话资源的请求。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于响应释放UE的PDU会话资源的请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10225,15 +10300,12 @@ PDU Session Resource to Release List|NA|PDU会话资源释放列表。
 >>PDU Session Resource Release Command Transfer|Mandatory|SMF通过AMF透传给NG-RAN的PDU Session Resource Release Command TransferIE。
 User Location Information|Optional|该IE用于提供UE的位置信息。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### PDU Session Resource Modify Request 
 
-
-消息功能 :该消息由AMF发送，用于请求NG-RAN节点对给定UE已经建立的PDU会话资源进行修改。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于请求NG-RAN节点对给定UE已经建立的PDU会话资源进行修改。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10244,15 +10316,12 @@ PDU Session Resource to Release List|NA|PDU会话资源释放列表。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>NAS-PDU|Optional|该IE包含一个5GC和UE之间发送的消息。此消息在NG-RAN节点未解析。
 >>PDU Session Resource Modify Request Transfer|Mandatory|SMF通过AMF透传给NG-RAN的PDU Session Resource Modify Request TransferIE。
-
-
 ##### PDU Session Resource Modify Response 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于上报PDU会话资源修改请求消息的结果。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于上报PDU会话资源修改请求消息的结果。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10267,15 +10336,12 @@ PDU Session Resource Failed to Modify List|NA|PDU会话资源修改失败列表�
 >>PDU Session Resource Modify Unsuccessful Transfer|Mandatory|NG-RAN通过AMF透传给SMF的PDU Session Resource Modify UnsuccessfulTransfer IE。
 User Location Information|Optional|该IE用于提供UE的位置信息。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### PDU Session Resource Notify 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于在GBR QoS流已经被请求启用通知后，由NG-RAN通知该QoS流的QoS需求不再满足或者由NG-RAN节点重新满足。该消息也可以由NG-RAN节点发送，用于通知给定UE的PDU会话资源已释放。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于在GBR QoS流已经被请求启用通知后，由NG-RAN通知该QoS流的QoS需求不再满足或者由NG-RAN节点重新满足。该消息也可以由NG-RAN节点发送，用于通知给定UE的PDU会话资源已释放。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10289,15 +10355,12 @@ PDU Session Resource Released List|NA|释放的PDU会话资源列表。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>PDU Session Resource Notify Released Transfer|Mandatory|NG-RAN通过AMF透传给SMF的PDU Session Resource Notify Released TransferIE。
 User Location Information|Optional|该IE用于提供UE的位置信息。
-
-
 ##### PDU Session Resource Modify Indication 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于请求AMF对给定UE的已建立的PDU会话资源进行修改。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于请求AMF对给定UE的已建立的PDU会话资源进行修改。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10306,15 +10369,12 @@ PDU Session Resource Modify Indication List|NA|PDU会话资源修改指示列表
 >PDU Session Resource Modify Indication Item|NA|PDU会话资源修改指示项。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>PDU Session Resource Modify Indication Transfer|Mandatory|NG-RAN通过AMF透传给SMF的PDU Session Resource Modify IndicationTransfer IE。
-
-
 ##### PDU Session Resource Modify Confirm 
 
-
-消息功能 :该消息由AMF发送，用于从PDU会话资源修改指示消息中确认请求的结果。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于从PDU会话资源修改指示消息中确认请求的结果。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10328,15 +10388,12 @@ PDU Session Resource Failed to Modify List|NA|PDU会话资源修改列表失败�
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>PDU Session Resource Modify Indication Unsuccessful Transfer|Mandatory|SMF通过AMF透传给NG-RAN的PDU Session Resource Modify IndicationUnsuccessful Transfer IE。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Initial Context Setup Request 
 
-
-消息功能 :该消息由AMF发送，请求建立UE上下文。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，请求建立UE上下文。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10363,15 +10420,12 @@ NAS-PDU|Optional|该IE包含一个5GC和UE之间发送的消息。此消息在NG
 Emergency Fallback Indicator|Optional|该IE表示紧急业务回落。
 RRC Inactive Transition Report Request|Optional|该IE用于请求NG-RAN节点在UE进入或离开RRC_INACTIVE状态时向5GC上报或停止上报。
 UE Radio Capability for Paging|Optional|该IE包含寻呼特定UE无线能力信息。
-
-
 ##### Initial Context Setup Response 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于确认UE上下文建立。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于确认UE上下文建立。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10385,15 +10439,12 @@ PDU Session Resource Failed to Setup List|NA|PDU会话资源建立失败列表�
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>PDU Session Resource Setup Unsuccessful Transfer|Mandatory|NG-RAN通过AMF透传给SMF的PDU Session Resource Setup UnsuccessfulTransfer IE。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### UE Context Release Request 
 
-
-消息功能 :该消息由NG-RAN节点发送，请求释放UE相关的NG接口逻辑连接。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，请求释放UE相关的NG接口逻辑连接。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10402,15 +10453,12 @@ PDU Session Resource List|NA|PDU会话资源列表。
 >PDU Session Resource Item|NA|PDU会话资源项。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
-
-
 ##### UE Context Release Command 
 
-
-消息功能 :该消息由AMF发送，用于请求释放UE相关的NG接口的逻辑连接。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于请求释放UE相关的NG接口的逻辑连接。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 CHOICE UE NGAP IDs|Mandatory|UE NGAP ID选项。
@@ -10420,15 +10468,12 @@ CHOICE UE NGAP IDs|Mandatory|UE NGAP ID选项。
 >AMF UE NGAP ID|NA|该IE在AMF内唯一标识UE在NG接口上的关联。
 >>AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
-
-
 ##### UE Context Release Complete 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于确认UE相关的NG接口逻辑连接已释放。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于确认UE相关的NG接口逻辑连接已释放。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10439,15 +10484,12 @@ PDU Session Resource List|NA|PDU会话资源列表。
 >PDU Session Resource Item|NA|PDU会话资源项。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### UE Context Modification Request 
 
-
-消息功能 :该消息由AMF发送，用于向NG-RAN节点提供UE上下文信息变更。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于向NG-RAN节点提供UE上下文信息变更。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10461,15 +10503,12 @@ Core Network Assistance Information|Optional|该IE提供RRC_INACTIVE配置等辅
 Emergency Fallback Indicator|Optional|该IE表示紧急业务回落。
 New AMF UE NGAP ID|Optional|该IE在AMF内唯一标识UE在NG接口上的关联。
 RRC Inactive Transition Report Request|Optional|该IE用于请求NG-RAN节点在UE进入或离开RRC_INACTIVE状态时向5GC上报或停止上报。
-
-
 ##### UE Context Modification Response 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于确认UE上下文已更新。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于确认UE上下文已更新。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10477,45 +10516,36 @@ RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 RRC State|Optional|该IE表示UE的RRC状态。
 User Location Information|Optional|该IE用于提供UE的位置信息。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### UE Context Modification Failure 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于表明UE上下文更新失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于表明UE上下文更新失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### RRC Inactive Transition Report 
 
-
-消息功能 :该消息由NG-RAN节点通知5GC，UE已进入或离开RRC_INACTIVE状态。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点通知5GC，UE已进入或离开RRC_INACTIVE状态。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 RRC State|Mandatory|该IE表示UE的RRC状态。
 User Location Information|Mandatory|该IE用于提供UE的位置信息。
-
-
 ##### Handover Required 
 
-
-消息功能 :该消息由源NG-RAN节点发送给AMF，请求目标NG-RAN准备切换资源。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由源NG-RAN节点发送给AMF，请求目标NG-RAN准备切换资源。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10529,15 +10559,12 @@ PDU Session Resource List|NA|PDU会话资源列表。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>Handover Required Transfer|Mandatory|NG-RAN通过AMF透传给SMF的Handover Required Transfer IE。
 Source to Target Transparent Container|Mandatory|该IE用于通过核心网将无线相关信息从切换源侧透传给切换目标侧；由源侧RAN节点产生，并发送到目标侧RAN节点。
-
-
 ##### Handover Command 
 
-
-消息功能 :该消息由AMF通知源NG-RAN节点，目标NG-RAN已经准备好切换资源。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF通知源NG-RAN节点，目标NG-RAN已经准备好切换资源。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10554,30 +10581,24 @@ PDU Session Resource to Release List|NA|PDU会话资源释放列表。
 >>Handover Preparation Unsuccessful Transfer|Mandatory|SMF通过AMF透传给NG-RAN的Handover Preparation Unsuccessful TransferIE。
 Target to Source Transparent Container|Mandatory|该IE用于通过核心网将无线相关信息从切换目标侧透传给切换源侧；由目标侧RAN节点产生，并发送到源侧RAN节点。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Handover Preparation Failure 
 
-
-消息功能 :该消息由AMF发送，用于通知源NG-RAN节点切换准备失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于通知源NG-RAN节点切换准备失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Handover Request 
 
-
-消息功能 :该消息由AMF发送给目标NG-RAN节点，请求准备切换资源。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送给目标NG-RAN节点，请求准备切换资源。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10602,15 +10623,12 @@ Mobility Restriction List|Optional|该IE定义了后续移动动作的漫游或�
 Location Reporting Request Type|Optional|该IE表示NG-RAN节点需要处理的位置请求类型。
 RRC Inactive Transition Report Request|Optional|该IE用于请求NG-RAN节点在UE进入或离开RRC_INACTIVE状态时向5GC上报或停止上报。
 GUAMI|Mandatory|该IE表示AMF标识。
-
-
 ##### Handover Request Acknowledge 
 
-
-消息功能 :该消息由目标NG-RAN节点发送，用于通知AMF目标NG-RAN已经准备好切换资源。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由目标NG-RAN节点发送，用于通知AMF目标NG-RAN已经准备好切换资源。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10625,43 +10643,34 @@ PDU Session Resource Failed to Setup List|NA|PDU会话资源建立失败列表�
 >>Handover Resource Allocation Unsuccessful Transfer|Mandatory|NG-RAN通过AMF透传给SMF的Handover Resource Allocation UnsuccessfulTransfer IE。
 Target to Source Transparent Container|Mandatory|该IE用于通过核心网将无线相关信息从切换目标侧透传给切换源侧；由目标侧RAN节点产生，并发送到源侧RAN节点。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Handover Failure 
 
-
-消息功能 :该消息由目标NG-RAN节点发送，通知AMF资源准备失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由目标NG-RAN节点发送，通知AMF资源准备失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Handover Notify 
 
-
-消息功能 :该消息由目标NG-RAN节点发送，通知AMF已在目标小区识别UE且切换完成。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由目标NG-RAN节点发送，通知AMF已在目标小区识别UE且切换完成。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 User Location Information|Mandatory|该IE用于提供UE的位置信息。
-
-
 ##### Path Switch Request 
 
-
-消息功能 :该消息由NG-RAN节点通知AMF新服务的NG-RAN节点，并通过AMF将部分NG-U下行隧道终结点发送给SMF，供一个或多个PDU会话资源使用。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点通知AMF新服务的NG-RAN节点，并通过AMF将部分NG-U下行隧道终结点发送给SMF，供一个或多个PDU会话资源使用。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
@@ -10676,15 +10685,12 @@ PDU Session Resource Failed to Setup List|NA|PDU会话资源建立失败列表�
 >PDU Session Resource Failed to Setup Item|NA|PDU会话资源建立失败项。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>Path Switch Request Setup Failed Transfer|Mandatory|NG-RAN通过AMF透传给SMF的Path Switch Request Setup Failed TransferIE。
-
-
 ##### Path Switch Request Acknowledge 
 
-
-消息功能 :该消息由AMF发送，用于通知NG-RAN节点5GC路径切换成功。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于通知NG-RAN节点5GC路径切换成功。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10704,15 +10710,12 @@ Allowed NSSAI|Mandatory|该IE包含允许的NSSAI。
 Core Network Assistance Information|Optional|该IE提供RRC_INACTIVE配置等辅助信息。
 RRC Inactive Transition Report Request|Optional|该IE用于请求NG-RAN节点在UE进入或离开RRC_INACTIVE状态时向5GC上报或停止上报。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Path Switch Request Failure 
 
-
-消息功能 :该消息由AMF发送，用于通知NG-RAN节点，在路径切换请求流程中5GC发生故障。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于通知NG-RAN节点，在路径切换请求流程中5GC发生故障。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10722,39 +10725,33 @@ PDU Session Resource Released List|NA|PDU会话资源释放列表。
 >>PDU Session ID|Mandatory|该IE用于标识一个UE的PDU会话。
 >>Path Switch Request Unsuccessful Transfer|Mandatory|SMF通过AMF透传给NG-RAN的Path Switch Request Unsuccessful TransferIE。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Handover Cancel 
 
-
-消息功能 :该消息由源NG-RAN节点发送给AMF，用于请求取消正在进行的切换。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由源NG-RAN节点发送给AMF，用于请求取消正在进行的切换。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
-
-
 ##### Handover Cancel Acknowledge 
 
-
-消息功能 :该消息由AMF发送给源NG-RAN节点，确认正在进行的切换被取消。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送给源NG-RAN节点，确认正在进行的切换被取消。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Uplink Ran Status Transfer 
-消息功能 :该消息由NG-RAN节点发送给AMF。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送给AMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10762,25 +10759,21 @@ RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 RAN Status Transfer Transparent Container|Mandatory|该IE由源NGRAN节点产生，传递到目标NGRAN节点，用于5GC内部NG切换。
 ##### Downlink Ran Status Transfer 
 
-
-消息功能 :该消息由AMF发送给NG-RAN节点。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送给NG-RAN节点。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 RAN Status Transfer Transparent Container|Mandatory|该IE由源NGRAN节点产生，传递到目标NGRAN节点，用于5GC内部NG切换
-
-
 ##### Paging 
 
-
-消息功能 :该消息由AMF发送，用于在一个或多个跟踪区域寻呼UE。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于在一个或多个跟踪区域寻呼UE。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 UE Paging Identity|Mandatory|该IE表示UE被寻呼的标识。
@@ -10792,15 +10785,12 @@ Paging Priority|Optional|该IE表示UE的寻呼优先级。
 UE Radio Capability for Paging|Optional|该IE包含寻呼特定UE无线能力信息。
 Assistance Data for Paging|Optional|该IE为寻呼优化提供辅助信息。
 Paging Origin|Optional|该信元指示是否由于非3GPP接入的PDU会话而发起寻呼。
-
-
 ##### Initial UE Message 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于通过NG接口向AMF发送初始层3消息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于通过NG接口向AMF发送初始层3消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
@@ -10811,15 +10801,12 @@ RRC Establishment Cause|Mandatory|该IE表示EstablishmentCause中收到UE的RRC
 AMF Set ID|Optional|该IE用于在AMF区域内唯一标识一个AMF集合。
 UE Context Request|Optional|该IE表示用户上下文，包括安全信息。
 Allowed NSSAI|Optional|该IE包含允许的NSSAI。
-
-
 ##### Downlink NAS Transport 
 
-
-消息功能 :该消息由AMF发送，用于在NG接口上携带NAS信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于在NG接口上携带NAS信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -10831,30 +10818,24 @@ Mobility Restriction List|Optional|该IE定义了后续移动动作的接入限�
 Index to RAT/Frequency Selection Priority|Optional|该IE用于定义RRM策略的本地配置，如空闲模式下的驻留优先级、主动模式下的系统内、系统间切换控制等。
 UE Aggregate Maximum Bit Rate|Optional|该信元适用于下行和上行方向定义的所有non-GBR QoS流，以及AMF提供给NG-RAN节点的签约参数。
 Allowed NSSAI|Optional|该IE包含允许的NSSAI。
-
-
 ##### Uplink NAS Transport 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于在NG接口上携带NAS信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于在NG接口上携带NAS信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 NAS-PDU|Mandatory|该IE包含一个5GC和UE之间发送的消息。此消息在NG-RAN节点未解析。
 User Location Information|Mandatory|该IE用于提供UE的位置信息。
-
-
 ##### Reroute NAS Request 
 
-
-消息功能 :该消息由AMF发送，用于请求INITIAL UE MESSAGE消息重路由到另一个AMF。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于请求INITIAL UE MESSAGE消息重路由到另一个AMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
@@ -10862,15 +10843,12 @@ RAN UE NGAP ID|Optional|该IE在AMF内唯一标识UE在NG接口上的关联。
 NGAP Message|Mandatory|该IE包含INITIAL UE MESSAGE。
 AMF Set ID|Mandatory|该IE用于在AMF区域内唯一标识一个AMF集合。
 Allowed NSSAI|Optional|该IE包含允许的NSSAI。
-
-
 ##### NG Setup Request 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于为NG-C接口实例发送应用层信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于为NG-C接口实例发送应用层信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 Global RAN Node ID|Mandatory|该IE用于全局标识一个NG-RAN节点。
@@ -10883,15 +10861,12 @@ Supported TA List|NA|支持的TA列表。
 >>>>PLMN Identity|Mandatory|该IE表示PLMN标识。
 >>>>TAI Slice Support List|Mandatory|该IE表示支持的slice列表。
 Default Paging DRX|Mandatory|该IE表示寻呼DRX。
-
-
 ##### NG Setup Response 
 
-
-消息功能 :该消息由AMF发送，用于为NG-C接口实例发送应用层信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于为NG-C接口实例发送应用层信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF Name|Mandatory|该IE用于唯一标识AMF。
@@ -10905,29 +10880,23 @@ PLMN Support List|NA|支持的PLMN列表。
 >>PLMN Identity|Mandatory|该IE表示PLMN标识。
 >>Slice Support List|Mandatory|该IE表示支持的slice列表。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### NG Setup Failure 
 
-
-消息功能 :该消息由AMF发送，用于指示NG建立失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于指示NG建立失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
 Time to Wait|Optional|该IE定义了允许的最小等待时间。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### RAN Configuration Update 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于为NG-C接口实例发送更新的应用层信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于为NG-C接口实例发送更新的应用层信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 RAN Node Name|Optional|该IE表示无线节点名称。
@@ -10939,41 +10908,32 @@ Supported TA List|NA|支持的TA列表。
 >>>>PLMN Identity|Mandatory|该IE表示PLMN标识。
 >>>>TAI Slice Support List|Mandatory|该IE表示支持的slice列表。
 Default Paging DRX|Optional|该IE表示寻呼DRX。
-
-
 ##### RAN Configuration Update Acknowledge 
 
-
-消息功能 :该消息由AMF发送，用于确认NG-C接口实例的NG-RAN节点更新信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于确认NG-C接口实例的NG-RAN节点更新信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### RAN Configuration Update Failure 
 
-
-消息功能 :该消息由AMF发送，用于指示RAN配置更新失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于指示RAN配置更新失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
 Time to Wait|Optional|该IE定义了允许的最小等待时间。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### AMF Configuration Update 
 
-
-消息功能 :该消息由AMF发送，用于为NG-C接口实例发送更新信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于为NG-C接口实例发送更新信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF Name|Optional|该IE用于唯一标识AMF。
@@ -10999,15 +10959,12 @@ AMF TNL Association to UpdateList|NA|AMF TNL关联更新列表。
 >>AMF TNL Association Address|Mandatory|该IE用于提供NGRAN节点关联的NG控制面传输层信息AMF对。
 >>TNL Association Usage|Optional|该IE表示TNL关联的使用情况。
 >>TNL Address Weight Factor|Optional|该IE表示TNL地址的权重因子。
-
-
 ##### AMF Configuration Update Acknowledge 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于确认AMF为NG-C接口实例发送的更新信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于确认AMF为NG-C接口实例发送的更新信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF TNL Association Setup List|NA|AMF TNL关联建立列表。
@@ -11015,81 +10972,63 @@ AMF TNL Association Setup List|NA|AMF TNL关联建立列表。
 >>AMF TNL Association Address|Mandatory|该IE用于提供NGRAN节点关联的NG控制面传输层信息AMF对。
 AMF TNL Association Failed to Setup List|Optional|该IE包含TNL关联列表。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### AMF Configuration Update Failure 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于指示AMF配置更新失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于指示AMF配置更新失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
 Time to Wait|Optional|该IE定义了允许的最小等待时间。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 ##### Uplink RAN Configuration Transfer 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于发送NG-RAN配置信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于发送NG-RAN配置信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 SON Configuration Transfer|Optional|该IE包含配置信息。
-
-
 ##### Downlink RAN Configuration Transfer 
 
-
-消息功能 :该消息由AMF发送，用于发送NG-RAN配置信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于发送NG-RAN配置信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 SON Configuration Transfer|Optional|该IE包含配置信息。
-
-
 ##### Location Reporting Control 
 
-
-消息功能 :该消息用于AMF请求NG-RAN上报UE位置信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息用于AMF请求NG-RAN上报UE位置信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 Location Reporting Request Type|Mandatory|该IE表示NG-RAN节点需要处理的位置请求类型。
-
-
 ##### Location Reporting Failure Indication 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于指示位置上报失败。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于指示位置上报失败。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 Cause|Mandatory|该IE的目的是为了指示NGAP协议特定事件的原因。
-
-
 ##### Location Report 
 
-
-消息功能 :该消息用于提供UE的位置信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息用于提供UE的位置信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
@@ -11097,687 +11036,835 @@ RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 User Location Information|Mandatory|该IE用于提供UE的位置信息。
 UE Presence in Area of Interest List|Optional|该IE指示UE在兴趣区域内。
 Location Reporting Request Type|Mandatory|该IE表示NG-RAN节点需要处理的位置请求类型。
-
-
 ##### UE Radio Capability Info Indication 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于向AMF提供UE无线能力相关信息。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于向AMF提供UE无线能力相关信息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 UE Radio Capability|Mandatory|该IE包含UE的无线能力信息。
 UE Radio Capability for Paging|Optional|该IE包含寻呼特定UE无线能力信息。
-
-
 ##### UE Radio Capability Check Request 
 
-
-消息功能 :该消息由AMF发送，用于请求NG-RAN节点检查UE无线能力与IMS语音业务的网络配置之间的兼容性。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由AMF发送，用于请求NG-RAN节点检查UE无线能力与IMS语音业务的网络配置之间的兼容性。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 UE Radio Capability|Optional|该IE包含UE的无线能力信息。
-
-
 ##### UE Radio Capability Check Response 
 
-
-消息功能 :该消息由NG-RAN节点发送，用于上报UE无线能力与网络配置之间的IMS语音兼容性。 
-
-
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+该消息由NG-RAN节点发送，用于上报UE无线能力与网络配置之间的IMS语音兼容性。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Message Type|Mandatory|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 AMF UE NGAP ID|Mandatory|该IE在AMF内唯一标识UE在NG接口上的关联。
 RAN UE NGAP ID|Mandatory|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 IMS Voice Support Indicator|Mandatory|该IE由NG-RAN节点设置，用于指示UE的无线能力是否与IMS语音业务的网络配置兼容。
 Criticality Diagnostics|Optional|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
-
-
 #### 相关信元解释 
 ##### AMF UE NGAP ID 
+
 IE|说明
 ---|---
 AMF UE NGAP ID|该IE在AMF内唯一标识UE在NG接口上的关联。
 ##### Message Type 
+
 IE|说明
 ---|---
 Message Type|该IE唯一标识正在发送的消息，所有消息都必须携带该IE。
 ##### Cause 
+
 IE|说明
 ---|---
 Cause|该IE的目的是为了指示NGAP协议特定事件的原因。
 ##### Criticality Diagnostics 
+
 IE|说明
 ---|---
 Criticality Diagnostics|当接收到的部分消息未被理解或丢失，或者消息中包含逻辑错误时，该IE由NG-RAN或AMF发送。如果存在的话，该IE指示哪些信元未被理解或丢失。
 ##### RAN UE NGAP ID 
+
 IE|说明
 ---|---
 RAN UE NGAP ID|该IE唯一标识NG-RAN节点内NG接口的UE关联。
 ##### Global RAN Node ID 
+
 IE|说明
 ---|---
 Global RAN Node ID|该IE用于全局标识一个NGRAN节点。
 ##### Global gNB ID 
+
 IE|说明
 ---|---
 Global gNB ID|该IE用于全局识别一个gNB。
 ##### NR CGI 
+
 IE|说明
 ---|---
 NR CGI|该IE用于全局识别NR小区。
 ##### Global ng-eNB ID 
+
 IE|说明
 ---|---
 Global ng-eNB ID|该IE用于全局标识一个ng-eNB。
 ##### GBR QoS Flow Information 
+
 IE|说明
 ---|---
 GBR QoS Flow Information|该IE表示GBR QoS流的下行和上行业务的QoS参数。
 ##### QoS Flow Level QoS Parameters 
+
 IE|说明
 ---|---
 QoS Flow Level QoS Parameters|该IE定义了QoS流的QoS参数。
 ##### QoS Flow List 
+
 IE|说明
 ---|---
 QoS Flow List|该IE包含QoS流列表，每个QoS流携带一个原因值。该IE用指示失败的QoS流或待释放的QoS流。
 ##### Trace Activation 
+
 IE|说明
 ---|---
 Trace Activation|该IE定义了跟踪会话激活的相关参数。
 ##### Core Network Assistance Information 
+
 IE|说明
 ---|---
 Core Network Assistance Information|该IE提供RRC_INACTIVE配置等辅助信息。
 ##### User Location Information 
+
 IE|说明
 ---|---
 User Location Information|该IE用于提供UE的位置信息。
 ##### Slice Support List 
+
 IE|说明
 ---|---
 Slice Support List|该IE提供支持的网络切片列表。
 ##### Dynamic 5QI Descriptor 
+
 IE|说明
 ---|---
 Dynamic 5QI Descriptor|该IE表示下行和上行非标配或非预配置的5QI的QoS特征。
 ##### Allocation and Retention Priority 
+
 IE|说明
 ---|---
 Allocation and Retention Priority|该IE表示QoS流相对于其他QoS流的相对重要性，用于NG-RAN资源的分配和保留。
 ##### Source to Target Transparent Container 
+
 IE|说明
 ---|---
 Source to Target Transparent Container|该IE用于通过核心网将无线相关信息从切换源侧透传给切换目标侧；由源侧RAN节点产生，并发送到目标侧RAN节点。
 ##### Target to Source Transparent Container 
+
 IE|说明
 ---|---
 Target to Source Transparent Container|该IE用于通过核心网将无线相关信息从切换目标侧透传给切换源侧；由目标侧RAN节点产生，并发送到源侧RAN节点。
 ##### MICO Mode Indication 
+
 IE|说明
 ---|---
 MICO Mode Indication|该IE指示UE在AMF上配置了MICO模式。
-S-NSSAI :IE|说明
+S-NSSAI : 
+
+IE|说明
 ---|---
 S-NSSAI|Single Network Slice Selection Assistance Information，该IE表示单网络切片选择辅助信息。
 ##### Target ID 
+
 IE|说明
 ---|---
 Target ID|该IE标识切换的目标，Target ID可以是NG-RAN，也可以是E-UTRAN。
 ##### Emergency Fallback Indicator 
+
 IE|说明
 ---|---
 Emergency Fallback Indicator|该IE表示紧急业务回落。
 ##### Security Indication 
+
 IE|说明
 ---|---
 Security Indication|该IE包含用户面完整性保护指示和机密性保护指示，分别表明相应PDU会话的完整性保护和加密要求。该IE还包含单个UE的最大完整性保护数据速率，目的是达到DRB的完整性保护。
 ##### Non Dynamic 5QI Descriptor 
+
 IE|说明
 ---|---
 Non Dynamic 5QI Descriptor|该IE表示标准或预配置的5QI上下行的QoS特征。
 ##### Source NG-RAN Node to Target NG-RAN Node Transparent Container 
+
 IE|说明
 ---|---
 Source NG-RAN Node to Target NG-RAN Node Transparent Container|该IE由源侧NG-RAN节点产生，并发送到目标NG-RAN节点；对于5G异系统切换，该IE从外部切换源发送到目标NG-RAN节点。
 ##### Target NG-RAN Node to Source NG-RAN Node Transparent Container 
+
 IE|说明
 ---|---
 Target NG-RAN Node to Source NG-RAN Node Transparent Container|该IE由目标NG-RAN节点产生，并发送到源侧NG-RAN节点；对于5G异系统切换，该IE从目标NG-RAN节点传递到外部迁移源。
 ##### Allowed NSSAI 
+
 IE|说明
 ---|---
 Allowed NSSAI|该IE包含允许的NSSAI。
 ##### Relative AMF Capacity 
+
 IE|说明
 ---|---
 Relative AMF Capacity|该IE指示AMF相对于其他AMF的相对处理能力。
 ##### DL Forwarding 
+
 IE|说明
 ---|---
 DL Forwarding|该IE表示QoS流或E-RAB，用于下行数据包的转发。
 ##### DRBs to QoS Flows Mapping List 
+
 IE|说明
 ---|---
 DRBs to QoS Flows Mapping List|该IE包含一个DRB列表，其中包含映射的QoS流信息。
 ##### Message Identifier 
+
 IE|说明
 ---|---
 Message Identifier|该IE用于标识警报消息，由AMF设置，并由NG-RAN节点发送给UE。
 ##### Serial Number 
+
 IE|说明
 ---|---
 Serial Number|该IE从消息标识符指示的来源和类型中识别特定的消息，并在每次更改给定消息标识符的消息时进行更改。
 ##### Warning Area List 
+
 IE|说明
 ---|---
 Warning Area List|该IE表示需要广播或取消警告消息的区域。
 ##### Number of Broadcasts Requested 
+
 IE|说明
 ---|---
 Number of Broadcasts Requested|该IE表示广播消息的次数。
 ##### Warning Type 
+
 IE|说明
 ---|---
 Warning Type|该IE表示灾难的类型，也指示包含主通知。可用于UE根据灾难类型区分不同的告警类型。
 ##### Warning Security Information 
+
 IE|说明
 ---|---
 Warning Security Information|该IE提供了确保主通知所需的安全信息。
 ##### Data Coding Scheme 
+
 IE|说明
 ---|---
 Data Coding Scheme|该IE标识用于UE的消息字符和消息处理的字母或编码（它从5GC透传到UE）。
 ##### Warning Message Contents 
+
 IE|说明
 ---|---
 Warning Message Contents|该IE包含用户信息，例如带有警告内容的消息，并将在无线接口上广播。
 ##### Broadcast Completed Area List 
+
 IE|说明
 ---|---
 Broadcast Completed Area List|该IE表示有资源可进行广播或广播成功的区域。
 ##### Broadcast Cancelled Area List 
+
 IE|说明
 ---|---
 Broadcast Cancelled Area List|该IE指示停止广播成功的区域。
 ##### Number of Broadcasts 
+
 IE|说明
 ---|---
 Number of Broadcasts|该IE指示特定消息在给定警告区域内广播的次数。
 ##### Concurrent Warning Message Indicator 
+
 IE|说明
 ---|---
 Concurrent Warning Message Indicator|该IE指示NG-RAN节点接收到的警告消息是一个新的消息，用设定好与其他正在进行的警告消息进行并发广播。
 ##### Cancel-All Warning Messages Indicator 
+
 IE|说明
 ---|---
 Cancel-All Warning Messages Indicator|该IE指示NG-RAN节点停止在其节点或区域内正在进行的所有警告消息广播。
 ##### Emergency Area ID 
+
 IE|说明
 ---|---
 Emergency Area ID|该IE用于指示发生紧急影响的区域。
 ##### Repetition Period 
+
 IE|说明
 ---|---
 Repetition Period|该IE表示要广播的警告消息的周期。
 ##### PDU Session ID 
+
 IE|说明
 ---|---
 PDU Session ID|该IE用于标识一个UE的PDU会话。
 ##### QoS Flow Identifier 
+
 IE|说明
 ---|---
 QoS Flow Identifier|该IE标识一个PDU会话内的QoS流。
 ##### PDU Session Type 
+
 IE|说明
 ---|---
 PDU Session Type|该IE表示PDU会话类型。
 ##### DRB ID 
+
 IE|说明
 ---|---
 DRB ID|该IE包含DRB标识。
 ##### Masked IMEISV 
+
 IE|说明
 ---|---
 Masked IMEISV|该IE包含带有掩码的IMEISV值，用来标识一个终端型号，而不需要识别单个移动设备。
 ##### Time to Wait 
+
 IE|说明
 ---|---
 Time to Wait|该IE定义了允许的最小等待时间。
 ##### UE Aggregate Maximum Bit Rate 
+
 IE|说明
 ---|---
 UE Aggregate Maximum Bit Rate|该IE适用于下行和上行方向定义的所有non-GBR QoS流，以及AMF提供给NG-RAN节点的签约参数。
 ##### Security Result 
+
 IE|说明
 ---|---
 Security Result|该IE指示安全指示IE中指示为“优先”的安全策略是否执行。
 ##### User Plane Security Information 
+
 IE|说明
 ---|---
 User Plane Security Information|该IE指示安全策略相关的用户面安全信息。
 ##### Index to RAT/Frequency Selection Priority 
+
 IE|说明
 ---|---
 Index to RAT/Frequency Selection Priority|该IE用于定义RRM策略的本地配置，如空闲模式下的驻留优先级、主动模式下的系统内、系统间切换控制等。
 ##### Data Forwarding Accepted 
+
 IE|说明
 ---|---
 Data Forwarding Accepted|该IE表示NG-RAN节点接受QoS流的下行数据转发。该QoS流需支持数据转发。
 ##### Data Forwarding Not Possible 
+
 IE|说明
 ---|---
 Data Forwarding Not Possible|该IE表示5GC决定相应的PDU会话不支持数据转发。
 ##### Direct Forwarding Path Availability 
+
 IE|说明
 ---|---
 Direct Forwarding Path Availability|该IE指示是否有直接转发路径。
 ##### Location Reporting Request Type 
+
 IE|说明
 ---|---
 Location Reporting Request Type|该IE表示NG-RAN节点需要处理的位置请求类型。
 ##### Area of Interest 
+
 IE|说明
 ---|---
 Area of Interest|该IE表示兴趣区域。
 ##### UE Presence in Area of Interest List 
+
 IE|说明
 ---|---
 UE Presence in Area of Interest List|该IE指示UE在兴趣区域内。
 ##### UE Radio Capability for Paging 
+
 IE|说明
 ---|---
 UE Radio Capability for Paging|该IE包含寻呼特定UE无线能力信息。
 ##### Assistance Data for Paging 
+
 IE|说明
 ---|---
 Assistance Data for Paging|该IE为寻呼优化提供辅助信息。
 ##### Assistance Data for Recommended Cells 
+
 IE|说明
 ---|---
 Assistance Data for Recommended Cells|该IE为推荐小区的寻呼提供辅助信息。
 ##### Recommended Cells for Paging 
+
 IE|说明
 ---|---
 Recommended Cells for Paging|该IE包含了推荐的寻呼小区。
 ##### Paging Attempt Information 
+
 IE|说明
 ---|---
 Paging Attempt Information|该IE包含与NG寻呼次数相关的信息。
 ##### NG-RAN CGI 
+
 IE|说明
 ---|---
 NG-RAN CGI|该IE用于在NG-RAN中全局识别某个小区。
 ##### UE Radio Capability 
+
 IE|说明
 ---|---
 UE Radio Capability|该IE包含UE的无线能力信息。
 ##### Time Stamp 
+
 IE|说明
 ---|---
 Time Stamp|该IE包含UTC时间信息。
 ##### Location Reporting Reference ID 
+
 IE|说明
 ---|---
 Location Reporting Reference ID|该IE包含位置报告参考标识。
 ##### Data Forwarding Response DRB List 
+
 IE|说明
 ---|---
 Data Forwarding Response DRB List|该IE表示数据转发相关信息。
 ##### Paging Priority 
+
 IE|说明
 ---|---
 Paging Priority|该IE表示UE的寻呼优先级。
 ##### Packet Loss Rate 
+
 IE|说明
 ---|---
 Packet Loss Rate|该IE表示QoS流丢包率。
 ##### Packet Delay Budget 
+
 IE|说明
 ---|---
 Packet Delay Budget|该IE表示QoS流的包时延预算。
 ##### Packet Error Rate 
+
 IE|说明
 ---|---
 Packet Error Rate|该IE表示QoS流的错包率。
 ##### Averaging Window 
+
 IE|说明
 ---|---
 Averaging Window|该IE表示QoS流的平均窗口。
 ##### Maximum Data Burst Volume 
+
 IE|说明
 ---|---
 Maximum Data Burst Volume|该IE表示QoS流的最大数据突发流量。
 ##### Priority Level 
+
 IE|说明
 ---|---
 Priority Level|该IE表示QoS流的优先级。
 ##### Mobility Restriction List 
+
 IE|说明
 ---|---
 Mobility Restriction List|该IE定义了后续移动动作的漫游或接入限制，其中，NG-RAN提供针对UE的移动性动作的目标信息，例如切换，或者在双连接中的SCG选择或分配合适的RNA。如果NG-RAN收到了移动性限制列表IE，它将覆盖以前接收到的移动性限制信息。该数据结构中包含如下信息：RAT Restrictions：RAT限制相关信息。此IE包含两部分，PLMN Identity和RAT Restriction Information。RAT Restrictions Information是8bit位的比特串，每个bit代表一个RAT。 值为1时，表示对UE的RAT进行限制。 值为0时，表示不对UE的RAT进行限制。 比特0表示e-UTRA，bit1表示NR，bit2-7，发送节点应将比特2-7设置为0，接收节点应忽略比特2-7。Forbidden Area Information：Forbidden Area相关信息。此IE包含两部分，PLMN Identity和Forbidden TACs。
 ##### Security Key 
+
 IE|说明
 ---|---
 Security Key|该IE用于NG-RAN不同场景下的安全应用。
 ##### Security Context 
+
 IE|说明
 ---|---
 Security Context|该IE为NG-RAN节点提供安全相关参数，用于衍生用户面流量和RRC信令消息的安全密钥，为后续的移动性生成安全参数。
 ##### IMS Voice Support Indicator 
+
 IE|说明
 ---|---
 IMS Voice Support Indicator|该IE由NG-RAN节点设置，用于指示UE的无线能力是否与IMS语音业务的网络配置兼容。
 ##### Paging DRX 
+
 IE|说明
 ---|---
 Paging DRX|该IE表示寻呼DRX。
 ##### RRC Inactive Transition Report Request 
+
 IE|说明
 ---|---
 RRC Inactive Transition Report Request|该IE用于请求NG-RAN节点在UE进入或离开RRC_INACTIVE状态时向5GC上报或停止上报。
 ##### RRC State 
+
 IE|说明
 ---|---
 RRC State|该IE表示UE的RRC状态。
 ##### Expected UE Behaviour 
+
 IE|说明
 ---|---
 Expected UE Behaviour|该IE指示具有可预测的活动和/或移动性行为的UE的行为，以协助NG-RAN节点确定最佳的RRC连接时间，并帮助RRC_INACTIVE状态迁移和RNA配置（例如，RNA的大小和形状）。
 ##### Expected UE Activity Behaviour 
+
 IE|说明
 ---|---
 Expected UE Activity Behaviour|该IE指示了预期的“UE活动行为”的信息。
 ##### UE History Information 
+
 IE|说明
 ---|---
 UE History Information|该IE包含在目标小区之前处于激活状态的UE所服务的小区信息。
 ##### Last Visited Cell Information 
+
 IE|说明
 ---|---
 Last Visited Cell Information|该IE可能包含小区特定信息。
 ##### Last Visited NG-RAN Cell Information 
+
 IE|说明
 ---|---
 Last Visited NG-RAN Cell Information|该IE包含一个小区的信息，在NR小区中，该IE包含参考点A的一组同频点的NR小区信息。“Global Cell ID”IE标识了该小区集中的一个NR小区。该IE用于RRM目的。
 ##### Cell Type 
+
 IE|说明
 ---|---
 Cell Type|该IE提供小区覆盖范围。
 ##### Associated QoS Flow List 
+
 IE|说明
 ---|---
 Associated QoS Flow List|此IE指示与DRB或用户面TNL端点等相关联的QoS流列表。
 ##### Information on Recommended Cells and RAN Nodes for Paging 
+
 IE|说明
 ---|---
 Information on Recommended Cells and RAN Nodes for Paging|该IE提供了寻呼推荐小区和NG-RAN节点信息。
 ##### Recommended RAN Nodes for Paging 
+
 IE|说明
 ---|---
 Recommended RAN Nodes for Paging|该IE包含了推荐的NG-RAN寻呼节点。
 ##### E-UTRA CGI 
+
 IE|说明
 ---|---
 E-UTRA CGI|该IE用于全局识别E-UTRA小区。
 ##### Handover Type 
+
 IE|说明
 ---|---
 Handover Type|该IE表示源侧触发的是哪种切换。切换类型有如下几种：Intra5GS: NG-RAN node to NG-RAN node5GStoEPS: NG-RAN node to eNBEPSto5GS: eNB to NG-RAN node
 ##### RAN Paging Priority 
+
 IE|说明
 ---|---
 RAN Paging Priority|该IE包含业务优先级。
 ##### NAS-PDU 
+
 IE|说明
 ---|---
 NAS-PDU|该IE包含一个5GC和UE之间发送的消息。此消息在NG-RAN节点未解析。
 ##### GUAMI 
+
 IE|说明
 ---|---
 GUAMI|该IE表示AMF标识。
 ##### UE Security Capabilities 
+
 IE|说明
 ---|---
 UE Security Capabilities|该IE定义了UE支持的加密和完整性保护算法。该IE表示AMF标识。
 ##### NAS Security Parameters from NG-RAN 
+
 IE|说明
 ---|---
 NAS Security Parameters from NG-RANGUAMI|该IE提供了从NG-RAN到E-UTRAN通过eNB到UE的系统间切换的安全相关参数。
 ##### New Security Context Indicator 
+
 IE|说明
 ---|---
 New Security Context Indicator|该IE表示AMF已经激活了一个新的5G NAS安全上下文。
 ##### NASC 
+
 IE|说明
 ---|---
 NASC|该IE包含一个5GC和UE之间发送的消息。此消息在NG-RAN节点未解析。
 ##### Source AMF UE NGAP ID 
+
 IE|说明
 ---|---
 Source AMF UE NGAP ID|该IE在AMF内部唯一标识一个NG接口的UE关联。
 ##### RAN Status Transfer Transparent Container 
+
 IE|说明
 ---|---
 RAN Status Transfer Transparent Container|该IE由源NGRAN节点产生，传递到目标NGRAN节点，用于5GC内部NG切换。
 ##### UE Paging Identity 
+
 IE|说明
 ---|---
 UE Paging Identity|该IE表示UE被寻呼的标识。
 ##### Paging Origin 
+
 IE|说明
 ---|---
 Paging Origin|该信元指示是否由于非3GPP接入的PDU会话而发起寻呼。
 ##### RRC Establishment Cause 
+
 IE|说明
 ---|---
 RRC Establishment Cause|该IE表示EstablishmentCause中收到UE的RRC连接建立原因
 ##### 5G-S-TMSI 
+
 IE|说明
 ---|---
 5G-S-TMSI|该IE用于安全原因，隐藏用户的身份。
 ##### AMF Set ID 
+
 IE|说明
 ---|---
 AMF Set ID|该IE用于在AMF区域内唯一标识一个AMF集合。
 ##### Default Paging DRX 
+
 IE|说明
 ---|---
 Default Paging DRX|该IE表示寻呼DRX。
 ##### AMF Name 
+
 IE|说明
 ---|---
 AMF Name|该IE用于唯一标识AMF。
 ##### UE-associated Logical NG-connection List 
+
 IE|说明
 ---|---
 UE-associated Logical NG-connection List|该IE包含一个UE相关的逻辑NG-Connection列表。
 ##### AMF Overload Response 
+
 IE|说明
 ---|---
 AMF Overload Response|该IE表示在过载情况下，NGRAN节点所需的行为。
 ##### AMF Traffic Load Reduction Indication 
+
 IE|说明
 ---|---
 AMF Traffic Load Reduction Indication|该IE表示在NGRAN节点上被拒绝的流量类型相对于瞬时流入速率的百分比。
 ##### SON Configuration Transfer 
+
 IE|说明
 ---|---
 SON Configuration Transfer|该IE包含配置信息。
 ##### Warning Area Coordinates 
+
 IE|说明
 ---|---
 Warning Area Coordinates|该IE包含警告消息的受影响的警报区域坐标，并将在无线电接口上广播。
 ##### Routing ID 
+
 IE|说明
 ---|---
 Routing ID|该IE用于在5GC内标识一个LMF。
 ##### NRPPa-PDU 
+
 IE|说明
 ---|---
 NRPPa-PDU|该IE包含一个NGRAN节点LMF或LMF的NG-RAN节点消息，在AMF节点不解析。
 ##### Trace Collection Entity IP Address 
+
 IE|说明
 ---|---
 Trace Collection Entity IP Address|该IE为IP地址。
 ##### TAI 
+
 IE|说明
 ---|---
 TAI|该IE用于唯一标识一个跟踪区域。
 ##### TAC 
+
 IE|说明
 ---|---
 TAC|该IE用于唯一标识一个跟踪区域码。
 ##### PLMN Identity 
+
 IE|说明
 ---|---
 PLMN Identity|该IE表示PLMN标识。
 ##### TAI Slice Support List 
+
 IE|说明
 ---|---
 TAI Slice Support List|该IE表示支持的slice列表。
 ##### Backup AMF Name 
+
 IE|说明
 ---|---
 Backup AMF Name|该IE用于唯一标识AMF。
 ##### New AMF UE NGAP ID 
+
 IE|说明
 ---|---
 New AMF UE NGAP ID|该IE在AMF内唯一标识UE在NG接口上的关联。
 ##### AMF TNL Association Address 
+
 IE|说明
 ---|---
 AMF TNL Association Address|该IE用于提供NGRAN节点关联的NG控制面传输层信息AMF对。
 ##### TNL Association Usage 
+
 IE|说明
 ---|---
 TNL Association Usage|该IE表示TNL关联的使用情况。
 ##### TNL Address Weight Factor 
+
 IE|说明
 ---|---
 TNL Address Weight Factor|该IE表示TNL地址的权重因子。
 ##### AMF TNL Association Failed to Setup List 
+
 IE|说明
 ---|---
 AMF TNL Association Failed to Setup List|该IE包含TNL关联列表。
 ##### Slice Overload List 
+
 IE|说明
 ---|---
 Slice Overload List|该IE表示过载分片列表。
 ##### Slice Overload Response 
+
 IE|说明
 ---|---
 Slice Overload Response|该IE表示在过载情况下，NGRAN节点所需的行为。
 ##### Slice Traffic Load Reduction Indication 
+
 IE|说明
 ---|---
 Slice Traffic Load Reduction Indication|该IE表示在NGRAN节点上被拒绝的流量类型相对于瞬时流入速率的百分比。
 ##### PDU Session Resource Setup Request Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Setup Request Transfer|SMF通过AMF透传给NG-RAN的PDU Session Resource Setup Request Transfer IE。
 ##### PDU Session Resource Setup Response Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Setup Response Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Setup Response Transfer IE。
 ##### PDU Session Resource Setup Unsuccessful Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Setup Unsuccessful Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Setup Unsuccessful Transfer IE。
 ##### PDU Session Resource Release Command Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Release Command Transfer|SMF通过AMF透传给NG-RAN的PDU Session Resource Release Command Transfer IE。
 ##### PDU Session Resource Release Response Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Release Response Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Release Response Transfer IE。
 ##### PDU Session Resource Modify Request Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Modify Request Transfer|SMF通过AMF透传给NG-RAN的PDU Session Resource Modify Request Transfer IE。
 ##### PDU Session Resource Modify Response Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Modify Response Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Modify Response Transfer IE。
 ##### PDU Session Resource Modify Unsuccessful Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Modify Unsuccessful Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Modify Unsuccessful Transfer IE。
 ##### PDU Session Resource Notify Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Notify Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Notify Transfer IE。
 ##### PDU Session Resource Notify Released Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Notify Released Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Notify Released Transfer IE。
 ##### PDU Session Resource Modify Indication Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Modify Indication Transfer|NG-RAN通过AMF透传给SMF的PDU Session Resource Modify Indication Transfer IE。
 ##### PDU Session Resource Modify Indication Unsuccessful Transfer 
+
 IE|说明
 ---|---
 PDU Session Resource Modify Indication Unsuccessful Transfer|SMF通过AMF透传给NG-RAN的PDU Session Resource Modify Indication Unsuccessful Transfer IE。
 ##### Handover Required Transfer 
+
 IE|说明
 ---|---
 Handover Required Transfer|NG-RAN通过AMF透传给SMF的Handover Required Transfer IE。
 ##### Handover Command Transfer 
+
 IE|说明
 ---|---
 Handover Command Transfer|SMF通过AMF透传给NG-RAN的Handover Command Transfer IE。
 ##### Handover Preparation Unsuccessful Transfer 
+
 IE|说明
 ---|---
 Handover Preparation Unsuccessful Transfer|SMF通过AMF透传给NG-RAN的Handover Preparation Unsuccessful Transfer IE。
 ##### Handover Request Transfer 
+
 IE|说明
 ---|---
 Handover Request Transfer|SMF通过AMF透传给NG-RAN的Handover Request Transfer IE。
 ##### Handover Request Acknowledge Transfer 
+
 IE|说明
 ---|---
 Handover Request Acknowledge Transfer|NG-RAN通过AMF透传给SMF的Handover Request Acknowledge Transfer IE。
 ##### Handover Resource Allocation Unsuccessful Transfer 
+
 IE|说明
 ---|---
 Handover Resource Allocation Unsuccessful Transfer|NG-RAN通过AMF透传给SMF的Handover Resource Allocation Unsuccessful Transfer IE。
 ##### Path Switch Request Transfer 
+
 IE|说明
 ---|---
 Path Switch Request Transfer|NG-RAN通过AMF透传给SMF的Path Switch Request Transfer IE。
 ##### Path Switch Request Setup Failed Transfer 
+
 IE|说明
 ---|---
 Path Switch Request Setup Failed Transfer|NG-RAN通过AMF透传给SMF的Path Switch Request Setup Failed Transfer IE。
 ##### Path Switch Request Acknowledge Transfer 
+
 IE|说明
 ---|---
 Path Switch Request Acknowledge Transfer|SMF通过AMF透传给NG-RAN的Path Switch Request Acknowledge Transfer IE。
 ##### Path Switch Request Unsuccessful Transfer 
+
 IE|说明
 ---|---
 Path Switch Request Unsuccessful Transfer|SMF通过AMF透传给NG-RAN的Path Switch Request Unsuccessful Transfer IE。
 ### N3接口 
 #### N3接口协议简介 
-场景描述 :N3接口是5G (R)AN与UPF之间的接口，主要用于传递5G (R)AN与UPF之间的上下行用户面数据。
-协议栈 :N3接口采用GTPv1-U协议，支持3GPP TS 29.281协议。 
+场景描述 : 
+N3接口是5G (R)AN与UPF之间的接口，主要用于传递5G (R)AN与UPF之间的上下行用户面数据。
+协议栈 : 
+N3接口采用GTPv1-U协议，支持3GPP TS 29.281协议。 
 对应的用户面接口协议栈如[图1]所示。
 图1  N3接口协议栈
-
 ##### 消息列表 
 N3接口上支持的消息参见下表。 
 消息|方向|作用
@@ -11789,77 +11876,93 @@ Error Indication|(R)AN->UPFUPF->(R)AN|当GTP-U节点收到G-PDU数据包，但�
 End Marker|(R)AN->UPFUPF->(R)AN|End Marker消息是End Marker Indication的响应消息，在收到End Marker Indication消息之后，会回复End Marker消息。在5GC网络中，通过数据转发隧道发送的End Marker报文，应该与PDU Session Container扩展头一起发送，其中包括映射到同一个E-RAB的其中一个QoS流的流标识。数据转发隧道用于在5GS和EPS之间进行数据转发。
 #### 相关消息解释 
 ##### Echo Request 
-消息功能 :GTP-U的一端可以在路径上向另一端发送Echo Request消息来检测对端是否正常。
+消息功能 : 
+GTP-U的一端可以在路径上向另一端发送Echo Request消息来检测对端是否正常。
 Echo Request消息可以在每一条正在使用的路径上发送。如果一条路径被至少一个PDP上下文、EPS承载、PDU会话、MBMS UE上下文，或者MBMS承载上下文用于GTP-U端点，则认为该路径正在被使用。
 Echo Request消息的发送时间和发送频率取决于产品具体实现，但每条路径上发送Echo Request消息的时间间隔不能低于60秒。但是这种时间限制有一个例外场景，如果T3-RESPONSE定时器超时，Echo Request仍可以不断重发。 
 如果路径没有在使用，GTP-U一端也会时刻准备接收Echo Request消息，并回复Echo Response消息。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ##### Echo Response 
-消息功能 :Echo Response消息是作为接收到的Echo Request消息的响应消息。 
+消息功能 : 
+Echo Response消息是作为接收到的Echo Request消息的响应消息。 
 Recovery信元中的Restart Counter值不使用。发送方应将该值置为0，接收方应忽略该值。 
 由于兼容性原因，Recovery信元是必选的。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Recovery|Mandatory|该信元为必选信元，Recovery信元中的Restart Counter（重启计数器）值不使用，应该由发送实体设置为0，接收实体忽略该值。由于兼容性原因，该信元在GTP用户面使用。
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ##### Supported Extension Headers Notification 
-消息功能 :该消息指示指定IP地址上的GTP实体能够支持的扩展头列表。
+消息功能 : 
+该消息指示指定IP地址上的GTP实体能够支持的扩展头列表。
 只有当GTP实体需要解析必选的扩展头，但该GTP实体尚未被升级以支持扩展头时，才发送该消息。 
 发送此消息的GTP端点被标记为不支持某些扩展头（源自支持的扩展头列表）。对端GTP实体可能会重试使用该节点的所有扩展头，试图验证它是否已经被升级。如果本端GTP实体已经指示某些扩展头无法被解析，对端GTP实体应避免重复尝试使用这些未知扩展头。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extension Header Type List|Mandatory|该信元为必选信元。该信元包含“n”扩展头类型的列表。Length字段设置为包含的扩展头类型个数。
 ##### Error Indication 
-消息功能 :当GTP-U节点收到一个没有EPS承载上下文、PDP上下文、PDU会话、MBMS承载上下文或RAB的G-PDU数据包时，GTP-U节点将丢弃该G-PDU数据包。同时当收到的G-PDU数据包携带的TEID不是全0，则会回复Error Indication。
+消息功能 : 
+当GTP-U节点收到一个没有EPS承载上下文、PDP上下文、PDU会话、MBMS承载上下文或RAB的G-PDU数据包时，GTP-U节点将丢弃该G-PDU数据包。同时当收到的G-PDU数据包携带的TEID不是全0，则会回复Error Indication。
 GTP实体包括“UDP Port”扩展头（0x40类型），以简化在某些场景下能够降低DoS攻击风险的机制的实现。
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Tunnel Endpoint Identifier Data I|Mandatory|该信元为必选信元，该信元包含GTP实体在用户面使用的隧道端点标识。信元值是从触发此过程的G-PDU中获取的TEID。
 GTP-U Peer Address|Mandatory|该信元为必选信元，该信元包含GTP实体在用户面使用的隧道端点地址。信元值是从触发此过程的G-PDU中获取的目的地址。
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ##### End Marker 
-消息功能 :最后一个G-PDU在GTP-U隧道上发送之后，或者收到End Marker Indication之后，会发送End Marker消息。 
+消息功能 : 
+最后一个G-PDU在GTP-U隧道上发送之后，或者收到End Marker Indication之后，会发送End Marker消息。 
 在5GC网络中，通过数据转发隧道发送的End Marker报文，应该与PDU Session Container扩展头一起发送，其中包括映射到同一个E-RAB的其中一个QoS流的流标识。
 数据转发隧道用于在5GS和EPS之间进行数据转发。
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 #### 相关信元解释 
 ##### Information Element Types 
+
 IE|说明
 ---|---
 Information Element Types|GTP-U信令消息中包含多个信元。GTP信元采用TLV(Type， Length，Value)或TV(Type， Value)编码格式。在信令消息中，信元按照Type字段升序排列。Length字段包含除了Type+Length字段的长度。对于所有Length字段，最低编号octet的第8位为最高位，最高编号octet的第1位为最低位。
 ##### Recovery 
+
 IE|说明
 ---|---
 Recovery|重启计数器的值应该由发送实体设置为0，接收实体忽略。由于兼容性原因，该信元在GTP用户面使用。
 ##### Tunnel Endpoint Identifier Data I 
+
 IE|说明
 ---|---
 Tunnel Endpoint Identifier Data I|该信元包含GTP实体在用户面使用的隧道端点标识。
 ##### GTP-U Peer Address 
+
 IE|说明
 ---|---
 GTP-U Peer Address|该信元包含GTP实体在用户面使用的隧道端点地址。
 ##### Extension Header Type List 
+
 IE|说明
 ---|---
 Extension Header Type List|该信元包含“n”扩展头类型的列表。Length字段设置为包含的扩展头类型个数。
 ##### Private Extension 
+
 IE|说明
 ---|---
 Private Extension|该信元包含厂商的特定信息。扩展标识是在最近的“Assigned Numbers”RFC（RFC 1700及以上版本）中的私有企业号码列表中定义的一个值。该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ### N4接口 
 #### N4接口协议简介 
-场景描述 :N4接口为SMF和UPF之间的接口，用于传输SMF和UPF之间的控制面和用户面信息。 
-协议栈 :N4接口的控制面协议栈如[图1]所示。
+场景描述 : 
+N4接口为SMF和UPF之间的接口，用于传输SMF和UPF之间的控制面和用户面信息。 
+协议栈 : 
+N4接口的控制面协议栈如[图1]所示。
 图1  N4接口控制面协议栈
-
 N4接口的用户面协议栈如[图2]所示。
 图2  N4接口用户面协议栈
-
 ##### 消息列表 
 N4接口上支持的消息参见下表。 
 消息|方向|作用
@@ -11884,19 +11987,25 @@ PFCP Session Report Request|UPF->SMF|会话信息上报，如用户流量配额�
 PFCP Session Report Response|SMF->UPF|会话信息上报，如用户流量配额用完，触发UPF通过该消息上报用户流量。
 #### 相关消息解释 
 ##### PFCP Heartbeat Request 
-消息功能 :SMF/UPF给UPF/SMF发送此消息检测对端的心跳。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF/UPF给UPF/SMF发送此消息检测对端的心跳。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Recovery Time Stamp|Mandatory|该IE应包含节点启动时的时间戳。
 ##### PFCP Heartbeat Response 
-消息功能 :SMF/UPF给UPF/SMF发送此消息响应对端的心跳请求。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF/UPF给UPF/SMF发送此消息响应对端的心跳请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Recovery Time Stamp|Mandatory|该IE应包含节点启动时的时间戳。
 ##### PFCP Association Setup Request 
 Association Setup Request 
-消息功能 :SMF/UPF给UPF/SMF发送此消息请求建立偶联。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF/UPF给UPF/SMF发送此消息请求建立偶联。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 Recovery Time Stamp|Mandatory|该IE应包含节点启动时的时间戳。
@@ -11904,8 +12013,10 @@ UP Function Features|Conditional|如果用户面网元发送该消息，并且�
 CP Function Features|Conditional|如果控制面网元发送该消息，且控制面网元支持至少一个该IE定义的控制面特性，则该信元必须存在。当出现时，该IE应指示控制面网元支持的特性。
 ##### PFCP Association Setup Response 
 Association Setup Response 
-消息功能 :SMF/UPF给UPF/SMF发送此消息响应对端发送的建立偶联请求。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF/UPF给UPF/SMF发送此消息响应对端发送的建立偶联请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
@@ -11914,8 +12025,10 @@ UP Function Features|Conditional|如果用户面网元发送该消息，并且�
 CP Function Features|Conditional|如果控制面网元发送该消息，且控制面网元支持至少一个该IE定义的控制面特性，则该信元必须存在。当出现时，该IE应指示控制面网元支持的特性。
 ##### PFCP Association Update Request 
 Association Update Request 
-消息功能 :SMF/UPF给UPF/SMF发送此消息请求偶联更新。如SMF支持的功能发生变化时，SMF发起偶联更新流程；UPF支持的功能发生变化、请求释放偶联时，UPF发起偶联更新流程。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF/UPF给UPF/SMF发送此消息请求偶联更新。如SMF支持的功能发生变化时，SMF发起偶联更新流程；UPF支持的功能发生变化、请求释放偶联时，UPF发起偶联更新流程。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 UP Function Features|Optional|如果存在，则该IE应指示发送节点为用户面网元时支持的特性。
@@ -11924,8 +12037,10 @@ PFCP Association Release Request|Conditional|如果用户面网元请求控制�
 Graceful Release Period|Conditional|如果用户面网元请求优雅释放PFCP偶联，则该IE应该出现。
 ##### PFCP Association Update Response 
 Association Update Response 
-消息功能 :SMF/UPF给UPF/SMF发送此消息响应对端的偶联更新请求。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF/UPF给UPF/SMF发送此消息响应对端的偶联更新请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
@@ -11933,35 +12048,45 @@ UP Function Features|Conditional|如果存在，则该IE应指示发送节点为
 CP Function Features|Conditional|如果存在，则该IE应指示发送节点为控制面网元时支持的特性。
 ##### PFCP Association Release Request 
 Association Release Request 
-消息功能 :SMF给UPF发送此消息请求释放偶联。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF给UPF发送此消息请求释放偶联。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 ##### PFCP Association Release Response 
 Association Release Response 
-消息功能 :UPF给SMF发送此消息响应对端的偶联释放请求。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UPF给SMF发送此消息响应对端的偶联释放请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
 ##### PFCP Node Report Request 
-消息功能 :UPF给SMF发送此消息进行节点级信息上报，如UPF的N3/N9接口链路故障信息上报给SMF。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UPF给SMF发送此消息进行节点级信息上报，如UPF的N3/N9接口链路故障信息上报给SMF。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 Node Report Type|Mandatory|该IE应指示报告的类型。
 User Plane Path Failure Report|Conditional|如果节点报告类型指示用户面路径故障报告，则该IE应出现。
 ##### PFCP Node Report Response 
-消息功能 :SMF给UPF发送此消息响应节点级信息上报请求。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF给UPF发送此消息响应节点级信息上报请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
 Offending IE|Conditional|如果拒绝原因是由于条件或必选信元丢失或故障，则应包含此IE。
 ##### PFCP Session Establishment Request 
 Session Establishment Request 
-消息功能 :SMF给UPF发送此消息请求建立新的PFCP会话上下文。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF给UPF发送此消息请求建立新的PFCP会话上下文。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 CP F-SEID|Mandatory|该IE应包含标识会话的控制面网元分配的唯一标识符。
@@ -11977,8 +12102,10 @@ User ID|Optional|基于运营商策略的情况下该IE可能存在。如果用�
 Trace Information|Optional|当出现此IE时，该IE应包含该PFCP会话的用户面网元要应用的跟踪指令。
 ##### PFCP Session Establishment Response 
 Session Establishment Response 
-消息功能 :UPF给SMF发送此消息响应建立新的PFCP会话上下文的请求消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UPF给SMF发送此消息响应建立新的PFCP会话上下文的请求消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Node ID|Mandatory|该IE应包含发送节点的唯一标识符。
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
@@ -11991,8 +12118,10 @@ Failed Rule ID|Conditional|如果原因值为创建或修改规则失败导致�
 Created Traffic Endpoint|Conditional|如果原因被设置为成功，并且请求在创建流量端点IE中分配本地F-TEID，则该IE应出现，当出现时，它将包含用于此流量端点的本地F-TEID。该IE可能有多个实例。
 ##### PFCP Session Modification Request 
 Session Modification Request 
-消息功能 :SMF给UPF发送此消息请求修改PFCP会话。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF给UPF发送此消息请求修改PFCP会话。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 CP F-SEID|Conditional|如果控制面网元决定修改它分配的PFCP会话的F-SEID，则该信元应该存在，用户面网元在后续PFCP会话相关消息中将使用新的CP F-SEID。
 Remove PDR|Conditional|当出现此IE时，该IE应包含请求删除的PDR规则。可以在同一IE类型内的几个IE表示要删除的PDR列表。
@@ -12020,8 +12149,10 @@ Query URR Reference|Optional|如果存在QueryURR信元或QAURR标志位为1，�
 Trace Information|Optional|当出现此IE时，该IE应包含用于该PFCP会话的用户面网元要应用的跟踪指令。跟踪信息为空，表示跟踪会话应该被去激活。
 ##### PFCP Session Modification Response 
 Session Modification Response 
-消息功能 :UPF给SMF发送此消息响应更新PFCP会话的请求消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UPF给SMF发送此消息响应更新PFCP会话的请求消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
 Offending IE|Conditional|如果拒绝的原因是条件或必选信元丢失或故障，则应包含此IE。
@@ -12033,11 +12164,15 @@ Failed Rule ID|Conditional|如果原因值为创建或修改规则失败导致�
 Additional Usage Reports Information|Conditional|如果PFCP会话修改请求中存在查询URR信元或QAURR标志为1，则需要包含该IE，并且需要在额外的PFCP会话报告请求消息中发送使用报告。当出现此IE时，该IE应指示后续有附加使用报告，或指示需要在PFCP会话报告请求消息中发送的使用报告的总数。
 Created Traffic Endpoint/Update Traffic Endpoint|Conditional|如果原因值设置为“成功”，则该IE应出现，请求创建或更新流量端点，并请求用户面网元为流量端点分配本地F-TEID。当出现时，该IE应包含与PFCP会话关联的流量端点信息。
 ##### PFCP Session Deletion Request 
-消息功能 :SMF给UPF发送此消息请求删除PFCP会话。 
-相关信元 :目前此消息中不包含信元。 
+消息功能 : 
+SMF给UPF发送此消息请求删除PFCP会话。 
+相关信元 : 
+目前此消息中不包含信元。 
 ##### PFCP Session Deletion Response 
-消息功能 :UPF给SMF发送此消息响应删除PFCP会话的请求消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UPF给SMF发送此消息响应删除PFCP会话的请求消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
 Offending IE|Conditional|如果拒绝的原因是条件或必选信元丢失或故障，则应包含此IE。
@@ -12045,8 +12180,10 @@ Load Control Information|Optional|如果支持负载控制特性，且网络中�
 Overload Control Information|Optional|在过载情况下，如果支持过载控制特性，且网络中已激活该特性，则用户面网元可能会携带此信元。
 Usage Report（within PFCP Session Deletion Response）|Conditional|如果在用户面网元中已经开通了一个URR，并且该PFCP会话被删除，并且在用户面网元中可以使用URR的流量使用度量，那么该IE将会出现。在同一IE类型内的几个IE可以表示使用报告列表。
 ##### PFCP Session Report Request 
-消息功能 :UPF给SMF发送此消息进行PFCP会话级信息上报。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+UPF给SMF发送此消息进行PFCP会话级信息上报。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Report Type|Mandatory|该IE应指示报告的类型。
 Downlink Data Report|Conditional|如果报告类型为下行数据报告，则该IE应出现。
@@ -12056,8 +12193,10 @@ Load Control Information|Optional|如果支持负载控制特性，且网络中�
 Overload Control Information|Optional|在过载情况下，如果支持过载控制特性，且网络中已激活该特性，则用户面网元可能会携带此信元。
 Additional Usage Reports Information|Conditional|如果PFCP会话修改响应指示有更多的报告会跟随，则该IE应包含在一个额外的PFCP会话报告请求消息中。当出现此IE时，该IE应指示PFCP会话报告请求消息中需要发送的使用报告总数。
 ##### PFCP Session Report Response 
-消息功能 :SMF给UPF发送此消息响应PFCP会话级信息上报请求。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+SMF给UPF发送此消息响应PFCP会话级信息上报请求。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|该IE应指示接受或拒绝相应的请求消息。
 Offending IE|Conditional|如果拒绝是由于条件或必选信元丢失或故障而拒绝的，则应包含此IE。
@@ -12065,70 +12204,87 @@ Update BAR|Conditional|如果需要修改先前为PFCP会话创建的BAR，则�
 SxSRRsp-Flags|Conditional|如果至少有一个标志位被设置为1，则必须包含这个IE。-DROBU（丢弃缓存报文）：如果UP功能需要丢弃当前PFCP会话缓存的报文，则控制面网元需要设置该标志。
 #### 相关信元解释 
 ##### Recovery Time Stamp 
+
 IE|说明
 ---|---
 Recovery Time Stamp|该IE指示节点启动时的UTC时间。注意：编码定义为相对于1900年1月1号的00:00:00的秒数。
 ##### Node ID 
+
 IE|说明
 ---|---
 Node ID|该IE指示应包含节点的FQDN或IPv4/IPv6地址。信元中Node ID Type表示节点ID值的类型，其取值和意义如下：0，IPv4 address1，IPv6 address2，FQDN3~15，备用，以备将来使用。
 ##### UP Function Features 
+
 IE|说明
 ---|---
 UP Function Features|该IE指示用户面网元支持的特性。
 ##### CP Function Features 
+
 IE|说明
 ---|---
 CP Function Features|该IE指示控制面网元支持的特性。只有对（全系统）用户面网元行为有影响的特性才会在该IE中指示。
 ##### Cause 
+
 IE|说明
 ---|---
 Cause|该信元应包含在响应消息中，在响应消息中，原因值表示接受或拒绝相应的请求消息。原因值表示拒绝的明确原因，其取值和意义如下：1，Reserved2-63，备用64，Request rejected (reason not specified)65，Session context not found66，Mandatory IE missing67，Conditional IE missing68，Invalid length69，Mandatory IE incorrect70，Invalid Forwarding Policy71，Invalid F-TEID allocation option72，No established PFCP Association73，Rule creation/modification Failure74，PFCP entity in congestion75，No resources available76，Service not supported77，System failure78-255，备用
 ##### PFCP Association Release Request 
+
 IE|说明
 ---|---
 PFCP Association Release Request|该IE中“SARR (PFCP Association Release Request)”设置为“1”，则表示用户面网元请求释放PFCP偶联。
 ##### Graceful Release Period 
+
 IE|说明
 ---|---
 Graceful Release Period|该IE指示优雅释放的具体时间。Bits 5 to 1 表示二进制编码的定时器时长。Bits 6 to 8 表示定时器时长单位，其取值如下：Bits8 7 60 0 0 ， 值按2秒的倍数递增0 0 1 ，值按1分钟的倍数递增0 1 0 ，值按10分钟的倍数递增0 1 1 ，值按1小时的倍数递增1 0 0 ，值按10小时的倍数递增1 1 1 ，表示定时器无穷大
 ##### Node Report Type 
+
 IE|说明
 ---|---
 Node Report Type|该IE指示用户面网元向控制面网元发的节点报告的类型。第5字节编码如下：bit1 ，UPFR（User Plane Path Failure Report）：当取值为1时，表示用户面路径故障报告bit2-bit8，spare，后续使用，设置为0至少有一个比特设置为1，可以将几个比特设置为1。
 ##### User Plane Path Failure Report 
+
 IE|说明
 ---|---
 User Plane Path Failure Report|该IE里面包含Remote GTP-U Peer类型的IE信息，该Remote GTP-U PeerIE应包含检测到用户面路径故障的远端GTP-U对等体的IP地址。User Plane Path Failure Report可以包含多个具有这种Remote GTP-U Peer类型的IE来表示检测到用户面路径故障的多个远端GTP-U对等体。
 ##### User Plane Inactivity Timer 
+
 IE|说明
 ---|---
 User Plane Inactivity Timer|该IE指示用户面不活动定时器。
 ##### PDN Type 
+
 IE|说明
 ---|---
 PDN Type|该IE指示PDN连接类型。其取值和意义为：1，IPv42，IPv63，IPv4v64，Non-IP5，Ethernet6，为了将来的使用。
 ##### Offending IE 
+
 IE|说明
 ---|---
 Offending IE|如果拒绝是由于条件或必选信元出现故障或丢失，则该信元必须包含一个必选信元类型。
 ##### F-SEID 
+
 IE|说明
 ---|---
 F-SEID|该IE中以下标志位在第5个字节中进行编码：bit1，v6：如果设置为1，则F-SEID中应该有IPv6地址字段，否则IPv6地址字段不存在。bit2，v4：如果设置为1，则F-SEID中应该有IPv4地址字段，否则IPv4地址字段不存在。bit3-bit8，为备用，保留未用。
 ##### Failed Rule ID 
+
 IE|说明
 ---|---
 Failed Rule ID|该IE指示创建或修改失败的规则，其中Rule ID Type可以为PDR、FAR、QER、BAR。
 ##### User ID 
+
 IE|说明
 ---|---
 User ID|该IE指示用户ID，IE中User ID Type可以为IMSI、IMEI、MSISDN、NAI。
 ##### Trace Information 
+
 IE|说明
 ---|---
 Trace Information|该IE指示用于该PFCP会话的跟踪控制和配置参数。
 ##### Create PDR 
+
 IE|Presence requirement|说明
 ---|---|---
 PDR ID|Mandatory|该IE将在为该PFCP会话配置的所有PDR中唯一标识PDR。
@@ -12144,6 +12300,7 @@ SDF Filter|Optional|如果存在，该IE应识别SDF过滤器，以匹配传入�
 Application ID|Optional|如果存在，该IE应识别传入包的应用ID。
 QFI|Optional|如果存在，该IE应识别QoS流标识符，以匹配传入包。可能会出现多个具有相同IE类型的IE，以提供QFI列表。当存在时，在PDI的创建或修改期间，应提供所有适用的QFI。
 ##### Create FAR 
+
 IE|Presence requirement|说明
 ---|---|---
 FAR ID|Mandatory|该IE必须唯一地标识为该PFCP会话配置的所有FAR中的一个。
@@ -12152,6 +12309,7 @@ Forwarding Parameters|Conditional|当Apply Action请求转发数据包时，该I
 Duplicating Parameters|Conditional|当Apply Action请求报文被复制时，该IE应该出现。当Apply Action请求复制的报文时，该IE应包含用户面网元对需要复制的流量所应用的转发指令。
 BAR ID|Optional|当应用程序请求缓存的数据包时，该IE应包含定义缓存指令的条的BAR ID。
 ##### Create URR 
+
 IE|Presence requirement|说明
 ---|---|---
 URR ID|Mandatory|该IE将在为该PFCP会话配置的所有URR中唯一标识URR。
@@ -12182,6 +12340,7 @@ FAR ID for Quota Action|Conditional|如果在URR中开通了流量配额IE和/�
 Ethernet Inactivity Timer|Conditional|如果使用以太网流量上报，并且SMF请求UP功能，同时上报非活动UE MAC地址，则该IE应该出现。当出现时，它将包含以太网不活动周期的持续时间。
 Additional Monitoring Time|Optional|当出现时，该IE应包含用户面网元应重新应用在IE中发放的流量或时间或事件阈值/配额的时间。
 ##### Create QER 
+
 IE|Presence requirement|说明
 ---|---|---
 QER ID|Mandatory|该IE将在为该PFCP会话配置的所有QER中唯一标识QER。
@@ -12196,17 +12355,20 @@ Reflective QoS|Conditional|如果需要用户面网元插入一个反射QoS标�
 Paging Policy Indicator|Conditional|如果需要UPF在出局报文中设置寻呼策略指示 ，则应出现该IE。当出现时，应设置为要设置的PPI值。
 Averaging Window|Optional|如果需要用户面网元使用不同于默认的平均窗口，则可能存在此IE。
 ##### Create BAR 
+
 IE|Presence requirement|说明
 ---|---|---
 BAR ID|Mandatory|该IE将唯一标识为PFCP会话提供的BAR。
 Downlink Data Notification Delay|Conditional|如果用户面网元指示支持下行数据通知延迟参数，并且用户面网元必须延迟向控制面网元通知下行数据包到达，则该IE应出现。当应用动作参数请求缓存报文并通知控制面网元时，应包含延迟用户面网元在接收下行数据包和通知控制面网元之间的延迟。
 Suggested Buffering Packets Count|Conditional|如果用户面网元指示支持该特性UDBC，则该IE可能出现。当应用动作参数请求缓存报文时，应包含建议缓存的报文个数，超过限制的报文将被丢弃。
 ##### Created PDR 
+
 IE|Presence requirement|说明
 ---|---|---
 PDR ID|Mandatory|PDR的标识。
 Local F-TEID|Conditional|如果用户面网元分配了F-TEID，则该IE应该存在，并且应该包含用于本PDR的本地F-TEID。
 ##### Update PDR 
+
 IE|Presence requirement|说明
 ---|---|---
 PDR ID|Mandatory|该IE将在为该PFCP会话配置的所有PDR中唯一标识PDR。
@@ -12219,6 +12381,7 @@ QER ID|Conditional|如果要应用QoS强制动作或不再应用于匹配该PDR�
 Activate Predefined Rules|Conditional|如果需要为PDR激活新的预定义规则，则该IE应出现。当呈现该IE时，该IE应包含一个预定义规则名称。可能存在多个具有相同IE类型的IE来表示多个“激活预定义规则”名称。
 Deactivate Predefined Rules|Conditional|如果需要为PDR去激活预定义规则，则该IE应该存在。当呈现该IE时，该IE应包含一个预定义规则名称。可能存在多个具有相同IE类型的IE来表示多个“激活预定义规则”名称。
 ##### Update FAR 
+
 IE|Presence requirement|说明
 ---|---|---
 FAR ID|Mandatory|该IE应标识要更新的FAR。
@@ -12227,6 +12390,7 @@ Update Forwarding parameters|Conditional|如果改变，该IE将会出现。
 Update Duplicating Parameters|Conditional|如果改变，该IE将会出现。可能存在多个IE类型相同的IE，请求将数据包复制到不同的目的地。
 BAR ID|Conditional|如果需要修改与FAR相关的BAR ID，则该IE将出现。
 ##### Update URR 
+
 IE|Presence requirement|说明
 ---|---|---
 URR ID|Mandatory|该IE将在为该PFCP会话配置的所有URR中唯一标识URR。
@@ -12257,6 +12421,7 @@ FAR ID for Quota Action|Conditional|如果需要修改FAR ID for Quota Action，
 Ethernet Inactivity Timer|Conditional|如果需要修改Ethernet Inactivity Timer，则该信元应该存在。当出现时，它将包含以太网不活动周期的持续时间。
 Additional Monitoring Time|Optional|如果需要修改Additional Monitoring Time，则该信元应该存在。当出现时，该IE应包含用户面网元应重新应用在IE中发放的流量或时间或事件阈值/配额的时间。
 ##### Update QER 
+
 IE|Presence requirement|说明
 ---|---|---
 QER ID|Mandatory|该IE将在为该PFCP会话配置的所有QER中唯一标识QER。
@@ -12271,40 +12436,49 @@ Reflective QoS|Conditional|如果需要修改，该IE将会出现。
 Paging Policy Indicator|Conditional|如果需要修改，该IE将会出现。
 Averaging Window|Optional|如果需要用户面网元修改使用的平均窗口，则可能存在此IE。
 ##### Update BAR 
+
 IE|Presence requirement|说明
 ---|---|---
 BAR ID|Mandatory|该IE应标识要修改的BAR。
 Downlink Data Notification Delay|Conditional|如果用户面网元指示支持下行数据通知延迟参数，并且需要修改下行数据通知延迟，则该IE应出现。当应用动作参数请求缓存报文并通知控制面网元时，应包含延迟用户面网元在接收下行数据包和通知控制面网元之间的延迟。
 Suggested Buffering Packets Count|Conditional|如果用户面网元指示支持该特性UDBC，则该IE可能出现。当应用动作参数请求缓存报文时，应包含建议缓存的报文个数，超过限制的报文将被丢弃
 ##### Remove PDR 
+
 IE|Presence requirement|说明
 ---|---|---
 PDR ID|Mandatory|该IE将在为该PFCP会话配置的所有PDR中唯一标识PDR。
 ##### Remove FAR 
+
 IE|Presence requirement|说明
 ---|---|---
 FAR ID|Mandatory|该IE将在为该PFCP会话配置的所有FAR中唯一标识FAR。
 ##### Remove URR 
+
 IE|Presence requirement|说明
 ---|---|---
 URR ID|Mandatory|该IE将在为该PFCP会话配置的所有URR中唯一标识URR。
 ##### Remove QER 
+
 IE|Presence requirement|说明
 ---|---|---
 QER ID|Mandatory|该IE将在为该PFCP会话配置的所有QER中唯一标识QER。
 ##### Remove BAR 
+
 IE|Presence requirement|说明
 ---|---|---
 BAR ID|Mandatory|该IE将在为该PFCP会话配置的所有BAR中唯一标识BAR。
 ##### Query URR 
+
 IE|Presence requirement|说明
 ---|---|---
 URR ID|Mandatory|该IE应标识查询的URR。
 ##### Query URR Reference 
+
 IE|说明
 ---|---
 Query URR Reference|该IE包含对URR的查询请求的引用。
 ##### Create Traffic Endpoint 
+
 IE|Presence requirement|说明
 ---|---|---
 Traffic Endpoint ID|Mandatory|该IE将唯一标识该会话的流量端点。
@@ -12316,11 +12490,13 @@ Framed-Route|Optional|如果UPF指示支持Framed-Route，则该IE可能出现�
 Framed-Routing|Optional|如果UPF指示支持Framed-Routing，则该IE可能出现在下行PDR中。如果存在，该IE应描述与成帧路由关联的成帧路由。
 Framed-IPv6-Route|Optional|如果UPF指示支持Framed-Routing，则该IE可能出现在下行PDR中。如果存在，该IE应描述一个成帧的IPv6路由。可能会有几个IE类型相同的IE来提供IPv6路由帧的列表。
 ##### Created Traffic Endpoint 
+
 IE|Presence requirement|说明
 ---|---|---
 Traffic Endpoint ID|Mandatory|该IE将唯一标识该会话的流量端点。
 Local F-TEID|Conditional|如果用户面网元分配了F-TEID，则该IE应该存在，并且应该包含用于此流量端点的本地F-TEID
 ##### Update Traffic Endpoint 
+
 IE|Presence requirement|说明
 ---|---|---
 Traffic Endpoint ID|Mandatory|该IE将唯一标识该会话的流量端点。
@@ -12331,14 +12507,17 @@ Framed-Route|Conditional|如果UPF指示支持Framed-Route且需要更改，则�
 Framed-Routing|Conditional|如果UPF指示支持Framed-Routing且需要更改，则该IE可能出现在下行PDR中。如果存在，该IE应描述与成帧路由关联的成帧路由。
 Framed-IPv6-Route|Conditional|如果UPF指示支持Framed-Routing且需要更改，则该IE可能出现在下行PDR中。如果存在，该IE应描述一个成帧的IPv6路由。可能会有几个IE类型相同的IE来提供IPv6路由帧的列表。
 ##### Remove Traffic Endpoint 
+
 IE|Presence requirement|说明
 ---|---|---
 Traffic Endpoint ID|Mandatory|该IE应标识要删除的流量端点。
 ##### Additional Usage Reports Information 
+
 IE|说明
 ---|---
 Additional Usage Reports Information|该IE要么指示后续有additional usage reports ，要么包含在用以响应PFCP会话修改请求查询URR附加的PFCP会话报告请求消息中需要发送的使用报告的数量。
 ##### Overload Control Information 
+
 IE|Presence requirement|说明
 ---|---|---
 Overload Control Sequence Number|Mandatory|过载控制序列号包含了与过载控制信息信元关联的序列号。
@@ -12346,19 +12525,23 @@ Overload Reduction Metric|Mandatory|减负荷指标的取值范围为0~100（包
 Period of Validity|Mandatory|有效期是指OCI信元指定的过载条件被认为是有效的时间长度（除非后续新的过载控制信息覆盖）。
 Overload Control Information Flags|Conditional|如果该IE中的任何一个标志置位，则必须包含该IE。
 ##### Load Control Information 
+
 IE|Presence requirement|说明
 ---|---|---
 Load Control Sequence Number|Mandatory|该IE指示包含一个值，该值指示与LCI关联的序列号。该序列号应用于区分同一个用户面网元在两不同实例中生成的两LCI信元。
 Load Metric|Mandatory|该IE应指示源节点的当前负载水平。
 ##### PFCPSMReq-Flags 
+
 IE|说明
 ---|---
 PFCPSMReq-Flags|该信元表示适用PFCP会话修改请求消息的标志。包括：DROBU (Drop Buffered Packets)SNDEM (Send End Marker Packets)QAURR (Query All URRs)等。
 ##### Error Indication Report 
+
 IE|Presence requirement|说明
 ---|---|---
 Remote F-TEID|Mandatory|该IE应标识在用户面网元接收到错误指示的GTP-U承载的远端F-TEID。可以包括多个具有这种类型的IE来表示多个远端F-TEID，该远端F-TEID已经接收到错误指示。
 ##### Usage Report（within PFCP Session Modification Response） 
+
 IE|Presence requirement|说明
 ---|---|---
 URR ID|Mandatory|该IE应标识上报使用的URR。
@@ -12374,6 +12557,7 @@ Usage Information|Conditional|如果用户面网元在监控时间前后上报�
 Query URR Reference|Conditional|如果在PFCP会话修改请求中接收到的该使用报告（作为查询URR的结果），并且在PFCP会话修改请求中出现了查询URR参考IE，则该IE应该出现。当出现时，应设置为在PFCP会话修改请求中接收到的查询URR参考值。
 Ethernet Traffic Information|Conditional|如果需要上报以太网流量信息，则该IE应出现。
 ##### Usage Report（within PFCP Session Deletion Response） 
+
 IE|Presence requirement|说明
 ---|---|---
 URR ID|Mandatory|该IE应标识上报使用的URR。
@@ -12388,6 +12572,7 @@ Time of Last Packet|Conditional|如果适用此URR，该IE将会出现。
 Usage Information|Conditional|如果用户面网元在监控时间前后上报使用报告，或者QoS执行前后上报使用报告，则应显示该IE，当出现该IE时，应指示该使用是否在该监控时间之前或之后，或在QoS执行前或之后。
 Ethernet Traffic Information|Conditional|如果需要上报以太网流量信息，则该IE应出现。
 ##### Usage Report（within PFCP Session Report Request） 
+
 IE|Presence requirement|说明
 ---|---|---
 URR ID|Mandatory|该IE应标识上报使用的URR。
@@ -12408,24 +12593,28 @@ Query URR Reference|Conditional|如果在PFCP会话修改请求中接收到的�
 Event Time Stamp|Conditional|如果报告与事件有关，则该IE应出现。当出现时，应设置为事件发生的时间。可能存在多个IE类型相同的IE，以上报该URR标识的多个事件。
 Ethernet Traffic Information|Conditional|如果需要上报以太网流量信息，则该IE应出现。
 ##### Downlink Data Report 
+
 IE|Presence requirement|说明
 ---|---|---
 PDR ID|Mandatory|该IE应标识在用户面网元接收到下行数据包的PDR。可以包含多个具有这种类型的IE来表示接收到下行数据包的多个PDR。
 Downlink Data Service Information|Conditional|对于具有IP PDN类型的PFCP会话，如果用户面网元支持寻呼策略差异化特性，则必须包含该IE。对于每个PDR，对于每一个触发下行数据通知的报文，用户面网元应该将来自PGW的GTP-U报文的IP载荷中接收的信息内TOS (IPv4) 或TC (IPv6) 中的DSCP值复制到该IE中的Paging策略指示值中。对于5GC，如果下行数据包的QFI可用，针对每个PDR和触发下行数据通知的每个数据包，应该将此IE也应包含在N4接口消息中。消息中上报的PDR标识必须包含一个该类型的IE，当消息中有多个PDR标识IE时，下行数据业务信息信元按照PDR标识信元的顺序上报。
 ##### Report Type 
+
 IE|说明
 ---|---
 Report Type|用户面网元发送给控制面的报告类。其取值可以为：DLDR (Downlink Data Report)USAR (Usage Report)ERIR (Error Indication Report)UPIR (User Plane Inactivity Report)等。
 ##### 3GPP Interface Type 
+
 IE|说明
 ---|---
 3GPP Interface Type|3GPP Interface Type IE在PDR信元中的用于指示源接口的3GPP接口类型，在FAR信元中的用于指示目标接口的3GPP接口类型。3GPP Interface Type IE的取值范围及含义为：0：S1-U1：S5 /S8-U2：S4-U3：S11-U4：S12-U5：Gn/Gp-U6：S2a-U7：S2b-U8：eNodeB GTP-U interface for DL data forwarding9：eNodeB GTP-U interface for UL data forwarding10：SGW/UPF GTP-U interface for DL data forwarding11：N3 3GPP Access12：N3 Trusted Non-3GPP Access13：N3 Untrusted Non-3GPP Access14：N3 for data forwarding15：N916：SGi17：N618：N1919 to 64：备用
 ### N9接口 
 #### N9接口协议简介 
-场景描述 :N9接口为UPF和UPF之间的用户面接口，用于传递UPF间的上行、下行用户数据流。
-协议栈 :N9接口采用GTPv1-U协议，支持3GPP TS 29.281协议。对应的用户面接口协议栈如[图1]所示。
+场景描述 : 
+N9接口为UPF和UPF之间的用户面接口，用于传递UPF间的上行、下行用户数据流。
+协议栈 : 
+N9接口采用GTPv1-U协议，支持3GPP TS 29.281协议。对应的用户面接口协议栈如[图1]所示。
 图1  N9接口协议栈
-
 ##### 消息列表 
 N9接口上支持的消息参见下表。 
 消息|方向|作用
@@ -12437,74 +12626,91 @@ Error Indication|UPF<->UPF|当GTP-U节点收到G-PDU数据包，但是找不到�
 End Marker|UPF<->UPF|End Marker消息是End Marker Indication的响应消息，在收到End Marker Indication消息之后，会回复End Marker消息。在5GC网络中，通过数据转发隧道发送的End Marker报文，应该与PDU Session Container扩展头一起发送，其中包括映射到同一个E-RAB的其中一个QoS流的流标识。数据转发隧道用于在5GS和EPS之间进行数据转发。
 #### 相关消息解释 
 ##### Echo Request 
-消息功能 :GTP-U的一端可以在路径上向另一端发送Echo Request消息来检测对端是否正常。
+消息功能 : 
+GTP-U的一端可以在路径上向另一端发送Echo Request消息来检测对端是否正常。
 Echo Request消息可以在每一条正在使用的路径上发送。如果一条路径被至少一个PDP上下文、EPS承载、PDU会话、MBMS UE上下文，或者MBMS承载上下文用于GTP-U端点，则认为该路径正在被使用。
 Echo Request消息的发送时间和发送频率取决于产品具体实现，但每条路径上发送Echo Request消息的时间间隔不能低于60秒。但是这种时间限制有一个例外场景，如果T3-RESPONSE定时器超时，Echo Request仍可以不断重发。 
 如果路径没有在使用，GTP-U一端也会时刻准备接收Echo Request消息，并回复Echo Response消息。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ##### Echo Response 
-消息功能 :Echo Response消息是作为接收到的Echo Request消息的响应消息。 
+消息功能 : 
+Echo Response消息是作为接收到的Echo Request消息的响应消息。 
 Recovery信元中的Restart Counter值不使用。发送方应将该值置为0，接收方应忽略该值。 
 由于兼容性原因，Recovery信元是必选的。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Recovery|Mandatory|该信元为必选信元，Recovery信元中的Restart Counter（重启计数器）值不使用，应该由发送实体设置为0，接收实体忽略该值。由于兼容性原因，该信元在GTP用户面使用。
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ##### Supported Extension Headers Notification 
-消息功能 :该消息指示指定IP地址上的GTP实体能够支持的扩展头列表。
+消息功能 : 
+该消息指示指定IP地址上的GTP实体能够支持的扩展头列表。
 只有当GTP实体需要解析必选的扩展头，但该GTP实体尚未被升级以支持扩展头时，才发送该消息。 
 发送此消息的GTP端点被标记为不支持某些扩展头（源自支持的扩展头列表）。对端GTP实体可能会重试使用该节点的所有扩展头，试图验证它是否已经被升级。如果本端GTP实体已经指示某些扩展头无法被解析，对端GTP实体应避免重复尝试使用这些未知扩展头。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Extension Header Type List|Mandatory|该信元为必选信元。该信元包含“n”扩展头类型的列表。Length字段设置为包含的扩展头类型个数。
 ##### Error Indication 
-消息功能 :当GTP-U节点收到一个没有EPS承载上下文、PDP上下文、PDU会话、MBMS承载上下文或RAB的G-PDU数据包时，GTP-U节点将丢弃该G-PDU数据包。同时当收到的G-PDU数据包携带的TEID不是全0，则会回复Error Indication。
+消息功能 : 
+当GTP-U节点收到一个没有EPS承载上下文、PDP上下文、PDU会话、MBMS承载上下文或RAB的G-PDU数据包时，GTP-U节点将丢弃该G-PDU数据包。同时当收到的G-PDU数据包携带的TEID不是全0，则会回复Error Indication。
 GTP实体包括“UDP Port”扩展头（0x40类型），以简化在某些场景下能够降低DoS攻击风险的机制的实现。
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Tunnel Endpoint Identifier Data I|Mandatory|该信元为必选信元，该信元包含GTP实体在用户面使用的隧道端点标识。信元值是从触发此过程的G-PDU中获取的TEID。
 GTP-U Peer Address|Mandatory|该信元为必选信元，该信元包含GTP实体在用户面使用的隧道端点地址。信元值是从触发此过程的G-PDU中获取的目的地址。
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ##### End Marker 
-消息功能 :最后一个G-PDU在GTP-U隧道上发送之后，或者收到End Marker Indication之后，会发送End Marker消息。 
+消息功能 : 
+最后一个G-PDU在GTP-U隧道上发送之后，或者收到End Marker Indication之后，会发送End Marker消息。 
 在5GC网络中，通过数据转发隧道发送的End Marker报文，应该与PDU Session Container扩展头一起发送，其中包括映射到同一个E-RAB的其中一个QoS流的流标识。
 数据转发隧道用于在5GS和EPS之间进行数据转发。
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Private Extension|Optional|该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 #### 相关信元解释 
 ##### Information Element Types 
+
 IE|说明
 ---|---
 Information Element Types|GTP-U信令消息中包含多个信元。GTP信元采用TLV(Type， Length，Value)或TV(Type， Value)编码格式。在信令消息中，信元按照Type字段升序排列。Length字段包含除了Type+Length字段的长度。对于所有Length字段，最低编号octet的第8位为最高位，最高编号octet的第1位为最低位。
 ##### Recovery 
+
 IE|说明
 ---|---
 Recovery|重启计数器的值应该由发送实体设置为0，接收实体忽略。由于兼容性原因，该信元在GTP用户面使用。
 ##### Tunnel Endpoint Identifier Data I 
+
 IE|说明
 ---|---
 Tunnel Endpoint Identifier Data I|该信元包含GTP实体在用户面使用的隧道端点标识。
 ##### GTP-U Peer Address 
+
 IE|说明
 ---|---
 GTP-U Peer Address|该信元包含GTP实体在用户面使用的隧道端点地址。
 ##### Extension Header Type List 
+
 IE|说明
 ---|---
 Extension Header Type List|该信元包含“n”扩展头类型的列表。Length字段设置为包含的扩展头类型个数。
 ##### Private Extension 
+
 IE|说明
 ---|---
 Private Extension|该信元包含厂商的特定信息。扩展标识是在最近的“Assigned Numbers”RFC（RFC 1700及以上版本）中的私有企业号码列表中定义的一个值。该信元为可选信元，可以在任何GTP信令消息中携带。信令消息中可以携带多个Private Extension类型的信元。
 ### N26接口 
 #### N26接口协议简介 
-场景描述 :N26接口为MME和AMF间的信令面接口。 
-协议栈 :N26接口协议栈如[图1]所示。
+场景描述 : 
+N26接口为MME和AMF间的信令面接口。 
+协议栈 : 
+N26接口协议栈如[图1]所示。
 图1  N26接口协议栈
-
 ##### 消息列表 
 N26接口上支持的消息参见下表。 
 消息|方向|作用
@@ -12521,27 +12727,33 @@ Relocation Cancel Request|MME→AMFAMF→MME|在EPS和5GS切换取消过程中�
 Relocation Cancel Response|MME→AMFAMF→MME|在EPS和5GS切换取消过程中，目标侧MME或AMF应当发送该消息用以响应之前的Relocation Cancel Response消息。
 #### 相关消息解释 
 ##### Identification Request 
-消息功能 :在附着流程中，如果UE用临时标识来标识自身，并且该临时标识为5G临时标识映射得到，则目标MME将通过N26接口向AMF发送该消息，用于请求UE IMSI信息。 
+消息功能 : 
+在附着流程中，如果UE用临时标识来标识自身，并且该临时标识为5G临时标识映射得到，则目标MME将通过N26接口向AMF发送该消息，用于请求UE IMSI信息。 
  说明： 
 识别请求消息仅可由MME通过N26接口发送给AMF，但不能从AMF发送到MME。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 GUTI|Conditional|全球唯一临时标识。目标侧MME在N26接口携带此信元，当源侧为AMF时，该信元为从4G GUTI映射而来的5G GUTI。信元解释参见GUTI。
 Complete Attach Request Message|Conditional|完整的附着请求信息。目标侧MME在N26接口携带此信元，源侧AMF用于完整性检查。信元解释参见Complete Request Message。
 Target PLMN ID|Conditional Optional|目标PLMN标识。如果可以，将在N26接口携带此信元，目的是允许源侧AMF判断是否分配一个未使用的鉴权向量。信元解释参见Serving Network。
 ##### Identification Response 
-消息功能 :附着流程中，AMF将通过N26接口发送此消息给目标MME以回复之前发送过来的Identification Request消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+附着流程中，AMF将通过N26接口发送此消息给目标MME以回复之前发送过来的Identification Request消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|原因值，源侧AMF向目标侧MME返回原因值进行解释。信元解释参见Cause。
 IMSI|Conditional|用户IMSI号码，当Cause值为“Request accepted”时携带。信元解释参见IMSI。
 UE Usage Type|Conditional Optional|若AMF从UDM收到该信元，该信元需要设置为签约的UE使用类型，并由源侧AMF通过N26接口发送给MME。若AMF无可用的UE使用类型，则该信元的长字段置为0。信元解释参见Integer Number。
 ##### Context Request 
-消息功能 :目标侧的MME在EPS和5GS重选流程中通过N26接口向源侧AMF发送该消息，用于获取UE的MM和EPS承载上下文。 
+消息功能 : 
+目标侧的MME在EPS和5GS重选流程中通过N26接口向源侧AMF发送该消息，用于获取UE的MM和EPS承载上下文。 
 目标侧的AMF在5GS和EPS重选流程中通过N26接口向源侧MME发送该消息，用于获取UE的MM和EPS承载上下文。 
  说明： 
 上下文请求消息也可由目标侧AMF在EPS和5GS重选流程中通过N26接口发送给源侧MME，或者由目标侧MME在5GS和EPS重选流程中通过N26接口发送给源侧AMF。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 IMSI|Conditional|国际移动用户标识，唯一标识一个用户。若目标AMF或MME对UE鉴权成功，则必须携带该字段。信元解释参见IMSI。
 GUTI|Conditional|全球唯一临时标识。目标侧MME在N26接口携带此信元。当源侧为AMF时，该信元为从5G GUTI映射而来的4G GUTI。当源侧为MME时，该信元为从4G GUTI映射而来的5G GUTI。信元解释参见GUTI。
@@ -12550,8 +12762,10 @@ N26 Address and TEID for Control Plane|Conditional|N26接口的控制面地址�
 RAT Type|Conditional|无线接入类型。指示新侧系统使用的无线接入技术。信元解释参见RAT Type。
 Target PLMN ID|Conditional Optional|目标PLMN标识。信元解释参见Serving Network。
 ##### Context Response 
-消息功能 :在EPS和5GS重选流程中，源侧的MME或AMF发送该消息用于响应之前的Context Request消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+在EPS和5GS重选流程中，源侧的MME或AMF发送该消息用于响应之前的Context Request消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|原因值，源侧向目标侧指示请求处理结果。信元解释参见Cause。
 IMSI|Conditional|国际移动用户标识，唯一标识一个用户。如果用户为无卡用户，则不携带该字段。信元解释参见IMSI。
@@ -12588,16 +12802,20 @@ SGW S1/S4/S12 IP Address and TEID for user plane|Mandatory|S-GW的S1/S4/S12接�
 PGW S5/S8 IP Address and TEID for user plane|Conditional|P-GW的S5/S8接口用户面IP地址和TEID。基于S5/S8的GTP隧道需要携带此信元。信元解释参见Fully Qualified TEID (F-TEID)。
 Bearer Level QoS|Mandatory|承载级QoS。信元解释参见Bearer Quality of Service (Bearer QoS)。
 ##### Context Acknowledge 
-消息功能 :当之前的Context Response消息被接收且原因值为acceptance时，目标侧MME或AMF发送Context Acknowledge消息，用以响应之前的Context Response消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+当之前的Context Response消息被接收且原因值为acceptance时，目标侧MME或AMF发送Context Acknowledge消息，用以响应之前的Context Response消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|原因值。信元解释参见Cause。
 Indication flags|Conditional|标志位。如果任意一个应用标志设置为1，则该信元需要被携带。Applicable Flags are：SGWCI: SGW修改标记（SGW change indication），通过N26进行EPS和5GS之间空闲态移动时，该标记应由目标侧AMF或MME设置为1。信元解释参见Indication。
 ##### Forward Relocation Request 
-消息功能 :在EPS和5GS相互切换过程中，源侧MME通过N26接口发送该消息给目标侧AMF，或者源侧AMF通过N26接口发送该消息给目标侧MME，作为切换过程中重定位流程的一部分。 
+消息功能 : 
+在EPS和5GS相互切换过程中，源侧MME通过N26接口发送该消息给目标侧AMF，或者源侧AMF通过N26接口发送该消息给目标侧MME，作为切换过程中重定位流程的一部分。 
  说明： 
 重定位请求消息也可由源侧AMF通过N26接口发送给目标侧MME。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 IMSI|Conditional|国际移动用户标识，唯一标识一个用户。信元解释参见IMSI。
 Sender's F-TEID for Control Plane|Mandatory|发送侧控制面F-TEID。该信元描述了发送侧MME/AMF选择的控制面TEID。信元解释参见Fully Qualified TEID (F-TEID)。
@@ -12635,8 +12853,10 @@ SGW S1/S4/S12 IP Address and TEID for user plane|Mandatory|S-GW的S1/S4/S12接�
 PGW S5/S8 IP Address and TEID for user plane|Conditional|P-GW的S5/S8接口用户面IP地址和TEID。基于S5/S8的GTP隧道需要携带此信元。信元解释参见Fully Qualified TEID (F-TEID)。
 Bearer Level QoS|Mandatory|承载级QoS。信元解释参见Bearer Quality of Service (Bearer QoS)。
 ##### Forward Relocation Response 
-消息功能 :在EPS和5GS切换过程中，目标侧MME或AMF应当发送该消息用以响应之前的Forward Relocation Request消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+在EPS和5GS切换过程中，目标侧MME或AMF应当发送该消息用以响应之前的Forward Relocation Request消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|原因值。信元解释参见Cause。
 Sender's F-TEID for Control Plane|Conditional|发送侧控制面F-TEID。该信元描述了发送侧MME/AMF选择的控制面TEID。如果Cause信元包含值“Request accepted”，则发送侧MME/AMF需要在Forward Relocation Response消息中携带此信元。信元解释参见Fully Qualified TEID (F-TEID)。
@@ -12650,42 +12870,54 @@ EPS Bearer ID|Conditional|EPS承载标识。如果消息用于S1-Based handover�
 eNodeB F-TEID for DL data forwarding|Conditional|eNodeB下行数据转发的F-TEID。如果S1AP的消息HANDOVER REQUEST ACKNOWLEDGE中的“SAE Bearers Admitted List”携带DL Transport Layer Address和DL GTP TEID，且应用直接转发和SGW不变的间接转发，则目标MME发送该消息中携带此信元。信元解释参见Fully Qualified TEID (F-TEID)。
 SGW/UPF F-TEID for DL data forwarding|Conditional Optional|S-GW/UPF下行数据转发的F-TEID。在LTE和5GC网络的切换过程中，携带此信元，用于间接数据转发。信元解释参见Fully Qualified TEID (F-TEID)。
 ##### Forward Relocation Complete Notification 
-消息功能 :在EPS和5GS切换过程中，目标侧MME通过N26接口发送该消息给源侧AMF用于指示切换已完成。 
+消息功能 : 
+在EPS和5GS切换过程中，目标侧MME通过N26接口发送该消息给源侧AMF用于指示切换已完成。 
  说明： 
 重定位完成通知消息也可由目标侧AMF通过N26接口发送给源侧MME。 
 ##### Forward Relocation Complete Acknowledge 
-消息功能 :在EPS和5GS切换过程中，源侧MME或AMF应当发送该消息用以响应之前的Forward Relocation Complete Notification消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+在EPS和5GS切换过程中，源侧MME或AMF应当发送该消息用以响应之前的Forward Relocation Complete Notification消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|原因值。信元解释参见Cause。
 Recovery|Optional|恢复值。如果是首次与对端节点联络，则需要携带该信元。信元解释参见Recovery。
 ##### Relocation Cancel Request 
-消息功能 :在EPS和5GS切换取消过程中，源侧MME通过N26接口发送该消息给目标侧AMF用于取消切换。 
+消息功能 : 
+在EPS和5GS切换取消过程中，源侧MME通过N26接口发送该消息给目标侧AMF用于取消切换。 
  说明： 
 重定位取消请求消息也可由源侧AMF通过N26接口发送给目标侧MME。 
-相关信元 :IE|Presence requirement|简要说明
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 IMSI|Conditional|国际移动用户标识，唯一标识一个用户。如果UE是紧急连接但是IMSI未经过身份验证，则IMSI应该包含于消息中但不用作身份标识。如果UE是紧急连接且UE是UICCless，则IMSI不包含在消息中。信元解释参见IMSI。
 ME Identity (MEI)|Conditional|ME身份（MEI）。在以下情况下，ME身份（MEI）应当包含于本信息中：如果UE是紧急连接但是IMSI未经过身份验证。如果UE是紧急连接且UE是UICCless。信元解释参见ME Identity (MEI)。
 Indication Flags|Conditional Optional|标记位。如果任意一个应用标志设置为1，则该信元需要被携带。如果UE是紧急连接且IMSI未经过身份验证，则Unauthenticated IMSI标志位应设置为1。信元解释参见Indication。
 ##### Relocation Cancel Response 
-消息功能 :在EPS和5GS切换取消过程中，目标侧MME或AMF应当发送该消息用以响应之前的Relocation Cancel Request消息。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+在EPS和5GS切换取消过程中，目标侧MME或AMF应当发送该消息用以响应之前的Relocation Cancel Request消息。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 Cause|Mandatory|原因值。信元解释参见Cause。
 #### 相关信元解释 
-GUTI :IE|说明
+GUTI : 
+
+IE|说明
 ---|---
 GUTI|如果管理员决定在MNC只包含两个数字，则字节6比特位5到8编码为“1111”。
 ##### Complete Request Message 
+
 IE|说明
 ---|---
 Complete Request Message|该信元中Complete Request Message Type取值表示该信元的类型，其取值和意义如下：0，Complete Attach Request Message1，Complete TAU Request Message2-255，备用
 ##### Serving Network 
+
 IE|说明
 ---|---
 Serving Network|该信元包含MME提供的服务网络。
 ##### Cause 
+
 IE|说明
 ---|---
 Cause|Cause在响应信息中被携带，指示接受或者拒绝对应的请求信息。其指示的具体拒绝原因，详见表2。Cause也可以在请求信息中被携带，指示请求原因，详见表2。针对该信元中cs、pce、bce信元说明如下：cs：Cause Source。如果该比特为1，指示对应的错误原因源于远程节点（即MME到PGW，或者PGW到MME）。如果该比特为0，指示对应的错误原因源于发送消息的节点。当SGW中转一个从MME到PGW或者从PGW到MME的响应消息时，SGW需要设置cs为1。对于S5/S8的PMIP，当SGW中转一个从PGW到MME的响应消息时，SGW需要携带PMIP原因，并设置cs比特位为1。pce：PDN Connection IE Error。如果该比特为1，指示对应的拒绝原因是由于PDN Connection信元中的错误。bce: Bearer Context IE Error。 如果该比特为1，指示对应的拒绝原因是由于Bearer Context信元中的错误。
@@ -12760,18 +12992,23 @@ Rejection Response|64|Context Not Found
 113|Rejection Response|Apn Congestion
 112 and 114 to 219|Rejection Response|备用，该范围为拒绝响应消息中Cause值保留。
 220 to 255|Rejection Response|3GPP TS 29.275定义的3GPP Specific PMIPv6 Error Code的保留值
-IMSI :IE|说明
+IMSI : 
+
+IE|说明
 ---|---
 IMSI|IMSI通过GTP隧道传输，发送方复制IMSI的值部分到IMSI信元的值域中。IMSI由三部分组成：Mobile Country Code (MCC)包含3个数字。MCC唯一标识移动用户的居住国家。Mobile Network Code (MNC)包含2个或3个数字用于GSM/UMTS应用。MNC标识移动用户的归属PLMN。MNC的长度取决于MCC的值。不推荐单个MCC区内两个和三个数字混合编码的MNC。Mobile Subscriber Identification Number (MSIN)标识PLMN内的移动用户。
 ##### Integer Number 
+
 IE|说明
 ---|---
 Integer Number|信元Integer Number的值是由定义在长度字段中的octet个数编码的。例如，当长度字段n等于2时，该信元值的值域是0~65535。信元Integer Number的值需要通过以下信元编码：Maximum Wait Time IE: 长度应设置为2。比如，信元Integer Number的值应编码为一个无符号的16比特整数。DL Buffering Suggested Packet Count IE: 长度应设置为1或2。UE Usage Type IE:长度应设置为1。比如，信元Integer Number的值应编码为一个无符号的8比特整数。
 ##### Trace Information 
+
 IE|说明
 ---|---
 Trace Information|Trace Information为grouped信元，包含许多其它信元。Trace Information可能在一个消息中重复完全相同的类型和实例值，来表示Trace Informations列表。
 ##### Fully Qualified TEID (F-TEID) 
+
 IE|说明
 ---|---
 Fully Qualified TEID (F-TEID)|完全认证的TEID。Interface Type：这5个比特位宽整数取值如下，代表接口类型和端点。0:	S1-U eNodeB GTP-U interface1:	S1-U SGW GTP-U interface2:	S12 RNC GTP-U interface3:	S12 SGW GTP-U interface4:	S5/S8 SGW GTP-U interface5:	S5/S8 PGW GTP-U interface6:	S5/S8 SGW GTP-C interface7:	S5/S8 PGW GTP-C interface8:	S5/S8 SGW PMIPv6 interface9:	S5/S8 PGW PMIPv6 interface10:	S11 MME GTP-C interface11:	S11/S4 SGW GTP-C interface12:	S10 MME GTP-C interface13:	S3 MME GTP-C interface14:	S3 SGSN GTP-C interface15:	S4 SGSN GTP-U interface16:	S4 SGW GTP-U interface17:	S4 SGSN GTP-C interface18:	S16 SGSN GTP-C interface19:	eNodeB GTP-U interface for DL data forwarding20:	eNodeB GTP-U interface for UL data forwarding21:	RNC GTP-U interface for data forwarding22:	SGSN GTP-U interface for data forwarding23:	SGW GTP-U interface for DL data forwarding24:	Sm MBMS GW GTP-C interface25:	Sn MBMS GW GTP-C interface26:	Sm MME GTP-C interface27:	Sn SGSN GTP-C interface28: SGW GTP-U interface for UL data forwarding29: Sn SGSN GTP-U interface30: S2b ePDG GTP-C interface31: S2b-U ePDG GTP-U interface32: S2b PGW GTP-C interface33: S2b-U PGW GTP-U interface34: S2a TWAN GTP-U interface35: S2a TWAN GTP-C interface36: S2a PGW GTP-C interface37: S2a PGW GTP-U interface38: S11 MME GTP-U interface39: S11 SGW GTP-U interface其它值空闲保留。
@@ -12780,50 +13017,62 @@ SGW S11/S4 IP Address and TEID for Control Plane|用于标识S-GW控制面S11/S4
 PGW S5/S8 Address for Control Plane or PMIP|用于标识P-GW的控制面或PMIP隧道的S5/S8地址。v4: 如果这个比特设置为1，则IPv4地址字段在F-TEID中出现，否则IPv4地址字段将不出现。v6: 如果这个比特设置为1，则IPv6地址字段在F-TEID中出现，否则IPv6地址字段将不出现。spare: 发送方设置为0，接收方忽略将该字段。teid-or-gre-key:如果IPv4和IPv6地址都出现在F-TEID字段中，则TEID指将被两个地址共用。
 N26 Address and TEID for Control Plane|用于标识MME/AMF的控制面的N26地址。这个信元是N26接口上携带的。相关信元取值解释如下：v4: 如果这个比特设置为1，则IPv4地址字段在F-TEID中出现，否则IPv4地址字段将不出现。v6: 如果这个比特设置为1，则IPv6地址字段在F-TEID中出现，否则IPv6地址字段将不出现。spare: 发送方设置为0，接收方忽略将该字段。teid-or-gre-key:如果IPv4和IPv6地址都出现在F-TEID字段中，则TEID指将被两个地址共用。
 ##### RAT Type 
+
 IE|说明
 ---|---
 RAT Type|RAT Type取值:0: reserved1: UTRAN2: GERAN3: WLAN4: GAN5: HSPA Evolution6: EUTRAN(WB-E-UTRAN)7: Virtual8: EUTRAN-NB-IoT9-255: 保留
 ##### MM Context 
+
 IE|说明
 ---|---
 MM Context|MM Context包含了Mobility Management，在S3/S16/S10/N26接口传输中必须的用户安全参数。
 ##### RFSP Index 
+
 IE|说明
 ---|---
 RFSP Index|Index to RAT/Frequency Selection Priority (RFSP Index)定义在3GPP TS 36.413中的Subscriber Profile ID for RAT/Frequency priority (SPIRFP)。SPIRFP为1到256之间的整数，两个字节。Subscriber Profile ID for RAT/Frequency priority (SPIRFP) 需要用于定义Idle模式camp priorities，控制Active模式inter-RAT/inter-frequency handover。
 ##### PDN Connection 
+
 IE|说明
 ---|---
 PDN Connection|PDN Connection为grouped信元，包含许多其它信元。当需要发送一个以上的PDN Connection，则PDN Connection信元在一个消息中重复。这种情况，重复的信元具有相同的实例值用于代表一个分组归类的信元列表。
 ##### Indication 
+
 IE|说明
 ---|---
 Indication|对于每一个消息的Indication应用标记字段，需要在独立的消息中清晰说明。未按此指示说明的应用标记将被接收端丢弃。如果Indication IE适用于消息但是发送方未携带，则接收方将应用标记视作“0”。Indication Flags为条件信元，任何一个应用标记被设置为1时，需携带此信元。应用标记包括：daf：Dual Address Bearer Flag，该标志位用于S11/S4接口和S5/S8接口，当UE请求和签约数据决定的PDN Type设置为IPv4v6，且所有UE可能接入的MME支持双重地址时，该标志位应该设置为1。基于运营商在节点预配置来决定。dtf：Direct Tunnel Flag，该标志位用于S4接口，如果使用Direct Tunnel，则需要设置为1。hi：Handover Indication，如果UE是从non-3GPP接入，该标志位需要在E-UTRAN Initial Attach or in a UE Requested PDN Connectivity流程中设置。dfi：Direct Forwarding Indication，如果该标志位设置为1，指示应用于S1 based handover procedure流程中，源eNodeB与目标eNodeB之间直接转发。oi：Operation Indication。如果该标志位设置为1，则指出接收方SGW收到“Create Session Request”请求，应该向PGW立即发送“Modify Bearer Request”。这样SGW可以区别对待在S4/S11接口收到“Create Session Request”消息是TAU/RAU流程with an SGW relocation (OI = 1)，或者是X2-based handover with SGW relocation (OI = 1)，或者是S1-based handover with SGW relocation (OI = 0)。如果SGW需要转发Delete Session Request消息给PGW，则在S4/S11接口，该标志位需要设置为1。isrsi：Idle mode Signalling Reduction Supported Indication，如果该标志位设置为1，则指示源/旧侧的MME有能力为UE建立ISR。israi：Idle mode Signalling Reduction Activation Indication，如果该标志位设置为1，则指示TAU/RAU without an SGW change procedure或Inter RAT handover without an SGW change流程中，MME和S4 SGSN之间建立ISR。SGW为核心网节点保留其已经保存的承载资源。源/旧侧的MME保留UE上下文和激活的ISR。sgwci：SGW Change Indication，如果该标志位设置为1，则指示在TAU/RAU or handover with an SGW change流程中，目标MME已选择一个新的SGW。sqci：Subscribed QoS Change Indication，如果该标志位设置为1，则指示在旧侧MME中UE处于ECM-IDLE状态且ISR激活时，PDN连接相关的签约QoS profile发生改变。则新侧MME将触发Subscribed QoS Modification流程，见3GPP TS 23.401章节5.3.9.2。uimsi：Unauthenticated IMSI，如果该标志位设置为1，则指示该消息中的IMSI未鉴权，并且用于紧急附着UE。reserved1：保留。cfsi：Change F-TEID support indication，如果该标志位设置为1，则指示SGW可以在当前流程中改变分配的GTP-U F-TEID。在Idle状态的UE发起的TAU/RAU流程中，MME需要在发送给SGW的Modify Bearer Request消息中包含此标志位。如果在Modify Bearer Request消息中收到CFSI且SGW需要修改GTP-U F-TEID，则SGW需要在Modify Bearer Response消息中携带新的F-TEID。crsi：Change Reporting support Indication，用于S4/S11、S5/S8接口，如果该标志位设置为1，则指示MME location Info Change Reporting机制。ps：Piggybacking Supported，该比特指示MME/SGW是否支持3GPP TS 23.401附件F中所述的piggybacking特性。如果该标志位设置为1，则指示节点有能力处理两个背靠背出现在单UDP载荷中的不同的GTPC消息。pt：Protocol Type，如果该标志位设置为1，则指示S5/S8的协议类型为PMIP，如果设置为0则指示S5/S8的协议类型为GTP。si：Scope Indication，如果该标志位设置为1，则指示UE的所有承载资源将被SGW释放。该标志位在TAU/RAU/Handover/SRNS Relocation Cancel Using S4/Inter RAT handover Cancel procedure with SGW change/S1 Based handover Cancel procedure with SGW change流程消息中设置。msv：MS Validated，如果该标志位设置为1，则指示新侧MME已成功鉴权UE。ccrsi：CSG Change Reporting support indication，如果该标志位设置为1，则指示MME支持CSG Information Change Reporting机制。israu：ISR is activated for the UE，如果该标志位设置为1，则指示在UE移动到新侧MME前，UE的ISR被激活。S11TF: S11–U Tunnel Flag，如果用户数据在NAS信令里被传输，则在S11接口，该标志位需要设置为1。Extended PCO Support Indication flag: 如果UE和源MME支持扩展PCO， 则在源MME N26，该标志位需要设置为1。Control Plane Only PDN Connection Indication: 如果PDN Connection设置为Control Plane Only，该标志位需要设置为1。Buffered DL Data Waiting Indication (BDWI):当该标志被请求转发到缓存在旧的SGW上的UE DL数据中，在带或不带SGW变更流程的TAU/RAU期间，该标志位需要在S3/S10/S16接口设置为1。如，当旧的MME上DL数据缓存有效时间还未过期时，需要设置该标志位为1。
 ##### Recovery 
+
 IE|说明
 ---|---
 Recovery|如果与对端首次联络，需要携带该信元。
 ##### Fully Qualified Container (F-Container) 
+
 IE|说明
 ---|---
 Fully Qualified Container (F-Container)|Container Type编码如下：如果这个域设置为1，则F-Container域表示UTRAN transparent container。如果这个域设置为2，则F-Container域表示BSS container。如果这个域设置为3，则F-Container域表示E-UTRAN transparent container。
 ##### Fully Qualified Cause (F-Cause) 
+
 IE|说明
 ---|---
 Fully Qualified Cause (F-Cause)|GTPv2消息中F-Cause信元的Instance值域指示了是否包含RANAP Cause、BSSGP Cause或者RAN Cause。如果F-Cause域包含RAN Cause，则Cause Type域包含RAN cause子类，详见3GPP TS 36.413并按表8.49-1编码。如果F-Cause域包含BSSGP Cause或RANAP Cause，则其Cause Type域将被接收方忽略。Cause Type:0: Radio Network Layer1: Transport Layer2: NAS3: Protocol4: Miscellaneous5 to15: spare
 ##### Bearer Context 
+
 IE|说明
 ---|---
 Bearer Context|Bearer Context是一个组合信元，包含许多其它信元。Bearer Context通过一条消息，完全重复表述了相同类型和实例值的承载上下文列表。
 ##### ME Identity (MEI) 
+
 IE|说明
 ---|---
 Mobile Equipment Identity (MEI)|ME Identity (MEI)包含IMEI或者IMEISV，IMEI/IMEISV均采用BCD编码，其中IMEI是15位BCD编码，IMEISV是16位BCD编码。 对于IMEI，最后八位字节的第5到8位应填充编码为'1111'的结束标记。
 ##### Access Point Name (APN) 
+
 IE|说明
 ---|---
 Access Point Name (APN)|APN通过GTP隧道传输，发送方复制部分APN值到APN信元值域。APN域需要同时填充APN NI和APN OI，要求如下：APN NI定义GGSN/PGW连接的外部网络和MS可选请求业务。这部分APN是必选的。APN NI应含至少一个标签，编码后长度最多63 octet。APN NI不能以 "rac"，"lac"，"sgsn" 或者"rnc"这些字符串开头，不能以"gprs"这样的字符串结尾或者作为最后一个标签，也不能含有字符 "*"。为了保证APN NI在GPRS/EPS PLMN中的唯一性，APN NI至少含一个标签与Internet域名相对应。APN OI定义GGSN/PGW所在的PLMN GPRS/EPS骨干网。这部分APN为可选。
 ##### APN Restriction 
+
 IE|说明
 ---|---
 APN Restriction|该信元包含一个无符号整数值，指示为关联APN创建的EPS承载上下文的限制等级。在P-GW中每一个APN配置的APN Restriction值。用于在UE基础决定是否允许为其它APN创建EPS承载。表2列出了APN Restriction的有效组合。
@@ -12835,64 +13084,78 @@ APN Restriction|该信元包含一个无符号整数值，指示为关联APN创�
 3|Private-1|Corporate（比如MMS使用用户）|1
 4|Private-2|Corporate（比如不使用MMS的用户）|None
 ##### Selection Mode 
+
 IE|说明
 ---|---
 Selection Mode|该信元指示消息中APN的来源。Selection mode values:0: MS或网络提供APN，签约核对。1: MS提供APN，签约不需要核对。2: 网络提供APN，签约不需要核对。3: 保留，不能被发送。如果收到，则解释为“2”。
 ##### IP Address 
+
 IE|说明
 ---|---
 IP Address|Length域可能只有两个值（4或16），这就决定Value域包含IPv4或IPv6地址。
 ##### EPS Bearer ID (EBI) 
+
 IE|说明
 ---|---
 EPS Bearer ID (EBI)|L3协议定义标准层三消息字节1比特5到8为EPS承载标识。EPS承载标识用于标识一个消息流。EPS bearer identity value:0 0 0 0: No EPS bearer identity assigned0 0 0 1: Reserved0 0 1 0: Reserved0 0 1 1: Reserved0 1 0 0: Reserved0 1 0 1: EPS bearer identity value50 1 1 0: EPS bearer identity value60 1 1 1: EPS bearer identity value 71 0 0 0: EPS bearer identity value 81 0 0 1: EPS bearer identity value 91 0 1 0: EPS bearer identity value 101 0 1 1: EPS bearer identity value 111 1 0 0: EPS bearer identity value 121 1 0 1: EPS bearer identity value 131 1 1 0: EPS bearer identity value 141 1 1 1: EPS bearer identity value 15
 ##### Fully Qualified Domain Name (FQDN) 
+
 IE|说明
 ---|---
 Fully Qualified Domain Name (FQDN)|FQDN字段编码需要与DNS消息（IETF RFC 1035章节3.1）中的一致，除了尾部的0所在的字节。按照3GPP TS 29.303章节4.3.2，S3/S10/S16 GTP消息中的“PGW node name”需要是一个PGW主机名。特别地，第一个DNS标签是“topon”或“topoff”，PGW的公认的节点名始于第三个标签。
 ##### Aggregate Maximum Bit Rate (AMBR) 
+
 IE|说明
 ---|---
 Aggregate Maximum Bit Rate (AMBR)|此信元通过GTP隧道传输，发送方复制部分AMBR的值到AMBR信元的值域（kbps）。网络希望传输上行链路策略的AMBR给UE时，需要携带此信元。
 ##### Charging Characteristics 
+
 IE|说明
 ---|---
 Charging Characteristics|Charging Characteristics信元在3GPP TS 32.251中定义，是基于运营商配置的触发条件，通知SGW和PGW产生计费信息的规则。计费属性字段允许运营商对CDR使用不同的计费方式，详见3GPP TS 32.298 章节5.1.2.2.7。用户可以在签约数据中指定计费属性。这些属性可以由HLR/HSS提供给MME作为签约信息的一部分。对于激活IP-CAN承载，MME根据TS 32.251 Annex A中规定的规则，将计费属性转发给GGSN/S-GW。
 ##### Change Reporting Action 
+
 IE|说明
 ---|---
 Change Reporting Action|Action values:0: Stop Reporting1: Start Reporting CGI/SAI2: Start Reporting RAI3: Start Reporting TAI4: Start Reporting ECGI5: Start Reporting CGI/SAI and RAI6: Start Reporting TAI and ECGI7-255: spareStop Reporting终止所有上报动作类型。
 ##### CSG Information Reporting Action 
+
 IE|说明
 ---|---
 CSG Information Reporting Action|CSG Reporting Action:UCICSG: 当设置为1，指示当UE通过CSG小区进入/离开/接入时，开始上报用户CSG信息。UCISHC: 当设置为1，指示当UE通过Subscribed Hybrid Cell进入/离开/接入时，开始上报用户CSG信息。UCIUHC:当设置为1，指示当UE通过Unsubscribed Hybrid Cell进入/离开/接入时，开始上报用户CSG信息。比特1到3都需要设置为0，停止上报用户CSG信息。
 ##### Signalling Priority Indication 
+
 IE|说明
 ---|---
 Signalling Priority Indication|该信元包含来自UE指定PDN连接的信令优先级指示。以下是Octet5以内的比特含义：比特2-8：备用，供将来使用并设为0。Bit 1 – LAPI (Low Access Priority Indication):该比特表示建立PDN连接时UE是否指示低访问优先级。比特1需要编码为信元Device Properties的低优先级参数。如果信元Signalling Priority Indication适用于一个消息且发送端的消息中不含有信元Signalling Priority Indication，接收端认为比特1的值为0。低访问优先级指示可能包含在计费记录中。
 ##### PDN Type 
+
 IE|说明
 ---|---
 PDN Type|基于UE请求和HSS中签约数据（对于MME，见3GPP TS 23.401章节5.3.1.1，对于SGSN，见3GPP TS 23.060章节9.2.1），可以设置为IPv4、IPv6或IPv4v6或Non-IP。PDN类型值:0 0 1: IPv40 1 0: IPv60 1 1: IPv4v61 0 0: 非IP
 ##### EPS Bearer Level Traffic Flow Template (Bearer TFT) 
+
 IE|说明
 ---|---
 EPS Bearer Level Traffic Flow Template (Bearer TFT)|EPS Bearer Level Traffic Flow Template (Bearer TFT)通过GTP隧道传输。发送方复制EPS Bearer Level TFT的值到EPS Bearer Level TFT信元的值域，详见Traffic flow template。
 ##### Traffic flow template 
+
 IE|说明
 ---|---
 Traffic flow template|该信元指定一个PDP上下文的TFT参数和操作。另外，该信元可能被用于传输额外参数给网络。TFT可能包含上行、下行或者两个方向的分组过滤器。分组过滤器决定了PDP上下文的网络映射。网络侧使用下行分组过滤器，用户使用上行分组过滤器。双向过滤器在网络侧被用作下行分组过滤器，在用户侧被用作上行分组过滤器。TFT operation code:0 0 0: Spare0 0 1: Create new TFT0 1 0: Delete existing TFT0 1 1: Add packet filters to existing TFT1 0 0: Replace packet filters in existing TFT1 0 1: Delete packet filters from existing TFT1 1 0: No TFT operation1 1 1: ReservedE bit:0: parameters list is not included1: parameters list is includedNumber of packet filters:分组过滤表中分组过滤器的个数，二进制编码格式。对于操作"delete existing TFT"和"no TFT operation"，number of packet filters为0。所有其他操作，number of packet filters需要大于0小于等于16。Packet filter list:对于操作"delete existing TFT"和"no TFT operation"，packet filter list为空。对于操作"delete packet filters from existing TFT"，packet filter list包含一个分组过滤标识变量。对于操作"create new TFT"、"add packet filters to existing TFT"和"replace packet filters in existing TFT"，packet filter list包含分组过滤器变量。packet filter direction指示过滤器应用的流方向：00: pre Rel-7 TFT filter01: downlink only10: uplink only11: bidirectionalpacket filter identifier用于标识TFT中每一个分组过滤器。packet filter evaluation precedence指定一个分组过滤器在这个PDP地址相关的所有TFT内所有分组过滤器中的优先级。值越高，对应过滤器的优先级越低。传输顺序中第一个比特位是最有效的比特位。Packet filter component type identifier:0 0 0 1 0 0 0 0: IPv4 remote address type0 0 1 0 0 0 0 0: IPv6 remote address type0 0 1 1 0 0 0 0: Protocol identifier/Next header type0 1 0 0 0 0 0 0: Single local port type0 1 0 0 0 0 0 1: Local port range type0 1 0 1 0 0 0 0: Single remote port type0 1 0 1 0 0 0 1: Remote port range type0 1 1 0 0 0 0 0: Security parameter index type0 1 1 1 0 0 0 0: Type of service/Traffic class type1 0 0 0 0 0 0 0: Flow label type其它值保留
 ##### Bearer Quality of Service (Bearer QoS) 
+
 IE|说明
 ---|---
 Bearer Quality of Service (Bearer QoS)|Bearer Quality of Service (Bearer QoS)通过GTP隧道传输。发送方复制Bearer l QoS的部分值到Bearer QoS信元的值域。
 ### N32接口 
 #### N32接口协议简介 
-场景描述 :N32接口为SEPP和SEPP间的信令面接口。
-协议栈 :N32接口（N32-c和N32-f）采用HTTP 2协议，并将JSON作为应用层串行协议。对于传输层安全保护，SEPP应支持3GPP TS 33.501规定的TLS。 
+场景描述 : 
+N32接口为SEPP和SEPP间的信令面接口。
+协议栈 : 
+N32接口（N32-c和N32-f）采用HTTP 2协议，并将JSON作为应用层串行协议。对于传输层安全保护，SEPP应支持3GPP TS 33.501规定的TLS。 
 N32接口协议栈如[图1]所示。
 图1  N32接口协议栈
-
 ##### 消息列表 
 N32接口上支持的消息参见下表。 
 消息|方向|作用
@@ -12901,16 +13164,20 @@ SecNegotiateReqData|SEPP->SEPP|该消息用于定义发起SEEP发送到接收SEP
 SecNegotiateRspData|SEPP->SEPP|该消息用于定义接受SEPP选定的安全能力。
 #### 相关消息解释 
 ##### SecNegotiateReqData 
-消息功能 :发起SEPP向响应SEPP发起安全能力协商过程，商定用于保护N32-f上NF服务相关信令的安全机制。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+发起SEPP向响应SEPP发起安全能力协商过程，商定用于保护N32-f上NF服务相关信令的安全机制。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 sender|Mandatory|唯一标识发送请求的SEPP。用于存储SEPP的安全协商能力。
 supportedSecCapabilityList|Mandatory|包含请求SEPP支持的安全能力列表。
 3GppSbiTargetApiRootSupported|Conditional|如果N32f消息转发支持TLS安全，该信元应存在并指示支持3gpp-Sbi-Target-apiRoot HTTP报头。
 plmnIdList|Optional|请求SEPP关联的PLMN ID列表。该列表由接收SEPP存储在N32-f上下文中。
 ##### SecNegotiateRspData 
-消息功能 :响应SEPP向发起SEPP返回其选择的安全能力，商定用于保护N32-f上NF服务相关信令的安全机制。 
-相关信元 :IE|Presence requirement|简要说明
+消息功能 : 
+响应SEPP向发起SEPP返回其选择的安全能力，商定用于保护N32-f上NF服务相关信令的安全机制。 
+相关信元 : 
+IE|Presence requirement|简要说明
 ---|---|---
 sender|Mandatory|唯一标识返回响应的SEPP。用于存储SEPP的安全协商能力。
 selectedSecCapability|Mandatory|包含响应SEPP选择的安全能力。
@@ -12918,22 +13185,27 @@ selectedSecCapability|Mandatory|包含响应SEPP选择的安全能力。
 plmnIdList|Optional|响应SEPP关联的PLMN ID列表。该列表由接收SEPP存储在N32-f上下文中。
 #### 相关信元解释 
 ##### sender 
+
 IE|说明
 ---|---
 sender|用于存储SEPP的安全协商能力。
 ##### supportedSecCapabilityList 
+
 IE|说明
 ---|---
 supportedSecCapabilityList|该信元用于存储请求SEEP支持的安全能力列表。
 ##### selectedSecCapability 
+
 IE|说明
 ---|---
 selectedSecCapability|该信元包含响应SEPP选择的安全能力。
 ##### 3GppSbiTargetApiRootSupported 
+
 IE|说明
 ---|---
 3GppSbiTargetApiRootSupported|当该信元存在时，用于指示是否支持使用3gpp-Sbi-Target-apiRoot HTTP报头的TLS安全：true：支持false（默认）：不支持
 ##### plmnIdList 
+
 IE|说明
 ---|---
 plmnIdList|SEPP关联的PLMN ID列表。
@@ -12941,76 +13213,37 @@ plmnIdList|SEPP关联的PLMN ID列表。
 ## 移动性管理 
 ### Attach 
 ### Attach 
-
-
-业务模型 :附着流程是用户注册到EPS网络上的流程，是用户开机后的第一个过程，是后续所有的流程的基础。在附着过程中，EPC网络会为用户建立一个默认承载，也可以对用户进行鉴权（用户首次附着到EPS网络上必须鉴权）。 
-
-
-信令流程 :EPC信令流程-Attach信令流程图如[图1]所示。
+业务模型 : 
+附着流程是用户注册到EPS网络上的流程，是用户开机后的第一个过程，是后续所有的流程的基础。在附着过程中，EPC网络会为用户建立一个默认承载，也可以对用户进行鉴权（用户首次附着到EPS网络上必须鉴权）。 
+信令流程 : 
+EPC信令流程-Attach信令流程图如[图1]所示。
 图1  EPC信令流程-Attach
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE通过发送 Attach Request消息及包含选择的网络和old GUMMEI的RRC参数到eNodeB发起附着流程。
-
-
 eNodeB通过RRC参数中的old GUMMEI和指示的选择网络查找到MME。如果得不到MME，就由MME选择功能选择MME。然后eNodeB将Attach Request消息通过初始UE消息及接收到的选择网络和UE所在小区的TAI+ECGI标识一起转发给New MME。
-
-
 （可选）如果UE通过GUTI识别自己，并且自从去附着后服务UE的MME已经发生变化，New MME通过UE带上来的GUTI找到Old
 MME/SGSN地址，再发送一个Identification Request消息给Old MME/SGSN以请求IMSI。如果消息发送到Old
 MME/SGSN，Old MME/SGSN过NAS MAC验证Attach Request消息通过后给New MME回Identification
 Response消息，其消息包含IMSI和移动性上下文；如果消息发送到老SGSN，老SGSN通过P-TMSI签名验证Attach
 Request消息通过后给New MME回标识响应消息，其消息包含移动性上下文；如果UE在Old MME/SGSN中是未知的或如果Attach
 Request消息完整性检查或P-TMSI签名检查失败，Old MME/SGSN通过发送携带错误原因值的响应给New MME。
-
-
 （可选）如果UE在Old MME/SGSN和New MME中都不能被识别，New MME发送Identity Request消息给UE以请求IMSI。UE使用包含IMSI的Identity Response消息通知网络。
-
-
 （可选）鉴权过程。 
-
-
 如果网络侧没有UE上下文、或者 Attach Request消息没有完整性保护、或者完整性检查失败，那么必须鉴权。从这步开始，后续的所有NAS消息都将使用NAS安全功能（加密和完整性保护）进行保护。 
-
-
 从UE获取ME标识。ME标识应加密传输，除非是在紧急附着情况下且不能被认证时。为了最小化信令的延迟，ME标识获取可以合并在步骤5a中的NAS安全建立过程。MME可能发送ME Identity Check Request消息给EIR。EIR给MME回ME Identity Check
 Response消息，消息包含检查结果。MME根据检查结果决定是继续Attach流程还是拒绝UE。
-
-
-
-
 （可选）如果UE在Attach Request消息中设置了加密选项传输标识，像PCO或APN或者两者这样的加密选项，现在都可以通过Ciphered Options Request/Response消息从UE获取。这样的PCO选项中可能包含有用户的身份信息，例如用户名和口令字。
-
-
 （可选）如果在New MME上有用户激活的承载上下文（如没有事先去附着就在同一个MME再次附着），New MME通过发送Delete Session Request消息给GW删除承载。GW给MME回Delete Session Response消息。如果PCRF部署了，PGW执行IP-CAN会话结束过程来指示释放资源。
-
-
 （可选）如果从UE上次分离后MME改变了，或MME没有UE的有效的签约上下文，或ME标识改变，或如果UE提供的IMSI或者UE提供的Old
 GUTI在MME没有关联到有效的上下文，MME发送Update Location Request消息给HSS。
-
-
 （可选）HSS发送Cancel Location Request消息给Old MME/SGSN。Old
 MME/SGSN回应Cancel Location Ack消息，删除MM和承载上下文。
-
-
 （可选）如果在Old MME/SGSN上有用户激活的承载，Old MME/SGSN通过发送Delete Session
 Request消息给相关GW删除承载。GW响应Delete Session Response消息。如果PCRF部署了，PGW执行IP-CAN会话结束过程来指示释放资源。
-
-
 （可选）HSS发送Update Location Ack消息给New MME，消息包含IMSI、签约数据等。签约数据包含一个或多个PDN签约上下文信息。每一个PDN签约上下文中包含EPS签约QoS参数和签约的APN-AMBR。New
 MME验证UE在新TA中存在。如果由于区域签约限制或接入限制，不允许UE附着在该TA中，或者由于其他原因而致使签约检查失败，MME拒绝附着请求。如果检查成功，New
 MME给UE创建一个上下文。如果UE所提供的APN是签约所不允许的或HSS拒绝了更新位置，则New MME拒绝附着请求消息。
-
-
 MME选择PGW和SGW，MME向SGW发送Create Session Request消息。
-
-
 SGW在其EPS承载列表中创建一个条目，发送Create Session Request消息给PGW。消息中包括IMSI,
 MSISDN, APN, Serving GW Address for the user plane, Serving GW TEID
 of the user plane, Serving GW TEID of the control plane, RAT type,
@@ -13018,2116 +13251,977 @@ Default EPS Bearer QoS, PDN Type, PDN Address, subscribed APN-AMBR,
 EPS Bearer Identity, Protocol Configuration Options, ME Identity,
 User Location Information (ECGI), UE Time Zone等信息。本步以后，SGW缓存任何从PGW接收的下行分组数据，直到收到23步的Modify
 Bearer Request消息，获得eNodeB TEID之后再进行转发。
-
-
 （可选）如果部署了动态PCC并且切换指示不存在，PGW执行IP-CAN会话建立过程，从而获得UE默认PCC规则。 
 如果部署了动态PCC并且切换指示存在，PGW执行PCEF发起的IP-CAN会话修改过程。 
 如果未部署动态PCC，PGW使用本地配置策略。 
-
-
 PGW在EPS承载上下文列表中创建一个新的条目，并生成一个计费标识。PGW返回Create Session Response消息给SGW，其中包括PDN GW Address for the user plane, PDN GW TEID of the
 user plane, PDN GW TEID of the control plane, PDN Type, PDN Address,
 EPS Bearer Identity, EPS Bearer QoS, Protocol Configuration Options,
 Charging Id, APN Restriction, Cause, MS Info Change Reporting Action
 (Start)等信息。
-
-
 如果SGW接收到MS Info Change Reporting Action(start)指示，SGW存储并报告UE位置改变情况。SGW回Create Session Response消息给New MME，其中包括PDN Type, PDN Address,
 Serving GW address for User Plane, Serving GW TEID for User Plane,
 Serving GW TEID for control plane, EPS Bearer Identity, EPS Bearer
 QoSProtocol Configuration Options, APN Restriction, Cause, MS Info
 Change Reporting Action (Start), APN-AMBR等信息。
-
-
 MME根据属于缺省APN的签约APN-AMBR和签约UE-AMBR确定UE-AMBR。New MME发送S1-MME控制消息Initial Context Setup Request给eNodeB，请求建立无线资源。Attach Accept消息被包含该消息中下发给eNodeB。如果New MME分配了新的GUTI，也通过此消息下发。
-
-
 eNodeB发送包含EPS无线承载标识的RRC Connection Reconfiguration消息给UE，同时Attach
 Accept消息也通过本消息带给UE。当UE接收到附着接受消息时，UE必须将TIN设置为GUTI。
-
-
 UE发送RRC Connection Reconfiguration Complete消息给eNodeB。
-
-
 eNodeB发送Initial Context Setup Response消息给New MME。该消息包含
 eNodeB的TEID 以及eNodeB的地址，该地址用于S1-U参考点的下行业务。
-
-
 UE发送Direct Transfer消息给eNodeB，该消息中包含Attach Complete消息。
-
-
 eNodeB通过上行NAS传输消息转发Attach Complete消息给New MME。
-
-
 New MME接收到第20步的Initial Context Setup Response消息和第22步的Attach
 Complete消息，New MME发送Modify Bearer Request消息给SGW。
-
-
 如果第23步包含切换指示，SGW发送Modify Bearer Request消息给PGW，使其将报文从非3GPP接入切到3GPP接入，通过所建立的缺省承载或者专用EPS承载立即开始给SGW传送数据包。
-
-
 PGW向SGW发送Modify Bearer Response消息。
-
-
-
-
 SGW向New MME发送Modify Bearer Response消息。SGW可以发送缓存的下行报文。
-
-
 （可选）New MME接收到SGW发送的Modify Bearer Response消息。如果请求类型没有指示切换，承载建立，签约数据指示用户被容许切换到非3GPP接入，并且如果MME选择的PGW不同于HSS签约PDN上下文的PGW标识，MME应发送Notify Request消息给HSS，消息中包含APN和PGW 标识。
-
-
 （可选）HSS保存APN和PGW标识对，发送Notify Response消息给MME。
-
-
-
-
 ### UE发起的Detach 
 ### UE发起的Detach 
-
-
-业务模型 :UE主动发起的分离流程，用于UE通知网络该UE不再使用EPC网络，网络侧可以释放该UE相关资源。 
-
-
-信令流程 :UE发起的Detach信令流程如[图1]所示。
+业务模型 : 
+UE主动发起的分离流程，用于UE通知网络该UE不再使用EPC网络，网络侧可以释放该UE相关资源。 
+信令流程 : 
+UE发起的Detach信令流程如[图1]所示。
 图1  UE发起的Detach信令流程
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE发送Detach Request消息给MME，消息中会携带GUTI和Switch Off参数。eNodeB会将UE所在的TAI+ECGI标识添加在Detach Request消息中一起转发给MME。
-
-
 MME按每PDN连接发送Delete Session Request消息(携带LBI)给SGW。如果PGW请求了UE位置信息，则MME需要在该消息中包含该用户的位置信息。 
-
-
 SGW释放相关承载资源，按每PDN连接发送Delete Session Request（LBI）消息给PGW。如果PGW请求了UE位置信息，则SGW在这个消息中包含用户位置信息。
-
-
 PGW释放相关承载资源，并给SGW回Delete Session Response消息。
-
-
 （可选）如果网络中部署了PCRF，PGW执行PCRF发起的IP-CAN会话结束流程去指示PCRF释放相关资源。 
-
-
 SGW向MME发送Delete Session Response消息。
-
-
 （可选）如果Switch Off分离不是关机引起的，MME发送Detach Accept给UE。
-
-
 （可选）MME发送Signalling Connection Release消息给eNodeB释放UE的S1-MME信令连接。
-
-
-
-
 ### MME发起的Detach 
 ### MME发起的Detach 
-
-
-业务模型 :MME发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。 
-
-
-信令流程 :MME发起的Detach信令流程如[图1]所示。
+业务模型 : 
+MME发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。 
+信令流程 : 
+MME发起的Detach信令流程如[图1]所示。
 图1  MME发起的Detach信令流程
-
-
-
-
 #### 流程描述 
-
-
 （可选）MME可以发起显示或隐式分离。 
 如果UE长时间没有和MME通讯，MME可以隐式分离UE。MME在隐式分离时，不会发送Detach Request消息给UE，消息中携带Detach Type。
 MME主动发起显示分离时，根据ECM状态不同，分为如下两种情况： 
-
  
 如果UE处于ECM-CONNNECTED态，MME通过发送Detach Request消息给UE进行显示分离。 
-
  
 如果UE处于ECM-IDLE态，MME需要首先寻呼到UE，然后再发送Detach Request消息。 
-
  
-
-
 MME按每PDN连接发送Delete Session Request消息(LBI)给SGW。如果PGW请求了UE位置信息，则MME需要在该消息中包含该用户的位置信息。
-
-
 SGW释放相关承载信息，按每PDN连接发送Delete Session Request(LBI)消息给PGW。如果PGW请求了UE位置信息，则SGW在这个消息中包含用户位置信息。
-
-
 PGW释放相关承载资源，并给SGW回Delete Session Response消息。
-
-
 （可选）如果网络中部署了PCRF，PGW执行PCRF发起的IP-CAN会话结束流程去指示PCRF释放相关资源。 
-
-
 SGW向MME发送Delete Session Response消息。
-
-
 （可选）UE在第1步之后的任何时间发送Detach Accept消息。eNodeB会将UE所在小区的TAI+ECGI
 标识与Detach Accept消息一起转发给MME。
-
-
 （可选）MME接收到Detach Accept消息和Delete Session Response消息，MME发送Signalling Connection Release给eNodeB释放UE的S1-MME信令连接。如果Detach
 Type指示UE重新Attach，UE可以在RRC连接释放完成后重新附着。
-
-
-
-
 ### HSS发起的Detach 
 ### HSS发起的Detach 
-
-
-业务模型 :HSS发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。 
-
-
-信令流程 :HSS发起的Detach信令流程如[图1]所示。
+业务模型 : 
+HSS发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。 
+信令流程 : 
+HSS发起的Detach信令流程如[图1]所示。
 图1  HSS发起的Detach信令流程
-
-
-
-
-流程说明 :
-
+流程说明 : 
 HSS请求立即删除签约MM上下文和EPS承载，HSS会发送Cancel Location消息(IMSI,
 Cancellation Type)给MME，其中Cancellation Type设置为Subscription Withdrawn。
-
-
 MME发送Detach Request消息通知处于ECM-CONNECTED的UE分离。
 如果UE处于ECM-IDLE态，MME首先寻呼到UE，然后进行分离过程。 
-
-
 MME按每PDN连接发送Delete Session Request消息(LBI)给SGW。如果PGW请求了UE位置信息，则MME需要在该消息中包含该用户的位置信息。
-
-
 SGW释放相关承载信息，按每PDN连接发送Delete Session Request(LBI)消息给PGW。如果PGW请求了UE位置信息，则SGW在这个消息中包含用户位置信息。
-
-
 PDN GW给SGW回Delete Session Response消息。
-
-
 （可选）如果PCRF部署了，PGW执行PCRF发起的IP-CAN会话结束流程去指示PCRF释放EPS承载。 
-
-
 SGW向MME发送Delete Session Response消息。
-
-
 UE在第2步之后的任何时间发送Detach Accept消息。eNodeB携带UE所在小区的TAI+ECGI标识与Detach
 Accept消息一起转发给MME。
-
-
 MME确认MM上下文和EPS承载删除，发送Cancel Location Ack消息给HSS。
-
-
 MME接收到Detach Accept消息和Delete Session Response消息，MME发送Signalling
 Connection Release命令给eNodeB释放UE的S1-MME信令连接。
-
-
-
-
 ### MME和SGW均未变更的E-UTRAN内部TAU流程 
 ### MME和SGW均未变更的E-UTRAN内部TAU流程 
-
-
-业务模型 :MME网元跟踪区更新流程是用户从一个小区移动到另一个小区或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
+业务模型 : 
+MME网元跟踪区更新流程是用户从一个小区移动到另一个小区或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
 该业务使用于用户在同一个MME内移动，发起TAU过程，同时SGW未发生变化的场景。 
-
-
-信令流程 :MME和SGW均未变更的E-UTRAN内部TAU流程如[图1]所示、
+信令流程 : 
+MME和SGW均未变更的E-UTRAN内部TAU流程如[图1]所示、
 图1  MME和SGW均未变更的E-UTRAN内部TAU流程
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE检测到触发TAU的条件满足，发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，消息中携带RRC参数（Selected
 Network和old GUMMEI）。如果这个TAU过程是由于负载重均衡而触发的，在RRC参数中不包含old GUMMEI标识。 
-
-
 eNodeB通过old GUMMEI和Selected Network得到MME，并向MME转发Tracking Area
 Update Request消息。 
-
-
 （可选）UE、MME和HSS可以完成鉴权和安全功能。如果Tracking Area Update Request消息的完整性检查失败，则鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 MME向UE发送Tracking Area Update Accept消息，如果分配了新的GUTI，则会在此消息中携带。 
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking Area
 Update Complete消息确认接收到了Tracking Area Update Accept消息。 
-
-
-
-
 ### MME不变、SGW改变的E-UTRAN内部TAU流程 
 ### MME不变、SGW改变的E-UTRAN内部TAU流程 
-
-
-业务模型 :MME网元跟踪区更新流程是用户从一个小区移动到另一个小区或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
+业务模型 : 
+MME网元跟踪区更新流程是用户从一个小区移动到另一个小区或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
 该业务使用于用户在同一个MME内移动，发起TAU过程，同时SGW发生变化的场景。 
-
-
-信令流程 :MME不变、SGW改变的E-UTRAN内部TAU流程如[图1]所示。
+信令流程 : 
+MME不变、SGW改变的E-UTRAN内部TAU流程如[图1]所示。
 图1  MME不变、SGW改变的E-UTRAN内部TAU流程
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE检测到触发TAU的条件满足，发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，消息中携带RRC参数（Selected
 Network和old GUMMEI）。如果这个TAU过程是由于负载重均衡而触发的，在RRC参数中不包含old GUMMEI标识。 
-
-
 eNodeB通过old GUMMEI和Selected Network得到MME，并向MME转发Tracking Area
 Update Request消息。 
-
-
 （可选）UE、MME和HSS可以完成鉴权和安全功能。如果Tracking Area Update Request消息的完整性检查失败，则鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 MME验证从UE接收到的EPS承载状态，并释放非活动态EPS承载关联的网络资源。如果没有承载上下文，MME将拒绝TAU请求。 
-
-
 MME根据用户目前所在的TA选择new SGW，并按照每个PDN连接向该SGW发送Create Session Request消息。 
-
-
 New SGW向PGW发送Modify Bearer Request消息，其中包含Serving GW Address
 and TEID、RAT type、Serving Network等信息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW将发起IP-CAN修改流程，把RAT type等变化的信息发送给PCRF。 
-
-
 PGW更新相关的承载上下文，并向new SGW返回Modify Bearer Response消息。 
-
-
 new SGW更新承载上下文，并向MME返回Create S ession Response消息。 
-
-
 MME向old SGW发送Delete Session Request消息，以指示其释放EPS承载资源。 
-
-
 old SGW释放承载资源并向MME返回Delete Session Response消息，old SGW丢弃为UE所缓存的所有数据包。 
-
-
 MME向UE发送Tracking Area Update Accept消息，如果分配了新的GUTI，则会在此消息中携带。 
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking Area
 Update Complete消息确认接收到了Tracking Area Update Accept消息。 
-
-
-
-
 ### MME改变、SGW不变的E-UTRAN内部TAU流程 
 ### MME改变、SGW不变的E-UTRAN内部TAU流程 
-
-
-业务模型 :MME网元跟踪区更新流程是用户从一个TA移动到另一个TA或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
+业务模型 : 
+MME网元跟踪区更新流程是用户从一个TA移动到另一个TA或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
 该业务使用于用户从一个MME移动到另外一个MME，发起TAU过程，但SGW未发生变化的场景。 
-
-
-信令流程 :MME改变、SGW不变的E-UTRAN内部TAU流程如[图1]所示。
+信令流程 : 
+MME改变、SGW不变的E-UTRAN内部TAU流程如[图1]所示。
 图1  MME改变、SGW不变的E-UTRAN内部TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE检测到触发TAU的条件满足，发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，消息中携带RRC参数（Selected
 Network和old GUMMEI）。 
-
-
 eNodeB从RRC参数中的老的GUMMEI和指示的已选择网络参数得到MME，并向MME转发Tracking Area
 Update Request消息。 
-
-
 new MME通过GUTI获得old MME地址，并向old MME发送Context Request消息重新获取用户信息，消息中包括old
 GUTI, MME Address, UE Validated, complete TAU Request message, P‑TMSI
 Signature。 
-
-
 old MME向new MME返回Context Response消息，消息包含：IMSI、IMEI、鉴权信息、EPS承载等参数。 
-
-
 （可选）如果第2步完整性检查失败，则执行鉴权过程。 
-
-
 new MME向old MME发送Context Acknowledge消息，old MME将SGW、P-GW和HSS信息标记为不可用，从而保证当UE在本次TAU流程还未完成又发起回到old
 MME的TAU流程时，old MME可以更新SGW、P-GW和HSS信息。 
-
-
 如果old MME在Context Response中没有返回承载上下文，new MME拒绝TAU请求。new MME根据从old
 MME得到的承载上下文信息，对每个PDN连接的SGW发送Modify Bearer Request消息，通知其更新承载信息，消息中包括new
 MME address 和 TEID, RAT type。 
-
-
 （可选）如果Modify bearer request消息携带的RAT type发生了变化，或者消息中携带有User
 Location Information或UE Time Zone IE，SGW向PGW发送Modify Bearer Request消息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW将发起IP-CAN修改流程，把RAT type等变化的信息发送给PCRF。 
-
-
 （可选）PGW更新相关的承载上下文，并向SGW返回Modify Bearer Response消息。 
-
-
 SGW更新承载上下文，并向new MME返回Create Session Response消息。消息中包括Serving
 GW address and TEID for uplink traffic, MS Info Change Reporting Action。 
-
-
 new MME向HSS发送Update Location Request消息告知其MME已变更，消息包含：MME Id、IMSI、ULR-Flags、MME
 Capabilities。 
-
-
 HSS向old MME发送Cancel Location消息，消息包含：IMSI、Cancellation type，Cancellation
 type设置为Update Procedure。 
-
-
 如果第4步中的定时器超时，old MME删除MM和承载上下文信息，否则需要等待定时器超时后再删除上下文。目的是为了防止用户在本次TAU过程未完成时又发起了新的TAU过程时，old
 MME仍保留着MM上下文。上下文删除后，old MME向HSS响应Cancel Location Ack消息，消息包含：IMSI。 
-
-
 HSS向新的MME发送Update Location Ack，消息中包括IMSI, Subscription Data。 
-
-
 new MME向UE发送Tracking Area Update Accept消息，消息中包括GUTI, TAI-list,
 EPS bearer status等。 
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking Area
 Update Complete消息确认接收到了Tracking Area Update Accept消息。 
-
-
-
-
 ### MME和SGW均改变的E-UTRAN内部TAU流程 
 ### MME和SGW均改变的E-UTRAN内部TAU流程 
-
-
-业务模型 :MME网元跟踪区更新流程是用户从一个TA移动到另一个TA或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
+业务模型 : 
+MME网元跟踪区更新流程是用户从一个TA移动到另一个TA或从一种接入技术变成另一种接入技术时，用户重新建立连接，重新接入EPS网络的过程。 
 该业务使用于用户从一个MME移动到另外一个MME，发起TAU过程，同时SGW也发生变化的场景。 
-
-
-信令流程 :MME和SGW均改变的E-UTRAN内部TAU流程如[图1]所示。
+信令流程 : 
+MME和SGW均改变的E-UTRAN内部TAU流程如[图1]所示。
 图1  MME和SGW均改变的E-UTRAN内部TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE检测到触发TAU的条件满足，发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，消息中携带RRC参数（Selected
 Network和old GUMMEI）。 
-
-
 eNodeB从RRC参数中的old GUMMEI和指示的已选择网络参数得到MME，并向MME转发Tracking Area
 Update Request消息。 
-
-
 new MME通过GUTI获得old MME地址，并向old MME发送Context Request消息重新获取用户信息，消息中包括old
 GUTI, MME Address, UE Validated, complete TAU Request message, P‑TMSI
 Signature。 
-
-
 old MME向new MME返回Context Response消息，消息包含：IMSI、IMEI、鉴权信息、EPS承载等参数。 
-
-
 （可选）如果第2步完整性检查失败，则执行鉴权过程。 
-
-
 new MME向old MME发送Context Acknowledge消息，old MME将SGW、P-GW和HSS信息标记为不可用，从而保证当UE在本次TAU流程还未完成又发起回到old
 MME的TAU流程时，old MME可以更新SGW、P-GW和HSS信息。 
-
-
 如果old MME在Context Response中没有返回承载上下文，new MME拒绝TAU请求。new MME根据从old
 MME得到的承载上下文信息，对每个PDN连接重新选择SGW，通过Create Session Request消息通知SGW建立连接，消息中包括IMSI,
 bearer contexts, MME Address and TEID for the control plane, RAT Type。 
-
-
 new SGW向PGW发送Modify Bearer Request消息，其中包含Serving GW Address
 and TEID、RAT type、Serving Network等信息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW通过向PCRF发起IP-CAN修改流程，把RAT
 type等变化的信息发送给PCRF。 
-
-
 PGW更新相关的承载上下文，并向new SGW返回Modify Bearer Response消息。 
-
-
 new SGW更新承载上下文，并向new MME返回Create Session Response消息。消息中包括Serving
 GW address and TEID for uplink traffic, MS Info Change Reporting Action。 
-
-
 new MME向HSS发送Update Location Request消息告知其MME已变更，消息包含：MME Id、IMSI、ULR-Flags、MME
 Capabilities。 
-
-
 HSS向old MME发送Cancel Location消息，消息包含：IMSI、Cancellation type，Cancellation
 type设置为Update Procedure。 
-
-
 如果第4步中的定时器超时，old MME删除MM和承载上下文信息，否则需要等待定时器超时后再删除上下文。目的是为了防止用户在本次TAU过程未完成时又发起了新的TAU过程时，old
 MME仍保留着MM上下文。上下文删除后，old MME向HSS响应Cancel Location Ack消息，消息包含：IMSI。 
-
-
 HSS向new MME发送Update Location Ack，消息中包括IMSI, Subscription Data。 
-
-
 当第4步的定时器超时时，old MME释放本地承载资源，并向old SGW发送Delete Session Request消息告知其释放承载资源。消息中包括Cause。 
-
-
 old SGW向old MME返回Delete Session Response消息并丢弃为UE所缓存的所有数据包。 
-
-
 new MME向UE发送Tracking Area Update Accept消息，消息中包括GUTI, TAI-list,
 EPS bearer status等。 
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking Area
 Update Complete消息确认接收到了Tracking Area Update Accept消息。 
-
-
-
-
 ### UTRAN到E-UTRAN的TAU流程 
 ### UTRAN到E-UTRAN的TAU流程 
-
-
-业务模型 :从UTRAN向E-UTRAN的TAU是指UE通过小区重选或重定向等UTRAN接入改为E-UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。SGSN和MME间使用Gn接口。 
+业务模型 : 
+从UTRAN向E-UTRAN的TAU是指UE通过小区重选或重定向等UTRAN接入改为E-UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。SGSN和MME间使用Gn接口。 
 TAU（Tracking area update）的触发条件：
  
 UE发现当前的TAI不在UE注册网络的TA（Tracking Area） List中 
-
  
 周期性TAU 
-
  
 UE的接入类型即RAT type(GSM、UTRAN、E-UTRAN)发生改变 
-
  
 网络侧负载均衡触发TAU 
-
  
 切换过程中触发的TAU 
-
  
-
-
-信令流程 :UTRAN到E-UTRAN的TAU流程如[图1]所示。
+信令流程 : 
+UTRAN到E-UTRAN的TAU流程如[图1]所示。
 图1  UTRAN到E-UTRAN的TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从UTRAN覆盖区域移动到EUTRAN强信号覆盖区域，UE选择4G网络。UE检测到触发TAU的条件满足，UE发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，同时携带RRC参数指示所选择的网络以及old
 GUMMEI，其中old GUMMEI的值从old GUTI中取得。由于UE之前在3G网络，所以UE将保存的SGSN分配old P-TMSI和old
 RAI映射为old GUTI。
-
-
 eNodeB从RRC参数中的old GUMMEI和指示的已选择网络参数得到MME。如果不能得到MME，eNodeB就选择一个MME。然后eNodeB转发Tracking Area Update Request消息到new MME，并携带一个TAI+ECGI参数和所选择网络。
-
-
 新的MME通过old RAI和old P-TMSI获取old SGSN，并发送SGSN Context Request消息给Gn/Gp
 SGSN以请求用户的移动性管理和会话管理相关信息，消息包含：old RAI、P-TMSI、old P-TMSI Signature、new
 MME Address。 
-
-
 Gn/Gp SGSN给new MME回SGSN Context Response消息，消息包含：MM Context、PDP
 Contexts。 
-
-
 （可选）UE、MME和HSS可以完成鉴权和安全功能。如果TAU请求消息的完整性检查失败，鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 new MME给Gn/Gp SGSN发送SGSN Context Acknowledge消息。通知Gn/Gp
 SGSN，new MME准备好接收已激活的PDP上下文的数据包。
 Gn/Gp SGSN将UE上下文中的GW网关和HSS相关信息标记为无效。其目的是如果此TAU过程未完成而发生一个新的RAU过程回退到Gn/Gp
 SGSN时Gn/Gp SGSN能够更新GW网关和HSS。 
 如果安全过程不能正确认证UE，必须拒绝TAU请求，并且new
 MME向Gn/Gp SGSN发送拒绝指示。Gn/Gp SGSN继续服务UE。 
-
-
 new MME完成PDP上下文到EPS承载的一对一映射，以及QoS参数的映射，建立EPS承载，并去活无法创建的EPS承载。MME根据从UE所接收到的EPS承载状态与从SGSN接收的承载上下文进行验证。MME将释放UE中非激活EPS承载的任何网络资源。如果根本就没有承载上下文，则MME拒绝TAU请求消息。 
 new MME为每个PDN连接选择一个SGW，并向其发送Create Session Request消息，消息包含：IMSI、MME
 Address and TEID、PDN GW address and TEID、EPS Bearer QoS、serving network
 identity等信元。 
-
-
 new SGW向PGW发送Modify Bearer Request消息，其中包含SGW Address and TEID、RAT
 type、Serving Network等信息。 
-
-
 PGW更新相关的承载上下文，并向new SGW返回Modify Bearer Response消息。  
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW通过向PCRF发送CCR-U消息，发起IP-CAN修改流程，把RAT
 type等变化的信息发送给PCRF。 
-
-
 SGW更新了承载上下文后，回复Create Session Response消息给MME，消息中包括SGW
 address and TEID, MS Info Change Reporting Action) at the PDN GW(s)
 for uplink traffic。
-
-
 new MME给HSS发送Update Location Request消息，携带单注册指示，以便Gn/Gp SGSN上的用户资源能够被删除。（单注册是指，只能同时在MME和SGSN一个局上注册） 
-
-
 （可选）如果UE曾经在LTE注册过，且MME发生改变，则HSS发送Cancel Location消息给old MME，消息包含：IMSI、Cancellation
 type，Cancellation type设置为Update Procedure。 
-
-
 （可选）old MME删除移动性管理上下文。old MME发送Cancel Location Ack消息给HSS。 
-
-
 HSS发送Cancel Location消息给Gn/Gp SGSN， Gn/Gp SGSN删除移动性管理上下文，消息包含：IMSI、Cancellation
 type。Gn/Gp SGSN删除上下文。
-
-
 （可选） Gn/Gp SGSN收到取消位置信息，如果用户的Iu连接也存在，则发送Iu Release Command消息给RNC。
-
-
 （可选）当数据转发定时器超时，RNC向Gn/Gp SGSN响应Iu Release Complete消息。
-
-
 Gn/Gp SGSN向HSS响应Cancel Location Ack消息，消息包含：IMSI。
-
-
 HSS给new MME回Update Location Ack消息。如果更新位置请求被HSS拒绝，则MME拒绝来自UE的TAU请求并说明原因。如果所有检查通过，MME构造UE的移动性管理上下文。 
-
-
 MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，则会在TAU接受消息中携带。 
-
-
 如果在TAU接受消息中携带了GUTI，UE发送Tracking Area Update Complete确认接收到了TAU接受消息。如果在TAU请求消息没有携带“激活标识”，并且也不是ECM-CONNECTED态下发起的TAU过程，MME释放信令连接。 
-
-
 如果映射的QoS参数与UE当前签约的QoS参数不一致，则MME发起签约QoS修改流程。 
-
-
-
-
 ### GERAN到E-UTRAN的TAU流程 
 ### GERAN到E-UTRAN的TAU流程 
-
-
-业务模型 :从GERAN向E-UTRAN的TAU是指UE通过小区重选或重定向等GERAN接入改为E-UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。SGSN和MME间使用Gn接口。 
-
-
-信令流程 :GERAN到E-UTRAN的TAU流程如[图1]所示。
+业务模型 : 
+从GERAN向E-UTRAN的TAU是指UE通过小区重选或重定向等GERAN接入改为E-UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。SGSN和MME间使用Gn接口。 
+信令流程 : 
+GERAN到E-UTRAN的TAU流程如[图1]所示。
 图1  GERAN到E-UTRAN的TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从GERAN覆盖区域移动到EUTRAN强信号覆盖区域，UE选择4G网络。UE检测到触发TAU的条件满足，UE发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，同时携带RRC参数指示所选择的网络以及old
 GUMMEI，其中old GUMMEI的值从old GUTI中取得。由于UE之前在2G网络，所以UE将保存的SGSN分配old P-TMSI和old
 RAI映射为old GUTI。
-
-
 eNodeB从RRC参数中的old GUMMEI和指示的已选择网络参数得到MME。如果不能得到MME，eNodeB就选择一个MME。然后eNodeB转发Tracking Area Update Request消息到new MME，并携带一个TAI+ECGI参数和所选择网络。
-
-
 new MME通过old RAI和old P-TMSI（或者 TLLI）获取Gn/Gp SGSN的信息，并发送SGSN
 Context Request消息给Gn/Gp SGSN以请求用户的移动性管理和会话管理相关信息，消息包含：old RAI、P-TMSI、old
 P-TMSI Signature、new MME Address。 
-
-
 Gn/Gp SGSN给new MME回SGSN Context Response消息，消息包含：MM Context、PDP
 Contexts。对于old SGSN来说，并不需要识别新局是MME。 
-
-
 UE、MME和HSS可以完成鉴权和安全功能。如果TAU请求消息的完整性检查失败，鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 new MME给Gn/Gp SGSN发送SGSN Context Acknowledge消息。通知Gn/Gp
 SGSN，new MME准备好接收已激活的PDP上下文的数据包。
 Gn/Gp SGSN将UE上下文中的GW网关和HSS相关信息标记为无效。其目的是如果此TAU过程未完成而发生一个新的RAU过程回退到Gn/Gp
 SGSN时Gn/Gp SGSN能够更新GW网关和HSS。 
 如果安全过程不能正确认证UE，必须拒绝TAU请求，并且new
 MME向Gn/Gp SGSN发送拒绝指示。Gn/Gp SGSN继续服务UE。 
-
-
 new MME完成PDP上下文到EPS承载的一对一映射，以及QoS参数的映射，建立EPS承载，并去活无法创建的EPS承载。MME根据从UE所接收到的EPS承载状态与从SGSN接收的承载上下文进行验证。MME将释放UE中非激活EPS承载的任何网络资源。如果根本就没有承载上下文，则MME拒绝TAU请求消息。 
 new MME为每个PDN连接选择一个SGW，并向其发送Create Session Request消息，消息包含：IMSI、MME
 Address and TEID、PDN GW address and TEID、EPS Bearer QoS、serving network
 identity等信元。 
-
-
 new SGW向PGW发送Modify Bearer Request消息，其中包含SGW Address and TEID、RAT
 type、Serving Network等信息。 
-
-
 PGW更新相关的承载上下文，并向new SGW返回Modify Bearer Response消息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW通过向PCRF发送CCR-U消息，发起IP-CAN修改流程，把RAT
 type等变化的信息发送给PCRF。  
-
-
 SGW更新了承载上下文后，回复Create Session Response消息给MME，消息中包括SGW
 address and TEID, MS Info Change Reporting Action) at the PDN GW(s)
 for uplink traffic。
-
-
 new MME给HSS发送Update Location Request消息，携带单注册指示，以便Gn/Gp SGSN上的用户资源能够被删除。（单注册是指，只能同时在MME和SGSN一个局上注册） 
-
-
 （可选）如果UE曾经在LTE注册过，且MME发生改变，则HSS发送Cancel Location消息给 old MME，消息包含：IMSI、Cancellation
 type，Cancellation type设置为Update Procedure。 
-
-
 可选：old MME删除移动性管理上下文。old MME发送Cancel Location Ack消息给HSS。 
-
-
 HSS发送Cancel Location消息给Gn/Gp SGSN， Gn/Gp SGSN删除移动性管理上下文，消息包含：IMSI、Cancellation
 type。Gn/Gp SGSN删除上下文。
-
-
 Gn/Gp SGSN向HSS响应Cancel Location Ack消息，消息包含：IMSI。
-
-
 HSS给new MME回Update Location Ack消息。如果更新位置请求被HSS拒绝，则MME拒绝来自UE的TAU请求并说明原因。如果所有检查通过，MME构造UE的移动性管理上下文。 
-
-
 MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，则会在TAU接受消息中携带。如果在TAU请求消息中携带了“激活标识”，用户面建立过程和TAU接受消息发送一起执行。 
-
-
 如果在TAU接受消息中携带了GUTI，UE发送Tracking Area Update Complete确认接收到了TAU接受消息。如果在TAU请求消息没有携带“激活标识”，并且也不是ECM-CONNECTED态下发起的TAU过程，MME释放信令连接。 
-
-
 如果映射的QoS参数与UE当前签约的QoS参数不一致，则MME发起签约QoS修改流程。 
-
-
-
-
 ### E-UTRAN到UTRAN的RAU流程 
 ### E-UTRAN到UTRAN的RAU流程 
-
-
-业务模型 :从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
-
-
-信令流程 :E-UTRAN到UTRAN的RAU流程如[图1]所示。
+业务模型 : 
+从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为UTRAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
+信令流程 : 
+E-UTRAN到UTRAN的RAU流程如[图1]所示。
 图1  E-UTRAN到UTRAN的RAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从EUTRAN覆盖区域移动到UTRAN强信号覆盖区域，UE选择3G网络。 
-
-
 UE 向new SGSN发送Routing Area Update Request消息，消息中携带的old
 P‑TMSI、old RAI和old P‑TMSI由GUTI映射得到。
-
-
 new SGSN发送SGSN Context Request消息给old MME以请求用户的移动性管理和会话管理相关信息。由GUTI映射的old
 RAI和old P-TMSI可以唯一标识old MME。 
-
-
 old MME给new SGSN回SGSN Context Response消息。对于new SGSN来说，并不需要识别老局是否是MME。 
 由MME会将EPS承载按一对一映射到PDP上下文，同时也会完成QoS参数的映射。 
-
-
 （可选）如果SGSN Context Response消息中未包含IMEISV且SGSN支持ADD（Automatic
 Device Detection），new SGSN将发起安全流程重新获取ME Identity (the IMEISV)。 
-
-
 new SGSN向old MME发送SGSN Context Acknowledge消息。 old MME将上下文中GW和HSS的信息置为无效。这样可以保证在RAU流程还在进行中，UE向old
 MME发起TAU流程时，old MME对GW和HSS的信息进行更新。 
-
-
 new SGSN发送Update PDP Context Request消息到每个PDP上下文关联的PGW（内嵌GGSN）。
-
-
 PGW更新PDP上下文中的对端用户面地址信息及QoS等，并向new SGSN返回Update PDP Context
 Response消息。
-
-
 New SGSN发送Update Location Request消息到HSS，指示为普通更新。
-
-
 （可选）如果HSS有其他SGSN的注册信息，则发送Cancel Location消息到old SGSN，
 Cancellation Type设置为Update Procedure。
-
-
 （可选）old SGSN删除MM和PDP上下文，返回Cancel Location Ack消息给HSS。
-
-
 HLR发送Insert Subscriber Data消息到new SGSN，带用户签约信息等。
-
-
 new SGSN返回Insert Subscriber Data Ack消息到HSS。
-
-
 HSS发送Update Location Ack消息到new SGSN。
-
-
 New SGSN发送Routing Area Update Accept消息到UE，携带新分配的P-TMSI。
-
-
 UE发现P-TMSI被重新分配，发送Routing Area Update Complete消息到new
 SGSN。
-
-
 old MME根据SGSN Context Request知道是UE移动到UTRAN，释放eNodeB侧和SGW侧资源，并向SGW发送Delete
 Session Request消息告知其释放EPS承载资源，指示SGW不要向PGW发起承载删除流程。 
-
-
 SGW向old MME响应Delete Session Response消息。 
-
-
 （可选）如果old MME与UE之间有S1-MME连接，当收到new SGSN发送的SGSN Context Acknowledge消息，old
 MME执行S1-AP Release。
-
-
-
-
 ### E-UTRAN到GERAN的RAU流程 
 ### E-UTRAN到GERAN的RAU流程 
-
-
-业务模型 :从E-UTRAN向GERAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为GERAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
-
-
-信令流程 :E-UTRAN到GERAN的RAU流程如[图1]所示。
+业务模型 : 
+从E-UTRAN向GERAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为GERAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
+信令流程 : 
+E-UTRAN到GERAN的RAU流程如[图1]所示。
 图1  E-UTRAN到GERAN的RAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从EUTRAN覆盖区域移动到GERAN强信号覆盖区域，UE选择2G网络。 
-
-
 UE 向new SGSN发送Routing Area Update Request消息，消息中携带的old
 P‑TMSI、old RAI和old P‑TMSI由GUTI映射得到。
-
-
 new SGSN发送SGSN Context Request消息给old MME以请求用户的移动性管理和会话管理相关信息。由GUTI映射的old
 RAI和old P-TMSI可以唯一标识old MME。 
-
-
 old MME给new SGSN回SGSN Context Response消息。对于new SGSN来说，并不需要识别老局是否是MME。由MME会将EPS承载按一对一映射到PDP上下文，同时也会完成QoS参数的映射。 
-
-
 （可选）如果SGSN Context Response消息中未包含IMEISV且SGSN支持ADD（Automatic
 Device Detection），new SGSN将发起安全流程重新获取ME Identity (the IMEISV)。 
-
-
 new SGSN向old MME发送SGSN Context Acknowledge消息。old MME将上下文中GW和HSS的信息置为无效。这样可以保证在RAU流程还在进行中，UE向old
 MME发起TAU流程时，old MME对GW和HSS的信息进行更新。 
-
-
 new SGSN发送Update PDP Context Request消息到每个PDP上下文关联的PGW（内嵌GGSN）。
-
-
 PGW更新PDP上下文中的对端用户面地址信息及QoS等，并向new SGSN返回Update PDP Context
 Response消息。
-
-
 New SGSN发送Update Location Request消息到HSS，指示为普通更新。
-
-
 （可选）如果HLR有其他SGSN的注册信息，则发送Cancel Location消息到old SGSN，
 Cancellation Type设置为Update Procedure。
-
-
 （可选）old SGSN删除MM和PDP上下文，返回Cancel Location Ack消息给HLR。
-
-
 HLR发送Insert Subscriber Data消息到new SGSN，带用户签约信息等。
-
-
 new SGSN返回Insert Subscriber Data Ack消息到HLR。
-
-
 HLR发送Update Location Ack消息到new SGSN。
-
-
 New SGSN发送Routing Area Update Accept消息到UE，携带新分配的P-TMSI。
-
-
 UE发现P-TMSI被重新分配，发送Routing Area Update Complete消息到new
 SGSN。
-
-
 old MME根据SGSN Context Request知道是UE移动到GERAN，释放eNodeB侧和SGW侧资源，并向SGW发送Delete
 Session Request消息告知其释放EPS承载资源，指示SGW不要向PGW发起承载删除流程。 
-
-
 SGW向old MME响应Delete Session Response消息。 
-
-
 （可选）如果old MME与UE之间有S1-MME连接，当收到new SGSN发送的SGSN Context Acknowledge消息，old MME执行S1-AP Release。
-
-
-
-
 ### SGW不变的UTRAN到E-UTRAN的TAU流程 
 ### SGW不变的UTRAN到E-UTRAN的TAU流程 
-
-
-业务模型 :从UTRAN向E-UTRAN的TAU是指UE通过小区重选或重定向等由UTRAN接入改为E-UTRAN接入，从而实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
+业务模型 : 
+从UTRAN向E-UTRAN的TAU是指UE通过小区重选或重定向等由UTRAN接入改为E-UTRAN接入，从而实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从UTRAN向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变的情况。 
-
-
-信令流程 :SGW不变的UTRAN到E-UTRAN的TAU流程如[图1]所示。
+信令流程 : 
+SGW不变的UTRAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW不变的UTRAN到E-UTRAN的TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从UTRAN覆盖区域移动到E-UTRAN强信号覆盖区域，UE选择4G网络。UE检测到触发TAU的条件满足，UE发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，同时携带RRC参数（所选择网络、旧GUMMEI）。如果这个TAU过程是由于负载重均衡而触发的，在RRC参数中不包含旧GUMMEI标识。
-
-
 eNodeB从RRC参数中的老的GUMMEI和指示的已选择网络参数（Selected Network）得到MME。如果不能得到MME，eNodeB就选择一个MME，并向新的MME转发Tracking Area Update Request消息，并携带一个TAI+ECGI参数和所选择网络。
-
-
 新的MME根据老的GUTI找到老的S4 SGSN地址，发送一个Context Request消息给老的S4
 SGSN以请求用户的移动性管理和会话管理相关信息。如果MME指示它已经对UE进行了鉴权或者老的S4 SGSN对UE进行鉴权，那么老的S4
 SGSN会启动一个定时器。
-
-
 老的S4 SGSN给新的MME回Context Response消息。
-
-
 （可选）UE、MME和HSS可以完成鉴权和安全功能。如果TAU请求消息的完整性检查失败，鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 新的MME根据TAI决定SGW不需要改变。新的MME给老的S4 SGSN发送Context Acknowledge消息，携带SGW是否改变的信息。老的S4 SGSN将UE上下文中GW和HSS相关上下文信息标记为无效。这样可以确保如果UE在完成正在进行的TAU过程前回到老的S4
 SGSN发起一个RAU过程时能够更新GW和HSS。
-
-
 如果安全功能没有正确认证UE，则TAU被拒绝，MME将发送拒绝指示给老的S4 SGSN，老的S4 SGSN继续保持原有的UE上下文信息。 
 新的MME接收来自老的S4 SGSN的承载上下文信息。MME按照所指定的顺序建立EPS承载，去激活不能建立的EPS承载。如果没有承载上下文，则MME拒绝TAU请求消息。 
 新的MME按每PDN连接发送Modify Bearer Request消息给SGW。
-
-
 （可选）若Modify Bearer Request消息携带的RAT Type发生了变化，或者消息中携带有User Location
 Information或UE Time Zone IE，SGW向PGW发送Modify Bearer Request消息。 
-
-
 （可选）PGW将Modify Bearer Request中变化的参数更新到承载上下文中，并向SGW返回Modify
 Bearer Response消息。 
-
-
 （可选）如果启用了动态PCC，并且PCRF订阅了RAT Type或者位置信息等事件，PGW将发起IP-CAN修改流程把这些信息发送给PCRF。 
-
-
 SGW更新其承载上下文，给新的MME回Modify Bearer Response消息。SGW已经可以把上行数据报文发送给PGW了。
-
-
 新的MME给HSS发送Update Location Request消息，获取用户的签约数据。
-
-
 （可选）如果老的S4 SGSN接收到Context Acknowledge消息，并且用户的Iu连接也存在，老的S4
 SGSN在第4步设置的定时器超时时，发送Iu Release Command消息给RNC。
-
-
 （可选）RNC给老的GnGp SGSN回Iu Release Complete消息。
-
-
 HSS给新的MME回Update Location Ack消息。如果更新位置请求被HSS拒绝，则MME拒绝来自UE的TAU请求并说明原因。如果所有检查通过，MME构造UE的移动性管理上下文。
-
-
 MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，则会在Tracking
 Area Update Accept消息中携带。如果在Tracking Area Update Request消息中携带了“激活标识”，用户面建立过程和Tracking
 Area Update Accept消息发送一起执行。
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking
 Area Update Complete消息确认接收到了TAU接受消息。如果在Tracking Area Update Request消息中没有携带“激活标识”，并且也不是ECM-CONNECTED态下发起的TAU过程，MME释放信令连接。
-
-
-
-
 ### SGW改变的UTRAN到E-UTRAN的TAU流程 
 ### SGW改变的UTRAN到E-UTRAN的TAU流程 
-
-
-业务模型 :从UTRAN向E-UTRAN的TAU是指UE通过小区重选或重定向等由UTRAN接入改为E-UTRAN接入，从而实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
+业务模型 : 
+从UTRAN向E-UTRAN的TAU是指UE通过小区重选或重定向等由UTRAN接入改为E-UTRAN接入，从而实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从UTRAN向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变的情况。 
-
-
-信令流程 :SGW改变的UTRAN到E-UTRAN的TAU流程如[图1]所示。
+信令流程 : 
+SGW改变的UTRAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW改变的UTRAN到E-UTRAN的TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE检测到触发TAU的条件满足，UE发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，同时携带RRC参数（所选择网络、旧GUMMEI）。如果这个TAU过程是由于负载重均衡而触发的，在RRC参数中不包含旧GUMMEI标识。
-
-
 eNodeB从RRC参数中的老的GUMMEI和指示的已选择网络参数（Selected Network）得到MME。如果不能得到MME，eNodeB就选择一个MME，并向新的MME转发Tracking Area Update Request消息，并携带一个TAI+ECGI参数和所选择网络。
-
-
 新的MME根据老的GUTI找到老的S4 SGSN地址，发送一个Context Request消息给老的S4
 SGSN以请求用户的移动性管理和会话管理相关信息。如果MME指示它已经对UE进行了鉴权或者老的S4 SGSN对UE进行鉴权，那么老的S4
 SGSN会启动一个定时器。
-
-
 老的S4 SGSN给新的MME回Context Response消息。
-
-
 （可选）UE、MME和HSS可以完成鉴权和安全功能。如果TAU请求消息的完整性检查失败，鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 新的MME根据TAI决定SGW是否需要改变。新的MME给老的S4 SGSN发送Context Acknowledge消息，携带SGW是否改变的信息。老的S4 SGSN将UE上下文中GW相关信息标记为无效。这样可以确保如果UE在完成正在进行的TAU过程前回到老的S4
 SGSN发起一个新的RAU过程时，老的S4 SGSN能够更新GW和HSS。
-
-
 如果安全过程不能正确认证UE，必须拒绝TAU请求，并且新MME向老S4 SGSN发送拒绝指示。老S4 SGSN继续服务UE。 
 新MME将从老S4 SGSN所接收到的承载上下文与从UE所接收到的EPS承载状态进行验证。MME将释放UE中非激活EPS承载的任何网络资源。如果根本就没有承载上下文，则MME拒绝TAU请求消息。 
 MME根据用户目前所在的TA选择一个新的SGW，按每PDN连接给其发送Create Session Request消息。
-
-
 新的SGW向PGW发送Modify Bearer Request消息，其中包含SGW Address and TEID、RAT
 type、Serving Network等信息。 
-
-
 PGW更新相关的承载上下文，并向新的SGW返回Modify Bearer Response消息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW通过向PCRF发送CCR-U消息，发起IP-CAN修改流程，把RAT
 type等变化的信息发送给PCRF。 
-
-
 新的SGW更新承载上下文，并向MME返回Create Session Response消息。 
-
-
 新的MME给HSS发送Update Location Request消息，获取用户的签约数据。
-
-
 （可选）如果老的S4 SGSN接收到Context Acknowledge消息，并且用户的Iu连接也存在，老的S4
 SGSN在第4步设置的定时器超时时，发送Iu Release Command消息给RNC。
-
-
 （可选）RNC给老的GnGp SGSN回Iu Release Complete消息。
-
-
 HSS给新的MME回Update Location Ack消息。如果更新位置请求被HSS拒绝，则MME拒绝来自UE的TAU请求并说明原因。如果所有检查通过，MME构造UE的移动性管理上下文。
-
-
 （可选）当第4步设置的定时器超时，如果老的S4 SGSN收到了Context Acknowledge消息，老的S4 SGSN释放承载资源。由于SGW发生改变，老的S4
 SGSN给老的SGW发送Delete Session Request消息以指示删除EPS承载资源，原因值指示老的SGW不要通知PGW删除承载资源。 
-
-
 （可选）老的SGW释放承载资源，给老的S4 SGSN回Delete Session Response消息，老的SGW丢弃为UE所缓存的任何分组包。 
-
-
 MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，则会在Tracking
 Area Update Accept消息中携带。如果在Tracking Area Update Request消息中携带了“激活标识”，用户面建立过程和Tracking
 Area Update Accept消息发送一起执行。
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking
 Area Update Complete消息，确认接收到了TAU接受消息。如果在Tracking Area Update Request消息中没有携带“激活标识”，并且也不是ECM-CONNECTED态下发起的TAU过程，MME释放信令连接。
-
-
-
-
 ### SGW不变的GERAN到E-UTRAN的TAU流程 
 ### SGW不变的GERAN到E-UTRAN的TAU流程 
-
-
-业务模型 :从GERAN向E-UTRAN的TAU是指UE通过小区重选或重定向等由GERAN接入改为E-UTRAN接入，从而实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
+业务模型 : 
+从GERAN向E-UTRAN的TAU是指UE通过小区重选或重定向等由GERAN接入改为E-UTRAN接入，从而实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从GERAN向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变情况。 
-
-
-信令流程 :SGW不变的GERAN到E-UTRAN的TAU流程如[图1]所示。
+信令流程 : 
+SGW不变的GERAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW不变的GERAN到E-UTRAN的TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE检测到触发TAU的条件满足，UE发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，同时携带RRC参数（所选择网络、旧GUMMEI）。如果这个TAU过程是由于负载重均衡而触发的，在RRC参数中不包含旧GUMMEI标识。
-
-
 eNodeB从RRC参数中的老的GUMMEI和指示的已选择网络参数（Selected Network）得到MME。如果不能得到MME，eNodeB就选择一个MME，并向新的MME转发Tracking Area Update Request消息，并携带一个TAI+ECGI参数和所选择网络。
-
-
 新的MME根据老的GUTI找到老的S4 SGSN地址，发送一个Context Request消息给老的S4
 SGSN以请求用户的移动性管理和会话管理相关信息。如果MME指示它已经对UE进行了鉴权或者老的S4 SGSN对UE进行鉴权，那么老的S4
 SGSN会启动一个定时器。
-
-
 老的S4 SGSN给新的MME回Context Response消息。
-
-
 （可选）UE、MME和HSS可以完成鉴权和安全功能。如果TAU请求消息的完整性检查失败，鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 新的MME根据TAI决定SGW不需要改变。新的MME给老的S4 SGSN发送Context Acknowledge消息，携带SGW是否改变的信息。老的S4 SGSN将UE上下文中GW和HSS相关上下文信息标记为无效。这样可以确保如果UE在完成正在进行的TAU过程前回到老的S4
 SGSN发起一个RAU过程时能够更新GW和HSS。
-
-
 如果安全功能没有正确认证UE，则TAU被拒绝，MME将发送拒绝指示给老的S4 SGSN，老的S4 SGSN继续保持原有的UE上下文信息。 
 新的MME接收来自老的S4 SGSN的承载上下文信息。MME按照所指定的顺序建立EPS承载，去激活不能建立的EPS承载。如果没有承载上下文，则MME拒绝TAU请求消息。 
 新的MME按每PDN连接发送Modify Bearer Request消息给SGW。
-
-
 （可选）若Modify Bearer Request消息携带的RAT Type发生了变化，或者消息中携带有User Location
 Information或UE Time Zone IE，SGW向PGW发送Modify Bearer Request消息。 
-
-
 （可选）PGW将Modify Bearer Request中变化的参数更新到承载上下文中，并向SGW返回Modify
 Bearer Response消息。 
-
-
 （可选）如果启用了动态PCC，并且PCRF订阅了RAT Type或者位置信息等事件，PGW将发起IP-CAN修改流程把这些信息发送给PCRF。 
-
-
 SGW更新其承载上下文，给新的MME回Modify Bearer Response消息。SGW已经可以把上行数据报文发送给PGW了。
-
-
 新的MME给HSS发送Update Location Request消息，获取用户的签约数据。
-
-
 HSS给新的MME回Update Location Ack消息。如果更新位置请求被HSS拒绝，则MME拒绝来自UE的TAU请求并说明原因。如果所有检查通过，MME构造UE的移动性管理上下文。
-
-
 MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，则会在Tracking
 Area Update Accept消息中携带。如果在Tracking Area Update Request消息中携带了“激活标识”，用户面建立过程和Tracking
 Area Update Accept消息发送一起执行。
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking
 Area Update Complete消息确认接收到了TAU接受消息。如果在Tracking Area Update Request消息中没有携带“激活标识”，并且也不是ECM-CONNECTED态下发起的TAU过程，MME释放信令连接。
-
-
-
-
 ### SGW改变的GERAN到E-UTRAN的TAU流程 
 ### SGW改变的GERAN到E-UTRAN的TAU流程 
-
-
-业务模型 :从GERAN 向E-UTRAN的TAU是指UE通过小区重选或重定向等由GERAN
+业务模型 : 
+从GERAN 向E-UTRAN的TAU是指UE通过小区重选或重定向等由GERAN
 接入改为E-UTRAN接入，从而实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从GERAN 向E-UTRAN的TAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变情况。 
-
-
-信令流程 :SGW改变的GERAN到E-UTRAN的TAU流程如[图1]所示。
+信令流程 : 
+SGW改变的GERAN到E-UTRAN的TAU流程如[图1]所示。
 图1  SGW改变的GERAN到E-UTRAN的TAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE检测到触发TAU的条件满足，UE发起TAU过程。 
-
-
 UE向eNodeB发送Tracking Area Update Request消息发起TAU过程，同时携带RRC参数（所选择网络、旧GUMMEI）。如果这个TAU过程是由于负载重均衡而触发的，在RRC参数中不包含旧GUMMEI标识。
-
-
 eNodeB从RRC参数中的老的GUMMEI和指示的已选择网络参数（Selected Network）得到MME。如果不能得到MME，eNodeB就选择一个MME，并向新的MME转发Tracking Area Update Request消息，并携带一个TAI+ECGI参数和所选择网络。
-
-
 新的MME根据老的GUTI找到老的S4 SGSN地址，发送一个Context Request消息给老的S4
 SGSN以请求用户的移动性管理和会话管理相关信息。如果MME指示它已经对UE进行了鉴权或者老的S4 SGSN对UE进行鉴权，那么老的S4
 SGSN会启动一个定时器。
-
-
 老的S4 SGSN给新的MME回Context Response消息。
-
-
 （可选）UE、MME和HSS可以完成鉴权和安全功能。如果TAU请求消息的完整性检查失败，鉴权过程是必须的。如果执行了GUTI分配并且网络支持加密，则NAS消息将被加密。 
-
-
 新的MME根据TAI决定SGW是否需要改变。新的MME给老的S4 SGSN发送Context Acknowledge消息，携带SGW是否改变的信息。老的S4 SGSN将UE上下文中GW相关信息标记为无效。这样可以确保如果UE在完成正在进行的TAU过程前回到老的S4
 SGSN发起一个新的RAU过程时，老的S4 SGSN能够更新GW和HSS。
-
-
 如果安全过程不能正确认证UE，必须拒绝TAU请求，并且新MME向老S4 SGSN发送拒绝指示。老S4 SGSN继续服务UE。 
 新MME将从老S4 SGSN所接收到的承载上下文与从UE所接收到的EPS承载状态进行验证。MME将释放UE中非激活EPS承载的任何网络资源。如果根本就没有承载上下文，则MME拒绝TAU请求消息。 
 MME根据用户目前所在的TA选择一个新的SGW，按每PDN连接给其发送Create Session Request消息。
-
-
 新的SGW向PGW发送Modify Bearer Request消息，其中包含SGW Address and TEID、RAT
 type、Serving Network等信息。 
-
-
 PGW更新相关的承载上下文，并向新的SGW返回Modify Bearer Response消息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW通过向PCRF发送CCR-U消息，发起IP-CAN修改流程，把RAT
 type等变化的信息发送给PCRF。 
-
-
 新的SGW更新承载上下文，并向新的MME返回Create Session Response消息。SGW已经可以把上行数据报文发送给PGW了。 
-
-
 新的MME给HSS发送Update Location Request消息，获取用户的签约数据。
-
-
 HSS给新的MME回Update Location Ack消息。如果更新位置请求被HSS拒绝，则MME拒绝来自UE的TAU请求并说明原因。如果所有检查通过，MME构造UE的移动性管理上下文。
-
-
 （可选）当第4步设置的定时器超时，如果老的S4 SGSN收到了Context Acknowledge消息，老的S4 SGSN释放承载资源。由于SGW发生改变，老的S4
 SGSN给老的SGW发送Delete Session Request消息以指示删除EPS承载资源，原因值指示老的SGW不要通知PGW删除承载资源。 
-
-
 （可选）老的SGW释放承载资源，给老的S4 SGSN回Delete Session Response消息，老的SGW丢弃为UE所缓存的任何分组包。 
-
-
 MME发送Tracking Area Update Accept消息给UE。如果分配了新的GUTI，则会在Tracking
 Area Update Accept消息中携带。如果在Tracking Area Update Request消息中携带了“激活标识”，用户面建立过程和Tracking
 Area Update Accept消息发送一起执行。
-
-
 （可选）如果在Tracking Area Update Accept消息中携带了GUTI，UE发送Tracking
 Area Update Complete消息，确认接收到了TAU接受消息。如果在Tracking Area Update Request消息中没有携带“激活标识”，并且也不是ECM-CONNECTED态下发起的TAU过程，MME释放信令连接。
-
-
-
-
 ### SGW不变的E-UTRAN到UTRAN的RAU流程 
 ### SGW不变的E-UTRAN到UTRAN的RAU流程 
-
-
-业务模型 :从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等，E-UTRAN接入改为UTRAN接入，是为了实现EPS网络和UMTS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
+业务模型 : 
+从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等，E-UTRAN接入改为UTRAN接入，是为了实现EPS网络和UMTS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从E-UTRAN向UTRAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变情况。 
-
-
-信令流程 :SGW不变的E-UTRAN到UTRAN的RAU流程如[图1]所示。
+信令流程 : 
+SGW不变的E-UTRAN到UTRAN的RAU流程如[图1]所示。
 图1  SGW不变的E-UTRAN到UTRAN的RAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从EUTRAN覆盖区域移动到UTRAN强信号覆盖区域，UE选择3G网络。 
-
-
 UE 向RNC发送路由区更新请求消息Routing Area Update Request，消息中携带的old
 RAI和old P‑TMSI由GUTI映射得到。
-
-
 RNC转发路由区更新请求消息Routing Area Update Request给new SGSN。
-
-
 new SGSN发送SGSN上下文请求消息 Context Request给old MME以请求用户的移动性管理和会话管理相关信息。通过GUTI映射的old
 RAI和old P-TMSI来标识唯一的old MME。 
-
-
 old MME给new SGSN回上下文响应消息Context Response，消息中携带IMSI、ME Identity
 (if available)、MSISDN。对于new SGSN来说，并不需要识别old MME。由old MME完成EPS承载到PDP上下文的一对一映射，以及QoS参数的映射。old 
 MME仍保留用户的上下文信息，启动资源保护定时器，定时器超时后才删除用户上下文。 
-
-
 （可选）如果Context Response消息中未包含IMEISV且SGSN支持ADD（Automatic
 Device Detection），new SGSN将发起安全流程重新获取ME Identity (the IMEISV)。
-
-
 new SGSN向old MME发送上下文确认消息Context Acknowledge，消息中携带ISR Activated。
 当new SGSN指示ISR为激活状态时，old MME会将上下文中GW和HSS的信息置为无效。这样可以保证在RAU流程还未完成时，UE向old
 MME发起TAU流程，old MME能对GW和HSS的信息进行更新。 
-
-
 new SGSN基于用户所在的位置及用户锚定的PGW确定需要使用的SGW，此SGW与E-UTRAN中选择的SGW相同，new
 SGSN发送修改承载请求消息Modify Bearer Request消息给SGW，消息中携带new SGSN Address
 and TEID, serving network identity, RAT type、ISR Activated。
-
-
 （可选）若Modify bearer request消息携带的RAT type发生了变化，或者消息中携带有User
 Location Information或UE Time Zone IE或User CSG information，SGW向PGW发送Modify
 Bearer Request消息，消息中携带RAT type。
-
-
 （可选）如果启用了动态PCC，并且PCRF订阅了RAT Type或者位置信息等事件，PGW将发起IP-CAN修改流程把这些信息发送给PCRF。 
-
-
 PGW向PCRF发送CCR-U消息，通知PCRF修改IP-CAN会话。 
-
-
 PCRF将PCC规则请求，与IP-CAN会话及PGW可用的业务信息进行关联。 
-
-
 PCRF授权并进行策略决策。 
-
-
 PCRF向PGW返回CCA-U消息，消息中携带PCC Rules、Event Triggers和已选择的IP-CAN承载建立模式（如果有变化）。 
-
-
-
-
 （可选）PGW将Modify bearer request中变化的参数更新到承载上下文中，并向SGW返回Modify
 Bearer Response消息。
-
-
 SGW更新承载上下文，SGW返回承载修改响应消息Modify Bearer Respond给new SGSN，消息中携带SGW
 address and TEID for uplink traffic。
-
-
 new SGSN发起到HSS的位置更新流程，发出Update Location Request消息，将最新的UE位置信息及能力信息通知给HSS，消息中携带SGSN
 Number、SGSN Address、IMSI、Homogenous Support of IMS Over PS Sessions。
-
-
 HSS向old SGSN发起Cancel流程，发送Cancel Location Request消息，消息中携带IMSI、Cancellation
 type，其中Cancellation type设置为Update Procedure，通知old SGSN用户已在new
 SGSN完成接入。
-
-
 old SGSN返回Cancel Location Acknowledge消息给HSS，并删除保存的用户上下文信息。
-
-
 （可选）当old MME收到Context Acknowledge消息时，如果用户的S1连接未释放，则old
 MME会在第5步中资源保护定时器超时后向eNodeB发送S1 Release Command消息。
-
-
 （可选）eNodeB释放RRC连接，向old MME返回S1 Release Complete消息。 
-
-
 HSS完成位置更新流程，记录用户最新所在的位置信息，返回Update Location Acknowledge消息给new SGSN，携带用户的签约数据IMSI和Subscription Data。
-
-
 new SGSN向UE响应Routing Area Update Accept消息，消息中携带P-TMSI、P-TMSI
 signature等信元。
-
-
 （可选）如果Routing Area Update Accept消息中携带了P-TMSI，UE向new
 SGSN发送Routing Area Update Complete消息进行确认新的P-TMSI被UE接受。
-
-
 （可选）如果UE存在上行数据或未处理的信令，则向new SGSN发送Service Request消息，消息中携带P-TMSI,
 CKSN、Service Type。Service Type为指示请求的业务类型，取值为Data或者Signaling。 
-
-
 如果UE发送了Service Request消息，new SGSN会向RNC发送RAB Assignment
 Request消息请求建立一个无线接入承载，消息中携带RAB ID(s)、QoS Profile(s)、GTP SNDs、GTP
 SNUs、PDCP SNUs。 如果建立了Direct Tunnel，SGSN向RNC提供SGW的用户面地址和上行数据的TEID。
-
-
 RNC向new SGSN返回RAB Assignment Response消息。 
-
-
 如果new SGSN在步骤22中建立了Direct Tunnel，则为每个PDN链接向SGW发送Modify Bearer
 Request消息，同时携带RNC的用户面地址和下行数据TEID。 
-
-
 SGW更新下行数据的用户面地址及TEID，并向new SGSN返回Modify Bearer Response消息。 
-
-
-
-
 ### SGW改变的E-UTRAN到UTRAN的RAU流程 
 ### SGW改变的E-UTRAN到UTRAN的RAU流程 
-
-
-业务模型 :从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等，E-UTRAN接入改为UTRAN接入，是为了实现EPS网络和UMTS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
+业务模型 : 
+从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等，E-UTRAN接入改为UTRAN接入，是为了实现EPS网络和UMTS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从E-UTRAN向UTRAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变情况。 
-
-
-信令流程 :SGW改变的E-UTRAN到UTRAN的RAU流程如[图1]所示。
+信令流程 : 
+SGW改变的E-UTRAN到UTRAN的RAU流程如[图1]所示。
 图1  SGW改变的E-UTRAN到UTRAN的RAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从EUTRAN覆盖区域移动到UTRAN强信号覆盖区域，UE选择3G网络。 
-
-
 UE 向RNC发送路由区更新请求消息Routing Area Update Request，消息中携带的old
 RAI和old P‑TMSI由GUTI映射得到。
-
-
 RNC转发路由区更新请求消息Routing Area Update Request给new SGSN。
-
-
 new SGSN发送SGSN上下文请求消息Context Request给old MME，以请求用户的移动性管理和会话管理相关信息。由GUTI映射的old
 RAI和old P-TMSI可以唯一标识old MME。 
-
-
 old MME给new SGSN返回上下文响应消息Context Response，消息中携带MM Context、EPS
 Bearer Contexts、SGW signalling Address and TEID(s)。对于new SGSN来说，并不需要识别old
 MME。由old MME完成EPS承载到PDP上下文的一对一映射，以及QoS参数的映射。old MME仍保留用户的上下文信息，启动资源保护定时器，定时器超时后才删除用户上下文。 
-
-
 （可选）如果Context Response消息中未包含IMEISV且SGSN支持ADD（Automatic
 Device Detection），new SGSN将发起安全流程重新获取ME Identity (the IMEISV)。
-
-
 new SGSN向old MME发送上下文确认消息Context Acknowledge，消息中携带的SGW change
 indication指示了一个已经选择的new SGW。 old MME将上下文中GW和HSS的信息置为无效。这样可以保证在RAU流程还未完成时，UE向old
 MME发起TAU流程，old MME能对GW和HSS的信息进行更新。 
-
-
 new SGSN基于用户所在的位置及用户锚定的PGW确定需要使用的SGW（此SGW与E-UTRAN中选择的SGW不同），new
 SGSN给SGW发送创建会话请求消息Create Session Request，消息中携带IMSI、bearer contexts（包含PGW的地址）、SGSN
 Address and TEID for the control plane、RAT Type、Type（指示SGW给PGW发送Modify
 Bearer Request）、the Protocol Type over S5/S8、Serving Network信息。
-
-
 new SGW向PGW发送修改承载请求消息Modify Bearer Request，消息中携带SGW Address
 、SGW TEID、RAT type、Serving Network信息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW通过向PCRF发送CCR-U消息，发起IP-CAN修改流程，把RAT type等变化的信息发送给PCRF。 
-
-
 PGW向PCRF发送CCR-U消息，通知PCRF修改IP-CAN会话。 
-
-
 PCRF将PCC规则请求，与IP-CAN会话及PGW可用的业务信息进行关联。 
-
-
 PCRF授权并进行策略决策。 
-
-
 PCRF向PGW返回CCA-U消息，消息中携带PCC Rules、Event Triggers和已选择的IP-CAN承载建立模式（如果有变化）。 
-
-
-
-
 PGW更新相关的承载上下文，并向new SGW返回承载修改响应消息Modify Bearer Response。 
-
-
 new SGW更新承载上下文，并向new SGSN返回创建会话响应消息Create Session Response，消息中携带SGW
 address and TEID、PGW Address and TEIDs at the PGW(s) for uplink traffic。 
-
-
 new SGSN发起到HSS的位置更新流程，给HSS发出位置更新请求消息Update Location Request，消息携带SGSN Number、SGSN Address、IMSI、Homogenous Support of IMS Over
 PS Sessions，将最新的UE位置信息及能力信息通知给HSS。
-
-
 HSS向old SGSN发起Cancel流程，发送Cancel Location Request消息给old
 SGSN，消息中携带IMSI、Cancellation type（Cancellation type设置为Update Procedure），通知old
 SGSN用户已在新的SGSN完成接入。
-
-
 old SGSN向HSS响应Cancel Location Acknowledge消息，删除保存的用户上下文信息。
-
-
 （可选）当old MME收到Context Acknowledge消息时，如果用户的S1连接未释放，则old
 MME会在第5步中资源保护定时器超时后向eNodeB发送S1 Release Command消息。
-
-
 （可选）eNodeB释放RRC连接，向old MME返回S1 Release Complete消息。 
-
-
 HSS完成位置更新流程，记录用户最新所在的位置信息，HSS向new SGSN返回位置更新确认消息Update Location Acknowledge，携带用户的签约数据Subscription Data。
-
-
 old MME向old SGW发送删除会话请求消息Delete Session Request，通知old
 SGW释放EPS承载资源，消息中携带Cause，Cause指示old SGW不要向PGW发起承载删除流程。
-
-
 old SGW本地删除用户的会话，不通知PGW，向old MME返回删除会话响应消息Delete Session
 Respond，并丢弃所有为UE缓存的数据包，消息中携带Cause。
-
-
 new SGSN向UE响应Routing Area Update Accept消息，消息中携带P-TMSI、P-TMSI
 signature。
-
-
 （可选）如果Routing Area Update Accept消息中携带了P-TMSI，UE向new
 SGSN发送Routing Area Update Complete消息进行确认新的P-TMSI被UE接受。 
-
-
 （可选）如果UE存在上行数据或未处理的信令，则向new SGSN发送Service Request消息，消息中携带P-TMSI,
 CKSN、Service Type，其中Service Type为指示请求的业务类型，取值为Data或者Signaling。
-
-
 如果UE发送了Service Request消息，new SGSN会向RNC发送RAB指派请求消息RAB Assignment Request，请求建立一个无线接入承载，消息中携带RAB ID(s)、QoS Profile(s)、GTP
 SNDs、GTP SNUs、PDCP SNUs。 如果建立了Direct Tunnel，new SGSN向RNC提供SGW的用户面地址和上行数据的TEID。
-
-
 RNC向new SGSN返回RAB指派应答消息RAB Assignment Response。
-
-
 如果new SGSN在步骤22中建立了Direct Tunnel，则为每个PDN链接向SGW发送修改承载请求消息Modify
 Bearer Request，同时携带RNC的用户面地址和下行数据TEID。  
-
-
 SGW更新下行数据的用户面地址及TEID，并向new SGSN返回修改承载响应消息Modify Bearer Response。 
-
-
-
-
 ### SGW不变的E-UTRAN到GEARN的RAU流程 
 ### SGW不变的E-UTRAN到GEARN的RAU流程 
-
-
-业务模型 :从E-UTRAN向GERAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为GERAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
+业务模型 : 
+从E-UTRAN向GERAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为GERAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从E-UTRAN向GERAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW不改变情况。 
-
-
-信令流程 :SGW不变的E-UTRAN到GEARN的RAU流程如[图1]所示。
+信令流程 : 
+SGW不变的E-UTRAN到GEARN的RAU流程如[图1]所示。
 图1  SGW不变的E-UTRAN到GEARN的RAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从EUTRAN覆盖区域移动到GERAN强信号覆盖区域，UE选择2G网络。 
-
-
 UE 向BSS发送路由区更新请求消息Routing Area Update Request，消息中携带的old
 RAI和old P‑TMSI由GUTI映射得到。
-
-
 BSS转发路由区更新请求消息Routing Area Update Request给new SGSN。
-
-
 new SGSN发送SGSN上下文请求消息 Context Request给old MME以请求用户的移动性管理和会话管理相关信息。通过GUTI映射的old
 RAI和old P-TMSI来标识唯一的old MME。 
-
-
 old MME给new SGSN回上下文响应消息Context Response，消息中携带IMSI、ME Identity
 (if available)、MSISDN。对于new SGSN来说，并不需要识别old MME。由old MME完成EPS承载到PDP上下文的一对一映射，以及QoS参数的映射。old MME仍保留用户的上下文信息，启动资源保护定时器，定时器超时后才删除用户上下文。 
-
-
 （可选）如果Context Response消息中未包含IMEISV且SGSN支持ADD（Automatic
 Device Detection），new SGSN将发起安全流程重新获取ME Identity (the IMEISV)。
-
-
 new SGSN向old MME发送上下文确认消息Context Acknowledge，消息中携带ISR Activated。
 当new SGSN指示ISR为激活状态时，old MME会将上下文中GW和HSS的信息置为无效。这样可以保证在RAU流程还未完成时，UE向old
 MME发起TAU流程，old MME能对GW和HSS的信息进行更新。 
-
-
 new SGSN基于用户所在的位置及用户锚定的PGW确定需要使用的SGW，此SGW与E-UTRAN中选择的SGW相同，new
 SGSN发送修改承载请求消息Modify Bearer Request消息给SGW，消息中携带new SGSN Address
 and TEID, serving network identity, RAT type、ISR Activated。
-
-
 （可选）若Modify bearer request消息携带的RAT type发生了变化，或者消息中携带有User
 Location Information或UE Time Zone IE或User CSG information，SGW向PGW发送Modify
 Bearer Request消息，消息中携带RAT type。 
-
-
 （可选）如果启用了动态PCC，并且PCRF订阅了RAT Type或者位置信息等事件，PGW将发起IP-CAN修改流程把这些信息发送给PCRF。 
-
-
 PGW向PCRF发送CCR-U消息，通知PCRF修改IP-CAN会话。 
-
-
 PCRF将PCC规则请求，与IP-CAN会话及PGW可用的业务信息进行关联。 
-
-
 PCRF授权并进行策略决策。 
-
-
 PCRF向PGW返回CCA-U消息，消息中携带PCC Rules、Event Triggers和已选择的IP-CAN承载建立模式（如果有变化）。 
-
-
-
-
 （可选）PGW将Modify bearer request中变化的参数更新到承载上下文中，并向SGW返回Modify
 Bearer Response消息。
-
-
 SGW更新承载上下文，SGW返回承载修改响应消息Modify Bearer Respond给new SGSN，消息中携带SGW
 address and TEID for uplink traffic。
-
-
 new SGSN发起到HSS的位置更新流程，发出Update Location Request消息，将最新的UE位置信息及能力信息通知给HSS，消息中携带SGSN
 Number、SGSN Address、IMSI、Homogenous Support of IMS Over PS Sessions。
-
-
 HSS向old SGSN发起Cancel流程，发送Cancel Location Request消息，消息中携带IMSI、Cancellation
 type，其中Cancellation type设置为Update Procedure，通知old SGSN用户已在new
 SGSN完成接入。
-
-
 old SGSN返回Cancel Location Acknowledge消息给HSS，并删除保存的用户上下文信息。
-
-
 （可选）当old MME收到Context Acknowledge消息时，如果用户的S1连接未释放，则old
 MME会在第5步中资源保护定时器超时后向eNodeB发送S1 Release Command消息。
-
-
 （可选）eNodeB释放RRC连接，向old MME返回S1 Release Complete消息。 
-
-
 HSS完成位置更新流程，记录用户最新所在的位置信息，返回Update Location Acknowledge消息给new SGSN，携带用户的签约数据IMSI和Subscription Data。
-
-
 new SGSN向UE响应Routing Area Update Accept消息，消息中携带P-TMSI、P-TMSI
 signature等信元。
-
-
 （可选）如果Routing Area Update Accept消息中携带了P-TMSI，UE向new
 SGSN发送Routing Area Update Complete消息进行确认新的P-TMSI被UE接受。 
-
-
-
-
 ### SGW改变的E-UTRAN到GEARN的RAU流程 
 ### SGW改变的E-UTRAN到GEARN的RAU流程 
-
-
-业务模型 :从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为GERAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
+业务模型 : 
+从E-UTRAN向UTRAN的RAU是指UE通过小区重选或重定向等E-UTRAN接入改为GERAN接入，是为了实现EPS网络和GPRS网络互通，满足2/3G和LTE同时签约的用户跨RAT移动的业务连续性。 
 MME与SGSN之间采用S3接口互通，从E-UTRAN向GERAN的RAU流程中SGW可能发生改变或不改变。本业务模型为SGW改变情况。 
-
-
-信令流程 :SGW改变的E-UTRAN到GEARN的RAU流程如[图1]所示。
+信令流程 : 
+SGW改变的E-UTRAN到GEARN的RAU流程如[图1]所示。
 图1  SGW改变的E-UTRAN到GEARN的RAU流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE从EUTRAN覆盖区域移动到GERAN强信号覆盖区域，UE选择2G网络。 
-
-
 UE 向BSS发送路由区更新请求消息Routing Area Update Request，消息中携带的old
 RAI和old P‑TMSI由GUTI映射得到。
-
-
 BSS转发路由区更新请求消息Routing Area Update Request给new SGSN。
-
-
 new SGSN发送SGSN上下文请求消息Context Request给old MME，以请求用户的移动性管理和会话管理相关信息。由GUTI映射的old
 RAI和old P-TMSI可以唯一标识old MME。 
-
-
 old MME给new SGSN回上下文响应消息Context Response，消息中携带MM Context、EPS
 Bearer Contexts、SGW signalling Address and TEID(s)。对于new SGSN来说，并不需要识别old
 MME。由old MME完成EPS承载到PDP上下文的一对一映射，以及QoS参数的映射。old MME仍保留用户的上下文信息，启动资源保护定时器，定时器超时后才删除用户上下文。 
-
-
 （可选）如果Context Response消息中未包含IMEISV且SGSN支持ADD（Automatic
 Device Detection），new SGSN将发起安全流程重新获取ME Identity (the IMEISV)。
-
-
 new SGSN向old MME发送上下文确认消息Context Acknowledge，消息中携带的SGW change
 indication指示了一个已经选择的new SGW。 old MME将上下文中GW和HSS的信息置为无效。这样可以保证在RAU流程还未完成时，UE向old
 MME发起TAU流程，old MME能对GW和HSS的信息进行更新。 
-
-
 new SGSN基于用户所在的位置及用户锚定的PGW确定需要使用的SGW（此SGW与E-UTRAN中选择的SGW不同），new
 SGSN给SGW发送创建会话请求消息Create Session Request，消息中携带IMSI、bearer contexts（包含PGW的地址）、SGSN
 Address and TEID for the control plane、RAT Type、Type（指示SGW给PGW发送Modify
 Bearer Request）、the Protocol Type over S5/S8、Serving Network信息。
-
-
 new SGW向PGW发送修改承载请求消息Modify Bearer Request，消息中携带SGW Address
 、SGW TEID、RAT type、Serving Network信息。 
-
-
 （可选）如果启用了动态PCC，且PCRF订阅了RAT type等信息，PGW通过向PCRF发送CCR-U消息，发起IP-CAN修改流程，把RAT type等变化的信息发送给PCRF。 
-
-
 PGW向PCRF发送CCR-U消息，通知PCRF修改IP-CAN会话。 
-
-
 PCRF将PCC规则请求，与IP-CAN会话及PGW可用的业务信息进行关联。 
-
-
 PCRF授权并进行策略决策。 
-
-
 PCRF向PGW返回CCA-U消息，消息中携带PCC Rules、Event Triggers和已选择的IP-CAN承载建立模式（如果有变化）。 
-
-
-
-
 PGW更新相关的承载上下文，并向new SGW返回承载修改响应消息Modify Bearer Response。 
-
-
 new SGW更新承载上下文，并向new SGSN返回创建会话响应消息Create Session Response，消息中携带SGW
 address and TEID、PGW Address and TEIDs at the PGW(s) for uplink traffic。 
-
-
 new SGSN发起到HSS的位置更新流程，给HSS发出位置更新请求消息Update Location Request，消息携带SGSN Number、SGSN Address、IMSI、Homogenous Support of IMS Over
 PS Sessions，将最新的UE位置信息及能力信息通知给HSS。
-
-
 HSS向old SGSN发起Cancel流程，发送Cancel Location Request消息给old
 SGSN，消息中携带IMSI、Cancellation type（Cancellation type设置为Update Procedure），通知old
 SGSN用户已在新的SGSN完成接入。
-
-
 old SGSN向HSS响应Cancel Location Acknowledge消息，删除保存的用户上下文信息。
-
-
 （可选）当old MME收到Context Acknowledge消息时，如果用户的S1连接未释放，则old
 MME会在第5步中资源保护定时器超时后向eNodeB发送S1 Release Command消息。
-
-
 （可选）eNodeB释放RRC连接，向old MME返回S1 Release Complete消息。 
-
-
 HSS完成位置更新流程，记录用户最新所在的位置信息，HSS向new SGSN返回Update Location
 Acknowledge消息，携带用户的签约数据Subscription Data。
-
-
 old MME向old SGW发送删除会话请求消息Delete Session Request，通知old
 SGW释放EPS承载资源，消息中携带Cause，Cause指示old SGW不要向PGW发起承载删除流程。
-
-
 old SGW本地删除用户的会话，不通知PGW，向old MME返回删除会话响应消息Delete Session
 Respond，并丢弃所有为UE缓存的数据包，消息中携带Cause。
-
-
 new SGSN向UE响应Routing Area Update Accept消息，消息中携带P-TMSI、P-TMSI
 signature。 
-
-
 （可选）如果Routing Area Update Accept消息中携带了P-TMSI，UE向new
 SGSN发送Routing Area Update Complete消息进行确认新的P-TMSI被UE接受。
-
-
-
-
 ### 业务请求流程 
 
-
-业务模型 :业务请求流程是重建用户的S1-MME 口S1信令连接和S1-U口所有承载的E-RAB连接的流程。 
+业务模型 : 
+业务请求流程是重建用户的S1-MME 口S1信令连接和S1-U口所有承载的E-RAB连接的流程。 
 在业务请求流程中，用户的S1连接和E-RAB连接都被重建，空口的RRC连接和RB连接也会一并被重建。eNodeB保存用户的安全等信息，UE和MME中用户的ECM状态从空闲态变为连接态。 
 业务请求流程完成之后，用户能继续通过EPS网络访问数据业务和其他业务。 
-
-
-信令流程 :业务请求流程如[图1]所示。
+信令流程 : 
+业务请求流程如[图1]所示。
 图1  业务请求流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE发送RRC消息给eNodeB，RRC消息中包含UE发送给MME的Service Request消息。
-
-
 eNodeB发送Initial UE Message消息给MME，其中包括UE发送给MME的Service
 Request消息。如果MME不能处理该业务请求，则拒绝业务请求。
-
-
 （可选）根据运营商的策略，非接入层的鉴权/安全过程可能被执行。 
-
-
 MME发送Initial Context Setup Request消息给eNodeB，激活所有EPS承载的无线承载和S1承载。
-
-
 eNodeB执行Radio Bearer Establishment过程，并且建立用户面安全上下文。当用户面无线承载建立和业务请求过程完成，EPS承载状态在用户与网络侧同步之后，UE将删除没有无线承载的EPS承载。如果一个缺省EPS承载的无线承载没有建立，UE必须本地去激活与这个缺省承载相关联的所有EPS承载。 
-
-
 从UE发送的上行数据报文通过eNodeB发送给SGW，SGW再把上行数据报文发送给PGW。 
-
-
 eNodeB发送Initial Context Setup Complete消息给MME。
-
-
 MME按每PDN连接发送Modify Bearer Request消息给SGW，SGW收到Modify
 Bearer Request消息后，就能把下行数据报文发送给用户了。
-
-
 （可选）如果用户接入方式发生了改变或用户的位置信息发生了改变，SGW按每PDN连接发送Modify Bearer
 Request消息给PGW。
-
-
 （可选）如果动态PCC被部署，根据用户接入方式，PGW和PCRF完成IP-CAN会话修改过程。如果动态PCC没有被部署，PGW使用本地Qos策略。 
-
-
 （可选）PGW向SGW响应Modify Bearer Response消息。
-
-
 SGW向MME响应Modify Bearer Response消息。
-
-
-
-
 ### 寻呼流程 
 
-
-业务模型 :寻呼流程是通知用户有用户下行数据报文或下行信令消息要发送给用户的流程。 
+业务模型 : 
+寻呼流程是通知用户有用户下行数据报文或下行信令消息要发送给用户的流程。 
 在寻呼流程中，用户得知有下行数据报文或下行信令消息需要接收，会触发用户发起业务请求流程。 
 寻呼流程完成之后，用户发起业务请求对寻呼进行响应，通过业务请求流程重建S1-MME
 口S1信令连接和S1-U口所有承载的E-RAB连接，业务请求流程完成之后，用户就能继续通过EPS网络访问数据业务和其他业务。 
-
-
-信令流程 :寻呼流程如[图1]所示。
+信令流程 : 
+寻呼流程如[图1]所示。
 图1  寻呼流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 如果SGW收到下行数据报文，但是对应承载的S1-U资源被释放，SGW缓存下行数据报文。 
-
-
 SGW向UE所在的MME发送Downlink Data Notification消息。
-
-
 MME发送Downlink Data Notification Acknowledge消息给SGW。如果SGW又收到发给这个用户的下行数据报文，SGW缓存数据报文，不会再给MME发送Downlink
 Data Notification消息。
-
-
 MME发送Paging消息给用户所在的TA /TA List对应的每一个eNodeB。
-
-
 eNodeB向UE发起寻呼。 
-
-
 UE收到eNodeB发送的Paging消息后，触发业务请求流程，详细流程参见“[业务请求流程]”
 。
-
-
-
-
 ### S1释放流程 
 
-
-业务模型 :S1释放流程是释放用户的S1-MME 口S1信令连接和S1-U口所有承载的E-RAB连接的流程。 
+业务模型 : 
+S1释放流程是释放用户的S1-MME 口S1信令连接和S1-U口所有承载的E-RAB连接的流程。 
 在S1释放流程中，用户的S1连接和E-RAB连接都被释放，空口的RRC连接和RB连接也会一并被释放。eNodeB不再保存用户的任何信息，UE和MME中用户的ECM状态从连接态变为空闲态。Non-GBR承载会被保留，GBR承载根据运营商策略，可以被保留或去激活。如果去激活GBR承载，触发MME发起的专有承载释放流程。 
-
-
-信令流程 :S1释放流程如[图1]所示。
+信令流程 : 
+S1释放流程如[图1]所示。
 图1  S1释放流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 （可选）eNodeB检测到需要释放用户的信令连接和RB连接，向MME发送S1 UE Context Release
 Request消息。
-
-
 MME发送Release Access Bearers Request消息给SGW，请求SGW释放承载的S1-U口资源。
-
-
 SGW删除所有与eNodeB相关的UE信息（eNodeB的用户面地址和TEID），给MME回Release Access
 Bearers Response消息。该UE的SGW上下文的其它信息单元不受影响。 SGW保留了其为该UE的承载所分配的S1-U配置。如果有给UE的下行数据分组包，SGW开始缓存下行给UE的分组包，并发起网络触发的业务请求过程。
-
-
 MME发送S1 UE Context Release Command给eNodeB，通知eNodeB释放S1信令连接。
-
-
 （可选）如果RRC连接还没有释放，eNodeB发送RRC Connection Release给用户，用户确认RRC连接释放后，eNodeB删除用户的所有相关信息。
-
-
 eNodeB发送S1 UE Context Release Complete消息给MME，确认S1连接的释放。MME删除与eNodeB有关的该UE的上下文信息(eNodeB地址和TEIDs)，但保留UE的其余上下文信息，包括SGW的S1-U配置信息(SGW地址和TEIDs)。为UE建立的所有non-GBR
 EPS承载被保存在MME和SGW内。
-
-
-
-
 ### SGW不变的X2-based切换流程 
 
-
-业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。 
+业务模型 : 
+MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。 
 本流程是在MME和SGW均不改变的情况下，UE从源eNodeB切换到目标eNodeB的流程。 
-
-
-信令流程 :SGW不变的X2-based切换流程，如[图1]示。
+信令流程 : 
+SGW不变的X2-based切换流程，如[图1]示。
 图1  SGW不变的X2-based切换流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 Target eNodeB发送Path Switch Request消息给MME通知UE已经改变小区，消息中携带目标小区的小区全局标识（TAI+ECGI）以及需要切换路径的EPS承载列表，MME根据TAI确定SGW不需要改变。
-
-
 MME按每PDN连接发送Modify Bearer Request消息给SGW，通知更新eNodeB用户面信息。
-
-
 可选：如果SGW从MME收到了用户位置信息，则按每PDN连接给PGW发送Modify Bearer Request消息。消息包含：Serving
 GW Address and TEID、User Location Information、和/或UE Time Zone、和/或Serving
 Network。 
-
-
 可选：PGW将Modify Bearer Request消息中变化的参数更新到承载上下文中，并向SGW返回Modify Bearer Response消息。
-
-
 SGW用新接收的eNodeB地址和TEIDs开始发送下行数据报文给Target eNodeB，并给MME回Modify
 Bearer Response消息。
-
-
 为了辅助Target eNodeB中重排序功能，在路径切换完成之后，SGW立刻发送一个或多个“End Marker”报文给Source
 eNodeB。 
-
-
 MME给Target eNodeB发送Path Switch Request Acknowledge消息，确认路径切换请求完成。
-
-
 Target eNodeB发送Release Resource消息给Source eNodeB，通知切换成功和触发源eNodeB资源释放。
-
-
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
-
-
-
-
 ### SGW改变的X2-based切换流程 
 
-
-业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。 
+业务模型 : 
+MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。 
 本流程是在MME不变，但SGW发生改变的情况下，UE从源 eNodeB切换到目标eNodeB的流程。 
-
-
-信令流程 :SGW改变的X2-based切换流程，如[图1]所示。
+信令流程 : 
+SGW改变的X2-based切换流程，如[图1]所示。
 图1  SGW改变的X2-based切换流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 Target eNodeB发送Path Switch Request消息给MME通知UE已改变小区，消息中携带目标小区的小区全局标识（TAI+ECGI）以及需要切换路径的EPS承载列表，
 MME根据TAI确定SGW需要改变，并选择一个新的SGW。
-
-
 MME按每PDN连接发送Create Session Request消息给Target SGW。
-
-
 Target SGW向PGW发送Modify Bearer Request消息，其中包含Serving
 GW Address and TEID、RAT type、Serving Network等信息。
-
-
 PGW更新相关的承载上下文，并向Target SGW返回Modify Bearer Response消息。自此，若有下行数据，PGW发送给Target
 SGW。 
-
-
 Target SGW发送Create
 Session Response消息给MME，MME启动一个定时器，用于释放源SGW的资源。
-
-
 MME给Target eNodeB发送Path Switch Request Acknowledge消息，确认路径切换请求完成，Target
 eNodeB开始把上行数据报文发送给Target SGW。
-
-
 Target eNodeB发送Release Resource消息给Source eNodeB，通知切换成功和触发Source
 eNodeB资源释放。
-
-
 MME在步骤[5]设置的释放SGW资源的定时器超时了，MME给Source SGW发送Delete Session Request消息通知Source SGW释放承载资源。
-
-
 Source SGW给MME回Delete Session Response消息确认承载资源释放。
-
-
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
-
-
-
-
 ### MME、SGW均不改变的S1-based切换流程 
 ### MME、SGW均不改变的S1-based切换流程 
-
-
-业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
+业务模型 : 
+MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
 该业务使用于MME和SGW均不改变的情况下，UE从Source eNodeB切换到Target eNodeB的基于S1接口的切换流程。 
-
-
-信令流程 :MME、SGW均不改变的S1-based切换流程，如[图1]所示。
+信令流程 : 
+MME、SGW均不改变的S1-based切换流程，如[图1]所示。
 图1  MME、SGW均不改变的S1-based切换流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 在以下情况，会导致Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
-
  
 到Target eNodeB没有X2连接。 
-
  
 目标侧eNodeB告知Source eNodeB之前的X2-based handover失败。 
-
  
 Source eNodeB收到动态信息。 
-
  
-
-
 Source eNodeB向MME发送Handover Required消息请求切换，消息中包含：Direct
 Forwarding Path Availability，Source to Target transparent container，Target
 eNodeB Identity，Target TAI，S1AP Cause参数。MME根据Target eNodeB Identity判断MME不需要改变，且根据Target
 TAI判断SGW也不需要改变。
-
-
 MME向Target eNodeB发送Handover Request消息通知Target eNodeB进行切换资源准备，消息中包含：EPS
 Bearers to Setup，AMBR，S1AP Cause，Source to Target transparent container，Handover
 Restriction List参数。
-
-
 Target eNodeB向MME发送Handover Request Ackownledge消息确认切换资源准备完成，消息中包含：EPS
 Bearer Setup list，EPS Bearers failed to setup list，Target to Source
 transparent container参数.
  说明： 
 如果所有default EPS bearers都被Target
 eNodeB拒绝，则MME拒绝切换处理。 
-
-
 可选：如果采用间接转发，MME向SGW发送Create Indirect Data Forwarding
 Tunnel Request消息通知SGW创建间接数据前转隧道，消息中包含：Cause，Target eNodeB addresses
 and TEIDs for forwarding参数，SGW重定位的情况下，消息包括到Target SGW的隧道标识。
-
-
 可选：SGW向MME响应Create Indirect Data Forwarding Tunnel
 Response消息，消息包含：Target Serving GW addresses and TEIDs for forwarding参数。
-
-
 MME向Source eNodeB发送Handover Command消息通知切换执行，消息中包括：Target
 to Source transparent container，Bearers subject to forwarding，Bearers
 to Release。
 Source eNodeB在Target to Source transparent container中构造Handover Command消息，并发送给UE。
-
-
 可选：Source eNodeB通过MME向Target eNodeB发送eNB Status Transfer消息，该消息传递E-RAB对应的PDCP和HFN状态信息。如果没有E-RAB采用PDCP状态保存机制，则源eNodeB可能不会发送此消息。
-
-
 可选：Source eNodeB通过直接数据前转的方式，把接收到的下行数据报文前转给Target eNodeB。
-
-
 可选：Source eNodeB通过间接数据前转的方式，把接收到的下行数据报文前转给Target eNodeB。
-
-
 UE成功的同步到目的小区后，会向Target eNodeB发送Handover Confirm消息确认切换。
 从Source eNodeB转发的下行数据包可以发送给UE，同样，从UE发出的上行数据包可以转发给SGW，从而到达PGW。 
-
-
 Target eNodeB向MME发送Handover Notify消息通知切换，消息中包含：TAI+ECGI。
 MME启动一个定时器来监视Source
 eNodeB和SGW的资源释放情况。 
-
-
 MME按每PDN连接向SGW发送Modify Bearer Request消息请求修改承载，消息中包含：eNodeB
 addresses and TEIDs allocated at the target eNodeB for downlink traffic
 on S1_U for the accepted EPS bearers参数。
-
-
 可选：如果Modify Bearer Request消息中携带有变化的User Location
 Information和/或UE Time Zone和/或User CSG Information等信息，则为每个PDN连接向PGW发送Modify Bearer Request消息，消息包含：User Location Information IE、UE
 Time Zone IE、User CSG Information IE。
-
-
 可选：PGW将Modify Bearer Request消息中变化的参数更新到承载上下文中，并向SGW返回Modify Bearer Response消息。
-
-
 SGW向MME发送Modify Bearer Response消息。
 如果SGW没有发生改变，为了辅助Target
 eNodeB中的重排序功能（reordering function），在SGW完成路径切换之后，SGW立刻发送一个或多个“End Mark”报文给Source
 eNodeB。 
-
-
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
-
-
 当步骤[12]中的定时器T1超时，MME向Source eNodeB发送UE
 Context Release Command消息通知释放用户上下文。
-
-
 Source eNodeB释放用户相关的所有资源，向MME回响应UE Context Release Complete消息。
-
-
 可选：MME的资源释放定时器超时，如果间接转发被使用，MME向SGW发送Delete Indirect
 Data Forwarding Tunnel Request消息，释放间接数据前转隧道资源。
-
-
 可选：SGW向MME回响应Delete Indirect Data Forwarding Tunnel
 Response消息。
-
-
-
-
 ### MME不变、SGW改变的S1-based切换流程 
-业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
+业务模型 : 
+MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
 该业务使用于MME不变、SGW改变的情况下，UE从源eNodeB切换到目标eNodeB的基于S1接口的切换流程。 
-信令流程 :MME不变、SGW改变的S1-based切换流程，如[图1]所示。
+信令流程 : 
+MME不变、SGW改变的S1-based切换流程，如[图1]所示。
 图1  MME不变、SGW改变的S1-based切换流程
-
-流程说明 :在以下情况，会导致Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
+流程说明 : 
+在以下情况，会导致Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
 到Target eNodeB没有X2连接。 
 目标侧eNodeB告知Source eNodeB之前的X2-based handover失败。 
 Source eNodeB收到动态信息。 
@@ -15201,42 +14295,25 @@ Tunnel Response消息。
 可选：当步骤[16]中的定时器T2超时，如果间接转发被使用，MME向Target SGW发送Delete Indirect Data Forwarding Tunnel Request消息，释放间接数据前转隧道资源。
 ### MME重选、SGW不变的S1-based切换流程 
 ### MME重选、SGW不变的S1-based切换流程 
-
-
-业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
+业务模型 : 
+MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
 该业务使用于MME改变、SGW不变的情况下，UE从源eNodeB切换到目标eNodeB的基于S1接口的切换流程。 
-
-
-信令流程 :MME重选、SGW不变的S1-based切换流程，如[图1]所示。
+信令流程 : 
+MME重选、SGW不变的S1-based切换流程，如[图1]所示。
 图1  MME重选、SGW不变的S1-based切换流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 基于如下原因，Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
-
  
 到Target eNodeB没有X2连接。 
-
  
 Target eNodeB告知Source eNodeB之前的X2-based handover失败。 
-
  
 Source eNodeB收到动态信息。 
-
  
-
-
 Source eNodeB向Source MME发送Handover Required消息请求切换，消息中包含：Direct
 Forwarding Path Availability、Source to Target transparent container、target
 eNodeB Identity、CSG ID、CSG access mode、target TAI、S1AP Cause等参数，MME根据Target
 eNodeB Identity判断MME不需要改变。
-
-
 Source MME选择Target MME，然后向Target MME发送Forward Relocation
 Request消息，消息中包括MME UE context, Source to Target transparent container,
 RAN Cause, target eNodeB Identity, CSG ID, CSG Membership Indication,
@@ -15244,117 +14321,71 @@ target TAI, MS Info Change Reporting Action (if available), CSG Information
 Reporting Action (if available), UE Time Zone, Direct Forwarding Flag,
 Serving Network, Local Home Network ID等参数。
 Target MME根据TAI判断SGW没有发生改变。 
-
-
 Target MME向Target eNodeB发送Handover Request消息，消息中包括(EPS
 Bearers to Setup, AMBR, S1AP Cause, Source to Target transparent container,
 CSG ID, CSG Membership Indication, Handover Restriction List等参数。Target
 eNodeB收到消息后会创建UE上下文，包含承载信息和安全上下文。
-
-
 Target eNodeB回复Handover Request Acknowledge消息，消息中包括EPS
 Bearer Setup list, EPS Bearers failed to setup list Target to Source
 transparent container等参数。如果UE-AMBR发生了变化，MME重新计算新UE-AMBR，并告知Target
 eNodeB。
  说明： 
 如果所有default EPS bearers都被目标eNodeB拒绝，则MME拒绝handover。 
-
-
 Target MME向Source MME发送Forward Relocation Response消息，消息中包括Cause,
 Target to Source transparent container, Serving GW change indication,
 EPS Bearer Setup List, Addresses and TEIDs等参数。
-
-
 可选：如果使用间接转发，Source MME向SGW发送Create Indirect Data
 Forwarding Tunnel Request消息，消息中包括addresses and TEIDs for forwarding。
-
-
 SGW向Source MME回复Create Indirect Data Forwarding Tunnel Response消息，消息中包括Serving GW addresses and TEIDs for forwarding。
-
-
 Source MME向Source eNodeB发送Handover Command消息，消息中包括Target
 to Source transparent container, Bearers subject to forwarding。Bearers
 to Release等参数。Bearers subject to forwarding包含地址和用于转发的TEID列表。Bearers
 to Release包含需要释放的承载列表。
 Source eNodeB在Target to Source transparent
 container中构造Handover Command消息，并发送给UE。在收到消息之后，UE将删除没有收到目标小区中相关EPS无线承载的EPS承载。
-
-
 可选：Source eNodeB通过MME向Source MME发送eNodeB Status Transfer消息。如果没有E-RAB采用PDCP状态保存机制，则Source eNodeB可能不会发送此消息。
 发生MME重定位时，Source
 MME通过Forward Access Context Notification消息将此消息转发给目标MME。Target
 MME向Source MME响应Forward Access Context Acknowledge消息后，向Target
 eNodeB发送eNB Status Transfer消息。
-
-
 Source eNodeB使用直接转发从Source eNodeB到Target eNodeB转发下行链路数据。 
-
-
 Source eNodeB使用间接转发从Source eNodeB到Target eNodeB转发下行链路数据 
-
-
 UE成功地同步到目标小区后，向Target eNodeB发送Handover Confirm消息。
 从Source eNodeB转发的下行数据包可以发送给UE，同样，从UE发出的上行数据包可以转发给Target SGW，到达PGW。 
-
-
 Target eNodeB发送Handover Notify给Target MME，消息中包括(TAI+ECGI,
 Local Home Network ID等参数。
-
-
 Target MME向Source MME回复Forward Relocation Complete Notification消息。
-
-
 Source MME向Target
 MME响应Forward Relocation Complete Acknowledge消息，并启动定时器T3来监视Source
 eNodeB和Source SGW的资源的释放情况。
-
-
 Target MME按每PDN连接向SGW发送Modify Bearer Request消息，消息中包括eNodeB
 address and TEID allocated at the target eNodeB for downlink traffic
 on S1 U for the accepted EPS bearers等参数。
 如果PGW请求了User Location
 Information或者User CSG information（由UE上下文判断），MME也会在这条信息中包含这两个信元。如果UE的时区（Time
 Zone）发生了改变，MME在信息中包含UE Time Zone信元。 
-
-
 可选：若Modify bearer request消息携带有变化的User Location
 Information或UE Time Zone IE等信息，SGW向PGW发送Modify Bearer Request消息，消息包含：User Location Information IE、UE Time Zone IE、User CSG Information
 IE。
-
-
 可选：PGW更新本地上下文并向SGW返回Modify Bearer Response消息。
-
-
 SGW向Target MME发送Modify Bearer Response消息。
-
-
 当满足跟踪区更新触发条件之一时，UE发起一个跟踪区更新过程。 
-
-
 当[16]中的定时器T3超时，Source MME向Source eNodeB发送UE Context Release Command消息。
-
-
 Source eNodeB释放与UE相关的资源并向Source MME响应UE Context Release
 Complete消息。
-
-
 可选：如果使用间接转发且[16]中的定时器T3超时，源MME向SGW发送Delete Indirect
 Data Forwarding Tunnel Request消息，释放为间接转发分配的临时资源。
-
-
 可选：SGW向Source MME响应Delete Indirect Data Forwarding
 Tunnel Session Response消息。
-
-
-
-
 ### MME和SGW均重选的S1-based切换流程 
-业务模型 :MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
+业务模型 : 
+MME网元切换流程是用户从一个小区移动到另一个小区时保证用户业务连续性的过程，包括基于X2口和S1口的切换。在切换过程中，用户的无线连接无缝切换到目的无线接入网络。切换流程完成之后，用户可以在新的无线接入网络中继续使用数据业务和其他业务。 
 该业务使用于MME改变、SGW改变的情况下，UE从源eNodeB切换到目标eNodeB的基于S1接口的切换流程。 
-信令流程 :MME和SGW均重选的S1-based切换流程，如[图1]所示。
+信令流程 : 
+MME和SGW均重选的S1-based切换流程，如[图1]所示。
 图1  MME和SGW均重选的S1-based切换流程
-
-流程说明 :基于如下原因，Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
+流程说明 : 
+基于如下原因，Source eNodeB决定发起基于S1口的eNodeB间的切换流程。 
 到Target eNodeB没有X2连接。 
 Target eNodeB告知Source eNodeB之前的X2-based handover失败。 
 Source eNodeB收到动态信息。 
@@ -15445,11 +14476,13 @@ Tunnel Session Response消息。
 可选：Target SGW向Target MME响应Delete Indirect Data Forwarding
 Tunnel Session Response消息。
 ### MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程 
-业务模型 :用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。MME和SGSN间使用Gn接口。 
-信令流程 :MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程，如[图1]所示。
+业务模型 : 
+用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。MME和SGSN间使用Gn接口。 
+信令流程 : 
+MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程，如[图1]所示。
 图1  MME和SGSN采用Gn口的UTRAN到E-UTRAN的切换流程
-
-流程说明 :源RNC决策发起向E-UTRAN的切换。 
+流程说明 : 
+源RNC决策发起向E-UTRAN的切换。 
 源RNC向old Gn/Gp SGSN发送重定位申请消息Relocation Required，触发重定位流程，消息中携带Relocation
 Type、Cause、Source ID、Target ID、Source RNC To target eNodeB Transparent
 Container。
@@ -15519,12 +14552,14 @@ Data Forwarding Tunnel Request，请求删除数据转发隧道。
 （可选）SGW向new MME返回删除间接数据转发隧道应答消息Delete Indirect Data Forwarding
 Tunnel Response。
 ### MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程 
-业务模型 :用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱，但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
+业务模型 : 
+用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱，但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
 MME和SGSN间使用Gn接口。 
-信令流程 :MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程，如[图1]所示。
+信令流程 : 
+MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程，如[图1]所示。
 图1  MME和SGSN采用Gn口的E-UTRAN到UTRAN的切换流程
-
-流程说明 :源eNodeB决策发起向UTRAN的切换。此时，上下行用户数据通过如下承载进行传输：Bearer(s) between
+流程说明 : 
+源eNodeB决策发起向UTRAN的切换。此时，上下行用户数据通过如下承载进行传输：Bearer(s) between
 UE and source eNodeB、 GTP tunnel(s) between source eNodeB and SGW
 、GTP tunnel(s) between SGW and PGW。 
 源eNodeB向old MME发送切换申请消息Handover Required，触发切换流程，消息中携带S1
@@ -15588,16 +14623,17 @@ Gn/Gp SGSN从HSS得到Subscribed QoS profile。
 SGW向old MME回复删除会话响应消息Delete Session Response，消息中携带Cause。
 old MME通知源eNodeB释放资源。old MME向源eNodeB发送释放资源消息Release Resources。当源eNodeB收到Release Resources消息，不再需要eNodeB转发数据时，源eNodeB释放其资源。
 ### SGW不变的UTRAN到E-UTRAN的切换流程 
-业务模型 :用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。 
+业务模型 : 
+用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。 
 MME和SGSN间使用S3接口，且SGW不改变。 
-信令流程 :该流程分为准备阶段和执行阶段。 
+信令流程 : 
+该流程分为准备阶段和执行阶段。 
 SGW不变的UTRAN到E-UTRAN的切换流程的准备阶段的流程图如[图1]所示。
 图1  SGW不变的UTRAN到E-UTRAN的切换流程-准备阶段
-
 SGW不变的UTRAN到E-UTRAN的切换流程的执行阶段的流程图如[图2]所示。
 图2  SGW不变的UTRAN到E-UTRAN的切换流程-执行阶段
-
-流程说明 :准备阶段：
+流程说明 : 
+准备阶段：
 源RNC决策发起向E-UTRAN的切换。 
 源RNC向源S3/S4 SGSN发送重定位申请消息Relocation Required，触发重定位流程，消息中携带Relocation
 Type、Cause、Source ID、Target ID、Source RNC To target eNodeB Transparent
@@ -15660,16 +14696,17 @@ Release Complete消息。
 可选：SGW删除数据转发隧道，SGW向目标MME返回删除间接数据转发隧道应答消息Delete Indirect
 Data Forwarding Tunnel Response。
 ### SGW改变的UTRAN到E-UTRAN的切换流程 
-业务模型 :用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。 
+业务模型 : 
+用户通过UTRAN注册到PS网络，正在使用数据业务，移动到LTE覆盖信号强的区域后，UTRAN为了保持用户数据业务的连续性，把用户从UTRAN切换到E-UTRAN。 
 MME和SGSN间使用S3接口，SGW发生改变。 
-信令流程 :该流程分为准备阶段和执行阶段。 
+信令流程 : 
+该流程分为准备阶段和执行阶段。 
 SGW改变的UTRAN到E-UTRAN的切换流程的准备阶段的流程图如[图1]所示。
 图1  SGW改变的UTRAN到E-UTRAN的切换流程-准备阶段
-
 SGW改变的UTRAN到E-UTRAN的切换流程的执行阶段的流程图[图2]所示。
 图2  SGW改变的UTRAN到E-UTRAN的切换流程-执行阶段
-
-流程说明 :准备阶段：
+流程说明 : 
+准备阶段：
 源RNC决策发起向E-UTRAN的切换。 
 源RNC向源S3/S4 SGSN发送重定位申请消息Relocation Required，触发重定位流程，消息中携带Relocation
 Type、Cause、Source ID、Target ID、Source RNC To target eNodeB Transparent
@@ -15749,16 +14786,17 @@ Data Forwarding Tunnel Request，请求删除数据转发隧道。
 可选：目标SGW向目标MME返回删除间接数据转发隧道应答消息Delete Indirect Data Forwarding
 Tunnel Response。
 ### SGW不变的E-UTRAN到UTRAN的切换流程 
-业务模型 :用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
+业务模型 : 
+用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
 MME和SGSN间使用S3接口，且SGW不改变。 
-信令流程 :该流程分为准备阶段和执行阶段。 
+信令流程 : 
+该流程分为准备阶段和执行阶段。 
 SGW不变的E-UTRAN到UTRAN的切换流程的流程图如[图1]所示。
 图1  SGW不变的E-UTRAN到UTRAN的切换流程-准备阶段
-
 SGW不变的E-UTRAN到UTRAN的切换流程的执行阶段的流程图如[图2]所示。
 图2  SGW不变的E-UTRAN到UTRAN的切换流程-执行阶段
-
-流程说明 :准备阶段：
+流程说明 : 
+准备阶段：
 源eNodeB决策发起向UTRAN的切换。此时，上下行用户数据通过如下承载进行传输：Bearer(s) between
 UE and source eNodeB、 GTP tunnel(s) between source eNodeB and SGW
 、GTP tunnel(s) between SGW and PGW。 
@@ -15837,16 +14875,17 @@ Tunnel Request，请求删除数据转发隧道。
 可选：SGW删除数据转发隧道，SGW向源MME返回删除间接数据转发隧道应答消息Delete Indirect Data
 Forwarding Tunnel Response。
 ### SGW改变的E-UTRAN到UTRAN的切换流程 
-业务模型 :用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
+业务模型 : 
+用户通过LTE注册到EPS网络，正在使用数据业务，移动到LTE覆盖信号弱但UTRAN覆盖信号强的区域后，E-UTRAN为了保持用户数据业务的连续性，把用户从E-UTRAN切换到UTRAN。 
 MME和SGSN间使用S3接口，且SGW发送改变。 
-信令流程 :该流程分为准备阶段和执行阶段。 
+信令流程 : 
+该流程分为准备阶段和执行阶段。 
 SGW改变的E-UTRAN到UTRAN的切换流程的准备阶段的流程图如[35%20SGW改变的E-UTRAN到UTRAN的切换流程.html#HandoverFromUTRANIuModeToE-UTRANByS-4E2C635C__SGW改变的E-UTRAN到UTRAN的切换流程-准备阶段-54374ED5]所示。
 图1  SGW改变的E-UTRAN到UTRAN的切换流程-准备阶段
-
 SGW改变的E-UTRAN到UTRAN的切换流程的执行阶段的流程图如[图2]所示。
 图2  SGW改变的E-UTRAN到UTRAN的切换流程-执行阶段
-
-流程说明 :准备阶段：
+流程说明 : 
+准备阶段：
 源eNodeB决策发起向UTRAN的切换。此时，上下行用户数据通过如下承载进行传输：Bearer(s) between
 UE and source eNodeB、 GTP tunnel(s) between source eNodeB and S-GW
 、GTP tunnel(s) between SGW and PGW。 
@@ -15940,30 +14979,17 @@ Forwarding Tunnel Response。
 ## 会话管理 
 ### UE请求PDN连接 
 ### UE请求PDN连接 
-
-
-业务模型 :EPS支持UE发起的PDN连接建立，允许UE通过多PDN连接接入一个或多个PDN网络。UE发起的PDN连接流程是指当UE注册到EPS网络上后，UE可以同时激活到不同PGW或相同PGW的多个PDN连接过程。 
+业务模型 : 
+EPS支持UE发起的PDN连接建立，允许UE通过多PDN连接接入一个或多个PDN网络。UE发起的PDN连接流程是指当UE注册到EPS网络上后，UE可以同时激活到不同PGW或相同PGW的多个PDN连接过程。 
 PDN连接建立的流程与Attach过程中的默认承载建立过程类似，MME为UE选择接入的PGW，建立UE到PGW的PDN连接。多PDN连接流程完成之后，用户可以通过EPS网络申请多个IP地址，建立到不同PGW或相同PGW的多个PDN连接，访问数据业务和其他业务，当UE不再需要通过这个PDN连接访问数据业务和其他业务时，也可以通过去激活PDN连接，释放已申请的IP地址。 
-
-
-信令流程 :UE请求PDN连接的流程如[图1]所示。
+信令流程 : 
+UE请求PDN连接的流程如[图1]所示。
 图1  UE请求PDN连接
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 UE向eNodeB发送PDN Connectivity Request消息请求建立PDN连接，消息包含：APN、PDN
 Type、Protocol Configuration Options、Request Type。 
-
-
 MME根据APN为UE选择接入的PGW，然后向SGW发送Create Session Request（创建会话请求）消息，请求建立缺省承载，此消息中携带PGW的地址（PDN
 GW address）。 
-
-
 SGW在EPS承载列表中创建一个新的EPS承载，并根据流程第2步中收到的PGW的地址（PDN GW address）向PGW发送Create
 Session Request（创建会话请求）消息。 
 此消息中包括IMSI, MSISDN, APN, Serving
@@ -15973,6731 +14999,2707 @@ QoS, PDN Type, PDN Address, subscribed APN-AMBR, EPS Bearer Identity,
 Protocol Configuration Options, ME Identity, User Location Information
 (ECGI), UE Time Zone等信息。此步流程以后，SGW将缓存从PGW接收的所有下行分组数据报文，直到收到13步的Modify
 Bearer Request（修改承载请求）消息，在这之前不能发送下行数据给MME。  
-
-
 （可选）如果分组核心网部署了动态PCC并且切换指示不存在（未收到Handover Indication信元），PGW发起IP-CAN会话建立过程流程，从而获得UE的默认PCC规则；如果部署了动态PCC并且切换指示存在（收到Handover
 Indication信元），PGW发起的IP-CAN会话修改过程通报新的IP-CAN类型；如果未部署动态PCC，PGW使用本地配置的PCC策略。 
-
-
 P-GW向PCRF发送CCR-I消息，通知PCRF建立IP-CAN会话。 
-
-
 PCRF授权并进行策略决策。PCRF向P-GW返回CCA-I消息，包含选择的IP-CAN承载建立模式。 
-
-
-
-
 PGW在EPS承载上下文列表中创建一个新的EPS承载，并生成一个计费标识（Charging ID）。PGW返回Create
 Session Response（创建会话响应）消息给SGW，其中包括PDN GW Address for the user plane,
 PDN GW TEID of the user plane, PDN GW TEID of the control plane, PDN
 Type, PDN Address, EPS Bearer Identity, EPS Bearer QoS, Protocol Configuration
 Options, Charging Id, APN Restriction, Cause, MS Info Change Reporting
 Action (Start)等信息。 
-
-
 如果SGW接收到MS Info Change Reporting Action(start)指示，SGW存储并报告UE位置改变情况。SGW回应Create
 Session Response（创建会话响应）消息给新的MME，其中包括PDN Type, PDN Address, Serving
 GW address for User Plane, Serving GW TEID for User Plane, Serving
 GW TEID for control plane, EPS Bearer Identity, EPS Bearer QoSProtocol
 Configuration Options, APN Restriction, Cause, MS Info Change Reporting
 Action (Start), APN-AMBR等信息。 
-
-
 MME构造激活默认EPS承载上下文请求，给eNodeB发送承载建立请求消息Bearer Setup Request，此消息还包含SGW用户面TEID及地址，其中包含需要发送给UE的PDN
 Connectivity Accept消息。 
-
-
 eNodeB发送RRC连接注册消息RRC Connection Reconfiguration给UE，请求分配空口资源，同时PDN
 Connectivity Accept也通过本消息带给UE。 
-
-
 UE向eNodeB发送RRC Connection Reconfiguration Complete消息。 
-
-
 eNodeB发送Bearer Setup Response消息给MME，消息中携带了eNodeB的TEID和用于S1-U下行传输的IP地址。 
-
-
 UE向eNodeB发送Direct Transfer消息，此消息携带PDN Connectivity Complete消息，还携带了EPS
 Bearer Identity。 
-
-
 eNodeB向MME转发PDN Connectivity Complete消息，消息包含：EPS Bearer Identity、NAS
 sequence number、NAS-MAC。 
 在发送PDN Connectivity Accept消息及UE获取一个PDN地址后，UE后续可以向连通了SGW和PGW的eNodeB发送上行数据包。 
-
-
 当MME收到第10步的从eNodeB发送过来的Bearer Setup Response消息和第12步的从UE发送过来的PDN
 Connectivity Complete消息后，MME给SGW发送Modify Bearer Request消息，消息包含：EPS
 Bearer Identity、eNodeB address、eNodeB TEID、Handover Indication。 
-
-
 如果第13步包含切换指示（Bearer Setup Response消息中携带了Handover Indication），SGW发送Modify
 Bearer Request（修改承载请求）消息给PGW，使PGW将数据报文从Non-3GPP接入切换到3GPP接入，通过所建立的缺省承载或者专用EPS承载立即开始给SGW传送数据包。 
-
-
 PGW向SGW发送Modify Bearer Response（修改承载响应）消息。 
-
-
-
-
 SGW向MME发送Modify Bearer Response（修改承载响应）消息。SGW可以发送缓存的下行报文。 
-
-
 （可选）MME收到Modify Bearer Response消息后，如果PDN连接请求消息中的“请求类型（Request
 Type）”不是“切换”，并且EPS承载已经建立，用户的签约数据指示允许UE切换到Non-3GPP，激活的PDN连接是用户对应APN的第一个PDN连接，并且MME选择了一个不同于HSS中PDN签约上下文中指定的PGW，表明用户可以切换为Non-3GPP接入，MME发送Notify
 Request消息给HSS，消息中携带APN和PGW Identity，还需携带PGW所属PLMN信息。通知HSS建立APN和PGW的对应关系。 
-
-
 （可选）HSS存储APN和PGW的对应关系，给MME返回Notify Response消息。 
-
-
-
-
 ### 专有承载激活 
 ### 专有承载激活 
-
-
-业务模型 :专有承载建立流程是指当UE注册到EPS网络后，如果已建立的默认承载或其他专有承载不能满足其的业务需求，则由网络侧触发建立专有承载。 
+业务模型 : 
+专有承载建立流程是指当UE注册到EPS网络后，如果已建立的默认承载或其他专有承载不能满足其的业务需求，则由网络侧触发建立专有承载。 
 在由网络侧触发专有承载建立过程中，MME为承载分配EPS承载标识，通知eNodeB，UE建立专有承载，并通知SGW专有承载建立响应，配合完成eNodeB和SGW的用户面隧道建立。专有承载建立完成之后，UE可以通过EPS网络建立的专有承载访问数据业务和其他业务。 
-
-
-信令流程 :专有承载激活流程如[图1]所示。
+信令流程 : 
+专有承载激活流程如[图1]所示。
 图1  专有承载激活流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 （可选）如果分组核心网部署了动态PCC，当UE访问需要QoS保障的业务时，PCRF会向PGW发送RAR消息，触发专有承载建立。 
 如果分组核心网未部署动态PCC，则当PGW检测到需要进行QoS保障的业务时，应用本地配置的QoS策略，触发专有承载建立。 
-
-
 （可选）如果此流程由PCRF触发，则PGW向PCRF回送RAA消息。 
-
-
 PGW向SGW发送Create Bearer Request消息，此消息中携带IMSI、TEID-U、Charging
 Id、PTI、TFT、S5/S8 TEID、EPS Bearer QoS等信息。 
 LBI（Linked EPS Bearer
 Identity）是UE的缺省承载ID，TEID-U是专有承载PGW侧的用户面隧道标识 。 
-
-
 SGW为此专有承载建立上下文，保持相关参数，向MME发送Create Bearer Request消息。 
-
-
 MME选择一个此用户还没有使用过的EPS Bearer ID，向eNodeB发送Bearer Setup Request消息，消息包含：EPS
 Bearer Identity、EPS Bearer QoS、Session Management Request、S1-TEID。Session
 Management Request是MME构造的会话管理消息，消息中包括了EPS承载的QoS（但是不包含ARP）、TFT、PCO、EPS
 Bearer ID、LBI。 
-
-
 eNodeB将EPS承载的QoS参数映射为无线承载的QoS参数。然后eNodeB发送RRC Connection Reconfiguration消息给UE，消息包含：Radio
 Bearer QoS、Session Management Request（Activate dedicated EPS bearer
 context Request）、EPS RB Identity。 
-
-
 UE返回RRC Connection Reconfiguration Complete消息给eNodeB，确认无线承载已激活。 
-
-
 eNodeB向MME发送Bearer Setup Response消息，确认空口承载已激活，消息包含：EPS Bearer
 Identity、S1-TEID。 
-
-
 UE向eNodeB发送Direct Transfer消息，消息中携带UE NAS层构建的Session Management
 Response消息，其中包含EPS Bearer Identity。 
-
-
 eNodeB发送Session Management Response（会话管理）消息给MME。 
-
-
 当MME收到了第8步中eNodeB发送的Bearer Setup Response消息和第10步的从UE发送的Session
 Management Response消息后，MME给SGW发送Create Bearer Response消息确认承载激活，消息包含EPS
 Bearer Identity、S1-TEID。 
-
-
 SGW向PGW发送Create Bearer Response消息，告知PGW专有承载建立成功。 
-
-
-
-
 ### PGW发起承载修改，QoS更新 
 ### PGW发起承载修改，QoS更新 
-
-
-业务模型 :在PGW触发的承载修改过程中，因承载的QoS（如QCI、GBR、MBR或ARP）、APN-AMBR的修改，MME需要通知eNodeB、UE这些相关信息的修改，并通知SGW承载修改响应。 
+业务模型 : 
+在PGW触发的承载修改过程中，因承载的QoS（如QCI、GBR、MBR或ARP）、APN-AMBR的修改，MME需要通知eNodeB、UE这些相关信息的修改，并通知SGW承载修改响应。 
 被修改的承载可以是默认承载或专有承载，承载修改完成之后，UE可以通过EPS网络修改之后的承载访问数据业务和其他业务。该流程不支持QCI资源类型的修改，即不支持GBR承载和Non-GBR承载的相互转化。 
-
-
-信令流程 :PGW发起承载修改，QoS更新，流程如[图1]所示。
+信令流程 : 
+PGW发起承载修改，QoS更新，流程如[图1]所示。
 图1  PGW发起承载修改，QoS更新
-
-
-
-
-流程说明 :
-
+流程说明 : 
 （可选）如果部署了动态PCC，当UE所访问业务的QoS保障发生变化时，PCRF向PGW发送RAR消息，触发承载更新。 
 如果未部署动态PCC，则当PGW检测到QoS保障有变化时，触发承载更新。 
-
-
 （可选）如果此流程由PCRF触发，则PGW向PCRF响应RAA消息。  
-
-
 PGW向SGW发送Update Bearer Request消息，该消息中携带EPS Bearer QoS等信息。 
-
-
 SGW更新承载上下文，向MME发送Update Bearer Request消息。 
-
-
 如果UE处于空闲态（Idle），MME触发网络侧触发的业务请求流程；如果UE处于连接态，MME向eNodeB发送Bearer
 Modify Request消息，消息中可能包括了EPS承载的QoS（但是不包含ARP）、APN-AMBR（如果APN-AMBR改变了，MME会重新计算UE-AMBR）、TFT和EPS
 Bearer Identity和Session Management Request。其中Session Management Request是MME构造的消息。 
-
-
 eNodeB将修改过的EPS bearer QoS映射为Radio Bearer QoS，然后向UE发送RRC Connection
 Reconfiguration消息，消息包含：Radio Bearer QoS、Session Management Request、EPS
 RB Identity。 
-
-
 UE向eNodeB响应RRC Connection Reconfiguration Complete消息，确认无线承载修改。 
-
-
 eNodeB向MME响应Bearer Modify Response消息指示请求的EPS Bearer QoS能否被分配，消息包含：EPS
 Bearer Identity。 
-
-
 UE向eNodeB发送Direct Transfer消息，消息中携带UE NAS层构建的Session Management
 Response消息，消息包含：EPS Bearer Identity。 
-
-
 eNodeB向MME发送会话管理响应消息Session Management Response（包含Modify EPS
 bearer context accept）消息。 
-
-
 MME在收到了第8步的从eNodeB发送Bearer Modify Response消息和第10步的从UE发送的会话管理响应消息Session
 Management Response后，MME给SGW发送Update Bearer Response消息确认承载更新，消息中包含EPS
 Bearer Identity。 
-
-
 SGW向PGW发送Update Bearer Response消息，告知PGW承载更新成功，消息包含：EPS Bearer
 Identity。 
-
-
-
-
 ### PGW发起承载修改，QoS未更新 
 ### PGW发起承载修改，QoS未更新 
-
-
-业务模型 :PGW发起的QoS未更新的承载修改流程用于更新激活默认或专有承载的TFT，或修改APN-AMBR，或从MME获取用户位置信息，或将PCO信息通知给UE，或指示MME激活或去活位置报告。 
-
-
-信令流程 :PGW发起承载修改，QoS未更新，流程如[图1]所示。
+业务模型 : 
+PGW发起的QoS未更新的承载修改流程用于更新激活默认或专有承载的TFT，或修改APN-AMBR，或从MME获取用户位置信息，或将PCO信息通知给UE，或指示MME激活或去活位置报告。 
+信令流程 : 
+PGW发起承载修改，QoS未更新，流程如[图1]所示。
 图1  PGW发起承载修改，QoS未更新
-
-
-
-
-流程说明 :
-
+流程说明 : 
 （可选）如果部署了动态PCC，当业务报文过滤器TFT或者APN-AMBR有变化时，PCRF向PGW发送RAR消息，触发承载更新流程。 
 如果未部署动态PCC，则当PGW检测到QoS参数有变化时，触发承载更新流程。 
-
-
 （可选）如果此流程由PCRF触发，则PGW向PCRF回送RAA消息。  
-
-
 PGW向SGW发送Update Bearer Request消息，该消息中携带TFT、APN-AMBR等信息。 
-
-
 SGW更新承载上下文，向MME发送Update Bearer Request消息。 
-
-
 MME向eNodeB发送Downlink NAS Transport消息，消息中可能包括了APN-AMBR（如果APN-AMBR改变了，MME会重新计算UE-AMBR）、TFT和EPS
 Bearer Identity和Session Management Request（Modify EPS bearer context
 request），其中Session Management Request（Modify EPS bearer context request）是MME构造的消息。 
-
-
 eNodeB向UE发送Direct Transfer，消息中包括了会话管理消息Session Management Request（Modify
 EPS bearer context request）。UE使用uplink packet filter (UL TFT)来决定业务数据流service
 data flows和无线承载radio bearer之间的映射关系。 
-
-
 UE向eNodeB发送Direct Transfer消息，消息中携带UE NAS层构建的会话管理响应消息Session
 Management Response(Modify EPS bearer context accept)消息，消息包含：EPS Bearer
 Identity。 
-
-
 eNodeB向MME发送Uplink NAS Transport消息，消息包含会话管理消息Session Management
 Response（Modify EPS bearer context accept）。 
-
-
 MME给SGW发送更新承载响应消息Update Bearer Response，确认承载更新，消息包含：EPS Bearer
 Identity。 
-
-
 S-GW向P-GW响应Update Bearer Response消息确认承载修改，消息包含：EPS Bearer Identity。 
-
-
-
-
 ### HSS发起承载修改，QoS更新 
 ### HSS发起承载修改，QoS更新 
-
-
-业务模型 :HSS触发的承载修改过程中，因承载的QoS（如QCI、GBR、MBR或ARP）、APN-AMBR的修改，MME需要通知eNodeB、UE这些相关信息的修改，并通知SGW承载修改响应。 
+业务模型 : 
+HSS触发的承载修改过程中，因承载的QoS（如QCI、GBR、MBR或ARP）、APN-AMBR的修改，MME需要通知eNodeB、UE这些相关信息的修改，并通知SGW承载修改响应。 
 被修改的承载可以是默认承载或专有承载，承载修改完成之后，UE可以通过EPS网络修改之后的承载访问数据业务和其他业务。该流程不支持QCI资源类型的修改，即不支持GBR承载和Non-GBR承载的相互转化。 
-
-
-信令流程 :HSS发起承载修改，QoS更新，流程如[图1]所示。
+信令流程 : 
+HSS发起承载修改，QoS更新，流程如[图1]所示。
 图1  HSS发起承载修改，QoS更新
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 HSS发送Insert Subscriber Data消息给MME，消息中携带用户的IMSI号码和用户签约数据。用户签约数据中包含EPS签约的QoS（QCI和ARP）、签约的APN-AMBR和签约的UE-AMBR。 
-
-
 MME更新存储的用户签约数据，给HSS返回Insert Subscriber Data Ack消息。 
-
-
 如果仅签约的UE-AMBR发生改变，MME重新计算新的UE-AMBR；如果新的UE-AMBR发生改变，MME使用S1-AP
 UE上下文修改流程完成UE-AMBR的更新。如果仅有签约的UE-AMBR发生改变，HSS发起签约QoS修改流程在UE上下文修改流程完成后结束；如果签约的QCI、APR和APN-AMBR中有发生改变的参数，并且对应的有激活的PDN连接，MME发送Modify
 Bearer Command消息给SGW。 
-
-
 SGW向PGW发送Modify Bearer Command消息，携带EPS Bearer Identity、APN
 AMBR 、EPS Bearer QoS等信息。 
-
-
 （可选）如果启用了动态PCC，PGW向PCRF发送CCR-U消息，触发IP-CAN修改流程，携带更新后的EPS Bearer
 QoS。 
-
-
 （可选）PCRF给PGW回送CCA-U消息，携带更新后的PCC策略等信息。 
-
-
 PGW向SGW发送Update Bearer Response消息，携带变化的TFT、EPS Bearer QOS、APN-AMBR等信息。 
-
-
 SGW存储变化的参数，向MME发送Update Bearer Response消息，携带变化的TFT、EPS Bearer
 QOS、APN-AMBR等信息。 
-
-
 如果UE处于空闲态，MME触发网络侧触发的业务请求流程；如果UE处于连接态，MME向eNodeB发送Bearer Modify
 Request消息，消息中可能包括了EPS承载的QoS（但是不包含ARP）、APN-AMBR（如果APN-AMBR改变了，MME会重新计算UE-AMBR）、TFT和EPS
 Bearer Identity和Session Management Request，其中Session Management Request是MME构造的消息。 
-
-
 eNodeB将修改过的EPS bearer QoS映射为Radio Bearer QoS，然后向UE发送RRC Connection
 Reconfiguration消息，消息包含：Radio Bearer QoS、Session Management Request、EPS
 RB Identity。 
-
-
 UE向eNodeB响应RRC Connection Reconfiguration Complete消息，确认无线承载修改。 
-
-
 eNodeB向MME响应Bearer Modify Response消息指示，请求的EPS Bearer QoS能否被分配，消息中包含EPS
 Bearer Identity。 
-
-
 UE向eNodeB发送Direct Transfer消息，消息中携带UE NAS层构建的Session Management
 Response消息，消息包含：EPS Bearer Identity。 
-
-
 eNodeB向MME发送会话管理响应消息Session Management Response（Modify EPS
 bearer context accept）。 
-
-
 eNodeB向MME发送会话管理响应消息Session Management Response（Modify EPS
 bearer context accept）。 
-
-
 SGW向PGW发送Update Bearer Response消息，告知PGW承载更新成功，消息包含：EPS Bearer
 Identity。 
-
-
-
-
 ### MME发起承载去激活 
 ### MME发起承载去激活 
-
-
-业务模型 :MME发起的承载去激活只用于去激活专有承载，如果是释放PDN连接，包括默认承载，则发起PDN去连接过程。 
-
-
-信令流程 :MME发起承载去激活的流程如[图1]所示。
+业务模型 : 
+MME发起的承载去激活只用于去激活专有承载，如果是释放PDN连接，包括默认承载，则发起PDN去连接过程。 
+信令流程 : 
+MME发起承载去激活的流程如[图1]所示。
 图1  MME发起承载去激活流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 （可选）处于ECM-CONNECTED状态的UE，由于本地原因（例如非正常的资源限制或无线条件不允许eNodeB保持所有的GBR承载），eNodeB会向UE发送Radio
 Bearer Release消息释放无线承载资源。UE删除与被释放的无线承载相关的承载上下文。 
-
-
 当eNodeB释放了无线承载资源后，将发送承载释放指示消息给MME。该指示可能是发给MME的Bearer Release
 Request消息，消息包含：EPS Bearer Identity，或者是Initial Context Setup Complete、Handover
 Request Ack和UE Context Response消息，Path Switch Request消息也可以指示承载释放。 
-
-
 MME向每个PDN连接的SGW发送删除承载命令消息Delete Bearer Command，消息包含EPS Bearer
 Identity。EPS Bearer Identity是MME选择的需要释放的承载标识。 
-
-
 SGW向PGW发送删除承载命令消息Delete Bearer Command，消息包含EPS Bearer Identity。 
-
-
 （可选）如果部署了动态PCC，PGW通过PCEF初始化的IP-CAN会话修改流程，通知PCRF资源的释放。PCRF给PGW提供一个新的PCC策略。如果没有部署动态PCC，PGW采用本地配置的PCC策略。 
-
-
 PGW向PCRF发送CCR-U消息，通知PCRF更新IP-CAN会话。PCRF授权并进行策略决策。 
-
-
 PCRF向PGW返回CCA-U消息，包含更新的PCC策略。 
-
-
-
-
 PGW发送删除承载请求消息Delete Bearer Request给SGW，消息包含EPS Bearer Identity。 
-
-
 SGW发送删除承载请求消息Delete Bearer Request给MME，消息包含EPS Bearer Identity。 
-
-
 如果是由无线侧触发的承载释放流程，则跳过8~16步骤；否则： 
-
-
 如果释放的是UE的最后一个PDN连接，MME将向UE发送Detach Request消息，发起显式去附着流程。如果UE处于ECM-IDLE状态，MME寻呼UE。直接执行步骤14。 
-
-
 如果释放的不是UE的最后一个PDN连接，MME将向eNodeB发送Deactivate Bearer Request消息，消息中包括EPS
 Bearer Identity和Deactivate EPS Bearer Context Request，Deactivate EPS
 Bearer Context Request是MME构造一个NAS层消息。 
-
-
-
-
 eNodeB向UE发送RRC Connection Reconfiguration消息，其中包含要释放的EPS Radio
 Bearer Identity和NAS Deactivate EPS Bearer Context Request消息。 
-
-
 UE释放步骤9中RRC Connection Reconfiguration消息指示的无线承载，给eNodeB返回RRC连接重新配置完成消息RRC
 Connection Reconfiguration Complete。 
-
-
 eNodeB向MME响应Deactivate Bearer Response消息确认承载去激活，消息包含：EPS Bearer
 Identity。 
-
-
 UE向eNodeB发送Direct Transfer消息，消息中携带UE NAS层构建的Deactivate EPS
 Bearer Context Accept消息，消息包含：EPS Bearer Identity。 
-
-
 eNodeB向MME发送Deactivate EPS Bearer Context Accept消息。 
-
-
 （可选）如果在8a中UE收到了分离请求消息Detach Request，则UE发送分离接受消息Detach Accept给MME。eNodeB连同UE使用的小区的TAI+ECGI信息通过该NAS消息一起透传给MME。 
-
-
 （可选）如果该PDN连接是UE在某APN下的最后一个PDN连接且其全部承载均被去激活，同时用户签约可以切换到Non-3GPP网络，MME给HSS发送通知请求Notify
 Request消息，用于通知HSS删除APN和PGW的对应关系。如果释放PDN连接的原因为“从3GPP到非3GPP的接入方式的改变（RAT
 changed from 3GPP to Non-3GPP）”，则不需要给HSS发送通知请求消息Notify Request。 
-
-
 （可选）收到MME发送的Notify request消息后，HSS删除APN和PGW的对应关系，给MME返回通知响应消息Notify
 Response。 
-
-
 MME删除承载上下文，给SGW发送删除承载响应消息Delete Bearer Response。 
-
-
 SGW删除承载上下文，给PGW发送删除承载上下文消息Delete Bearer Response。 
-
-
-
-
 ### PGW发起承载去激活 
 ### PGW发起承载去激活 
-
-
-业务模型 :PGW可以去激活某一个PDN地址的一个专有承载或所有承载。如果是要去激活默认承载，则去激活该PDN连接的所有承载。 
-
-
-信令流程 :PGW发起承载去激活的流程如[图1]所示。
+业务模型 : 
+PGW可以去激活某一个PDN地址的一个专有承载或所有承载。如果是要去激活默认承载，则去激活该PDN连接的所有承载。 
+信令流程 : 
+PGW发起承载去激活的流程如[图1]所示。
 图1  PGW发起承载去激活
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 （可选）如果部署了动态PCC，当UE不再需要访问某些业务时，PCRF向PGW发送RAR消息触发IP-CAN承载修改。 
 如果未部署动态PCC，业务结束或MME发起承载去激活请求均可触发PGW发起承载去激活流程。若此流程去激活的是默认承载，则PGW删除全部专有承载资源。 
-
-
 （可选）PGW删除承载上下文。如果此流程由PCRF触发，则PGW向PCRF响应RAA消息。 
-
-
 PGW向SGW发送Delete Bearer Request消息，该消息中携带PTI、Cause、EPS Bearer
 Identity等信息，如果EPS Bearer Identity为默认承载的EBI，则表示删除整个PDN连接。 
-
-
 SGW向MME发送Delete Bearer Request消息，消息中包括PTI、Cause、EPS Bearer
 Identity等信息，如果EPS Bearer Identity为默认承载的EBI，则表示删除整个PDN连接。 
-
-
 如果MME已经收到释放E-UTRAN承载的信令，跳过步骤5～13。 
-
-
 如果释放的是UE的最后一个PDN连接，MME将向UE发送Detach Request消息发起显式去附着流程。如果UE处于ECM-IDLE状态，MME寻呼UE。直接执行11。 
-
-
 如果释放的不是UE的最后一个PDN连接，MME将向eNodeB发送Deactivate Bearer Request消息，消息中包括EPS
 Bearer Identity和Deactivate EPS Bearer Context Request，Deactivate EPS
 Bearer Context Request是MME构造一个NAS层消息。 
-
-
-
-
 eNodeB向UE发送RRC Connection Reconfiguration消息，其中包含要释放的EPS Radio
 Bearer Identity和NAS Deactivate EPS Bearer Context Request消息。 
-
-
 UE释放步骤6中RRC Connection Reconfiguration消息指示的无线承载，给eNodeB返回RRC连接重新配置完成消息RRC
 Connection Reconfiguration Complete。 
-
-
 eNodeB向MME响应Deactivate Bearer Response消息确认承载去激活，消息包含：EPS Bearer
 Identity。  
-
-
 UE向eNodeB发送Direct Transfer消息，消息中携带UE NAS层构建的Deactivate EPS
 Bearer Context Accept消息，消息包含：EPS Bearer Identity。 
-
-
 eNodeB向MME发送Deactivate EPS Bearer Context Accept消息。 
-
-
 （可选）如果在8a中UE收到了分离请求消息Detach Request，则UE发送分离接受消息Detach Accept给MME。eNodeB连同UE使用的小区的TAI+ECGI信息通过该NAS消息一起透传给MME。 
-
-
 （可选）如果该PDN连接是UE在某APN下的最后一个PDN连接且其全部承载均被去激活，同时用户签约可以切换到Non-3GPP网络，MME给HSS发送通知请求消息，用于通知HSS删除APN和PGW
 ID的对应关系。如果释放PDN连接的原因为“从3GPP到非3GPP的接入方式的改变”，则不需要给HSS发送通知请求消息。 
-
-
 可选：收到MME发送的Notify reques消息后，HSS删除APN和PGW的对应关系，给MME返回通知响应消息Notify
 Response。  
-
-
 MME删除承载上下文，给SGW发送删除承载响应消息Delete Bearer Response。 
-
-
 SGW删除承载上下文，给PGW发送删除承载上下文消息Delete Bearer Response。 
-
-
 （可选）如果UE被显式去附着，MME向eNodeB发送S1 Release Command消息释放与UE间的S1-MME信令连接。 
-
-
-
-
 ## 安全管理 
 ### 鉴权集获取 
 ### 鉴权集获取 
-
-
-业务模型 :MME向HSS请求获取一组或多组鉴权向量（RAND，AUTN，XRES，KASME）用于用户鉴权过程。每一组EPS鉴权向量均能用于用户鉴权。 
-
-
-信令流程 :鉴权集获取信令流程如[图1]所示、
+业务模型 : 
+MME向HSS请求获取一组或多组鉴权向量（RAND，AUTN，XRES，KASME）用于用户鉴权过程。每一组EPS鉴权向量均能用于用户鉴权。 
+信令流程 : 
+鉴权集获取信令流程如[图1]所示、
 图1  鉴权集获取信令流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME向HSS发送Authentication Information Request消息请求获取用户鉴权向量。 
-
-
 HSS向MME响应Authentication Information Answer消息返回鉴权向量。 
-
-
-
-
 ### 鉴权 
 ### 鉴权 
-
-
-业务模型 :EPS AKA（Authentication and Key Agreement）是E-UTRAN网络使用的鉴权和密钥协商流程。EPS
+业务模型 : 
+EPS AKA（Authentication and Key Agreement）是E-UTRAN网络使用的鉴权和密钥协商流程。EPS
 AKA将为UP（User Plane）、RRC（Radio Resource Control）、NAS（Non-Access-Stratum）加密密钥及RRC和NAS完整性保护密钥提供基础的密钥信息。 
-
-
-信令流程 :鉴权信令流程如[图1]所示、
+信令流程 : 
+鉴权信令流程如[图1]所示、
 图1  鉴权信令流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME向UE发送Authentication Request消息。 
-
-
 UE向MME响应Authentication Response消息。 
-
-
-
-
 ### 鉴权失败 
 ### 鉴权失败 
-
-
-业务模型 :用户鉴权过程中，用户对网络鉴权或网络对用户鉴权失败。 
-
-
-信令流程 :鉴权失败流程如[图1]所示、
+业务模型 : 
+用户鉴权过程中，用户对网络鉴权或网络对用户鉴权失败。 
+信令流程 : 
+鉴权失败流程如[图1]所示、
 图1  鉴权失败
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME向UE发送Authentication Request消息。 
-
-
 UE根据AUTN对网络进行鉴权，如果鉴权失败，UE向MME响应Authentication Failure消息。 
-
-
 可选：MME收到UE的Authentication Response消息，根据UE返回的RES及鉴权向量中的XRES进行鉴权。鉴权失败，MME向UE发送Authentication
 Reject消息。 
-
-
-
-
 ### 显式GUTI重分配 
 ### 显式GUTI重分配 
-
-
-业务模型 :UE和MME间的信令连接建立后，MME可以随时发起GUTI（Globally
+业务模型 : 
+UE和MME间的信令连接建立后，MME可以随时发起GUTI（Globally
 Unique Temporary UE Identity）重分配流程，为UE重分配一个新的GUTI和/或TAI列表。GUTI和/或TAI列表可以在附着或TAU流程中进行重分配。 
-
-
-信令流程 :显式GUTI重分配流程如[图1]所示、
+信令流程 : 
+显式GUTI重分配流程如[图1]所示、
 图1  显式GUTI重分配
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME向UE发送GUTI Reallocation Command消息，消息包含：GUTI、TAI list。 
-
-
 UE向MME响应GUTI Reallocation Complete消息。 
-
-
-
-
 ### 身份识别流程 
 ### 身份识别流程 
-
-
-业务模型 :当用户使用临时身份标识GUTI鉴权失败时，网络侧将发起用户的身份识别流程。当网络侧无法根据GUTI重新获取IMSI用于用户鉴权时，也将使用本流程。 
-
-
-信令流程 :身份识别流程如[图1]所示、
+业务模型 : 
+当用户使用临时身份标识GUTI鉴权失败时，网络侧将发起用户的身份识别流程。当网络侧无法根据GUTI重新获取IMSI用于用户鉴权时，也将使用本流程。 
+信令流程 : 
+身份识别流程如[图1]所示、
 图1  身份识别流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME向UE发送Identity Request消息，请求进行身份识别。  
-
-
 UE向MME响应Identity Response消息，消息包含：IMSI。 
-
-
-
-
 ### 加密 
 ### 加密 
-
-
-业务模型 :MME支持UE终端NAS信令的加密，MME在接收NAS信令时进行解密，下发NAS信令时进行加密，MME在用户接入完成鉴权后，将使用的秘钥序号与加密/解密算法下发给UE终端。 
-
-
-信令流程 :加密流程如[图1]所示、
+业务模型 : 
+MME支持UE终端NAS信令的加密，MME在接收NAS信令时进行解密，下发NAS信令时进行加密，MME在用户接入完成鉴权后，将使用的秘钥序号与加密/解密算法下发给UE终端。 
+信令流程 : 
+加密流程如[图1]所示、
 图1  加密
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME向UE发送Security Mode Command消息，消息包含：Selected NAS algorithms、eKSI、UE
 Security Capability。当NAS SMC与IMEI检查同时进行时，消息还可以携带IMEISV request。 
-
-
 UE向MME响应Security Mode Complete消息，如MME在Security mode command消息请求了用户IMEISV，则消息包含IMEISV。 
-
-
-
-
 ### 数据完整性 
 ### 数据完整性 
-
-
-业务模型 :MME支持UE终端NAS信令的完整性保护，MME在接收NAS信令时进行完整性保护检查，下发NAS信令时生成并携带完整性保护头，MME在用户接入完成鉴权后，将使用的秘钥序号与完整性保护算法下发给UE终端。 
-
-
-信令流程 :数据完整性流程如[图1]所示、
+业务模型 : 
+MME支持UE终端NAS信令的完整性保护，MME在接收NAS信令时进行完整性保护检查，下发NAS信令时生成并携带完整性保护头，MME在用户接入完成鉴权后，将使用的秘钥序号与完整性保护算法下发给UE终端。 
+信令流程 : 
+数据完整性流程如[图1]所示、
 图1  数据完整性
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME根据UE支持算法（即UE的安全能力）和MME自身配置的支持的算法进行算法协商。 
-
-
 MME向UE发送NAS Security Mode Command消息告知网络侧选择的算法及秘钥序号。消息包含：replayed
 UE security capabilities、selected NAS algorithms、eKSI for identifying
 KASME，在需要创建一个Idle态的映射上下文时还会携带NONCEUE和NONCEMME。
-
-
 UE对Security Mode Command消息进行完整性检查。 包括，确保MME发送的UE安全能力与UE本地保存的安全能力一致，以保证其未被攻击者篡改过，同时使用基于eKSI指示的KASME的NAS完整性算法和NAS完整性密钥进行完整性保护检查。如果检查通过，UE将使用此安全上下文开始NAS完整性保护以及加密/解密，并向MME发送NAS
 Security Mode Complete消息。 
-
-
 UE向MME响应NAS Security mode complete消息，消息包含：NAS-MAC，同时如MME在Security
 mode command消息请求了用户IMEISV，则消息包含IMEISV。 
-
-
 MME使用NAS Security Mode Command消息中的密钥和算法对NAS Security Mode Complete消息进行解密和检查。MME在收到NAS
 Security Mode Complete消息后使用该安全上下文对NAS下行数据进行加密。MME在收到NAS Security Mode
 Command消息后使用该安全上下文对NAS上行数据进行解密。 
-
-
-
-
 ### IMEI检查 
 ### IMEI检查 
-
-
-业务模型 :用户接入MME时，MME通过EIR设备可以检查用户终端IMEI是否合法，当IMEI非法时，MME将拒绝为用户提供业务。 
-
-
-信令流程 :IMEI检查流程如[图1]所示。
+业务模型 : 
+用户接入MME时，MME通过EIR设备可以检查用户终端IMEI是否合法，当IMEI非法时，MME将拒绝为用户提供业务。 
+信令流程 : 
+IMEI检查流程如[图1]所示。
 图1  IMEI检查
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME向UE发送Identity Request消息，消息中Identity Type指示请求IMEISV。  
-
-
 UE向MME响应Identity Response消息携带IMEISV。  
-
-
 如果MME配置了到EIR进行IMEI验证，则向EIR发送ME Identity Check Request消息，消息包含：IMEISV、IMSI。  
-
-
 EIR向MME响应ME Identity Check Request消息，携带IMEISV验证结果。 
-
-
-
-
 ## 签约数据管理 
 ### HSS修改签约数据，导致MME请求PDN断开 
 ### HSS修改签约数据，导致MME请求PDN断开 
-
-
-业务模型 :MME允许UE请求断开与某个PDN的连接，在这个过程中，MME通知SGW、PGW、无线侧和UE删除PDN连接，包括缺省承载在内的全部承载都将被释放，已申请的IP地址也被释放。
-
-
-信令流程 :HSS修改签约数据，导致MME请求PDN断开的流程如[图1]所示。
+业务模型 : 
+MME允许UE请求断开与某个PDN的连接，在这个过程中，MME通知SGW、PGW、无线侧和UE删除PDN连接，包括缺省承载在内的全部承载都将被释放，已申请的IP地址也被释放。
+信令流程 : 
+HSS修改签约数据，导致MME请求PDN断开的流程如[图1]所示。
 图1  HSS修改签约数据，导致MME请求PDN断开
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 由于HSS侧的用户签约信息被修改，MME识别到用户签约信息发生了改变，决定释放PDN连接。MME向指定PDN连接的SGW发送Delete
 Session Request（删除会话请求）消息，请求删除SGW上的EPS承载，该消息包含：Cause（原因值）、LBI。 
 该消息指示SGW全部释放该PDN连接相关的所有EPS承载。 
-
  
 如果PGW需要根据UE的PDN上下文来请求UE的位置信息，MME将在本消息中携带User Location Information信元。 
-
  
 如果UE所在的时区发生改变，MME将在本消息中携带UE Time Zone信元。 
-
  
-
-
 SGW收到MME发送的Delete Session Request消息后，释放相关用户的承载信息，并按每个PDN连接分别向PGW发送Delete
 Session Request（删除会话请求）消息。 
 如果步骤1中MME向SGW发送的Delete Session Request消息中携带了User
 Location Information信元，SGW也需要在本条消息中携带User Location Information信元。 
-
-
 PGW释放相关承载资源，并向SGW发送Delete Session Response（删除会话响应）消息。 
-
-
 （可选）如果分组核心网中部署了PCRF（开启PCC功能），PGW将发起IP CAN会话终止流程，通知PCRF，用户的EPS承载已被释放，指示PCRF释放相关资源。 
-
-
 PGW向PCRF发送CCR-U消息，通知PCRF终止IP CAN会话。 
-
-
 PCRF识别并删除用户关联的PCC Rules，并向PGW返回CCA-U消息，PGW删除已终止IP CAN会话的相关信息。 
-
-
-
-
 SGW向MME发送Delete Session Response（删除会话响应）消息。 
-
-
 MME向eNodeB发送Deactivate Bearer Request消息，去激活指定PDN连接的全部EPS承载。 
 MME重新计算UE-AMBR，该S1-AP消息携带待删除EPS承载列表、新的UE-AMBR、以及NAS层的Deactivate
 EPS bearer context request消息，消息包含：LBI。 
-
-
 eNodeB向UE发送RRC Connection Reconfiguration（RRC连接注册）消息，通知UE释放对应的无线承载资源，其中包含要释放的承载和NAS层的Deactivate
 EPS Bearer Context Request消息。 
-
-
 UE释放对应的无线承载资源，并向eNodeB发送RRC Connection Reconfiguration Complete（RRC连接注册完成）消息，确认释放该PDN连接的全部资源。 
-
-
 eNodeB向MME发送Deactivate Bearer Response（去激承载响应）消息，确认该PDN连接上的EPS承载全部去激活。 
-
-
 UE的NAS层构建Deactivate EPS Bearer Context Accept消息后，UE向eNodeB发送Direct
 Transfer消息，此消息携带Deactivate EPS Bearer Context Accept消息。 
-
-
 eNodeB向MME发送Uplink NAS Transport消息，该消息中包含Deactivate EPS Bearer
 Context Accept消息。 
-
-
-
-
 ### HSS修改签约QoS，导致承载修改 
 ### HSS修改签约QoS，导致承载修改 
-
-
-业务模型 :用户修改了签约数据，导致发生HSS触发的承载修改流程，即因承载的QoS（仅包括UE-AMBR）的修改，MME需要通知eNodeB、UE这些相关信息的修改，并通知SGW承载修改响应。
+业务模型 : 
+用户修改了签约数据，导致发生HSS触发的承载修改流程，即因承载的QoS（仅包括UE-AMBR）的修改，MME需要通知eNodeB、UE这些相关信息的修改，并通知SGW承载修改响应。
 被修改的承载可以是默认承载或专有承载，承载修改完成之后，UE可以通过EPS网络修改之后的承载访问数据业务和其他业务。
  说明： 
 该流程不支持QCI资源类型的修改，即不支持GBR承载和Non-GBR承载的相互转化。
-
-
-信令流程 :HSS发起的签约QoS修改流程如[图1]所示。
+信令流程 : 
+HSS发起的签约QoS修改流程如[图1]所示。
 图1  HSS修改签约QoS，导致承载修改
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 HSS发送Insert Subscriber Data消息给MME，消息中携带用户的IMSI号码和用户签约数据（Subscription
 Data）。Subscription Data中包含EPS subscribed QoS（QCI、ARP）、签约的APN-AMBR和UE-AMBR。
-
-
 MME更新存储的用户签约数据，并向HSS返回Insert Subscriber Data Ack响应消息，消息中携带用户的IMSI号码。 
-
-
 如果仅仅是用户签约数据（Subscription Data）中的UE-AMBR发生改变，MME需要重新计算新的UE-AMBR，并通过S1-AP
 UE Context Modification流程将修改后的UE-AMBR带给eNodeB，完成UE-AMBR的更新。在UE上下文修改流程后，HSS发起的签约QoS修改流程结束。 
 如果签约的QCI、APR和APN-AMBR中有发生改变的参数，并且修改的QoS Profile存在激活状态的PDN连接，MME会向SGW发送Modify
 Bearer Command消息，该消息中包含：EPS Bearer Identity、EPS Bearer QoS、APN AMBR。其中，EPS
 Bearer Identity信元标识了相关PDN连接的缺省承载，EPS Bearer QoS信元包含了需要更新的EPS签约QoS模板。
-
-
 SGW向PGW发送Modify Bearer Command消息，该消息中携带EPS Bearer Identity、APN
 AMBR 、EPS Bearer QoS。 
-
-
 （可选）如果分组核心网中部署了PCRF（开启动态PCC功能），PGW将发起IP-CAN修改流程，告知PCRF更新后的EPS
 Bearer QoS，PCRF向PGW发送更新后的PCC策略。
-
-
 PGW向PCRF发送CCR-U消息，通知PCRF修改IP CAN会话。 
-
-
 PCRF将PCC规则请求与IP-CAN会话及PGW可用的业务信息进行关联，PCRF授权并进行策略决策，并向PGW返回CCA-U消息，消息包含：PCC
 Rules、Event Triggers和选择的IP-CAN承载建立模式（如果变更）。 
-
-
-
-
 PGW修改签约QoS被修改的APN对应的每个PDN连接的缺省承载。如果签约的ARP参数已被修改且PCRF未下发策略，PGW将修改全部使用原有签约ARP的专有承载。然后，PGW向SGW发送Update
 Bearer Request消息，该消息中携带EPS Bearer Identity、EPS Bearer QoS、TFT、APN-AMBR。 
-
-
 SGW存储变化的参数，向MME发送Update Bearer Response消息，携带变化的TFT、EPS Bearer QOS、APN-AMBR等信息。
-
-
 如果UE处于空闲态，MME触发网络侧触发的业务请求流程；如果UE处于连接态，MME向eNodeB发送Bearer Modify
 Request消息，消息中可能包括了EPS承载的QoS（但是不包含ARP）、APN-AMBR（如果APN-AMBR改变了，MME会重新计算UE-AMBR）、TFT和EPS
 Bearer Identity和Session Management Request，其中Session Management Request是MME构造的消息。 
-
-
 eNodeB将修改过的EPS bearer QoS映射为Radio Bearer QoS，然后向UE发送RRC Connection
 Reconfiguration消息，消息包含：Radio Bearer QoS、Session Management Request、EPS
 RB Identity。 
-
-
 UE向eNodeB响应RRC Connection Reconfiguration Complete消息，确认无线承载修改。 
-
-
 eNodeB向MME响应Bearer Modify Response消息指示，请求的EPS Bearer QoS能否被分配，消息中包含EPS
 Bearer Identity。 
-
-
 UE向eNodeB发送Direct Transfer消息，消息中携带UE NAS层构建的Session Management
 Response消息，消息包含：EPS Bearer Identity。
-
-
 eNodeB向MME发送会话管理响应消息Session Management Response（Modify EPS
 bearer context accept）。 
-
-
 MME给SGW发送Update Bearer Response消息确认承载更新，消息中包含EPS Bearer Identity。 
-
-
 SGW向PGW发送Update Bearer Response消息，告知PGW承载更新成功，消息包含：EPS Bearer
 Identity。 
-
-
-
-
 ### HSS删除签约数据 
 ### HSS删除签约数据 
-
-
-业务模型 :MME和HSS之间S6a接口上的Delete Subscriber Data流程用于删除MME上存储的HSS用户签约数据，该流程由HSS触发，用于删除指定用户存储在MME上的部分或全部签约数据。
-
-
-信令流程 :HSS删除签约数据信令流程如[图1]所示。
+业务模型 : 
+MME和HSS之间S6a接口上的Delete Subscriber Data流程用于删除MME上存储的HSS用户签约数据，该流程由HSS触发，用于删除指定用户存储在MME上的部分或全部签约数据。
+信令流程 : 
+HSS删除签约数据信令流程如[图1]所示。
 图1  HSS删除签约数据信令流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 HSS向MME发送Delete Subscriber Data Request消息，用于删除指定用户存储在MME上的部分或全部签约数据。 
-
-
 MME根据请求指示删除部分或全部签约数据，并向HSS响应Delete Subscriber Data Answer消息。 
-
-
-
-
 ### HSS取消位置记录 
 ### HSS取消位置记录 
-
-
-业务模型 :当运营商决定删除签约用户在MME上的MM上下文和EPS承载时，能过HSS发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。
-
-
-信令流程 :HSS取消位置记录信令流程如[图1]所示。
+业务模型 : 
+当运营商决定删除签约用户在MME上的MM上下文和EPS承载时，能过HSS发起的分离流程，用于网络侧通知UE，网络侧不再为该UE提供服务，网络侧释放该UE相关资源。
+信令流程 : 
+HSS取消位置记录信令流程如[图1]所示。
 图1  HSS取消位置记录信令流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 HSS向MME发送Cancel Location Request消息，要求立即删除用户的MM上下文和EPS承载，消息包含：IMSI、Cancellation
 Type，其中Cancellation Type设置为“Subscription Withdrawn”。
-
-
 （可选）如果UE处于ECM-CONNECTED状态，MME向UE发送Detach Request消息，通知UE将被去附着。 
 如果UE处于ECM-IDLE状态，MME首先需要寻呼到UE，然后进行分离过程。 
-
-
 如果MME中存在激活态的UE上下文，MME为每个PDN连接向SGW发送Delete Session Request消息去激活SGW中的EPS承载上下文，消息包含：LBI。
 如果PGW需要根据UE上下文来请求UE的位置信息，MME将在本消息中携带User Location Information信元。
-
-
 如果SGW收到MME发送的Delete Session Request消息，SGW释放对应的EPS承载上下文信息，并向PGW发送Delete
 Session Request消息，消息包含：LBI，本消息指示该PDN连接下的全部承载均被释放。 
 如果PGW需要根据UE上下文来请求UE的位置信息，MME将在本消息中携带User
 Location Information信元。 
-
-
 PGW给SGW回送Delete Session Response消息。 
-
-
 （可选）如果网络中部署了PCRF（开启PCC功能），PGW将发起IP-CAN会话终止流程，通知PCRF，用户的EPS承载已被释放。
-
-
 PGW向PCRF发送CCR-T消息，通知PCRF终止IP-CAN会话。 
-
-
 PCRF识别并删除关联的PCC Rules，并向PGW返回CCA-T消息。PGW删除已终止IP CAN会话的相关信息。 
-
-
-
-
 SGW向MME发送Delete Session Response消息，消息包含：TEID。 
-
-
 （可选）如果UE收到MME发送的Detach Request消息，则在第2步骤后的任意时间向MME发送Detach Accept消息，确认EPS承载释放。 
 eNodeB将UE发给MME的NAS层Detach Accept消息和UE所在小区的TAI+ECGI一起同时转发给MME。 
-
-
 MME向HSS发送Cancel Location Answer消息，确认MM上下文和EPS承载已删除。 
-
-
 MME接收到Detach Accept消息和Delete Session Response消息后，向eNodeB发送Signalling
 Connection Release消息，用于释放UE的S1-MME信令连接。消息包含：Cause，Cause值设置为Detach。 
-
-
-
-
 ### 清除功能 
 ### 清除功能 
-
-
-业务模型 :清除功能允许MME通知HSS，MME已删除某一已分离用户的签约数据及MM上下文。 
+业务模型 : 
+清除功能允许MME通知HSS，MME已删除某一已分离用户的签约数据及MM上下文。 
 MME可以在用户隐式或显式分离后立即删除签约数据及MM上下文，也可以在用户分离后保留一段时间，这样用户稍后附着时可以重用这些签约数据，而不需要向HSS重新获取。 
-
-
-信令流程 :清除功能信令流程如[图1]所示。
+信令流程 : 
+清除功能信令流程如[图1]所示。
 图1  清除功能信令流程
-
-
-
-
-
-
-流程说明 :
-
+流程说明 : 
 MME删除已分离用户的MM上下文及签约数据后，向HSS发送Purge UE消息。 
-
-
 HSS设置“UE Purged for E-UTRAN”标识，并向MME回送Purge UE Answer消息。 
-
-
-
-
 # 缩略语 
 # 缩略语 
 ## ARP 
 Allocation and Retention Priority分配保持优先级
 ## ECGI 
 E-UTRAN Cell Global IdentifierE-UTRAN小区全球标识
-EPS :Evolved Packet System演进的分组系统
+EPS : 
+Evolved Packet System演进的分组系统
 ## GBR 
 Guaranteed Bit Rate保证比特率
-HSS :Home Subscriber Server归属用户服务器
-IMSI :International Mobile Subscriber Identity国际移动用户标识
-MME :Mobility Management Entity移动管理实体
-NAS :Network Access Service网络接入服务
-PCC :Policy and Charging Control计费和策略控制
-PCRF :Policy and Charging Rules Function策略和计费规则功能
-PDN :Packet Data Network分组数据网
-PGW :PDN Gateway分组数据网网关
+HSS : 
+Home Subscriber Server归属用户服务器
+IMSI : 
+International Mobile Subscriber Identity国际移动用户标识
+MME : 
+Mobility Management Entity移动管理实体
+NAS : 
+Network Access Service网络接入服务
+PCC : 
+Policy and Charging Control计费和策略控制
+PCRF : 
+Policy and Charging Rules Function策略和计费规则功能
+PDN : 
+Packet Data Network分组数据网
+PGW : 
+PDN Gateway分组数据网网关
 ## QCI 
 QoS Class IdentifierQoS类别标识
-QoS :Quality of Service服务质量
-SGW :Serving Gateway服务网关
+QoS : 
+Quality of Service服务质量
+SGW : 
+Serving Gateway服务网关
 ## TAI 
 Tracking Area Identity跟踪区标识
 ## TFT 
 Traffic Flow Template话务流量模型
-UE :User Equipment用户设备
+UE : 
+User Equipment用户设备
 # VoLTE信令流程 
 ## 基本呼叫 
 ### 注册流程（融合HLR/HSS） 
 ### 注册流程（融合HLR/HSS） 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 UE附着到EPC网络后，发起IMS注册。 
-
  
 通常IMS APN和数据业务APN采用独立的APN。 
-
  
 用户数据库涉及EPC HSS、IMSHSS、HLR多个逻辑网元，这些逻辑网元可以独立部署，或者合一部署。 
-
  
 SBC兼做P-CSCF/ATCF/ATGW，通常称为VoLTE SBC。 
-
  
 UE注册到IMS网络的可以分为以下两个阶段。
-
  
 UE附着到EPC网络附着流程是用户注册到EPS网络上的流程，是用户开机后的第一个过程，是后续所有的流程的基础。在附着过程中，EPC网络会为用户建立一个默认承载，也可以对用户进行鉴权（用户首次附着到EPS网络上必须鉴权）。如果IMS业务APN和数据业务APN采用独立的APN，则附着流程完成之后，EPC网络就建立了数据APN缺省承载，用户可以通过EPS网络访问数据业务。UE再发起PDN连接请求，EPC网络为其建立IMS APN默认承载。 
-
  
 UE注册到IMS网络UE注册到IMS网络包括基本注册和第三方注册。基本注册过程中，UE主动发起注册，IMS网络与UE进行双向鉴权，通常采用IMS AKA或者SIP Digest鉴权方式，鉴权通过后，S-CSCF从IMS HSS下载到用户数据，基本注册完成。第三方注册过程中，S-CSCF根据用户数据中的iFC触发到AS的注册，AS从融合IMS HSS下载到UE的业务数据后，第三方注册完成。 
-
  
-
-
-信令流程 :注册流程（融合HLR/HSS）如[图1]所示。
+信令流程 : 
+注册流程（融合HLR/HSS）如[图1]所示。
 图1  注册流程（融合HLR/HSS）
-
-
-
-
 EPC附着信令流程
-
-
 UE通过eNodeB向MME发起附着请求Attach Request，其中MS Network Capability信元会指示终端是否支持SRVCC。
-
-
 MME检查Attach Request消息，判决需要对用户鉴权（比如消息完整性保护失败、MME启动附着强制鉴权等），同时MME没有此用户可用的鉴权向量信息，则MME向融合HLR/HSS发送AIR消息，请求鉴权数据，消息中携带user-name信元，表示用户的IMSI；否则，流程从第6步开始。
-
-
 融合HLR/HSS向MME返回AIA消息，消息中携带用户的四元组鉴权向量，包括XRES（Expected Response）、RAND（Random Challenge）、AUTN、KASME。
-
-
 MME收到AIA消息后，向UE发送Authentication Request消息，对UE发起鉴权请求。消息中包含：RAND、AUTN、KSIasme。
-
-
 如果UE鉴权成功，则会根据RAND计算出RES（Response）并通过Authentication Response返回给MME。MME使用鉴权向量组中的XRES和UE返回的RES（Response）比较，相同则鉴权成功，否则鉴权失败并向UE发送Authentication
 Reject消息。
-
-
 EPC网络对终端的USIM卡完成鉴权流程后，如果从UE上次分离后MME改变了，或MME没有UE的有效的签约上下文，或IMEI改变，则MME向融合HLR/HSS发送ULR消息，获取用户信息，消息中携带UE-SRVCC-Capability信元：指示UE是否支持SRVCC能力，消息中携带Homogeneous-Support-of-IMS-Voice-Over-PS-Sessions信元：指示EPC网络是否支持IMS语音业务。
-
-
 融合HLR/HSS向MME发送ULA消息，向MME插入签约数据，包括默认APN，一个或多个PDN签约上下文。如果IMS业务APN和数据业务APN采用独立的APN，则这里默认APN是数据业务APN。
-
-
 MME根据APN FQDN查询DNS配置，再结合S-GW POOL和P-GW POOL的网络拓扑选择S-GW和P-GW，向S/P-GW发送Create Session
 Request消息，请求建立数据APN缺省承载。S-GW缓存任何从PDN GW接收的下行分组数据，直到收到第14步的修改承载请求消息，在这之前不能发送下行数据通知消息给MME。
-
-
 P-GW收到Create Session Request消息后，执行IP-CAN会话建立流程，即PGW向PCRF发送CCR信用控制请求消息，获取UE的缺省PCC规则。
-
-
 PCRF根据SPR的签约信息、PGW上报的网络信息和PCRF的本地配置信息进行策略决策，对数据APN的PDN连接的请求进行EPS默认承载的QoS授权，并使用信用控制应答消息CCA下发授权的QoS信息给PGW。消息里携带Default-EPS-Bearer-QoS
 AVP，其QCI根据需要设置。
-
-
 S/P-GW向MME返回Create Session Response消息，其中携带QCI的信元，指示建立数据APN缺省承载已完成。
-
-
 MME根据缺省APN的签约APN-AMBR和签约UE-AMBR确定UE-AMBR，通过eNodeB向UE发送Attach Accept消息，如果MME分配了新的GUTI，则消息中包含GUTI。
-
-
 UE通过eNodeB发送Attach Complete消息给MME。
-
-
 MME收到后发送Modify Bearer Request消息给S/P-GW，消息中携带无线侧的TEID和地址。
-
-
 S/P-GW根据下行TEID和地址通过所建立的缺省承载立即开始给UE传送数据包，并给MME回复Modify Bearer Response消息。
-
-
 如果IMS业务APN和数据业务APN采用独立的APN，则附着流程完成之后，EPC网络就建立了数据APN缺省承载，用户可以通过EPS网络访问数据业务。UE再发起PDN连接请求，消息中携带IMS APN名称，EPC网络为其建立IMS APN默认承载。
-
-
 MME向S/P-GW发送Create Session Request消息，消息中携带IMS APN名称和IMS APN的QCI，请求建立IMS APN默认承载。
-
-
 P-GW收到Create Session Request消息后，执行IP-CAN会话建立流程，即PGW向PCRF发送CCR信用控制请求消息，获取UE的PCC规则。
-
-
 PCRF根据SPR的签约信息、PGW上报的网络信息和PCRF的本地配置信息进行策略决策，对IMS APN的PDN连接的请求进行EPS默认承载的QoS授权，并使用信用控制应答消息CCA下发授权的QoS信息给PGW。消息里携带Default-EPS-Bearer-QoS AVP，其QCI根据需要设置。
-
-
 S/P-GW向MME返回Create Session Response消息，消息中携带关键信元PCO和QCI，指示建立IMS信令默认承载已完成，其中PCO包含P-CSCF的地址。
-
-
 IMS注册流程
-
-
 UE读取USIM卡信息获取IMSI，再从IMSI推导出IMPI和IMPU，向IMS拜访网络入口P-CSCF发送REGISTER消息请求注册。
-
-
 P-CSCF根据Request-URI头域中域名查询DNS服务器，获得拜访域网络入口I-CSCF网元地址，向I-CSCF转发REGISTER消息。
-
-
 I-CSCF收到REGISTER消息后，做如下处理：
-
  
 CSCF根据Request-URI中的域名，判断是否在信任域或本地域。 
-
  
 对于本域用户，向IMS HSS发送UAR消息，请求获取S-CSCF的地址或者能力集。 
-
  
-
-
 融合HLR/HSS收到UAR消息，根据本地数据库中的用户开户信息，判断用户已开户，则向I-CSCF发送UAA响应，返回S-CSCF的地址或者能力集。
-
  
 当UAA消息中携带Server-Name时，表示携带的为S-CSCF的地址。 
-
  
 当UAA消息中携带Server-Capabilities时，表示携带的为S-CSCF的能力集。 
-
  
-
-
 I-CSCF根据融合HLR/HSS返回的S-CSCF地址，向S-CSCF转发REGISTER消息。S-CSCF向融合HLR/HSS发送MAR消息，请求获取认证向量AV（Authorization Vector）。同时融合HLR/HSS记录当前S-CSCF主机名，保证401鉴权挑战消息之后的REGISTER消息能够到达同一个S-CSCF。
-
-
 融合HLR/HSS向S-CSCF返回MAA响应，包括鉴权五元组XRES、RAND（Random Challenge）、AUTN、IK和CK（Cipher Key）。
-
-
 S-CSCF根据RAND和AUTN生成nonce，并将nonce同IK、CK以及鉴权算法放到WWW-Authenticate头域中，随401响应返回给P-CSCF。同时，S-CSCF保存参数XRES，以备后续对用户的鉴权响应进行验证。
-
-
 P-CSCF从消息中取出IK和CK并保存，将消息中剩余的鉴权元素RAND和AUTN继续向UE转发。
-
-
 UE收到401响应后，根据本地ISIM中保存的共享密钥对AUTN进行认证，实现对归属网络的认证。再基于共享密钥和RAND计算出RES（Response），重新构造REGISTER消息，携带RESPONSE，按照初始REGISTER消息的路径发给P-CSCF。
-
-
 P-CSCF按照初始REGISTER消息的路径发送后续REGISTER给I-CSCF。
-
-
 I-CSCF收到REGISTER消息后，发送UAR，查询HSS得到服务的S-CSCF主机名。
-
-
 融合HLR/HSS收到UAR消息后，将之前记录的S-CSCF的地址信息通过UAA消息发送给I-CSCF。
-
-
 S-CSCF收到鉴权响应，本地通过MD5算法计算得到response，并与第二条注册请求中的response进行比较。如果两者匹配，则该UE通过网络鉴权。鉴权通过后，S-CSCF向融合HLR/HSS发送SAR消息，请求下载用户的签约数据。
-
-
 融合HLR/HSS向S-CSCF返回iFC、计费功能地址等信息。
-
-
 S-CSCF向UE侧返回200响应，表明初始注册成功。
-
-
 S-CSCF根据从融合HLR/HSS处下载的用户签约信息，判断其中有针对REGISTER请求的iFC数据，S-CSCF根据iFC中AS地址，向AS发送第三方注册请求。如果用户签约信息中包含多条针对REGISTER请求的iFC数据，S-CSCF会根据优先级从高到低依次发送给iFC中的AS地址。同时S-CSCF还支持根据签约，携带UE发起的注册请求和注册成功响应消息。
-
-
 AS发现用户为第一次注册，发送UDR消息给融合HLR/HSS，请求获取用户数据（包括用户身份数据、业务签约数据等）。
-
-
 融合HLR/HSS向AS返回UDA响应，携带用户数据。
-
-
 AS发送SNR消息给融合HLR/HSS，向HSS进行订阅。
-
-
 融合HLR/HSS向AS返回SNA响应，表示订阅成功。当后续用户订阅的签约业务发生改变，HSS会通过SNR向AS进行同步，保证业务数据的一致性据。
-
-
 AS根据收到的用户数据对用户进行鉴权。鉴权通过后，AS将用户数据保存到本地数据库，并向S-CSCF返回第三方注册的200成功响应。至此，IMS网络注册已完成。 
-
-
-
-
 ### 终端发起的注销流程 
 ### 终端发起的注销流程 
-
-
-业务模型 :当用户关机或者主动注销用户，此时，HSS需要通过注销流程将用户的注册状态从“已注册”变为“未注册”，基本过程如下： 
-
+业务模型 : 
+当用户关机或者主动注销用户，此时，HSS需要通过注销流程将用户的注册状态从“已注册”变为“未注册”，基本过程如下： 
  
 UE通过EPC网络向IMS网络发起注销请求。 
-
  
 IMS收到注销请求后，对用户进行鉴权，通知HSS变更用户注册状态，同时删除SBC和SCSCF上本地保存的用户数据。 
-
  
 SCSCF还将通知AS注销用户，AS也会删除本地保存的用户数据。 
-
  
 终端发起的注销流程可分为： 
-
  
 UE从IMS网络注销：UE先向CSCF发起注销请求，CSCF通过与HSS的交互，HSS将UE的状态修改为“未注册”。之后，CSCF向AS发起第三方注销请求。 
-
  
 UE从EPC网络分离：MME网元分离流程是用户从EPC网络上注销的流程，UE发起分离请求后，MME会删除为用户建立的所有承载，包括IMS
 APN默认承载，释放无线资源，删除移动性管理上下文或把移动性管理上下文状态置为注销态。分离流程完成之后，用户不能再通过EPC网络进行语音业务和数据业务。 
-
  
-
-
-信令流程 :终端发起的注销消息流程如图[图1]所示。
+信令流程 : 
+终端发起的注销消息流程如图[图1]所示。
 图1  语音业务流程（主叫VoLTE用户附着在LTE 被叫VoLTE用户附着在2G 3G）
-
-
 IMS注销流程
-
-
 UE向IMS拜访网络入口SBC/P-CSCF发送REGISTER消息请求注销，其中expires值等于0表示注销。 
-
-
 P-CSCF根据Request-URI头域中域名查询DNS服务器，获得归属域网络入口I-CSCF网元地址，向I-CSCF转发REGISTER消息。 
-
-
 I-CSCF收到REGISTER消息后，I-CSCF需要向HSS发送UAR	请求，以获得用户所在SCSCF的地址。 UAR请求中携带PUI和PVI，以及拜访网络标识，同时User-Authorization-Type，其取值为“De-Registration”表示注销请求。 
-
-
 IMS HSS收到UAR消息，根据本地数据库中的用户信息，判断用户是否注册状态，同时通过UAA响应，返回用户注册时保存的S-CSCF的地址。 
-
-
 I-CSCF根据IMS HSS返回的S-CSCF地址，向S-CSCF转发REGISTER消息。S-CSCF向IMS HSS发送SAR消息，消息中携带关键AVP
 Server-Assignment-Type，其取值为“USER_DEREGISTRATION”表示S-CSCF请求IMS HSS将用户状态置为“注销”。 
-
-
 IMS HSS将用户状态置为“not register”后，向S-CSCF返回SAA响应消息。 
-
-
 S-CSCF向UE侧反馈200响应，表示注销成功。SCSCF会删除本地保存的用户数据，包括隐式集、iFC、计费功能地址、鉴权信息等。 
-
-
 S-CSCF根据UE注册时从IMS HSS处下载的用户签约iFC信息，判断注销是需要触发AS，SCSCF则会向AS发送第三方注销请求。如果用户签约信息中包含注销多此触发不同的AS，那么SCSCF根据签约的优先级，依次触发AS1、AS2、ASn，实现对应用服务器的注销。 
-
-
 AS向S-CSCF侧反馈200OK响应，表明第三方注销成功。至此，IMS用户注销已完成。 
-
-
 EPC分离流程
-
-
 UE通过eNodeB向MME发起附着请求Detach Request，消息中携带Detach type指示EPS detach、IMSI
 detach或combined EPS/IMSI detach。 
-
-
 MME按每PDN连接发送Delete Session Request 给S/P-GW, 去激活S/P-GW内该UE激活的EPS
 承载，包括IMS APN的PDN连接。如果S/P-GW请求了UE位置信息，则MME需要在该消息中包含该用户的位置信息。 
-
-
 P-GW收到Delete Session Request消息后，执行IP-CAN会话终止流程，即PGW向PCRF发送CCR信用控制请求消息，指示PCRF删除UE相关的PCC规则，EPS承载删除。 
-
-
 PCRF删除UE相应的APN的IP-CAN会话和所关联的PCC规则后，向P-GW返回信用控制应答消息CCA响应消息。 
-
-
 S/P-GW向MME返回Delete Session Response消息，携带cause信元指示IMS APN默认承载已成功删除。 
-
-
 MME向UE返回Detach Accept (UE originating detach)消息。MME删除为用户建立的所有承载，包括IMS
 APN默认承载，释放无线资源，删除移动性管理上下文或把移动性管理上下文状态置为注销态。EPC网络分离后用户不能再通过EPC网络进行语音业务和数据业务。 
-
-
-
-
 ### 网络侧发起的注销流程 
 ### 网络侧发起的注销流程 
-
-
-业务模型 :当用户需要修改鉴权秘钥，或者运维人员出于运维考虑，IMS核心网可以主动注销用户。通过网络侧发起的注销，可将用户的注册状态从“已注册”变为“未注册”。其关键流程如下： 
-
-
+业务模型 : 
+当用户需要修改鉴权秘钥，或者运维人员出于运维考虑，IMS核心网可以主动注销用户。通过网络侧发起的注销，可将用户的注册状态从“已注册”变为“未注册”。其关键流程如下： 
 IMS-HSS先向S-CSCF网络发起注销。 
-
-
 S-CSCF通知UE和P-CSCF、AS注销用户，保证全网数据和状态的一致性。 
-
-
 EPC网络与UE进行分离。 
-
-
 网络侧发起的注销流程主要分两个阶段。 
-
  
 IMS-HSS发起注销：IMS-HSS向S-CSCF发起注销请求，S-CSCF通过发送NOTIFY消息将注销状态通知UE。之后，S-CSCF向AS发起第三方注销请求。 
-
  
 UE从EPC网络分离：MME网元分离流程是用户从EPC网络上注销的流程，UE发起分离请求后，MME会删除为用户建立的所有承载，包括IMS
 APN默认承载，释放无线资源，删除移动性管理上下文或把移动性管理上下文状态置为注销态。分离流程完成之后，用户不能再通过EPC网络进行语音业务和数据业务。 
-
  
-
-
-信令流程 :网络侧发起的注销流程如[图1]所示。
+信令流程 : 
+网络侧发起的注销流程如[图1]所示。
 图1  网络侧发起的注销流程
-
-
-
-
 IMS注销流程
-
-
 IMS-HSS向S-CSCF发送RTR消息，发起网络侧注销请求。RTR请求中将包含注销操作的原因。 
-
  
 PERMANENT_TERMINATION(0)：RTR消息中携带的IMPI后续再次发起注册时，IMS-HSS不会再向该IMPI分配此S-CSCF。 
-
  
 NEW_SERVER_ASSIGNED(1)：IMS-HSS已向IMPI重新分配了新的S-CSCF，请求原S-CSCF删除该IMPI的相关数据。 
-
  
 SERVER_CHANGE(2)：通知S-CSCF向UE发起注销，使得UE向新的S-CSCF发起注册请求。 
-
  
 REMOVE_S-CSCF(3)：后续任何用户发起注册请求时，IMS-HSS都不会向注册用户分配该S-CSCF。 
-
  
-
-
 S-CSCF向IMS-HSS返回响应消息RTA。 
-
-
 当用户注册时，UE先前已经发起了注册状态的订阅并成功，那么S-CSCF基于此订阅对话，向P-CSCF发送对话内NOTIFY消息，携带Subscription-State头域取值为“terminated”表示当前用户状态为“已注销”。 
-
-
 P-CSCF收到S-CSCF的NOTIFY消息后，将消息转发给UE。 
-
-
 UE返回200响应，表明基本注销成功。 
-
-
 S-CSCF根据本地保存的iFC信息，决定触发第三方注销，S-CSCF会根据iFC中优先级从高到低依次发送给iFC中的多个AS地址。 
-
-
 AS向S-CSCF侧反馈200响应消息，表明第三方注销成功。至此，IMS网络注销已完成。 
-
-
 EPC分离流程
-
-
 UE通过eNodeB向MME发起附着请求Detach Request，消息中携带Detach type指示EPS detach、IMSI
 detach或combined EPS/IMSI detach。 
-
-
 MME按每PDN连接发送Delete Session Request给S/P-GW, 去激活S/P-GW内该UE激活的EPS
 承载，包括IMS APN的PDN连接。如果S/P-GW请求了UE位置信息，则MME需要在该消息中包含该用户的位置信息。 
-
-
 P-GW收到Delete Session Request消息后，执行IP-CAN会话终止流程，即PGW向PCRF发送CCR信用控制请求消息，指示PCRF删除UE相关的PCC规则，EPS承载删除。 
-
-
 PCRF删除UE相应的APN的IP-CAN会话和所关联的PCC规则后，向P-GW返回信用控制应答消息CCA响应消息。 
-
-
 S/P-GW向MME返回Delete Session Response消息，携带cause信元指示IMS APN默认承载已成功删除。 
-
-
 MME向UE返回Detach Accept (UE originating detach)消息。MME删除为用户建立的所有承载，包括IMS
 APN默认承载，释放无线资源，删除移动性管理上下文或把移动性管理上下文状态置为注销态。EPC网络分离后用户不能再通过EPC网络进行语音业务和数据业务。 
-
-
-
-
 ### 语音业务流程（主被叫VoLTE用户均附着在LTE） 
 ### 语音业务流程（主被叫VoLTE用户均附着在LTE） 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 主叫、被叫用户归属于同一个IMS网络。 
-
  
 主叫、被叫用户都是VoLTE用户，且已注册。 
-
  
 主叫、被叫均附着在LTE。主叫用户先挂机。 
-
  
 HLR/SAE-HSS/IMS-HSS合一部署，HSS\ENUM\DNS也合一部署。 
-
  
 呼叫流程可以分为： 
-
  
 主叫侧呼叫流程：与固网IMS呼叫一致。 
-
  
 被叫侧呼叫流程：比固网IMS呼叫多了VoLTE AS网元，VoLTE AS发起T-ADS流程，涉及融合HLR/HSS、MME网元。 
-
  
 被叫的LTE专用承载建立流程：被叫侧P-CSCF在收到183或180响应时，从其中取出媒体信息，根据媒体信息的要求，通过PCRF要求P-GW建立被叫用户在LTE域的专用LTE承载。 
-
  
 主叫的LTE专用承载建立流程：主叫侧P-CSCF在收到183或180响应时，从其中取出媒体信息，根据媒体信息的要求，通过PCRF要求P-GW建立主叫用户在LTE域的专用LTE承载。 
-
  
 主叫的LTE专用承载释放流程：主叫发Bye，被叫用户返回200 OK时，被叫P-CSCF通过PCRF要求P-GW释放LTE域专用承载。主叫P-CSCF在收到200
 OK时，通过PCRF要求P-GW释放LTE域专用承载。 
-
  
-
-
-信令流程 :呼叫流程如[图1]所示。
+信令流程 : 
+呼叫流程如[图1]所示。
 图1  VoLTE用户呼叫VoLTE用户(都是LTE域附着)
-
-
 主叫信令面流程
-
-
 主叫终端UE_A向P-CSCF发起呼叫。 
-
-
 P-CSCF从INVITE消息中得到主叫用户的媒体信息，将IP与媒体信息通过AAR发给PCRF，要求PCRF建立LTE域承载。 
-
-
 PCRF用AAA响应回答PCSCF。 
-
-
 P-CSCF在invit的via\Record-Route头中加入自己的地址，把Route头中添加S-CSCF地址后，将invite发给S-CSCF。 
-
-
 S-CSCF_A收到 invite消息后，从P-Asserted-Identity头中取出主叫用户PUI，判断已经注册，则根据iFC触发呼叫到VoLTE
 AS_A。 
 S-CSCF_A在触发VoLTE AS_A之前，会做如下判断：S-CSCF_A判断VoLTE AS_A是否在信任域内，如果VoLTE
 AS_A在信任域内，S-CSCF_A会将P-Access-Network-Info头域发往VoLTE AS_A，否则将删除P-Access-Network-Info头域。 
-
-
 VoLTE AS_A为主叫UE_A提供补充业务后，把INVITE发到S-CSCF_A。 
  
-
-
 S-CSCF_A根据被叫号码查询ENUM，获取用户的SIP URI后，根据SIP URI的域名查询DNS获得被叫I-CSCF_B的IP地址。S-CSCF_A再将INVITE消息发送到被叫I-CSCF_B。 
-
-
 被叫信令面流程（T-ADS域选）
-
-
 I-CSCF_B向HSS发送LIR消息，要求获取UE_B注册的S-CSCF_B地址。 
  
-
-
 HSS收到LIR消息后，因为UE_B在注册时会在HSS中登记S-CSCF地址，则向I-CSCF_B发送LIA消息，携带S-CSCF_B的服务器地址。 
-
-
 S-CSCF_B收到INVITE消息后，根据被叫用户的iFC数据，选择一个AS为VoLTE AS_B，发送INVITE消息，以触发被叫业务和被叫域选择功能。 
-
-
 VoLTE AS_B向HSS发送UDR消息，要求取得被叫用户的T-ADS信息。 
-
-
 HSS本身融合了SAE-HSS功能，会通过IDR消息向MME_B查询被叫用户的T-ADS信息。 
-
-
 MME_B通过IDA消息向HSS发送被叫用户的T-ADS信息。  
-
-
 HSS将T-ADS信息通过UDA消息返回给VoLTE AS_B。 
-
-
 VoLTE AS根据得到的T-ADS信息，内部逻辑判断应域选择到IMS域，则发INVITE给S-CSCF_B网元，Request-uri是被叫用户在IMS域内的URI号码。 
-
-
 S-CSCF_B判断当前被叫用户的iFC触发完成，则找到用户注册的P-CSCF_B地址，将INVITE消息发送到P-CSCF_B。  
-
-
 P-CSCF_B从INVITE消息中获得主叫用户的媒体面信息，并将之通过AAR消息发送给PCRF_B，要求PCRF_B建立LTE专有承载。  
-
-
 PCRF_B向P-CSCF_B发送AAA响应。 
-
-
 P-CSCF_B把INVITE消息发送给UE_B。 
-
-
 被叫承载面建立
-
-
 被叫UE_B返回180响应，在SDP中携带SDP Answer信息。  
-
-
 P-CSCF_B收到被叫侧返回的180响应后，发送AAR消息给PCRF_B，AAR中携带UE_B的媒体信息，以便于PCRF进行承载控制。 
-
-
 PCRF_B根据认证/授权请求消息AAR消息中携带的媒体类型和媒体描述信息做策略决策，提供授权的QoS，并通过重新认证/授权请求消息RAR消息将QoS（QCI/ARP/GBR/MBR）和PCC规则发送至P-GW_B。 
-
-
 P-GW_B收到重新认证/授权请求消息RAR，上报重新认证/授权应答消息RAA响应给PCRF_B。 
-
-
 PCRF_B根据P-GW_B返回的重新认证/授权应答消息RAA消息，向P-CSCF_B发送认证/授权应答消息AAA响应授权请求结果。 
-
-
 P-GW_B收到重新认证/授权请求消息RAR，通过Create Bearer Request指示MME_B建立专有承载。  
-
-
 MME_B收到Create Bearer Request消息后，向被叫UE_B发送Activate dedicated
 EPS bearer context request消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE_B向被叫MME_B发送Activate dedicated EPS bearer context accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 P-GW_B收到Create Bearer Response消息，确认专有承载已经建立。 
-
-
 P-GW_B向PCRF_B发送信用控制请求消息CCR消息，通知资源预留成功。  
-
-
 PCRF_B向P-GW_B返回信用控制应答消息CCA响应。  
-
-
 当PCRF_B收到P-GW_B的资源预留成功事件上报时，向P-CSCF_B发送RAR消息，通知承载建立情况。  
-
-
 P-CSCF_B向PCRF_B应答成功响应RAA消息。 
-
-
 主叫承载面建立
-
-
 P-CSCF_B将180响应转发至P-CSCF_A，其中SDP answer中携带UE_B的媒体信息。  
-
-
 P-CSCF_A收到被叫侧返回的180响应，发送RAR消息给PCRF_A载。AAR包括UE_A的信令地址和媒体信息。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，上报重新认证/授权应答消息RAA响应给PCRF_A。 
-
-
 PCRF_A根据P-GW_A返回的重新认证/授权应答消息RAA消息。 
-
-
 PCRF_A给P-CSCF_A发送认证/授权应答消息AAA，响应授权请求结果消息。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，通过Create Bearer Request指示MME_A建立专有承载。 
-
-
 MME_A收到Create Bearer Request消息后，向主叫UE_A发送Activate dedicated
 EPS bearer context request消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Activate dedicated EPS bearer context accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 MME_A发送Create Bearer Response消息给P-GW_A，P-GW_A收到Create Bearer
 Response消息确认专有承载已经建立。  
-
-
 P-GW_A向PCRF_A发送信用控制请求消息CCR消息，通知资源预留成功。 
-
-
 PCRF_A向P-GW_A返回信用控制应答消息CCA响应。 
-
-
 当PCRF_A收到P-GW_A的资源预留成功事件上报时，向P-CSCF_A发送RAR消息，通知承载建立已成功。  
-
-
 P-CSCF_A向PCRF_A应答RAA消息。 
-
-
 P-CSCF_A将180响应转发至主叫UE_A，其中SDP answer中携带呼叫的媒体信息。 
-
-
 被叫网络收到主叫网络发送的PRACK请求，表示主叫网络成功接收180响应，并且已完成资源预留。 
-
-
 被叫UE返回针对PRACK请求的200响应，表示成功接收PRACK请求。 
-
-
 被叫用户接听电话，被叫UE向主叫网络返回针对INVITE请求的200(INVITE)响应。 
-
-
 当VoLTE AS_B收到200(INVITE)消息后，开始向本域的CCF发送ACR [Start]消息。  
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建被叫AS CDR，并向VoLTE AS_B发送计费响应消息ACA。 
-
-
 VoLTE AS_B向主叫VoLTE AS_A转发200(INVITE)消息。  
-
-
 当VoLTE AS_A收到200(INVITE)消息后，开始向本域的CCF发送ACR [Start]消息。 
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建主叫AS CDR，并向VoLTE AS_A发送计费响应消息ACA（Accounting
 Answer）。 
-
-
 返回针对INVITE请求的200(INVITE)响应消息到主叫UE_A。  
-
-
 主叫UE向被叫网络返回针对200(INVITE)响应的ACK确认消息，主、被叫UE成功建立会话。 
-
-
 挂机释放流程
-
-
 UE_A挂机发送BYE消息。 
-
-
 当VoLTE AS_A收到BYE消息后，开始向本域的CCF发送ACR [Stop]消息。 
-
-
 CCF收到正确的ACR [Stop]消息后，将其保存，向VoLTE AS_A发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 VoLTE AS_A将BYE消息透传到被叫的VoLTE AS_B。  
-
-
 当被叫VoLTE AS_B收到BYE消息后，开始向本域的CCF发送ACR [Stop]消息。 
-
-
 CCF收到正确的ACR [Stop]消息后，将其保存，向VoLTE AS_B发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 VoLTE AS_B将BYE消息透传到被叫的UE_B。 
-
-
 UE_B收到主叫侧的挂机请求后，向主叫侧发送200(BYE)响应消息。 
-
-
 当被叫P-CSCF_B收到200(BYE)响应后，向PCRF_B下发终止会话请求消息STR消息释放承载会话。 
-
-
 PCRF_B发送重新认证/授权请求消息RAR消息通知P-GW_B删除专有承载，携带charging rule remove指示。 
-
-
 P-GW_B返回重新认证/授权应答消息RAA给PCRF_B。 
-
-
 PCRF_B返回终止会话应答消息STA响应给P-CSCF_B。 
-
-
 P-GW_B根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME_B指示删除专有承载。 
-
-
 MME_B收到Delete Bearer Request消息后，向被叫UE_B发送Deactivate EPS bearer
 context request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE_B向被叫MME_B发送Deactivate dedicated EPS bearer context accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 MME_B发送Delete Bearer Response消息给P-GW_B。P-GW_B收到该消息，专有承载已经完成删除。 
-
-
 P-GW_B发送信用控制请求消息CCR消息给PCRF_B，指示专有承载已成功删除。 
-
-
 PCRF_B给P-GW_B返回信用控制应答消息CCA消息予以确认。 
-
-
 P-CSCF_B发送BYE的200OK响应给P-CSCF_A。 
-
-
 当主叫P-CSCF_A收到BYE的200响应后，向PCRF_A发送STR消息，以便PCRF_A释放承载会话。 
-
-
 PCRF_A发送重新认证/授权请求消息RAR消息通知P-GW_A删除专有承载，携带charging rule remove指示。 
-
-
 P-GW_A返回重新认证/授权应答消息RAA给PCRF_A。 
-
-
 PCRF_A返回终止会话应答消息STA响应给P-CSCF_A。 
-
-
 P-GW_A根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME_A指示删除专有承载。 
-
-
 MME_A收到Delete Bearer Request消息后，向主叫UE_A发送Deactivate EPS bearer
 context request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Deactivate dedicated EPS bearer context accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 P-GW_A收到Delete Bearer Response消息，专有承载已经完成删除。 
-
-
 P-GW_A发送信用控制请求消息CCR消息给PCRF_A，指示专有承载已成功删除。 
-
-
 PCRF_A给P-GW_A返回信用控制应答消息CCA消息予以确认。 
-
-
 P-CSCF_A发送BYE的200 OK应答给UE_A，通话结束。 
-
-
-
-
 ### 语音业务流程（主叫VoLTE用户附着在LTE，被叫VoLTE用户附着在2G/3G） 
 ### 语音业务流程（主叫VoLTE用户附着在LTE，被叫VoLTE用户附着在2G/3G） 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 主叫、被叫用户归属于同一个IMS网络。 
-
  
 主叫、被叫用户都是VoLTE用户，且已注册。 
-
  
 主叫附着在LTE域，被叫附着在CS域，被叫用户先挂机。 
-
  
 HLR/SAE-HSS/IMS-HSS合一部署，HSS\ENUM\DNS也合一部署。 
-
  
 呼叫流程可以分为： 
-
  
 主叫侧呼叫流程：与固网IMS呼叫一致。 
-
  
 被叫侧T-ADS域选叫流程：比固网IMS呼叫多了VoLTE AS网元，VoLTE AS发起T-ADS流程，涉及融合HLR/HSS、MME网元。 
-
  
 被叫侧呼叫流程： VoLTE AS修改被叫号码为CSRN后，S-CSCF通过MGCF呼出到CS域，一直呼到被叫侧vMSC。 
-
  
 被叫的CS域承载建立流程：被叫用户回答呼叫响应，vMSC会向MGW、无线RNC请求建立承载与无线通道。之后主叫侧P-CSCF在收到183或180响应时，从其中取出媒体信息，根据媒体信息的要求，通过PCRF要求P-GW建立主叫用户在LTE域的专用LTE承载。 
-
  
 被叫挂机流程：被叫挂机后，vMSC与MGCF分别发起承载释放操作。同时把Bye通过IMS网络发给主叫侧。主叫侧P-CSCF会通过PCRF要求P-GW释放LTE域专用承载。 
-
  
-
-
-信令流程 :主叫LTE用户通过LTE网络向被叫域选CS网络的LTE用户发起呼叫，具体的语音流程如[图1]所示。
+信令流程 : 
+主叫LTE用户通过LTE网络向被叫域选CS网络的LTE用户发起呼叫，具体的语音流程如[图1]所示。
 图1  语音业务流程（主叫VoLTE用户附着在LTE， 被叫VoLTE用户附着在2G/3G）
-
-
 主叫信令面流程
-
-
 主叫终端发起SIP呼叫，INVITE先到达P-CSCF_A。 
-
-
 P-CSCF_A从INVITE中取出主叫用户的媒体面信息，通过AAR消息发送给PCRF_A，这使得PCRF_A建立LTE域承载。 
-
-
 PCRF_A返回承载建立的响应AAA响应给P-CSCF_A。 
-
-
 P-CSCF_A把INVITE消息发给S-CSCF_A。 
-
-
  S-CSCF_A收到INVITE后，取出主叫号码，根据其签约的iFC数据，触发到VoLTE AS_A。 
 S-CSCF_A在触发VoLTE AS_A之前，会做如下判断：S-CSCF_A判断VoLTE AS_A是否在信任域内，如果VoLTE
 AS_A在信任域内，S-CSCF_A会将P-Access-Network-Info头域发往VoLTE AS_A，否则将删除P-Access-Network-Info头域。 
-
-
 VoLTE AS_A做完主叫的补充业务后，返回INVITE消息给S-CSCF_A。 
-
-
 S-CSCF_A根据被叫号码查询ENUM，获取用户的SIP URI，根据SIP URI的域名查询DNS获得被叫I-CSCF_B的IP地址。S-CSCF_A再将INVITE消息发送到被叫I-CSCF_B。 
-
-
 I-CSCF_B向HSS发送LIR消息，要求获取UE_B注册的S-CSCF_B地址。 
-
-
 HSS收到LIR消息后，因为UE_B在注册时会在HSS中登记S-CSCF地址，则向I-CSCF_B发送LIA消息，携带S-CSCF_B的服务器地址。 
-
-
 被叫信令面T-ADS域选流程
-
-
 S-CSCF_B收到INVITE消息后，根据被叫用户的iFC数据，触发到VoLTE AS_B。 
-
-
 VoLTE AS_B向HSS发Sh接口UDR消息，要求取得T-ADS信息。 
-
-
 HSS在UDA消息中返回T-ADS信息，包括： IMSVoiceOverPSSessionSupport、RATtype、,LastUEActivityTime。 
-
-
 VoLTE AS_B判断当前用户附着在CS域，VoLTE AS_B给HSS发送UDR消息，要求取得CSRN信息。 
-
-
 融合HLR/HSS会发MAP_PROVIDE_ROAMING_NUMBER消息到G/V MSC Server，要求取得被叫用户的漫游号码MSRN。 
  
-
-
 G/V MSC Server会在发给融合HLR/HSS的MAP_PROVIDE_ROAMING_NUMBER_ACK消息中返回MSRN。 
-
-
 HSS会在UDA消息中返回CSRN给VoLTE AS_B。 
-
-
 VoLTE AS_B把得到的CSRN号码，填在INVITE的Req-uri消息中，发给S-CSCF_B。 
-
-
 被叫信令面流程
-
-
 S-CSCF_B确定到MGCF的路由，发送INVITE消息到MGCF。 
-
-
 MGCF向IM-MGW发送ADD REQ消息，请求添加主叫侧的IP终端，以及指示本次呼叫使用的编解码列表。 
-
-
 IM-MGW动态分配IP资源，向MGCF回复ADD REPLY消息，其中包含终端信息。 
-
-
 MGCF向IM-MGW发送ADD REQ消息，请求添加被叫侧的IP终端，以及指示本次呼叫使用的编解码列表。 
-
-
 IM-MGW动态分配IP资源，返回ADD REPLY消息，携带终端信息 
-
-
 IM-MGW向MGCF发送NTFY REQ消息，上报承载建立事件。 
-
-
 MGCF接收到IM-MGW上报的事件信息后，发送NTFY REPLY消息，返回承载建立事件的响应。 
-
-
 MGCF分析CSRN，获取出局路由通过IAM消息将呼叫请求路由到UE_B当前所在的G/V MSC Server上，消息中携带了建立呼叫的必备信息（如主叫类别、被叫号码等）和一些可选信息（如主叫号码）。 
-
-
 G/V MSC Server通过RNC向UE_B发送PAGING消息下寻呼，并等待寻呼响应。 
-
-
 寻呼成功，UE_B通过RNC向G/V MSC Server透传PAGING RESPONSE消息。 
-
-
 G/V MSC Server向UE_B下发Setup消息，建立呼叫。 
-
-
 UE_B响应，接受本次呼叫，向G/V MSC Server回复CALL CONFIRMED消息。 
-
-
 承载面流程建立
-
-
 G/V MSC Server发送ADD REQ消息到MGW，请求添加到MGCF一侧的IP终端，以及指示本次呼叫使用的编解码列表。 
-
-
 MGW分配IP资源，返回ADD REPLY消息，消息中携带有终端相关信息。 
-
-
 G/V MSC Server发送ADD REQ消息到MGW，请求添加到RNC一侧的IP终端，以及指示本次呼叫使用的编解码列表。 
-
-
 MGW动态分配IP资源，向G/V MSC Server回复ADD REPLY消息，该消息中返回终端相关信息。 
-
-
 MGW向G/V MSC Server发送NTFY REQ消息，通知到MGCF一侧的承载建立完成。 
-
-
 G/V MSC Server接收到MGW上报的事件信息后，返回NTFY REPLY消息。 
-
-
 G/V MSC Server向RNC发送RAB ASSIGNMENT REQUEST消息，发起RAB的指配过程，携带MGW分配的IP地址和端口号，以及支持的编解码。 
-
-
 RNC发送RADIO BEARER SETUP消息到UE_B分配无线信道。 
-
-
 UE_B占用无线资源，返回RADIO BEARER SETUP COMPLETE消息。 
-
-
 RNC向MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP面的初始化，携带RNC侧IP地址、端口号等媒体面信息。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP初始化应答。 
-
-
 RNC发送RAB ASSIGNMENT RESPONSE消息到G/V MSC Server，指示承载建立完成。 
-
-
 MGW发送NTFY REQ消息到G/V MSC Server，上报到MGCF一侧的隧道信息。 
-
-
 G/V MSC Server返回NTFY REPLY消息。 
-
-
 G/V MSC Server回复APM消息到MGCF，携带G/V MSC Server选择的编解码信息和隧道信息。 
-
-
 MGCF发送MOD REQ消息给IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MGCF发送MOD REPLY消息。 
-
-
 IM-MGW发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，进行NB_UP的初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP初始化应答。 
-
-
 IM-MGW发送NTFY REQ消息到MGCF，通知承载建立完成。 
-
-
 MGCF返回NTFY REPLY消息。 
-
-
 MGCF向被叫S-CSCF_B返回183响应，在SDP中携带协商完成后的媒体类型及媒体编解码能力。 
-
-
 S-CSCF_B把183响应转发给VoLTE AS_B。 
-
-
 VoLTE AS_B返回183响应给S-CSCF_B。S-CSCF_B把183响应发给I-CSCF_B。 
-
-
 I-CSCF_B把183响应发给I-CSCF_A。I-CSCF_A把183响应发给S-CSCF_A。 
-
-
 S-CSCF_A把183响应发给VoLTE AS_A。 
-
-
 VoLTE AS_A返回183响应给S-CSCF_A。 
-
-
 S-CSCF_A把183响应发给主叫P-CSCF_A 
-
-
 P-CSCF_A收到被叫侧返回的183（SDP）下发认证/授权请求消息AAR消息给PCRF_A开始建立专有承载。AAR包括媒体描述信息。 
-
-
 PCRF_A根据认证/授权请求消息AAR消息中携带的媒体类型和媒体描述信息做策略决策，提供授权的QoS，并通过重新认证/授权请求消息RAR消息将QoS（QCI/ARP/GBR/MBR）和PCC规则发送至P-GW_A。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，与主叫UE_A之间完成语音专有承载的建立后，上报重新认证/授权应答消息RAA响应给PCRF_A。 
-
-
 PCRF_A根据P-GW_A返回的重新认证/授权应答消息RAA消息，给P-CSCF_A通过认证/授权应答消息AAA响应授权请求结果消息。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，P-GW_A分配承载QoS信息，并发送Create Bearer Request给MME_A，建立新的专有承载。  
-
-
 MME_A收到Create Bearer Request消息后，向主叫UE_A发送Activate dedicated
 EPS bearer context request消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Activate dedicated EPS bearer context accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 P-GW_A收到Create Bearer Response消息，确认专有承载已经建立。 
-
-
 P-GW_A向PCRF_A发送信用控制请求消息CCR消息，通知资源预留成功。 
-
-
 PCRF_A向P-GW_A返回信用控制应答消息CCA响应。  
-
-
 当PCRF_A收到P-GW_A的资源预留成功事件上报时，向P-CSCF_A发送重新认证/授权请求消息RAR消息，通知承载建立情况。  
-
-
 P-CSCF_A向PCRF_A返回重新认证/授权应答消息RAA消息。 
-
-
 P-CSCF_A将183响应转发至主叫UE_A，其中SDP answer中携带语音（Audio）媒体信息。 
-
-
 UE_A返回PRACK请求给P-CSCF_A。  
-
-
 P-CSCF_A发PRACK请求给S-CSCF_A。 
-
-
 S-CSCF_A发PRACK请求给VoLTE AS_A。 
-
-
 VoLTE AS_A发PRACK请求给S-CSCF_A。S-CSCF_A发PRACK请求给I-CSCF_A。 
-
-
 I-CSCF_A发PRACK请求给I-CSCF_B。I-CSCF_B发PRACK请求给S-CSCF_B。 
-
-
 S-CSCF_B发PRACK请求给VoLTE AS_B。 
-
-
 VoLTE AS_B发PRACK请求给S-CSCF_B。 
-
-
 S-CSCF_B发PRACK请求给MGCF。MGCF收到PRACK请求，表示主叫网络成功接收183响应，并且已完成资源预留。 
-
-
 MGCF返回针对PRACK请求的200响应，表示成功接收PRACK请求。 
-
-
 被叫UE_B振铃，发送Alerting消息给G/V MSC Server。 
-
-
 被叫接入侧完成承载建立和Iu接口资源分配后，G/V MSC Server向MGCF回复ACM消息。 
-
-
 G/V MSC Server向MGW发送MOD REQ消息，携带signalsDescriptor描述符，控制MGW播放回铃音。 
-
-
 MGW向G/V MSC Server回复MOD REPLY消息，播放回铃音。 
-
-
 MGCF向主叫UE_A发送180消息表示被叫UE_B已振铃。中间依次经过了S-CSCF_B、 VoLTE AS_B、S-CSCF_B、I-CSCF_B、I-CSCF_A、S-CSCF_A、
 VoLTE AS_A、S-CSCF_A、P-CSCF_A。 
-
-
 主叫UE发送PRACK请求，依次经过了P-CSCF_A、S-CSCF_A、VoLTE AS_A、S-CSCF_A、I-CSCF_A、I-CSCF_B、S-CSCF_B、VoLTE
 AS_B、S-CSCF_B、MGCF。MGCF收到主叫网络发送的PRACK请求，表示主叫网络成功接收180响应。 
-
-
 MGCF返回针对PRACK请求的200响应，表示成功接收PRACK请求。 这个响应依次经过了S-CSCF_B、VoLTE
 AS_B、S-CSCF_B、I-CSCF_B、I-CSCF_A、S-CSCF_A、VoLTE AS_A、S-CSCF_A、P-CSCF_A。最后发给主叫UE_A。 
-
-
 被叫UE_B摘机后，UE_B发送Connect消息给G/V MSC Server。 
-
-
 G/V MSC Server向MGCF回复ANM消息。 
-
-
 G/V MSC Server向MGW发送MOD REQ消息，控制被叫MGW停止播放回铃音。 
-
-
 MGW向G/V MSC Server回复MOD REPLY消息，停止播放回铃音。 
-
-
 MGCF向VoLTE AS_B转发200(INVITE)消息。中间经过S-CSCF_B。 
-
-
 当VoLTE AS_B收到200(INVITE)消息后，开始向本域的CCF发送ACR [Start]消息。  
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建被叫AS CDR，并向VoLTE AS_B发送计费响应消息ACA。  
-
-
 VoLTE AS_B发200(INVITE)请求出来，中间依次经过了S-CSCF_B、I-CSCF_B、I-CSCF_A、S-CSCF_A、VoLTE
 AS_A。 
-
-
 当VoLTE AS_A收到200(INVITE)消息后，开始向本域的CCF发送ACR [Start]消息。 
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建主叫AS CDR，并向VoLTE AS_A发送计费响应消息ACA。 
-
-
 VoLTE AS_A发200(INVITE)请求出来，中间依次经过了S-CSCF_A、P-CSCF_A。最后发给主叫UE_A。 
-
-
 主叫UE_A向被叫网络返回针对200(INVITE)请求的ACK确认消息。ACK确认依次经过了P-CSCF_A、S-CSCF_A、VoLTE
 AS_A、S-CSCF_A、I-CSCF_A、I-CSCF_B、S-CSCF_B、VoLTE AS_B、S-CSCF_B，最后发给MGCF。 
-
-
 G/V MSC Server向被叫UE_B返回Connect ACK消息。  
-
-
 主、被叫UE成功建立会话。 
-
-
 挂机释放流程
-
-
 被叫UE挂机，发送Disconnect消息到G/V MSC Server。 
-
-
 G/V MSC Server返回Release消息。 
-
-
 同时G/V MSC Server发送REL消息到MGCF。 
-
-
 MGCF返回RLC消息，开始释放资源。 
-
-
 MGCF发送BYE消息到主叫侧。这个响应依次经过了S-CSCF_B、VoLTE AS_B、S-CSCF_B、I-CSCF_B、I-CSCF_A、S-CSCF_A、VoLTE
 AS_A、S-CSCF_A、P-CSCF_A。最后发给主叫UE_A。 
-
-
 MGCF向IM-MGW发送MOD REQ消息，释放到IMS一侧终端资源。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 MGCF向IM-MGW发送MOD REQ消息，释放到MSC Server一侧终端资源。  
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 G/V MSC Server发送MOD REQ消息，释放到MGCF一侧终端资源。 
-
-
 MGW返回MOD REPLY消息 
-
-
 UE_B发送Release complete到G/V MSC Server。 
-
-
 G/V MSC Server发送 IU RELEASE COMMAND消息到RNC，释放空口资源。 
-
-
 RNC返回IU RELEASE COMPLETE消息。  
-
-
 G/V MSC Server向MGW发送MOD REQ消息，释放被叫接入网侧终端资源。  
-
-
 MGW向被叫G/V MSC Server发送MOD REPLY消息，返回释放终端资源的响应。 
-
-
 当VoLTE AS_A、VoLTE AS_B收到MGCF发送的BYE消息后，开始向本域的CCF发送ACR [Stop]消息。 
-
-
 CCF收到正确的ACR [Stop]消息后，将其保存，向VoLTE AS发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 UE_A发送200(BYE)给P-CSCF_A。 
-
-
 当主叫P-CSCF_A收到200(BYE)响应后，向PCRF_A下发终止会话请求消息STR消息释放承载会话。 
-
-
 PCRF_A发送重新认证/授权请求消息RAR消息通知P-GW_A删除专有承载，携带charging rule remove指示。 
-
-
 P-GW_A返回重新认证/授权应答消息RAA给PCRF_A。 
-
-
 PCRF_A返回终止会话应答消息STA响应给P-CSCF_A。 
-
-
 P-GW_A根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME_A指示删除专有承载。 
-
-
 MME_A收到Delete Bearer Request消息后，向主叫UE_A发送Deactivate EPS bearer
 context request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Deactivate dedicated EPS bearer context accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 P-GW_A收到Delete Bearer Response消息，专有承载已经完成删除。 
-
-
 P-GW_A发送信用控制请求消息CCR消息给PCRF_A，指示专有承载已成功删除。 
-
-
 PCRF_A给P-GW_A返回信用控制应答消息CCA消息予以确认。 
-
-
 P-CSCF_A发送200(BYE)给MGCF，这个响应经过 S-CSCF_A、VoLTE AS_A、S-CSCF_A、I-CSCF_A、I-CSCF_B、S-CSCF_B、VoLTE
 AS_B、S-CSCF_B。通话结束。 
-
-
-
-
 ### CS用户呼叫LTE用户流程 
 ### CS用户呼叫LTE用户流程 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 2G/3G用户（CS域用户）呼叫VoLTE用户，被叫在LTE域接入并注册成功。 
-
  
 VoLTE用户是连续号段，所以主叫CS域采用号码分析路由到被叫IMS域。 
-
  
 MGCF和MSC采用BICC协议。 
-
  
 3G HLR、SAE-HSS和IMS-HSS合一部署。 
-
  
 主叫用户先挂机结束通话。 
-
  
 CS用户呼叫LTE用户流程（被叫号码为连续号段）的呼叫过程可以分为如下几个阶段。 
-
  
 主叫CS域流程：主叫用户在CS域发起呼叫，V/GMSC让MGW建立主叫侧承载后，发IAM给MGCF进入IMS域。 
-
  
 被叫IMS流程（含域选）：CSCF触发VoLTE AS进行T-ADS域选流程，域选到LTE域，S-CSCF通过P-CSCF将呼叫路由到被叫用户。 
-
  
 被叫LTE侧承载建立流程：UE返回183后，P-CSCF控制PCRF发起承载建立请求同，PCRF请求P-GW建立承载。建立成功后，P-CSCF把183转发给主叫侧。 
-
  
 主叫CS域承载修改流程：MSC根据183（带有协商后的媒体）修改了承载。 
-
  
 挂机释放流程：主叫挂机，CS域侧承载释放，被叫终端回200 OK消息给P-CSCF，P-CSCF控制PCRF释放LTE域承载。 
-
  
-
-
-信令流程 :CS用户呼叫LTE用户流程（被叫号码为连续号段）的信令流程如[图1]所示。
+信令流程 : 
+CS用户呼叫LTE用户流程（被叫号码为连续号段）的信令流程如[图1]所示。
 图1  CS用户呼叫LTE用户流程（被叫号码为连续号段）
-
-
-
-
 主叫流程
-
-
 主叫MS发送呼叫的CM SERVICE REQUEST消息，请求建立呼叫。 
-
-
 MSC Server返回CM SERVICE ACCEPT消息，接受业务请求。 
-
-
 MS发送SETUP消息，携带被叫号码以及语音业务的承载信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加接入侧终端。 
-
-
 MGW分配IP资源，返回ADD REPLY消息，消息中携带IP资源的地址和端口信息。 
-
-
 MSC Server发送ASSIGNMENT REQUEST消息到BSC，进行指配，携带上述IP地址和端口。 
-
-
 BSC发送RADIO BEARER SETUP消息到MS，分配无线信道。 
-
-
 MS占用无线资源，返回RADIO BEARER SETUP COMPLETE消息。 
-
-
 BSC发送ASSIGNMENT COMPLETE消息到MSC，返回指配应答，携带BSC侧选择的编解码以及用户面IP地址和端口号。 
-
-
 MSC Server发送MOD REQ消息到MGW，携带BSC分配的IP地址和端口。 
-
-
 MSC Server返回MOD REPLY。 
-
-
 MGW发送NTFY REQ消息到MSC Server，上报BSC侧承载建立完成。 
-
-
 MSC Server返回NTFY REPLY消息。 
-
-
 MSC Server再次发送ADD REQ消息，请求添加核心网侧终端。 
-
-
 MGW动态分配IP资源，返回ADD REPLY消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，上报隧道指示事件，携带隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息。 
-
-
 MSC Server分析被叫号码的路由，发送IAM消息到MGCF，携带上述隧道信息。 
-
-
 MGCF发送ADD REQ消息到IM-MGW，请求建立被叫侧终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息。 
-
-
 MGCF发送INVITE到IMS的CSCF网元。 
-
-
 被叫流程（含域选）
-
-
 I-CSCF收到INVITE消息后，给HSS发送LIR消息，要求得到被叫用户所注册的S-CSCF的地址。 
-
-
 HSS返回LIA消息给I-CSCF，其中返回了一个S-CSCF的Server Name。 
-
-
 I-CSCF将INVITE消息发送给指定S-CSCF，S-CSCF则根据被叫用户开通的iFC数据，触发到一个VoLTE
 AS。 
-
-
 VoLTE AS触发完业务后，将INVITE消息返回给S-CSCF。 
-
-
 S-CSCF再根据iFC数据触发到一个VoLTE AS。 
-
-
 VoLTE AS要执行T-ADS域选择流程，向HSS发送UDR消息，请求获取被叫用户的T-ADS信息。 
-
-
 融合HLR/HSS发IDR消息给MME，要求得到被叫用户的T-ADS信息。 
-
-
 MME返回IDA消息，其中有被叫用户的T-ADS信息。 
-
-
 融合HLR/HSS将T-ADS信息放在UDA消息中，返回给VoLTE AS。 
-
-
 VoLTE AS根据T-ADS信息，判断当前应域选到LTE网络。VoLTE AS返回INVITE给S-CSCF，被叫号码为用户在IMS注册的号码。 
-
-
 S-CSCF根据被叫用户注册的P-CSCF地址，将INVITE消息转发给这个P-CSCF。 
-
-
 P-CSCF从INVITE消息中得到主叫用户的SDP信息后，将媒体信息通过AAR消息发送给PCRF，要求PCRF建立专有承载。 
-
-
 PCRF向P-CSCF发送AAA响应。 
-
-
 P-CSCF发INVITE消息给被叫UE。 
-
-
 被叫UE会返回183响应，在SDP中携带协商完成后的媒体信息。 
-
-
 被叫承载建立流程
-
-
 P-CSCF收到被叫侧返回的183响应后，发 AAR消息给PCRF建立专有承载。 
-
-
 PCRF根据得到的QoS参数和用户订阅信息做策略决策，提供授权的QoS，并通过RAR消息将QoS（QoS关键参数包含QCI、ARP、GBR和MBR）和事件触发信息的门控策略发送至P-GW。 
-
-
 P-GW收到RAR消息后，上报RAA响应给PCRF。 
-
-
 PCRF根据P-GW返回的RAA消息，发送AAA消息给P-CSCF，响应授权请求结果。 
-
-
 P-GW收到RAR消息后，分配承载QoS信息，并发送Create Bearer Request指示MME建立专有承载。 
-
-
 MME收到Create Bearer Request消息后，向被叫UE发送Activate dedicated EPS
 bearer context request消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE向MME发送Activate dedicated EPS bearer context accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 MME发送Create Bearer Response消息给P-GW，确认专有承载已经建立。 
-
-
 P-GW向PCRF发送CCR消息，通知资源预留成功。 
-
-
 PCRF向P-GW返回CCA响应。 
-
-
 当PCRF收到P-GW的资源预留成功事件上报时，向P-CSCF发送RAR消息，通知承载建立情况。 
-
-
 P-CSCF向PCRF返回RAA消息。 
-
-
 P-CSCF向主叫侧转发183消息至MGCF。在SDP中携带协商完成后的媒体类型及媒体编解码能力。 
-
-
 主叫承载修改流程
-
-
 MGCF收到183消息，发送MOD REQ消息到IM-MGW，修改到IMS一侧的承载信息。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 MGCF发送ADD REQ消息到IM-MGW，请求建立MSC Server侧终端。 
-
-
 IM-MGW动态分配IP资源，返回ADD REPLY消息。 
-
-
 MGCF发送MOD REQ消息到IM-MGW，将隧道信息传递到IM-MGW。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 IM-MGW发送NTFY REQ消息到MGCF，携带被叫侧隧道信息。 
-
-
 MGCF返回NTFY REPLY应答消息。 
-
-
 MGCF发送APM消息到MSC Server，携带上述被叫侧隧道信息。 
-
-
 MSC Server收到APM消息，发送MOD REQ到MGW，将隧道信息传递到MGW。 
-
-
 MGW返回MOD REPLY消息。 
-
-
 MGW发送TRC_IU/NB_UP_INIT_TOIP消息到IM-MGW，进行NB_UP初始化。 
-
-
 IM-MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，上报承载建立完成。 
-
-
 MSC Server返回NTFY REPLY消息。 
-
-
 IM-MGW发送NTFY REQ消息到MGCF，上报承载建立完成。 
-
-
 MGCF返回NTFY REPLY消息。 
-
-
 MGCF发送应答183的PRACK请求到被叫侧。 
-
-
 被叫UE返回针对PRACK请求200 OK消息。 
-
-
 被叫UE振铃，发送180消息。 
-
-
 MGCF发送MOD REQ消息到IM- MGW，命令MGW播放回铃音。 
-
-
 MGW播放回铃音，返回MOD REPLY消息。 
-
-
 MGCF发送ACM（Address Complete Message）消息到MSC Server。 
-
-
 MSC Server发送Alerting消息到主叫MS。 
-
-
 MGCF发送应答180的PRACK请求到被叫侧。 
-
-
 被叫UE返回针对PRACK请求200 OK消息。 
-
-
 被叫摘机，UE发送INVITE请求的200 OK消息。 
-
-
 MGCF发送MOD REQ消息到IM- MGW，命令MGW停止播放回铃音。 
-
-
 MGW停止播放回铃音，返回MOD REPLY消息。 
-
-
 MGCF发送ANM消息到MSC Server。 
-
-
 MGCF发送200 OK的ACK消息到被叫UE。 
-
-
 MSC Server发送CONNECT消息到主叫MS，通知主叫用户被叫应答。 
-
-
 主叫MS返回CONNECT ACK消息。 
-
-
 挂机释放流程
-
-
 主叫用户挂机，发送DISCONNECT消息到MSC Server。 
-
-
 MSC Server返回RELEASE消息。 
-
-
 MS发送RELEASE COMPLETE消息到MSC Server。 
-
-
 MSC Server发送CLEAR COMMAND消息到BSC。 
-
-
 BSC清除无线接口和A接口资源，返回CLEAR COMPLETE消息。 
-
-
 MSC Server发送SUB REQ消息到MGW，释放主叫接入侧终端资源。 
-
-
 MGW返回SUB REPLY消息。 
-
-
 MSC Server发送REL消息到MGCF。 
-
-
 MGCF发送SUB REQ消息到IM-MGW，释放主叫侧终端资源。 
-
-
 IM-MGW返回SUB REPLY消息。 
-
-
 MGCF发送RLC消息到MSC Server。 
-
-
 MSC Server发送SUB REQ消息到MGW，释放主叫核心网侧终端。 
-
-
 MGW返回SUB REPLY消息。 
-
-
 MGCF发送BYE消息经过P-CSCF到被叫UE。 
-
-
 UE接收到BYE消息后，向P-CSCF发送200响应。 
-
-
 当P-CSCF收到200响应后，向PCRF下发STR消息释放承载会话 。 
-
-
 PCRF发送RAR消息，通知P-GW删除专有承载，携带charging rule remove指示。 
-
-
 P-GW返回RAA给PCRF。 
-
-
 PCRF返回STA响应给P-CSCF。 
-
-
 P-GW根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME指示删除专有承载。 
-
-
 MME收到Delete Bearer Request消息后，向被叫UE发送Deactivate EPS bearer
 context request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE向被叫MME发送Deactivate dedicated EPS bearer context accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 P-GW收到Delete Bearer Response消息，专有承载已经完成删除。 
-
-
 P-GW发送CCR消息给PCRF，指示专有承载已成功删除。 
-
-
 PCRF给P-GW返回CCA消息予以确认。 
-
-
 P-CSCF发送200给MGCF。 
-
-
 MGCF发送SUB REQ消息到IM-MGW，释放被叫侧终端资源。 
-
-
 IM-MGW返回SUB REPLY消息。 
-
-
-
-
 ### LTE用户呼叫CS用户流程 
 ### LTE用户呼叫CS用户流程 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 主叫是VoLTE用户，在LTE接入，被叫是2G/CS域用户。 
-
  
 主叫、被叫在各自域注册成功。 
-
  
 主叫IMS域与被叫PLMN域之间是MGCF+IM-MGW，之间是BICC协议。 
-
  
 被叫PLMN承载建立采用早指配。主被叫侧的局间承载建立方式为前向延迟。 
-
  
 部署融合HLR/HSS，即HLR、SAE-HSS、IMS-HSS合一部署。融合HLR/HSS和ENUM/DNS合一部署。 
-
  
 2/3G用户先挂机。 
-
  
 LTE用户呼叫CS用户流程具体有以下几个阶段。 
-
  
 主叫信令面流程：主叫侧执行标准IMS流程，S-CSCF通过ENUM/DNS解析得知被叫用户为CS域用户，将SIP会话请求转发至MGCF；MGCF进行路由分析并将会话请求路由出局。 
-
  
 被叫信令面流程：V/GMSC Server寻呼被叫用户，被叫用户收到寻呼消息后返回响应消息。 
-
  
 被叫承载面建立流程：V/GMSC Server指示MGW建立被叫接入侧承载并向主叫侧发消息通知局间承载建立采用前向延迟方式。 
-
  
 主叫承载面建立流程：MGCF指示IM-MGW建立主叫接入侧承载；主被叫进行媒体协商并建立局间承载。 
-
  
 挂机释放流程：主叫用户接收被叫用户挂机请求后释放主叫侧承载资源并回复响应消息；被叫用户在接收到主叫侧响应消息后释放被叫侧承载资源。 
-
  
-
-
-信令流程 :LTE用户呼叫CS用户信令流程如[图1]所示。
+信令流程 : 
+LTE用户呼叫CS用户信令流程如[图1]所示。
 图1  LTE用户呼叫CS用户
-
-
-
-
 主叫信令面流程
-
-
 主叫用户UE_A通过P-CSCF发送INVITE消息发起会话。 
-
-
 P-CSCF接收INVITE消息，并发给S-CSCF。 
-
-
 S-CSCF按主叫签约的IFC触发呼叫到VoLTE AS。 
-
-
 VoLTE AS提供补充业务，并把INVITE消息转发给S-CSCF。 
-
-
 S-CSCF通过ENUM查询，发现被叫不是IMS域用户，则把INVITE消息转发给MGCF。 
-
-
 MGCF通过号码分析发现被叫路由，发送ADD REQ消息至IM-MGW，控制IM-MGW建立承载。 
-
-
 IM-MGW建立完主叫侧承载端点后，向MGCF发送ADD REPLY消息。 
-
-
 在完成承载点的建立后，IM-MGW向MGCF发送NTFY REQ消息上报其承载的建立情况。 
-
-
 MGCF向IM-MGW回复NTFY REPLY消息确认收到上报的承载建立消息。 
-
-
 MGCF发ADD REQ请求给IM-MGW。 
-
-
 IM-MGW建立被叫侧承载端点后，通过ADD REPLY消息将端点信息返回至MGCF。 
-
-
 MGCF对INVITE消息进行处理后，发送IAM消息至被叫侧V/GMSC Server。 
-
-
 被叫信令面流程
-
-
 MSC Server收到IAM消息，经过RNC，发送Paging消息寻呼UE_B。 
-
-
 UE_B收到寻呼消息，经过RNC返回Paging Response消息到MSC Server。 
-
-
 MSC Server发送SETUP消息到UE_B，建立呼叫。 
-
-
 UE_B接受本次呼叫，返回Call Confirmed消息到MSC Server。 
-
-
 被叫承载面流程
-
-
 MSC Server发送ADD REQ到 MGW，建立无线侧承载终端。 
-
-
 MGW回复ADD REPLY。 
-
-
 MSC Server发送RAB Assignment Request消息到RNC，进行RAB指配，携带MGW分配的IP地址和端口号，以及所选择的编解码。 
-
-
 RNC发送RADIO Bearer Setup到UE_B。 
-
-
 UE_B占用无线资源，返回RADIO Bearer Setup Complete消息。 
-
-
 主叫承载面流程
-
-
 RNC返回RAB Assignment Response消息给MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，建立到主叫核心网一侧终端。 
-
-
 MGW回复ADD REPLY消息。 
-
-
 MSC Server发送APM消息到MGCF，指示本次呼叫使用的编解码。 
-
-
 MGCF接收APM消息并发送携带SDP的183消息给I/S-CSCF，指示建立主叫侧专用承载。 
-
-
 I/S-CSCF收到183消息后，先转发给VoLTE AS。 
-
-
 VoLTE AS返回183消息给I/S-CSCF。 
-
-
 I/S-CSCF发183消息给P-CSCF。 
-
-
 P-CSCF接收183消息并下发AAR消息至PCRF开始建立专有承载。 
-
-
 PCRF要控制P-GW建立承载，则发RAR消息给P-GW。 
-
-
 P-GW返回RAA消息至PCRF，并不等承载创建成功。 
-
-
 PCRF向P-CSCF发AAA消息响应授权请求结果消息，并上报EPS计费信息。 
-
-
 P-GW分配承载QoS信息，并发送CB REQ消息至MME，建立新的专有承载。 
-
-
 MME收到REQ消息后，向主叫用户UE_A发送AD EPS BCR消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME发送AD EPS BCA消息，用于确认激活一个专有EPS承载上下文。 
-
-
 MME收到UE_A的承载激活响应后向P-GW发送CB RSP消息，确认专有承载已经建立。 
-
-
 P-GW向PCRF发送CCR消息，通知其资源预留成功。 
-
-
 PCRF向P-GW返回CCA消息响应。 
-
-
 当PCRF收到P-GW的资源预留成功事件上报时，向P-CSCF发送RAR消息，通知承载建立情况。 
-
-
 P-CSCF向PCRF返回RAA消息。 
-
-
 P-CSCF转发183消息至主叫用户UE_A。 
-
-
 主叫用户返回PRACK消息给P-CSCF，证实183消息。 
-
-
 P-CSCF发PRACK消息给I/S-CSCF。 
-
-
 I/S-CSCF发PRACK消息给VoLTE AS。 
-
-
 VoLTE AS发PRACK消息给I/S-CSCF。 
-
-
 I/S-CSCF发PRACK给MGCF。 
-
-
 MGCF返回200 for PRACK消息给I/S-CSCF，完成PRACK消息的证实。 
-
-
 I/S-CSCF发200 OK给VoLTE AS。 
-
-
 VoLTE AS发200 OK给I/S-CSCF。 
-
-
 I/S-CSCF发200 OK给P-CSCF。 
-
-
 P-CSCF发200 OK给主叫用户UE。 
-
-
 MGCF发送MOD REQ消息到IM-MGW，申请隧道信息。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 IM-MGW发送NTFY REQ消息到MGCF，携带隧道信息。 
-
-
 MGCF返回NTFY REPLY消息。 
-
-
 MGCF发送APM消息到MSC Server，携带上述隧道信息。 
-
-
 MSC Server发送MOD REQ消息至MGW，传递主叫方的隧道信息。 
-
-
 MGW返回 MOD REPLY消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，上报被叫侧隧道信息。 
-
-
 MSC Server返回NTFY REPLY消息。 
-
-
 MSC Server发送APM消息到MGCF，携带被叫侧隧道信息。 
-
-
 MGCF发送MOD REQ消息到IM-MGW，透传被叫侧隧道信息。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 IM-MGW发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，初始化NB_UP。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 IM-MGW发送NTFY REQ消息到MGCF，上报被叫侧承载建立完成。 
-
-
 MGCF返回 NTFY REPLY消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server。 
-
-
 MSC Server返回NTFY REPLY消息。 
-
-
 UE_B发送Alerting消息振铃。 
-
-
 MSC Server发送MOD REQ消息到MGW，命令MGW播放回铃音。 
-
-
 MGW播放回铃音，返回MOD REPLY消息。 
-
-
 MSC Server发送ACM消息到MGCF。 
-
-
 MGCF发送180 Ring消息至主叫侧I/S-CSCF。 
-
-
 I/S-CSCF发180消息给VoLTE AS。 
-
-
 VoLTE AS发180消息给I/S-CSCF。 
-
-
 I/S-CSCF发180消息给P-CSCF。 
-
-
 P-CSCF发180消息给主叫用户UE。 
-
-
 主叫用户返回PRACK消息证实180 Ringing消息给P-CSCF。 
-
-
 P-CSCF发PRACK消息给I/S-CSCF。 
-
-
 I/S-CSCF发PRACK消息给VoLTE AS。 
-
-
 VoLTE AS发PRACK消息给I/S-CSCF。 
-
-
 I/S-CSCF发PRACK消息给MGCF。 
-
-
 MGCF返回200 for PRACK消息给I/S-CSCF。 
-
-
 I/S-CSCF发200 OK消息给VoLTE AS。 
-
-
 VoLTE AS发200 OK消息给I/S-CSCF。 
-
-
 I/S-CSCF发200 OK消息给P-CSCF。 
-
-
 P-CSCF发200 OK给主叫用户UE。 
-
-
 被叫摘机，UE_B发送Connect消息至MSC Server。 
-
-
 MSC Server发送MOD REQ消息到MGW，停止播放回铃音。 
-
-
 MGW停止播放回铃音，返回MOD REPLY消息。 
-
-
 MSC Server发送ANM消息到MGCF。 
-
-
 MSC Server发送CONNECT ACK消息到UE_B。 
-
-
 MGCF发送200 for INVITE消息到主叫侧I-CSCF，指示UE摘机应答。 
-
-
 I/S-CSCF发200 OK消息 给VoLTE AS。 
-
-
 VoLTE AS发200 OK消息给I/S-CSCF。 
-
-
 I/S-CSCF发200 OK消息给P-CSCF。 
-
-
 P-CSCF发200 OK消息给主叫用户UE。 
-
-
 主叫侧VoLTE AS AS向CCF发送ACR消息，启动主叫侧计费。 
-
-
 CCF返回ACA消息。 
-
-
 UE_A回复ACK消息，主叫处于通话状态，发给主叫P-CSCF。 
-
-
 P-CSCF发ACK消息给I/S-CSCF。 
-
-
 I/S-CSCF发ACK消息给VoLTE AS。 
-
-
 VoLTE AS发ACK消息给I/S-CSCF。 
-
-
 I/S-CSCF发ACK消息给MGCF。 
-
-
 挂机释放流程
-
-
 被叫用户UE_B挂机，发送Disconnect消息至MSC Server。 
-
-
 MSC Server返回Release消息。 
-
-
 UE_B发送Release Complete消息到MSC Server。 
-
-
 MGCF发送SUB REQ消息到IM-MGW，删除到被叫侧的终端。 
-
-
 IM-MGW返回SUB REPLY消息。 
-
-
 MSC Server发送REL消息至MGCF。 
-
-
 MGCF发送BYE消息到I/S-CSCF。 
-
-
 MGCF返回RLC消息到MSC Server。 
-
-
 I/S-CSCF发Bye消息给VoLTE AS。 
-
-
 VoLTE AS发Bye消息给I/S-CSCF。 
-
-
 I/S-CSCF发Bye消息给P-CSCF。 
-
-
 P-CSCF发Bye给主叫用户UE。 
-
-
 当VoLTE AS收到BYE消息后，结束主叫侧计费并向本域的CCF发送ACR消息。 
-
-
 CCF收到正确的ACR消息后，将其保存，并向VoLTE AS发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 MSC Server收到RLC消息，发送SUB REQ消息指示MGW释放主叫侧终端。 
-
-
 MGW返回SUB REPLY消息。 
-
-
 主叫用户UE_A返回200 for BYE指示呼叫释放完毕。 
-
-
 当P-CSCF收到200 for BYE响应后，向PCRF下发STR消息释放承载会话。 
-
-
 PCRF发送RAR消息通知P-GW删除专有承载，消息中携带REMOVE QoS Rules指示。 
-
-
 P-GW返回RAA消息至PCRF。 
-
-
 PCRF返回STA消息至P-CSCF。 
-
-
 P-GW发送DB Request消息至MME指示删除专有承载。 
-
-
 MME向主叫用户UE_A发送DL EPS BCR消息，请求释放一个专有EPS承载上下文。 
-
-
 UE_A向MME发送DL EPS BCA消息，确认释放一个专有EPS承载上下文。 
-
-
 P-GW收到DB Response消息，专有承载已成功删除。 
-
-
 P-GW发送CCR消息至PCRF，指示专有承载已成功删除。 
-
-
 PCRF至P-GW返回CCA消息予以确认。 
-
-
 P-CSCF发送200 for BYE消息至I-CSCF。 
-
-
 I/S-CSCF发200 OK消息给VoLTE AS。 
-
-
 VoLTE AS发200 OK消息给I/S-CSCF。 
-
-
 I/S-CSCF发200 OK消息给P-CSCF。 
-
-
 P-CSCF发200 OK消息给主叫用户UE。 
-
-
 MGCF发送SUB REQ消息到IM-MGW，删除到主叫侧的终端。 
-
-
 IM-MGW返回SUB REPLY消息。 
-
-
 MSC Server发送IU Clear Command消息到RNC。 
-
-
 RNC返回IU Clear Complete消息。 
-
-
 MSC Server发送SUB REQ消息到MGW，释放接入侧终端。 
-
-
 MGW返回SUB REPLY消息。 
-
-
-
-
 ### LTE用户呼叫LTE用户视频回落语音流程 
 ### LTE用户呼叫LTE用户视频回落语音流程 
-
-
-业务模型 :本流程的信令模型如下： 
-
+业务模型 : 
+本流程的信令模型如下： 
  
 主叫、被叫为Volte用户，通过LTE域接入，先进行视频通话后再切换为语音流程。 
-
  
 3G HLR，SAE-HSS和IMS-HSS合一部署。 
-
  
-
-
-信令流程 :主叫UE_A呼叫被叫UE_B后，视频通话成功。主叫用户UE_A发起媒体切换操作，要求切换为语音操作，具体的流程如[图1]所示。
+信令流程 : 
+主叫UE_A呼叫被叫UE_B后，视频通话成功。主叫用户UE_A发起媒体切换操作，要求切换为语音操作，具体的流程如[图1]所示。
 图1  LTE用户呼叫LTE用户视频回落语音流程
-
-
-
-
 信令面流程
-
-
 主叫用户UE_A发起媒体切换，要求将媒体切换为语音。发送INVITE消息给P-CSCF_A。 
-
-
 P-CSCF_A把INVITE消息路由到S-CSCF_A。 
-
-
 S-CSCF_A触发业务到VoLTE AS_A。 
-
-
 VoLTE AS_A实现补充业务后，转发INVITE消息给S-CSCF_A。 
-
-
 S-CSCF_A将INVITE消息发送到被叫I/S -CSCF_B。 
-
-
 I/S-CSCF_B将收到INVITE消息后，触发业务到VoLTE AS _B。 
-
-
 VoLTE AS _B实现补充业务后，转发INVITE消息给S-CSCF_B。 
-
-
 S-CSCF_B转发INVITE消息给P-CSCF_B。 
-
-
 P-CSCF_B转发INVITE消息给UE_B。 
-
-
 承载面流程
-
-
 被叫UE_B返回INVITE请求的200 OK （INVITE）消息。 
-
-
 P-CSCF_B收到200 OK消息后，发AAR消息给PCRF_B，要求控制P-GW删除视频媒体。 
-
-
 PCRF_B发RAR消息给P-GW_B，删除了视频媒体。 
-
-
 P-GW_B返回RAA响应给PCRF_B。 
-
-
 PCRF_B返回AAA响应给P-CSCF_B。 
-
-
 P-CSCF_B将200 OK消息转发至I/S-CSCF_B。 
-
-
 I/S-CSCF_B将200 OK消息透传至I/S-CSCF_A。 
-
-
 I/S-CSCF_A将200 OK消息转发至P-CSCF_A。 
-
-
 P-CSCF_A发AAR消息给PCRF_A更新承载，要求控制P-GW删除视频媒体。 
-
-
 PCRF_A发RAR消息给P-GW_A，删除了视频媒体。 
-
-
 P-GW_A返回RAA响应给PCRF_A。 
-
-
 PCRF_A返回AAA响应给P-CSCF_A。 
-
-
 P-CSCF_A向主叫用户UE_A发200 OK消息。 
-
-
 主叫用户UE_A返回ACK消息。 
-
-
 VoLTE AS _A发计费ACR消息给CCF。 
-
-
 CCF创建CDR后，返回ACA。 
-
-
 VoLTE AS _A通过I/S-CSCF_A将ACK确认消息透传到被叫I/S-CSCF_B。 
-
-
 I/S-CSCF_B将ACK确认消息转发至VoLTE AS_B。 
-
-
 VoLTE AS _B发计费ACR消息给CCF。 
-
-
 CCF创建CDR后，返回ACA。 
-
-
 VoLTE AS _B发ACK消息给I/S-CSCF_B。 
-
-
 I/S-CSCF_B把ACK消息，通过P-CSCF_B路由给被叫用户UE_B。 
-
-
-
-
 ### LTE用户呼叫LTE用户视频流程 
 ### LTE用户呼叫LTE用户视频流程 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 主叫、被叫都是VoLTE用户，且注册到IMS成功。 
-
  
 主叫接入域是LTE，通过IMS发起视频电话，被叫接入域为LTE，接听成功。 
-
  
 3G HLR，SAE-HSS和IMS-HSS合一部署，SBC与P-CSCF合一。 
-
  
 主叫视频用户先挂机。 
-
  
 LTE用户呼叫LTE用户视频流程 可以分为如下几个阶段。 
-
  
 主叫信令面流程：与普通IMS呼叫一致。 
-
  
 被叫信令面流程：作T-ADS的VoLTE AS执行域选过程（经过HLR/HSS）。 
-
  
 被叫承载面建立流程：被叫用户收到视频呼叫请求后，返回响应给被叫P-CSCF，P-CSCF通过PCRF，要求P-GW建立被叫终端的专有LTE承载。 
-
  
 主叫承载面建立流程：主叫P-CSCF收到被叫用户回复的响应消息后，P-CSCF通过PCRF，要求P-GW建立主叫终端的专有LTE承载。 
-
  
 挂机释放流程：主叫视频用户先挂机，被叫用户收到Bye消息，通过PCRF，要求P-GW释放被叫终端的专用LTE承载。当主叫侧P-CSCF收到响应时，也会通过PCRF，要求P-GW释放主叫终端的专用LTE承载。 
-
  
-
-
-信令流程 :LTE用户呼叫LTE用户视频流程如[图1]所示。
+信令流程 : 
+LTE用户呼叫LTE用户视频流程如[图1]所示。
 图1  LTE用户呼叫LTE用户视频流程
-
-
-
-
 主叫信令面流程
-
-
 主叫终端UE_A向P-CSCF_A发起呼叫。 
-
-
 P-CSCF_A从INVITE消息中得到主叫用户的媒体信息，将IP与媒体信息通过AAR发给PCRF_A，要求PCRF_A建立LTE域承载。 
-
-
 PCRF_A向P-CSCF_A发送AAA响应消息。 
-
-
 P-CSCF_A在INVITE消息的Via和Record-Route头中加入自己的地址，把Route头中添加S-CSCF_A地址，将INVITE发给S-CSCF_A。 
-
-
 S-CSCF_A收到INVITE消息后，从P-Asserted-Identity头中取出主叫用户PUI，判断已经注册，则根据的IFC触发呼叫到VoLTE
 AS_A。 
 S-CSCF_A在触发VoLTE AS_A之前，会做如下判断：S-CSCF_A判断VoLTE AS_A是否在信任域内，如果VoLTE
 AS_A在信任域内，S-CSCF_A会将P-Access-Network-Info头域发往VoLTE AS_A，否则将删除P-Access-Network-Info头域。 
-
-
 VoLTE AS_A为主叫UE_A提供补充业务后，把INVITE发到S-CSCF_A。 
-
-
 S-CSCF_A根据被叫号码查询ENUM，获取用户的SIP URI，根据SIP URI的域名查询DNS获得被叫I-CSCF_B的IP地址。S-CSCF_A再将INVITE消息发送到被叫I-CSCF_B。 
-
-
 被叫信令面流程（T-ADS域选）
-
-
 I-CSCF_B向HSS发送LIR消息，要求获取UE_B注册的S-CSCF_B地址。 
-
-
 HSS收到LIR消息后，因为UE_B在注册时会在HSS中登记S-CSCF地址，则向I-CSCF_B发送LIA消息，携带S-CSCF_B的服务器地址。 
-
-
 S-CSCF_B收到INVITE消息后，根据被叫用户的iFC数据，选择一个AS为VoLTE AS_B，发送INVITE消息，以触发被叫业务和被叫域选择功能。 
-
-
 VoLTE AS_B向HSS发送UDR消息，要求取得被叫用户的T-ADS信息。 
-
-
 HSS本身融合了SAE-HSS功能，会通过IDR消息向MME_B查询被叫用户的T-ADS信息。 
-
-
 MME_B通过IDA消息向HSS发送被叫用户的T-ADS信息。 
-
-
 HSS将T-ADS信息通过UDA消息返回给VoLTE AS_B。 
-
-
 VoLTE AS根据得到的T-ADS信息，内部逻辑判断应域选择到IMS域，则发INVITE给S-CSCF_B网元，Request-uri是被叫用户在IMS域内的URI号码。 
-
-
 S-CSCF_B判断当前被叫用户的IFC触发完成，则找到用户注册的P-CSCF_B地址，将INVITE消息发送到P-CSCF_B。 
-
-
 P-CSCF_B从INVITE消息中获得主叫用户的媒体面信息，并将之通过AAR消息发送给PCRF_B，要求PCRF_B建立LTE专有承载。 
-
-
 PCRF_B向P-CSCF_B发送AAA响应。 
-
-
 P-CSCF_B把INVITE消息发送给UE_B。 
-
-
 被叫承载面建立
-
-
 被叫UE_B返回180响应，在SDP中携带SDP Answer信息。 
-
-
 P-CSCF_B收到被叫侧返回的180响应后，发送AAR消息给PCRF_B，AAR中携带UE_B的媒体信息，以便于PCRF进行承载控制。 
-
-
 PCRF_B根据认证/授权请求消息AAR消息中携带的媒体类型和媒体描述信息做策略决策，提供授权的QoS，并通过重新认证/授权请求消息RAR消息将QoS（QCI/ARP/GBR/MBR）和PCC规则发送至P-GW_B。 
-
-
 P-GW_B收到重新认证/授权请求消息RAR，上报重新认证/授权应答消息RAA响应给PCRF_B。 
-
-
 PCRF_B根据P-GW_B返回的重新认证/授权应答消息RAA消息，向P-CSCF_B发送认证/授权应答消息AAA响应授权请求结果。 
-
-
 P-GW_B收到重新认证/授权请求消息RAR，通过Create Bearer Request指示MME_B建立专有承载。 
-
-
 MME_B收到Create Bearer Request消息后，向被叫UE_B发送Activate dedicated
 EPS bearer context request消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE_B向被叫MME_B发送Activate dedicated EPS bearer context accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 P-GW_B收到Create Bearer Response消息，确认专有承载已经建立。 
-
-
 P-GW_B向PCRF_B发送信用控制请求消息CCR消息，通知资源预留成功。 
-
-
 PCRF_B向P-GW_B返回信用控制应答消息CCA响应。 
-
-
 当PCRF_B收到P-GW_B的资源预留成功事件上报时，向P-CSCF_B发送RAR消息，通知承载建立情况。 
-
-
 P-CSCF_B向PCRF_B应答成功响应RAA消息。 
-
-
 主叫承载面建立
-
-
 P-CSCF_B将180响应转发至P-CSCF_A，其中SDP answer中携带UE_B的媒体信息。 
-
-
 P-CSCF_A收到被叫侧返回的180响应，发送RAR消息给PCRF_A载。AAR包括UE_A的信令地址和媒体信息。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，上报重新认证/授权应答消息RAA响应给PCRF_A。 
-
-
 PCRF_A根据P-GW_A返回的重新认证/授权应答消息RAA消息。 
-
-
 PCRF_A给P-CSCF_A发送认证/授权应答消息AAA，响应授权请求结果消息。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，通过Create Bearer Request指示MME_A建立专有承载。 
-
-
 MME_A收到Create Bearer Request消息后，向主叫UE_A发送Activate dedicated
 EPS bearer context request消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Activate dedicated EPS bearer context accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 MME_A发送Create Bearer Response消息给P-GW_A，P-GW_A收到Create Bearer
 Response消息确认专有承载已经建立。 
-
-
 P-GW_A向PCRF_A发送信用控制请求消息CCR消息，通知资源预留成功。 
-
-
 PCRF_A向P-GW_A返回信用控制应答消息CCA响应。 
-
-
 当PCRF_A收到P-GW_A的资源预留成功事件上报时，向P-CSCF_A发送RAR消息，通知承载建立已成功。 
-
-
 P-CSCF_A向PCRF_A应答RAA消息。 
-
-
 P-CSCF_A将180响应转发至主叫UE_A，其中SDP answer中携带呼叫的媒体信息。 
-
-
 被叫网络收到主叫网络发送的PRACK请求，表示主叫网络成功接收180响应，并且已完成资源预留。 
-
-
 被叫UE返回针对PRACK请求的200 OK，表示成功接收PRACK请求。 
-
-
 被叫用户接听电话，被叫UE向主叫网络返回针对INVITE请求的200(INVITE)响应。 
-
-
 当VoLTE AS_B收到200(INVITE)消息后，开始向本域的CCF发送ACR [Start]消息。 
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建被叫AS CDR，并向VoLTE AS_B发送计费响应消息ACA。 
-
-
 VoLTE AS_B向主叫VoLTE AS_A转发200(INVITE)消息。 
-
-
 当VoLTE AS_A收到200(INVITE)消息后，开始向本域的CCF发送ACR [Start]消息。 
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建主叫AS CDR，并向VoLTE AS_A发送计费响应消息ACA（Accounting
 Answer）。 
-
-
 返回针对INVITE请求的200(INVITE)响应消息到主叫UE_A。 
-
-
 主叫UE向被叫网络返回针对200(INVITE)响应的ACK确认消息，主、被叫UE成功建立会话。 
-
-
 挂机释放流程
-
-
 UE_A挂机发送BYE消息。 
-
-
 当VoLTE AS_A收到BYE消息后，开始向本域的CCF发送ACR [Stop]消息。 
-
-
 CCF收到正确的ACR [Stop]消息后，将其保存，向VoLTE AS_A发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 VoLTE AS_A将BYE消息透传到被叫的VoLTE AS_B。 
-
-
 当被叫VoLTE AS_B收到BYE消息后，开始向本域的CCF发送ACR [Stop]消息。 
-
-
 CCF收到正确的ACR [Stop]消息后，将其保存，向VoLTE AS_B发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 VoLTE AS_B将BYE消息透传到被叫的UE_B。 
-
-
 UE_B收到主叫侧的挂机请求后，向主叫侧发送200(BYE)响应消息。 
-
-
 当被叫P-CSCF_B收到200(BYE)响应后，向PCRF_B下发终止会话请求消息STR消息释放承载会话。 
-
-
 PCRF_B发送重新认证/授权请求消息RAR消息通知P-GW_B删除专有承载，携带charging rule remove指示。 
-
-
 P-GW_B返回重新认证/授权应答消息RAA给PCRF_B。 
-
-
 PCRF_B返回终止会话应答消息STA响应给P-CSCF_B。 
-
-
 P-GW_B根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME_B指示删除专有承载。 
-
-
 MME_B收到Delete Bearer Request消息后，向被叫UE_B发送Deactivate EPS Bearer
 Context Request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE_B向被叫MME_B发送Deactivate Dedicated EPS Bearer Context Accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 MME_B发送Delete Bearer Response消息给P-GW_B。P-GW_B收到该消息，专有承载已经完成删除。 
-
-
 P-GW_B发送信用控制请求消息CCR消息给PCRF_B，指示专有承载已成功删除。 
-
-
 PCRF_B给P-GW_B返回信用控制应答消息CCA消息予以确认。 
-
-
 P-CSCF_B发送BYE的200OK响应给P-CSCF_A。 
-
-
 当主叫P-CSCF_A收到BYE的200 OK后，向PCRF_A发送STR消息，以便PCRF_A释放承载会话。 
-
-
 PCRF_A发送重新认证/授权请求消息RAR消息通知P-GW_A删除专有承载，携带charging rule remove指示。 
-
-
 P-GW_A返回重新认证/授权应答消息RAA给PCRF_A。 
-
-
 PCRF_A返回终止会话应答消息STA响应给P-CSCF_A。 
-
-
 P-GW_A根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME_A指示删除专有承载。 
-
-
 MME_A收到Delete Bearer Request消息后，向主叫UE_A发送Deactivate EPS Bearer
 Context Request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Deactivate Dedicated EPS Bearer Context Accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 P-GW_A收到Delete Bearer Response消息，专有承载已经完成删除。 
-
-
 P-GW_A发送信用控制请求消息CCR消息给PCRF_A，指示专有承载已成功删除。 
-
-
 PCRF_A给P-GW_A返回信用控制应答消息CCA消息予以确认。 
-
-
 P-CSCF_A发送BYE的200 OK应答给UE_A，通话结束。 
-
-
-
-
 ## 锚定 
 ### Anchor AS被叫锚定流程 
 ### Anchor AS被叫锚定流程 
-
-
-业务模型 :CS网络的主叫用户呼叫VoLTE被叫用户时，Anchor AS通过在被叫号码前插前缀的方式，将呼叫锚定到IMS网络，在IMS网络触发用户的被叫侧业务。具体流程如[图1]所示。
-
-
-信令流程 :被叫锚定流程的信令流程如[图1]所示。
+业务模型 : 
+CS网络的主叫用户呼叫VoLTE被叫用户时，Anchor AS通过在被叫号码前插前缀的方式，将呼叫锚定到IMS网络，在IMS网络触发用户的被叫侧业务。具体流程如[图1]所示。
+信令流程 : 
+被叫锚定流程的信令流程如[图1]所示。
 图1  被叫锚定流程
-
-
-
-
 主叫流程
-
-
 主叫MS发送呼叫的CM SERVICE REQUEST消息，请求建立呼叫。 
-
-
 MSC Server返回CM SERVICE ACCEPT消息，接受业务请求。 
-
-
 MS发送SETUP消息，携带被叫号码以及语音业务的承载信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加接入侧终端。 
-
-
 MGW分配IP资源，返回ADD REPLY消息，消息中携带IP资源的地址和端口信息。 
-
-
 MSC Server发送ASSIGNMENT REQUEST消息到BSC，进行指配，携带上述IP地址和端口。 
-
-
 BSC发送RADIO BEARER SETUP消息到MS，分配无线信道。 
-
-
 MS占用无线资源，返回RADIO BEARER SETUP COMPLETE消息。 
-
-
 BSC发送ASSIGNMENT COMPLETE消息到MSC，返回指配应答，携带BSC侧选择的编解码以及用户面IP地址和端口号。 
-
-
 MSC Server发送MOD REQ消息到MGW，携带BSC分配的IP地址和端口。 
-
-
 MSC Server返回MOD REPLY。 
-
-
 MGW发送NTFY REQ消息到MSC Server，上报BSC侧承载建立完成。 
-
-
 MSC Server返回NTFY REPLY消息。 
-
-
 锚定流程
-
-
 MSC Server发送MAP_SEND_ROUTING_INFORMATION_REQ消息到HLR/HSS，请求获取被叫用户的漫游号码。 
-
-
 HLR/HSS查询被叫用户UE的签约数据，判断签约数据中包含终结CAMEL签约信息T-CSI，在MAP_SEND_ROUTING_INFORMATION_CNF消息将T-CSI返回给MSC
 Server。 
-
-
 MSC Server触发T-CSI业务逻辑，发送IDP（Initial Detection Point）消息到SCP，这里SCP是Anchor
 AS网元。 
-
-
 Anchor AS判断该IDP（Initial Detection Point）触发被叫锚定，分配IMRN号码（在原来的被叫号码前增加前缀），发送Connect消息到MSC
 Server，其中Destination Routing Address参数携带IMRN号码。 
-
-
 MSC Server再次发送ADD REQ消息，请求添加核心网侧终端。 
-
-
 MGW动态分配IP资源，返回ADD REPLY消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，上报隧道指示事件，携带隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息。 
-
-
 MSC Server分析IMRN的路由，发送IAM消息到MGCF，携带上述隧道信息。 
-
-
 MGCF发送ADD REQ消息到IM-MGW，请求建立被叫侧终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息。 
-
-
 MGCF分析IMRN的路由，发送INVITE消息到I-CSCF。出局前，MGCF删除锚定前缀，将被叫号码规整为全局号码格式。 
-
-
 被叫信令流程（包括域选择）
-
-
 I-CSCF收到INVITE消息后，向HLR/HSS发送LIR消息，请求获取S-CSCF地址。 
-
-
 HSS返回LIA消息给I-CSCF，消息中携带S-CSCF的地址。 
-
-
 I-CSCF发送 INVITE消息给S-CSCF。S-CSCF根据被叫用户签约的iFC数据，发送INVITE消息给VoLTE
 AS，触发业务给VoLTE AS。 
-
-
 VoLTE AS发送UDR消息给HLR/HSS，获取被叫用户的T-ADS信息。 
-
-
 HLR/HSS发送IDR消息给MME，查询被叫用户的T-ADS信息。 
-
-
 MME发送IDA消息给HLR/HSS，返回被叫用户的T-ADS信息。 
-
-
 HSS发送UDA消息给VoLTE AS，返回被叫用户的T-ADS信息。 
-
-
 VoLTE AS根据T-ADS信息，域选到IMS网络，发送INVITE给S-CSCF。 
-
-
 S-CSCF发送INVITE消息给用户注册的P-CSCF。 
-
-
 P-CSCF从INVITE消息中获得主叫用户的媒体信息，通过AAR消息发送给PCRF，要求PCRF建立专有承载。 
-
-
 PCRF向P-CSCF发送AAA响应。 
-
-
 P-CSCF发送INVITE消息给UE。 
-
-
 被叫UE返回183响应，在SDP中携带SDP Answer信息。 
-
-
 被叫承载面建立
-
-
 P-CSCF收到被叫侧返回的183响应后，发送AAR消息给PCRF，AAR中携带UE的媒体信息和媒体资源预留成功指示。 
-
-
 PCRF根据获取的业务媒体信息进行策略决策，提供授权的QoS,用于承载资源预留，之后使用RAR消息携带Charing-Rule-Install
 AVP，把相应的授权的QoS（包括QCI/ARP/GBR/MBR等信息），发送至P-GW。 
-
-
 P-GW收到RAR后，发送RAA响应消息给PCRF。 
-
-
 PCRF根据P-GW返回的RAA消息，向P-CSCF发送AAA响应消息，返回授权请求结果。 
-
-
 P-GW收到消息RAR，发送 Create Bearer Request消息给MME，指示MME建立专有承载。 
-
-
 MME收到Create Bearer Request消息后，发送Activate dedicated EPS bearer
 context request消息给被叫UE，请求激活一个专有EPS承载上下文。 
-
-
 UE向被叫MME发送Activate dedicated EPS bearer context accept消息，确认激活一个专有EPS承载上下文。 
-
-
 被叫MME向P-GW发送Create Bearer Response消息，确认专有承载已经建立。 
-
-
 P-GW发送CCR消息给PCRF，通知资源预留成功。 
-
-
 PCRF发送CCA响应消息给P-GW。 
-
-
 PCRF接收到P-GW的资源预留成功事件上报，发送RAR消息给P-CSCF，通知承载建立情况。 
-
-
 P-CSCF发送RAA响应消息给PCRF。 
-
-
 P-CSCF向S-CSCF发送183消息，在SDP中携带UE的媒体信息。 
-
-
 S-CSCF发送183消息给VoLTE AS。 
-
-
 VoLTE AS发送183消息给S-CSCF。 
-
-
 S-CSCF发送183消息给I-CSCF，I-CSCF转发183消息给MGCF。 
-
-
 主叫承载修改流程
-
-
 MGCF收到183消息，发送MOD REQ消息到IM-MGW，修改到IMS一侧的承载信息。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 MGCF发送ADD REQ消息到IM-MGW，请求建立MSC Server侧终端。 
-
-
 M-MGW动态分配IP资源，返回ADD REPLY消息。 
-
-
 MGCF发送MOD REQ消息到IM-MGW，将隧道信息传递到IM-MGW。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 IM-MGW发送NTFY REQ消息到MGCF，携带被叫侧隧道信息。 
-
-
 MGCF返回NTFY REPLY应答消息。 
-
-
 MGCF发送APM消息到MSC Server，携带上述被叫侧隧道信息。 
-
-
 MSC Server收到APM消息，发送MOD REQ到MGW，将隧道信息传递到MGW。 
-
-
 MGW返回MOD REPLY消息。 
-
-
 MGW发送TRC_IU/NB_UP_INIT_TOIP消息到IM-MGW，进行NB_UP初始化。 
-
-
 IM-MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，上报承载建立完成。 
-
-
 MSC Server返回NTFY REPLY消息。 
-
-
 IM-MGW发送NTFY REQ消息到MGCF，上报承载建立完成。 
-
-
 MGCF返回NTFY REPLY消息。 
-
-
 MGCF发送183的PRACK消息给S-CSCF。 
-
-
 S-CSCF发送PRACK给VoLTE AS。 
-
-
 VoLTE AS发送PRACK给S-CSCF。 
-
-
 S-CSCF发送PRACK给P-CSCF。 
-
-
 P-CSCF发送PRACK给UE。 
-
-
 被叫UE发送PRACK的200 OK消息给P-CSCF。 
-
-
 P-CSCF发送PRACK的200 OK消息给S-CSCF。 
-
-
 S-CSCF发送PRACK的200 OK消息给VoLTE AS。 
-
-
 VoLTE AS发送PRACK的200 OK消息给S-CSCF。 
-
-
 S-CSCF发送PRACK的200 OK消息给MGCF。 
-
-
 被叫UE振铃，发送180消息给P-CSCF。 
-
-
 P-CSCF发送180消息给S-CSCF。 
-
-
 S-CSCF发送180消息给VoLTE AS。 
-
-
 VoLTE AS发送180消息给S-CSCF。 
-
-
 S-CSCF发送180消息给I-CSCF，I-CSCF发送180消息给MGCF。 
-
-
 MGCF发送MOD REQ消息到IM- MGW，要求MGW播放回铃音。 
-
-
 MGW播放回铃音，返回MOD REPLY消息。 
-
-
 MGCF发送ACM（Address Complete Message）消息到MSC Server。 
-
-
 MSC Server发送Alerting消息到主叫MS。 
-
-
 MGCF发送180的PRACK消息给S-CSCF。 
-
-
 S-CSCF发送180的PRACK消息给VoLTE AS。 
-
-
 VoLTE AS发送180的PRACK消息给S-CSCF。 
-
-
 S-CSCF发送180的PRACK消息给P-CSCF。 
-
-
 P-CSCF发送180的PRACK消息给UE。 
-
-
 被叫UE发送PRACK的200 OK消息给S-CSCF。 
-
-
 P-CSCF发送PRACK的200 OK消息给S-CSCF。 
-
-
 S-CSCF发送PRACK的200 OK消息给VoLTE AS。 
-
-
 VoLTE AS发送PRACK的200 OK消息给S-CSCF。 
-
-
 S-CSCF发送PRACK的200 OK消息给MGCF。 
-
-
 被叫摘机，UE发送INVITE请求的200 OK消息给P-CSCF。 
-
-
 P-CSCF发送INVITE请求的200 OK消息给S-CSCF。 
-
-
 S-CSCF发送INVITE请求的200 OK消息给VoLTE AS。 
-
-
 VoLTE AS发送INVITE请求的200 OK消息给S-CSCF。 
-
-
 S-CSCF发送INVITE请求的200 OK消息给MGCF。 
-
-
 MGCF发送MOD REQ消息到IM- MGW，要求MGW停止播放回铃音。 
-
-
 MGW停止播放回铃音，返回MOD REPLY消息。 
-
-
 MGCF发送ANM消息到MSC Server。 
-
-
 MGCF发送ACK消息给给S-CSCF。 
-
-
 S-CSCF发送ACK消息给VoLTE AS。 
-
-
 VoLTE AS发送ACK消息给S-CSCF。 
-
-
 S-CSCF发送ACK消息给P-CSCF。 
-
-
 P-CSCF发送ACK消息给UE。 
-
-
 MSC Server发送CONNECT消息到主叫MS，通知主叫用户被叫应答。 
-
-
 主叫MS返回CONNECT ACK消息。 
-
-
 挂机释放流程
-
-
 主叫用户挂机，发送DISCONNECT消息到MSC Server。 
-
-
 MSC Server返回RELEASE消息。 
-
-
 MS发送RELEASE COMPLETE消息到MSC Server。 
-
-
 MSC Server发送CLEAR COMMAND消息到BSC。 
-
-
 BSC清除无线接口和A接口资源，返回CLEAR COMPLETE消息。 
-
-
 MSC Server发送SUB REQ消息到MGW，释放主叫接入侧终端资源。 
-
-
 MGW返回SUB REPLY消息。 
-
-
 MSC Server发送REL消息到MGCF。 
-
-
 MGCF发送SUB REQ消息到IM-MGW，释放主叫侧终端资源。 
-
-
 IM-MGW返回SUB REPLY消息。 
-
-
 MGCF发送RLC消息到MSC Server。 
-
-
 MSC Server发送SUB REQ消息到MGW，释放主叫核心网侧终端。 
-
-
 MGW返回SUB REPLY消息。 
-
-
 MGCF发送BYE消息给S-CSCF。 
-
-
 S-CSCF发送BYE消息给VoLTE AS。 
-
-
 VoLTE AS发送BYE消息给S-CSCF。 
-
-
 S-CSCF发送BYE消息给P-CSCF。 
-
-
 P-CSCF发送BYE消息给UE。 
-
-
 UE接收到BYE消息后，向P-CSCF发送200响应消息。 
-
-
 P-CSCF向PCRF发送STR消息，释放承载会话。 
-
-
 PCRF发送RAR消息给P-GW，通知删除专有承载。 
-
-
 P-GW发送RAA消息给PCRF。 
-
-
 PCRF发送STA消息给P-CSCF。 
-
-
 P-GW发送Delete Bearer Request消息到MME，指示删除专有承载。 
-
-
 MME向被叫UE发送Deactivate EPS bearer context request消息，请求释放专有EPS承载上下文。 
-
-
 UE向被叫MME发送Deactivate dedicated EPS bearer context accept消息，确认释放专有EPS承载上下文。 
-
-
 MME发送Delete Bearer Response消息给P-GW，指示专有承载已删除。 
-
-
 P-CSCF发送200OK响应消息给S-CSCF。 
-
-
 S-CSCF发送200 OK消息给VoLTE AS。 
-
-
 VoLTE AS发送200 OK消息给S-CSCF。 
-
-
 S-CSCF发送200 OK消息给MGCF。 
-
-
 MGCF发送SUB REQ消息到IM-MGW，释放被叫侧终端资源。 
-
-
 IM-MGW返回SUB REPLY消息。 
-
-
-
-
 ## SRVCC/eSRVCC 
 ### 注册流程 
 ### 注册流程 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 签约SRVCC/eSRVCC业务的UE附着到EPC网络后，发起注册到IMS网络。 
-
  
 IMS APN和数据APN采用独立的APN，IMS APN为缺省APN。 
-
  
 中兴VoLTE SBC支持SBC/P-CSCF/ATCF/ATGW合一。 
-
  
 UE通过EPC网络注册到IMS网络的过程可以分为如下几个阶段。 
-
  
 UE附着到EPC网络附着流程是用户注册到EPS网络上的流程，是用户开机后的第一个过程，是后续所有的流程的基础。在附着过程中，EPC网络会为用户建立一个默认承载，也可以对用户进行鉴权（用户首次附着到EPS网络上必须鉴权）。如果IMS业务APN（Access
 Point Name）和数据业务APN采用独立的APN，则附着流程完成之后，EPC网络就建立了数据APN缺省承载，用户可以通过EPS网络访问数据业务。UE再发起PDN连接请求，EPC网络为其建立IMS
 APN默认承载。 
-
  
 UE注册到IMS网络UE注册到IMS网络包括基本注册和第三方注册。基本注册过程中，UE主动发起注册，IMS网络与UE进行双向鉴权，通常采用IMS
 AKA或者SIP Digest鉴权方式，鉴权通过后，S-CSCF从IMS HSS下载到用户数据，基本注册完成。第三方注册过程中，S-CSCF根据用户数据中的iFC触发到AS的注册，AS从IMS
 HSS下载到UE的业务数据后，第三方注册完成。eSRVCC中引入了ATCF网元，注册请求经过ATCF时需要插入STN-SR等关键参数，以便后续切换使用。 
-
  
-
-
-信令流程 :SRVCC/eSRVCC注册流程如[图1]所示。
+信令流程 : 
+SRVCC/eSRVCC注册流程如[图1]所示。
 图1  SRVCC/eSRVCC注册流程
-
-
-
-
 EPC附着流程
-
-
 UE通过eNodeB向MME发起附着请求Attach Request，其中MS Network Capability信元会指示终端是否支持SRVCC。 
-
-
 MME检查Attach Request消息，判决需要对用户鉴权（比如消息完整性保护失败、MME启动附着强制鉴权等），同时MME没有此用户可用的鉴权向量信息，则MME向融合HLR/HSS发送AIR（Authentication
 Information Request）消息，请求鉴权数据，消息中携带user-name信元，表示用户的IMSI；否则，流程从第6步开始。 
-
-
 融合HLR/HSS向MME返回AIA消息，消息中携带用户的四元组鉴权向量，包括XRES（Expected Response）、RAND（Random
 Challenge）、AUTN（Authenticaiton Token）、KASME。 
-
-
 MME收到AIA消息后，向UE发送Authentication Request消息，对UE发起鉴权请求。消息中包含：RAND、AUTN、KSIasme。 
-
-
 如果UE鉴权成功，则会根据RAND计算出RES并通过Authentication Response返回给MME。MME使用鉴权向量组中的XRES和UE返回的RES（Response）比较，相同则鉴权成功，否则鉴权失败并向UE发送Authentication
 Reject消息。 
-
-
 EPC网络对终端的USIM卡完成鉴权流程后，如果从UE上次分离后MME改变了，或MME没有UE的有效的签约上下文，或IMEI改变，则MME向融合HLR/HSS发送ULR消息，获取用户信息，消息中携带UE-SRVCC-Capability信元：指示UE是否支持SRVCC能力，消息中携带Homogeneous-Support-of-IMS-Voice-Over-PS-Sessions信元：指示EPC网络是否支持IMS语音业务。 
-
-
 融合HLR/HSS向MME发送ULA消息，向MME插入签约数据，包括默认APN，一个或多个PDN（Packet Data
 Network）签约上下文。如果IMS业务APN和数据业务APN采用独立的APN，则这里默认APN是数据业务APN。 
-
-
 MME根据APN FQDN查询DNS配置，再结合S-GW POOL和P-GW POOL的网络拓扑选择S-GW和P-GW，向S/P-GW发送Create
 Session Request消息，请求建立数据APN缺省承载。S-GW缓存任何从PDN GW接收的下行分组数据，直到收到第14步的修改承载请求消息，在这之前不能发送下行数据通知消息给MME。 
-
-
 P-GW收到Create Session Request消息后，执行IP-CAN会话建立流程，即PGW向PCRF发送CCR信用控制请求消息，获取UE的缺省PCC规则。 
-
-
 PCRF根据SPR的签约信息、PGW上报的网络信息和PCRF的本地配置信息进行策略决策，对数据APN的PDN连接的请求进行EPS默认承载的QoS授权，并使用信用控制应答消息CCA下发授权的QoS信息给PGW。消息里携带Default-EPS-Bearer-QoS
 AVP，其QCI根据需要设置。 
-
-
 S/P-GW向MME返回Create Session Response消息，其中携带QCI信元，指示建立数据APN缺省承载已完成。 
-
-
 MME根据缺省APN的签约APN-AMBR和签约UE-AMBR确定UE-AMBR，通过eNodeB向UE发送Attach
 Accept消息，如果MME分配了新的GUTI，则消息中包含GUTI。 
-
-
 UE通过eNodeB发送Attach Complete消息给MME。 
-
-
 MME收到后发送Modify Bearer Request消息给S/P-GW，消息中携带无线侧的TEID和地址。 
-
-
 S/P-GW根据下行TEID和地址通过所建立的缺省承载立即开始给UE传送数据包，并给MME回复Modify Bearer
 Response消息。 
-
-
 如果IMS业务APN和数据业务APN采用独立的APN，则附着流程完成之后，EPC网络就建立了数据APN缺省承载，用户可以通过EPS网络访问数据业务。UE再发起PDN连接请求，消息中携带IMS
 APN名称，EPC网络为其建立IMS APN默认承载。 
-
-
 MME向S/P-GW发送Create Session Request消息，消息中携带IMSAPN名称和IMS APN的QCI，请求建立IMSAPN默认承载。 
-
-
 P-GW收到Create Session Request消息后，执行IP-CAN会话建立流程，即PGW向PCRF发送CCR信用控制请求消息，获取UE的PCC规则。 
-
-
 PCRF根据SPR的签约信息、PGW上报的网络信息和PCRF的本地配置信息进行策略决策，对IMS APN的PDN连接的请求进行EPS默认承载的QoS授权，并使用信用控制应答消息CCA下发授权的QoS信息给PGW。消息里携带Default-EPS-Bearer-QoS
 AVP，其QCI根据需要设置。 
-
-
 S/P-GW向MME返回Create Session Response消息，消息中携带关键信元PCO和QCI，指示建立IMS信令默认承载已完成，其中PCO包含P-CSCF的地址。 
-
-
 IMS注册流程
-
-
 UE先读取USIM卡信息获取IMSI，再从IMSI推导出IMPI和T-IMPU，向IMS拜访网络入口P-CSCF发送REGISTER消息请求注册。注册请求中包含PUI、PVI、CONTACT等关键信息。 
-
-
 P-CSCF/ATCF根据Request-URI头域中域名查询DNS服务器，获得归属域网络入口I-CSCF网元地址，向I-CSCF转发REGISTER消息。Feature-Caps:
 P-CSCF/ATCF在REGISTER消息中插入该消息头，将当前ATCF分配的STN-SR号码带给IMS网络。 
-
-
 I-CSCF收到REGISTER消息后，做如下处理： 
-
  
 I-CSCF根据Request-URI中的域名，判断是否在信任域或本地域。 
-
  
 对于本域用户，向IMS HSS发送UAR消息，请求获取S-CSCF的地址或者能力集。 
-
  
-
-
 IMS HSS收到UAR消息，根据本地数据库中的用户开户信息，判断用户已开户，则向I-CSCF发送UAA响应，返回S-CSCF的地址或者能力集。 
-
  
 当UAA消息中携带Server-Name时，表示携带的为S-CSCF的地址。 
-
  
 当UAA消息中携带Server-Capabilities时，表示携带的为S-CSCF的能力集。 
-
  
-
-
 I-CSCF根据IMS HSS返回的S-CSCF地址，向S-CSCF转发REGISTER消息。S-CSCF向IMS HSS发送MAR消息，请求获取认证向量AV（Authorization
 Vector）。同时融IMS HSS记录当前S-CSCF主机名，保证401鉴权挑战消息之后的REGISTER消息能够到达同一个SCSCF。 
-
-
 IMS HSS向S-CSCF返回MAA响应，包括鉴权五元组XRES（Expected Response）、RAND（Random
 Challenge）、AUTN（Authentication Token）、IK（Integrity Key）和CK（Cipher
 Key）。 
-
-
 S-CSCF根据RAND和AUTN生成nonce，并将nonce同IK、CK、以及鉴权算法放到WWW-Authenticate头域中，随401响应返回给P-CSCF。同时，S-CSCF保存参数XRES，以备后续对用户的鉴权响应进行验证。 
-
-
 P-CSCF从消息中取出IK和CK并保存，将消息中剩余的鉴权元素RAND和AUTN继续向UE转发。 
-
-
 UE收到401响应后，根据本地ISIM（IMS Subscriber Identity Module）中保存的共享密钥对AUTN进行认证，实现对归属网络的认证。再基于共享密钥和RAND计算出RES（Response），重新构造REGISTER消息，携带RESPONSE，按照初始REGISTER消息的路径发给P-CSCF。 
-
-
 P-CSCF按照初始REGISTER消息的路径发送后续REGISTER给I-CSCF。 
-
-
 I-CSCF收到REGISTER消息后，发送UAR，查询HSS得到服务的S-CSCF主机名。 
-
-
 IMS HSS收到UAR消息后，将之前记录的S-CSCF的地址信息通过UAA消息发送给I-CSCF。 
-
-
 S-CSCF收到鉴权响应，本地通过MD5算法计算得到response，并与第二条注册请求中的response进行比较。如果两者匹配，则该UE通过网络鉴权。鉴权通过后，S-CSCF向IMS
 HSS发送SAR消息，请求下载用户的签约数据。 
-
-
 IMS HSS向S-CSCF返回SAA响应，携带用户的签约数据，包括隐式注册集、ifcs、计费功能地址等信息。 
-
-
 S-CSCF向UE侧返回200响应，表明初始注册成功。 
-
-
 S-CSCF根据从IMS HSS处下载的用户签约信息，判断其中有针对REGISTER请求的iFC（initial Filter
 Criteria）数据，S-CSCF根据iFC中VoLTE AS地址，向VoLTE AS发送第三方注册请求。如果用户签约信息中包含多条针对REGISTER请求的iFC数据，S-CSCF会根据优先级从高到低依次发送给iFC中的VoLTE
 AS地址。同时S-CSCF还支持根据签约，携带UE发起的注册请求和注册成功响应消息。 
-
-
 AS发现用户为第一次注册，发送SNR消息给IMS HSS，请求获取用户数据（包括用户身份数据、业务签约数据等）并对用户数据进行订阅。 
-
-
 IMS HSS向AS返回SNA响应，携带用户数据。针对eSRVCC，HSS根据UDR请求，将返回STN-SN以及MS-ISDN等信息。 
-
-
 AS向S-CSCF返回第三方注册的200成功响应。  
-
-
 AS向I/S-CSCF发送Message请求，请求消息中携带用户的ATU-STI号码、C-MSISDN号码。 
-
-
 I/S-CSCF根据Request-URI通过LIR/LIA消息查询融合HLR/HSS或根据本地PSI数据配置，查询ATCF的地址，根据查询结果将MESSAGE消息路由到ATCF。 
-
-
 ATCF返回200 OK响应给I-CSCF，表示已成功接收MESSAGE消息。 
-
-
 I/S-CSCF将200 OK响应转发给VoLTE AS。 
-
-
 VoLTE AS根据下载的STN-SR号码判断是否需要向融合HLR/HSS发送PUR消息更新STN-SR号码。 VoLTE
 AS根据第三方注册的REGISTER消息是否携带ATCF分配的STN-SR号码，进行以下处理： 
-
  
 如果REGISTER消息中携带了STN-SR号码，并且该号码与从IMS HSS下载的STN-SR号码不相同，则通过PUR消息将STN-SR号码携带给融合HLR/HSS，由融合HLR/HSS替换本地的STN-SR号码。 
-
  
 如果REGISTER消息中未携带STN-SR号码，则VoLTE AS将本地配置的STN-SR号码与融合HLR/HSS之前返回的STN-SR号码进行比较，如果不相同，则通过PUR消息将本地配置的STN-SR号码携带给融合HLR/HSS，由融合HLR/HSS替换本地的STN-SR号码。 
-
  
 如果REGISTER消息中携带了STN-SR号码，并且融合HLR/HSS上没有配置STN-SR号码，则VoLTE AS通过PUR将REGISTER消息中携带的STN-SR号码携带给融合HLR/HSS。 
-
  
 如果REGISTER消息中未携带STN-SR号码，并且融合HLR/HSS上没有配置STN-SR号码，则VoLTE AS将本地配置的STN-SR号码携带给融合HLR/HSS。 
-
  
 其他情况下，VoLTE AS无需向融合HLR/HSS发送PUR消息。 
-
  
-
-
 融合HLR/HSS返回成功接收响应PUA。 
-
-
 融合HLR/HSS判断消息中携带的STN-SR号码与本地保存的STN-SR号码不一致，则将消息中携带的STN-SR号码通过Insert
 Subscriber Data Request发送给MME。 
-
-
 MME更新本地的STN-SR号码后，向融合HLR/HSS返回成功更新Insert Subscriber Data Answer响应。后续切换MME需要使用本地的STN-SR参数。 
-
-
-
-
 ### 呼叫流程 
 ### 呼叫流程 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 签约SRVCC/eSRVCC业务的主被叫LTE用户已注册到IMS网络。 
-
  
 签约SRVCC/eSRVCC业务的LTE用户通过LTE网络发起呼叫，被叫域选为LTE网络。 
-
  
-
-
-信令流程 :SRVCC/eSRVCC呼叫流程如[图1]所示。
+信令流程 : 
+SRVCC/eSRVCC呼叫流程如[图1]所示。
 图1  SRVCC/eSRVCC呼叫流程
-
-
-
-
 主叫信令面流程
-
-
 UE_A向IMS拜访网络入口P-CSCF/ATCF_A发送INVITE消息向被叫发起会话。INVITE消息中包含了主、被叫号码、主叫联系地址等关键信息。 
-
-
 2 P-CSCF/ATCF_A从INVITE消息中获得主叫UE_A会话信息，将用户的信令地址、媒体带宽等信息通过AAR消息发送给PCRF_A，同时请求中还会请求接入网络位置信息。 
-
-
 PCRF_A向P-CSCF/ATCF_A发送认证/授权应答消息AAA响应，响应消息中携带接入网络类型。具体的接入网络信息（如CELL-ID）通过RAR/RAA获得。 
-
-
 P-CSCF/ATCF_A收到INVITE消息后，根据INVITE消息中携带的+g.3gpp.mid-call和+g.3gpp.srvcc-alerting标识判断需要锚定此会话，并进行本端媒体资源预留。P-CSCF/ATCF_A收到AAA之后，将INVITE请求发送给S-CSCF_A。 
-
-
 S-CSCF_A收到INVITE消息，判断P-Asserted-Identity头域中的主叫号码已注册，则根据主叫用户签约的iFC模板数据，触发VoLTE
 AS_A，即发送INVITE请求到VoLTE AS_A。 
-
-
 VoLTE AS_A向主叫UE_A提供语音业务后，发送INVITE消息到S-CSCF_A。 
-
-
 S-CSCF_A使用被叫号码B，查询ENUM/DNS，获取下一跳路由地址。 
-
-
 ENUM/DNS根据被叫号码B解析出被叫归属域入口I-CSCF的IP地址，将其返回给S-CSCF_A。 
-
-
 S-CSCF_A将INVITE消息发送到被叫I-CSCF_B。 
-
-
 被叫信令面流程（T-ADS域选）
-
-
 I-CSCF_B向融合HLR/HSS发送LIR消息，请求获取UE_B注册的S-CSCF_B地址。 
-
-
 融合HLR/HSS收到LIR消息后，根据本地数据库中的用户注册信息，查看被叫用户的S-CSCF_B地址，则向I-CSCF_B发送LIA消息，提供S-CSCF_B的服务器地址。 
-
-
 S-CSCF_B将收到INVITE消息后，根据iFC模板数据，向VoLTE AS_B发送INVITE消息触发被叫业务和被叫网络域选。 
-
-
 VoLTE AS_B先执行被叫侧业务，向融合HLR/HSS发送UDR消息，请求获取被叫用户的T-ADS信息。 
-
-
 融合HLR/HSS通过IDR消息向MME_B查询被叫用户的T-ADS信息。 
-
-
 MME_B将查询的结果通过IDA消息向融合HLR/HSS发送被叫用户的T-ADS信息，IDA返回Last-UE-Activity-Time,RAT-Type,
 IMS Voice Over PS Sessions Support Indicator。 
-
-
 融合HLR/HSS向VoLTE AS_B返回UDA响应，携带T-ADS信息。 
-
-
 融合VoLTE AS_B基于获取的T-ADS信息，判断当前域选到IMS网络。VoLTE AS_B确定被叫域选的网络后，通过INVITE消息指示S-CSCF_B将呼叫接续到特定网络。 
-
-
 S-CSCF_B查询本地保存的被叫用户注册的P-CSCF/ATCF_B地址，将呼叫请求通过INVITE消息发送到P-CSCF/ATCF_B。 
-
-
 P-CSCF/ATCF_B从INVITE消息中获得主叫UE_A会话信息，将这些信息通过认证/授权请求消息AAR消息发送给PCRF_B，通知PCRF_B建立承载。 
-
-
 PCRF_B向P-CSCF/ATCF_B发送认证/授权应答消息AAA响应。 
-
-
 P-CSCF/ATCF_B根据INVITE消息中携带+g.3gpp.srvcc标识判断需要锚定此会话，则进行本端媒体资源预留，通过INVITE消息将呼叫请求接续到UE_B。 
-
-
 被叫承载面建立
-
-
 被叫UE_B收到INVITE消息，进行相应的处理，终端返回18x响应（此处以180临时响应为例）。 
-
-
 P-CSCF/ATCF_B收到被叫侧返回的180(SDP，RINGING）下发认证/授权请求消息AAR消息给PCRF_B开始建立专有承载。AAR包括用户媒体描述的信息。 
-
-
  PCRF_B根据认证/授权请求消息AAR消息中携带的媒体类型和媒体描述信息做策略决策，提供授权的QoS，并通过重新认证/授权请求消息RAR消息将QoS（QCI/ARP/GBR/MBR）和PCC规则发送至P-GW_B。 
-
-
  P-GW_B收到重新认证/授权请求消息RAR，上报重新认证/授权应答消息RAA响应给PCRF_B。 
-
-
 PCRF_B根据P-GW_B返回的重新认证/授权应答消息RAA消息，给P-CSCF/ATCF_B通过认证/授权应答消息AAA响应授权请求结果消息。 
-
-
 P-GW_B收到重新认证/授权请求消息RAR，同时通过Create Bearer Request指示MME_B建立专有承载。  
-
-
 MME_B收到Create Bearer Request消息后，向被叫UE_B发送Activate dedicated
 EPS bearer context request消息，用于请求激活一个专有EPS承载。 
-
-
 UE_B向被叫MME_B发送Activate dedicated EPS bearer context accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 P-GW_B收到Create Bearer Response消息，确认专有承载已经建立。 
-
-
 P-GW_B向PCRF_B发送信用控制请求消息CCR-U消息，通知资源预留成功。 
-
-
 PCRF_B向P-GW_B返回信用控制应答消息CCA-U响应。 
-
-
 当PCRF_B收到P-GW_B的资源预留成功事件上报时，向P-CSCF/ATCF_B发送重新认证/授权请求消息RAR消息，通知承载建立情况。 
-
-
 P-CSCF/ATCF_B向PCRF_B返回重新认证/授权应答消息RAA消息，被叫承载面建立完成。 
-
-
 主叫承载面建立
-
-
 P-CSCF/ATCF_B先将180响应转发至VoLTE AS_B，VoLTE AS_B通过VoLTE AS_A发送到P-CSCF/ATCF_A，其中SDP
 answer中携带媒体响应信息。 
-
-
 P-CSCF/ATCF_A收到被叫侧返回的180（SDP，RINGING）消息后，下发认证/授权请求消息AAR消息给PCRF_A开始建立专有承载。AAR包括用户媒体信息。 
-
-
 PCRF_A根据认证/授权请求消息AAR消息中携带的媒体类型和媒体描述信息做策略决策，提供授权的QoS，并通过重新认证/授权请求消息RAR消息将QoS（QCI、ARP、GBR和MBR）和PCC规则发送至P-GW_A。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，上报重新认证/授权应答消息RAA响应给PCRF_A。 
-
-
 PCRF_A根据P-GW_A返回的重新认证/授权应答消息RAA消息，给P-CSCF/ATCF_A通过认证/授权应答消息AAA响应授权请求结果消息。 
-
-
 P-GW_A收到重新认证/授权请求消息RAR，通过Create Bearer Request指示MME_A建立专有承载。 
-
-
 MME_A收到Create Bearer Request消息后，向主叫UE_A发送Activate Dedicated
 EPS Bearer Context Request消息，用于请求激活一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Activate Dedicated EPS Bearer Context Accept消息，用于确认激活一个专有EPS承载上下文。 
-
-
 P-GW_A收到Create Bearer Response消息，确认专有承载已经建立。 
-
-
 P-GW_A向PCRF_A发送信用控制请求消息CCR-U消息，通知资源预留成功。 
-
-
 PCRF_A向P-GW_A返回信用控制应答消息CCA-U响应。 
-
-
 当PCRF_A收到P-GW_A的资源预留成功事件上报时，向P-CSCF/ATCF_A发送重新认证/授权请求消息RAR消息，通知承载建立已成功。 
-
-
 P-CSCF/ATCF_A向PCRF_A返回重新认证/授权应答消息RAA消息。 
-
-
 P-CSCF/ATCF_A将180响应转发至主叫UE_A 。 
-
-
 被叫网络收到主叫网络发送的PRACK请求，表示主叫网络成功接收180响应，并且已完成资源预留。 
-
-
 被叫UE_B返回针对PRACK请求的200响应，表示成功接收PRACK请求。 
-
-
 被叫用户接听电话，被叫UE_B向主叫网络返回针对INVITE请求的200(INVITE)响应。 
-
-
 当VoLTE AS_B收到200(INVITE)消息后，开始向CCF发送ACR [Start]消息。 
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建被叫AS CDR，并向VoLTE AS_B发送计费响应消息ACA。 
-
-
 VoLTE AS_B向主叫VoLTE AS_A转发200(INVITE)消息。 
-
-
 当VoLTE AS_A收到200(INVITE)消息后，开始向CCF发送ACR [Start]消息。 
-
-
 CCF收到正确的ACR [Start]消息后，将其保存，创建主叫AS CDR，并向VoLTE AS_A发送计费响应消息ACA。 
-
-
 VoLTE AS_A收到200 OK后，将200(INVITE)响应消息到主叫UE_A。 
-
-
 主叫UE_A向被叫网络返回针对200(INVITE)响应的ACK确认消息，主叫UE_A和被叫UE_B成功建立会话。A和B用户之间可以通话。 
-
-
 挂机释放流程
-
-
 A和B通话结束后，UE_A主动发送BYE消息。 
-
-
 当VoLTE AS_A收到BYE消息后，开始向CCF发送ACR [Stop]消息。 
-
-
 CCF收到正确的ACR [Stop]消息后，将其保存，向VoLTE AS_A发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 VoLTE AS_A将BYE消息透传到被叫的VoLTE AS_B。 
-
-
 当被叫VoLTE AS_B收到BYE消息后，开始向CCF发送ACR [Stop]消息。 
-
-
 CCF收到正确的ACR [Stop]消息后，将其保存，向VoLTE AS_B发送计费响应消息ACA。并将本次会话的所有ACR进行合并，输出一张完整的CDR并将此CDR传送到计费中心。 
-
-
 VoLTE AS_B将BYE消息转发到被叫的UE_B。 
-
-
 UE_B收到主叫侧的挂机请求后，向主叫侧发送200(BYE)响应消息。 
-
-
 当被叫P-CSCF/ATCF_B收到200(BYE)响应后，向PCRF_B下发终止会话请求消息STR消息释放专有承载。 
-
-
 PCRF_B发送重新认证/授权请求消息RAR消息通知P-GW_B删除专有承载，携带charging rule remove指示。 
-
-
 P-GW_B返回重新认证/授权应答消息RAA给PCRF_B。 
-
-
 PCRF_B返回终止会话应答消息STA响应给P-CSCF/ATCF_B。 
-
-
 P-GW_B根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME_B指示删除专有承载。 
-
-
 MME_B收到Delete Bearer Request消息后，向被叫UE_B发送Deactivate EPS Bearer
 Context Request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE_B向被叫MME_B发送Deactivate Dedicated EPS Bearer Context Accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 P-GW_B收到Delete Bearer Response消息，专有承载已经完成删除。 
-
-
 P-GW_B发送信用控制请求消息CCR-U消息给PCRF_B，指示专有承载已成功删除。 
-
-
 PCRF_B给P-GW_B返回信用控制应答消息CCA-U消息予以确认。 
-
-
 P-CSCF/ATCF_B发送200(BYE)给P-CSCF/ATCF_A。 
-
-
 当主叫P-CSCF/ATCF_A收到200 (BYE)消息后，向PCRF_A下发终止会话请求消息STR消息释放承载会话。 
-
-
 PCRF_A发送重新认证/授权请求消息RAR消息通知P-GW_A删除专有承载，携带charging rule remove指示。 
-
-
 P-GW_A返回重新认证/授权应答消息RAA给PCRF_A。 
-
-
 PCRF_A返回终止会话应答消息STA响应给P-CSCF/ATCF_A。 
-
-
 P-GW_A根据指示删除相关的规则，释放承载会话，并发送Delete Bearer Request消息到MME_A指示删除专有承载。 
-
-
 MME_A收到Delete Bearer Request消息后，向主叫UE_A发送Deactivate EPS Bearer
 Bontext Request消息，用于请求释放一个专有EPS承载上下文。 
-
-
 UE_A向主叫MME_A发送Deactivate Dedicated EPS Bearer Context Accept消息，用于确认释放一个专有EPS承载上下文。 
-
-
 P-GW_A收到Delete Bearer Response消息，专有承载已经完成删除。 
-
-
 P-GW_A发送信用控制请求消息CCR消息给PCRF_A，指示专有承载已成功删除。 
-
-
 PCRF_A给P-GW_A返回信用控制应答消息CCA消息予以确认。 
-
-
 P-CSCF/ATCF_A发送200 (BYE)消息给UE_A，通话结束。 
-
-
-
-
 ### 切换流程 
 #### 单路语音呼叫切换（Active状态） 
 #### 单路语音呼叫切换（Active状态） 
-
-
-业务模型 :本流程业务模型如下： 
-
+业务模型 : 
+本流程业务模型如下： 
  
 签约eSRVCC业务的主叫LTE用户通过LTE网络发起呼叫，被叫域选网络为LTE网络，当主叫用户和被叫用户正在进行通话时，主叫用户从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
-
  
 VoLTE SBC兼做P-CSCF、ATCF和ATGW，VoLTE SBC需要配置支持ATCF功能。 
-
  
 VoLTE AS已支持SRVCC/eSRVCC功能。 
-
  
 数据库部署形态为融合HLR/HSS，即HLR、SAE-HSS和IMS-HSS合一部署。 
-
  
-
-
-信令流程 :签约eSRVCC业务的主叫LTE用户通过LTE网络发起呼叫，被叫域选网络为LTE网络，当主叫用户和被叫用户正在进行通话时，主叫用户从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换，具体的语音切换流程如[图1]所示。
+信令流程 : 
+签约eSRVCC业务的主叫LTE用户通过LTE网络发起呼叫，被叫域选网络为LTE网络，当主叫用户和被叫用户正在进行通话时，主叫用户从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换，具体的语音切换流程如[图1]所示。
 图1  单路语音呼叫切换（Active状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A测量到邻区的3G网络信号强度超过门限，上报系统测量报告，eNodeB_A经过判断决定切换，发送切换请求Handover
 Required消息到MME_A。 
-
-
 MME_A发起eSRVCC切换请求，发送PS to CS Request消息到UE_A当前所在小区的eMSC。 
-
-
 eMSC发起局间切换请求，发送MAP PREPARE HANDOVER REQ消息到MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加RNC侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 MGW分配IP资源，回复ADD REPLY消息。 
-
-
 MSC Server发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
-
-
 RNC发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，发起UP初始化。 
-
-
 MGW发送TRC_IU/NB_UP_ACK_FRMIP消息到RNC，返回UP初始化应答。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息到eMSC，携带切换号码Handover
 Number。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加到MSC Server一侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 IM-MGW发送NTFY REQ消息到eMSC，携带终端的IP地址和端口等隧道信息。 
-
-
 eMSC返回NTFY REPLY应答消息到IM-MGW。 
-
-
 eMSC根据切换号码确定出局链路，发送IAM消息到MSC Server，携带隧道信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加到eMSC一侧的IP终端，携带有关隧道信息。 
-
-
 MGW返回ADD REPLY应答消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，携带终端的IP地址和端口等隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送APM消息，携带隧道信息到eMSC。 
-
-
 eMSC发送MOD REQ到IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 IM-MGW到MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，通知用户面建立成功。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送ACM消息到eMSC。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加IMS侧的IP终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC，携带IP终端的IP地址和端口等信息。 
-
-
 ATCF新建媒体端点流程
-
-
 eMSC根据STN-SR进行路由，向P-CSCF/ATCF_A发送eSRVCC切换请求INVITE消息，携带本端SDP信息。 
 关键信元如下： 
-
  
 Request URI：STN-SR号码。取值源自MME发送给eMSC的切换请求PS to CS Request消息。 
-
  
 P-Asserted-Identity头域：C-MSISDN号码。取值源自MME发送给eMSC的切换请求PS to CS
 Request消息。 
-
  
-
-
 eMSC返回PS to CS Response消息到MME_A，通知手机可以接入到UMTS。 
-
-
 P-CSCF/ATCF_A收到INVITE消息，根据其中STN-SR号码，判断该消息是由eSRVCC切换产生。P-CSCF/ATCF_A作如下处理： 
-
  
 P-CSCF/ATCF_A从INVITE消息中获取C-MSISDN，结合本地保存的+g.3gpp.srvcc标识、eSRVCC相关信息（ATU-STI等），确定UE_A需要切换的Active状态会话。 
-
  
 P-CSCF/ATCF_A进行媒体协商修改，在ATGW新建媒体端点，与eMSC侧MGW的媒体端点完成连接。 
-
  
 P-CSCF/ATCF_A向eMSC返回200 OK消息，携带本端新建端点的SDP信息。 
-
  
-
-
 eMSC发送ACK消息给P-CSCF/ATCF_A。 
-
-
 eMSC根据200消息中的承载信息通过MOD REQ消息下发给主叫IM-MGW。 
-
-
 IM-MGW向eMSC发送MOD REPLY消息，返回修改终结点属性命令的响应。 
-
-
 CS网络位置更新
-
-
 UE_A开始接入CS网络，RNC发送Relocation Detect消息到MSC Server。 
-
-
 MSC Server收到Relocation Detect消息，通过局间MAP信令发送MAP PROCESS ACCESS
 SIGNALLING REQ消息到eMSC。 
-
-
 UE_A接入CS网络完成，RNC发送Relocation Complete消息到MSC Server。 
-
-
 当MSC Server收到Relocation Complete消息，发送ANM消息到eMSC。 
-
-
 MSC Server通过局间MAP信令发送MAP SEND END SIGNAL REQ消息到eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A。 
-
-
 MME_A返回SRVCC PS to CS Complete Ack消息到eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到HLR/HSS。 
-
-
 HLR/HSS发送MAP INSERT SUBSCRIBER DATA REQ插入用户数据。 
-
-
 VLR返回MAP INSERT SUBSCRIBER DATA RSP。 
-
-
 HLR/HSS返回 MAP UPDATE LOCATION CNF应答消息。 
-
-
 接入域修改
-
-
 P-CSCF/ATCF_A根据待切换会话关联的ATU-STI，向VoLTE AS_A发送INVITE消息，请求eSRVCC切换。 
 关键参数如下： 
-
  
 Request-URI：待切换会话的ATU-STI。 
-
  
 P-Asserted-Identity：UE的C-MSISDN号码。 
-
  
 Require：携带tdialog标识，指示VoLTE AS支持Target-Dialog头域。 
-
  
 Target-Dialog：待切换会话的原Dialog ID，包括原会话的Call-ID，远端设备用户实例（remote-tag），本端设备用户实例（local-tag）。 
-
  
 SDP：UE的SDP，与原会话协商后的SDP相同。 
-
  
-
-
 VoLTE AS_A收到INVITE消息后，通过其中Target-Dialog头域的原会话Call-ID确定待切换的会话，并作如下处理： 
-
  
 如果该会话处于Active状态，且具有激活的语音媒体成分，则VoLTE AS比较INVITE消息中SDP的编解码是否与原会话协商后SDP的编解码相同，并根据比较结果启动eSRVCC流程或SRVCC流程。
 如果相同，则VoLTE AS启动eSRVCC流程，修改该会话的接入域，表明用户已从CS域接入，便于后续业务进行域选择，并且返回200
 OK消息。由于原会话协商SDP的编解码未改变，VoLTE AS不更新远端SDP。
 如果不相同，则VoLTE AS启动SRVCC流程，修改会话接入域，返回200 OK消息，并且通过S-CSCF发送UPDATE消息给UE_B，更新远端SDP。
  
-
  
 如果通过会话ID无法确定会话，则VoLTE AS返回480消息拒绝本次切换，并释放该用户所有会话。 
-
  
-
-
 P-CSCF/ATCF_A向VoLTE AS_A返回ACK消息。UE_A与UE_B之间恢复媒体连接。后续UE_A所在网络侧媒体信息基于CS网络承载。 
-
-
 释放原会话资源
-
-
 切换成功后，VoLTE AS_A向P-CSCF/ATCF_A发送BYE消息，释放原会话媒体端点。 
-
-
 P-CSCF/ATCF_A向VoLTE AS_A返回200响应消息。 
-
-
 P-CSCF/ATCF_A向UE_A发送BYE请求，释放原会话资源。 
-
-
 UE_A向P-CSCF/ATCF_A返回200响应消息。 
-
-
-
-
 #### 单路语音呼叫切换（Hold状态） 
 #### 单路语音呼叫切换（Hold状态） 
-
-
-业务模型 :本流程业务模型如下： 
-
+业务模型 : 
+本流程业务模型如下： 
  
 主叫LTE用户UE_A已签约eSRVCC业务，被叫用户UE_B为LTE用户。  
-
  
 当UE_A和UE_B通话过程中，UE_A Hold UE_B。UE_A为Hold业务方，当前仅有这一个Hold状态会话。此时，UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
-
  
 数据库部署形态为融合HLR/HSS，即HLR，SAE-HSS和IMS-HSS合一部署。 
-
  
 VoLTE SBC兼做P-CSCF/ATCF/ATGW网元。 
-
  
-
-
-信令流程 :当UE_A和UE_B通话过程中，UE_A
+信令流程 : 
+当UE_A和UE_B通话过程中，UE_A
 Hold UE_B。UE_A为Hold业务方，当前仅有这一个Hold状态会话。此时，UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。具体的语音切换流程如[图1]所示。图1  单路语音呼叫切换（Hold状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A通话过程中移动至4G信号强度低于门限值地区，检测领区3G网络信息强度满足门限要求，上报系统测量报告至eNodeB_A,
 eNodeB_A经过判断决定切换后，向MME_A发送切换请求Handover Required消息。 
-
-
 MME_A向UE_A当前所在小区的eMSC发起eSRVCC切换请求PS to CS Request消息。 
-
-
 eMSC通过MAP PREPARE HANDOVER REQ消息向MSC Server发起局间切换请求。 
-
-
 MSC Server向MGW发送ADD REQ消息，请求添加BSC侧的IP终结点，并指示本次呼叫使用的编解码。 
-
-
 MGW动态分配IP资源，向MSC Server回复ADD REPLY消息，该消息中返回终结点相关信息。 
-
-
 MSC Server发送Handover Request消息给目标侧BSC，目标侧进行A接口资源和空口资源准备。 
-
-
 BSC侧预留资源完成后，返回Handover Request Ack消息给MSC Server。其中携带BSC的媒体面IP地址和端口号。 
-
-
 MSC Server发送MOD REQ消息，将BSC的媒体面IP地址和端口号通知到MGW。 
-
-
 MGW接收媒体面IP地址和端口号，返回MOD REPLY消息。 
-
-
 MGW发送NTF REQ消息到MSC Server,通知媒体面建立完成。 
-
-
 MSC Server返回NTF REPLY应答。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息给eMSC，携带切换号码信元Handover
 Number。 
-
-
 eMSC向IM-MGW发送ADD REQ消息，请求添加到MSC Server一侧的IP终结点，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，向eMSC回复ADD REPLY消息，该消息中返回终结点信息。 
-
-
 eMSC根据切换号码选择到MSC Server的路由，发送IAM消息到MSC Server。 
-
-
 MSC Server向MGW发送ADD REQ消息，请求添加到eMSC一侧的IP终结点，并指示本次呼叫使用的编解码。 
-
-
 MGW动态分配IP资源，向MSC Server回复ADD REPLY消息，该消息中返回IP地址等终结点相关信息。 
-
-
 MSC Server发送APM消息给eMSC，选择编解码。 
-
-
 eMSC向IM-MGW发送MOD REQ消息，指示IM-MGW上报隧道消息。 
-
-
 IM-MGW向eMSC发送MOD REPLY消息，返回修改终结点属性命令的响应。 
-
-
 IM-MGW向eMSC发送NTFY REQ消息，上报隧道指示。 
-
-
 eMSC返回NTFY REPLY消息到IM-MGW。 
-
-
 eMSC把隧道消息打包到APM消息中，发送给MSC Server。 
-
-
 MSC Server向MGW发送MOD REQ消息，携带隧道信息。 
-
-
 MGW返回MOD REPLY消息。 
-
-
 MGW向MSC Server发送NTFY REQ消息，传送隧道请求接受消息。 
-
-
 MSC Server向MGW发送NTFY REPLY消息。 
-
-
 MSC Server把隧道消息打包到APM消息中，发送给eMSC。  
-
-
 eMSC把APM消息中的隧道信息通过MOD REQ消息下发给IM-MGW。 
-
-
 IM-MGW向eMSC发送MOD REPLY消息。 
-
-
 IM-MGW向MGW发送TRC_IU/NB_UP_INIT_TOIP消息，发起NB_UP初始化。 
-
-
 MGW向IM-MGW发送TRC_IU/NB_UP_ACK_FRMIP消息，返回针对NB_UP初始化的响应。 
-
-
 IM-MGW向eMSC发送NTFY REQ消息，通知承载建立完成。 
-
-
 eMSC向IM-MGW返回NTFY REPLY消息。 
-
-
 MGW向MSC Server发送NTFY REQ消息，通知承载建立完成。 
-
-
 MSC Server向MGW返回NTFY REPLY消息。 
-
-
 MSC Server建立完媒体资源，发送ACM消息给eMSC。 
-
-
 eMSC向IM-MGW发送ADD REQ消息，建立到IMS一侧的IP终结点，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，返回ADD REPLY消息。 
-
-
 MME_A向UE_A发送Handover Command消息，指示UE_A向GERAN发起切换。 
-
-
 会话切换流程
-
-
 eMSC根据STN-SR向P-CSCF/ATCF_A发送INVITE消息，携带SDP信息。 
 关键信元如下： 
-
  
 Request URI：STN-SR号码。 
-
  
 P-Asserted-Identity头域：C-MSISDN号码。 
-
  
 Accept头域：携带vnd.3gpp.mid-call标识，表示eMSC支持处理mid-call消息体。 
-
  
 Recv-Info头域：携带+g.3gpp.mid-call标识，表示eMSC支持处理mid-call通知。 
-
  
 SDP：携带eMSC支持的编解码信息。 
-
  
-
-
 eMSC向MME_A发送PS to CS Response消息，指示手机可以向GERAN发起网络切换。 
-
-
 P-CSCF/ATCF_A收到INVITE消息，根据其中STN-SR号码，判断该消息是由eSRVCC切换产生。P-CSCF/ATCF_A作如下处理： 
-
  
 P-CSCF/ATCF_A从INVITE消息中获取C-MSISDN，结合本地保存的+g.3gpp.srvcc标识、eSRVCC相关信息（ATU-STI等），确定UE_A需要切换的HOLD状态会话。 
-
  
 P-CSCF/ATCF_A进行媒体协商修改，在ATGW新建媒体端点，与eMSC侧MGW的媒体端点完成连接。 
-
  
 P-CSCF/ATCF_A向eMSC发送200 OK消息，携带本端新建端点的SDP信息。 
-
  
-
-
 eMSC发送接收成功响应AC K消息给P-CSCF/ATCF_A。 
-
-
 eMSC根据200消息中的承载信息通过MOD REQ消息下发给主叫IM-MGW。 
-
-
 IM-MGW向eMSC发送MOD REPLY消息，返回修改终结点属性命令的响应。 
-
-
 IM-MGW向eMSC发送NTFY REQ消息，确认当前端点已修改。 
-
-
 eMSC向IM-MGW发送NTFY REPLY消息，返回上报隧道指示事件的响应。 
-
-
 P-CSCF/ATCF_A根据待切换会话关联的ATU-STI，向VoLTE AS_A发送INVITE消息，请求eSRVCC切换。 
 关键参数如下： 
-
  
 Request-URI：待切换会话的ATU-STI。 
-
  
 P-Asserted-Identity：UE的C-MSISDN号码。 
-
  
 Require：携带tdialog标识，指示VoLTE AS支持Target-Dialog头域。 
-
  
 Target-Dialog：待切换会话的原Dialog ID，包括原会话的Call-ID，远端设备用户实例（remote-tag），本端设备用户实例（local-tag）。 
-
  
 Accept头域：携带vnd.3gpp.mid-call标识，表示eMSC支持处理mid-call消息体。 
-
  
 Recv-Info头域：携带+g.3gpp.mid-call标识，表示eMSC支持处理mid-call通知。 
-
  
 SDP：UE的SDP，与原会话协商后的SDP相同。 
-
  
-
-
 VoLTE AS_A收到INVITE消息后，通过其中Target-Dialog头域的原会话Call-ID确定待切换的会话，并作如下处理： 
-
  
 如果该会话处于HOLD状态，且具有激活的语音媒体成分，则VoLTE AS比较INVITE消息中SDP的编解码是否与原会话协商后SDP的编解码相同，并根据比较结果启动eSRVCC流程或SRVCC流程。
 如果相同，则VoLTE AS启动eSRVCC流程，修改该会话的接入域，表明用户已从CS域接入，便于后续业务进行域选择，并且返回200
 OK消息。由于原会话协商SDP的编解码未改变，VoLTE AS不更新远端SDP。
 如果不相同，则VoLTE AS启动SRVCC流程，修改会话接入域，返回200 OK消息，并且通过S-CSCF发送UPDATE消息给UE_B，更新远端SDP。
  
-
  
 如果通过会话ID无法确定会话，则VoLTE AS返回480消息拒绝本次切换，并释放该用户所有会话。 
-
  
-
-
 P-CSCF/ATCF_A向VoLTE AS_A返回ACK消息。UE_A与UE_B之间恢复媒体连接。后续UE_A所在网络侧媒体信息基于CS网络承载。 
-
-
 CS网络位置更新
-
-
 UE_A开始接入CS网络，BSC给MSC Server发送Handover Detect消息，表示UE_A已经检测到新信道，已经具备接入新的无线信道的条件，但尚未真正切入。 
-
-
 当MSC Server收到BSC上报的Handover Detect消息后，通过局间MAP信令发送MAP PROCESS
 ACCESS SIGNALLING IND消息给eMSC。 
-
-
 UE_A成功接入CS网络，BSC给MSC Server发送Handover Complete消息，通知MSC Server切换完成。 
-
-
 当MSC Server收到UE_A上报的Handover Complete消息后，发送ANM消息给eMSC。 
-
-
 MSC Server同时通过局间MAP信令发送MAP SEND END SIGNAL IND消息给eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A，通知MME_A切换已经成功。 
-
-
 MME_A发送SRVCC PS to CS Complete Ack响应消息给eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到融合HLR/HSS进行位置更新，确保后续的被叫业务能正确地路由到eMSC。 
-
-
 融合HLR/HSS发送MAP INSERT SUBSCRIBER DATA IND插入用户数据给eMSC。 
-
-
 eMSC向融合HLR/HSS返回插入用户数据操作的响应。 
-
-
 融合HLR/HSS向eMSC插入用户数据成功后，融合HLR/HSS向eMSC回位置更新的MAP UPDATE LOCATION
 CNF响应。 
-
-
 释放原会话资源
-
-
 切换成功后，VoLTE AS_A向P-CSCF/ATCF_A发送BYE消息，释放原会话媒体端点。 
-
-
 P-CSCF/ATCF_A向VoLTE AS_A返回200响应消息。 
-
-
 P-CSCF/ATCF_A向UE_A发送BYE请求，释放原会话资源，并向PCRF发送STR消息释放专有承载。 
-
-
 UE_A向P-CSCF/ATCF_A返回200响应消息。 
-
-
 呼叫恢复
-
-
 切换后的UE_A恢复呼叫，发送Retrieve Request到MSC Server。 
-
-
 MSC Server在MAP_PROCESS_ACCESS_SIG_REQ消息包装Retrieve Requset，发送到eMSC。 
-
-
 eMSC处理Retrieve Requset，发送MOD REQ到IM-MGW，修改终端属性为sendreceive. 
-
-
 IM-MGW操作成功，返回MOD REPLY。 
-
-
 eMSC发送Update消息到ATCF_A，更新SDP属性。 
-
-
 ATCF_A转发至S-CSCF_A。 
-
-
 再由S-CSCF_A发送至VoLTE AS_A。 
-
-
 VoLTE AS_A发送到UE_B进行处理。 
-
-
 UE_B返回200OK成功应答。 
-
-
 VoLTE AS_A返回至S-CSCF_A。 
-
-
 S-CSCF_A将200 OK再发送到ATCF_A。 
-
-
 ATCF_A将200 OK转发至eMSC。 
-
-
 eMSC发送MAP_FORWARD_ACCESS_SIG_REQ到MSC Server，其中包装Retrieve ACK消息。 
-
-
 MSC Server获取Retrieve ACK消息，并发送到UE_A。 
-
-
-
-
 #### 单路语音呼叫切换（呼出Alerting状态） 
 #### 单路语音呼叫切换（呼出Alerting状态） 
-
-
-业务模型 :本流程业务模型如下： 
-
+业务模型 : 
+本流程业务模型如下： 
  
 主叫LTE用户UE_A已签约SRVCC/eSRVCC业务，被叫用户UE_B为LTE用户。 
-
  
 UE_A呼叫UE_B，UE_B处于振铃态。UE_A从LTE网络移动到3G网络，发生eSRVCC切换。 
-
  
-
-
-信令流程 :单路语音呼叫切换（呼出Alerting状态）的信令流程如[图1]所示。
+信令流程 : 
+单路语音呼叫切换（呼出Alerting状态）的信令流程如[图1]所示。
 图1  单路语音呼叫切换（呼出Alerting状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A测量到邻区的3G网络信号强度超过门限，上报系统测量报告，eNodeB_A经过判断决定切换，发送切换请求Handover
 Required消息到MME_A。 
-
-
 MME_A发起eSRVCC切换请求，发送PS to CS Request消息到UE_A当前所在小区的eMSC。 
-
-
 eMSC发起局间切换请求，发送MAP PREPARE HANDOVER REQ消息到MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加RNC侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 MGW分配IP资源，回复ADD REPLY消息。 
-
-
 MSC Server发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
-
-
 RNC发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，发起UP初始化。 
-
-
 MGW发送TRC_IU/NB_UP_ACK_FRMIP消息到RNC，返回UP初始化应答。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息到eMSC，携带切换号码Handover
 Number。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加到MSC Server一侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 IM-MGW发送NTFY REQ消息到eMSC，携带终端的IP地址和端口等隧道信息。 
-
-
 eMSC返回NTFY REPLY应答消息到IM-MGW。 
-
-
 eMSC根据切换号码确定出局链路，发送IAM消息到MSC Server，携带隧道信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加到eMSC一侧的IP终端，携带有关隧道信息。 
-
-
 MGW返回ADD REPLY应答消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，携带终端的IP地址和端口等隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送APM消息，携带隧道信息到eMSC。 
-
-
 eMSC发送MOD REQ到IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 IM-MGW到MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，通知用户面建立成功。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送ACM消息到eMSC。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加IMS侧的IP终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC，携带SDP Offer信息。 
-
-
 会话切换流程
-
-
 eMSC根据STN-SR向P-CSCF/ATCF_A发送INVITE消息，携带UE_A的媒体信息。其中关键字段说明如下： 
-
  
 被叫号码Request URI填写STN-SR号码，对于SRVCC为VoLTE AS_A的地址，对于eSRVCC为ATCF的地址。 
-
  
 Contact头域：携带+g.3gpp.srvcc-alerting标识，表示eMSC支持Alerting切换。 
-
  
 P-Asserted-Identity头域携带C-MSISDN号码，ATCF需要使用C-MSISDN号码关联IMS用户用户。 
-
  
-
-
 eMSCS向MME_A返回PS to CS Response消息，通知UE_A可以向GERAN发起网络切换。 
-
-
 P-CSCF/ATCF_A收到INVITE消息后，根据STN-SR号码，判断该消息是由eMSC发起切换。P-CSCF/ATCF_A从INVITE消息中获取C-MSISDN，结合本地保存的+g.3gpp.srvcc标识、eSRVCC相关信息（ATU-STI等），确定UE_A需要切换的Alerting状态会话。ATCF匹配到用户的Alerting状态会话，进行媒体协商修改，新建媒体端点，与eSRVCC侧MGW的媒体端点完成连接。ATCF将INVITE消息中Request
 URI的STN-SR替换成ATU-STI，并将其转发给SCC AS，其中携带本端新建端点的SDP信息。 
-
-
 I-CSCF收到ATCF_A发送的INVITE消息后，根据Request-URI通过LIR/LIA消息查询HSS或根据本地PSI数据配置查询VoLTE
 AS_A的地址，根据查询结果将INVITE消息路由到VoLTE AS_A。 
-
-
 VoLTE AS_A收到INVITE消息后，同INVITE会话携带的信息，关联用户处于Alerting状态的会话。同时VoLTE
 AS_A需要检查invite消息中SDP的编解码是否与原会话协商后SDP的编解码相同，如果相同，则VoLTE AS_A启动eSRVCC流程，修改该会话的接入域，表明用户接入域发生改变，并发送183响应给I-CSCF。 
-
-
 I-CSCF透传183消息给ATCF_A。 
-
-
 ATCF_A收到183消息后进行编解码转换，完成后发送183消息给eMSC。 
-
-
 eMSC收到183消息后，发送MOD REQ消息给IM-MGW修改IMS侧的承载端点。消息中携带的关键信元。 
-
-
 IM-MGW向eMSC发送MOD REPLY消息，返回修改终结点属性命令的响应。 
-
-
 IM-MGW向eMSC 发送NTFY REQ消息，上报承载建立事件。 
-
-
 eMSC向IM-MGW发送NTFY REPLY消息，返回上报承载建立事件的响应。 
-
-
 eMSC返回PRACK消息给VoLTE AS_A，表示对183消息的确认。 
-
-
 VoLTE AS_A返回200 (For PRACK)消息给eMSC。 
-
-
 CS网络位置更新
-
-
 VoLTE AS_A在200 OK消息之后，发送INFO消息到eMSC，通知eMSC当前呼叫状态是主叫振铃。 
-
-
 eMSC更新切换对话的状态，返回INFO消息的200 OK。 
-
-
 UE_A开始接入CS网络，RNC发送Relocation Detect消息到MSC Server。 
-
-
 MSC Server收到Relocation Detect消息，通过局间MAP信令发送MAP PROCESS ACCESS
 SIGNALLING REQ消息到eMSC。 
-
-
 UE_A接入CS网络完成，RNC发送Relocation Complete消息到MSC Server。 
-
-
 当MSC Server收到Relocation Complete消息，发送ANM消息到eMSC。 
-
-
 MSC Server通过局间MAP信令发送MAP SEND END SIGNAL IND消息到eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A。 
-
-
 MME_A返回SRVCC PS to CS Complete Ack消息到eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到HLR/HSS。 
-
-
 HLR/HSS发送MAP INSERT SUBSCRIBER DATA IND消息到eMSC，插入用户数据。 
-
-
 eMSC (VLR)返回MAP INSERT SUBSCRIBER DATA RSP。 
-
-
 HLR/HSS返回MAP UPDATE LOCATION CNF应答消息。 
-
-
 释放原会话资源
-
-
 切换成功后，VoLTE AS_A将发送503（对于INVITE）响应，指示释放原LTE下的会话。503消息经过I-CSCF、ATCF、到UE_A。 
-
-
-
-
 #### 单路语音呼叫切换（呼入Alerting状态） 
 #### 单路语音呼叫切换（呼入Alerting状态） 
-
-
-业务模型 :本流程的业务模型如下： 
-
+业务模型 : 
+本流程的业务模型如下： 
  
 被叫LTE用户UE_A已签约SRVCC/eSRVCC业务，主叫用户UE_B为LTE用户。 
-
  
 UE_B呼叫UE_A，UE_A处于振铃态。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
-
  
-
-
-信令流程 :单路语音呼叫切换（呼入Alerting状态）的信令流程如[图1]所示。
+信令流程 : 
+单路语音呼叫切换（呼入Alerting状态）的信令流程如[图1]所示。
 图1  单路语音呼叫切换（呼入Alerting状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A测量到邻区的3G网络信号强度超过门限，上报系统测量报告，eNodeB_A经过判断决定切换，发送切换请求Handover
 Required消息到MME_A。 
-
-
 MME_A发起eSRVCC切换请求，发送PS to CS Request消息到UE_A当前所在小区的eMSC。 
-
-
 eMSC发起局间切换请求，发送MAP PREPARE HANDOVER REQ消息到MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加RNC侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 MGW分配IP资源，回复ADD REPLY消息。 
-
-
 MSC Server发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
-
-
 RNC发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，发起UP初始化。 
-
-
 MGW发送TRC_IU/NB_UP_ACK_FRMIP消息到RNC，返回UP初始化应答。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息到eMSC，携带切换号码Handover
 Number。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加到MSC Server一侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 IM-MGW发送NTFY REQ消息到eMSC，携带终端的IP地址和端口等隧道信息。 
-
-
 eMSC返回NTFY REPLY应答消息到IM-MGW。 
-
-
 eMSC根据切换号码确定出局链路，发送IAM消息到MSC Server，携带隧道信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加到eMSC一侧的IP终端，携带有关隧道信息。 
-
-
 MGW返回ADD REPLY应答消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，携带终端的IP地址和端口等隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送APM消息，携带隧道信息到eMSC。 
-
-
 eMSC发送MOD REQ到IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 IM-MGW到MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，通知用户面建立成功。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送ACM消息到eMSC。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加IMS侧的IP终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC，携带SDP Offer信息。 
-
-
 会话切换流程
-
-
 eMSC根据STN-SR向P-CSCF/ATCF_A发送INVITE消息，携带UE_A的媒体信息。其中关键字段说明如下： 
-
  
 被叫号码Request URI填写STN-SR号码，对于SRVCC为VoLTE AS_A的地址，对于eSRVCC为ATCF的地址。 
-
  
 Contact头域：携带+g.3gpp.srvcc-alerting标识，表示eMSC支持Alerting切换。 
-
  
 P-Asserted-Identity头域携带C-MSISDN号码，ATCF需要使用C-MSISDN号码关联IMS用户用户。 
-
  
-
-
 P-CSCF/ATCF_A收到INVITE消息后，根据STN-SR号码，判断该消息是由eMSC发起切换。P-CSCF/ATCF_A从INVITE消息中获取C-MSISDN，结合本地保存的+g.3gpp.srvcc标识、eSRVCC相关信息（ATU-STI等），确定UE_A需要切换的Alerting状态会话。ATCF匹配到用户的Alerting状态会话，进行媒体协商修改，新建媒体端点，与eSRVCC侧MGW的媒体端点完成连接。ATCF将INVITE消息中Request
 URI的STN-SR替换成ATU-STI，并将其转发给VoLTE AS_A，其中携带本端新建端点的SDP信息。 
-
-
 I-CSCF收到ATCF_A发送的INVITE消息后，根据Request-URI通过LIR/LIA消息查询HSS或根据本地PSI数据配置查询VoLTE
 AS_A的地址，根据查询结果将INVITE消息路由到VoLTE AS_A。 
-
-
 VoLTE AS_A收到INVITE消息后，同invite会话携带的信息，关联用户处于Alerting状态的会话。同时VoLTE
 AS_A需要检查invite消息中SDP的编解码是否与原会话协商后SDP的编解码相同，如果相同，则VoLTE AS_A启动eSRVCC流程，修改该会话的接入域，表明用户接入域发生改变，并发送183响应给ICSCF。 
-
-
 I-CSCF透传183消息给ATCF_A。 
-
-
 ATCF_A收到183消息后进行编解码转换，完成后发送183消息给eMSC。 
-
-
 eMSC收到183消息后，发送MOD REQ消息给IM-MGW修改IMS侧的承载端点。消息中携带的关键信元 
-
-
 IM-MGW向EMSC发送MOD REPLY消息，返回修改终结点属性命令的响应。 
-
-
 IM-MGW向eMSC发送NTFY REQ消息，上报承载建立事件。 
-
-
 eMSC向IM-MGW发送NTFY REPLY消息，返回上报承载建立事件的响应。 
-
-
 eMSC返回PRACK消息给VoLTE AS_A，表示对183消息的确认。 
-
-
 VoLTE AS_A返回200(For PRACK)消息给eMSC。 
-
-
 CS网络位置更新
-
-
 VoLTE AS_A在200 OK消息之后，发送INFO消息到eMSC，通知eMSC当前呼叫状态是被叫振铃。 
-
-
 eMSC更新切换对话的状态，返回INFO消息的200 OK。 
-
-
 UE_A开始接入CS网络，RNC发送Relocation Detect消息到MSC Server。 
-
-
 MSC Server收到Relocation Detect消息，通过局间MAP信令发送MAP PROCESS ACCESS
 SIGNALLING REQ消息到eMSC。 
-
-
 UE_A接入CS网络完成，RNC发送Relocation Complete消息到MSC Server。 
-
-
 当MSC Server收到Relocation Complete消息，发送ANM消息到eMSC。 
-
-
 MSC Server通过局间MAP信令发送MAP SEND END SIGNAL IND消息到eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A。 
-
-
 MME_A返回SRVCC PS to CS Complete Ack消息到eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到HLR/HSS。 
-
-
 HLR/HSS发送MAP INSERT SUBSCRIBER DATA IND插入用户数据。 
-
-
 eMSC(VLR)返回MAP INSERT SUBSCRIBER DATA RSP消息。 
-
-
 HLR/HSS返回MAP UPDATE LOCATION CNF应答消息。 
-
-
 释放原会话资源
-
-
 VoLTE AS_A将发送CANCEL消息给ATCF。 
-
-
 ATCF再转发CANCEL消息给UE_A，释放原会话。 
-
-
 UE_A回200 OK消息给ATCF 
-
-
 ATCF再转发200 OK消息给VoLTE AS_A。 
-
-
 UE_A返回针对INVITE消息的487响应消息给ATCF。 
-
-
 ATCF再将该消息转发给VoLTE AS_A。 
-
-
-
-
 #### 两路语音呼叫切换（Active状态和Hold状态） 
 #### 两路语音呼叫切换（Active状态和Hold状态） 
-
-
-业务模型 :UE_A呼叫UE_B，通话后，UE_A保持UE_B，UE_A再呼叫UE_C，进入通话。UE_A有一路Active状态的会话和一路Hold状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
-
-
-信令流程 :两路语音呼叫切换（Active状态和Hold状态）的流程如[图1]所示。
+业务模型 : 
+UE_A呼叫UE_B，通话后，UE_A保持UE_B，UE_A再呼叫UE_C，进入通话。UE_A有一路Active状态的会话和一路Hold状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
+信令流程 : 
+两路语音呼叫切换（Active状态和Hold状态）的流程如[图1]所示。
 图1  两路语音呼叫切换（Active状态和Hold状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A测量到邻区的3G网络信号强度超过门限，上报系统测量报告，eNodeB_A经过判断决定切换，发送切换请求Handover
 Required消息到MME_A。 
-
-
 MME_A发起eSRVCC切换请求，发送PS to CS Request消息到UE_A当前所在小区的eMSC。 
-
-
 eMSC发起局间切换请求，发送MAP PREPARE HANDOVER REQ消息到MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加RNC侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 MGW分配IP资源，回复ADD REPLY消息。 
-
-
 MSC Server发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
-
-
 RNC发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，发起UP初始化。 
-
-
 MGW发送TRC_IU/NB_UP_ACK_FRMIP消息到RNC，返回UP初始化应答。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息到eMSC，携带切换号码Handover
 Number。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加到MSC Server一侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 IM-MGW发送NTFY REQ消息到eMSC，携带终端的IP地址和端口等隧道信息。 
-
-
 eMSC返回NTFY REPLY应答消息到IM-MGW。 
-
-
 eMSC根据切换号码确定出局链路，发送IAM消息到MSC Server，携带隧道信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加到eMSC一侧的IP终端，携带有关隧道信息。 
-
-
 MGW返回ADD REPLY应答消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，携带终端的IP地址和端口等隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送APM消息，携带隧道信息到eMSC。 
-
-
 eMSC发送MOD REQ到IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 IM-MGW到MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，通知用户面建立成功。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送ACM消息到eMSC。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加IMS侧的IP终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC，携带IP终端的IP地址和端口等信息。 
-
-
 ATCF新建媒体端点流程
-
-
 eMSC根据STN-SR路由，发送INVITE消息到ATCF_A，携带SDP Offer信息。 
-
-
 eMSC返回PS to CS Response消息到MME_A，通知手机可以接入到CS网络。 
-
-
 ATCF_A收到INVITE消息，返回200OK消息，携带SDP Answer。 
-
-
 eMSC返回消息接收成功响应ACK。 
-
-
 eMSC下发MOD REQ消息到IM-MGW，携带SDP Answer。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 CS网络位置更新
-
-
 UE_A开始接入CS网络，RNC发送Relocation Detect消息到MSC Server。 
-
-
 MSC Server收到Relocation Detect消息，通过局间MAP信令发送MAP PROCESS ACCESS
 SIGNALLING REQ消息到eMSC。 
-
-
 UE_A接入CS网络完成，RNC发送Relocation Complete消息到MSC Server。 
-
-
 当MSC Server收到Relocation Complete消息，发送ANM消息到eMSC。 
-
-
 同时，MSC Server通过局间MAP信令发送MAP SEND END SIGNAL IND消息到eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A。 
-
-
 MME_A返回SRVCC PS to CS Complete Ack消息到eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到HLR/HSS。 
-
-
 HLR/HSS发送MAP INSERT SUBSCRIBER DATA IND插入用户数据。 
-
-
 eMSC返回MAP INSERT SUBSCRIBER DATA RSP。 
-
-
 HLR/HSS返回 MAP UPDATE LOCATION CNF应答消息。 
-
-
 接入域修改
-
-
 ATCF_A根据ATU-STI，查询DNS，获得VoLTE AS_A的IP地址，向VoLTE AS_A发送INVITE消息，请求eSRVCC切换。 
-
-
 VoLTE AS_A接收到切换的INVITE消息，执行Active会话的切换，发送200 OK消息。 
-
-
 ATCF_A发送ACK消息给VoLTE AS_A。 
-
-
 Hold会话切换
-
-
 VoLTE AS_A指示eMSC发起第二路会话切换，发送对话内Refer消息，指示还有呼叫需要进行切换，消息中Refer-To头域携带VoLTE
 AS_A的AdditionalTransferredSessionURI。 
-
-
 ATCF_A接收到Refer消息后，保存Refer-To头域中VoLTE AS_A的AdditionalTransferredSessionURI，转发Refer消息给eMSC时，将Refer-To头域中VoLTE
 AS_A的AdditionalTransferredSessionURI修改为ATCF自身的URI。 
-
-
 eMSC接收到Refer消息后，发送202响应消息给ATCF_A。 
-
-
 ATCF_A发送202响应消息给VoLTE AS_A。 
-
-
 eMSC发送ADD REQ消息，建立到IMS侧的终端，终端媒体描述为Hold状态。ADD消息同时携带终端所用的编解码。 
-
-
 IM-MGW分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 eMSC进行hold会话的切换，发送INVITE消息，其中Request-URI为此前ATCF发送的Refer-To中的ATCF
 URI。 
-
-
 ATCF_A接收到INVITE后，将Request-URI修改为此前保存的VoLTE AS_A的AdditionalTransferredSessionURI，转发INVITE消息给VoLTE
 AS_A。 
-
-
 VoLTE AS_A完成切换，发送200 OK消息给ATCF_A。 
-
-
 ATCF_A发送200 OK消息给eMSC。 
-
-
 eMSC完成切换，发送ACK给ATCF_A。 
-
-
 ATCF_A发送ACK消息给VoLTE AS_A。 
-
-
 eMSC将200消息中的承载信息通过MOD REQ消息发送给IM-MGW。 
-
-
 IM-MGW获取承载信息，返回MOD REPLY。 
-
-
 释放Acitve状态和Hold状态的原会话资源
-
-
 切换成功，VoLTE AS_A向S-CSCF发送BYE消息，释放UE-A与UE-C原会话中从UE-A到VoLTE AS_A之间的会话。 
-
-
 S-CSCF向ATCF_A发送BYE消息，释放UE-A与UE-C原会话。 
-
-
 ATCF_A向S-CSCF发送200 OK消息。 
-
-
 S-CSCF向VoLTE AS_A发送200 OK消息。 
-
-
 ATCF_A向UE_A发送BYE消息。 
-
-
 UE_A向ATCF_A发送200 OK消息。 
-
-
 VoLTE AS_A向S-CSCF发送BYE消息，释放UE-A与UE-B原会话中从UE-A到VoLTE AS_A之间的会话。 
-
-
 S-CSCF向ATCF_A发送BYE消息，释放UE-A与UE-B原会话。 
-
-
 ATCF_A向S-CSCF发送200 OK消息。 
-
-
 S-CSCF向VoLTE AS_A发送200 OK消息。 
-
-
 ATCF_A向UE-A发送BYE消息，释放原会话资源。 
-
-
 UE-A向ATCF_A发送200 OK消息。 
-
-
-
-
 #### 两路语音呼叫切换（Active状态和Alerting状态） 
 #### 两路语音呼叫切换（Active状态和Alerting状态） 
-
-
-业务模型 :UE_A呼叫UE_B，通话后，UE_C呼叫UE_A，UE_A振铃。UE_A有一路Active状态的会话和一路呼入Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
-
-
-信令流程 :两路语音呼叫切换（Active状态和Alerting状态）的流程如[图1]所示。
+业务模型 : 
+UE_A呼叫UE_B，通话后，UE_C呼叫UE_A，UE_A振铃。UE_A有一路Active状态的会话和一路呼入Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
+信令流程 : 
+两路语音呼叫切换（Active状态和Alerting状态）的流程如[图1]所示。
 图1  两路语音呼叫切换（Active状态和Alerting状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A测量到邻区的3G网络信号强度超过门限，上报系统测量报告，eNodeB_A经过判断决定切换，发送切换请求Handover
 Required消息到MME_A。 
-
-
 MME_A发起eSRVCC切换请求，发送PS to CS Request消息到UE_A当前所在小区的eMSC。 
-
-
 eMSC发起局间切换请求，发送MAP PREPARE HANDOVER REQ消息到MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加RNC侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 MGW分配IP资源，回复ADD REPLY消息。 
-
-
 MSC Server发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
-
-
 RNC发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，发起UP初始化。 
-
-
 MGW发送TRC_IU/NB_UP_ACK_FRMIP消息到RNC，返回UP初始化应答。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息到eMSC，携带切换号码Handover
 Number。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加到MSC Server一侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 IM-MGW发送NTFY REQ消息到eMSC，携带终端的IP地址和端口等隧道信息。 
-
-
 eMSC返回NTFY REPLY应答消息到IM-MGW。 
-
-
 eMSC根据切换号码确定出局链路，发送IAM消息到MSC Server，携带隧道信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加到eMSC一侧的IP终端，携带有关隧道信息。 
-
-
 MGW返回ADD REPLY应答消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，携带终端的IP地址和端口等隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送APM消息，携带隧道信息到eMSC。 
-
-
 eMSC发送MOD REQ到IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 IM-MGW到MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，通知用户面建立成功。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送ACM消息到eMSC。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加IMS侧的IP终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC，携带IP终端的IP地址和端口等信息。 
-
-
 ATCF新建媒体端点流程
-
-
 eMSC根据STN-SR路由，发送INVITE消息到ATCF_A，携带SDP Offer信息。 
-
-
 eMSC返回PS to CS Response消息到MME_A,通知手机可以接入到CS网络。 
-
-
 ATCF_A收到INVITE消息，返回200OK消息，携带SDP Answer。 
-
-
 eMSC返回消息接收成功响应ACK。 
-
-
 eMSC下发MOD REQ消息到IM-MGW，携带SDP Answer。 
-
-
 IM-MGW返回MOD REPLY消息。 
-
-
 CS网络位置更新
-
-
 UE_A开始接入CS网络，RNC发送Relocation Detect消息到MSC Server。 
-
-
 MSC Server收到Relocation Detect消息，通过局间MAP信令发送MAP PROCESS ACCESS
 SIGNALLING REQ消息到eMSC。 
-
-
 UE_A接入CS网络完成，RNC发送Relocation Complete消息到MSC Server。 
-
-
 当MSC Server收到Relocation Complete消息，发送ANM消息到eMSC。 
-
-
 MSC Server通过局间MAP信令发送MAP SEND END SIGNAL IND消息到eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A。 
-
-
 MME_A返回SRVCC PS to CS Complete Ack消息到eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到HLR/HSS。 
-
-
 HLR/HSS发送MAP INSERT SUBSCRIBER DATA IND插入用户数据。 
-
-
 eMSC返回MAP INSERT SUBSCRIBER DATA RSP。 
-
-
 HLR/HSS返回 MAP UPDATE LOCATION CNF应答消息。 
-
-
 接入域修改
-
-
 ATCF_A根据ATU-STI，查询DNS，获得VoLTE AS_A的IP地址，向VoLTE AS_A发送INVITE消息，请求eSRVCC切换。 
-
-
 VoLTE AS_A接收到切换的INVITE消息，执行Active会话的切换，发送200 OK消息。 
-
-
 ATCF_A发送ACK消息给VoLTE AS_A。 
-
-
 Alerting会话切换
-
-
 VoLTE AS_A指示eMSC发起第二路会话切换，发送对话内Refer消息，指示还有呼叫需要进行切换，消息中Refer-To头域携带VoLTE
 AS_A的AdditionalTransferredSessionURI。 
-
-
 ATCF_A接收到Refer消息后，保存Refer-To头域中VoLTE AS_A的AdditionalTransferredSessionURI，转发Refer消息给eMSC时，将Refer-To头域中VoLTE
 AS_A的AdditionalTransferredSessionURI修改为ATCF自身的URI。 
-
-
 eMSC接收到Refer消息后，发送202响应消息给ATCF_A。 
-
-
 ATCF_A发送202响应消息给VoLTE AS_A。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，建立振铃会话的IMS侧终端，指示所要使用的编解码。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC。 
-
-
 eMSC进行Alerting会话的切换，发送INVITE消息，其中Request-URI为此前ATCF发送的Refer-To中的ATCF
 URI。 
-
-
 ATCF_A接收到INVITE后，将Request-URI修改为此前保存的VoLTE AS_A的AdditionalTransferredSessionURI，转发INVITE消息给VoLTE
 AS_A。 
-
-
 VoLTE AS_A发送183消息给ATCF_A。 
-
-
 ATCF_A发送183消息给eMSC。 
-
-
 eMSC将200 消息中的SDP信息在MOD REQ消息中发送给IM-MGW。 
-
-
 IM-MGW返回MOD REPLY消息到eMSC。 
-
-
 eMSC进入Call Received状态，发送PRACK消息给ATCF_A。 
-
-
 ATCF_A发送PRACK消息给VoLTE AS_A。 
-
-
 VoLTE AS_A发送200 OK消息给ATCF_A。 
-
-
 ATCF_A发送200 OK消息给eMSC。 
-
-
 释放原会话
-
-
 切换成功，VoLTE AS_A向S-CSCF发送BYE消息，释放UE-A与UE-B原会话中从UE-A到VoLTE AS_A之间的会话。 
-
-
 S-CSCF向ATCF_A发送BYE消息，释放UE-A与UE-B原会话。 
-
-
 ATCF_A向S-CSCF发送200 OK消息。 
-
-
 S-CSCF向VoLTE AS_A发送200 OK消息。 
-
-
 ATCF_A向UE_A发送BYE消息。 
-
-
 UE_A向ATCF_A发送200 OK消息。 
 注：UE_A在UTRAN/GERAN应答时，eMSC发送INFO消息给VoLTE
 AS_A，指示UE_A应答。VoLTE AS_A收到INFO消息后，向UE-C发送200 OK，指示UE_A应答。VoLTE AS_A发送CANCEL消息给ATCF_A，释放UE_A原有的振铃态会话。 
-
-
-
-
 #### 两路语音呼叫切换（Hold状态和呼入Alerting状态） 
 #### 两路语音呼叫切换（Hold状态和呼入Alerting状态） 
-
-
-业务模型 :UE_A呼叫UE_B，通话后，UE_A 保持UE_B，UE_C呼叫UE_A，UE_A振铃。UE_A有一路hold状态的会话和一路呼入Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
-
-
-信令流程 :两路语音呼叫切换（Hold状态和呼入Alerting状态）的信令流程如[图1]所示。
+业务模型 : 
+UE_A呼叫UE_B，通话后，UE_A 保持UE_B，UE_C呼叫UE_A，UE_A振铃。UE_A有一路hold状态的会话和一路呼入Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
+信令流程 : 
+两路语音呼叫切换（Hold状态和呼入Alerting状态）的信令流程如[图1]所示。
 图1  两路语音呼叫切换（Hold状态和呼入Alerting状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A测量到邻区的3G网络信号强度超过门限，上报系统测量报告，eNodeB_A经过判断决定切换，发送切换请求Handover
 Required消息到MME_A。 
-
-
 MME_A发起eSRVCC切换请求，发送PS to CS Request消息到UE_A当前所在小区的eMSC。 
-
-
 eMSC发起局间切换请求，发送MAP PREPARE HANDOVER REQ消息到MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加RNC侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 MGW分配IP资源，回复ADD REPLY消息。 
-
-
 MSC Server发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
-
-
 RNC发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，发起UP初始化。 
-
-
 MGW发送TRC_IU/NB_UP_ACK_FRMIP消息到RNC，返回UP初始化应答。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息到eMSC，携带切换号码Handover
 Number。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加到MSC Server一侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 IM-MGW发送NTFY REQ消息到eMSC，携带终端的IP地址和端口等隧道信息。 
-
-
 eMSC返回NTFY REPLY应答消息到IM-MGW。 
-
-
 eMSC根据切换号码确定出局链路，发送IAM消息到MSC Server，携带隧道信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加到eMSC一侧的IP终端，携带有关隧道信息。 
-
-
 MGW返回ADD REPLY应答消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，携带终端的IP地址和端口等隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送APM消息，携带隧道信息到eMSC。 
-
-
 eMSC发送MOD REQ到IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 IM-MGW到MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，通知用户面建立成功。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送ACM消息到eMSC。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加IMS侧的IP终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC，携带SDP Offer信息。 
-
-
 Hold会话切换
-
-
 eMSC根据STN-SR向ATCF_A发送INVITE消息，携带SDP信息，Request URI为STN-SR号码。 
-
-
 eMSC返回PS to CS Response消息到MME_A，通知手机可以接入到CS网络。 
-
-
 ATCF_A收到INVITE消息，根据其中的STN-SR号码，判断该消息是由切换产生，在ATGW新建媒体端点，与eMSC侧MGW的媒体端点完成连接，向eMSC发送200
 OK消息，携带本端新建端点的SDP信息。 
-
-
 eMSC发送接收成功响应ACK消息给ATCF_A。 
-
-
 eMSC根据200 OK消息中的承载信息通过MOD REQ消息发送给IM-MGW。 
-
-
 IM-MGW向eMSC发送MOD REPLY响应消息。 
-
-
 ATCF_A根据待切换会话的ATU-STI，向VoLTE AS_A发送INVITE消息，请求切换。 
-
-
 VoLTE AS_A收到INVITE消息后，发送200 OK消息给ATCF_A。 
-
-
 ATCF_A向VoLTE AS_A返回ACK消息。 
-
-
 CS网络位置更新
-
-
 UE_A开始接入CS网络，RNC发送Relocation Detect消息到MSC Server。 
-
-
 MSC Server收到Relocation Detect消息，通过局间MAP信令发送MAP PROCESS ACCESS
 SIGNALLING REQ消息到eMSC。 
-
-
 UE_A接入CS网络完成，RNC发送Relocation Complete消息到MSC Server。 
-
-
 当MSC Server收到Relocation Complete消息，发送ANM消息到eMSC。 
-
-
 同时，MSC Server通过局间MAP信令发送MAP SEND END SIGNAL IND消息到eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A。 
-
-
 MME_A返回SRVCC PS to CS Complete Ack消息到eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到HLR/HSS。 
-
-
 HLR/HSS发送MAP INSERT SUBSCRIBER DATA IND插入用户数据。 
-
-
 eMSC返回MAP INSERT SUBSCRIBER DATA RSP。 
-
-
 HLR/HSS返回 MAP UPDATE LOCATION CNF应答消息。 
-
-
 Alerting会话切换
-
-
 VoLTE AS_A指示eMSC发起第二路会话切换，发送对话内Refer消息，指示还有呼叫需要进行切换，消息中Refer-To头域携带VoLTE
 AS_A的AdditionalTransferredSessionURI。 
-
-
 ATCF_A接收到Refer消息后，保存Refer-to头域中VoLTE AS_A的AdditionalTransferredSessionURI，转发refer消息给eMSC时，将refer-to修改为ATCF自身的URI。 
-
-
 eMSC接收到Refer消息后，发送202响应消息给ATCF_A。 
-
-
 ATCF_A发送202响应消息给VoLTE AS_A。 
-
-
 eMSC进行Alerting会话的切换，发送ADD REQ消息 到IM-MGW，建立第二路会话的终端。 
-
-
 IM-MGW返回ADD REPLY。 
-
-
 eMSC发送INVITE消息，其中Request-URI为此前ATCF发送的 refer-to中的ATCF URI。 
-
-
 ATCF_A接收到INVITE后，将Request-URI修改为此前保存的VoLTE AS_A的AdditionalTransferredSessionURI，转发INVITE消息给VoLTE
 AS_A。 
-
-
 VoLTE AS_A发送183消息给ATCF_A。 
-
-
 ATCF_A发送183消息给eMSC。 
-
-
 eMSC发送MOD REQ消息到IM-MGW，将SDP Answer传递到IM-MGW。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 eMSC进入Call Received状态，发送PRACK消息给ATCF_A。 
-
-
 ATCF_A发送PRACK消息给VoLTE AS_A。 
-
-
 VoLTE AS_A发送200 OK消息给ATCF_A。 
-
-
 ATCF_A发送200 OK消息给eMSC。 
-
-
 释放原会话
-
-
 VoLTE AS _A向S-CSCF发送BYE消息，释放UE-A与UE-B原会话中从UE-A到VoLTE AS_A之间的会话。 
-
-
 S-CSCF向ATCF_A发送BYE消息，释放UE-A与UE-B原会话。 
-
-
 ATCF_A向S-CSCF发送200 OK消息。 
-
-
 S-CSCF向VoLTE AS _A发送200 OK消息。 
-
-
 ATCF_A向UE_A发送BYE消息。 
-
-
 UE_A向ATCF_A发送200 OK消息。 
-
-
  说明： 
 对于呼入振铃原有会话的释放，UE_A在UTRAN/GERAN应答时，eMSC发送INFO消息给VoLTE
 AS_A，指示UE_A应答。VoLTE AS_A收到INFO消息后，向UE-C发送200 OK，指示UE_A应答。此后VoLTE AS_A发送CANCEL消息给ATCF_A，释放UE_A原有的呼入振铃会话。 
-
-
 #### 两路语音呼叫切换（Hold状态和呼出Alerting状态） 
 #### 两路语音呼叫切换（Hold状态和呼出Alerting状态） 
-
-
-业务模型 :UE_A呼叫UE_B，通话后，UE_A 保持UE_B，UE_A再呼叫UE_C，UE_C振铃。UE_A有一路Active状态的会话和一路呼出Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
-
-
-信令流程 :两路语音呼叫切换（Hold状态和呼出Alerting状态）的信令流程如[图1]所示。
+业务模型 : 
+UE_A呼叫UE_B，通话后，UE_A 保持UE_B，UE_A再呼叫UE_C，UE_C振铃。UE_A有一路Active状态的会话和一路呼出Alerting状态的会话。UE_A从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。 
+信令流程 : 
+两路语音呼叫切换（Hold状态和呼出Alerting状态）的信令流程如[图1]所示。
 图1  两路语音呼叫切换（Hold状态和呼出Alerting状态）
-
-
-
-
 CS网络媒体资源建立流程
-
-
 UE_A测量到邻区的3G网络信号强度超过门限，上报系统测量报告，eNodeB_A经过判断决定切换，发送切换请求Handover
 Required消息到MME_A。 
-
-
 MME_A发起eSRVCC切换请求，发送PS to CS Request消息到UE_A当前所在小区的eMSC。 
-
-
 eMSC发起局间切换请求，发送MAP PREPARE HANDOVER REQ消息到MSC Server。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加RNC侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 MGW分配IP资源，回复ADD REPLY消息。 
-
-
 MSC Server发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
-
-
 RNC发送TRC_IU/NB_UP_INIT_TOIP消息到MGW，发起UP初始化。 
-
-
 MGW发送TRC_IU/NB_UP_ACK_FRMIP消息到RNC，返回UP初始化应答。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 MSC Server发送MAP PREPARE HANDOVER CNF消息到eMSC，携带切换号码Handover
 Number。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加到MSC Server一侧的IP终端，并指示本次呼叫使用的编解码。 
-
-
 IM-MGW动态分配IP资源，回复ADD REPLY消息到eMSC。 
-
-
 IM-MGW发送NTFY REQ消息到eMSC，携带终端的IP地址和端口等隧道信息。 
-
-
 eMSC返回NTFY REPLY应答消息到IM-MGW。 
-
-
 eMSC根据切换号码确定出局链路，发送IAM消息到MSC Server，携带隧道信息。 
-
-
 MSC Server发送ADD REQ消息到MGW，请求添加到eMSC一侧的IP终端，携带有关隧道信息。 
-
-
 MGW返回ADD REPLY应答消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，携带终端的IP地址和端口等隧道信息。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送APM消息，携带隧道信息到eMSC。 
-
-
 eMSC发送MOD REQ到IM-MGW，携带隧道信息。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 IM-MGW到MGW发送TRC_IU/NB_UP_INIT_TOIP消息，进行UP初始化。 
-
-
 MGW返回TRC_IU/NB_UP_ACK_FRMIP消息。 
-
-
 MGW发送NTFY REQ消息到MSC Server，通知用户面建立成功。 
-
-
 MSC Server返回NTFY REPLY应答消息到MGW。 
-
-
 MSC Server发送ACM消息到eMSC。 
-
-
 eMSC发送ADD REQ消息到IM-MGW，请求添加IMS侧的IP终端。 
-
-
 IM-MGW分配IP资源，返回ADD REPLY消息到eMSC，携带SDP Offer信息。 
-
-
 Hold会话切换
-
-
 eMSC根据STN-SR向ATCF_A发送INVITE消息，携带SDP信息，Request URI为STN-SR号码。 
-
-
 eMSC返回PS to CS Response消息到MME_A，通知手机可以接入到CS网络。 
-
-
 ATCF_A收到INVITE消息，根据其中的STN-SR号码，判断该消息是由切换产生，在ATGW新建媒体端点，与eMSC侧MGW的媒体端点完成连接，向eMSC发送200
 OK消息，携带本端新建端点的SDP信息。 
-
-
 eMSC发送接收成功响应ACK消息给ATCF_A。 
-
-
 eMSC根据200 OK消息中的承载信息通过MOD REQ消息发送给IM-MGW。 
-
-
 IM-MGW向eMSC发送MOD REPLY响应消息。 
-
-
 ATCF_A根据待切换会话的ATU-STI，向VoLTE AS_A发送INVITE消息，请求切换。 
-
-
 VoLTE AS_A收到INVITE消息后，发送200 OK消息给ATCF_A。 
-
-
 ATCF_A向VoLTE AS_A返回ACK消息。 
-
-
 CS网络位置更新
-
-
 UE_A开始接入CS网络，RNC发送Relocation Detect消息到MSC Server。 
-
-
 MSC Server收到Relocation Detect消息，通过局间MAP信令发送MAP PROCESS ACCESS
 SIGNALLING REQ消息到eMSC。 
-
-
 UE_A接入CS网络完成，RNC发送Relocation Complete消息到MSC Server。 
-
-
 当MSC Server收到Relocation Complete消息，发送ANM消息到eMSC。 
-
-
 同时，MSC Server通过局间MAP信令发送MAP SEND END SIGNAL IND消息到eMSC。 
-
-
 eMSC发送SRVCC PS to CS Complete Notification消息给MME_A。 
-
-
 MME_A返回SRVCC PS to CS Complete Ack消息到eMSC。 
-
-
 eMSC发送MAP UPDATE LOCATION REQ消息到HLR/HSS。 
-
-
 HLR/HSS发送MAP INSERT SUBSCRIBER DATA IND插入用户数据。 
-
-
 eMSC返回MAP INSERT SUBSCRIBER DATA RSP。 
-
-
 HLR/HSS返回 MAP UPDATE LOCATION CNF应答消息。 
-
-
 Alerting会话切换
-
-
 VoLTE AS_A指示eMSC发起第二路会话切换，发送对话内Refer消息，指示还有呼叫需要进行切换，消息中Refer-To头域携带VoLTE
 AS_A的AdditionalTransferredSessionURI。 
-
-
 ATCF_A接收到Refer消息后，保存Refer-to头域中VoLTE AS_A的AdditionalTransferredSessionURI，转发refer消息给eMSC时，将refer-to修改为ATCF自身的URI。 
-
-
 eMSC接收到Refer消息后，发送202响应消息给ATCF_A。 
-
-
 ATCF_A发送202响应消息给VoLTE AS_A。 
-
-
 eMSC进行Alerting会话的切换，发送ADD REQ消息到IM-MGW，建立第二路会话的终端。 
-
-
 IM-MGW返回ADD REPLY。 
-
-
 eMSC发送INVITE消息，其中Request-URI为此前ATCF发送的refer-to中的ATCF URI。 
-
-
 ATCF_A接收到INVITE后，将Request-URI修改为此前保存的VoLTE AS_A的AdditionalTransferredSessionURI，转发INVITE消息给VoLTE
 AS_A。 
-
-
 VoLTE AS_A发送183消息给ATCF_A。 
-
-
 ATCF_A发送183消息给eMSC。 
-
-
 eMSC发送MOD REQ消息到IM-MGW，将SDP Answer传递到IM-MGW。 
-
-
 IM-MGW返回MOD REPLY。 
-
-
 eMSC进入Call Received状态，发送PRACK消息给ATCF_A。 
-
-
 ATCF_A发送PRACK消息给VoLTE AS_A。 
-
-
 VoLTE AS_A发送200 OK消息给ATCF_A。 
-
-
 ATCF_A发送200 OK消息给eMSC。 
-
-
 释放原会话
-
-
 VoLTE AS_A向S-CSCF发送BYE消息，释放UE-A与UE-B原会话中从UE-A到VoLTE AS_A之间的会话。 
-
-
 S-CSCF向ATCF_A发送BYE消息，释放UE-A与UE-B原会话。 
-
-
 ATCF_A向S-CSCF发送200 OK消息。 
-
-
 S-CSCF向VoLTE AS_A发送200 OK消息。 
-
-
 ATCF_A向UE_A发送BYE消息。 
-
-
 UE_A向ATCF_A发送200 OK消息。 
-
-
  说明： 
 对于呼出振铃原有会话的释放，UE_C应答时，VoLTE AS_A收到200 OK消息后，向ATCF_A发送404消息，释放UE_A原有的呼出振铃会话。 
-
-
 #### 视频呼叫切换 
-业务模型 :本流程的业务模型如下： 
+业务模型 : 
+本流程的业务模型如下： 
 签约SRVCC/eSRVCC业务的主叫LTE用户通过LTE网络发起视频呼叫，被叫域选网络为LTE网络，当主叫用户和被叫用户正在进行视频通话中（会话处于Active状态），主叫用户从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换，视频呼叫回落为语音呼叫继续进行通话。SBC配置支持ATCF/ATGW在SBC上对某个信令分组signal-group的运行模式run-mode配置为ATCF，则该信令分组执行ATCF网元的功能。ATCF如果需要使用ATGW来锚定媒体，则在该ATCF对应的信令分组的ATCF业务模板“ATCF-Profile”中，配置ATCF锚定ATGW开关“atcf-anchor-atgw-esrvcc”为使能“enable”。VoLTE AS支持SRVCC/eSRVCC功能。 
 数据库部署形态为融合HLR/HSS，即HLR，SAE-HSS和IMS-HSS合一部署。 
 采用四合一设备ZXUN B200（A04）支持A-SBC/P-CSCF/ATCF/ATGW功能。 
-信令流程 :签约SRVCC/eSRVCC的主叫LTE用户发起视频呼叫，呼叫被叫VoLTE用户，被叫选择视频接通。视频通话一段时间后，主叫用户移出4G覆盖区域进入2G/3G覆盖区，发生eSRVCC切换，同时呼叫回落为语音通话。
+信令流程 : 
+签约SRVCC/eSRVCC的主叫LTE用户发起视频呼叫，呼叫被叫VoLTE用户，被叫选择视频接通。视频通话一段时间后，主叫用户移出4G覆盖区域进入2G/3G覆盖区，发生eSRVCC切换，同时呼叫回落为语音通话。
 具体流程如[图1]所示。
 图1  视频呼叫切换（语音回落）
-
 签约SRVCC/eSRVCC的主叫LTE用户发起视频呼叫，呼叫被叫VoLTE用户，被叫选择视频接通，主被叫UE_A和UE_B通话中。
 CS网络媒体资源建立流程
 UE_A通话过程中移动至4 G信号强度低于门限值地区，检测领区3G网络信息强度满足门限要求，上报系统测量报告至eNodeB_A；基于UE_A的测量报告，eNodeB_A决定触发到UTRAN的SRVCC切换，eNodeB_A发送Handover
@@ -22792,250 +17794,105 @@ UE_A向VoLTE AS_A返回200响应消息。
 ### 回切流程 
 #### 通话状态下回切（E-UTRAN网络信号增强） 
 #### 通话状态下回切（E-UTRAN网络信号增强） 
-
-
-业务模型 :本场景描述在主叫LTE用户A在接入E-UTRAN通话过程中，E-UTRAN网络信号变化后,UE上报系统量测报告，通过eNodeB发起发起eSRVCC切换请求。在eMSC向IMS网络发起切换请求前，E-UTRAN信号增强，UE重新发送系统量测报告，通过eNodeB请求取消切换并重新接入E-UTRAN。 
-
-
+业务模型 : 
+本场景描述在主叫LTE用户A在接入E-UTRAN通话过程中，E-UTRAN网络信号变化后,UE上报系统量测报告，通过eNodeB发起发起eSRVCC切换请求。在eMSC向IMS网络发起切换请求前，E-UTRAN信号增强，UE重新发送系统量测报告，通过eNodeB请求取消切换并重新接入E-UTRAN。 
 ##### 信令描述 
 通话状态下由于E-UTRAN信号增强回切至4G，具体的信令流程如[图1]所示。
 图1  通话状态下回切（E-UTRAN网络信号增强）
-
-
-
-
-
-
 UE测量当前位置的E-UTRAN和UTRAN/GSM信号强度，上报系统测量报告。 
-
-
 eNodeB经过判断决定切换，发送切换请求Handover Required消息到MME。 
-
-
 MME发起eSRVCC切换请求，根据Handover Required消息中的TargetRNC-ID查DNS找到eMSC地址，发送PS
 to CS Request消息到UE当前所在小区的eMSC。 
-
-
 eMSC发送Relocation Request消息给目标侧RNC，目标侧准备Iu接口资源和空口资源。 
  说明： 
 此处eMSC与切换目标MSC/MGW之间的交互流程略去。 
-
-
 RNC资源准备完成，发送Relocation Request Ack消息到MSC Server。 
-
-
 eNodeB收到UE新的系统测量报告，决定取消切换，发送Handover Cancel消息到MME。 
-
-
 MME发送PS to CS Cancel NTFY消息到eMSC。 
-
-
 eMSC发送Iu Release Command消息到RNC，释放空口资源。 
-
-
 eMSC返回PS to CS Cancel ACK消息到MME，提示接受切换取消请求。 
-
-
 RNC发送Iu Release Complete到eMSC，通知空口资源释放完成。 
-
-
 MME发送Notification消息到UE，通知其取消切换。 
-
-
 MME发送Handover Cancel ACK消息到eNodeB，通知其切换已取消。 
-
-
-
-
 #### 通话状态下回切（UTRAN/GERAN网络信号减弱） 
 #### 通话状态下回切（UTRAN/GERAN网络信号减弱） 
-
-
-业务模型 :在主叫LTE用户A在接入E-UTRAN通话过程中，UE由于4 G网络信号不足导致eSRVCC切换请求，在收到切换指示后，UTRAN/GERAN减弱导致接入失败，从而UE向eNodeB请求取消切换并重新接入E-UTRAN。
-
-
-信令流程 :通话状态下回切至4G具体的信令流程如[图1]所示。
+业务模型 : 
+在主叫LTE用户A在接入E-UTRAN通话过程中，UE由于4 G网络信号不足导致eSRVCC切换请求，在收到切换指示后，UTRAN/GERAN减弱导致接入失败，从而UE向eNodeB请求取消切换并重新接入E-UTRAN。
+信令流程 : 
+通话状态下回切至4G具体的信令流程如[图1]所示。
 图1  通话状态下回切（UTRAN/GERAN网络信号减弱）
-
-
 流程说明如下： 
-
-
 UE在通话过程中，根据当前位置所在E-UTRAN和UTRAN/GERAN网络的信号强度，向eNodeB上传系统测量报告。
-
-
 eNodeB基于UE的测量报告，决定触发到UTRAN的SRVCC切换，发送Handover Required（Target
 ID, generic Source to Target Transparent Container, SRVCC HO indication）消息给MME。
-
-
 MME根据语音承载的QCI以及SRVCC HO Indication，MME分离语音承载和其他PS承载，对语音承载发起PS-CS
 handover流程，根据Handover Required消息中的TargetRNC-ID查DNS找到eMSC地址，发送SRVCC PS to
 CS Request (IMSI, Target ID, STN-SR, C MSISDN, Source to Target
 Transparent Container, MM Context) 消息。
-
-
 eSMC接收PS to CS Request消息后，向RNC发送Relocation Request消息指示其分配切换所需要的空口资源。
-
-
 TargetRNC向eSMC返回Relocation Request ACK消息，指示空口资源分配完成。 
-
-
 eSMC向P-CSCF/ATCF发送INVITE消息，携带SDP信息。
-
-
 eSMC向MME返回PS to CS Response消息，指示已接受切换请求。
-
-
 MME向UE发送Handover Command指示UE进行接入网切换。 
-
-
 UE接入UTRAN/GERAN网络失败，发送RRC Connection Reestablishment Request消息至eNodeB，请求重新接入E-UTRAN网络。
-
-
 eNodeB收到RRC Connection Reestablishment Request消息后，向MME发送Handover Cancel消息请求取消切换。
-
-
 MME向eMSC发送PS to CS Cancel Notification （IMSI, SRVCC Cause）消息指示切换取消。
-
-
 eMSC向RNC发送Iu Release Command消息，指示其释放切换所需的空口资源。 
-
-
 eMSC向MME发送PS to CS Cancel Acknowledge 消息接受切换取消请求。 
-
-
 RNC向eSMC发送Iu Release Complete消息通知其空口资源释放完成。
-
-
 MME向UE发送Notification（Notification indicator :SRVCC handover cancelled,
 IMS session re-establishment required）消息通知其切换取消。
-
-
 MME向eNodeB发送Handover Cancel Acknowledge消息通知其切换已取消。
-
-
 UE收到MME的Notification消息后，重新向P-CSCF/ATCF发送ReINVITE消息。 在此期间VoLTE
 AS在定时器（协议默认值为8秒，VoLTE AS可配置，一般配置为10秒）到前，不释放主叫侧PS承载会话。 
-
-
 P-CSCF/ATCF检查Reinvite消息，保持原呼叫，使用原会话的SDP信息通过INVITE消息发送给VoLTE AS。
-
-
 VoLTE AS通过S/P-CSCF向UE发送200 OK消息。
-
-
 VoLTE AS通过P-CSCF/ATCF向eSMC发送BYE消息，释放eMSC之前建立的会话资源。 
-
-
 eMSC向VoLTE AS返回BYE消息的200 OK响应，通知会话资源释放已完成。 
-
-
  说明： 
-
  
 目前切换会话资源的释放由VoLTE AS发起。 
-
  
 上述流程未画出eSMC至目标MSC/MGW的切换资源准备及释放过程。 
-
  
-
-
 #### Alerting状态下回切（UTRAN GERAN网络信号减弱） 
 #### Alerting状态下回切（UTRAN GERAN网络信号减弱） 
-
-
-业务模型 :UE在E-UTRAN网络中处于Alerting状态。UE从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。UE收到切换指示后，由于UTRAN/GERAN网络信号减弱，接入UTRAN/GERAN失败，UE取消切换并重新接入E-UTRAN网络。 
-
-
-信令流程 :Alerting状态下回切（UTRAN/GERAN网络信号减弱）的信令流程如[图1]所示。
+业务模型 : 
+UE在E-UTRAN网络中处于Alerting状态。UE从E-UTRAN网络移动到UTRAN/GERAN网络，发生eSRVCC切换。UE收到切换指示后，由于UTRAN/GERAN网络信号减弱，接入UTRAN/GERAN失败，UE取消切换并重新接入E-UTRAN网络。 
+信令流程 : 
+Alerting状态下回切（UTRAN/GERAN网络信号减弱）的信令流程如[图1]所示。
 图1  Alerting状态下回切（UTRAN/GERAN网络信号减弱）的信令流程
-
-
-
-
-
-
 UE根据当前位置所在E-UTRAN和UTRAN/GERAN网络的信号强度，向eNodeB上传系统测量报告。 
-
-
 eNodeB基于UE的测量报告，决定触发到UTRAN的SRVCC切换，发送Handover Required消息给MME。 
-
-
 MME根据语音承载的QCI以及SRVCC HO Indication，MME分离语音承载和其他PS承载，对语音承载发起PS-CS
 handover流程，根据Handover Required消息中的TargetRNC-ID查DNS找到eMSC地址，发送SRVCC
 PS to CS Request消息。 
-
-
 eSMC接收PS to CS Request消息后，向RNC发送Relocation Request消息，指示其分配切换所需要的空口资源。 
-
-
 Target RNC向eSMC返回Relocation Request ACK消息，指示空口资源分配完成。 
-
-
 eSMC向ATCF发送INVITE消息，携带SDP信息。 
-
-
 eSMC向MME返回PS to CS Response消息，指示已接受切换请求。 
-
-
 MME向UE发送Handover Command指示UE进行接入网切换。 
-
-
 UE接入UTRAN/GERAN网络失败，发送RRC Connection Reestablishment Request消息至eNodeB，请求重新接入E-UTRAN网络。 
-
-
 eNodeB收到RRC Connection Reestablishment Request消息后，向MME发送Handover
 Cancel消息请求取消切换。 
-
-
 MME向eMSC发送PS to CS Cancel Notification消息指示切换取消。 
-
-
 eMSC向RNC发送Iu Release Command消息，指示其释放切换所需的空口资源。 
-
-
 eMSC向MME发送PS to CS Cancel Acknowledge 消息，接受切换取消请求。 
-
-
 RNC向eSMC发送Iu Release Complete消息，通知其空口资源释放完成。 
-
-
  MME向UE发送Notification消息，通知其切换取消。 
-
-
 MME向eNodeB发送Handover Cancel Acknowledge消息通知其切换已取消。 
-
-
 UE收到MME的Notification消息后，在原有会话中，发送UPDATE消息给ATCF。 
-
-
 ATCF发送UPDATE消息给VoLTE AS，消息中携带原会话的SDP。 
-
-
 VoLTE AS发送200 OK给ATCF，会话重新由E-UTRAN网络接入。 
-
-
 ATCF发送200 OK给UE。 
-
-
 VoLTE AS发送480消息给ATCF，释放切换会话资源。 
-
-
 ATCF发送480消息给eMSC，指示释放eMSC之前建立的切换会话资源。 
-
-
 eMSC发送ACK消息给ATCF，完成资源释放。 
-
-
 ATCF发送ACK消息给VoLTE AS。 
-
-
-
-
 # 缩略语 
 # 缩略语 
-AAA :Authentication, Authorization and Accounting鉴权、授权及计费
+AAA : 
+Authentication, Authorization and Accounting鉴权、授权及计费
 ## AAR 
 Answer-Auth-Request应答鉴权请求
 ## AIA 
@@ -23049,7 +17906,8 @@ Aggregate Maximum Bit Rate聚合最大比特率
 ## ANM 
 Answer
 Message应答消息
-APN :Access Point Name接入点名称
+APN : 
+Access Point Name接入点名称
 ## AS 
 Application Server应用服务器
 ## ATCF 
@@ -23064,16 +17922,24 @@ Credit Control Answer信用控制应答
 Credit Control Request信用控制请求
 ## CSCF 
 Call Session Control Function呼叫对话控制功能
-DNS :Domain Name Server域名服务器
-E-UTRAN :Evolved Universal Terrestrial Radio Access Network演进的通用陆地无线接入网络
-EPC :Evolved Packet Core演进的分组核心网
-EPS :Evolved Packet System演进的分组系统
-FQDN :Fully Qualified Domain Name完全限定域名
+DNS : 
+Domain Name Server域名服务器
+E-UTRAN : 
+Evolved Universal Terrestrial Radio Access Network演进的通用陆地无线接入网络
+EPC : 
+Evolved Packet Core演进的分组核心网
+EPS : 
+Evolved Packet System演进的分组系统
+FQDN : 
+Fully Qualified Domain Name完全限定域名
 ## GERAN 
 GSM/EDGE Radio Access NetworkGSM/EDGE无线接入网
-GUTI :Globally Unique Temporary Identity全球唯一临时标识
-HLR :Home Location Register归属位置寄存器
-HSS :Home Subscriber Server归属用户服务器
+GUTI : 
+Globally Unique Temporary Identity全球唯一临时标识
+HLR : 
+Home Location Register归属位置寄存器
+HSS : 
+Home Subscriber Server归属用户服务器
 ## I-CSCF 
 Interrogating-Call Session Control Function查询呼叫会话控制功能
 ## IAM 
@@ -23084,18 +17950,22 @@ IMS Centralized ServiceIMS集中式业务提供
 Integrity Key鉴权密钥
 ## IM-MGW 
 IP Multimedia-Media GatewayIP多媒体媒体网关
-IMEI :International Mobile Equipment Identity国际移动设备标识
+IMEI : 
+International Mobile Equipment Identity国际移动设备标识
 ## IMPI 
 IP Multimedia Private IdentityIP多媒体私有标识
 ## IMPU 
 IP Multimedia Public IdentityIP多媒体公有标识
-IMS :IP Multimedia SubsystemIP多媒体子系统
-IMSI :International Mobile Subscriber Identity国际移动用户标识
+IMS : 
+IP Multimedia SubsystemIP多媒体子系统
+IMSI : 
+International Mobile Subscriber Identity国际移动用户标识
 ## IP-CAN 
 IP Connectivity Access NetworkIP连通接入网
 ## ISIM 
 IMS Subscriber Identity ModuleIMS用户身份模块
-LTE :Long Time Evolution更长期发展
+LTE : 
+Long Time Evolution更长期发展
 ## MAA 
 Multimedia-Authorization-Answer多媒体鉴权响应
 ## MAP 
@@ -23104,19 +17974,27 @@ Mobile Application Part移动应用部分
 Multimedia-Authorization-Request多媒体鉴权请求
 ## MGW 
 Media GateWay媒体网关
-MME :Mobile Multimedia E-mail移动多媒体邮件
+MME : 
+Mobile Multimedia E-mail移动多媒体邮件
 Mobility Management Entity移动管理实体
-MSC :Mobile Switching Center移动交换中心
-MSISDN :Mobile Station International Subscriber Directory Number移动台国际用户目录号
-P-CSCF :Proxy-Call Session Control Function代理呼叫会话控制功能
+MSC : 
+Mobile Switching Center移动交换中心
+MSISDN : 
+Mobile Station International Subscriber Directory Number移动台国际用户目录号
+P-CSCF : 
+Proxy-Call Session Control Function代理呼叫会话控制功能
 ## P-GW 
 Packet Data Network Gateway分组数据网网关
-PCC :Policy and Charging Control计费和策略控制
+PCC : 
+Policy and Charging Control计费和策略控制
 ## PCO 
 Protocol Configuration Option协议配置选项
-PCRF :Policy and Charging Rules Function策略和计费规则功能
-PDN :Packet Data Network分组数据网
-PGW :PDN Gateway分组数据网网关
+PCRF : 
+Policy and Charging Rules Function策略和计费规则功能
+PDN : 
+Packet Data Network分组数据网
+PGW : 
+PDN Gateway分组数据网网关
 ## QCI 
 QoS Class IdentifierQoS类别标识
 ## RAA 
@@ -23125,7 +18003,8 @@ Re-Auth-Answer重新鉴权响应
 Re-Auth-Request重新鉴权请求
 ## RFC 
 Remote Feature Control远端特征控制
-RNC :Radio Network Controller无线网络控制器
+RNC : 
+Radio Network Controller无线网络控制器
 ## RRC 
 Radio Resource Controller无线资源控制器
 ## S-CSCF 
@@ -23143,7 +18022,8 @@ Session Description Protocol会话描述协议
 Subscription-Notification-Answer订阅通知响应
 ## SNR 
 Subscription-Notification-Request订阅通知请求
-SPR :Subscription Profile Repository用户签约数据库
+SPR : 
+Subscription Profile Repository用户签约数据库
 ## SRVCC 
 Single Radio Voice Call Continuity单射频语音呼叫连续性
 ## TEID 
@@ -23154,21 +18034,26 @@ User-Authorization- Answer用户授权响应
 User-Authorization-Request用户授权请求
 ## UDA 
 User-Data-Answer用户数据响应
-UDR :User Data Request用户数据（读取）请求
-UE :User Equipment用户设备
+UDR : 
+User Data Request用户数据（读取）请求
+UE : 
+User Equipment用户设备
 ## ULA 
 Update-Location-Answer位置更新响应
 ## ULR 
 Update-Location-Request位置更新请求
 ## UMTS 
 Universal Mobile Telecommunication System通用移动通讯系统
-URI :Uniform Resource Identifier统一资源标识符
+URI : 
+Uniform Resource Identifier统一资源标识符
 ## USIM 
 User Service Identity Module通用用户身份识别模块
-UTRAN :Universal Terrestrial Radio Access Network通用地面无线接入网络
+UTRAN : 
+Universal Terrestrial Radio Access Network通用地面无线接入网络
 ## VLR 
 Visitor Location Register拜访位置寄存器
-eNodeB :Evolved NodeB演进的NodeB
+eNodeB : 
+Evolved NodeB演进的NodeB
 ## eSRVCC 
 Enhanced Single Radio Voice Call Continuity增强的双模单待无线语音呼叫连续性
 ## iFC 

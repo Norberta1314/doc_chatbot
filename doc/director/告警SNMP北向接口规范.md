@@ -24,7 +24,6 @@ OID|对象标识符|Object Identifier
 ### 接口位置和接口类型 
 TECS Director北向SNMP是中兴通讯提供的北向适配器，使NMS通过SNMP协议网管获取所需数据。它的位置如[图1]所示。
 图1  北向SNMP接口位置图
-
 ### 支持的SNMP协议 
 采用SNMP协议方式进行数据交互，相应的协议栈参见[表1]。
 应用层|SNMP
@@ -45,7 +44,6 @@ ZTE SNMP北向接口支持SNMP协议的V2C和V3版本，在实际开局时可根
 MIB即管理信息库（Management Information Base）是SNMP中管理数据的标准，在这个标准里规定了网络代理所使用的数据标识，数据类型，以及对数据的操作等信息。
 MIB中的数据标识以一种根在上的树状方式组织，称为对象命名树（Object Naming Tree）。树上的每个对象以从树根（虚拟根）开始到对象为止所经过结点的序列来唯一标识。如[图1]所示。
 图1  MIB对象命名树
-
 图中“zteMIB”结点可用｛.1.3.6.1.4.1.3902｝标识，在实际的环境中该结点也是公司内定义自己对象标识起始点。为图示方便，本文画告警北向SNMP接口的对象命名树时，只画出完整对象树从enterprises结点开始的子树，子树的根结点直接用结点在完整对象树中的完整标识符{.1.3.6.1.4.1}表示。
 ## SNMP北向告警接口规范 
 ### 告警北向SNMP接口的MIB说明 
@@ -360,7 +358,6 @@ TECS Director在基础mib中增加了告警路径改变trap（alarmPathChange en
 30|alarmOtherInfo|告警自定义属性|DisplayString (SIZE (0..255))|.1.3.6.1.4.1.3902.4101.1.3.1.25|-
 #### 发送告警列表重建Trap 
    上级网管和TECS Director上都保存了一个活动告警列表，当SNMP北向接口不能确认上级网管和TECS Director的活动告警列表一致时，发出一个告警列表重建通知，上级网管接收到该通知后，可以考虑重新从TECS Director上获取当前告警数据。
-
 统一网管系统在服务启动或北向SNMP服务正常启动后，自动发送列表重建Trap到北向网管。
 序号|参数项名称|说明|参数值类型|值定义（OID）
 ---|---|---|---|---
@@ -578,6 +575,7 @@ snmp agent中支持通知上报字段supportNotificationFlag的参数值，参�
 32|notifyCustomAttr10|通知自定义属性|DisplayString (SIZE (0..255))|.1.3.6.1.4.1.3902.4101.10.1.27.0|-
 ## 参考 
 ### 告警北向SNMP接口的告警级别和TECS 云管系统告警级别取值对照表 
+
 告警级别类型|解释|TECS Director编码|接口编码
 ---|---|---|---
 indeterminate|未定义级别（TECS Director中已存在的告警不使用该级别）|0|1
@@ -587,6 +585,7 @@ minor|次要级别|3|4
 warning|警告级别|4|5
 cleared|已清除级别（TECS Director中已存在的告警不使用该级别）|5|6
 ### 告警北向SNMP接口的告警类型和TECS 云管系统告警类型的取值对照表 
+
 告警类型|解释|TECS Director编码|接口编码
 ---|---|---|---
 Communications Alarm|与信息传输过程相关的告警类型（ITU-T建议X.733中定义）|0|1
@@ -601,6 +600,7 @@ Security Violation|安全性服务或机制检测到的安全性攻击的指示|
 Time Domain Violation|非预期时间或禁止时间发生某种事件的指示|10|10
 OMC ALARM|TECS Director网管告警|5|11
 ### 告警北向SNMP接口的确认状态取值对照表 
+
 告警状态|TECS Director编码|接口编码
 ---|---|---
 确认|1|1
