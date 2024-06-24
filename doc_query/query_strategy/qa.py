@@ -10,6 +10,7 @@ from zhipuai import ZhipuAI
 
 from doc_query.common.config_utils import config_util
 from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name
+from doc_query.query_strategy.llms import get_llm
 
 ZH_TEMPLATE = """上下文信息如下：
 ---------
@@ -20,7 +21,7 @@ ZH_TEMPLATE = """上下文信息如下：
 """
 SUMMARIZE_TEMPLATE = PromptTemplate(input_variables=["context", "question"], template=ZH_TEMPLATE)
 
-client = ZhipuAI(api_key=config_util.get_common("GLM_KEY"))
+client = get_llm()
 
 
 class Qa:
@@ -110,7 +111,7 @@ class Qa:
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
         # result = llm.acomplete(ask_prompt)
         # return result, search_results
-        response = client.chat.completions.create(
+        response = client.query(
             model="glm-4",  # Fill in the model name to be called
             messages=[
                 {"role": "user", "content": ask_prompt}
@@ -121,7 +122,7 @@ class Qa:
     def second_query(self, query):
         ask_template = f"请用一段话回答问题：{query}"
         # result_by_llm = llm.acomplete(ask_template)
-        response = client.chat.completions.create(
+        response = client.query(
             model="glm-4",  # Fill in the model name to be called
             messages=[
                 {"role": "user", "content": ask_template}
@@ -143,7 +144,7 @@ class Qa:
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
         # result = llm.acomplete(ask_prompt)
         # return result, result_by_llm, search_results
-        response = client.chat.completions.create(
+        response = client.query(
             model="glm-4",  # Fill in the model name to be called
             messages=[
                 {"role": "user", "content": ask_prompt}
@@ -170,7 +171,6 @@ class Qa:
 
 
 qa_map = {}
-
 
 
 def init_qa_map(embeddings, reranker):
