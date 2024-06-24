@@ -29,9 +29,9 @@ class VectordbInitStartegy:
 
 
 class VectordbMergeStartegy:
-    def execute(self):
-        origin_db = get_path("vector_db")
-        need_merge_db = get_path("total_doc")
+    def execute(self, origin_db, need_merged_db):
+        origin_db = get_path(origin_db)
+        need_merge_db = get_path(need_merged_db)
         merge_vector_db_main(origin_db, need_merge_db, embeddings)
 
 
@@ -42,4 +42,4 @@ if __name__ == '__main__':
     if mode == "init":
         VectordbInitStartegy().execute()
     else:
-        VectordbMergeStartegy().execute()
+        VectordbMergeStartegy().execute(sys.argv[2], sys.argv[3])
