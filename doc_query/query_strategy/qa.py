@@ -35,7 +35,8 @@ class Qa:
         self.index_to_docstore_id = self.vector.index_to_docstore_id
         self.vector_index_convert = dict(zip(self.vector.index_to_docstore_id, self.vector.index_to_docstore_id.keys()))
         self.doc_search = VersionBase(embeddings)
-
+        self.init_doc_list()
+        self.bm25_retriever = BM25Trtriever.from_documents(self.doc_search)
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
                                                         base_retriever=self.vector.as_retriever(
                                                             search_type="similarity",
@@ -44,6 +45,7 @@ class Qa:
     def init_doc_list(self):
         for file in get_file_list(self.product):
             self.doc_search.add_doc(file)
+            self.doc_search.splitter()
 
     @staticmethod
     def check_no_answer(answer):
