@@ -2,7 +2,8 @@ import logging
 import os
 import re
 
-from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers import ContextualCompressionRetriever, EnsembleRetriever
+from langchain_community.retrievers import BM25Retriever
 from langchain_community.vectorstores.faiss import FAISS
 from langchain_core.prompts import PromptTemplate
 from langchain_core.vectorstores import VectorStore
@@ -36,11 +37,14 @@ class Qa:
         self.vector_index_convert = dict(zip(self.vector.index_to_docstore_id, self.vector.index_to_docstore_id.keys()))
         self.doc_search = VersionBase(embeddings)
         self.init_doc_list()
-        self.bm25_retriever = BM25Trtriever.from_documents(self.doc_search)
+        bm25_retriever = BM25Retriever.from_documents(self.doc_search.doc_list)
+        bm25_retriever.k = 2
+        together_retriever = EnsembleRetriever(retrievers=[bm25_retriever, self.vector.as_retriever(
+            search_type="similarity",
+            search_kwargs={"k": 30, "score_threshold": 0.8})],
+                                               weights=[0.5, 0.5])
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
-                                                        base_retriever=self.vector.as_retriever(
-                                                            search_type="similarity",
-                                                            search_kwargs={"k": 30, "score_threshold": 0.8}))
+                                                        base_retriever=together_retriever)
 
     def init_doc_list(self):
         for file in get_file_list(self.product):
