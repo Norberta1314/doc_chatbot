@@ -9,8 +9,9 @@ from langchain_core.vectorstores import VectorStore
 from zhipuai import ZhipuAI
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name
+from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name, get_file_list
 from doc_query.query_strategy.llms import get_llm
+from doc_query.vector_tool.init_db import VersionBase
 
 ZH_TEMPLATE = """上下文信息如下：
 ---------
@@ -33,10 +34,16 @@ class Qa:
         self.vector: VectorStore = FAISS.load_local(get_faiss_name(db_path, product), embeddings, index_name=index_name)
         self.index_to_docstore_id = self.vector.index_to_docstore_id
         self.vector_index_convert = dict(zip(self.vector.index_to_docstore_id, self.vector.index_to_docstore_id.keys()))
+        self.doc_search = VersionBase(embeddings)
+
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
                                                         base_retriever=self.vector.as_retriever(
                                                             search_type="similarity",
                                                             search_kwargs={"k": 30, "score_threshold": 0.8}))
+
+    def init_doc_list(self):
+        for file in get_file_list(self.product):
+            self.doc_search.add_doc(file)
 
     @staticmethod
     def check_no_answer(answer):
@@ -66,7 +73,6 @@ class Qa:
 
     def get_source(self, metadata):
         source = metadata.get("source")
-
         return source[31:]
 
     def obtain_contexts_from_vectordb(self, query):

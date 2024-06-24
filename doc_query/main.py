@@ -1,10 +1,8 @@
-import asyncio
-import json
 import logging
 
 from BCEmbedding.tools.langchain import BCERerank
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from tqdm.asyncio import tqdm
+
 import pandas as pd
 
 from doc_query.common.config_utils import config_util
