@@ -8,7 +8,7 @@ from tqdm.asyncio import tqdm
 import pandas as pd
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import read_jsonl, save_answers, write_jsonl
+from doc_query.common.utils import read_jsonl, write_jsonl
 from doc_query.query_strategy.query_tool import init_query_map, get_query
 
 
@@ -39,11 +39,11 @@ def main():
         result = get_query(question)
         answer = result["result"]
         answers.append(answer)
-        answers_list = {
+        answers_list.append({
             "id": query["id"],
             "query": question,
             "answer": answer
-        }
+        })
         specific_results.loc[count] = [question, answer, str(result['source_documents'])]
         count += 1
 
