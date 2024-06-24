@@ -1,13 +1,16 @@
-cd doc_query
+
 export PYTHONPATH=/mnt/workspace/doc_chatbot/
 
 rm -rf vectordb/*
-python vectordb.py merge total_doc vectordb
-
+mkdir vectordb
+cd doc_query
+python vectordb.py merge vectordb total_doc
+cd ../
 rm -rf vector_all_db/*
-mkdir vector_all_db/all
+mkdir -p vector_all_db/all
 
 cp -r vectordb vector_all_db/all
-python vectordb.py merge vector_all_db vectordb
-
+cd doc_query
+python vectordb.py merge vectordb vector_all_db
+cd ../
 cp -r vectordb doc_chatbot/vectordb
