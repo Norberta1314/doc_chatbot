@@ -78,22 +78,11 @@ def read_jsonl(path):
     return content
 
 
-def save_answers(
-    queries: Iterable, results: Iterable, path: str = "data/answers.jsonl"
-):
-    answers = []
-    for query, result in zip(queries, results):
-        answers.append(
-            {"id": query["id"], "query": query["query"], "answer": result}
-        )
+# use jsonlines to save the answers
+def write_jsonl(content, path):
+    with jsonlines.open(path, "w") as json_file:
+        json_file.write_all(content)
 
-    # use jsonlines to save the answers
-    def write_jsonl(path, content):
-        with jsonlines.open(path, "w") as json_file:
-            json_file.write_all(content)
-
-    # 保存答案到 data/answers.jsonl
-    write_jsonl(path, answers)
 
 def get_vector_index_name():
     return "large.index"

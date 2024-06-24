@@ -8,7 +8,7 @@ from tqdm.asyncio import tqdm
 import pandas as pd
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import read_jsonl, save_answers
+from doc_query.common.utils import read_jsonl, save_answers, write_jsonl
 from doc_query.query_strategy.query_tool import init_query_map, get_query
 
 
@@ -29,20 +29,26 @@ def main():
     print("Start generating answers...")
 
     answers = []
+    answers_list = []
     specific_results = pd.DataFrame(columns=["query", "answer", "source_documents"])
     count = 0
-    for query in tqdm(queries, total=len(queries)):
+    for index, query in enumerate(queries):
         # question = query["query"].strip("，。、？,.?\n ") + "？"
         question = query["query"]
         logging.info(f"问题：{question}")
         result = get_query(question)
         answer = result["result"]
         answers.append(answer)
+        answers_list = {
+            "id": query["id"],
+            "query": question,
+            "answer": answer
+        }
         specific_results.loc[count] = [question, answer, str(result['source_documents'])]
         count += 1
 
         # 处理结果
-        save_answers(queries, answers, "result.jsonl")
+        write_jsonl(answers_list, "result.jsonl")
         specific_results.to_excel("specific_results.xlsx", index=False)
 
 

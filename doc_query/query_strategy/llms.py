@@ -3,6 +3,8 @@
 
 # @Time    : 2024/6/24
 # @Author  : lyytaw
+import json
+
 import requests
 from langchain_core.language_models import LLM
 from zhipuai import ZhipuAI
@@ -29,11 +31,11 @@ class ZhipuAILLm:
 class QianWenLLm:
 
     def query(self, ask_prompt):
-        response = requests.post("http://localhost:11434", {
+        response = requests.post("http://localhost:11434/api/generate", data=json.dumps({
             "model": "qwen",
             "prompt": ask_prompt,
             "stream": False
-        })
+        }))
         print(response.json())
         return response.json()["response"]
 
