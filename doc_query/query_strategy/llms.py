@@ -3,9 +3,12 @@
 
 # @Time    : 2024/6/24
 # @Author  : lyytaw
+import requests
 from langchain_core.language_models import LLM
 from zhipuai import ZhipuAI
 from doc_query.common.config_utils import config_util
+
+
 # from llama_index.llms.ollama import Ollama
 
 
@@ -22,11 +25,14 @@ class ZhipuAILLm:
         )
 
 
-# class QianWenLLm:
-#     def __init__(self):
-#         self.client = Ollama(
-#             model="qwen", base_url="http://localhost:11434", temperature=0, request_timeout=120
-#         )
+class QianWenLLm:
+
+    def query(self, ask_prompt):
+        return requests.post("http://localhost:11434", {
+            "model": "qwen",
+            "prompt": ask_prompt,
+            "stream": False
+        })
 
 
 client = None
@@ -36,6 +42,8 @@ def get_llm():
     global client
     if client is not None:
         return client
-    # if config_util.get_common("llmType") == "zhipu":
-    client = ZhipuAILLm()
+    if config_util.get_common("llmType") == "zhipu":
+        client = ZhipuAILLm()
+    else:
+        client = QianWenLLm()
     return client
