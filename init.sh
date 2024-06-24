@@ -7,6 +7,7 @@ pip install zhipuai
 pip install BCEmbedding
 pip install transformers==4.32.0
 pip install sentence-transformers
+pip install rank_bm25
 python -m spacy download zh_core_web_sm
 cd doc_query
 git clone https://www.modelscope.cn/Xorbits/bge-m3.git
