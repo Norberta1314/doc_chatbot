@@ -17,22 +17,25 @@ class ZhipuAILLm:
         self.client = ZhipuAI(api_key=config_util.get_common("GLM_KEY"))
 
     def query(self, ask_prompt):
-        return self.client.chat.completions.create(
+        response = self.client.chat.completions.create(
             model="glm-4",  # Fill in the model name to be called
             messages=[
                 {"role": "user", "content": ask_prompt}
             ],
         )
+        return response.choices[0].message.content
 
 
 class QianWenLLm:
 
     def query(self, ask_prompt):
-        return requests.post("http://localhost:11434", {
+        response = requests.post("http://localhost:11434", {
             "model": "qwen",
             "prompt": ask_prompt,
             "stream": False
         })
+        print(response.json())
+        return response.json()["response"]
 
 
 client = None

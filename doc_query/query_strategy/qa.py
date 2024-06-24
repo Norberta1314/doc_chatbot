@@ -112,13 +112,12 @@ class Qa:
         # result = llm.acomplete(ask_prompt)
         # return result, search_results
         response = client.query(ask_prompt)
-        return response.choices[0].message.content, search_results
+        return response, search_results
 
     def second_query(self, query):
         ask_template = f"请用一段话回答问题：{query}"
         # result_by_llm = llm.acomplete(ask_template)
-        response = client.query(ask_template)
-        result_by_llm = response.choices[0].message.content
+        result_by_llm = client.query(ask_template)
         logging.info(f"llm's answer: {result_by_llm}")
         new_query = f"针对问题：{query}，我们的回答：{result_by_llm}。"
         # context, search_results = self.obtain_contexts_from_vectordb(new_query)
@@ -135,7 +134,7 @@ class Qa:
         # result = llm.acomplete(ask_prompt)
         # return result, result_by_llm, search_results
         response = client.query(ask_prompt)
-        return response.choices[0].message.content, result_by_llm, search_results
+        return response, result_by_llm, search_results
 
     def third_query(self, query):
         return
