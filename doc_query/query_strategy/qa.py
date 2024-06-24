@@ -10,7 +10,7 @@ from langchain_core.vectorstores import VectorStore
 from zhipuai import ZhipuAI
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name, get_file_list
+from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name, get_file_list, get_path
 from doc_query.query_strategy.llms import get_llm
 from doc_query.vector_tool.init_db import VersionBase
 
@@ -47,8 +47,9 @@ class Qa:
                                                         base_retriever=together_retriever)
 
     def init_doc_list(self):
-        for file in get_file_list(self.product):
-            self.doc_search.add_doc(file)
+        for file in get_file_list(os.path.join(get_path("doc"), self.product)):
+            file_path = os.path.join(get_path("doc"), self.product, file)
+            self.doc_search.add_doc(file_path)
             self.doc_search.splitter()
 
     @staticmethod

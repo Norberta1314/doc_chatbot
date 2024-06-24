@@ -86,3 +86,7 @@ def write_jsonl(content, path):
 
 def get_vector_index_name():
     return "large.index"
+
+
+def get_path(pp):
+    return os.path.join("/mnt/workspace/doc_chatbot", pp)

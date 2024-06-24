@@ -1,16 +1,12 @@
-import os.path
 import sys
 from abc import abstractmethod, ABC
 
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
 from doc_query.common.config_utils import config_util
+from doc_query.common.utils import get_path
 from doc_query.vector_tool.init_db import init_vector_map
 from doc_query.vector_tool.merge import merge_vector_db_main
-
-
-def get_path(pp):
-    return os.path.join("/mnt/workspace/doc_chatbot", pp)
 
 
 class VectorBase(ABC):
