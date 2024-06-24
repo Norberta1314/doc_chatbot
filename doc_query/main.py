@@ -18,7 +18,7 @@ def main():
     embedding = HuggingFaceEmbeddings(
         model_name=config_util.get_common("model_name")
     )
-    reranker_args = {"model": config_util.get_common("reranker_name"), "top_n": 6}
+    reranker_args = {"model": config_util.get_common("reranker_name"), "top_n": 10}
     reranker = BCERerank(**reranker_args)
     init_query_map(embedding, reranker)
 

@@ -36,7 +36,7 @@ class Qa:
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
                                                         base_retriever=self.vector.as_retriever(
                                                             search_type="similarity",
-                                                            search_kwargs={"k": 20, "score_threshold": 0.8}))
+                                                            search_kwargs={"k": 30, "score_threshold": 0.8}))
 
     @staticmethod
     def check_no_answer(answer):
@@ -111,23 +111,13 @@ class Qa:
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
         # result = llm.acomplete(ask_prompt)
         # return result, search_results
-        response = client.query(
-            model="glm-4",  # Fill in the model name to be called
-            messages=[
-                {"role": "user", "content": ask_prompt}
-            ],
-        )
+        response = client.query(ask_prompt)
         return response.choices[0].message.content, search_results
 
     def second_query(self, query):
         ask_template = f"请用一段话回答问题：{query}"
         # result_by_llm = llm.acomplete(ask_template)
-        response = client.query(
-            model="glm-4",  # Fill in the model name to be called
-            messages=[
-                {"role": "user", "content": ask_template}
-            ],
-        )
+        response = client.query(ask_template)
         result_by_llm = response.choices[0].message.content
         logging.info(f"llm's answer: {result_by_llm}")
         new_query = f"针对问题：{query}，我们的回答：{result_by_llm}。"
@@ -144,12 +134,7 @@ class Qa:
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
         # result = llm.acomplete(ask_prompt)
         # return result, result_by_llm, search_results
-        response = client.query(
-            model="glm-4",  # Fill in the model name to be called
-            messages=[
-                {"role": "user", "content": ask_prompt}
-            ],
-        )
+        response = client.query(ask_prompt)
         return response.choices[0].message.content, result_by_llm, search_results
 
     def third_query(self, query):
