@@ -36,7 +36,7 @@ class VectordbMergeStartegy:
 
 
 if __name__ == '__main__':
-    embeddings = HuggingFaceEmbeddings(model_name=config_util.get_common('model_name'), model_kwargs={'device': 'cpu'})
+    embeddings = HuggingFaceEmbeddings(model_name=config_util.get_common('model_name'))
 
     mode = sys.argv[1]
     if mode == "init":

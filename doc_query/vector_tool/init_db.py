@@ -64,15 +64,16 @@ class VersionBase:
         doc_list = []
 
         for md_content in md_header_text:
-            title_list = ""
+            title_list = []
             for key, value in md_content.metadata.items():
                 if key.startswith("Header"):
-                    title_list += f"{value}"
+                    title_list.append(value)
 
             self.process_page_content(md_content)
-            split_list = common_text_splitter.split_documents([md_content])
+            # split_list = common_text_splitter.split_documents([md_content])
+            split_list = [md_content]
             for split in split_list:
-                split.metadata['source'] = file_path
+                split.metadata['source'] = get_file_name_from_path(file_path)
                 if len(title_list) != 0:
                     split.page_content = f"《{get_file_name_from_path(file_name[0])}》标题:{'-'.join(title_list)} 内容:{split.page_content}"
             doc_list.extend(split_list)
