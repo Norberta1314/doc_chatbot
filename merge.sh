@@ -1,4 +1,5 @@
-
+pip uninstall faiss-gpu
+pip install faiss-cpu
 export PYTHONPATH=/mnt/workspace/doc_chatbot/
 
 rm -rf vectordb/*
