@@ -45,7 +45,7 @@ def init_data():
     file_path = "vectordb"
     product_list = get_file_list(file_path)
     for product in product_list:
-        faiss_db = FAISS.load_local(os.path.join(product, "faiss"), embeddings,
+        faiss_db = FAISS.load_local(os.path.join(file_path, product, "faiss"), embeddings,
                                     index_name="large.index")
 
         for doc_id, vec_index in faiss_db.index_to_docstore_id.items():
