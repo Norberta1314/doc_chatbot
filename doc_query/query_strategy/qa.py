@@ -5,12 +5,13 @@ import re
 from langchain.retrievers import ContextualCompressionRetriever, EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
 from langchain_community.vectorstores.faiss import FAISS
+from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 from langchain_core.vectorstores import VectorStore
 from zhipuai import ZhipuAI
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name, get_file_list, get_path
+from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name, get_source_name_from_metadata, get_product,remove_overlapping_fragments,get_file_list, get_path
 from doc_query.query_strategy.llms import get_llm
 from doc_query.vector_tool.init_db import VersionBase
 
@@ -89,50 +90,56 @@ class Qa:
         source = metadata.get("source")
         return source[31:]
 
-    def obtain_contexts_from_vectordb(self, query):
-        def obatin_context_anx(doc_id):
-            for i in (1, -1):
-                new_doc_id = doc_id + i
-                if new_doc_id >= 0 and new_doc_id < len(self.index_to_docstore_id):
-                    new_content = self.vector.docstore.search(self.index_to_docstore_id[new_doc_id])
-                    new_meta = new_content.metadata
-                    if self.check_meta(meta_data, new_meta):
-                        contexts.add(new_doc_id)
-
-        search_results = self.retriever.get_relevant_documents(query)
-        contexts = set()
-        for result in search_results:
-            meta_data = result[0].metadata
-            doc_id = self.vector_index_convert[result[1]]
-            obatin_context_anx(doc_id)
-
-        obtained_contexts = {}
-        for doc_id in sorted(contexts):
-            content = self.vector.docstore.search(self.index_to_docstore_id[doc_id])
-            file_name = self.get_source(content.metadata)
-            if not obtained_contexts.get(file_name):
-                obtained_contexts[file_name] = f"{content.page_content}。\n"
-            else:
-                obtained_contexts[file_name] = f"{obtained_contexts[file_name]}{content.page_content}。\n"
-
-        contents = self.combine_contexts(obtained_contexts)
-        return contents.strip("\n "), search_results
 
     def first_query(self, query):
         search_results = self.retriever.get_relevant_documents(query)
         if not search_results:
             return "没有找到相关的背景材料", search_results
+        search_results = self.combine_source_documents(search_results)
+        self.reranker.top_n = 5
+        search_results = self.reranker.compress_documents(search_results, query)
+        self.reranker.top_n = 10
         context = ""
         for result in search_results:
-            file_name = self.get_source(result.metadata)
             context = f"{context}{result.page_content}。\n"
-        context = context.strip("\n ")
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
-        # result = llm.acomplete(ask_prompt)
-        # return result, search_results
+        logging.info(f"第一次prompt：{ask_prompt}")
         response = client.query(ask_prompt)
-        return response, search_results
+        return response.choices[0].message.content, search_results
+
+    def combine_source_documents(self, search_results):
+        if not search_results:
+            return search_results
+        all_contents = []
+        for search_result in search_results:
+            title_content = ""
+            for key, value in search_result.metadata.items():
+                if key.startswith("Header"):
+                    title_content = f"{title_content}{value}-"
+            title_content = title_content.strip("-")
+            file_name = get_source_name_from_metadata(search_result.metadata)
+            product = get_product(search_result.metadata)
+            context_ids = search_data_with_meta_info(product, file_name, title_content)
+            if not context_ids:
+                logging.error("Can't find any text under this source")
+
+            contexts = []
+            for context in context_ids:
+                content = self.vector.docstore.search(context.vec_idx)
+                result = re.sub(f"《.*?》", "", content.page_content)
+                pattern = r"标题:.*?内容:"
+                # 使用 re.sub() 替换匹配的部分
+                result = re.sub(pattern, "", result)
+                result = result.strip(" \n:;：；")
+                contexts.append(result)
+            cleaned_contexts = remove_overlapping_fragments(contexts)
+            if not cleaned_contexts:
+                all_contents.append(search_result)
+            else:
+                all_contents.append(Document(page_content=f"《{product}-{file_name}》标题：{title_content} 内容：{''.join(cleaned_contexts)}", metadata=search_result.metadata))
+        return all_contents
+
 
     def second_query(self, query):
         ask_template = f"请用一段话回答问题：{query}"
@@ -144,20 +151,21 @@ class Qa:
         search_results = self.retriever.get_relevant_documents(new_query)
         if not search_results:
             return "没有找到相关的背景材料", result_by_llm, search_results
+        search_results = self.combine_source_documents(search_results)
+        self.reranker.top_n = 5
+        search_results = self.reranker.compress_documents(search_results, query)
+        self.reranker.top_n = 10
         context = ""
         for result in search_results:
-            file_name = self.get_source(result.metadata)
             context = f"{context}{result.page_content}。\n"
-        context = context.strip("\n ")
         # 需要组装template
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
-        # result = llm.acomplete(ask_prompt)
-        # return result, result_by_llm, search_results
+        logging.info(f"第二次prompt：{ask_prompt}")
         response = client.query(ask_prompt)
         return response, result_by_llm, search_results
 
-    def third_query(self, query):
-        return
+    def third_query(self, query, search_results_by_llm):
+        pass
 
     def query(self, query):
         first_result, search_results = self.first_query(query)

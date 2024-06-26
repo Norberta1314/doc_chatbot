@@ -87,7 +87,6 @@ def write_jsonl(content, path):
 def get_vector_index_name():
     return "large.index"
 
-
 def get_path(pp):
     return os.path.join("/mnt/workspace/doc_chatbot", pp)
 
@@ -96,10 +95,40 @@ def get_source_name_from_metadata(metadata):
     source = metadata.get("source")
     source_file = source[:-3]
     source_file_list = source_file.split(os.sep)
-
     return source_file_list[-1]
+
+
+def get_product(metadata):
+    source = metadata.get("source")
+    source_file = source[:-3]
+    source_file_lists = source_file.split("-")
+    return source_file_lists[0]
 
 
 def get_file_name_from_path(source):
     file_name = os.path.basename(source)
     return source.split("/")[-2] + "-" + file_name
+
+
+def remove_overlapping_fragments(fragments):
+    def find_overlap(a, b):
+        # 找到a的结尾和b的开头之间最长的重叠部分
+        max_overlap = 0
+        for i in range(1, min(len(a), len(b)) + 1):
+            if a[-i:] == b[:i]:
+                max_overlap = i
+        return max_overlap
+
+    cleaned_fragments = []
+    prev_fragment = fragments[0]
+
+    for i in range(1, len(fragments)):
+        overlap = find_overlap(prev_fragment, fragments[i])
+        if overlap > 0:
+            prev_fragment = prev_fragment + fragments[i][overlap:]
+        else:
+            cleaned_fragments.append(prev_fragment)
+            prev_fragment = fragments[i]
+
+    cleaned_fragments.append(prev_fragment)
+    return cleaned_fragments
