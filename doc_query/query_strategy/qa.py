@@ -7,11 +7,12 @@ from langchain_community.vectorstores.faiss import FAISS
 from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 from langchain_core.vectorstores import VectorStore
-from zhipuai import ZhipuAI
 
 from doc_query.common.config_utils import config_util
-from doc_query.common.utils import get_faiss_name, read_json, get_url_file_name, get_source_name_from_metadata, get_product,remove_overlapping_fragments
+from doc_query.common.utils import get_faiss_name, get_source_name_from_metadata, \
+    get_product, remove_overlapping_fragments
 from doc_query.query_strategy.llms import get_llm
+from doc_query.db_util.util import search_data_with_meta_info
 
 ZH_TEMPLATE = """上下文信息如下：
 ---------
@@ -69,7 +70,6 @@ class Qa:
         source = metadata.get("source")
         return source[31:]
 
-
     def first_query(self, query):
         search_results = self.retriever.get_relevant_documents(query)
         if not search_results:
@@ -85,12 +85,13 @@ class Qa:
         ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
         logging.info(f"第一次prompt：{ask_prompt}")
         response = client.query(ask_prompt)
-        return response.choices[0].message.content, search_results
+        return response, search_results
 
     def combine_source_documents(self, search_results):
         if not search_results:
             return search_results
         all_contents = []
+        title_record = {}
         for search_result in search_results:
             title_content = ""
             for key, value in search_result.metadata.items():
@@ -99,9 +100,14 @@ class Qa:
             title_content = title_content.strip("-")
             file_name = get_source_name_from_metadata(search_result.metadata)
             product = get_product(search_result.metadata)
+            if title_record.get((product, file_name, title_content)):
+                continue
+            title_record[(product, file_name, title_content)] = 1
             context_ids = search_data_with_meta_info(product, file_name, title_content)
             if not context_ids:
                 logging.error("Can't find any text under this source")
+                all_contents.append(search_result)
+                continue
 
             contexts = []
             for context in context_ids:
@@ -113,12 +119,11 @@ class Qa:
                 result = result.strip(" \n:;：；")
                 contexts.append(result)
             cleaned_contexts = remove_overlapping_fragments(contexts)
-            if not cleaned_contexts:
-                all_contents.append(search_result)
-            else:
-                all_contents.append(Document(page_content=f"《{product}-{file_name}》标题：{title_content} 内容：{''.join(cleaned_contexts)}", metadata=search_result.metadata))
-        return all_contents
 
+            all_contents.append(
+                Document(page_content=f"《{file_name}》标题：{title_content} 内容：{''.join(cleaned_contexts)}",
+                         metadata=search_result.metadata))
+        return all_contents
 
     def second_query(self, query):
         ask_template = f"请用一段话回答问题：{query}"

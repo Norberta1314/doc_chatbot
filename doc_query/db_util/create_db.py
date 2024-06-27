@@ -52,7 +52,7 @@ def init_data():
     for product in product_list:
         if product == "all":
             continue
-        faiss_db = FAISS.load_local(os.path.join(product, "faiss"), embeddings,
+        faiss_db = FAISS.load_local(os.path.join(file_path, product, "faiss"), embeddings,
                                     index_name="large.index")
 
         for doc_id, vec_index in faiss_db.index_to_docstore_id.items():
