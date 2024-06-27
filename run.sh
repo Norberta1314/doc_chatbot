@@ -1,4 +1,4 @@
 cd doc_query
 export PYTHONPATH=/mnt/workspace/doc_chatbot/
 
-python vectordb.py init
+python main.py
