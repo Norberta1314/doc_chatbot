@@ -1,5 +1,4 @@
 pip install -r requirements.txt
-pip install faiss-gpu
 pip install langchain==0.1.0
 pip install langchain-community==0.0.9
 pip install langchain-core==0.1.7
