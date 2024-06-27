@@ -1,6 +1,7 @@
 import asyncio
 import json
 import logging
+import time
 
 from BCEmbedding.tools.langchain import BCERerank
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -33,10 +34,20 @@ def main():
     specific_results = pd.DataFrame(columns=["query", "answer", "source_documents"])
     count = 0
     for index, query in enumerate(queries):
+        print(f"index: {index}")
         # question = query["query"].strip("，。、？,.?\n ") + "？"
         question = query["query"]
         logging.info(f"问题：{question}")
-        result = get_query(question)
+        is_get_result = False
+        result = None
+        while not is_get_result:
+            try:
+                result = get_query(question)
+                is_get_result = True
+            except Exception as e:
+                print("error query")
+                time.sleep(5)
+
         answer = result["result"]
         answers.append(answer)
         answers_list.append({
