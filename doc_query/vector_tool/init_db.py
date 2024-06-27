@@ -17,7 +17,7 @@ headers_to_split_on = []
 for i in range(1, 9):
     headers_to_split_on.append(('#' * i, f"Header {i}"))
 markdown_header_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
-common_text_splitter = SpacyTextSplitter(pipeline="zh_core_web_sm", chunk_size=500, chunk_overlap=100)
+common_text_splitter = SpacyTextSplitter(pipeline="zh_core_web_sm", chunk_size=1000, chunk_overlap=100)
 
 logger = get_logger()
 

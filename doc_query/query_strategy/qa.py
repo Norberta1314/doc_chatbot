@@ -38,15 +38,22 @@ class Qa:
         self.doc_search = VersionBase(embeddings)
         self.init_doc_list()
         bm25_retriever = BM25Retriever.from_documents(self.doc_search.doc_list)
-        bm25_retriever.k = 2
+        bm25_retriever.k = 10
         together_retriever = EnsembleRetriever(retrievers=[bm25_retriever, self.vector.as_retriever(
             search_type="similarity",
-            search_kwargs={"k": 30, "score_threshold": 0.8})],
+            search_kwargs={"k": 20, "score_threshold": 0.8})],
                                                weights=[0.5, 0.5])
         self.retriever = ContextualCompressionRetriever(base_compressor=reranker,
                                                         base_retriever=together_retriever)
 
     def init_doc_list(self):
+        if self.product == "all":
+            for true_product in get_file_list(os.path.join(get_path("doc"))):
+                for file in get_file_list(os.path.join(get_path("doc"), true_product)):
+                    file_path = os.path.join(get_path("doc"), true_product, file)
+                    self.doc_search.add_doc(file_path)
+                    self.doc_search.splitter()
+            return
         for file in get_file_list(os.path.join(get_path("doc"), self.product)):
             file_path = os.path.join(get_path("doc"), self.product, file)
             self.doc_search.add_doc(file_path)
