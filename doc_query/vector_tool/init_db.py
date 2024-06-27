@@ -11,7 +11,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_text_splitters import MarkdownHeaderTextSplitter, SpacyTextSplitter
 
 from doc_query.common.utils import read_json, get_file_list, obtain_db_path, get_faiss_name, get_vector_index_name, \
-    get_logger
+    get_logger, get_file_name_from_path
 
 headers_to_split_on = []
 for i in range(1, 9):
@@ -64,24 +64,25 @@ class VersionBase:
         doc_list = []
 
         for md_content in md_header_text:
-            title_mark = ""
+            title_list = []
             for key, value in md_content.metadata.items():
                 if key.startswith("Header"):
-                    title_mark += value
+                    title_list.append(value)
 
             self.process_page_content(md_content)
-            split_list = common_text_splitter.split_documents([md_content])
+            # split_list = common_text_splitter.split_documents([md_content])
+            split_list = [md_content]
             for split in split_list:
-                split.metadata['source'] = file_path
-                if title_mark:
-                    split.page_content = f"《{file_name}》标题:{title_mark.strip(':')}。内容:{split.page_content}"
+                split.metadata['source'] = get_file_name_from_path(file_path)
+                if len(title_list) != 0:
+                    split.page_content = f"《{get_file_name_from_path(file_name[0])}》标题:{'-'.join(title_list)} 内容:{split.page_content}"
             doc_list.extend(split_list)
         return doc_list
 
     def process_page_content(self, doc):
         doc.page_content = doc.page_content.replace('<br/>', '')
         doc.page_content = re.sub(r"\n\s*\n", "", doc.page_content)
-        doc.page_content = re.sub(r"\n{2,}", "", doc.page_content)
+        doc.page_content = re.sub(r'\n+', '\n', doc.page_content)
         doc.page_content = re.sub(r" {2,}", "", doc.page_content)
 
     def set_info(self, product, file_name):
