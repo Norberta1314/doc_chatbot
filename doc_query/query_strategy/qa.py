@@ -11,7 +11,7 @@ from langchain_core.vectorstores import VectorStore
 
 from doc_query.common.config_utils import config_util
 from doc_query.common.utils import get_faiss_name, get_source_name_from_metadata, \
-    get_product, remove_overlapping_fragments, read_json, get_url_file_name,
+    get_product, remove_overlapping_fragments, read_json, get_url_file_name, get_file_list, get_path
 from doc_query.query_strategy.llms import get_llm
 from doc_query.vector_tool.init_db import VersionBase
 from doc_query.db_util.util import search_data_with_meta_info
@@ -96,7 +96,7 @@ class Qa:
         if not search_results:
             return "没有找到相关的背景材料", search_results
         search_results = self.combine_source_documents(search_results)
-        self.reranker.top_n = 5
+        self.reranker.top_n = 3
         search_results = self.reranker.compress_documents(search_results, query)
         self.reranker.top_n = 10
         context = ""
@@ -157,7 +157,7 @@ class Qa:
         if not search_results:
             return "没有找到相关的背景材料", result_by_llm, search_results
         search_results = self.combine_source_documents(search_results)
-        self.reranker.top_n = 5
+        self.reranker.top_n = 3
         search_results = self.reranker.compress_documents(search_results, query)
         self.reranker.top_n = 10
         context = ""
