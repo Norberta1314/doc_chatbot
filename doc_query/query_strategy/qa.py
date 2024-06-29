@@ -196,8 +196,7 @@ def init_qa_map(embeddings, reranker):
         logging.error("vectordb path is wrong!")
         return
     for product in os.listdir(vector_total_path):
-        if product != "director":
-            continue
+
         # product_list = os.path.join(vector_total_path, product)
         qa = Qa(vector_total_path, embeddings, reranker, product)
         qa_map[product] = qa

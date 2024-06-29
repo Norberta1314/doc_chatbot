@@ -8,8 +8,10 @@ pip install jsonlines
 pip install BCEmbedding
 pip install transformers==4.32.0
 pip install sentence-transformers
+pip install flask_sqlalchemy
 pip install zh_core_web_sm-3.7.0-py3-none-any.whl
 pip install rank_bm25
+pip install tf-keras
 cd doc_query
 git clone https://www.modelscope.cn/Xorbits/bge-m3.git
 git clone https://www.modelscope.cn/maidalun/bce-reranker-base_v1.git
