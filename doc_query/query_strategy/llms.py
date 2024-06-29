@@ -21,9 +21,7 @@ class ZhipuAILLm:
     def query(self, ask_prompt):
         response = self.client.chat.completions.create(
             model="glm-4",  # Fill in the model name to be called
-            messages=[
-                {"role": "user", "content": ask_prompt}
-            ],
+            messages=ask_prompt,
         )
         return response.choices[0].message.content
 

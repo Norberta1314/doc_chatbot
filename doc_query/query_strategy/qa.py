@@ -18,10 +18,11 @@ ZH_TEMPLATE = """上下文信息如下：
 ---------
 {context}
 ---------
-请你基于上下文信息而不是自己的知识，回答问题：```{question}```
+基于给定的上下文信息（而不是你的先验知识）回答用户的问题。
 回答的要求：1.可以分点作答；2.如果上下文信息中没有相关知识去回答问题，可以回答不确定，不要复述上下文信息。
 """
-SUMMARIZE_TEMPLATE = PromptTemplate(input_variables=["context", "question"], template=ZH_TEMPLATE)
+SUMMARIZE_TEMPLATE = PromptTemplate(input_variables=["context"], template=ZH_TEMPLATE)
+# SUMMARIZE_TEMPLATE = PromptTemplate(input_variables=["context", "question"], template=ZH_TEMPLATE)
 
 client = get_llm()
 
@@ -127,15 +128,19 @@ class Qa:
             file_name = self.get_source(result.metadata)
             context = f"{context}{result.page_content}。\n"
         context = context.strip("\n ")
-        # 需要组装template
-        ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
+        prompt = SUMMARIZE_TEMPLATE.format(context=context)
+        ask_prompt = [{"role": "system", "content": "You are a helpful AI assistant."},
+                      {"role": "assistant", "content": prompt}, {"role": "user", "content": query}]
+
         # result = llm.acomplete(ask_prompt)
         # return result, search_results
         response = client.query(ask_prompt)
         return response, search_results
 
     def second_query(self, query):
-        ask_template = f"请用一段话回答问题：{query}"
+        ask_template = [{"role": "system", "content": "You are a helpful AI assistant."},
+                      {"role": "assistant", "content": "请用一段话回答问题"}, {"role": "user", "content": query}]
+        # ask_template = f"请用一段话回答问题：{query}"
         # result_by_llm = llm.acomplete(ask_template)
         result_by_llm = client.query(ask_template)
         logging.info(f"llm's answer: {result_by_llm}")
@@ -150,7 +155,9 @@ class Qa:
             context = f"{context}{result.page_content}。\n"
         context = context.strip("\n ")
         # 需要组装template
-        ask_prompt = SUMMARIZE_TEMPLATE.format(context=context, question=query)
+        prompt = SUMMARIZE_TEMPLATE.format(context=context)
+        ask_prompt = [{"role": "system", "content": "You are a helpful AI assistant."},
+                      {"role": "assistant", "content": prompt}, {"role": "user", "content": query}]
         # result = llm.acomplete(ask_prompt)
         # return result, result_by_llm, search_results
         response = client.query(ask_prompt)
